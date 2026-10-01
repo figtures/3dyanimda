@@ -1,0 +1,10 @@
+project_id = "four-brand-platform"
+
+[functions.send-email]
+verify_jwt = false
+
+[functions.send-quote-email]
+verify_jwt = false
+
+[functions.sitemap]
+verify_jwt = false

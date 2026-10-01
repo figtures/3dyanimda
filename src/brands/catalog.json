@@ -1,0 +1,150 @@
+[
+  {
+    "slug": "3dyanimda",
+    "name": "3dyanımda",
+    "eyebrow": "KURUMSAL 3D ÜRETİM ÇÖZÜMLERİ",
+    "title": "Tasarımınızdan\nüretiminizin\nbir parçasına.",
+    "lead": "Ar-Ge, ürün geliştirme ve üretim ekipleri için 3D modelleme, fonksiyonel prototip ve küçük seri parça üretimi. Teknik ihtiyacınızı, uygulanabilir bir üretim planına dönüştürelim.",
+    "focus": "Prototip & kurumsal üretim",
+    "accent": "#ef7b45",
+    "ink": "#1c2328",
+    "model": "form",
+    "featureTitle": "Bir parçadan fazlası.\nSürecinize uygun bir çözüm.",
+    "featureLead": "Bir tasarımı doğrulamak, montajı kolaylaştırmak veya az adetli bir ihtiyacı karşılamak için. Üretim yöntemini kullanım koşulları, adet ve hedeflenen işlevle birlikte değerlendiriyoruz.",
+    "applications": [
+      "Ürün geliştirme prototipleri",
+      "Montaj yardımcıları",
+      "Özel muhafaza & aparatlar",
+      "Küçük seri üretim"
+    ],
+    "description": "İstanbul’da kurumsal 3D baskı, ürün geliştirme prototipleri, montaj yardımcıları ve küçük seri üretim. Teknik dosyanız için proje bazlı teklif.",
+    "heroAsset": "fixture",
+    "heroCaption": "Fikstür & fonksiyonel prototip",
+    "applicationDetails": [
+      "Tasarım kararlarını fiziksel model üzerinden değerlendirmek için form, yerleşim ve montaj prototipleri.",
+      "Tekrarlayan montaj ve konumlandırma adımları için projeye özel yardımcı parçalar.",
+      "Elektronik cihazlar, test düzenekleri ve özel sistemler için geometriye uygun muhafazalar.",
+      "Kalıp yatırımından önce veya düşük adetli ihtiyaçlarda değerlendirilebilecek üretim alternatifleri."
+    ],
+    "audiences": [
+      "Ar-Ge & ürün geliştirme",
+      "Üretim & operasyon",
+      "Satın alma"
+    ],
+    "audienceTexts": [
+      "Tasarımınızı fiziksel olarak değerlendirin. Model revizyonu, montaj kontrolü ve sonraki iterasyon için proje kapsamını birlikte belirleyelim.",
+      "Sahadaki ihtiyacı ölçülebilir bir parça tarifine dönüştürelim. Kullanım koşulları, bağlantı noktaları ve işlev üzerinden ilerleyelim.",
+      "Teknik kapsamı, adedi ve teslimat beklentisini aynı talepte toplayın. Proje bazlı üretim değerlendirmesi ve teklif için ortak bir başlangıç oluşturun."
+    ]
+  },
+  {
+    "slug": "3dsanayi",
+    "name": "3dsanayi",
+    "eyebrow": "ÜRETİM EKİPLERİ İÇİN EKLEMELİ İMALAT",
+    "title": "Üretim hattınıza\nözel düşünülmüş\nparçalar.",
+    "lead": "Fikstür, konumlandırma aparatı, test parçası ve cihaz muhafazası ihtiyaçlarınız için proje bazlı 3D üretim. Sahadaki gereksinimden numune değerlendirmesine kadar teknik bir süreç.",
+    "focus": "Endüstriyel parça & fikstür",
+    "accent": "#ef7b45",
+    "ink": "#1c2328",
+    "model": "industry",
+    "featureTitle": "Standart çözümün\nyetmediği noktada.",
+    "featureLead": "Üretim ve bakım ekiplerinin kullanım senaryosuna özel parçalar. Geometri, yük, ortam koşulları ve montaj ilişkisi değerlendirilerek üretim kapsamı netleştirilir.",
+    "applications": [
+      "Montaj & konumlandırma",
+      "Test & kontrol aparatları",
+      "Cihaz muhafazaları",
+      "Bakım yardımcıları"
+    ],
+    "description": "İstanbul’da sanayi için 3D baskı, fikstür, montaj aparatı, cihaz muhafazası ve fonksiyonel prototip üretimi. Kurumsal teknik teklif talebi.",
+    "heroAsset": "fixture",
+    "heroCaption": "Montaj & konumlandırma fikstürü",
+    "applicationDetails": [
+      "Parçanın konumunu belirlemek, montaj adımlarını düzenlemek ve tekrarlayan işlemleri desteklemek için.",
+      "Fonksiyon denemeleri ve proje içi kontrollerde kullanılacak özel tutucular ve prototip düzenekler.",
+      "Elektronik kart, sensör ve ekipman yerleşimine göre tasarlanan plastik gövdeler ve kapaklar.",
+      "Üretimi destekleyen özel kılavuzlar, koruyucular ve yardımcı plastik parçalar."
+    ],
+    "audiences": [
+      "Makine & otomasyon",
+      "Elektronik & ekipman",
+      "Üretim & bakım"
+    ],
+    "audienceTexts": [
+      "Montaj bağlantıları, kablo yönlendirmeleri ve özel aparat ihtiyaçlarını sistem geometrisiyle birlikte ele alıyoruz.",
+      "Kart ölçüleri, bağlantı arayüzleri ve havalandırma gereksinimleri üzerinden muhafaza tasarımı ve prototipleme.",
+      "Mevcut örnek, teknik çizim veya saha ölçülerinden başlayarak üretim uygunluğunu birlikte değerlendiriyoruz."
+    ]
+  },
+  {
+    "slug": "maketyanimda",
+    "name": "maketyanımda",
+    "eyebrow": "MİMARLIK & GAYRİMENKUL SUNUM ÇÖZÜMLERİ",
+    "title": "Projenizin\nölçeği değişir.\nEtkisi büyür.",
+    "lead": "Mimarlık ofisleri, gayrimenkul geliştiricileri ve proje ekipleri için ölçekli fiziksel modeller. Tasarım kararından yatırımcı sunumuna, detay seviyesi amaca göre belirlenir.",
+    "focus": "Mimari maket & proje sunumu",
+    "accent": "#c5ab7a",
+    "ink": "#262623",
+    "model": "architecture",
+    "featureTitle": "Mekânı anlatmanın\ndokunulabilir yolu.",
+    "featureLead": "Kütle, cephe, topoğrafya ve yerleşim ilişkisini görünür kılan maket çözümleri. Ölçek ve detay seviyesini hedef kitleniz, sunum amacı ve proje takviminiz belirler.",
+    "applications": [
+      "Mimari kütle çalışmaları",
+      "Gayrimenkul sunum maketleri",
+      "Arazi & yerleşim modelleri",
+      "Endüstriyel tesis maketleri"
+    ],
+    "description": "İstanbul’da mimarlık ofisleri ve gayrimenkul geliştiricileri için mimari maket, arazi modeli ve tesis sunum maketi. Proje bazlı ölçek ve detay planlaması.",
+    "heroAsset": "architecture",
+    "heroCaption": "Mimari yerleşim & sunum modeli",
+    "applicationDetails": [
+      "Tasarım alternatiflerini fiziksel hacimler ve kütle ilişkileri üzerinden değerlendirmek için.",
+      "Projenin yerleşimini, cephe yaklaşımını ve mekânsal ilişkilerini anlatan sunum odaklı modeller.",
+      "Topoğrafya, yapı ve çevre ilişkisini aynı ölçekte ele alan proje modelleri.",
+      "Tesis yerleşimi, ekipman ilişkileri ve operasyon alanlarını anlatmaya yönelik ölçekli modeller."
+    ],
+    "audiences": [
+      "Mimarlık ofisleri",
+      "Gayrimenkul geliştiricileri",
+      "Tesis & proje ekipleri"
+    ],
+    "audienceTexts": [
+      "Kütle ve cephe kararlarını fizikselleştiren, tasarım aşamasına uygun detay seviyesinde maketler.",
+      "Yatırımcı ve müşteri sunumlarında projenizin mekânsal ilişkilerini anlatan ölçekli modeller.",
+      "Bir tesisin planını, operasyon alanlarını ve yerleşimini ortak bir fiziksel model üzerinden konuşun."
+    ]
+  },
+  {
+    "slug": "parcayanimda",
+    "name": "parçayanımda",
+    "eyebrow": "ÖZEL PLASTİK PARÇA & OTOMOTİV ÇÖZÜMLERİ",
+    "title": "Bulunamayan\nparçaya, yeni\nbir üretim yolu.",
+    "lead": "Servisler, restorasyon atölyeleri ve teknik ekipler için özel plastik parça tasarımı. Örnek parçadan, ölçüden veya CAD dosyasından başlayarak üretim uygunluğunu değerlendirelim.",
+    "focus": "Özel plastik parça & otomotiv",
+    "accent": "#79b5b6",
+    "ink": "#17282b",
+    "model": "parts",
+    "featureTitle": "İhtiyacınız standart\nbir katalogda yoksa.",
+    "featureLead": "Kapak, iç trim, bağlantı elemanı ve adaptör ihtiyaçları için ölçüye özel tasarım. Bağlantı geometrisi, kullanım koşulları ve malzeme seçimini birlikte ele alıyoruz.",
+    "applications": [
+      "İç trim & kapaklar",
+      "Özel adaptörler",
+      "Bağlantı & sabitleme",
+      "Örnekten parça modelleme"
+    ],
+    "description": "İstanbul’da servis ve teknik ekipler için özel plastik parça, otomotiv iç trim, kapak ve adaptör tasarımı. Örnekten modelleme ve teknik teklif.",
+    "heroAsset": "parts",
+    "heroCaption": "İç trim & özel adaptör tasarımı",
+    "applicationDetails": [
+      "Araç içi estetik ve işlevsel plastik parçaların örnek veya ölçü üzerinden değerlendirilmesi.",
+      "Mevcut iki bileşen arasındaki geometrik uyum için projeye özel plastik adaptörler.",
+      "Güvenlik kritik olmayan uygulamalar için plastik tutucular, yönlendiriciler ve bağlantı parçaları.",
+      "Mevcut parça, eskiz veya ölçü setinden yeni üretime yönelik dijital model geliştirme."
+    ],
+    "audiences": ["Servis & restorasyon", "Ürün geliştirme", "Teknik bakım"],
+    "audienceTexts": [
+      "Bulunamayan iç trim, kapak ve plastik aksesuarları kullanım senaryosu ve örnek parça üzerinden değerlendirelim.",
+      "Yeni bir gövde, bağlantı veya adaptör fikrini montaj ilişkilerini test edebileceğiniz fiziksel modele dönüştürün.",
+      "Eskiyen veya katalogda bulunmayan yardımcı plastik parçalar için üretim alternatiflerini ele alıyoruz."
+    ]
+  }
+]

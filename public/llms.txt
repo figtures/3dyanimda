@@ -1,0 +1,6 @@
+# 3D üretim markaları
+Bu dağıtım birden fazla markaya hizmet eder. Marka adı ve odak alanı ziyaret edilen alan adına göre belirlenir.
+Güncel hizmet bilgileri: /hizmetler
+Proje talebi: /teklif-al
+İletişim: /iletisim
+Üretim noktası: Örnek Mahallesi, İstanbul. Hizmet alanı: İstanbul.

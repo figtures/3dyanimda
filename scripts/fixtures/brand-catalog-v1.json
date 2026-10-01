@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "3dyanimda",
+    "name": "3dyanımda",
+    "eyebrow": "FİKİRDEN FİZİKSEL ÜRÜNE",
+    "title": "Aklındaki fikir.\nElindeki gerçek.",
+    "lead": "Bir eskiz, bir dosya ya da çözülmeyi bekleyen bir ihtiyaç. Fikrini birlikte geliştirelim, 3D üretimle hayata geçirelim.",
+    "focus": "3D baskı & tasarım",
+    "accent": "#d8f36a",
+    "ink": "#25351e",
+    "model": "form",
+    "featureTitle": "Üretmek istediğin şeyle başlayalım.",
+    "featureLead": "İlk prototipten kişiye özel ürüne; kullanım amacını, malzemeyi ve üretim yöntemini projenle birlikte değerlendiriyoruz.",
+    "applications": [
+      "Ürün prototipleri",
+      "Kişiye özel tasarım",
+      "Kurumsal hediyelik",
+      "Küçük seri üretim"
+    ],
+    "description": "İstanbul Örnek Mahallesi merkezli 3D baskı, ürün tasarımı ve prototip üretimi. Fikrinizi, çiziminizi veya 3D dosyanızı paylaşın."
+  },
+  {
+    "slug": "3dsanayi",
+    "name": "3dsanayi",
+    "eyebrow": "ÜRETİMİN İHTİYAÇ DUYDUĞU ÇÖZÜMLER",
+    "title": "İyi fikirler,\nüretimde çalışır.",
+    "lead": "Atölyedeki bir ihtiyacı işlevsel bir parçaya dönüştürelim. Prototip, montaj yardımcısı ve küçük seri üretim için birlikte çalışalım.",
+    "focus": "Endüstriyel çözümler",
+    "accent": "#f9ad77",
+    "ink": "#4a2816",
+    "model": "industry",
+    "featureTitle": "Üretim hattına özel düşünülmüş.",
+    "featureLead": "Kullanım koşullarını ve ölçüleri birlikte netleştiriyor; fikstür, muhafaza ve fonksiyonel prototipleri ihtiyacına göre geliştiriyoruz.",
+    "applications": [
+      "Montaj fikstürleri",
+      "Fonksiyonel prototipler",
+      "Cihaz muhafazaları",
+      "Küçük seri parçalar"
+    ],
+    "description": "İstanbul'da endüstriyel 3D baskı, fikstür, cihaz muhafazası ve fonksiyonel prototip çözümleri. Projenize özel üretim değerlendirmesi."
+  },
+  {
+    "slug": "maketyanimda",
+    "name": "maketyanımda",
+    "eyebrow": "TASARIMIN ÖLÇEĞİ DEĞİŞİR, ETKİSİ DEĞİL",
+    "title": "Büyük fikirler.\nİnce detaylar.",
+    "lead": "Çizimlerini dokunulabilir bir hikâyeye dönüştürelim. Mimari projeler, sunumlar ve sergileme için ölçekli maket çözümleri.",
+    "focus": "Mimari maket & sunum",
+    "accent": "#b9c8f5",
+    "ink": "#293458",
+    "model": "architecture",
+    "featureTitle": "Projenin bütününü görünür kıl.",
+    "featureLead": "Kütleden cephe detayına, arazi yerleşiminden sunum tabanına kadar; ölçeği ve detay seviyesini sunum amacına göre belirliyoruz.",
+    "applications": [
+      "Mimari kütle maketleri",
+      "Arazi & yerleşim",
+      "Sunum maketleri",
+      "Sergileme modelleri"
+    ],
+    "description": "İstanbul'da 3D baskı ile mimari maket, arazi modeli ve sunum maketi. Ölçeğe ve projenize özel detaylandırma."
+  },
+  {
+    "slug": "parcayanimda",
+    "name": "parçayanımda",
+    "eyebrow": "KÜÇÜK BİR PARÇA, YENİ BİR İHTİMAL",
+    "title": "Eksik parçayı\nbirlikte bulalım.",
+    "lead": "Bulunamayan bir kapak, kırılmış bir bağlantı ya da sana özel bir adaptör. Örneğini veya ölçülerini paylaş, üretim olasılığını değerlendirelim.",
+    "focus": "Özel parça & otomotiv",
+    "accent": "#8edac5",
+    "ink": "#183d33",
+    "model": "parts",
+    "featureTitle": "Tam da ihtiyacın olan parça.",
+    "featureLead": "Otomotiv iç trimleri, kapaklar, bağlantılar ve özel adaptörler için örnek parçadan veya ölçülerden tasarım geliştiriyoruz. Uygunluğu kullanım koşullarıyla birlikte değerlendiriyoruz.",
+    "applications": [
+      "İç trim & kapaklar",
+      "Özel adaptörler",
+      "Bağlantı elemanları",
+      "Örnekten modelleme"
+    ],
+    "description": "İstanbul'da özel plastik parça, otomotiv iç trim, kapak ve adaptör tasarımı. Örnek parçanız veya ölçüleriniz için üretim değerlendirmesi."
+  }
+]
