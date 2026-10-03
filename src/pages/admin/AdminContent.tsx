@@ -146,11 +146,16 @@ export default function AdminContent() {
               value={draft.kind}
               onChange={(e) => setDraft({ ...draft, kind: e.target.value })}
             >
-              {["service", "solution", "material", "guide", "location"].map(
-                (k) => (
-                  <option key={k}>{k}</option>
-                ),
-              )}
+              {[
+                "service",
+                "solution",
+                "material",
+                "guide",
+                "location",
+                "sector",
+              ].map((k) => (
+                <option key={k}>{k}</option>
+              ))}
             </select>
           </label>
           <label className="block">
@@ -246,11 +251,16 @@ export default function AdminContent() {
               onChange={(e) => setKind(e.target.value)}
             >
               <option value="all">Tüm türler</option>
-              {["service", "solution", "material", "guide", "location"].map(
-                (k) => (
-                  <option key={k}>{k}</option>
-                ),
-              )}
+              {[
+                "service",
+                "solution",
+                "material",
+                "guide",
+                "location",
+                "sector",
+              ].map((k) => (
+                <option key={k}>{k}</option>
+              ))}
             </select>
             <Button
               onClick={() =>

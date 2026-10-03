@@ -82,6 +82,14 @@ try {
   assert.ok(!html.includes("noindex"));
   const sitemap = await readFile(`${root}/sitemap.xml`, "utf8");
   assert.ok(!sitemap.includes("/bolgeler/istanbul/atasehir"));
+  const planner = await readFile(
+    "release/" + host + "/bolgeler/istanbul/atasehir/3d-baski/index.html",
+    "utf8",
+  );
+  assert.ok(planner.includes("noindex"));
+  assert.ok(planner.includes("Proje kontrol listeniz"));
+  assert.ok(sitemap.includes("/araclar/stl-onizle"));
+  assert.ok(sitemap.includes("/sektorler/endustriyel"));
   assert.ok(!sitemap.includes(hidden));
   assert.ok(sitemap.includes("/bolgeler/istanbul"));
   const notfound = await readFile(`${root}/404.html`, "utf8");

@@ -22,6 +22,7 @@ import Index from "./pages/Index";
 import { RequirePermission } from "@/components/admin/RequirePermission";
 
 // Code-split: ana sayfa hariç tüm route'lar lazy
+const Engineering = lazy(() => import("./pages/Engineering"));
 const LegacyLocation = lazy(() => import("./pages/LegacyLocation"));
 const ContentPage = lazy(() => import("./pages/ContentPage"));
 const ContentHub = lazy(() => import("./pages/ContentHub"));
@@ -114,14 +115,26 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Index /> },
-      ...["/hizmetler", "/cozumler", "/malzemeler", "/rehber", "/bolgeler"].map(
-        (path) => ({ path, element: wrap(<ContentHub />) }),
-      ),
+      ...[
+        "/araclar",
+        "/araclar/stl-onizle",
+        "/araclar/kesit-analizi",
+        "/araclar/tarama-goruntuleyici",
+      ].map((path) => ({ path, element: wrap(<Engineering />) })),
+      ...[
+        "/sektorler",
+        "/hizmetler",
+        "/cozumler",
+        "/malzemeler",
+        "/rehber",
+        "/bolgeler",
+      ].map((path) => ({ path, element: wrap(<ContentHub />) })),
       ...[
         "/3d-baski",
         "/3d-tarama",
         "/3d-modelleme",
         "/cozumler/:slug",
+        "/sektorler/:slug",
         "/malzemeler/:slug",
         "/rehber/:slug",
         "/bolgeler/*",

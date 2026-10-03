@@ -5,6 +5,11 @@ import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import places from "@/content/places.json";
 const config: Record<string, [string, string, string]> = {
+  "/sektorler": [
+    "sector",
+    "Sektörünüzün dilini konuşan üretim.",
+    "Sanayi, mimari, otomotiv ve Ar-Ge için 3D baskı, tarama ve modelleme uygulamaları.",
+  ],
   "/hizmetler": [
     "service",
     "3D üretimin üç temel adımı.",
@@ -88,23 +93,15 @@ export default function ContentHub() {
             </div>
             <div className="district-directory">
               {places.map((p) => (
-                <Link
-                  key={p.slug}
-                  to={
-                    "/teklif-al" +
-                    (query ? query + "&" : "?") +
-                    "region=" +
-                    encodeURIComponent(p.name)
-                  }
-                >
+                <Link key={p.slug} to={"/bolgeler/istanbul/" + p.slug + query}>
                   {p.name}
                   <ArrowUpRight size={15} />
                 </Link>
               ))}
             </div>
             <p className="section-footnote">
-              İlçe seçimi teklif talebine bölge bilgisi ekler. Üretim ve
-              teslimat süresi projeye göre belirlenir.
+              İlçe sayfalarında dosya kontrolü ve numune hazırlığı
+              yapabilirsiniz. Üretim ve teslimat süresi projeye göre belirlenir.
             </p>
           </>
         )}

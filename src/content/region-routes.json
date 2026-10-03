@@ -1,0 +1,1226 @@
+[
+  {
+    "path": "/bolgeler/istanbul/adalar",
+    "base": "/bolgeler/istanbul/adalar",
+    "name": "Adalar",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/adalar/3d-baski",
+    "base": "/bolgeler/istanbul/adalar",
+    "name": "Adalar",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/adalar/3d-tarama",
+    "base": "/bolgeler/istanbul/adalar",
+    "name": "Adalar",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+    "base": "/bolgeler/istanbul/adalar",
+    "name": "Adalar",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/adalar/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/adalar",
+    "name": "Adalar",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/arnavutkoy",
+    "base": "/bolgeler/istanbul/arnavutkoy",
+    "name": "Arnavutköy",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+    "base": "/bolgeler/istanbul/arnavutkoy",
+    "name": "Arnavutköy",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+    "base": "/bolgeler/istanbul/arnavutkoy",
+    "name": "Arnavutköy",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+    "base": "/bolgeler/istanbul/arnavutkoy",
+    "name": "Arnavutköy",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/arnavutkoy/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/arnavutkoy",
+    "name": "Arnavutköy",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir",
+    "base": "/bolgeler/istanbul/atasehir",
+    "name": "Ataşehir",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/3d-baski",
+    "base": "/bolgeler/istanbul/atasehir",
+    "name": "Ataşehir",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+    "base": "/bolgeler/istanbul/atasehir",
+    "name": "Ataşehir",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+    "base": "/bolgeler/istanbul/atasehir",
+    "name": "Ataşehir",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/atasehir",
+    "name": "Ataşehir",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/avcilar",
+    "base": "/bolgeler/istanbul/avcilar",
+    "name": "Avcılar",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/avcilar/3d-baski",
+    "base": "/bolgeler/istanbul/avcilar",
+    "name": "Avcılar",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+    "base": "/bolgeler/istanbul/avcilar",
+    "name": "Avcılar",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+    "base": "/bolgeler/istanbul/avcilar",
+    "name": "Avcılar",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/avcilar/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/avcilar",
+    "name": "Avcılar",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/bagcilar",
+    "base": "/bolgeler/istanbul/bagcilar",
+    "name": "Bağcılar",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+    "base": "/bolgeler/istanbul/bagcilar",
+    "name": "Bağcılar",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+    "base": "/bolgeler/istanbul/bagcilar",
+    "name": "Bağcılar",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+    "base": "/bolgeler/istanbul/bagcilar",
+    "name": "Bağcılar",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/bagcilar/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/bagcilar",
+    "name": "Bağcılar",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/bahcelievler",
+    "base": "/bolgeler/istanbul/bahcelievler",
+    "name": "Bahçelievler",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+    "base": "/bolgeler/istanbul/bahcelievler",
+    "name": "Bahçelievler",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+    "base": "/bolgeler/istanbul/bahcelievler",
+    "name": "Bahçelievler",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+    "base": "/bolgeler/istanbul/bahcelievler",
+    "name": "Bahçelievler",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/bahcelievler/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/bahcelievler",
+    "name": "Bahçelievler",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/bakirkoy",
+    "base": "/bolgeler/istanbul/bakirkoy",
+    "name": "Bakırköy",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+    "base": "/bolgeler/istanbul/bakirkoy",
+    "name": "Bakırköy",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+    "base": "/bolgeler/istanbul/bakirkoy",
+    "name": "Bakırköy",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+    "base": "/bolgeler/istanbul/bakirkoy",
+    "name": "Bakırköy",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/bakirkoy/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/bakirkoy",
+    "name": "Bakırköy",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/basaksehir",
+    "base": "/bolgeler/istanbul/basaksehir",
+    "name": "Başakşehir",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+    "base": "/bolgeler/istanbul/basaksehir",
+    "name": "Başakşehir",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+    "base": "/bolgeler/istanbul/basaksehir",
+    "name": "Başakşehir",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+    "base": "/bolgeler/istanbul/basaksehir",
+    "name": "Başakşehir",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/basaksehir/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/basaksehir",
+    "name": "Başakşehir",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/bayrampasa",
+    "base": "/bolgeler/istanbul/bayrampasa",
+    "name": "Bayrampaşa",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+    "base": "/bolgeler/istanbul/bayrampasa",
+    "name": "Bayrampaşa",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+    "base": "/bolgeler/istanbul/bayrampasa",
+    "name": "Bayrampaşa",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+    "base": "/bolgeler/istanbul/bayrampasa",
+    "name": "Bayrampaşa",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/bayrampasa/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/bayrampasa",
+    "name": "Bayrampaşa",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/besiktas",
+    "base": "/bolgeler/istanbul/besiktas",
+    "name": "Beşiktaş",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/besiktas/3d-baski",
+    "base": "/bolgeler/istanbul/besiktas",
+    "name": "Beşiktaş",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+    "base": "/bolgeler/istanbul/besiktas",
+    "name": "Beşiktaş",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+    "base": "/bolgeler/istanbul/besiktas",
+    "name": "Beşiktaş",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/besiktas/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/besiktas",
+    "name": "Beşiktaş",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/beykoz",
+    "base": "/bolgeler/istanbul/beykoz",
+    "name": "Beykoz",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/beykoz/3d-baski",
+    "base": "/bolgeler/istanbul/beykoz",
+    "name": "Beykoz",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+    "base": "/bolgeler/istanbul/beykoz",
+    "name": "Beykoz",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+    "base": "/bolgeler/istanbul/beykoz",
+    "name": "Beykoz",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/beykoz/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/beykoz",
+    "name": "Beykoz",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/beylikduzu",
+    "base": "/bolgeler/istanbul/beylikduzu",
+    "name": "Beylikdüzü",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+    "base": "/bolgeler/istanbul/beylikduzu",
+    "name": "Beylikdüzü",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+    "base": "/bolgeler/istanbul/beylikduzu",
+    "name": "Beylikdüzü",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+    "base": "/bolgeler/istanbul/beylikduzu",
+    "name": "Beylikdüzü",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/beylikduzu/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/beylikduzu",
+    "name": "Beylikdüzü",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/beyoglu",
+    "base": "/bolgeler/istanbul/beyoglu",
+    "name": "Beyoğlu",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+    "base": "/bolgeler/istanbul/beyoglu",
+    "name": "Beyoğlu",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+    "base": "/bolgeler/istanbul/beyoglu",
+    "name": "Beyoğlu",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+    "base": "/bolgeler/istanbul/beyoglu",
+    "name": "Beyoğlu",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/beyoglu/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/beyoglu",
+    "name": "Beyoğlu",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/buyukcekmece",
+    "base": "/bolgeler/istanbul/buyukcekmece",
+    "name": "Büyükçekmece",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+    "base": "/bolgeler/istanbul/buyukcekmece",
+    "name": "Büyükçekmece",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+    "base": "/bolgeler/istanbul/buyukcekmece",
+    "name": "Büyükçekmece",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+    "base": "/bolgeler/istanbul/buyukcekmece",
+    "name": "Büyükçekmece",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/buyukcekmece/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/buyukcekmece",
+    "name": "Büyükçekmece",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/catalca",
+    "base": "/bolgeler/istanbul/catalca",
+    "name": "Çatalca",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/catalca/3d-baski",
+    "base": "/bolgeler/istanbul/catalca",
+    "name": "Çatalca",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/catalca/3d-tarama",
+    "base": "/bolgeler/istanbul/catalca",
+    "name": "Çatalca",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+    "base": "/bolgeler/istanbul/catalca",
+    "name": "Çatalca",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/catalca/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/catalca",
+    "name": "Çatalca",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/cekmekoy",
+    "base": "/bolgeler/istanbul/cekmekoy",
+    "name": "Çekmeköy",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+    "base": "/bolgeler/istanbul/cekmekoy",
+    "name": "Çekmeköy",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+    "base": "/bolgeler/istanbul/cekmekoy",
+    "name": "Çekmeköy",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+    "base": "/bolgeler/istanbul/cekmekoy",
+    "name": "Çekmeköy",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/cekmekoy/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/cekmekoy",
+    "name": "Çekmeköy",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenler",
+    "base": "/bolgeler/istanbul/esenler",
+    "name": "Esenler",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/esenler/3d-baski",
+    "base": "/bolgeler/istanbul/esenler",
+    "name": "Esenler",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenler/3d-tarama",
+    "base": "/bolgeler/istanbul/esenler",
+    "name": "Esenler",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+    "base": "/bolgeler/istanbul/esenler",
+    "name": "Esenler",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenler/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/esenler",
+    "name": "Esenler",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenyurt",
+    "base": "/bolgeler/istanbul/esenyurt",
+    "name": "Esenyurt",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+    "base": "/bolgeler/istanbul/esenyurt",
+    "name": "Esenyurt",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+    "base": "/bolgeler/istanbul/esenyurt",
+    "name": "Esenyurt",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+    "base": "/bolgeler/istanbul/esenyurt",
+    "name": "Esenyurt",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/esenyurt/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/esenyurt",
+    "name": "Esenyurt",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/eyupsultan",
+    "base": "/bolgeler/istanbul/eyupsultan",
+    "name": "Eyüpsultan",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+    "base": "/bolgeler/istanbul/eyupsultan",
+    "name": "Eyüpsultan",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+    "base": "/bolgeler/istanbul/eyupsultan",
+    "name": "Eyüpsultan",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+    "base": "/bolgeler/istanbul/eyupsultan",
+    "name": "Eyüpsultan",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/eyupsultan/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/eyupsultan",
+    "name": "Eyüpsultan",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/fatih",
+    "base": "/bolgeler/istanbul/fatih",
+    "name": "Fatih",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/fatih/3d-baski",
+    "base": "/bolgeler/istanbul/fatih",
+    "name": "Fatih",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/fatih/3d-tarama",
+    "base": "/bolgeler/istanbul/fatih",
+    "name": "Fatih",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+    "base": "/bolgeler/istanbul/fatih",
+    "name": "Fatih",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/fatih/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/fatih",
+    "name": "Fatih",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/gaziosmanpasa",
+    "base": "/bolgeler/istanbul/gaziosmanpasa",
+    "name": "Gaziosmanpaşa",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+    "base": "/bolgeler/istanbul/gaziosmanpasa",
+    "name": "Gaziosmanpaşa",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+    "base": "/bolgeler/istanbul/gaziosmanpasa",
+    "name": "Gaziosmanpaşa",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+    "base": "/bolgeler/istanbul/gaziosmanpasa",
+    "name": "Gaziosmanpaşa",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/gaziosmanpasa/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/gaziosmanpasa",
+    "name": "Gaziosmanpaşa",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/gungoren",
+    "base": "/bolgeler/istanbul/gungoren",
+    "name": "Güngören",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/gungoren/3d-baski",
+    "base": "/bolgeler/istanbul/gungoren",
+    "name": "Güngören",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+    "base": "/bolgeler/istanbul/gungoren",
+    "name": "Güngören",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+    "base": "/bolgeler/istanbul/gungoren",
+    "name": "Güngören",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/gungoren/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/gungoren",
+    "name": "Güngören",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/kadikoy",
+    "base": "/bolgeler/istanbul/kadikoy",
+    "name": "Kadıköy",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+    "base": "/bolgeler/istanbul/kadikoy",
+    "name": "Kadıköy",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+    "base": "/bolgeler/istanbul/kadikoy",
+    "name": "Kadıköy",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+    "base": "/bolgeler/istanbul/kadikoy",
+    "name": "Kadıköy",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/kadikoy/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/kadikoy",
+    "name": "Kadıköy",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/kagithane",
+    "base": "/bolgeler/istanbul/kagithane",
+    "name": "Kağıthane",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/kagithane/3d-baski",
+    "base": "/bolgeler/istanbul/kagithane",
+    "name": "Kağıthane",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+    "base": "/bolgeler/istanbul/kagithane",
+    "name": "Kağıthane",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+    "base": "/bolgeler/istanbul/kagithane",
+    "name": "Kağıthane",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/kagithane/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/kagithane",
+    "name": "Kağıthane",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/kartal",
+    "base": "/bolgeler/istanbul/kartal",
+    "name": "Kartal",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/kartal/3d-baski",
+    "base": "/bolgeler/istanbul/kartal",
+    "name": "Kartal",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/kartal/3d-tarama",
+    "base": "/bolgeler/istanbul/kartal",
+    "name": "Kartal",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+    "base": "/bolgeler/istanbul/kartal",
+    "name": "Kartal",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/kartal/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/kartal",
+    "name": "Kartal",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/kucukcekmece",
+    "base": "/bolgeler/istanbul/kucukcekmece",
+    "name": "Küçükçekmece",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+    "base": "/bolgeler/istanbul/kucukcekmece",
+    "name": "Küçükçekmece",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+    "base": "/bolgeler/istanbul/kucukcekmece",
+    "name": "Küçükçekmece",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+    "base": "/bolgeler/istanbul/kucukcekmece",
+    "name": "Küçükçekmece",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/kucukcekmece/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/kucukcekmece",
+    "name": "Küçükçekmece",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/maltepe",
+    "base": "/bolgeler/istanbul/maltepe",
+    "name": "Maltepe",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/maltepe/3d-baski",
+    "base": "/bolgeler/istanbul/maltepe",
+    "name": "Maltepe",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+    "base": "/bolgeler/istanbul/maltepe",
+    "name": "Maltepe",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+    "base": "/bolgeler/istanbul/maltepe",
+    "name": "Maltepe",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/maltepe/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/maltepe",
+    "name": "Maltepe",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/pendik",
+    "base": "/bolgeler/istanbul/pendik",
+    "name": "Pendik",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/pendik/3d-baski",
+    "base": "/bolgeler/istanbul/pendik",
+    "name": "Pendik",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/pendik/3d-tarama",
+    "base": "/bolgeler/istanbul/pendik",
+    "name": "Pendik",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+    "base": "/bolgeler/istanbul/pendik",
+    "name": "Pendik",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/pendik/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/pendik",
+    "name": "Pendik",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/sancaktepe",
+    "base": "/bolgeler/istanbul/sancaktepe",
+    "name": "Sancaktepe",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+    "base": "/bolgeler/istanbul/sancaktepe",
+    "name": "Sancaktepe",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+    "base": "/bolgeler/istanbul/sancaktepe",
+    "name": "Sancaktepe",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+    "base": "/bolgeler/istanbul/sancaktepe",
+    "name": "Sancaktepe",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/sancaktepe/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/sancaktepe",
+    "name": "Sancaktepe",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/sariyer",
+    "base": "/bolgeler/istanbul/sariyer",
+    "name": "Sarıyer",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/sariyer/3d-baski",
+    "base": "/bolgeler/istanbul/sariyer",
+    "name": "Sarıyer",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+    "base": "/bolgeler/istanbul/sariyer",
+    "name": "Sarıyer",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+    "base": "/bolgeler/istanbul/sariyer",
+    "name": "Sarıyer",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/sariyer/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/sariyer",
+    "name": "Sarıyer",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/silivri",
+    "base": "/bolgeler/istanbul/silivri",
+    "name": "Silivri",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/silivri/3d-baski",
+    "base": "/bolgeler/istanbul/silivri",
+    "name": "Silivri",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/silivri/3d-tarama",
+    "base": "/bolgeler/istanbul/silivri",
+    "name": "Silivri",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+    "base": "/bolgeler/istanbul/silivri",
+    "name": "Silivri",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/silivri/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/silivri",
+    "name": "Silivri",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultanbeyli",
+    "base": "/bolgeler/istanbul/sultanbeyli",
+    "name": "Sultanbeyli",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+    "base": "/bolgeler/istanbul/sultanbeyli",
+    "name": "Sultanbeyli",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+    "base": "/bolgeler/istanbul/sultanbeyli",
+    "name": "Sultanbeyli",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+    "base": "/bolgeler/istanbul/sultanbeyli",
+    "name": "Sultanbeyli",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultanbeyli/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/sultanbeyli",
+    "name": "Sultanbeyli",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultangazi",
+    "base": "/bolgeler/istanbul/sultangazi",
+    "name": "Sultangazi",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+    "base": "/bolgeler/istanbul/sultangazi",
+    "name": "Sultangazi",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+    "base": "/bolgeler/istanbul/sultangazi",
+    "name": "Sultangazi",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+    "base": "/bolgeler/istanbul/sultangazi",
+    "name": "Sultangazi",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/sultangazi/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/sultangazi",
+    "name": "Sultangazi",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/sile",
+    "base": "/bolgeler/istanbul/sile",
+    "name": "Şile",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/sile/3d-baski",
+    "base": "/bolgeler/istanbul/sile",
+    "name": "Şile",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/sile/3d-tarama",
+    "base": "/bolgeler/istanbul/sile",
+    "name": "Şile",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/sile/3d-modelleme",
+    "base": "/bolgeler/istanbul/sile",
+    "name": "Şile",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/sile/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/sile",
+    "name": "Şile",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/sisli",
+    "base": "/bolgeler/istanbul/sisli",
+    "name": "Şişli",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/sisli/3d-baski",
+    "base": "/bolgeler/istanbul/sisli",
+    "name": "Şişli",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/sisli/3d-tarama",
+    "base": "/bolgeler/istanbul/sisli",
+    "name": "Şişli",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+    "base": "/bolgeler/istanbul/sisli",
+    "name": "Şişli",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/sisli/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/sisli",
+    "name": "Şişli",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/tuzla",
+    "base": "/bolgeler/istanbul/tuzla",
+    "name": "Tuzla",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/tuzla/3d-baski",
+    "base": "/bolgeler/istanbul/tuzla",
+    "name": "Tuzla",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+    "base": "/bolgeler/istanbul/tuzla",
+    "name": "Tuzla",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+    "base": "/bolgeler/istanbul/tuzla",
+    "name": "Tuzla",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/tuzla/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/tuzla",
+    "name": "Tuzla",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/umraniye",
+    "base": "/bolgeler/istanbul/umraniye",
+    "name": "Ümraniye",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/umraniye/3d-baski",
+    "base": "/bolgeler/istanbul/umraniye",
+    "name": "Ümraniye",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+    "base": "/bolgeler/istanbul/umraniye",
+    "name": "Ümraniye",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+    "base": "/bolgeler/istanbul/umraniye",
+    "name": "Ümraniye",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/umraniye/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/umraniye",
+    "name": "Ümraniye",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/uskudar",
+    "base": "/bolgeler/istanbul/uskudar",
+    "name": "Üsküdar",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/uskudar/3d-baski",
+    "base": "/bolgeler/istanbul/uskudar",
+    "name": "Üsküdar",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+    "base": "/bolgeler/istanbul/uskudar",
+    "name": "Üsküdar",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+    "base": "/bolgeler/istanbul/uskudar",
+    "name": "Üsküdar",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/uskudar/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/uskudar",
+    "name": "Üsküdar",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/zeytinburnu",
+    "base": "/bolgeler/istanbul/zeytinburnu",
+    "name": "Zeytinburnu",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+    "base": "/bolgeler/istanbul/zeytinburnu",
+    "name": "Zeytinburnu",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+    "base": "/bolgeler/istanbul/zeytinburnu",
+    "name": "Zeytinburnu",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+    "base": "/bolgeler/istanbul/zeytinburnu",
+    "name": "Zeytinburnu",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/zeytinburnu/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/zeytinburnu",
+    "name": "Zeytinburnu",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/ornek",
+    "base": "/bolgeler/istanbul/atasehir/ornek",
+    "name": "Örnek Mahallesi",
+    "service": ""
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+    "base": "/bolgeler/istanbul/atasehir/ornek",
+    "name": "Örnek Mahallesi",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+    "base": "/bolgeler/istanbul/atasehir/ornek",
+    "name": "Örnek Mahallesi",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+    "base": "/bolgeler/istanbul/atasehir/ornek",
+    "name": "Örnek Mahallesi",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/atasehir/ornek/3d-yedek-parca",
+    "base": "/bolgeler/istanbul/atasehir/ornek",
+    "name": "Örnek Mahallesi",
+    "service": "3d-yedek-parca"
+  },
+  {
+    "path": "/bolgeler/istanbul/3d-baski",
+    "base": "/bolgeler/istanbul",
+    "name": "İstanbul",
+    "service": "3d-baski"
+  },
+  {
+    "path": "/bolgeler/istanbul/3d-tarama",
+    "base": "/bolgeler/istanbul",
+    "name": "İstanbul",
+    "service": "3d-tarama"
+  },
+  {
+    "path": "/bolgeler/istanbul/3d-modelleme",
+    "base": "/bolgeler/istanbul",
+    "name": "İstanbul",
+    "service": "3d-modelleme"
+  },
+  {
+    "path": "/bolgeler/istanbul/3d-yedek-parca",
+    "base": "/bolgeler/istanbul",
+    "name": "İstanbul",
+    "service": "3d-yedek-parca"
+  }
+]

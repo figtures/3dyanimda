@@ -16,7 +16,8 @@
     "test:browser": "node scripts/test-browser.mjs",
     "export:sites": "node scripts/export-sites.mjs",
     "test:themes": "node scripts/test-themes.mjs",
-    "test:theme-env": "node scripts/test-theme-env.mjs"
+    "test:theme-env": "node scripts/test-theme-env.mjs",
+    "test:engineering": "node scripts/test-engineering.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

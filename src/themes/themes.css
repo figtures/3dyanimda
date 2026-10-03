@@ -1609,3 +1609,30 @@
     transform: none;
   }
 }
+
+/* Flat hero edge across every theme. */
+.brand-site .content-hero {
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.resource-nav {
+  display: flex;
+  gap: 24px;
+  padding: 13px max(24px, calc((100vw - 1280px) / 2));
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.resource-nav a:hover {
+  color: var(--text);
+}
+
+.brand-site .skip-link {
+  visibility: hidden;
+}
+.brand-site .skip-link:focus-visible {
+  visibility: visible;
+}

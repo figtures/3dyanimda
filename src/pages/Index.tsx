@@ -1,3 +1,4 @@
+import "@/engineering/engineering.css";
 import ModelShowcase from "@/themes/ModelShowcase";
 import HomeHero from "@/themes/HomeHero";
 import { Link, useLocation } from "react-router-dom";
@@ -56,6 +57,19 @@ export default function Index() {
       />
       <HomeHero />
       <ModelShowcase />
+      <section className="wrap engineering-teaser">
+        <div>
+          <p className="brand-eyebrow">ÜCRETSİZ MÜHENDİSLİK ARAÇLARI</p>
+          <h2>Modelin içine bakın.</h2>
+          <p>
+            STL önizleme, hareketli kesit ve PLY tarama görüntüleme.
+            Tarayıcınızda, dosyanız size özel.
+          </p>
+        </div>
+        <Link className="brand-button" to={link("/araclar")}>
+          3D Lab’ı aç <ArrowUpRight size={18} />
+        </Link>
+      </section>
       <section className="wrap home-services" id="hizmetler">
         <div className="section-heading">
           <p className="brand-eyebrow">NEYE İHTİYACINIZ VAR?</p>

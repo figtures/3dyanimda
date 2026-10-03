@@ -3,7 +3,7 @@ import { ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
 import { useContent } from "@/content/useContent";
 import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
-import NotFound from "./NotFound";
+import RegionPlanner from "./RegionPlanner";
 import { getTenantIdentity } from "@/lib/tenant";
 export default function ContentPage() {
   const { pathname, search } = useLocation();
@@ -23,27 +23,31 @@ export default function ContentPage() {
         İçerik şu anda yüklenemiyor. Lütfen yeniden deneyin.
       </div>
     );
-  if (!p) return <NotFound />;
+  if (!p) return <RegionPlanner key={pathname} />;
   const parent =
     p.kind === "service"
       ? "/hizmetler"
-      : p.kind === "solution"
-        ? "/cozumler"
-        : p.kind === "material"
-          ? "/malzemeler"
-          : p.kind === "location"
-            ? "/bolgeler"
-            : "/rehber";
+      : p.kind === "sector"
+        ? "/sektorler"
+        : p.kind === "solution"
+          ? "/cozumler"
+          : p.kind === "material"
+            ? "/malzemeler"
+            : p.kind === "location"
+              ? "/bolgeler"
+              : "/rehber";
   const parentLabel =
     p.kind === "service"
       ? "Hizmetler"
-      : p.kind === "solution"
-        ? "Çözümler"
-        : p.kind === "material"
-          ? "Malzemeler"
-          : p.kind === "location"
-            ? "Hizmet bölgeleri"
-            : "Bilgi merkezi";
+      : p.kind === "sector"
+        ? "Sektörler"
+        : p.kind === "solution"
+          ? "Çözümler"
+          : p.kind === "material"
+            ? "Malzemeler"
+            : p.kind === "location"
+              ? "Hizmet bölgeleri"
+              : "Bilgi merkezi";
   const base = getTenantIdentity().origin;
   const related = pages
     .filter((v) => v.path !== p.path && v.kind === p.kind)

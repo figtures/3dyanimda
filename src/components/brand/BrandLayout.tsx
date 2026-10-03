@@ -111,7 +111,7 @@ export function BrandLayout() {
             ["/3d-tarama", "3D Tarama"],
             ["/3d-modelleme", "3D Modelleme"],
             ["/cozumler", "Çözümler"],
-            ["/iletisim", "İletişim"],
+            ["/araclar", "3D Araçlar"],
             ...extraNav.map((item) => [item.url, item.label_tr]),
           ].map(([path, label]) => (
             <NavLink key={path} to={link(path)} onClick={() => setOpen(false)}>
@@ -132,6 +132,20 @@ export function BrandLayout() {
           {open ? <X /> : <Menu />}
         </button>
       </header>
+      <nav className="resource-nav" aria-label="Bilgi ve sektör menüsü">
+        {[
+          ["/sektorler", "Sektörler"],
+          ["/malzemeler", "Malzemeler"],
+          ["/rehber", "Teknik rehberler"],
+          ["/bolgeler", "Hizmet bölgeleri"],
+          ["/hakkimizda", "Hakkımızda"],
+          ["/iletisim", "İletişim"],
+        ].map(([path, label]) => (
+          <Link key={path} to={link(path)}>
+            {label}
+          </Link>
+        ))}
+      </nav>
       <main id="main">
         <Outlet />
       </main>
@@ -151,8 +165,10 @@ export function BrandLayout() {
               "Keşfedin",
               [
                 ["/cozumler", "Uygulama alanları"],
+                ["/sektorler", "Sektörler"],
                 ["/malzemeler", "Malzemeler"],
                 ["/rehber", "Bilgi merkezi"],
+                ["/araclar", "Ücretsiz 3D araçlar"],
                 ["/bolgeler", "Hizmet bölgeleri"],
               ],
             ],

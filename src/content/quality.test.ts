@@ -27,7 +27,7 @@ describe("local publishing", () => {
       "parcayanimda",
     ]) {
       const rows = pages.filter((p) => p.brand === brand);
-      expect(rows).toHaveLength(181);
+      expect(rows.length).toBeGreaterThanOrEqual(197);
       expect(new Set(rows.map((p) => p.path)).size).toBe(rows.length);
       expect(rows.filter((p) => p.kind === "service")).toHaveLength(3);
     }

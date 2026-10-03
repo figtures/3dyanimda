@@ -30,7 +30,11 @@ for (const file of readdirSync("supabase/migrations")
   }
 }
 console.log("All migrations applied to fresh PostgreSQL harness.");
-const corporateHero = (await db.query("SELECT value FROM site_settings s JOIN tenants t ON t.id=s.tenant_id WHERE t.slug='3dsanayi' AND key='hero_content'")).rows[0].value;
+const corporateHero = (
+  await db.query(
+    "SELECT value FROM site_settings s JOIN tenants t ON t.id=s.tenant_id WHERE t.slug='3dsanayi' AND key='hero_content'",
+  )
+).rows[0].value;
 assert.equal(corporateHero.cta_primary_tr, "Hemen teklif al");
 console.log("PASS corporate content upgrade");
 const a = "10000000-0000-4000-8000-000000000001",
@@ -119,8 +123,20 @@ assert.equal(
 );
 console.log("PASS owner can read own quote and edit own content");
 await db.exec("RESET ROLE");
-await db.exec(readFileSync("supabase/migrations/20261001100000_corporate_brand_content.sql", "utf8"));
-assert.equal((await rows(`select value from site_settings where tenant_id='${a}' and key='hero_content'`))[0].value.title_tr, "Updated");
+await db.exec(
+  readFileSync(
+    "supabase/migrations/20261001100000_corporate_brand_content.sql",
+    "utf8",
+  ),
+);
+assert.equal(
+  (
+    await rows(
+      `select value from site_settings where tenant_id='${a}' and key='hero_content'`,
+    )
+  )[0].value.title_tr,
+  "Updated",
+);
 console.log("PASS corporate refresh preserves edited content");
 await context("anon", "3dyanimda.localhost");
 await db.exec(
@@ -175,23 +191,67 @@ console.log("PASS super admin content queries still use selected brand");
 
 // Content publication must be enforced by PostgreSQL, not only by the editor UI.
 await context("anon", "3dyanimda.localhost");
-assert.equal((await rows("select * from landing_pages")).length,18);
-assert.equal((await rows("select * from landing_pages where status='draft'")).length,0);
-await rejected(`INSERT INTO landing_pages(tenant_id,path,title,kind) VALUES('${a}','/forbidden','Unauthorized','guide')`,"anonymous content writes rejected");
+assert.equal((await rows("select * from landing_pages")).length, 34);
+assert.equal(
+  (await rows("select * from landing_pages where status='draft'")).length,
+  0,
+);
+await rejected(
+  `INSERT INTO landing_pages(tenant_id,path,title,kind) VALUES('${a}','/forbidden','Unauthorized','guide')`,
+  "anonymous content writes rejected",
+);
 await context("authenticated", "3dyanimda.localhost", null, user);
-assert.equal((await rows("select * from landing_pages")).length,181);
-await rejected(`UPDATE landing_pages SET status='published' WHERE path='/bolgeler/istanbul/atasehir'`,"thin geographic page cannot be published");
-await rejected(`INSERT INTO landing_pages(tenant_id,path,title,kind) VALUES('${b}','/cross-brand','Cross brand','guide')`,"content owner cannot write another brand");
+assert.equal((await rows("select * from landing_pages")).length, 197);
+await rejected(
+  `UPDATE landing_pages SET status='published' WHERE path='/bolgeler/istanbul/atasehir'`,
+  "thin geographic page cannot be published",
+);
+await rejected(
+  `INSERT INTO landing_pages(tenant_id,path,title,kind) VALUES('${b}','/cross-brand','Cross brand','guide')`,
+  "content owner cannot write another brand",
+);
 await db.exec("RESET ROLE");
-const localCopy='Örnek Mahallesi Ataşehir atölyemize gönderilecek numuneler için ölçü ve fotoğraf üzerinden başlangıç değerlendirmesi yapılır. Parçanın montaj konumu ve bağlantı elemanları birlikte tarif edilmelidir. Kırık bölgenin tamamlanması için karşılıklı yüzlerin ölçülerini içeren bir çizim istenir. Bu bilgi ile tarama kapsamı ve modelin hangi alanlarının yeniden tasarlanacağı belirlenir.';
-const logistics='Numunenin gönderim yöntemi teklif görüşmesinde kararlaştırılır. Ambalaj ve parça kimliği bilgisiyle birlikte kritik yüzeyler belirtilir; üretim ve taşıma için sabit süre taahhüdü verilmez.';
-const sections=JSON.stringify([{title:'Yerel süreç',body:'Mevcut örnek parçanın fotoğrafları üzerinden ön değerlendirme yapılır.'},{title:'Dosya hazırlığı',body:'Ölçü ve dosya biçimi teknik ihtiyaca göre birlikte belirlenir.'}]);
-const faq=JSON.stringify([{q:'Numuneyi nasıl gönderebilirim?',a:'Ön görüşmede ambalaj ve teslim yöntemi belirlenir.'},{q:'Teslim tarihi nasıl belirlenir?',a:'Üretim kapsamı ve taşıma planı değerlendirilerek bildirilir.'}]);
-await db.query("UPDATE landing_pages SET sections=$1::jsonb,local_context=$2,logistics=$3,faq=$4::jsonb,evidence='İşletme tarafından kontrol edilen teslim süreci',reviewed_at=now(),status='published' WHERE tenant_id=$5 AND path='/bolgeler/istanbul/atasehir'",[sections,localCopy,logistics,faq,a]);
-await db.query("UPDATE landing_pages SET sections=$1::jsonb,local_context=$2,logistics=$3,faq=$4::jsonb,evidence='İşletme tarafından kontrol edilen teslim süreci',reviewed_at=now() WHERE tenant_id=$5 AND path='/bolgeler/istanbul/kadikoy'",[sections,localCopy.replaceAll('Ataşehir','Kadıköy'),logistics,faq,b]);
-await rejected(`UPDATE landing_pages SET status='published' WHERE tenant_id='${b}' AND path='/bolgeler/istanbul/kadikoy'`,"cross-brand place-name substitution cannot bypass publication");
+const localCopy =
+  "Örnek Mahallesi Ataşehir atölyemize gönderilecek numuneler için ölçü ve fotoğraf üzerinden başlangıç değerlendirmesi yapılır. Parçanın montaj konumu ve bağlantı elemanları birlikte tarif edilmelidir. Kırık bölgenin tamamlanması için karşılıklı yüzlerin ölçülerini içeren bir çizim istenir. Bu bilgi ile tarama kapsamı ve modelin hangi alanlarının yeniden tasarlanacağı belirlenir.";
+const logistics =
+  "Numunenin gönderim yöntemi teklif görüşmesinde kararlaştırılır. Ambalaj ve parça kimliği bilgisiyle birlikte kritik yüzeyler belirtilir; üretim ve taşıma için sabit süre taahhüdü verilmez.";
+const sections = JSON.stringify([
+  {
+    title: "Yerel süreç",
+    body: "Mevcut örnek parçanın fotoğrafları üzerinden ön değerlendirme yapılır.",
+  },
+  {
+    title: "Dosya hazırlığı",
+    body: "Ölçü ve dosya biçimi teknik ihtiyaca göre birlikte belirlenir.",
+  },
+]);
+const faq = JSON.stringify([
+  {
+    q: "Numuneyi nasıl gönderebilirim?",
+    a: "Ön görüşmede ambalaj ve teslim yöntemi belirlenir.",
+  },
+  {
+    q: "Teslim tarihi nasıl belirlenir?",
+    a: "Üretim kapsamı ve taşıma planı değerlendirilerek bildirilir.",
+  },
+]);
+await db.query(
+  "UPDATE landing_pages SET sections=$1::jsonb,local_context=$2,logistics=$3,faq=$4::jsonb,evidence='İşletme tarafından kontrol edilen teslim süreci',reviewed_at=now(),status='published' WHERE tenant_id=$5 AND path='/bolgeler/istanbul/atasehir'",
+  [sections, localCopy, logistics, faq, a],
+);
+await db.query(
+  "UPDATE landing_pages SET sections=$1::jsonb,local_context=$2,logistics=$3,faq=$4::jsonb,evidence='İşletme tarafından kontrol edilen teslim süreci',reviewed_at=now() WHERE tenant_id=$5 AND path='/bolgeler/istanbul/kadikoy'",
+  [sections, localCopy.replaceAll("Ataşehir", "Kadıköy"), logistics, faq, b],
+);
+await rejected(
+  `UPDATE landing_pages SET status='published' WHERE tenant_id='${b}' AND path='/bolgeler/istanbul/kadikoy'`,
+  "cross-brand place-name substitution cannot bypass publication",
+);
 await context("anon", "3dyanimda.localhost");
-assert.equal((await rows("select * from landing_pages where kind='location'")).length,2);
-console.log('PASS reviewed local publication and public visibility');
+assert.equal(
+  (await rows("select * from landing_pages where kind='location'")).length,
+  2,
+);
+console.log("PASS reviewed local publication and public visibility");
 
 await db.close();

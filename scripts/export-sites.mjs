@@ -8,6 +8,9 @@ import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
 const env = { ...loadEnv("production", process.cwd(), ""), ...process.env };
+const regionRoutes = JSON.parse(
+  await readFile("src/content/region-routes.json", "utf8"),
+);
 const hosts = (env.SITE_HOSTS || "").split(",").filter(Boolean);
 if (
   !hosts.length ||
@@ -94,6 +97,11 @@ try {
     const routes = new Map(
       [
         "/",
+        "/araclar",
+        "/araclar/stl-onizle",
+        "/araclar/kesit-analizi",
+        "/araclar/tarama-goruntuleyici",
+        "/sektorler",
         "/hizmetler",
         "/cozumler",
         "/malzemeler",
@@ -104,7 +112,12 @@ try {
         "/teklif-al",
       ].map((p) => [p, null]),
     );
-    for (const p of landing.data) routes.set(p.path, p.updated_at);
+    const utilityRoutes = new Set(regionRoutes.map((p) => p.path));
+    for (const p of regionRoutes) routes.set(p.path, null);
+    for (const p of landing.data) {
+      routes.set(p.path, p.updated_at);
+      utilityRoutes.delete(p.path);
+    }
     for (const p of pages.data) {
       const url = "/" + p.slug.replace(/^\//, "");
       if (!p.meta?.noindex && !/^\/(bolgeler|istanbul)(\/|$)/.test(url))
@@ -176,7 +189,7 @@ try {
       const robots = await page
         .locator("meta[name=robots]")
         .getAttribute("content");
-      if (robots?.includes("noindex"))
+      if (robots?.includes("noindex") && !utilityRoutes.has(url))
         throw new Error(`Unexpected noindex: ${url}`);
       if (
         (await page.locator("link[rel=canonical]").getAttribute("href")) !==
@@ -187,7 +200,7 @@ try {
       const file = path.join(dest, url.slice(1), "index.html");
       await mkdir(path.dirname(file), { recursive: true });
       await writeFile(file, await page.content());
-      published.push({ url, lastmod });
+      if (!utilityRoutes.has(url)) published.push({ url, lastmod });
     }
     await page.goto(base + "/__missing_public_page", {
       waitUntil: "networkidle",
@@ -219,7 +232,7 @@ try {
     );
     await context.close();
     console.log(
-      `${host}: ${published.length} HTML pages and sitemap exported to ${dest}`,
+      `${host}: ${published.length} index-eligible pages + ${utilityRoutes.size} noindex utility pages exported to ${dest}`,
     );
   }
 } finally {

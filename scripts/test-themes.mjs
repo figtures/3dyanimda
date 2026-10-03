@@ -64,7 +64,7 @@ try {
           3,
         );
         await page.locator(".application-list a").first().waitFor();
-        assert.equal(await page.locator(".application-list a").count(), 4);
+        assert.equal(await page.locator(".application-list a").count(), 5);
         if (width < 960) {
           await page.getByRole("button", { name: "Menüyü aç" }).click();
           assert.equal(
@@ -94,6 +94,9 @@ try {
         "/hakkimizda",
         "/gizlilik-politikasi",
         "/yasal",
+        "/sektorler",
+        "/araclar",
+        "/bolgeler/istanbul/atasehir/3d-baski",
         "/hizmetler",
         "/cozumler",
         "/malzemeler",
