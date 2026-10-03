@@ -1,3 +1,4 @@
+import ServiceVisual from "./ServiceVisual";
 import { modelsForBrand } from "./models";
 import { lazy, Suspense, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -176,7 +177,7 @@ export default function HomeHero() {
                 </span>
                 <ArrowUpRight size={18} />
               </div>
-              <Part mode={i === 0 ? "wire" : i === 1 ? "points" : "solid"} />
+              <ServiceVisual service={index} />
               <h2>
                 {services[index].label}
                 <span>.</span>
@@ -185,8 +186,8 @@ export default function HomeHero() {
           ))}
         </div>
         <p className="visual-note">
-          Aynı temsili geometrinin farklı gösterimleri. Hizmetler tek başına
-          veya birlikte planlanabilir.
+          İhtiyacınıza göre tek bir hizmetle başlayabilir veya tasarımdan
+          üretime tüm süreci birlikte planlayabilirsiniz.
         </p>
       </section>
     );
@@ -215,12 +216,10 @@ export default function HomeHero() {
           ))}
         </div>
         <div className="studio-object">
-          <Part
-            mode={selected === 1 ? "points" : selected === 2 ? "wire" : "solid"}
-          />
+          <ServiceVisual service={selected} />
           <div className="studio-object-caption">
             <span>{services[selected].description}</span>
-            <span>TEMSİLİ MODEL</span>
+            <span>HİZMET AKIŞI</span>
           </div>
         </div>
         <div

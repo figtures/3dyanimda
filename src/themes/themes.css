@@ -1636,3 +1636,67 @@
 .brand-site .skip-link:focus-visible {
   visibility: visible;
 }
+
+/* Hero explains the service; the next section is the sole interactive part gallery. */
+.service-visual {
+  color: var(--text);
+  padding: 18px 20px 26px;
+  min-width: 0;
+}
+.service-visual > svg {
+  display: block;
+  width: 100%;
+  height: 270px;
+}
+.service-flow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.service-flow li {
+  flex: 1;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.service-flow li span {
+  display: block;
+  font: 10px monospace;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.studio-object .service-visual {
+  padding: 25px 30px 30px;
+}
+.studio-object .service-visual > svg {
+  height: 290px;
+}
+.transformation .service-flow {
+  gap: 8px;
+}
+.transformation .service-flow li {
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .studio-object .service-visual {
+    padding: 12px 20px 20px;
+  }
+  .studio-object .service-visual > svg {
+    height: 220px;
+  }
+  .transformation .service-visual {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    padding: 0 0 0 12px;
+  }
+  .transformation .service-visual > svg {
+    height: 145px;
+  }
+  .transformation .service-flow {
+    display: none;
+  }
+}

@@ -79,7 +79,7 @@ try {
         }
         if (brand === "3dyanimda" && [390, 1440].includes(width)) {
           if (theme !== "industrial")
-            await page.locator(".part-scene canvas").first().waitFor();
+            await page.locator(".service-visual svg").first().waitFor();
           await page.screenshot({
             path: `docs/previews/themes/${theme}-${width}.png`,
             fullPage: true,
