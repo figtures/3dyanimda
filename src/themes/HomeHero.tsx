@@ -1,3 +1,4 @@
+import { modelsForBrand } from "./models";
 import { lazy, Suspense, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -36,9 +37,17 @@ export const services = [
 ];
 export function Part({
   mode = "solid",
+  model,
+  interactive = false,
+  label,
 }: {
   mode?: "solid" | "wire" | "points";
+  model?: string;
+  interactive?: boolean;
+  label?: string;
 }) {
+  const brand = useBrand();
+  const selected = modelsForBrand(brand.slug)[0];
   return (
     <Suspense
       fallback={
@@ -47,7 +56,13 @@ export function Part({
         </div>
       }
     >
-      <PartScene mode={mode} />
+      <PartScene
+        mode={mode}
+        model={model || selected.id}
+        label={label || selected.material}
+        interactive={interactive}
+        fallback={`/brand/industrial/${brand.heroAsset}.webp`}
+      />
     </Suspense>
   );
 }
@@ -93,7 +108,7 @@ export default function HomeHero() {
             className="immersive-image"
             src={brand.image || `/brand/industrial/${brand.heroAsset}.webp`}
             alt={brand.heroCaption + " — temsili uygulama"}
-            fetchPriority="high"
+            loading="eager"
             width="1536"
             height="1024"
           />

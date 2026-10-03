@@ -11,6 +11,9 @@ try {
     await page.setViewportSize({width,height:1000});
     await page.goto(`http://127.0.0.1:8083/?tenant=3dyanimda&theme=${theme}`);
     await page.locator(".application-list a").first().waitFor();
+    await page.locator(".showcase-shell").scrollIntoViewIfNeeded();
+    await page.locator(".showcase-stage [data-model-status=ready]").waitFor();
+    await page.evaluate(()=>window.scrollTo(0,0));
     await page.waitForFunction(()=>document.fonts.status === "loaded");
     if(theme !== "industrial") await page.locator(".part-scene canvas").first().waitFor();
     await page.locator("img").evaluateAll(images=>Promise.all(images.map(i=>i.decode().catch(()=>{}))));

@@ -110,3 +110,18 @@ quote navigation. It uses a mocked public API and does not alter `dist`.
 Latest verification (2026-10-03): 13 unit tests, TypeScript, production build,
 251 responsive route checks, four-brand STL/STEP/draft regression checks, and
 production env selection passed. The inherited large-chunk build advisory remains.
+
+## Sector-specific 3D showcase (October 3 refinement)
+
+Nine original GLB models now power the hero examples and the interactive gallery.
+Each brand has a three-model selection appropriate to its sector. The gallery
+supports surface/wire/point views, pointer and keyboard rotation, zoom/reset and
+GLB download. Models are illustrative; they are not manufacturing specifications.
+Assets load only near the viewport. No continuous render loop runs, and GPU
+resources are released when changing models or routes. Failed downloads / WebGL
+context loss show a fallback with retry. The model source generator and ownership
+notes are in `scripts/generate-showcase-models.mjs` and `public/models/README.md`.
+
+Shared surfaces now use consistent rounded corners across all three themes,
+including navigation controls, content cards, detail callouts and quote fields.
+The quote engine, tenant isolation and env precedence are unchanged.

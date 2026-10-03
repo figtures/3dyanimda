@@ -1,3 +1,4 @@
+import ModelShowcase from "@/themes/ModelShowcase";
 import HomeHero from "@/themes/HomeHero";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -54,6 +55,7 @@ export default function Index() {
         image={img}
       />
       <HomeHero />
+      <ModelShowcase />
       <section className="wrap home-services" id="hizmetler">
         <div className="section-heading">
           <p className="brand-eyebrow">NEYE İHTİYACINIZ VAR?</p>

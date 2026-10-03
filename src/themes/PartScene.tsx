@@ -1,193 +1,308 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { MeshSurfaceSampler } from "three/examples/jsm/math/MeshSurfaceSampler.js";
-
-/** A locally constructed illustrative fixture. No external model or fake measurements. */
+import { RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
+type Props = {
+  mode?: "solid" | "wire" | "points";
+  model?: string;
+  label?: string;
+  interactive?: boolean;
+  fallback?: string;
+};
 export default function PartScene({
   mode = "solid",
-}: {
-  mode?: "solid" | "wire" | "points";
-}) {
+  model = "fixture",
+  label = "Temsili 3D model",
+  interactive = false,
+  fallback = "/brand/industrial/fixture.webp",
+}: Props) {
   const host = useRef<HTMLDivElement>(null);
-  const [failed, setFailed] = useState(false);
+  const actions = useRef<{
+    reset: () => void;
+    zoom: (factor: number) => void;
+    turn: (step: number) => void;
+  }>();
+  const [status, setStatus] = useState<"loading" | "ready" | "error">(
+    "loading",
+  );
+  const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     const element = host.current;
     if (!element) return;
+    let disposed = false;
     let renderer: THREE.WebGLRenderer;
+    setStatus("loading");
     try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true,
+        powerPreference: "low-power",
+      });
     } catch {
-      setFailed(true);
+      setStatus("error");
       return;
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-    renderer.setClearColor(0x000000, 0);
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.35;
     element.appendChild(renderer.domElement);
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-    camera.position.set(7, 5.8, 8);
-    camera.lookAt(0, 0.3, 0);
-    scene.add(new THREE.HemisphereLight(0xffffff, 0x263151, 3));
-    const light = new THREE.DirectionalLight(0xffffff, 4);
-    light.position.set(-3, 6, 5);
-    scene.add(light);
-    const rim = new THREE.DirectionalLight(0x839fff, 3);
-    rim.position.set(5, 2, -4);
-    scene.add(rim);
-    const group = new THREE.Group();
-    scene.add(group);
-    const material = new THREE.MeshStandardMaterial({
-      color: 0x2655d8,
-      roughness: 0.32,
-      metalness: 0.23,
-    });
-    const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x4b5d73,
-      transparent: true,
-      opacity: 0.65,
-    });
-    const pointMaterial = new THREE.PointsMaterial({
-      color: 0xb65031,
-      size: 0.025,
-    });
-    const geometries: THREE.BufferGeometry[] = [];
-    function add(
-      geometry: THREE.BufferGeometry,
-      x: number,
-      y: number,
-      z: number,
-      rotation = 0,
-    ) {
-      geometries.push(geometry);
-      let object: THREE.Object3D;
-      if (mode === "wire") {
-        const edges = new THREE.EdgesGeometry(geometry, 20);
-        geometries.push(edges);
-        object = new THREE.LineSegments(edges, lineMaterial);
-      } else if (mode === "points") {
-        const sampler = new MeshSurfaceSampler(
-          new THREE.Mesh(geometry, material),
-        ).build() as MeshSurfaceSampler & {
-          // Present in the installed Three.js implementation, omitted by its typings.
-          setRandomGenerator: (random: () => number) => MeshSurfaceSampler;
-        };
-        const position = new THREE.Vector3();
-        const points = new Float32Array(7000 * 3);
-        // Seeded samples keep static/export previews reproducible.
-        let seed = 41;
-        sampler.setRandomGenerator(() => {
-          seed = (seed * 16807) % 2147483647;
-          return (seed - 1) / 2147483646;
-        });
-        for (let i = 0; i < 7000; i++) {
-          sampler.sample(position);
-          position.toArray(points, i * 3);
-        }
-        const cloud = new THREE.BufferGeometry();
-        cloud.setAttribute("position", new THREE.BufferAttribute(points, 3));
-        geometries.push(cloud);
-        object = new THREE.Points(cloud, pointMaterial);
-      } else object = new THREE.Mesh(geometry, material);
-      object.position.set(x, y, z);
-      object.rotation.x = rotation;
-      group.add(object);
+    renderer.domElement.setAttribute("aria-hidden", "true");
+    const scene = new THREE.Scene(),
+      camera = new THREE.PerspectiveCamera(32, 1, 0.01, 100);
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x526476, 3));
+    for (const [color, intensity, pos] of [
+      [0xffffff, 4, [-4, 6, 5]],
+      [0xb4d5ff, 2, [4, 3, -3]],
+    ] as const) {
+      const l = new THREE.DirectionalLight(color, intensity);
+      l.position.set(pos[0], pos[1], pos[2]);
+      scene.add(l);
     }
-    const base = new THREE.Shape();
-    base.moveTo(-2.25, -1.65);
-    base.lineTo(2.25, -1.65);
-    base.lineTo(2.25, 1.65);
-    base.lineTo(-2.25, 1.65);
-    base.closePath();
-    for (const x of [-1.9, 1.9])
-      for (const y of [-1.3, 1.3]) {
-        const hole = new THREE.Path();
-        hole.absarc(x, y, 0.16, 0, Math.PI * 2, true);
-        base.holes.push(hole);
-      }
-    add(
-      new THREE.ExtrudeGeometry(base, {
-        depth: 0.28,
-        bevelEnabled: true,
-        bevelSize: 0.065,
-        bevelThickness: 0.05,
-        bevelSegments: 3,
-        steps: 5,
-        curveSegments: 32,
-      }),
-      0,
-      -0.7,
-      0,
-      -Math.PI / 2,
-    );
-    const upright = new THREE.Shape();
-    upright.moveTo(-1.5, 0);
-    upright.lineTo(1.5, 0);
-    upright.lineTo(1.15, 1.8);
-    upright.quadraticCurveTo(1, 2.6, 0, 2.6);
-    upright.quadraticCurveTo(-1, 2.6, -1.15, 1.8);
-    upright.closePath();
-    const hole = new THREE.Path();
-    hole.absarc(0, 1.6, 0.65, 0, Math.PI * 2, true);
-    upright.holes.push(hole);
-    for (const z of [-1, 0.7])
-      add(
-        new THREE.ExtrudeGeometry(upright, {
-          depth: 0.32,
-          bevelEnabled: true,
-          bevelSize: 0.05,
-          bevelThickness: 0.04,
-          bevelSegments: 3,
-          steps: 6,
-          curveSegments: 48,
-        }),
-        0,
-        -0.4,
-        z,
-      );
-    group.rotation.y = -0.25;
-    function draw() {
-      const { width, height } = element!.getBoundingClientRect();
+    const pivot = new THREE.Group();
+    scene.add(pivot);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enabled = interactive;
+    controls.enablePan = false;
+    controls.enableZoom = false;
+    controls.enableDamping = false;
+    controls.minPolarAngle = 0.2;
+    controls.maxPolarAngle = Math.PI * 0.8;
+    renderer.domElement.style.touchAction = "pan-y";
+    const geometries = new Set<THREE.BufferGeometry>(),
+      materials = new Set<THREE.Material>();
+    let distance = 8;
+    let visible = true;
+    let observer: IntersectionObserver | undefined;
+    const draw = () => {
+      if (!disposed && visible) renderer.render(scene, camera);
+    };
+    const fit = () => {
+      const { width, height } = element.getBoundingClientRect();
       if (!width || !height) return;
       renderer.setSize(width, height);
       camera.aspect = width / height;
-      camera.position
-        .set(7, 5.8, 8)
-        .multiplyScalar(width / height < 1 ? 1.25 : 1);
       camera.updateProjectionMatrix();
-      renderer.render(scene, camera);
-    }
-    const resize = new ResizeObserver(draw);
+      draw();
+    };
+    const reset = () => {
+      distance = window.innerWidth < 600 ? 8.7 : 8;
+      camera.position.set(1, 0.72, 1.1).normalize().multiplyScalar(distance);
+      controls.target.set(0, 0, 0);
+      pivot.rotation.set(0, -0.2, 0);
+      controls.update();
+      draw();
+    };
+    reset();
+    actions.current = {
+      reset,
+      zoom: (factor) => {
+        distance = THREE.MathUtils.clamp(
+          camera.position.length() * factor,
+          4.3,
+          13,
+        );
+        camera.position.normalize().multiplyScalar(distance);
+        controls.update();
+        draw();
+      },
+      turn: (step) => {
+        pivot.rotation.y += step;
+        draw();
+      },
+    };
+    controls.addEventListener("change", draw);
+    const resize = new ResizeObserver(fit);
     resize.observe(element);
-    draw();
+    const contextLost = (event: Event) => {
+      event.preventDefault();
+      setStatus("error");
+    };
+    renderer.domElement.addEventListener("webglcontextlost", contextLost);
+    // Only fetch/render a gallery when it approaches the viewport.
+    let started = false;
+    const load = () => {
+      if (started) return;
+      started = true;
+      new GLTFLoader().load(
+        `/models/${model}.glb`,
+        (gltf) => {
+          const root = gltf.scene;
+          root.traverse((obj) => {
+            if (obj instanceof THREE.Mesh) {
+              geometries.add(obj.geometry);
+              for (const m of Array.isArray(obj.material)
+                ? obj.material
+                : [obj.material])
+                materials.add(m);
+            }
+          });
+          if (disposed) {
+            geometries.forEach((g) => g.dispose());
+            materials.forEach((m) => m.dispose());
+            return;
+          }
+          root.updateMatrixWorld(true);
+          const box = new THREE.Box3().setFromObject(root),
+            size = box.getSize(new THREE.Vector3()),
+            center = box.getCenter(new THREE.Vector3());
+          const scale = 4.3 / Math.max(size.x, size.y, size.z);
+          root.position.copy(center).multiplyScalar(-scale);
+          root.scale.setScalar(scale);
+          if (mode !== "solid") {
+            let meshCount = 0;
+            root.traverse((o) => {
+              if (o instanceof THREE.Mesh) meshCount++;
+            });
+            const replacements: {
+              original: THREE.Mesh;
+              object: THREE.Object3D;
+            }[] = [];
+            root.traverse((o) => {
+              if (!(o instanceof THREE.Mesh)) return;
+              let object: THREE.Object3D;
+              if (mode === "wire") {
+                const geo = new THREE.EdgesGeometry(o.geometry, 25);
+                const mat = new THREE.LineBasicMaterial({
+                  color: 0x4c7280,
+                  transparent: true,
+                  opacity: 0.7,
+                });
+                geometries.add(geo);
+                materials.add(mat);
+                object = new THREE.LineSegments(geo, mat);
+              } else {
+                const sampler = new MeshSurfaceSampler(o).build();
+                const count = Math.max(80, Math.floor(18000 / meshCount)),
+                  positions = new Float32Array(count * 3),
+                  v = new THREE.Vector3();
+                for (let i = 0; i < count; i++) {
+                  sampler.sample(v);
+                  v.toArray(positions, i * 3);
+                }
+                const geo = new THREE.BufferGeometry();
+                geo.setAttribute(
+                  "position",
+                  new THREE.BufferAttribute(positions, 3),
+                );
+                const mat = new THREE.PointsMaterial({
+                  color: 0xb57540,
+                  size: 0.017,
+                });
+                geometries.add(geo);
+                materials.add(mat);
+                object = new THREE.Points(geo, mat);
+              }
+              object.position.copy(o.position);
+              object.quaternion.copy(o.quaternion);
+              object.scale.copy(o.scale);
+              replacements.push({ original: o, object });
+            });
+            replacements.forEach(({ original, object }) => {
+              original.parent?.add(object);
+              original.removeFromParent();
+            });
+          }
+          pivot.add(root);
+          setStatus("ready");
+          fit();
+          draw();
+        },
+        undefined,
+        () => {
+          if (!disposed) setStatus("error");
+        },
+      );
+    };
+    observer = new IntersectionObserver(
+      (entries) => {
+        visible = entries[0].isIntersecting;
+        if (visible) {
+          load();
+          draw();
+        }
+      },
+      { rootMargin: "180px" },
+    );
+    observer.observe(element);
+    fit();
     return () => {
+      disposed = true;
+      actions.current = undefined;
+      observer?.disconnect();
       resize.disconnect();
+      controls.dispose();
+      renderer.domElement.removeEventListener("webglcontextlost", contextLost);
       geometries.forEach((g) => g.dispose());
-      material.dispose();
-      lineMaterial.dispose();
-      pointMaterial.dispose();
+      materials.forEach((m) => m.dispose());
       renderer.dispose();
+      renderer.forceContextLoss();
       renderer.domElement.remove();
     };
-  }, [mode]);
+  }, [model, mode, interactive, attempt]);
   return (
     <div
-      className="part-scene"
-      ref={host}
-      role="img"
-      aria-label={
-        mode === "wire"
-          ? "Fikstürün temsili CAD çizgileri"
-          : mode === "points"
-            ? "Fikstürün temsili nokta bulutu"
-            : "Mavi üretim fikstürünün temsili 3D modeli"
-      }
+      className={`model-view ${interactive ? "is-interactive" : ""}`}
+      data-model={model}
+      data-model-status={status}
     >
-      {failed && (
-        <img
-          src="/brand/industrial/fixture.webp"
-          alt="Temsili üretim fikstürü"
-        />
+      <div
+        className="part-scene"
+        ref={host}
+        role={interactive ? "group" : "img"}
+        aria-label={label}
+        tabIndex={interactive ? 0 : undefined}
+        onKeyDown={(e) => {
+          if (["ArrowLeft", "ArrowRight"].includes(e.key)) {
+            e.preventDefault();
+            actions.current?.turn(e.key === "ArrowLeft" ? -0.2 : 0.2);
+          }
+        }}
+      />
+      {status === "loading" && (
+        <div className="model-status" role="status">
+          <span className="model-loader" />
+          3D model hazırlanıyor
+        </div>
+      )}
+      {status === "error" && (
+        <div className="model-fallback">
+          <img src={fallback} alt={label} />
+          <span>3D görünüm açılamadı.</span>
+          <button type="button" onClick={() => setAttempt((n) => n + 1)}>
+            Yeniden dene
+          </button>
+        </div>
+      )}
+      {interactive && status === "ready" && (
+        <>
+          <span className="model-hint">Sürükleyerek döndürün</span>
+          <div className="model-controls">
+            <button
+              type="button"
+              aria-label="Modeli uzaklaştır"
+              onClick={() => actions.current?.zoom(1.15)}
+            >
+              <ZoomOut size={18} />
+            </button>
+            <button
+              type="button"
+              aria-label="Modeli yakınlaştır"
+              onClick={() => actions.current?.zoom(0.85)}
+            >
+              <ZoomIn size={18} />
+            </button>
+            <button
+              type="button"
+              aria-label="Model görünümünü sıfırla"
+              onClick={() => actions.current?.reset()}
+            >
+              <RotateCcw size={18} />
+            </button>
+          </div>
+        </>
       )}
     </div>
   );
