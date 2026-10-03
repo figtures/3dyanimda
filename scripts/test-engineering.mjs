@@ -35,6 +35,24 @@ try {
       await page.goto("http://127.0.0.1:8085/araclar/kesit-analizi" + q);
       await page.getByRole("button", { name: "Örnek modeli aç" }).click();
       await page.locator("[data-viewer-state=ready] canvas").waitFor();
+      assert.equal(await page.getByLabel("Yukarı ekseni").inputValue(), "Z");
+      const zView = await page
+        .locator(".engineering-canvas canvas")
+        .screenshot();
+      await page.getByLabel("Yukarı ekseni").selectOption("Y");
+      const yView = await page
+        .locator(".engineering-canvas canvas")
+        .screenshot();
+      assert(!zView.equals(yView), "up-axis changes the camera projection");
+      await page.getByLabel("Yukarı ekseni").selectOption("Z");
+      await page.getByRole("button", { name: "Görünümü sıfırla" }).click();
+      const restoredView = await page
+        .locator(".engineering-canvas canvas")
+        .screenshot();
+      assert(
+        zView.equals(restoredView),
+        "reset and axis toggles must preserve model geometry",
+      );
       await page.getByRole("checkbox", { name: "Kesiti göster" }).check();
       await page.getByLabel("Kesit konumu").fill("25");
       const before = await page.locator(".engineering-viewport").screenshot();
@@ -98,33 +116,27 @@ try {
   );
   const ply =
     "ply\nformat ascii 1.0\nelement vertex 4\nproperty float x\nproperty float y\nproperty float z\nproperty float nx\nproperty float ny\nproperty float nz\nproperty uchar red\nproperty uchar green\nproperty uchar blue\nend_header\n0 0 0 0 0 1 255 0 0\n10 0 0 0 0 1 0 255 0\n0 10 0 0 0 1 0 0 255\n0 0 10 0 0 1 255 255 0\n";
-  await page
-    .getByLabel("STL veya PLY dosyası")
-    .setInputFiles({
-      name: "scan.ply",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(ply),
-    });
+  await page.getByLabel("STL veya PLY dosyası").setInputFiles({
+    name: "scan.ply",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(ply),
+  });
   await page.locator("[data-viewer-state=ready] canvas").waitFor();
   assert(
     await page.getByRole("button", { name: "Yüzey", exact: true }).isDisabled(),
   );
   await page.getByText("PLY nokta verisi. Yüzey oluşturulmaz.").waitFor();
-  await page
-    .getByLabel("STL veya PLY dosyası")
-    .setInputFiles({
-      name: "invalid.stl",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from("broken"),
-    });
+  await page.getByLabel("STL veya PLY dosyası").setInputFiles({
+    name: "invalid.stl",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from("broken"),
+  });
   await page.getByRole("alert").waitFor();
-  await page
-    .getByLabel("STL veya PLY dosyası")
-    .setInputFiles({
-      name: "real.stl",
-      mimeType: "application/octet-stream",
-      buffer: sample,
-    });
+  await page.getByLabel("STL veya PLY dosyası").setInputFiles({
+    name: "real.stl",
+    mimeType: "application/octet-stream",
+    buffer: sample,
+  });
   await page.getByText("real.stl", { exact: true }).waitFor();
   await page.locator("[data-viewer-state=ready] canvas").waitFor();
   await page.screenshot({

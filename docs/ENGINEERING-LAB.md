@@ -35,3 +35,7 @@ Apply `20261003110000_engineering_content.sql` after the existing migrations. It
 Use the existing environment variables to select the three themes. Run the existing static exporter against each brand's configured Supabase API and canonical host. It writes planner HTML with `noindex` but excludes those routes from sitemap XML. The private demo intentionally has no working quote backend and stays noindex.
 
 Verification: `npm run typecheck`, `npm test`, `npm run test:db`, `npm run test:engineering`, `npm run test:themes`, and `node scripts/test-export.mjs`. Browser tasks accept `CHROMIUM_EXECUTABLE`. The export test uses an isolated API fixture; it is not a live Supabase deployment test.
+
+## STL orientation
+
+The Lab starts with Z as the up axis and offers an explicit Y/Z camera-up selector because STL does not declare an up-axis convention. Changing the view does not rotate the mesh or swap measurement/clipping axes. The quote viewer also uses a Z-up camera and XY ground, with no fixed 90-degree mesh rotation. Viewer normalization works on a copy of the input positions, so changing up axis or retrying WebGL cannot mutate parsed source coordinates. Regression coverage switches Z → Y → Z, resets the view and compares the rendered canvas across all themes and brands.

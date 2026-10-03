@@ -30,6 +30,7 @@ export default function Viewer({
   const zoom = useRef<(n: number) => void>();
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
+  const [upAxis, setUpAxis] = useState<"Z" | "Y">("Z");
   useEffect(() => {
     const el = host.current!;
     let renderer: T.WebGLRenderer;
@@ -45,6 +46,7 @@ export default function Viewer({
     el.appendChild(renderer.domElement);
     const scene = new T.Scene(),
       camera = new T.PerspectiveCamera(38, 1, 0.01, 100);
+    camera.up.set(0, upAxis === "Y" ? 1 : 0, upAxis === "Z" ? 1 : 0);
     scene.add(new T.HemisphereLight(0xffffff, 0x36506a, 3));
     const light = new T.DirectionalLight(0xffffff, 4);
     light.position.set(3, 5, 4);
@@ -52,7 +54,7 @@ export default function Viewer({
     const geometry = new T.BufferGeometry();
     geometry.setAttribute(
       "position",
-      new T.BufferAttribute(model.positions, 3),
+      new T.BufferAttribute(model.positions.slice(), 3),
     );
     if (model.colors)
       geometry.setAttribute("color", new T.BufferAttribute(model.colors, 3));
@@ -81,7 +83,12 @@ export default function Viewer({
     const helper = new T.PlaneHelper(plane, 4.8, 0x68efc2);
     scene.add(helper);
     const grid = new T.GridHelper(8, 24, 0x365563, 0x223a47);
-    grid.position.y = (-size.y * scale) / 2 - 0.1;
+    if (upAxis === "Z") {
+      grid.rotation.x = Math.PI / 2;
+      grid.position.z = (-size.z * scale) / 2 - 0.1;
+    } else {
+      grid.position.y = (-size.y * scale) / 2 - 0.1;
+    }
     scene.add(grid);
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enablePan = false;
@@ -89,14 +96,15 @@ export default function Viewer({
     renderer.domElement.style.touchAction = "pan-y";
     const draw = () => renderer.render(scene, camera);
     reset.current = () => {
-      camera.position.set(6, 4, 6);
+      if (upAxis === "Z") camera.position.set(6, -6, 4);
+      else camera.position.set(6, 4, 6);
       controls.target.set(0, 0, 0);
       controls.update();
       draw();
     };
     reset.current();
     turn.current = (n) => {
-      camera.position.applyAxisAngle(new T.Vector3(0, 1, 0), n);
+      camera.position.applyAxisAngle(camera.up, n);
       controls.update();
       draw();
     };
@@ -161,7 +169,7 @@ export default function Viewer({
       renderer.domElement.remove();
       update.current = undefined;
     };
-  }, [model, retry]);
+  }, [model, retry, upAxis]);
   useEffect(
     () => update.current?.(mode, axis, section, cutting),
     [mode, axis, section, cutting],
@@ -192,7 +200,24 @@ export default function Viewer({
       ) : (
         <>
           <span className="engineering-axis">
-            X / Y / Z <b>MODEL SPACE</b>
+            X / Y / Z <b>{upAxis} YUKARI</b>
+            <label style={{ display: "block", marginTop: 10 }}>
+              Yukarı ekseni{" "}
+              <select
+                aria-label="Yukarı ekseni"
+                value={upAxis}
+                onChange={(e) => setUpAxis(e.target.value as "Z" | "Y")}
+                style={{
+                  background: "#233f4e",
+                  color: "#e5f0f3",
+                  padding: 6,
+                  borderRadius: 6,
+                }}
+              >
+                <option value="Z">Z</option>
+                <option value="Y">Y</option>
+              </select>
+            </label>
           </span>
           <div className="engineering-camera">
             <button aria-label="Uzaklaştır" onClick={() => zoom.current?.(1.2)}>

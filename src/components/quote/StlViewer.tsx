@@ -80,7 +80,8 @@ export const StlViewer = ({
     const w = mount.clientWidth,
       h = mount.clientHeight;
     const camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 5000);
-    camera.position.set(120, 100, 160);
+    camera.up.set(0, 0, 1);
+    camera.position.set(120, -160, 100);
     cameraRef.current = camera;
 
     let renderer: THREE.WebGLRenderer;
@@ -118,13 +119,14 @@ export const StlViewer = ({
     const floorGeo = new THREE.CircleGeometry(400, 64);
     const floorMat = new THREE.ShadowMaterial({ opacity: 0.18 });
     const floor = new THREE.Mesh(floorGeo, floorMat);
-    floor.rotation.x = -Math.PI / 2;
-    floor.position.y = 0;
+    // CircleGeometry already lies in the XY plane.
+    floor.position.z = 0;
     floor.receiveShadow = true;
     scene.add(floor);
 
     // Grid
     const grid = new THREE.GridHelper(600, 30, 0x6b7a99, 0x2a3550);
+    grid.rotation.x = Math.PI / 2;
     (grid.material as THREE.Material).transparent = true;
     (grid.material as THREE.Material).opacity = 0.25;
     scene.add(grid);
@@ -134,7 +136,7 @@ export const StlViewer = ({
     controls.dampingFactor = 0.08;
     controls.minDistance = 30;
     controls.maxDistance = 1200;
-    controls.target.set(0, 30, 0);
+    controls.target.set(0, 0, 30);
     controlsRef.current = controls;
 
     const animate = () => {
@@ -227,8 +229,7 @@ export const StlViewer = ({
         mesh.castShadow = true;
         mesh.receiveShadow = true;
 
-        // Most STLs are exported Z-up; rotate to Y-up
-        mesh.rotation.x = -Math.PI / 2;
+        // Preserve file axes. Camera and ground use Z-up; never rotate the STL.
 
         // Auto-fit
         const box = new THREE.Box3().setFromObject(mesh);
@@ -238,15 +239,15 @@ export const StlViewer = ({
         box.getCenter(center);
         // Move so it sits on grid
         mesh.position.sub(center);
-        mesh.position.y += size.y / 2;
+        mesh.position.z += size.z / 2;
 
         scene.add(mesh);
         meshRef.current = mesh;
 
         const maxDim = Math.max(size.x, size.y, size.z);
         const dist = maxDim * 2.2 + 40;
-        camera.position.set(dist * 0.7, dist * 0.55, dist);
-        controls.target.set(0, size.y / 2, 0);
+        camera.position.set(dist * 0.7, -dist, dist * 0.55);
+        controls.target.set(0, 0, size.z / 2);
         controls.update();
 
         // Metrics — STL units assumed mm
@@ -254,11 +255,11 @@ export const StlViewer = ({
         const surfMM2 = computeSurfaceMM2(geometry);
         const metrics: StlMetrics = {
           volumeCm3: volMM3 / 1000,
-          bboxCm: { x: size.x / 10, y: size.z / 10, z: size.y / 10 }, // visual size; before rotation z=height
+          bboxCm: { x: size.x / 10, y: size.y / 10, z: size.z / 10 },
           surfaceCm2: surfMM2 / 100,
           triangles: geometry.attributes.position.count / 3,
         };
-        // Use original (pre-rotation) bbox dims correctly
+        // Keep dimensions in the original file axes.
         const rawBox = new THREE.Box3().setFromBufferAttribute(
           geometry.attributes.position as THREE.BufferAttribute,
         );
