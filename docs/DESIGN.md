@@ -1,12 +1,18 @@
-# Ortak arayüz — 2 Ekim 2026
+# Üç ortak arayüz — 3 Ekim 2026
 
-Referans yönü: Terminal'in modern sunumu, Türkiye'de doğrudan hizmet anlaşılabilirliği ve üç ana hizmete açık erişim. Açık zemin, lacivert metin, mavi eylem rengi; büyük ama okunaklı başlıklar, somut parça görselleri ve doğrudan Studio girişi.
+Dört marka için üç ayrı, çalışan public tema aynı repoda bulunur. Seçim ve kurulum: [THEMES.md](THEMES.md).
 
-Başlıklarda yerel Rethink Sans, metinlerde yerel Inter kullanılır. Latin ve Latin Extended dosyaları Türkçe karakterleri kapsar. Font lisansları `public/fonts` içindedir. Bu seçim Morrama'nın gerçek fontunun tespit edildiği anlamına gelmez.
+- **Industrial:** tam genişlikte parça görseli, petrol tonları, açık yeşil eylemler ve koyu hizmet başlıkları.
+- **Editorial:** büyük tipografi, sıcak açık zemin, turuncu eylemler, CAD/nokta bulutu/katı model gösterimi ve yatay hizmet satırları.
+- **Studio:** gri/mavi teknik arayüz, hizmet seçimi, ana sayfadan gerçek dosya seçme ve teklif sayfasına aktarım.
 
-Dört markanın ortak menüsünde 3D Baskı, 3D Tarama, 3D Modelleme görünür. Ana sayfa üç hizmeti, markanın dört uzmanlık çözümünü, Studio'yu, üretim sürecini, rehberleri ve İstanbul kapsamını gösterir. Admin hero/uzmanlık ayarları korunur; detay içerikler yeni İçerik & Bölgeler bölümünden yönetilir.
+Başlıklar yerel Rethink Sans, metinler yerel Inter kullanır. Latin Extended Türkçe karakterleri kapsar. Lisanslar `public/fonts` içindedir. Morrama'nın fontunun tespit edildiği iddia edilmez.
 
-Referans firma logosu, müşteri isimleri, sayısal başarı iddiaları ve teslimat vaatleri taşınmaz. Görseller temsili uygulama olarak etiketlenir. 3dyanimda hero'su kaynak repodan gelen `hero-engine-part.jpg` dosyasıdır; gerçek müşteri işi olarak sunulmaz.
+Tüm temalar aynı tenant içeriklerini, üç ana hizmeti, çözümleri, rehberleri, bölge sayfalarını ve çalışan teklif motorunu kullanır. Admin ve süper admin ekranları korunur. ATAVIER kapsam dışındadır.
+
+Bu sürüm önceki açık zeminli, yan yana metin/görsel hero tasarımının yerine geçer. Yeni gerçek tarayıcı görüntüleri `docs/previews/themes/` altındadır; üst dizindeki eski önizlemeler önceki sürümü gösterir.
+
+Editorial ve Studio'daki mavi fikstür `src/themes/PartScene.tsx` içinde yerel geometriyle üretilir. Çizgi/nokta bulutu/katı yüzey aynı temsili geometrinin gösterimleridir; ölçüm veya gerçek müşteri üretimi değildir. WebGL yoksa yerel görsel kullanılır. Sürekli animasyon veya uzak model bağımlılığı yoktur.
 
 ## Konsept görseller
 
@@ -14,7 +20,7 @@ Referans firma logosu, müşteri isimleri, sayısal başarı iddiaları ve tesli
 
 Üretim briefleri:
 
-- `public/brand/industrial/fixture.webp`: Premium industrial CGI; exploded black layered polymer assembly fixture, slotted base plate, upright supports, suspended ribbed housing, orange locating inserts and steel fasteners. Dark charcoal studio background, precise rim lighting, no logos, labels or text. Used by 3dsanayi and application detail pages.
+- `public/brand/industrial/fixture.webp`: Premium industrial CGI; exploded black layered polymer assembly fixture, slotted base plate, upright supports, suspended ribbed housing, orange locating inserts and steel fasteners. Dark charcoal studio background, precise rim lighting, no logos, labels or text. Used by industrial-theme 3dyanimda/3dsanayi and application detail pages.
 - `public/brand/industrial/architecture.webp`: Ivory architectural campus scale model on a charcoal presentation plinth, bronze paths, miniature trees and a floating modular building element. Premium dark studio product rendering, no text or logos. Used by maketyanimda.
 - `public/brand/industrial/parts.webp`: Automotive polymer air vent adapter, curved trim bezel and small orange clip. Non-safety-critical interior components, dark charcoal studio composition, detailed polymer surface, no text or logos. Used by parcayanimda.
 

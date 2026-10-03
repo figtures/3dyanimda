@@ -30,3 +30,4 @@ dist-ssr
 docs/previews/*.png
 
 release/
+docs/previews/themes/*.png

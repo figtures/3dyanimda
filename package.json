@@ -14,7 +14,9 @@
     "test:db": "node scripts/test-database.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "test:browser": "node scripts/test-browser.mjs",
-    "export:sites": "node scripts/export-sites.mjs"
+    "export:sites": "node scripts/export-sites.mjs",
+    "test:themes": "node scripts/test-themes.mjs",
+    "test:theme-env": "node scripts/test-theme-env.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

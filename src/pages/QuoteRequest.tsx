@@ -25,14 +25,20 @@ const schema = z.object({
 export default function QuoteRequest() {
   const brand = useBrand();
   const { tenant } = useTenant();
-  const { search } = useLocation();
-  const [file, setFile] = useState<File | null>(null),
+  const { search, state } = useLocation();
+  const [file, setFile] = useState<File | null>(() =>
+      state?.studioFile instanceof File ? state.studioFile : null,
+    ),
     [busy, setBusy] = useState(false),
     [done, setDone] = useState(false),
     [error, setError] = useState("");
   const application = new URLSearchParams(search).get("application") || "";
   const region = new URLSearchParams(search).get("region") || "";
-  const [service, setService] = useState("3D Baskı");
+  const [service, setService] = useState(() =>
+    ["3D Baskı", "3D Tarama", "3D Modelleme"].includes(state?.studioService)
+      ? state.studioService
+      : "3D Baskı",
+  );
   const [spec, setSpec] = useState<StudioSpec>({
     summary: "",
     material: "Belirlenecek",

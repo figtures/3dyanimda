@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import {
   Link,
   NavLink,
@@ -14,6 +14,8 @@ import { resolveMediaUrl } from "@/lib/media";
 import { useRedirects } from "@/hooks/useRedirects";
 import "@/brands/brand.css";
 import "@/brands/modern.css";
+import "@/themes/themes.css";
+import { getSiteTheme, themeNames } from "@/themes/config";
 export function BrandLayout() {
   const brand = useBrand();
   const extraNav = useNavItems("header_extra").filter(
@@ -23,19 +25,21 @@ export function BrandLayout() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   useRedirects();
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname, location.search]);
+  const theme = getSiteTheme(brand.slug, location.search);
   const preview = import.meta.env.DEV;
   // Keep local preview selection while navigating between pages.
   const query = preview ? location.search : "";
   const link = (path: string) => `${path}${query}`;
   return (
     <div
-      className="brand-site"
-      style={
-        {
-          "--brand-accent": brand.accent,
-          "--brand-ink": brand.ink,
-        } as CSSProperties
-      }
+      className={`brand-site theme-${theme}`}
+      data-theme={theme}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") setOpen(false);
+      }}
     >
       <a className="skip-link" href="#main">
         İçeriğe geç
@@ -52,12 +56,30 @@ export function BrandLayout() {
               <a
                 key={b.slug}
                 aria-current={brand.slug === b.slug ? "page" : undefined}
-                href={`/?tenant=${b.slug}`}
+                href={`/?${new URLSearchParams({ tenant: b.slug, theme })}`}
               >
                 {b.slug}
               </a>
             ))}
           </div>
+          <label className="theme-picker">
+            Tema
+            <select
+              aria-label="Önizleme teması"
+              value={theme}
+              onChange={(event) => {
+                const params = new URLSearchParams(location.search);
+                params.set("theme", event.target.value);
+                window.location.assign(`${location.pathname}?${params}`);
+              }}
+            >
+              {themeNames.map((name, i) => (
+                <option value={name} key={name}>
+                  {i + 1} · {name}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
       )}
       <header className="brand-header">
@@ -80,6 +102,7 @@ export function BrandLayout() {
           )}
         </Link>
         <nav
+          id="main-navigation"
           aria-label="Ana menü"
           className={open ? "brand-nav is-open" : "brand-nav"}
         >
@@ -103,6 +126,7 @@ export function BrandLayout() {
           className="menu-toggle"
           aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
           aria-expanded={open}
+          aria-controls="main-navigation"
           onClick={() => setOpen(!open)}
         >
           {open ? <X /> : <Menu />}

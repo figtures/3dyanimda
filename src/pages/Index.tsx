@@ -1,3 +1,4 @@
+import HomeHero from "@/themes/HomeHero";
 import { Link, useLocation } from "react-router-dom";
 import {
   ArrowUpRight,
@@ -6,7 +7,6 @@ import {
   ScanLine,
   PenTool,
   Upload,
-  Plus,
 } from "lucide-react";
 import { useBrand } from "@/brands/config";
 import { useContent } from "@/content/useContent";
@@ -53,70 +53,8 @@ export default function Index() {
         description={b.description}
         image={img}
       />
-      <section className="new-hero wrap">
-        <div className="hero-topline">
-          <span>
-            <i /> İSTANBUL’DA 3D ÜRETİM
-          </span>
-          <span>TASARIMDAN ÜRETİME / {b.focus}</span>
-        </div>
-        <div className="hero-layout">
-          <div className="hero-content">
-            <h1>{b.title}</h1>
-            <p>{b.lead}</p>
-            <div className="hero-actions">
-              <Link className="brand-button" to={link("/teklif-al")}>
-                Hemen teklif al <ArrowUpRight size={19} />
-              </Link>
-              <Link className="text-link" to={link("/hizmetler")}>
-                Hizmetleri keşfet <ArrowRight size={17} />
-              </Link>
-            </div>
-            <div className="hero-note">
-              <span className="small-symbol">↗</span>
-              <span>
-                3D dosyanız hazır mı?
-                <br />
-                <strong>Studio’da açın, seçenekleri inceleyin.</strong>
-              </span>
-            </div>
-          </div>
-          <figure className="hero-product">
-            <img
-              src={img}
-              alt={b.heroCaption + " temsili üretim görseli"}
-              width="1536"
-              height="1024"
-              fetchPriority="high"
-            />
-            <div className="product-index">01 / {b.focus}</div>
-            <figcaption>
-              <div>
-                <span>FİKİRDEN FİZİKSEL PARÇAYA</span>
-                <strong>{b.heroCaption}</strong>
-              </div>
-              <span className="product-plus">
-                <Plus />
-              </span>
-            </figcaption>
-            <span className="concept-label">Temsili uygulama</span>
-          </figure>
-        </div>
-        <div className="service-strip">
-          {services.map(([s, n, tag, , Icon], i) => (
-            <Link key={s} to={link("/" + s)}>
-              <span className="strip-num">0{i + 1}</span>
-              <Icon size={23} strokeWidth={1.5} />
-              <div>
-                <strong>{n}</strong>
-                <span>{tag}</span>
-              </div>
-              <ArrowUpRight size={19} />
-            </Link>
-          ))}
-        </div>
-      </section>
-      <section className="wrap home-services">
+      <HomeHero />
+      <section className="wrap home-services" id="hizmetler">
         <div className="section-heading">
           <p className="brand-eyebrow">NEYE İHTİYACINIZ VAR?</p>
           <span>Üç hizmet. Birbirini tamamlayan bir süreç.</span>
