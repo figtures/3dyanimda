@@ -2,6 +2,7 @@
  * Usage: npm run build && SITE_HOSTS=3dyanimda.com,... npm run export:sites
  * Never uses a service-role key. Throws instead of deploying empty tenant pages.
  */
+import "./quality/release-preflight.mjs";
 import { readFile, writeFile, mkdir, cp, stat, rm } from "node:fs/promises";
 import path from "node:path";
 import { loadEnv } from "vite";

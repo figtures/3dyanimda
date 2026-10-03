@@ -1,3 +1,4 @@
+import allocations from "./model-assignments.json";
 export type ShowcaseModel = {
   id: string;
   title: string;
@@ -6,6 +7,9 @@ export type ShowcaseModel = {
   material: string;
 };
 const models: Record<string, ShowcaseModel> = {
+  "robot-gripper":{id:"robot-gripper",title:"Kavrama yüzeyinden başlayın.",category:"ROBOTİK TUTUCU",description:"İki çene arasındaki erişim, tutuş yüzeyleri ve değiştirilebilir uçların temsili incelemesi. Gerçek uygulama için iş parçası, kuvvet ve çalışma çevrimi ayrıca değerlendirilir.",material:"Paralel çeneli tutucu"},
+  "assembly-nest":{id:"assembly-nest",title:"Her bileşenin yeri belli.",category:"MONTAJ YATAĞI",description:"Birden fazla küçük parçayı aynı istasyonda konumlandıran destek düzeni. Oturma yüzeylerinin ve operatör erişiminin planlanmasını anlatan özgün bir geometri.",material:"Çok gözlü montaj yatağı"},
+  "drill-gauge":{id:"drill-gauge",title:"Referansları aynı çerçevede toplayın.",category:"KILAVUZ APARATI",description:"Kılavuz halkaları, üst köprü ve alt referans düzlemini bir araya getiren temsili aparat. Ölçü ve uygunluk kararı verilmiş bir imalat dosyası değildir.",material:"Köprülü kılavuz aparatı"},
   enclosure: {
     id: "enclosure",
     title: "Ürününüz, ilk kez elinizde.",
@@ -80,13 +84,6 @@ const models: Record<string, ShowcaseModel> = {
   },
 };
 export function modelsForBrand(brand: string): ShowcaseModel[] {
-  const ids =
-    brand === "maketyanimda"
-      ? ["campus", "villa", "district"]
-      : brand === "parcayanimda"
-        ? ["duct", "clip", "knob"]
-        : brand === "3dsanayi"
-          ? ["fixture", "impeller", "enclosure"]
-          : ["enclosure", "impeller", "fixture"];
+  const ids = (allocations as Record<string,string[]>)[brand] || allocations["3dyanimda"];
   return ids.map((id) => models[id]);
 }

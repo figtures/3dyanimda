@@ -4,6 +4,7 @@ import { useContent } from "@/content/useContent";
 import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import RegionPlanner from "./RegionPlanner";
+import NotFound from "./NotFound";
 import { getTenantIdentity } from "@/lib/tenant";
 export default function ContentPage() {
   const { pathname, search } = useLocation();
@@ -23,7 +24,7 @@ export default function ContentPage() {
         İçerik şu anda yüklenemiyor. Lütfen yeniden deneyin.
       </div>
     );
-  if (!p) return <RegionPlanner key={pathname} />;
+  if (!p) return import.meta.env.DEV ? <RegionPlanner key={pathname} /> : <NotFound />;
   const parent =
     p.kind === "service"
       ? "/hizmetler"
@@ -59,6 +60,8 @@ export default function ContentPage() {
         description={`${b.name}: ${p.summary}`}
         path={p.path}
         image={p.image || undefined}
+        keywords={[p.title, b.focus, p.city, p.district, p.neighborhood].filter(Boolean).join(", ")}
+        geo={{region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ") || "Örnek Mahallesi, Ataşehir, İstanbul"}}
         jsonLd={[
           {
             "@context": "https://schema.org",
@@ -84,6 +87,7 @@ export default function ContentPage() {
               },
             ],
           },
+          ...(p.kind === "guide" ? [{"@context":"https://schema.org","@type":"Article",headline:p.title,description:p.summary,mainEntityOfPage:base+p.path,author:{"@id":base+"/#organization"},publisher:{"@id":base+"/#organization"},...(p.updated_at?{dateModified:p.updated_at}:{}),...(p.image?{image:new URL(p.image,base).href}:{})}] : []),
           ...(p.kind === "service"
             ? [
                 {

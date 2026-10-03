@@ -141,6 +141,8 @@ export interface CmsPage {
     canonical?: string;
     no_index?: boolean;
     json_ld?: any;
+    keywords?: string;
+    geo?: { region?: string; placename?: string; position?: string };
   };
 }
 

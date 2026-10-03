@@ -1,3 +1,4 @@
+import { getTenantIdentity } from "@/lib/tenant";
 import { Seo } from "@/components/site/Seo";
 import { faqJsonLd } from "@/components/site/FAQ";
 import type { CmsPage, PageBlock } from "@/lib/cms/blocks";
@@ -30,30 +31,33 @@ export function PageRenderer({ page, blocks, path, ctx }: Props) {
   const jsonLd: any[] = [];
   for (const b of visible) {
     if (b.type === "faq") {
-      const items = (b.data as any).items || [];
+      const resolvedData = resolve(b.data);
+      const items = resolvedData.items || [];
       if (items.length) jsonLd.push(faqJsonLd(items));
-      const st = (b.data as any).service_type;
+      const st = resolvedData.service_type;
       if (st) {
         jsonLd.push({
           "@context": "https://schema.org",
           "@type": "Service",
           serviceType: st,
-          provider: { "@type": "Organization", name: "3D Yanında" },
+          provider: { "@id": `${getTenantIdentity().origin}/#organization` },
           areaServed: "TR",
           description: page.meta?.description || "",
         });
       }
     }
   }
-  if (page.meta?.json_ld) jsonLd.push(page.meta.json_ld);
+  if (page.meta?.json_ld) jsonLd.push(resolve(page.meta.json_ld));
 
   return (
     <>
       <Seo
-        title={page.meta?.title || page.title || ""}
-        description={page.meta?.description || ""}
+        title={resolve(page.meta?.title || page.title || "")}
+        description={resolve(page.meta?.description || "")}
         path={path}
-        image={page.meta?.og_image}
+        image={resolve(page.meta?.og_image || "") || undefined}
+        keywords={resolve(page.meta?.keywords || "") || undefined}
+        geo={page.meta?.geo ? resolve(page.meta.geo) : undefined}
         noindex={page.meta?.no_index}
         jsonLd={jsonLd.length ? jsonLd : undefined}
       />

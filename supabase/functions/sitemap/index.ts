@@ -97,17 +97,19 @@ Deno.serve(async (req) => {
   const push = (path: string, lastmod?: string, priority?: string) => {
     const p = path.startsWith("/") ? path : `/${path}`;
     const key = p.replace(/\/+$/, "") || "/";
+    if (excluded.has(key)) return;
     if (seen.has(key)) return;
     seen.add(key);
     urls.push({ loc: base + p, lastmod, priority });
   };
 
-  push("/", undefined, "1.0");
+
   const {data: overrides} = await supabase.from('seo_meta').select('path,noindex').eq('tenant_id',tenant.id);
   const excluded = new Set((overrides||[]).filter(o=>o.noindex).map(o=>o.path));
+  push("/", undefined, "1.0");
   const { data: landings } = await supabase.from('landing_pages').select('path,updated_at').eq('tenant_id',tenant.id).eq('status','published');
   for(const p of landings||[]) if(!excluded.has(p.path)) push(p.path,p.updated_at);
-  for (const path of ["/hizmetler", "/cozumler", "/malzemeler", "/rehber", "/bolgeler", "/hakkimizda", "/iletisim", "/teklif-al"])
+  for (const path of ["/sektorler", "/araclar", "/araclar/stl-onizle", "/araclar/kesit-analizi", "/araclar/tarama-goruntuleyici", "/hizmetler", "/cozumler", "/malzemeler", "/rehber", "/bolgeler", "/hakkimizda", "/iletisim", "/teklif-al"])
     push(path);
   const { data: posts } = await supabase
     .from("blog_posts")

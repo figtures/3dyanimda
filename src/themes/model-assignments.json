@@ -1,0 +1,22 @@
+{
+  "3dyanimda": [
+    "enclosure",
+    "impeller",
+    "fixture"
+  ],
+  "3dsanayi": [
+    "robot-gripper",
+    "assembly-nest",
+    "drill-gauge"
+  ],
+  "maketyanimda": [
+    "campus",
+    "villa",
+    "district"
+  ],
+  "parcayanimda": [
+    "duct",
+    "clip",
+    "knob"
+  ]
+}

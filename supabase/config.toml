@@ -1,4 +1,4 @@
-project_id = "four-brand-platform"
+project_id = "zdxjmhhjuomcpdtllnuq"
 
 [functions.send-email]
 verify_jwt = false

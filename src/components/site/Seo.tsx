@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { useSeoOverride } from "@/hooks/useSeoOverride";
 import { useTenant } from "@/contexts/TenantContext";
+import { businessGraph, containsLegacyIdentity } from "@/lib/structured-data";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
 import catalog from "@/brands/catalog.json";
 interface SeoProps {
   title: string;
@@ -26,6 +28,8 @@ export const Seo = ({
 }: SeoProps) => {
   const { tenant } = useTenant();
   const override = useSeoOverride(path);
+  const settings = useSiteSettings();
+  const verified = settings.verified_business_identity || {};
   const name = tenant?.name || "3D üretim";
   const domain = tenant?.custom_domain || tenant?.domain;
   const base = domain ? `https://${domain}` : window.location.origin;
@@ -46,26 +50,17 @@ export const Seo = ({
   );
   const og = override?.og_image_url || image;
   const brand = catalog.find((b) => b.slug === tenant?.slug);
-  const identity = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": `${base}/#organization`,
-    name,
-    url: base,
-    description: brand?.description,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Örnek Mahallesi",
-      addressRegion: "İstanbul",
-      addressCountry: "TR",
-    },
-    areaServed: { "@type": "City", name: "İstanbul" },
-  };
+  const identity = businessGraph({ name, origin: base, description: brand?.description,
+    logo: verified.logo, email: verified.email, telephone: verified.telephone,
+    sameAs: verified.sameAs, openingHoursSpecification: verified.openingHoursSpecification,
+    address: verified.address || {streetAddress:"Örnek Mahallesi",addressLocality:"Ataşehir",addressRegion:"İstanbul",addressCountry:"TR"},
+    geo: verified.geo,
+  });
   // Legacy schemas with source-company identity are excluded, not published under the new brand.
   const schemas = (
     jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []
   ).filter(
-    (item) => !JSON.stringify(item).match(/3dyaninda|3D Yanında|Beylikdüzü/),
+    (item) => !containsLegacyIdentity(item),
   );
   return (
     <Helmet>
@@ -94,7 +89,8 @@ export const Seo = ({
         <meta name="keywords" content={override?.keywords || keywords} />
       )}
       <meta name="geo.region" content={geo?.region || "TR-34"} />
-      <meta name="geo.placename" content="Örnek Mahallesi, İstanbul" />
+      <meta name="geo.placename" content={geo?.placename || "Örnek Mahallesi, Ataşehir, İstanbul"} />
+      {geo?.position && <meta name="geo.position" content={geo.position} />}
       {[identity, ...schemas].map((item, i) => (
         <script key={i} type="application/ld+json">
           {JSON.stringify(item).replace(/</g, "\\u003c")}

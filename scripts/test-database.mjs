@@ -20,7 +20,7 @@ GRANT ALL ON ALL TABLES IN SCHEMA storage TO anon,authenticated,service_role;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO anon,authenticated,service_role;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO anon,authenticated,service_role;`);
 for (const file of readdirSync("supabase/migrations")
-  .filter((f) => f.endsWith(".sql"))
+  .filter((f) => f.endsWith(".sql") && !f.startsWith("2026100316"))
   .sort()) {
   try {
     await db.exec(readFileSync(`supabase/migrations/${file}`, "utf8"));
@@ -254,4 +254,24 @@ assert.equal(
 );
 console.log("PASS reviewed local publication and public visibility");
 
+
+
+// Apply the new fail-closed policy after the legacy migration/RLS regression suite.
+await db.exec("RESET ROLE");
+await db.exec(readFileSync("supabase/migrations/20261003160000_global_publication_gate.sql", "utf8"));
+await context("anon", "3dyanimda.localhost");
+assert.equal((await rows("select * from landing_pages")).length,0);
+await context("authenticated", "3dyanimda.localhost", null, user);
+await rejected("UPDATE landing_pages SET status='published' WHERE path='/3d-baski'", "publication without network-wide certificate blocked");
+await rejected("INSERT INTO publication_reviews(tenant_id,path,collection,payload_hash,manifest_hash,report) VALUES('"+a+"','/3d-baski','landing_pages',repeat('a',32),repeat('b',64),'{\"result\":\"pass\",\"policy\":\"global-originality-v1\"}')", "browser editor cannot self-approve");
+await db.exec("RESET ROLE");
+await db.exec("INSERT INTO publication_reviews(tenant_id,path,collection,payload_hash,manifest_hash,report) SELECT tenant_id,path,'landing_pages',publication_payload_hash(to_jsonb(p)),repeat('a',64),'{\"result\":\"pass\",\"policy\":\"global-originality-v1\"}' FROM landing_pages p WHERE tenant_id='"+a+"' AND path='/3d-baski'");
+await db.exec("UPDATE landing_pages SET status='published' WHERE tenant_id='"+a+"' AND path='/3d-baski'");
+await rejected("UPDATE landing_pages SET summary=summary||' changed' WHERE tenant_id='"+a+"' AND path='/3d-baski'", "editing approved content invalidates snapshot");
+console.log("PASS global certificate gate, quarantine, authorization and stale-approval rejection");
+
+await db.exec("RESET ROLE");
+await db.exec(readFileSync("supabase/migrations/20261003161000_original_service_drafts.sql", "utf8"));
+assert.equal((await rows("select * from landing_pages where status='published'")).length,0);
+console.log("PASS original service drafts remain quarantined");
 await db.close();

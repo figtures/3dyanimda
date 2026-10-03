@@ -17,7 +17,10 @@
     "export:sites": "node scripts/export-sites.mjs",
     "test:themes": "node scripts/test-themes.mjs",
     "test:theme-env": "node scripts/test-theme-env.mjs",
-    "test:engineering": "node scripts/test-engineering.mjs"
+    "test:engineering": "node scripts/test-engineering.mjs",
+    "audit:originality": "python scripts/quality/audit-content.py",
+    "test:originality": "python scripts/quality/test-audit.py",
+    "release:preflight": "node scripts/quality/release-preflight.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

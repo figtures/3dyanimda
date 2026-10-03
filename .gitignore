@@ -31,3 +31,7 @@ docs/previews/*.png
 
 release/
 docs/previews/themes/*.png
+
+# Python audit caches
+__pycache__/
+*.pyc
