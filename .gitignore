@@ -35,3 +35,10 @@ docs/previews/themes/*.png
 # Python audit caches
 __pycache__/
 *.pyc
+
+# Per-brand deployment secrets and isolated generated bundles
+.env.*
+!.env.example
+.dev.vars*
+.cloudflare/
+.wrangler/

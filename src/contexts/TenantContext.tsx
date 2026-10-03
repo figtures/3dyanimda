@@ -79,6 +79,8 @@ export function TenantProvider({ children }: { children: ReactNode }) {
         );
       if (!resolved)
         throw new Error("Bu alan adına bağlı aktif bir marka bulunamadı.");
+      if (import.meta.env.VITE_TENANT_SLUG && resolved.slug !== import.meta.env.VITE_TENANT_SLUG)
+        throw new Error("Bu dağıtım için beklenen marka eşleşmiyor.");
       setTenantIdentity({
         name: resolved.name,
         domain: resolved.custom_domain || resolved.domain,

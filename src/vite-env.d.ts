@@ -1,6 +1,8 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
+  readonly VITE_TENANT_SLUG?: string;
+  readonly VITE_TENANT_HOST?: string;
   readonly VITE_SITE_THEME?: string;
   readonly VITE_THEME_3DYANIMDA?: string;
   readonly VITE_THEME_3DSANAYI?: string;

@@ -9,9 +9,6 @@ import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
 const env = { ...loadEnv("production", process.cwd(), ""), ...process.env };
-const regionRoutes = JSON.parse(
-  await readFile("src/content/region-routes.json", "utf8"),
-);
 const hosts = (env.SITE_HOSTS || "").split(",").filter(Boolean);
 if (
   !hosts.length ||
@@ -19,8 +16,8 @@ if (
   !env.VITE_SUPABASE_PUBLISHABLE_KEY
 )
   throw new Error("SITE_HOSTS and public Supabase configuration are required.");
-const root = path.resolve("dist"),
-  output = path.resolve("release");
+const root = path.resolve(env.SITE_BUILD_DIR || "dist"),
+  output = path.resolve(env.SITE_OUTPUT_DIR || "release");
 const shell = await readFile(path.join(root, "index.html"), "utf8");
 const escape = (s) =>
   s
@@ -113,8 +110,7 @@ try {
         "/teklif-al",
       ].map((p) => [p, null]),
     );
-    const utilityRoutes = new Set(regionRoutes.map((p) => p.path));
-    for (const p of regionRoutes) routes.set(p.path, null);
+    const utilityRoutes = new Set();
     for (const p of landing.data) {
       routes.set(p.path, p.updated_at);
       utilityRoutes.delete(p.path);

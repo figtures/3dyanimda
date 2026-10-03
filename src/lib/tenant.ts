@@ -31,7 +31,7 @@ export function requestHost(
   return normalized;
 }
 // Keep the resolved host stable during SPA navigation; brand switches use full navigation.
-const initialRequestHost = requestHost(
+const initialRequestHost = import.meta.env.VITE_TENANT_HOST || requestHost(
   window.location.hostname,
   window.location.search,
   import.meta.env.DEV,
