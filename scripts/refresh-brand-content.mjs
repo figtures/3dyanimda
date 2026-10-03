@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 const brands = JSON.parse(
-  readFileSync(new URL("../src/brands/catalog.json", import.meta.url), "utf8"),
+  readFileSync(new URL("./fixtures/brand-catalog-corporate.json", import.meta.url), "utf8"),
 );
 // The original seed is immutable: only untouched defaults are upgraded.
 const seed = readFileSync(

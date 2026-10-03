@@ -1,0 +1,158 @@
+[
+  {
+    "slug": "adalar",
+    "name": "Adalar"
+  },
+  {
+    "slug": "arnavutkoy",
+    "name": "Arnavutköy"
+  },
+  {
+    "slug": "atasehir",
+    "name": "Ataşehir"
+  },
+  {
+    "slug": "avcilar",
+    "name": "Avcılar"
+  },
+  {
+    "slug": "bagcilar",
+    "name": "Bağcılar"
+  },
+  {
+    "slug": "bahcelievler",
+    "name": "Bahçelievler"
+  },
+  {
+    "slug": "bakirkoy",
+    "name": "Bakırköy"
+  },
+  {
+    "slug": "basaksehir",
+    "name": "Başakşehir"
+  },
+  {
+    "slug": "bayrampasa",
+    "name": "Bayrampaşa"
+  },
+  {
+    "slug": "besiktas",
+    "name": "Beşiktaş"
+  },
+  {
+    "slug": "beykoz",
+    "name": "Beykoz"
+  },
+  {
+    "slug": "beylikduzu",
+    "name": "Beylikdüzü"
+  },
+  {
+    "slug": "beyoglu",
+    "name": "Beyoğlu"
+  },
+  {
+    "slug": "buyukcekmece",
+    "name": "Büyükçekmece"
+  },
+  {
+    "slug": "catalca",
+    "name": "Çatalca"
+  },
+  {
+    "slug": "cekmekoy",
+    "name": "Çekmeköy"
+  },
+  {
+    "slug": "esenler",
+    "name": "Esenler"
+  },
+  {
+    "slug": "esenyurt",
+    "name": "Esenyurt"
+  },
+  {
+    "slug": "eyupsultan",
+    "name": "Eyüpsultan"
+  },
+  {
+    "slug": "fatih",
+    "name": "Fatih"
+  },
+  {
+    "slug": "gaziosmanpasa",
+    "name": "Gaziosmanpaşa"
+  },
+  {
+    "slug": "gungoren",
+    "name": "Güngören"
+  },
+  {
+    "slug": "kadikoy",
+    "name": "Kadıköy"
+  },
+  {
+    "slug": "kagithane",
+    "name": "Kağıthane"
+  },
+  {
+    "slug": "kartal",
+    "name": "Kartal"
+  },
+  {
+    "slug": "kucukcekmece",
+    "name": "Küçükçekmece"
+  },
+  {
+    "slug": "maltepe",
+    "name": "Maltepe"
+  },
+  {
+    "slug": "pendik",
+    "name": "Pendik"
+  },
+  {
+    "slug": "sancaktepe",
+    "name": "Sancaktepe"
+  },
+  {
+    "slug": "sariyer",
+    "name": "Sarıyer"
+  },
+  {
+    "slug": "silivri",
+    "name": "Silivri"
+  },
+  {
+    "slug": "sultanbeyli",
+    "name": "Sultanbeyli"
+  },
+  {
+    "slug": "sultangazi",
+    "name": "Sultangazi"
+  },
+  {
+    "slug": "sile",
+    "name": "Şile"
+  },
+  {
+    "slug": "sisli",
+    "name": "Şişli"
+  },
+  {
+    "slug": "tuzla",
+    "name": "Tuzla"
+  },
+  {
+    "slug": "umraniye",
+    "name": "Ümraniye"
+  },
+  {
+    "slug": "uskudar",
+    "name": "Üsküdar"
+  },
+  {
+    "slug": "zeytinburnu",
+    "name": "Zeytinburnu"
+  }
+]

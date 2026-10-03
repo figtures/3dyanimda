@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "test:db": "node scripts/test-database.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "test:browser": "node scripts/test-browser.mjs"
+    "test:browser": "node scripts/test-browser.mjs",
+    "export:sites": "node scripts/export-sites.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

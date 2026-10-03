@@ -44,8 +44,9 @@ Her domaini aynı uygulama dağıtımına bağlayın. Domain doğrulaması ve TL
 
 | Panel | Yeni arayüzdeki karşılığı |
 | --- | --- |
-| Ana Sayfa | Hero metni/görseli, uzmanlık metni, alt CTA |
-| Hizmet Kartları | Anasayfa kullanım alanları ve hizmetler sayfası |
+| Ana Sayfa | Hero metni/görseli ve uzmanlık metni |
+| İçerik & Bölgeler | Hizmet, çözüm, malzeme, rehber ve konum sayfaları; yayın kontrolü |
+| Fiyatlandırma / Kampanyalar | Marka bazlı Studio hesabı; aktif FDM malzemeleri ve fiyat ayarları |
 | Site Ayarları | Header yatay logo |
 | İletişim | E-posta, telefon ve adres |
 | Navigasyon | Header ek bağlantıları |
@@ -54,7 +55,7 @@ Her domaini aynı uygulama dağıtımına bağlayın. Domain doğrulaması ve TL
 | Talepler | Yalnızca seçili markanın teklifleri ve dosyaları |
 | Sayfalar / Koleksiyonlar / Rotalar | Markaya özel CMS ve yerel içerik sayfaları |
 
-Yeni markalarda yasal unvan, telefon, e-posta veya teslimat taahhüdü uydurulmadı. Yasal belgeler ve gerçek iletişim bilgileri panelde tamamlanmalıdır. Eski firmanın ilçe SEO metinleri yeni markalara kopyalanmadı; `/istanbul/:ilce/:hizmet` artık markanın CMS kayıtlarından beslenir.
+Yeni markalarda yasal unvan, telefon, e-posta veya teslimat taahhüdü uydurulmadı. Yasal belgeler ve gerçek iletişim bilgileri panelde tamamlanmalıdır. Eski firmanın ilçe SEO metinleri yeni markalara kopyalanmadı; `/istanbul/:ilce/:hizmet`, yalnızca yeni yerel kayıt yayınlanmışsa karşılığına yönlenir. Ayrıntılar `docs/CONTENT-SEO.md` içinde.
 
 ## 5. E-posta yönlendirmeleri
 
@@ -84,14 +85,31 @@ npx supabase functions deploy eject-tenant
 
 ## 6. Hosting ve SEO
 
-- `npm run build` çıktısı `dist/`.
-- Supabase frontend env değerleri build sırasında sağlanır.
-- SPA yolları `index.html` dosyasına rewrite edilir.
-- `/sitemap.xml` isteği seçili hostname ile Supabase `/functions/v1/sitemap?host=HOST` endpoint'ine proxy edilir. Eski statik sitemap kaldırıldı. Bu proxy, seçilen hosting sağlayıcısında yapılandırılmalıdır.
-- `robots.txt` içine gerçek domainin sitemap URL'i eklenebilir.
-- Anasayfa ve içerik sayfalarında SSR/prerender gerekir: mevcut client-side Helmet etiketleri tek başına sosyal paylaşım botlarına yeterli değildir. Yeni hosting kararı verilmediği için sunucu adaptörü bu paketin kapsamına dahil edilmedi.
-- Yeni Supabase üzerinde Auth girişi, marka A/B RLS, teklif + yükleme, signed URL, admin düzenlemesi ve email cron bir kez gerçek servislerle doğrulanmalı. PostgreSQL harness testleri yalnızca yerel veritabanı doğrulamasıdır.
+Supabase public URL/key ile üretim bundle'ı oluşturun. Tenant kayıtlarındaki gerçek domainleri ve DNS/TLS ayarlarını önce tamamlayın. Canonical host bilgisi ve içerik yayın durumu doğrulanmadan export durur.
+
+```sh
+npm run build
+SITE_HOSTS=3dyanimda.com,3dsanayi.com,maketyanimda.com,parcayanimda.com npm run export:sites
+```
+
+Domain listesi örnektir: yalnızca satın alınmış, doğrulanmış ve tenant'a atanmış gerçek hostları yazın. İlk kullanımda `npx playwright install chromium` gerekir; alternatif Chromium binary'si `CHROMIUM_EXECUTABLE` ile belirtilebilir.
+
+Her `release/HOST/` dizini o markanın HTML sayfaları, ortak JS/CSS, sitemap ve robots dosyalarını içerir. Her domain kendi dizininden servis edilir. `_redirects` ve `_headers`, Cloudflare Pages/Netlify biçimindedir. Başka bir host için aynı kuralları adapte edin: mevcut HTML sayfalarını sun, admin/studio yollarında app.html kullan, bulunmayan public URL'lerde 404.html ve HTTP 404 dön. Canonical dışındaki www/domain aliasları sunucu katmanında 301/308 yönlendirilmeli.
+
+İçerik değişikliklerinden sonra `npm run build` ve `npm run export:sites` yeniden çalıştırılıp çıktı yeniden yayınlanmalıdır. Bu sürüm otomatik rebuild webhook'u kurmaz. Anlık API verisi istemcide yenilenebilir; arama motorunun aldığı statik HTML son export'un snapshot'ıdır. Yayından kaldırılan içeriği HTTP'den kaldırmak için rebuild/deploy gerekir.
+
+Supabase sitemap fonksiyonu da yayın/noindex kurallarını uygular. Statik export kullanılıyorsa üretilen `/sitemap.xml` esas alınır; ikinci bir proxy gerekli değildir.
+
+Yeni Supabase üzerinde Auth girişi, marka A/B RLS, teklif + yükleme, signed URL, admin düzenlemesi ve e-posta cron gerçek servislerle doğrulanmalı. Yerel PostgreSQL ve örnek API testleri gerçek Supabase servis entegrasyonunun yerine geçmez.
+
+## 7. 3D Studio
+
+Tüm markalarda `/teklif-al` içinde STL önizleme, döndürme/yakınlaştırma, mm bazlı boyut/hacim ölçümü, FDM malzeme, kalite, renk, doluluk ve adet seçimi vardır. Fiyat formülü kaynak motorla aynı tutulmuştur. Sonuç müşteri tarafında hesaplanan ön tahmindir; resmi fiyat veya ödeme tutarı olarak güvenilmez. Aktif kampanya varsa ön tahmine uygulanır; yapay geri sayım bulunmaz.
+
+Production ortamında aktif malzeme ve `margin_percent`, `vat_percent`, `labor_per_hour`, `min_order_price` ayarları eksiksiz olmalıdır. Eksik ayarda fiyat gösterilmez; teknik talep alınır. SLA/SLS fiyatı FDM hacim formülüyle hesaplanmaz. Tarama ve modelleme talepleri kapsam üzerinden değerlendirilir.
+
+STL dışında OBJ/3MF/STEP/IGES dosyaları teknik incelemeye alınır; bu formatlarda otomatik önizleme/ölçüm yoktur. Dosya sınırı 20 MB. Dosyalar tenant klasöründe özel storage'a gider. Form, yapılandırmayı mevcut teklif kayıtlarına ve bildirim kuyruğuna bağlar. Geliştirme demosunun fiyatları örnektir ve gönderim kapalıdır.
 
 ## Durum
 
-Yerelde tasarım, tip kontrolü, build, PostgreSQL migration/RLS ve tarayıcı senaryoları doğrulandı. Gerçek Supabase, DNS, hosting, e-posta ve SSR/prerender dağıtımı yapılmadı.
+Yeni arayüz, içerik altyapısı, Studio ve HTML export kodu hazırdır. Canlı Supabase migration, domain/DNS, hosting ve e-posta dağıtımı henüz yapılmadı.

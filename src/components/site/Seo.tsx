@@ -76,7 +76,7 @@ export const Seo = ({
       <meta
         name="robots"
         content={
-          noIndex ? "noindex,nofollow" : "index,follow,max-image-preview:large"
+          noIndex ? "noindex,follow" : "index,follow,max-image-preview:large"
         }
       />
       <meta property="og:title" content={fullTitle} />

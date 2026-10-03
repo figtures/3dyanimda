@@ -1,371 +1,288 @@
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
-  ArrowDown,
   ArrowUpRight,
   ArrowRight,
-  Check,
-  FileText,
+  Box,
   ScanLine,
-  Settings2,
-  ChevronRight,
+  PenTool,
+  Upload,
+  Plus,
 } from "lucide-react";
 import { useBrand } from "@/brands/config";
+import { useContent } from "@/content/useContent";
 import { Seo } from "@/components/site/Seo";
-
+import heroEngine from "@/assets/hero-engine-part.jpg";
+const services = [
+  [
+    "3d-baski",
+    "3D Baskı",
+    "Dijitalden fiziksele.",
+    "Modelinizden prototip, aparat ve ihtiyaca özel parça üretimi.",
+    Box,
+  ],
+  [
+    "3d-tarama",
+    "3D Tarama",
+    "Parçadan dijital modele.",
+    "Mevcut parçanın geometrisini dijital ortama aktarmak için.",
+    ScanLine,
+  ],
+  [
+    "3d-modelleme",
+    "3D Modelleme",
+    "Fikirden üretilebilir tasarıma.",
+    "Eskiz, ölçü veya numuneden başlayarak 3D model geliştirme.",
+    PenTool,
+  ],
+] as const;
 export default function Index() {
-  const brand = useBrand();
+  const b = useBrand();
   const { search } = useLocation();
-  const query = import.meta.env.DEV ? search : "";
-  const [selected, setSelected] = useState(0);
-  const [audience, setAudience] = useState(0);
-  const hero = brand.settings.hero_content ?? {};
-  const cta = brand.settings.cta_content ?? {};
-  const services =
-    Array.isArray(brand.settings.services_cards) &&
-    brand.settings.services_cards.length
-      ? brand.settings.services_cards.map((card, index) => ({
-          title: card.title_tr,
-          detail:
-            card.desc_tr ||
-            brand.applicationDetails[index] ||
-            brand.featureLead,
-        }))
-      : brand.applications.map((title, index) => ({
-          title,
-          detail: brand.applicationDetails[index],
-        }));
-  const active = services[selected] || services[0];
-  const quote = (application?: string) =>
-    `/teklif-al${query}${application ? `${query ? "&" : "?"}application=${encodeURIComponent(application)}` : ""}`;
-  const asset = brand.image || `/brand/industrial/${brand.heroAsset}.webp`;
+  const q = import.meta.env.DEV ? search : "";
+  const link = (s: string) => s + q;
+  const { data: pages = [] } = useContent();
+  const img =
+    b.image ||
+    (b.slug === "3dyanimda"
+      ? heroEngine
+      : `/brand/industrial/${b.heroAsset}.webp`);
   return (
     <>
       <Seo
-        title={brand.focus}
-        description={brand.description}
-        path="/"
-        geo={{ region: "TR-34", placename: "Örnek Mahallesi, İstanbul" }}
+        title="3D Baskı, 3D Tarama ve 3D Modelleme"
+        description={b.description}
+        image={img}
       />
-      <section className="industrial-hero">
-        <div className="hero-blueprint" aria-hidden />
-        <div className="hero-copy">
-          <p className="brand-eyebrow">
-            <span className="status-dot" />
-            {brand.eyebrow}
-          </p>
-          <h1>
-            {brand.title.split("\n").map((line, index) => (
-              <span
-                key={line}
-                className={
-                  index === brand.title.split("\n").length - 1
-                    ? "hero-title-accent"
-                    : ""
-                }
-              >
-                {line}
+      <section className="new-hero wrap">
+        <div className="hero-topline">
+          <span>
+            <i /> İSTANBUL’DA 3D ÜRETİM
+          </span>
+          <span>TASARIMDAN ÜRETİME / {b.focus}</span>
+        </div>
+        <div className="hero-layout">
+          <div className="hero-content">
+            <h1>{b.title}</h1>
+            <p>{b.lead}</p>
+            <div className="hero-actions">
+              <Link className="brand-button" to={link("/teklif-al")}>
+                Hemen teklif al <ArrowUpRight size={19} />
+              </Link>
+              <Link className="text-link" to={link("/hizmetler")}>
+                Hizmetleri keşfet <ArrowRight size={17} />
+              </Link>
+            </div>
+            <div className="hero-note">
+              <span className="small-symbol">↗</span>
+              <span>
+                3D dosyanız hazır mı?
+                <br />
+                <strong>Studio’da açın, seçenekleri inceleyin.</strong>
               </span>
-            ))}
-          </h1>
-          <p className="hero-lead">{brand.lead}</p>
-          <div className="hero-actions">
-            <Link className="brand-button accent" to={quote()}>
-              {hero.cta_primary_tr || "Teknik teklif alın"}
+            </div>
+          </div>
+          <figure className="hero-product">
+            <img
+              src={img}
+              alt={b.heroCaption + " temsili üretim görseli"}
+              width="1536"
+              height="1024"
+              fetchPriority="high"
+            />
+            <div className="product-index">01 / {b.focus}</div>
+            <figcaption>
+              <div>
+                <span>FİKİRDEN FİZİKSEL PARÇAYA</span>
+                <strong>{b.heroCaption}</strong>
+              </div>
+              <span className="product-plus">
+                <Plus />
+              </span>
+            </figcaption>
+            <span className="concept-label">Temsili uygulama</span>
+          </figure>
+        </div>
+        <div className="service-strip">
+          {services.map(([s, n, tag, , Icon], i) => (
+            <Link key={s} to={link("/" + s)}>
+              <span className="strip-num">0{i + 1}</span>
+              <Icon size={23} strokeWidth={1.5} />
+              <div>
+                <strong>{n}</strong>
+                <span>{tag}</span>
+              </div>
               <ArrowUpRight size={19} />
             </Link>
-            <a className="text-link light" href="#cozumler">
-              {hero.cta_secondary_tr || "Çözümleri inceleyin"}
-              <ArrowDown size={16} />
-            </a>
-          </div>
-          <div className="hero-assurance">
-            <span>
-              <FileText size={14} /> CAD dosyası veya teknik ihtiyaç
-            </span>
-            <span>
-              <Settings2 size={14} /> Projeye özel değerlendirme
-            </span>
-          </div>
-        </div>
-        <figure className="industrial-visual">
-          <div className="visual-topline">
-            <span>APPLICATION STUDY / 01</span>
-            <span className="crosshair">+</span>
-          </div>
-          <img
-            src={asset}
-            alt={`${brand.heroCaption} — kavramsal üretim görseli`}
-            fetchPriority="high"
-            width={1536}
-            height={1024}
-          />
-          <figcaption>
-            <div>
-              <span className="micro-label">UYGULAMA ODAĞI</span>
-              <strong>{brand.heroCaption}</strong>
-            </div>
-            <span className="concept-tag">KONSEPT GÖRSEL</span>
-          </figcaption>
-          <div className="visual-dim" aria-hidden>
-            <span />
-            TASARIM → FİZİKSEL MODEL
-            <span />
-          </div>
-        </figure>
-        <div className="hero-bottom">
-          <span>İSTANBUL / ÖRNEK MAHALLESİ</span>
-          <div>
-            <span>
-              01 <b>Modelleme</b>
-            </span>
-            <span>
-              02 <b>Prototipleme</b>
-            </span>
-            <span>
-              03 <b>Küçük seri</b>
-            </span>
-          </div>
-          <a href="#cozumler" aria-label="Üretim çözümlerine git">
-            <ArrowDown size={17} />
-          </a>
+          ))}
         </div>
       </section>
-      <section className="audience-ribbon" aria-label="Çalışma alanları">
-        <span>EKİBİNİZİN İHTİYACINA GÖRE</span>
-        {brand.audiences.map((name) => (
-          <span key={name}>
-            {name}
-            <span className="ribbon-dot" />
-          </span>
-        ))}
-      </section>
-      <section className="brand-section solutions" id="cozumler">
+      <section className="wrap home-services">
         <div className="section-heading">
-          <p className="brand-eyebrow">01 / UYGULAMA ALANLARI</p>
-          <span>Gereksinimden üretilebilir parçaya.</span>
+          <p className="brand-eyebrow">NEYE İHTİYACINIZ VAR?</p>
+          <span>Üç hizmet. Birbirini tamamlayan bir süreç.</span>
         </div>
-        <div className="focus-grid">
-          <h2>{brand.featureTitle}</h2>
-          <p className="section-lead">{brand.featureLead}</p>
+        <div className="split-heading">
+          <h2>
+            Elinizde bir fikir de olabilir,
+            <br />
+            yenilenmesi gereken bir parça da.
+          </h2>
+          <p>
+            Dosyanız hazırsa üretimi değerlendirelim. Elinizde numune varsa
+            tarama ve modellemeyle başlayalım.
+          </p>
         </div>
-        <div className="solution-workbench">
-          <div
-            className="solution-selector"
-            role="tablist"
-            aria-label="Üretim uygulamaları"
-            aria-orientation="vertical"
-          >
-            {services.map((service, index) => (
-              <button
-                key={service.title}
-                role="tab"
-                id={`solution-tab-${index}`}
-                aria-controls="solution-panel"
-                aria-selected={selected === index}
-                tabIndex={selected === index ? 0 : -1}
-                onClick={() => setSelected(index)}
-                onKeyDown={(e) => {
-                  let next = index;
-                  if (e.key === "ArrowDown")
-                    next = (index + 1) % services.length;
-                  else if (e.key === "ArrowUp")
-                    next = (index - 1 + services.length) % services.length;
-                  else if (e.key === "Home") next = 0;
-                  else if (e.key === "End") next = services.length - 1;
-                  else return;
-                  e.preventDefault();
-                  setSelected(next);
-                  document.getElementById(`solution-tab-${next}`)?.focus();
-                }}
-              >
-                <span>0{index + 1}</span>
-                <strong>{service.title}</strong>
-                <ArrowUpRight size={19} />
-              </button>
-            ))}
-          </div>
-          <div
-            id="solution-panel"
-            role="tabpanel"
-            aria-labelledby={`solution-tab-${selected}`}
-            className="solution-detail"
-          >
-            <span className="micro-label">İHTİYACA ÖZEL ÜRETİM</span>
-            <h3>{active.title}</h3>
-            <p>{active.detail}</p>
-            <div className="solution-inputs">
-              <span>
-                <Check size={15} /> Teknik gereksinim değerlendirmesi
-              </span>
-              <span>
-                <Check size={15} /> Malzeme ve geometri planlaması
-              </span>
-              <span>
-                <Check size={15} /> Numune / üretim kapsamı
-              </span>
-            </div>
-            <Link to={quote(active.title)} className="text-link">
-              Bu uygulama için görüşelim <ArrowRight size={17} />
+        <div className="editorial-grid">
+          {services.map(([s, n, , desc], i) => (
+            <Link className="service-card" to={link("/" + s)} key={s}>
+              <div className="service-card-image">
+                <img
+                  src={
+                    [
+                      "/cms/service-printing.jpg",
+                      "/cms/service-scanning.jpg",
+                      "/cms/service-modeling.jpg",
+                    ][i]
+                  }
+                  alt={n + " temsili uygulaması"}
+                  loading="lazy"
+                />
+                <span>0{i + 1}</span>
+              </div>
+              <div className="service-card-copy">
+                <h3>
+                  {n}
+                  <ArrowUpRight size={22} />
+                </h3>
+                <p>{desc}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="studio-band">
+        <div className="wrap studio-band-grid">
+          <div>
+            <p className="brand-eyebrow">3D STUDIO / ONLINE TEKLİF</p>
+            <h2>
+              Dosyanızı yükleyin.
+              <br />
+              Parçanızı birlikte planlayalım.
+            </h2>
+            <p>
+              STL modelinizi döndürün, boyutlarını görün; malzeme, renk, kalite
+              ve adet seçeneklerini belirleyin. Tarama veya modelleme
+              ihtiyacınızı da aynı yerden iletin.
+            </p>
+            <Link className="brand-button white" to={link("/teklif-al")}>
+              3D Studio’yu aç <ArrowUpRight size={19} />
             </Link>
           </div>
-        </div>
-        <p className="section-footnote">
-          Odağımız {brand.focus.toLocaleLowerCase("tr-TR")}. Diğer modelleme,
-          maket, prototip ve özel parça taleplerinizi de değerlendirebiliriz.
-        </p>
-      </section>
-      <section className="engineering-section">
-        <div className="engineering-visual">
-          <img
-            src={`/brand/industrial/${brand.heroAsset}.webp`}
-            alt={brand.heroCaption + " konsept detayı"}
-            loading="lazy"
-            width={1536}
-            height={1024}
-          />
-          <span className="engineering-caption">
-            DİJİTAL TASARIM / FİZİKSEL KARŞILIK
-          </span>
-        </div>
-        <div className="engineering-copy">
-          <p className="brand-eyebrow">02 / EKİBİNİZLE AYNI DİLDE</p>
-          <h2>
-            Doğru sorular.
-            <br />
-            Net bir proje kapsamı.
-          </h2>
-          <div className="audience-tabs" role="tablist" aria-label="Ekip odağı">
-            {brand.audiences.map((item, index) => (
-              <button
-                role="tab"
-                id={`audience-${index}`}
-                aria-controls="audience-panel"
-                aria-selected={audience === index}
-                key={item}
-                tabIndex={audience === index ? 0 : -1}
-                onKeyDown={(e) => {
-                  let next = index;
-                  if (e.key === "ArrowRight")
-                    next = (index + 1) % brand.audiences.length;
-                  else if (e.key === "ArrowLeft")
-                    next =
-                      (index - 1 + brand.audiences.length) %
-                      brand.audiences.length;
-                  else if (e.key === "Home") next = 0;
-                  else if (e.key === "End") next = brand.audiences.length - 1;
-                  else return;
-                  e.preventDefault();
-                  setAudience(next);
-                  document.getElementById(`audience-${next}`)?.focus();
-                }}
-                onClick={() => setAudience(index)}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-          <div
-            id="audience-panel"
-            role="tabpanel"
-            aria-labelledby={`audience-${audience}`}
-          >
-            <p>{brand.audienceTexts[audience]}</p>
-          </div>
-          <Link
-            className="text-link light"
-            to={quote(brand.audiences[audience])}
-          >
-            Teknik ihtiyacınızı paylaşın <ArrowUpRight size={18} />
+          <Link className="studio-preview" to={link("/teklif-al")}>
+            <div>
+              <span>STUDIO</span>
+              <span>STL / OBJ / STEP / 3MF</span>
+            </div>
+            <Box size={110} strokeWidth={0.6} />
+            <strong>Bir sonraki parçanız burada başlıyor.</strong>
+            <span className="upload-action">
+              <Upload size={18} /> Modelinizi yükleyin
+            </span>
           </Link>
         </div>
       </section>
-      <section className="brand-section process-section" id="surec">
+      <section className="wrap applications-section">
         <div className="section-heading">
-          <p className="brand-eyebrow">03 / ÇALIŞMA MODELİ</p>
-          <span>Her aşamada belirli bir sonraki adım.</span>
+          <p className="brand-eyebrow">{b.focus}</p>
+          <Link className="text-link" to={link("/cozumler")}>
+            Tüm çözümler <ArrowRight size={17} />
+          </Link>
         </div>
-        <div className="process-heading">
+        <div className="split-heading">
+          <h2>{b.featureTitle}</h2>
+          <p>{b.featureLead}</p>
+        </div>
+        <div className="application-list">
+          {pages
+            .filter((p) => p.kind === "solution")
+            .map((p, i) => (
+              <Link key={p.path} to={link(p.path)}>
+                <span>0{i + 1}</span>
+                <h3>{p.title}</h3>
+                <p>{p.summary}</p>
+                <ArrowUpRight size={23} />
+              </Link>
+            ))}
+        </div>
+      </section>
+      <section className="process-light">
+        <div className="wrap">
+          <p className="brand-eyebrow">NASIL ÇALIŞIYORUZ?</p>
           <h2>
-            Dosyadan teslimata,
+            İlk fikirden teslimata,
             <br />
-            tanımlı bir süreç.
+            her adım belli.
           </h2>
-          <p className="section-lead">
-            Kullanım amacını anlamadan üretime geçmeyiz. Teknik kapsamı, numune
-            ihtiyacını ve teslim beklentisini birlikte belirleriz.
-          </p>
+          <div className="process-four">
+            {[
+              [
+                "İhtiyacınızı paylaşın",
+                "Dosya, numune veya fotoğrafla başlayın. Kullanım alanını ve adedi belirtin.",
+              ],
+              [
+                "Teklifi netleştirelim",
+                "Modelleme, malzeme, üretim ve teslimat kapsamını birlikte belirleyelim.",
+              ],
+              [
+                "Numuneyi değerlendirin",
+                "Gereken projelerde ilk parçayı görün; formu ve montajı kontrol edin.",
+              ],
+              [
+                "Üretime geçelim",
+                "Onaylanan revizyon üzerinden üretim ve teslimat planını yürütelim.",
+              ],
+            ].map(([t, d], i) => (
+              <article key={t}>
+                <span>0{i + 1}</span>
+                <h3>{t}</h3>
+                <p>{d}</p>
+              </article>
+            ))}
+          </div>
         </div>
-        <ol className="process-track">
-          {[
-            [
-              "Teknik değerlendirme",
-              "CAD dosyası, örnek parça veya ölçü seti üzerinden gereksinimlerinizi ele alırız.",
-              "GİRDİ / TEKNİK İHTİYAÇ",
-            ],
-            [
-              "Üretim planı & teklif",
-              "Malzeme, geometri, adet ve teslimat kapsamı proje özelinde netleştirilir.",
-              "ÇIKTI / PROJE KAPSAMI",
-            ],
-            [
-              "Numune & onay",
-              "Gerekli projelerde numune ve montaj değerlendirmesi ile tasarım revizyonları ele alınır.",
-              "KARAR / ÜRETİM ONAYI",
-            ],
-            [
-              "Üretim & teslimat",
-              "Mutabık kalınan kapsam üzerinden üretim ve teslimat planı yürütülür.",
-              "SONUÇ / FİZİKSEL ÜRÜN",
-            ],
-          ].map(([title, desc, label], index) => (
-            <li key={title}>
-              <div className="process-number">
-                0{index + 1}
-                <ChevronRight size={17} />
-              </div>
-              <h3>{title}</h3>
-              <p>{desc}</p>
-              <span className="micro-label">{label}</span>
-            </li>
-          ))}
-        </ol>
       </section>
-      <section className="brief-band">
-        <div className="brief-icon">
-          <ScanLine size={30} />
+      <section className="wrap knowledge-section">
+        <div className="section-heading">
+          <p className="brand-eyebrow">BİLGİ MERKEZİ</p>
+          <Link className="text-link" to={link("/rehber")}>
+            Tüm rehberler <ArrowRight size={16} />
+          </Link>
         </div>
-        <div>
-          <p className="brand-eyebrow">TEKNİK EKİPLER İÇİN</p>
-          <h3>İyi bir teklif, eksiksiz bir teknik tarifle başlar.</h3>
-          <p>
-            Kullanım alanı, ölçüler, adet ve hedef takvim. Ekibinizle
-            paylaşabileceğiniz kısa talep şablonu.
-          </p>
+        <div className="editorial-grid">
+          {pages
+            .filter((p) => p.kind === "guide")
+            .slice(0, 3)
+            .map((p) => (
+              <Link className="editorial-card" to={link(p.path)} key={p.path}>
+                <span className="brand-eyebrow">ÜRETİM REHBERİ</span>
+                <h3>{p.title}</h3>
+                <p>{p.summary}</p>
+                <ArrowUpRight size={20} />
+              </Link>
+            ))}
         </div>
-        <a
-          href="/brand/teknik-talep-sablonu.txt"
-          download
-          className="brand-button"
-        >
-          Talep şablonunu indirin <FileText size={17} />
-        </a>
       </section>
-      <section className="brand-cta">
+      <section className="local-band wrap">
         <div>
-          <p className="brand-eyebrow">
-            {cta.eyebrow_tr || "PROJENİZİ KONUŞALIM"}
-          </p>
-          <h2>
-            {cta.title_tr || "Bir sonraki parçanızı\nbirlikte geliştirelim."}
-          </h2>
+          <p className="brand-eyebrow">ÖRNEK MAHALLESİ / ATAŞEHİR</p>
+          <h2>İstanbul’da, işinizin yanında.</h2>
           <p>
-            {cta.lead_tr ||
-              "Teknik dosyanızı veya ihtiyacınızı paylaşın. Üretim yolunu ve proje kapsamını birlikte belirleyelim."}
+            3D baskı, tarama ve modelleme ihtiyacınızı paylaşın. Projenize uygun
+            başlangıç adımını birlikte belirleyelim.
           </p>
         </div>
-        <Link className="brand-button accent" to={quote()}>
-          Teknik teklif talebi <ArrowUpRight size={20} />
+        <Link className="brand-button" to={link("/bolgeler")}>
+          Hizmet bölgelerimiz <ArrowUpRight size={17} />
         </Link>
       </section>
     </>

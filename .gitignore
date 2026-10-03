@@ -28,3 +28,5 @@ dist-ssr
 
 # Browser verification captures (curated WebP previews are versioned)
 docs/previews/*.png
+
+release/

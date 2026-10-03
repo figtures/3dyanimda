@@ -13,6 +13,7 @@ import { useNavItems } from "@/hooks/useNavItems";
 import { resolveMediaUrl } from "@/lib/media";
 import { useRedirects } from "@/hooks/useRedirects";
 import "@/brands/brand.css";
+import "@/brands/modern.css";
 export function BrandLayout() {
   const brand = useBrand();
   const extraNav = useNavItems("header_extra").filter(
@@ -83,8 +84,10 @@ export function BrandLayout() {
           className={open ? "brand-nav is-open" : "brand-nav"}
         >
           {[
-            ["/hizmetler", "Üretim çözümleri"],
-            ["/hakkimizda", "Çalışma yaklaşımımız"],
+            ["/3d-baski", "3D Baskı"],
+            ["/3d-tarama", "3D Tarama"],
+            ["/3d-modelleme", "3D Modelleme"],
+            ["/cozumler", "Çözümler"],
             ["/iletisim", "İletişim"],
             ...extraNav.map((item) => [item.url, item.label_tr]),
           ].map(([path, label]) => (
@@ -94,7 +97,7 @@ export function BrandLayout() {
           ))}
         </nav>
         <Link className="brand-button header-quote" to={link("/teklif-al")}>
-          Teknik teklif <ArrowUpRight size={17} />
+          Teklif Al <ArrowUpRight size={17} />
         </Link>
         <button
           className="menu-toggle"
@@ -109,13 +112,53 @@ export function BrandLayout() {
         <Outlet />
       </main>
       <footer className="brand-footer">
+        <div className="footer-directory">
+          {[
+            [
+              "Hizmetler",
+              [
+                ["/3d-baski", "3D Baskı"],
+                ["/3d-tarama", "3D Tarama"],
+                ["/3d-modelleme", "3D Modelleme"],
+                ["/teklif-al", "3D Studio & Teklif"],
+              ],
+            ],
+            [
+              "Keşfedin",
+              [
+                ["/cozumler", "Uygulama alanları"],
+                ["/malzemeler", "Malzemeler"],
+                ["/rehber", "Bilgi merkezi"],
+                ["/bolgeler", "Hizmet bölgeleri"],
+              ],
+            ],
+            [
+              "Kurumsal",
+              [
+                ["/hakkimizda", "Hakkımızda"],
+                ["/iletisim", "İletişim"],
+                ["/gizlilik-politikasi", "Gizlilik"],
+                ["/yasal", "Yasal bilgiler"],
+              ],
+            ],
+          ].map(([title, links]) => (
+            <div key={String(title)}>
+              <h3>{String(title)}</h3>
+              {(links as string[][]).map(([path, label]) => (
+                <Link key={path} to={link(path)}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
         <div className="footer-top">
           <Link className="brand-logo" to={link("/")}>
             <Box />
             {brand.name}
           </Link>
           <p>
-            Tasarım, prototip ve özel üretim.
+            3D baskı, 3D tarama ve 3D modelleme.
             <br />
             Teknik ihtiyaçlarınıza odaklanır.
           </p>

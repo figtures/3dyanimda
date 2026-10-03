@@ -6,14 +6,15 @@ import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
 import { supabase, demoMode } from "@/lib/supabase";
 import { Seo } from "@/components/site/Seo";
-const StlViewer = lazy(() => import("@/components/quote/StlViewer"));
+import type { StudioSpec } from "@/components/quote/QuoteStudio";
+const QuoteStudio = lazy(() => import("@/components/quote/QuoteStudio"));
 const schema = z.object({
   full_name: z.string().trim().min(2).max(200),
   email: z.string().email().max(254),
   phone: z.string().max(40),
   company: z.string().max(200),
   quantity: z.coerce.number().int().min(1).max(1000),
-  part_description: z.string().trim().min(10).max(3500),
+  part_description: z.string().trim().min(10).max(2400),
   department: z.string().trim().max(100),
   reference: z.string().trim().max(100),
   target_date: z.string().max(10),
@@ -30,6 +31,15 @@ export default function QuoteRequest() {
     [done, setDone] = useState(false),
     [error, setError] = useState("");
   const application = new URLSearchParams(search).get("application") || "";
+  const region = new URLSearchParams(search).get("region") || "";
+  const [service, setService] = useState("3D Baskı");
+  const [spec, setSpec] = useState<StudioSpec>({
+    summary: "",
+    material: "Belirlenecek",
+    quantity: 1,
+    campaignName: null,
+    discount: 0,
+  });
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
@@ -61,6 +71,8 @@ export default function QuoteRequest() {
       parsed.data;
     const description = [
       request.part_description,
+      spec.summary,
+      region && `Bölge: ${region.slice(0, 100)}`,
       department && `Departman: ${department}`,
       reference && `Proje / revizyon: ${reference}`,
       target_date && `Hedef tarih (teyide tabi): ${target_date}`,
@@ -96,7 +108,11 @@ export default function QuoteRequest() {
           email: parsed.data.email!,
           part_description: description,
           tenant_id: tenant.id,
-          service_type: brand.focus,
+          service_type: service,
+          quantity: spec.quantity,
+          material_pref: spec.material,
+          applied_campaign_name: spec.campaignName,
+          applied_discount_amount: spec.discount || null,
           stl_file_path: path,
           stl_file_name: file?.name ?? null,
           status: "new",
@@ -114,16 +130,16 @@ export default function QuoteRequest() {
   return (
     <>
       <Seo
-        title="Teknik teklif talebi"
+        title="3D Studio & Teklif Al"
         description={`${brand.name} için 3D üretim talebi oluşturun.`}
         path="/teklif-al"
       />
       <section className="brand-inner">
-        <p className="brand-eyebrow">TEKNİK TEKLİF TALEBİ</p>
+        <p className="brand-eyebrow">3D STUDIO & TEKLİF AL</p>
         <h1>
-          Teknik ihtiyacınızı
+          Dosyanızdan başlayın.
           <br />
-          birlikte değerlendirelim.
+          Üretimi birlikte planlayalım.
         </h1>
         <p className="section-lead">
           CAD dosyanızı veya teknik ihtiyacınızı paylaşın. Kullanım koşulları,
@@ -138,176 +154,172 @@ export default function QuoteRequest() {
             </p>
           </div>
         ) : (
-          <div className="quote-grid">
-            <form className="brand-form" onSubmit={submit}>
-              <label>
-                Ad soyad *
-                <input
-                  name="full_name"
-                  autoComplete="name"
-                  minLength={2}
-                  maxLength={200}
-                  required
-                />
-              </label>
-              <label>
-                E-posta *
-                <input
-                  name="email"
-                  autoComplete="email"
-                  type="email"
-                  maxLength={254}
-                  required
-                />
-              </label>
-              <label>
-                Telefon
-                <input
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  maxLength={40}
-                />
-              </label>
-              <label>
-                Firma / proje adı
-                <input
-                  name="company"
-                  autoComplete="organization"
-                  maxLength={200}
-                />
-              </label>
-              <label>
-                Departman
-                <input
-                  name="department"
-                  maxLength={100}
-                  placeholder="Ar-Ge, üretim, bakım, satın alma…"
-                />
-              </label>
-              <label>
-                Proje / parça referansı ve revizyon
-                <input
-                  name="reference"
-                  maxLength={100}
-                  placeholder="Parça kodu / Rev. A"
-                />
-              </label>
-              <label>
-                Hedef teslim tarihi
-                <input name="target_date" type="date" />
-              </label>
-              <label>
-                Malzeme tercihi
-                <input
-                  name="material_pref"
-                  maxLength={100}
-                  placeholder="Belirlenecek / tercih edilen malzeme"
-                />
-              </label>
-              <label className="wide">
-                Kullanım ortamı ve montaj koşulları
-                <textarea
-                  name="environment"
-                  maxLength={500}
-                  placeholder="Sıcaklık, yük, kimyasal temas, eşleşen parçalar ve kritik ölçüler…"
-                />
-              </label>
-              <label>
-                Adet *
-                <input
-                  name="quantity"
-                  type="number"
-                  min={1}
-                  max={1000}
-                  defaultValue={1}
-                  required
-                />
-              </label>
-              <label>
-                3D dosyası (isteğe bağlı)
-                <input
-                  type="file"
-                  accept=".stl,.obj,.3mf,.step,.stp,.igs,.iges"
-                  onChange={(e) => {
-                    setFile(e.target.files?.[0] ?? null);
-                    setError("");
-                  }}
-                />
-              </label>
-              <label className="wide">
-                Teknik ihtiyaç / proje açıklaması *
-                <textarea
-                  name="part_description"
-                  minLength={10}
-                  maxLength={3500}
-                  required
-                  defaultValue={application ? `${application}: ` : ""}
-                  placeholder="Nerede kullanılacak? Yaklaşık ölçüler, beklentiler ve hedef teslim tarihi…"
-                />
-              </label>
-              {file?.name.toLowerCase().endsWith(".stl") && (
-                <div className="wide">
-                  <Suspense fallback={<p>Model hazırlanıyor…</p>}>
-                    <StlViewer file={file} color="#849477" className="h-64" />
-                  </Suspense>
-                </div>
-              )}
-              <label className="wide nda-option">
-                <input type="checkbox" name="nda" value="requested" />
-                Gizlilik sözleşmesi görüşmek istiyorum
-              </label>
-              <p className="wide text-xs">
-                Paylaştığınız bilgiler talebinizin değerlendirilmesi için
-                kullanılır.{" "}
-                <Link
-                  className="underline"
-                  to={`/gizlilik-politikasi${import.meta.env.DEV ? search : ""}`}
+          <>
+            <div
+              className="quote-service-choice"
+              aria-label="Talep edilen hizmet"
+            >
+              {["3D Baskı", "3D Tarama", "3D Modelleme"].map((item) => (
+                <button
+                  type="button"
+                  key={item}
+                  aria-pressed={service === item}
+                  onClick={() => setService(item)}
                 >
-                  Gizlilik bilgileri
-                </Link>
-              </p>
-              {demoMode && (
-                <p className="wide form-message">
-                  Önizleme: Bu form henüz bir veritabanına bağlı değil.
+                  {item}
+                </button>
+              ))}
+            </div>
+            <Suspense fallback={<p>3D Studio yükleniyor…</p>}>
+              <QuoteStudio
+                file={file}
+                onFile={setFile}
+                onSpec={setSpec}
+                service={service}
+              />
+            </Suspense>
+            <div className="quote-grid">
+              <form className="brand-form" onSubmit={submit}>
+                <label>
+                  Ad soyad *
+                  <input
+                    name="full_name"
+                    autoComplete="name"
+                    minLength={2}
+                    maxLength={200}
+                    required
+                  />
+                </label>
+                <label>
+                  E-posta *
+                  <input
+                    name="email"
+                    autoComplete="email"
+                    type="email"
+                    maxLength={254}
+                    required
+                  />
+                </label>
+                <label>
+                  Telefon
+                  <input
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    maxLength={40}
+                  />
+                </label>
+                <label>
+                  Firma / proje adı
+                  <input
+                    name="company"
+                    autoComplete="organization"
+                    maxLength={200}
+                  />
+                </label>
+                <label>
+                  Departman
+                  <input
+                    name="department"
+                    maxLength={100}
+                    placeholder="Ar-Ge, üretim, bakım, satın alma…"
+                  />
+                </label>
+                <label>
+                  Proje / parça referansı ve revizyon
+                  <input
+                    name="reference"
+                    maxLength={100}
+                    placeholder="Parça kodu / Rev. A"
+                  />
+                </label>
+                <label>
+                  Hedef teslim tarihi
+                  <input name="target_date" type="date" />
+                </label>
+                <input
+                  type="hidden"
+                  name="material_pref"
+                  value={spec.material}
+                />
+                <input type="hidden" name="quantity" value={spec.quantity} />
+                <label className="wide">
+                  Kullanım ortamı ve montaj koşulları
+                  <textarea
+                    name="environment"
+                    maxLength={500}
+                    placeholder="Sıcaklık, yük, kimyasal temas, eşleşen parçalar ve kritik ölçüler…"
+                  />
+                </label>
+                <label className="wide">
+                  Teknik ihtiyaç / proje açıklaması *
+                  <textarea
+                    name="part_description"
+                    minLength={10}
+                    maxLength={2400}
+                    required
+                    defaultValue={[application, region]
+                      .filter(Boolean)
+                      .join(" · ")}
+                    placeholder="Nerede kullanılacak? Yaklaşık ölçüler, beklentiler ve hedef teslim tarihi…"
+                  />
+                </label>
+                <label className="wide nda-option">
+                  <input type="checkbox" name="nda" value="requested" />
+                  Gizlilik sözleşmesi görüşmek istiyorum
+                </label>
+                <p className="wide text-xs">
+                  Paylaştığınız bilgiler talebinizin değerlendirilmesi için
+                  kullanılır.{" "}
+                  <Link
+                    className="underline"
+                    to={`/gizlilik-politikasi${import.meta.env.DEV ? search : ""}`}
+                  >
+                    Gizlilik bilgileri
+                  </Link>
                 </p>
-              )}
-              {error && (
-                <p role="alert" className="wide form-error">
-                  {error}
+                {demoMode && (
+                  <p className="wide form-message">
+                    Önizleme: Bu form henüz bir veritabanına bağlı değil.
+                  </p>
+                )}
+                {error && (
+                  <p role="alert" className="wide form-error">
+                    {error}
+                  </p>
+                )}
+                <button
+                  type="submit"
+                  className="brand-button dark wide"
+                  disabled={busy || demoMode}
+                >
+                  {busy ? "Gönderiliyor…" : "Teklif talebini gönder"}
+                  <ArrowUpRight size={18} />
+                </button>
+              </form>
+              <aside className="quote-aside">
+                <h2>Teknik değerlendirme için</h2>
+                <p>
+                  Hedef tarih bir teslim taahhüdü değildir. Üretim yöntemi,
+                  malzeme ve takvim teknik değerlendirme sonrasında teklif
+                  kapsamında netleştirilir.
                 </p>
-              )}
-              <button
-                type="submit"
-                className="brand-button dark wide"
-                disabled={busy || demoMode}
-              >
-                {busy ? "Gönderiliyor…" : "Teklif talebini gönder"}
-                <ArrowUpRight size={18} />
-              </button>
-            </form>
-            <aside className="quote-aside">
-              <h2>Teknik değerlendirme için</h2>
-              <p>
-                Hedef tarih bir teslim taahhüdü değildir. Üretim yöntemi,
-                malzeme ve takvim teknik değerlendirme sonrasında teklif
-                kapsamında netleştirilir.
-              </p>
-              <p>
-                Kullanım amacını ve kritik ölçüleri belirtin. Malzeme tercihiniz
-                yoksa birlikte belirleyebiliriz.
-              </p>
-              <p>
-                Dosya formatları: STL, OBJ, 3MF, STEP, IGES.
-                <br />
-                Dosya başına en fazla 20 MB.
-              </p>
-              <p>
-                Fiyat ve teslim süresi; tasarım, malzeme, detay seviyesi ve
-                adede göre değerlendirilir.
-              </p>
-            </aside>
-          </div>
+                <p>
+                  Kullanım amacını ve kritik ölçüleri belirtin. Malzeme
+                  tercihiniz yoksa birlikte belirleyebiliriz.
+                </p>
+                <p>
+                  Dosya formatları: STL, OBJ, 3MF, STEP, IGES.
+                  <br />
+                  Dosya başına en fazla 20 MB.
+                </p>
+                <p>
+                  Fiyat ve teslim süresi; tasarım, malzeme, detay seviyesi ve
+                  adede göre değerlendirilir.
+                </p>
+              </aside>
+            </div>
+          </>
         )}
       </section>
     </>

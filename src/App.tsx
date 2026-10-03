@@ -1,4 +1,8 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useIsFetching,
+} from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
@@ -6,7 +10,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrandLayout as Layout } from "@/components/brand/BrandLayout";
-import BrandServices from "./pages/BrandServices";
+
 import BrandAbout from "./pages/BrandAbout";
 import BrandLegal from "./pages/BrandLegal";
 import { TenantProvider } from "@/contexts/TenantContext";
@@ -18,6 +22,10 @@ import Index from "./pages/Index";
 import { RequirePermission } from "@/components/admin/RequirePermission";
 
 // Code-split: ana sayfa hariç tüm route'lar lazy
+const LegacyLocation = lazy(() => import("./pages/LegacyLocation"));
+const ContentPage = lazy(() => import("./pages/ContentPage"));
+const ContentHub = lazy(() => import("./pages/ContentHub"));
+const AdminContent = lazy(() => import("./pages/admin/AdminContent"));
 const QuoteRequest = lazy(() => import("./pages/QuoteRequest"));
 const Contact = lazy(() => import("./pages/Contact"));
 const FaqPage = lazy(() => import("./pages/FaqPage"));
@@ -47,20 +55,26 @@ const AdminUsers = lazy(() => import("./pages/admin/AdminUsers"));
 const AdminFaq = lazy(() => import("./pages/admin/AdminFaq"));
 const AdminTestimonials = lazy(() => import("./pages/admin/AdminTestimonials"));
 const AdminHomepage = lazy(() => import("./pages/admin/AdminHomepage"));
-const AdminServicesCards = lazy(() => import("./pages/admin/AdminServicesCards"));
+const AdminServicesCards = lazy(
+  () => import("./pages/admin/AdminServicesCards"),
+);
 const AdminContactInfo = lazy(() => import("./pages/admin/AdminContactInfo"));
 const AdminPortfolio = lazy(() => import("./pages/admin/AdminPortfolio"));
 const AdminSeo = lazy(() => import("./pages/admin/AdminSeo"));
 const AdminLegal = lazy(() => import("./pages/admin/AdminLegal"));
 const AdminApplications = lazy(() => import("./pages/admin/AdminApplications"));
 const AdminMachineOps = lazy(() => import("./pages/admin/AdminMachineOps"));
-const AdminEmailTemplates = lazy(() => import("./pages/admin/AdminEmailTemplates"));
+const AdminEmailTemplates = lazy(
+  () => import("./pages/admin/AdminEmailTemplates"),
+);
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const AdminMessages = lazy(() => import("./pages/admin/AdminMessages"));
 const AdminJobs = lazy(() => import("./pages/admin/AdminJobs"));
 const AdminNavigation = lazy(() => import("./pages/admin/AdminNavigation"));
 const AdminSubscribers = lazy(() => import("./pages/admin/AdminSubscribers"));
-const AdminAnnouncements = lazy(() => import("./pages/admin/AdminAnnouncements"));
+const AdminAnnouncements = lazy(
+  () => import("./pages/admin/AdminAnnouncements"),
+);
 const AdminRedirects = lazy(() => import("./pages/admin/AdminRedirects"));
 const AdminAuditLog = lazy(() => import("./pages/admin/AdminAuditLog"));
 const AdminTeam = lazy(() => import("./pages/admin/AdminTeam"));
@@ -69,21 +83,29 @@ const AdminTheme = lazy(() => import("./pages/admin/AdminTheme"));
 const AdminPages = lazy(() => import("./pages/admin/AdminPages"));
 const AdminPageEdit = lazy(() => import("./pages/admin/AdminPageEdit"));
 const AdminCollections = lazy(() => import("./pages/admin/AdminCollections"));
-const AdminCollectionEdit = lazy(() => import("./pages/admin/AdminCollectionEdit"));
-const AdminCollectionItemEdit = lazy(() => import("./pages/admin/AdminCollectionItemEdit"));
+const AdminCollectionEdit = lazy(
+  () => import("./pages/admin/AdminCollectionEdit"),
+);
+const AdminCollectionItemEdit = lazy(
+  () => import("./pages/admin/AdminCollectionItemEdit"),
+);
 const AdminRoutes = lazy(() => import("./pages/admin/AdminRoutes"));
 
 // Studio (super admin)
 const StudioLayout = lazy(() => import("./pages/studio/StudioLayout"));
 const StudioDashboard = lazy(() => import("./pages/studio/StudioDashboard"));
 const StudioTenants = lazy(() => import("./pages/studio/StudioTenants"));
-const StudioTenantDetail = lazy(() => import("./pages/studio/StudioTenantDetail"));
+const StudioTenantDetail = lazy(
+  () => import("./pages/studio/StudioTenantDetail"),
+);
 const StudioThemes = lazy(() => import("./pages/studio/StudioThemes"));
 const StudioFeatures = lazy(() => import("./pages/studio/StudioFeatures"));
 const StudioOnboard = lazy(() => import("./pages/studio/StudioOnboard"));
 
 const Fallback = () => <div className="min-h-screen" aria-hidden />;
-const wrap = (node: React.ReactNode) => <Suspense fallback={<Fallback />}>{node}</Suspense>;
+const wrap = (node: React.ReactNode) => (
+  <Suspense fallback={<Fallback />}>{node}</Suspense>
+);
 
 const queryClient = new QueryClient();
 
@@ -92,23 +114,118 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Index /> },
-      { path: "/hizmetler", element: <BrandServices /> },
+      ...["/hizmetler", "/cozumler", "/malzemeler", "/rehber", "/bolgeler"].map(
+        (path) => ({ path, element: wrap(<ContentHub />) }),
+      ),
+      ...[
+        "/3d-baski",
+        "/3d-tarama",
+        "/3d-modelleme",
+        "/cozumler/:slug",
+        "/malzemeler/:slug",
+        "/rehber/:slug",
+        "/bolgeler/*",
+      ].map((path) => ({ path, element: wrap(<ContentPage />) })),
       { path: "/hakkimizda", element: <BrandAbout /> },
       { path: "/teklif-al", element: wrap(<QuoteRequest />) },
-      { path: "/portfoy", element: wrap(<RequireFeature flag="portfolio"><Portfolio /></RequireFeature>) },
-      { path: "/blog", element: wrap(<RequireFeature flag="blog"><Blog /></RequireFeature>) },
-      { path: "/blog/:slug", element: wrap(<RequireFeature flag="blog"><BlogPost /></RequireFeature>) },
-      { path: "/sss", element: wrap(<RequireFeature flag="faq"><FaqPage /></RequireFeature>) },
+      {
+        path: "/portfoy",
+        element: wrap(
+          <RequireFeature flag="portfolio">
+            <Portfolio />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/blog",
+        element: wrap(
+          <RequireFeature flag="blog">
+            <Blog />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/blog/:slug",
+        element: wrap(
+          <RequireFeature flag="blog">
+            <BlogPost />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/sss",
+        element: wrap(
+          <RequireFeature flag="faq">
+            <FaqPage />
+          </RequireFeature>,
+        ),
+      },
       { path: "/iletisim", element: wrap(<Contact />) },
-      { path: "/istanbul/:ilce/:hizmet", element: wrap(<DynamicPage />) },
-      { path: "/kariyer/is-basvurusu", element: wrap(<RequireFeature flag="career"><JobApplication /></RequireFeature>) },
-      { path: "/kariyer/makine-isletim", element: wrap(<RequireFeature flag="career.machine_ops"><MachineOperation /></RequireFeature>) },
-      { path: "/yasal", element: wrap(<RequireFeature flag="legal"><BrandLegal /></RequireFeature>) },
-      { path: "/kvkk-aydinlatma-metni", element: wrap(<RequireFeature flag="legal"><BrandLegal /></RequireFeature>) },
-      { path: "/gizlilik-politikasi", element: wrap(<RequireFeature flag="legal"><BrandLegal /></RequireFeature>) },
-      { path: "/cerez-politikasi", element: wrap(<RequireFeature flag="legal"><BrandLegal /></RequireFeature>) },
-      { path: "/kullanim-kosullari", element: wrap(<RequireFeature flag="legal"><BrandLegal /></RequireFeature>) },
-      { path: "/basvuru-acik-riza-metni", element: wrap(<RequireFeature flag="legal"><BrandLegal /></RequireFeature>) },
+      { path: "/istanbul/:ilce/:hizmet", element: wrap(<LegacyLocation />) },
+      {
+        path: "/kariyer/is-basvurusu",
+        element: wrap(
+          <RequireFeature flag="career">
+            <JobApplication />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/kariyer/makine-isletim",
+        element: wrap(
+          <RequireFeature flag="career.machine_ops">
+            <MachineOperation />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/yasal",
+        element: wrap(
+          <RequireFeature flag="legal">
+            <BrandLegal />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/kvkk-aydinlatma-metni",
+        element: wrap(
+          <RequireFeature flag="legal">
+            <BrandLegal />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/gizlilik-politikasi",
+        element: wrap(
+          <RequireFeature flag="legal">
+            <BrandLegal />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/cerez-politikasi",
+        element: wrap(
+          <RequireFeature flag="legal">
+            <BrandLegal />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/kullanim-kosullari",
+        element: wrap(
+          <RequireFeature flag="legal">
+            <BrandLegal />
+          </RequireFeature>,
+        ),
+      },
+      {
+        path: "/basvuru-acik-riza-metni",
+        element: wrap(
+          <RequireFeature flag="legal">
+            <BrandLegal />
+          </RequireFeature>,
+        ),
+      },
       { path: "*", element: wrap(<DynamicPage />) },
     ],
   },
@@ -121,6 +238,14 @@ const router = createBrowserRouter([
       { index: true, element: wrap(<AdminDashboard />) },
       { path: "blog", element: wrap(<AdminBlogList />) },
       { path: "blog/:id", element: wrap(<AdminBlogEdit />) },
+      {
+        path: "content",
+        element: wrap(
+          <RequirePermission permission="seo.edit">
+            <AdminContent />
+          </RequirePermission>,
+        ),
+      },
       { path: "pricing", element: wrap(<AdminPricing />) },
       { path: "campaigns", element: wrap(<AdminCampaigns />) },
       { path: "requests", element: wrap(<AdminRequests />) },
@@ -146,14 +271,38 @@ const router = createBrowserRouter([
       { path: "announcements", element: wrap(<AdminAnnouncements />) },
       { path: "redirects", element: wrap(<AdminRedirects />) },
       { path: "audit-log", element: wrap(<AdminAuditLog />) },
-      { path: "team", element: wrap(<RequirePermission permission="users.view"><AdminTeam /></RequirePermission>) },
-      { path: "roles", element: wrap(<RequirePermission permission="roles.view"><AdminRoles /></RequirePermission>) },
-      { path: "theme", element: wrap(<RequirePermission permission="settings.theme"><AdminTheme /></RequirePermission>) },
+      {
+        path: "team",
+        element: wrap(
+          <RequirePermission permission="users.view">
+            <AdminTeam />
+          </RequirePermission>,
+        ),
+      },
+      {
+        path: "roles",
+        element: wrap(
+          <RequirePermission permission="roles.view">
+            <AdminRoles />
+          </RequirePermission>,
+        ),
+      },
+      {
+        path: "theme",
+        element: wrap(
+          <RequirePermission permission="settings.theme">
+            <AdminTheme />
+          </RequirePermission>,
+        ),
+      },
       { path: "pages", element: wrap(<AdminPages />) },
       { path: "pages/:id", element: wrap(<AdminPageEdit />) },
       { path: "collections", element: wrap(<AdminCollections />) },
       { path: "collections/:id", element: wrap(<AdminCollectionEdit />) },
-      { path: "collections/:id/items/:itemId", element: wrap(<AdminCollectionItemEdit />) },
+      {
+        path: "collections/:id/items/:itemId",
+        element: wrap(<AdminCollectionItemEdit />),
+      },
       { path: "routes", element: wrap(<AdminRoutes />) },
     ],
   },
@@ -171,9 +320,14 @@ const router = createBrowserRouter([
   },
 ]);
 
+const RenderReadiness = () => (
+  <span hidden data-pending-queries={useIsFetching()} />
+);
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
+      <RenderReadiness />
       <TooltipProvider>
         <Toaster />
         <Sonner />

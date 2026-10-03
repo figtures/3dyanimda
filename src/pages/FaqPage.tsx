@@ -1,3 +1,4 @@
+import {useBrand} from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { FAQ, faqJsonLd } from "@/components/site/FAQ";
@@ -12,6 +13,7 @@ const fallbackItems = [
 ];
 
 const FaqPage = () => {
+  const brand=useBrand();
   const [items, setItems] = useState(fallbackItems);
   useEffect(() => {
     let mounted = true;
@@ -38,7 +40,7 @@ const FaqPage = () => {
     <>
       <Seo
         title="Sık Sorulan Sorular — 3D Üretim, Tarama ve Baskı"
-        description="3D Yanında'nın 3D tarama, modelleme ve baskı hizmetleri hakkında merak edilen tüm sorular ve detaylı cevapları."
+        description={`${brand.name}: 3D tarama, modelleme ve baskı hizmetleri hakkında sorular ve cevaplar.`}
         path="/sss"
         jsonLd={[faqJsonLd(items)]}
       />

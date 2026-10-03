@@ -88,7 +88,7 @@ Deno.serve(async (req) => {
   // Static pages
   const { data: pages } = await supabase
     .from("pages")
-    .select("slug, updated_at")
+    .select("slug, updated_at, meta")
     .eq("tenant_id", tenant.id)
     .eq("status", "published");
 
@@ -103,7 +103,11 @@ Deno.serve(async (req) => {
   };
 
   push("/", undefined, "1.0");
-  for (const path of ["/hizmetler", "/hakkimizda", "/iletisim", "/teklif-al"])
+  const {data: overrides} = await supabase.from('seo_meta').select('path,noindex').eq('tenant_id',tenant.id);
+  const excluded = new Set((overrides||[]).filter(o=>o.noindex).map(o=>o.path));
+  const { data: landings } = await supabase.from('landing_pages').select('path,updated_at').eq('tenant_id',tenant.id).eq('status','published');
+  for(const p of landings||[]) if(!excluded.has(p.path)) push(p.path,p.updated_at);
+  for (const path of ["/hizmetler", "/cozumler", "/malzemeler", "/rehber", "/bolgeler", "/hakkimizda", "/iletisim", "/teklif-al"])
     push(path);
   const { data: posts } = await supabase
     .from("blog_posts")
@@ -112,8 +116,10 @@ Deno.serve(async (req) => {
     .eq("published", true)
     .or(`published_at.is.null,published_at.lte.${new Date().toISOString()}`);
   for (const post of posts || []) push(`/blog/${post.slug}`, post.updated_at);
-  for (const p of pages || [])
-    push(`/${p.slug}`.replace("//", "/"), p.updated_at ?? undefined, "0.8");
+  for (const p of pages || []) {
+    const path=`/${p.slug}`.replace("//", "/");
+    if(!(p.meta as any)?.noindex && !excluded.has(path) && !/^\/(bolgeler|istanbul)(\/|$)/.test(path)) push(path,p.updated_at??undefined);
+  }
 
   // Dynamic routes
   const { data: routes } = await supabase
@@ -123,6 +129,7 @@ Deno.serve(async (req) => {
     .eq("is_active", true);
 
   for (const r of routes || []) {
+    if (/^\/(bolgeler|istanbul)(\/|$)/.test(r.pattern)) continue;
     if (!r.collection_id) {
       const path = expandPattern(r.pattern, {});
       if (path) push(path);
@@ -130,7 +137,7 @@ Deno.serve(async (req) => {
     }
     const { data: items } = await supabase
       .from("collection_items")
-      .select("slug, data, updated_at, status")
+      .select("slug, data, updated_at, status, seo")
       .eq("tenant_id", tenant.id)
       .eq("collection_id", r.collection_id)
       .eq("status", "published");
@@ -146,14 +153,14 @@ Deno.serve(async (req) => {
         }
       }
       const path = expandPattern(r.pattern, params);
-      if (path) push(path, item.updated_at ?? undefined);
+      if (path && !(item.seo as any)?.noindex && !excluded.has(path)) push(path, item.updated_at ?? undefined);
     }
   }
 
   const body =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    urls
+    urls.filter(u=>!excluded.has(new URL(u.loc).pathname))
       .map(
         (u) =>
           `  <url><loc>${xmlEscape(u.loc)}</loc>` +

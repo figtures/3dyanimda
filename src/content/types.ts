@@ -1,0 +1,22 @@
+export type LandingPage = {
+  id?: string;
+  tenant_id?: string;
+  brand?: string;
+  path: string;
+  title: string;
+  summary: string;
+  kind: string;
+  image: string;
+  status: "draft" | "published";
+  sections: { title: string; body: string }[];
+  faq: { q: string; a: string }[];
+  city: string;
+  district: string;
+  neighborhood: string;
+  service: string;
+  local_context: string;
+  logistics: string;
+  evidence: string;
+  reviewed_at: string | null;
+  updated_at?: string;
+};
