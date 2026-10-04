@@ -1,0 +1,67 @@
+{
+  "generator": "built-in image_gen",
+  "created": "2026-10-04",
+  "usage": "Illustrative service concepts, not customer projects",
+  "assets": [
+    {
+      "id": "3dyanimda-print",
+      "file": "/brand/services/3dyanimda-print.webp",
+      "brief": "Ivory FDM environmental sensor prototype with terracotta insert"
+    },
+    {
+      "id": "3dyanimda-scan",
+      "file": "/brand/services/3dyanimda-scan.webp",
+      "brief": "A single sculptural ergonomic computer mouse original design in warm grey clay, a fine cyan structured-light sweep reveals a partial point-cloud outline above its left surface. Sandstone plinth, pale blue-grey studio background, low side angle. Express capturing an existing product shape, no electronic shell."
+    },
+    {
+      "id": "3dyanimda-model",
+      "file": "/brand/services/3dyanimda-model.webp",
+      "brief": "A sculptural desk cable dock in muted coral, clearly separated exploded top, rounded weighted base and three removable cable guides, sparse precise dark CAD construction curves floating around it. Off-white studio, top oblique view, graphic composition. Express developing a new consumer product."
+    },
+    {
+      "id": "3dsanayi-print",
+      "file": "/brand/services/3dsanayi-print.webp",
+      "brief": "An industrial orange custom assembly nest with two distinct curved cradles, black threaded inserts and a grey cylindrical workpiece resting between them, on brushed stainless steel bench, dark navy background. Fine FDM texture on printed nest. Low dramatic side lighting. No robotic gripper."
+    },
+    {
+      "id": "3dsanayi-scan",
+      "file": "/brand/services/3dsanayi-scan.webp",
+      "brief": "A rugged cast metal centrifugal pump volute casing, open circular flange facing camera, blue structured light crossing the oxidized metal and resolving into a partial luminous point cloud on one side. Charcoal industrial metrology studio, cinematic close detail, no people."
+    },
+    {
+      "id": "3dsanayi-model",
+      "file": "/brand/services/3dsanayi-model.webp",
+      "brief": "Precision exploded CAD concept of a custom conveyor guide assembly: long teal machined guide rail, two adjustable black feet, brass spacers separated cleanly in space. Pale cool technical studio, architectural side elevation with perspective depth. Sparse restrained wireframe construction curves, not text."
+    },
+    {
+      "id": "maketyanimda-print",
+      "file": "/brand/services/maketyanimda-print.webp",
+      "brief": "Exquisite white 3D printed scale architectural maquette of a terraced hillside cultural pavilion, staggered curved roofs and exposed fine print layers, tiny olive coloured model trees, warm natural cork base, beige studio, overhead diagonal photography. No real buildings or landmarks."
+    },
+    {
+      "id": "maketyanimda-scan",
+      "file": "/brand/services/maketyanimda-scan.webp",
+      "brief": "A single weathered carved limestone acanthus architectural fragment on neutral museum pedestal, slim violet structured-light ribbons passing across relief, delicate digital point cloud trailing from its upper edge. Warm grey museum studio, macro three-quarter portrait subject in landscape frame."
+    },
+    {
+      "id": "maketyanimda-model",
+      "file": "/brand/services/maketyanimda-model.webp",
+      "brief": "Original architectural scale-model design visualization of a circular courtyard arts campus, three clearly separated removable roof modules floating over low cream volumes, fine charcoal CAD edges and subtle transparent floor slabs. Dusty sage background, elevated architectural axonometric view, no text."
+    },
+    {
+      "id": "parcayanimda-print",
+      "file": "/brand/services/parcayanimda-print.webp",
+      "brief": "A distinctly asymmetric matte blue 3D printed replacement vacuum hose bayonet adapter with a wide oblong inlet tapering to a round collar, fine layer lines and four visible lugs, resting on warm graphite tabletop, editorial macro raking light, no other products."
+    },
+    {
+      "id": "parcayanimda-scan",
+      "file": "/brand/services/parcayanimda-scan.webp",
+      "brief": "A worn cream plastic appliance latch with one visibly broken hook, on deep burgundy metrology backdrop, emerald structured light reveals its surviving complex contours, partial point-cloud silhouette of missing tip floating near break. Close editorial technical photograph, no tool handles."
+    },
+    {
+      "id": "parcayanimda-model",
+      "file": "/brand/services/parcayanimda-model.webp",
+      "brief": "Original CAD design illustration of a satin charcoal replacement rotary control knob with D-shaped brass shaft insert shown separately beneath, fine radial ribs, translucent rear cutaway exposing mounting structure, warm porcelain studio background, low elegant macro composition. No adapters, enclosures or text."
+    }
+  ]
+}

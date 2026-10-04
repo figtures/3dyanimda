@@ -1,6 +1,6 @@
 {
   "records": 12,
-  "text_check": "pass",
-  "release_approved": false,
+  "result": "pass",
+  "scope": "Twelve authored service drafts and their exclusive artwork only; not a whole-site release approval",
   "issues": []
 }

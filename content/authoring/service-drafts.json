@@ -19,7 +19,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/3dyanimda-print.webp",
     "faq": [
       {
         "q": "Görünüş numunesi ile işlevsel prototip aynı siparişte olabilir mi?",
@@ -60,7 +60,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/3dyanimda-scan.webp",
     "faq": [
       {
         "q": "Ürünün tüm yüzeylerinin taranması gerekli mi?",
@@ -101,7 +101,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/3dyanimda-model.webp",
     "faq": [
       {
         "q": "Bir referans ürünün aynısını çizmeniz yeterli olur mu?",
@@ -142,7 +142,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/3dsanayi-print.webp",
     "faq": [
       {
         "q": "Mevcut metal aparatın plastik kopyasını doğrudan kullanabilir miyiz?",
@@ -183,7 +183,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/3dsanayi-scan.webp",
     "faq": [
       {
         "q": "Aşınmış parçadan yeni çizim çıkarılabilir mi?",
@@ -224,7 +224,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/3dsanayi-model.webp",
     "faq": [
       {
         "q": "Fotoğraf üzerinden hassas imalat modeli hazırlanabilir mi?",
@@ -265,7 +265,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/maketyanimda-print.webp",
     "faq": [
       {
         "q": "Mimari dosyayı olduğu gibi baskıya gönderebilir miyim?",
@@ -306,7 +306,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/maketyanimda-scan.webp",
     "faq": [
       {
         "q": "Eski bir maketin eksik parçasına referans oluşturabilir miyiz?",
@@ -347,7 +347,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/maketyanimda-model.webp",
     "faq": [
       {
         "q": "Yalnızca plan ve görünüş çizimleriyle çalışılabilir mi?",
@@ -388,7 +388,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/parcayanimda-print.webp",
     "faq": [
       {
         "q": "Kırık parçanın tüm parçaları elimde değilse ne gerekir?",
@@ -429,7 +429,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/parcayanimda-scan.webp",
     "faq": [
       {
         "q": "Taramadan çıkan dosya doğrudan yedek parça olarak basılır mı?",
@@ -470,7 +470,7 @@
       }
     ],
     "kind": "service",
-    "image": "",
+    "image": "/brand/services/parcayanimda-model.webp",
     "faq": [
       {
         "q": "Aynı kapağı farklı boydaki ürüne uyarlayabilir miyiz?",

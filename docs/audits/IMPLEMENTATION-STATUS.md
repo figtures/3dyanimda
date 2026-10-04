@@ -3,8 +3,8 @@
 ## Release decision: BLOCKED
 
 This repository is a development preview, not an approved original-content release.
-The global audit currently fails: 104 repeated paragraph groups, 540 similar text
-pairs, and 6 reused asset groups among 136 published demo records plus 4 home asset
+The global audit currently fails: 87 repeated paragraph groups, 522 similar text
+pairs, and 3 reused asset groups among 136 published demo records plus 4 home asset
 allocations. These counts describe the checked inventory, not every rendered page.
 The new Supabase project has zero published landing pages. No production release
 certificate has been issued. Existing private preview content is not approved copy.
@@ -13,7 +13,7 @@ certificate has been issued. Existing private preview content is not approved co
 
 Project: zdxjmhhjuomcpdtllnuq. Four active brand tenants, 197 landing records each.
 All 788 records are drafts. Twelve service records were replaced with individually
-authored drafts; their illustrations remain empty pending original artwork. The
+authored drafts; their 12 exclusive illustrations are now committed locally; the new artwork migration has not been applied to the remote project. The
 other 776 records still need editorial work; retaining them as drafts preserves
 route planning without misrepresenting them as completed original content.
 
@@ -86,8 +86,33 @@ No full SEO/GEO parity claim is made until the remaining checks are complete.
 
 ## Verification completed
 
-- 15 TypeScript unit tests passed; type checking passed.
+- 22 TypeScript/component tests passed; type checking passed.
 - Five originality detector regression tests passed.
 - Fresh PostgreSQL-compatible migration/RLS suite passed, including missing-review,
   browser self-approval and stale-review rejection, and service draft quarantine.
 - Automated full demo inventory correctly failed rather than accepting duplicates.
+
+## 2026-10-04 service artwork and admin entry update
+
+Twelve independently generated concept images are stored in public/brand/services/.
+The prompt subjects and provenance are in content/authoring/service-artwork.json.
+The built-in image_gen tool was used; WebP encoding preserves the generated scene.
+Each image is allocated to exactly one brand/service detail. Homepage service cards
+no longer reuse shared stock photographs or those service detail illustrations.
+The 12 authored service drafts and their images pass the lexical/perceptual audit
+as a group. This does not approve the remaining inventory or claim web-wide uniqueness.
+
+The admin entry identifies the resolved tenant, includes accessible field labels,
+password visibility, offline-preview blocking, network error recovery and an account
+switch option for unauthorized sessions. Seven component tests exercise these states.
+No administrator account was created or invited. Real account login for the four
+production domains has not been verified; domain registration and owner membership
+are still required. Existing RLS tests pass; they are not a substitute for live login.
+
+The new migration 20261004200000_exclusive_service_artwork.sql is committed but
+has NOT been applied remotely. The local preview seed contains the new service copy
+and illustrations. The private hosted preview has NOT been republished this turn.
+
+Chromium installation returned a truncated/non-ZIP archive in this environment.
+No new browser screenshot/responsive audit was completed. Do not mark these visual
+changes production-ready until browser verification and full release review succeed.

@@ -3,197 +3,11 @@
   "result": "fail",
   "records": 140,
   "issue_counts": {
-    "repeated_paragraph": 104,
-    "near_duplicate_text": 540,
-    "reused_asset": 6
+    "repeated_paragraph": 87,
+    "near_duplicate_text": 522,
+    "reused_asset": 3
   },
   "issues": [
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dyanimda/3d-tarama",
-        "3dyanimda/3d-modelleme",
-        "3dyanimda/malzemeler/pla",
-        "3dyanimda/malzemeler/petg",
-        "3dyanimda/malzemeler/abs",
-        "3dyanimda/malzemeler/asa",
-        "3dyanimda/malzemeler/tpu",
-        "3dyanimda/malzemeler/muhendislik-polimerleri",
-        "3dyanimda/bolgeler/istanbul"
-      ],
-      "fingerprint": "075c2932ece5a1207064a78e1f991ad8594cad5acb4d0d4a791042ce04b2fb14"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "fingerprint": "fe9c0ff595b79dcbd889fc35ea560cf13643805ce5c5534c7bdffa4bc73d3342"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "fingerprint": "c5ca1c5642dfc1551516aaa4549a113e7b872a2346253fec452278bc618c85b2"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "fingerprint": "889ca278f7f0eb404d8fcbda82089ea409e9bde7980ecf9aa1e420060cd49d5d"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "fingerprint": "9eaa0a42fb35cc1a108320f2ec475c6c5fb23213bf62ae65fb55e3bd0895f2d4"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "fingerprint": "078dad5416f723862f482fda1cd0aad986eac0418ec0ebc93903e6fe46e228e6"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "fingerprint": "0ffb23b86fce613bcd81eaf55cf9b2b5e5cdbf91ead5183ce2bf1e533013a599"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "fingerprint": "154c6431f7f278ea577306283bd91c8a0336e3b36cd8cc2cd7f96da17d11aab0"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "fingerprint": "281dff2aec6413cb445328810aa08c15b9e533ac35c51271339ec8a796208bbc"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "fingerprint": "e3cc35c7a7bb884e250c14b30fb3103f2117441ce19f89b68d5d9a5ff2e79fc9"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "fingerprint": "52151a7e955ded97f21be097171d449c274e1709750f47406bd5a4950359bf7e"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "fingerprint": "65371c7165eb7754476c6e12b8e637216b6943d90bcf30471ff672907fc50f57"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "fingerprint": "451f2f44e45885c53147559200755a099498fbec84203b054634c4c9036ac2eb"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "fingerprint": "2ea46c1317ac4d7cf2aeaf41c417234ab7a237d0e9fb62e056391a63247d82ad"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "fingerprint": "8a8e4e90970dbecb0c33a51eb4045f8a112344ee3660db90b3be3e9f7ab0d601"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "fingerprint": "3904afe5eabe850ef28d2364a6fe7e8c9f7cf4a12dd12056dd5580a9cf985b41"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "fingerprint": "73ca3378ab0dc83a9d4cd92713cff241b91c96a6dd2e89eb8c746503546973b1"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "fingerprint": "a088b7ddd9a53a6bc48ddc52fd6269caa25f26252af284c7f76ce47eed72121a"
-    },
     {
       "type": "repeated_paragraph",
       "pages": [
@@ -271,6 +85,19 @@
         "parcayanimda/cozumler/ornekten-parca-modelleme"
       ],
       "fingerprint": "1d8d193ccabb0c81d5afa2334951c6a0bd4f4ce1dd0f9d3f0822c79d3664bdde"
+    },
+    {
+      "type": "repeated_paragraph",
+      "pages": [
+        "3dyanimda/malzemeler/pla",
+        "3dyanimda/malzemeler/petg",
+        "3dyanimda/malzemeler/abs",
+        "3dyanimda/malzemeler/asa",
+        "3dyanimda/malzemeler/tpu",
+        "3dyanimda/malzemeler/muhendislik-polimerleri",
+        "3dyanimda/bolgeler/istanbul"
+      ],
+      "fingerprint": "075c2932ece5a1207064a78e1f991ad8594cad5acb4d0d4a791042ce04b2fb14"
     },
     {
       "type": "repeated_paragraph",
@@ -549,22 +376,6 @@
     {
       "type": "repeated_paragraph",
       "pages": [
-        "3dsanayi/3d-baski",
-        "3dsanayi/3d-tarama",
-        "3dsanayi/3d-modelleme",
-        "3dsanayi/malzemeler/pla",
-        "3dsanayi/malzemeler/petg",
-        "3dsanayi/malzemeler/abs",
-        "3dsanayi/malzemeler/asa",
-        "3dsanayi/malzemeler/tpu",
-        "3dsanayi/malzemeler/muhendislik-polimerleri",
-        "3dsanayi/bolgeler/istanbul"
-      ],
-      "fingerprint": "8c1e638b34737c74a1ea97a432a15cb1fc6e7be0eccbdabedbc92cdce846c784"
-    },
-    {
-      "type": "repeated_paragraph",
-      "pages": [
         "3dsanayi/cozumler/montaj-konumlandirma",
         "3dsanayi/cozumler/bakim-yardimcilari",
         "3dsanayi/rehber/teklif-icin-dosya-hazirlama",
@@ -577,18 +388,15 @@
     {
       "type": "repeated_paragraph",
       "pages": [
-        "maketyanimda/3d-baski",
-        "maketyanimda/3d-tarama",
-        "maketyanimda/3d-modelleme",
-        "maketyanimda/malzemeler/pla",
-        "maketyanimda/malzemeler/petg",
-        "maketyanimda/malzemeler/abs",
-        "maketyanimda/malzemeler/asa",
-        "maketyanimda/malzemeler/tpu",
-        "maketyanimda/malzemeler/muhendislik-polimerleri",
-        "maketyanimda/bolgeler/istanbul"
+        "3dsanayi/malzemeler/pla",
+        "3dsanayi/malzemeler/petg",
+        "3dsanayi/malzemeler/abs",
+        "3dsanayi/malzemeler/asa",
+        "3dsanayi/malzemeler/tpu",
+        "3dsanayi/malzemeler/muhendislik-polimerleri",
+        "3dsanayi/bolgeler/istanbul"
       ],
-      "fingerprint": "4aa3b409cef6813b4bb272cb473a4895044e5da227d7d10a9c664ab2bc435c72"
+      "fingerprint": "8c1e638b34737c74a1ea97a432a15cb1fc6e7be0eccbdabedbc92cdce846c784"
     },
     {
       "type": "repeated_paragraph",
@@ -605,18 +413,15 @@
     {
       "type": "repeated_paragraph",
       "pages": [
-        "parcayanimda/3d-baski",
-        "parcayanimda/3d-tarama",
-        "parcayanimda/3d-modelleme",
-        "parcayanimda/malzemeler/pla",
-        "parcayanimda/malzemeler/petg",
-        "parcayanimda/malzemeler/abs",
-        "parcayanimda/malzemeler/asa",
-        "parcayanimda/malzemeler/tpu",
-        "parcayanimda/malzemeler/muhendislik-polimerleri",
-        "parcayanimda/bolgeler/istanbul"
+        "maketyanimda/malzemeler/pla",
+        "maketyanimda/malzemeler/petg",
+        "maketyanimda/malzemeler/abs",
+        "maketyanimda/malzemeler/asa",
+        "maketyanimda/malzemeler/tpu",
+        "maketyanimda/malzemeler/muhendislik-polimerleri",
+        "maketyanimda/bolgeler/istanbul"
       ],
-      "fingerprint": "5c0ce4cc40277ae08d5a004ac5a2ee2939222224c3d8044747c08ec4d407dc9d"
+      "fingerprint": "4aa3b409cef6813b4bb272cb473a4895044e5da227d7d10a9c664ab2bc435c72"
     },
     {
       "type": "repeated_paragraph",
@@ -629,6 +434,19 @@
         "parcayanimda/rehber/numune-ve-revizyon"
       ],
       "fingerprint": "cf43ed64eec84e1b4ba4d08746f36b6ebfda736a463bad3a15da8a7b96b78a74"
+    },
+    {
+      "type": "repeated_paragraph",
+      "pages": [
+        "parcayanimda/malzemeler/pla",
+        "parcayanimda/malzemeler/petg",
+        "parcayanimda/malzemeler/abs",
+        "parcayanimda/malzemeler/asa",
+        "parcayanimda/malzemeler/tpu",
+        "parcayanimda/malzemeler/muhendislik-polimerleri",
+        "parcayanimda/bolgeler/istanbul"
+      ],
+      "fingerprint": "5c0ce4cc40277ae08d5a004ac5a2ee2939222224c3d8044747c08ec4d407dc9d"
     },
     {
       "type": "repeated_paragraph",
@@ -1331,78 +1149,6 @@
         "parcayanimda/cozumler/kurumsal-proje-yonetimi"
       ],
       "fingerprint": "7e8e4a5121a340651f217d6b6a179c1fa2d40b41beba4d0d12cbf6d37242e08e"
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski"
-      ],
-      "containment": 0.812
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "maketyanimda/3d-baski"
-      ],
-      "containment": 0.798
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "containment": 0.798
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama"
-      ],
-      "containment": 0.809
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "maketyanimda/3d-tarama"
-      ],
-      "containment": 0.794
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "containment": 0.794
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme"
-      ],
-      "containment": 0.808
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "maketyanimda/3d-modelleme"
-      ],
-      "containment": 0.792
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "containment": 0.792
     },
     {
       "type": "near_duplicate_text",
@@ -2943,54 +2689,6 @@
     {
       "type": "near_duplicate_text",
       "pages": [
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski"
-      ],
-      "containment": 0.812
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dsanayi/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "containment": 0.812
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama"
-      ],
-      "containment": 0.809
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dsanayi/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "containment": 0.809
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme"
-      ],
-      "containment": 0.808
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "3dsanayi/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "containment": 0.808
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
         "3dsanayi/cozumler/montaj-konumlandirma",
         "3dsanayi/cozumler/test-kontrol-aparatlari"
       ],
@@ -4067,30 +3765,6 @@
         "parcayanimda/bolgeler/istanbul"
       ],
       "containment": 0.431
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ],
-      "containment": 0.793
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ],
-      "containment": 0.789
-    },
-    {
-      "type": "near_duplicate_text",
-      "pages": [
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ],
-      "containment": 0.787
     },
     {
       "type": "near_duplicate_text",
@@ -5651,36 +5325,6 @@
         "parcayanimda/cozumler/kurumsal-proje-yonetimi"
       ],
       "containment": 0.894
-    },
-    {
-      "type": "reused_asset",
-      "asset": "/cms/service-printing.jpg",
-      "pages": [
-        "3dyanimda/3d-baski",
-        "3dsanayi/3d-baski",
-        "maketyanimda/3d-baski",
-        "parcayanimda/3d-baski"
-      ]
-    },
-    {
-      "type": "reused_asset",
-      "asset": "/cms/service-scanning.jpg",
-      "pages": [
-        "3dyanimda/3d-tarama",
-        "3dsanayi/3d-tarama",
-        "maketyanimda/3d-tarama",
-        "parcayanimda/3d-tarama"
-      ]
-    },
-    {
-      "type": "reused_asset",
-      "asset": "/cms/service-modeling.jpg",
-      "pages": [
-        "3dyanimda/3d-modelleme",
-        "3dsanayi/3d-modelleme",
-        "maketyanimda/3d-modelleme",
-        "parcayanimda/3d-modelleme"
-      ]
     },
     {
       "type": "reused_asset",

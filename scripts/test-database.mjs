@@ -20,7 +20,7 @@ GRANT ALL ON ALL TABLES IN SCHEMA storage TO anon,authenticated,service_role;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO anon,authenticated,service_role;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO anon,authenticated,service_role;`);
 for (const file of readdirSync("supabase/migrations")
-  .filter((f) => f.endsWith(".sql") && !f.startsWith("2026100316"))
+  .filter((f) => f.endsWith(".sql") && f < "20261003160000")
   .sort()) {
   try {
     await db.exec(readFileSync(`supabase/migrations/${file}`, "utf8"));
@@ -274,4 +274,7 @@ await db.exec("RESET ROLE");
 await db.exec(readFileSync("supabase/migrations/20261003161000_original_service_drafts.sql", "utf8"));
 assert.equal((await rows("select * from landing_pages where status='published'")).length,0);
 console.log("PASS original service drafts remain quarantined");
+await db.exec(readFileSync("supabase/migrations/20261004200000_exclusive_service_artwork.sql", "utf8"));
+assert.equal((await rows("select * from landing_pages where image like '/brand/services/%' and status='draft'")).length,12);
+console.log("PASS exclusive service artwork stays draft");
 await db.close();
