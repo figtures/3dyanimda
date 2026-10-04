@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
+import BrandNavigation from "./BrandNavigation";
 import {
   Link,
-  NavLink,
   Outlet,
   ScrollRestoration,
   useLocation,
 } from "react-router-dom";
-import { ArrowUpRight, Box, Menu, X, MapPin } from "lucide-react";
+import { ArrowUpRight, Box, MapPin } from "lucide-react";
 import { brands, useBrand } from "@/brands/config";
 import { demoMode } from "@/lib/supabase";
-import { useNavItems } from "@/hooks/useNavItems";
-import { resolveMediaUrl } from "@/lib/media";
 import { useRedirects } from "@/hooks/useRedirects";
 import "@/brands/brand.css";
 import "@/brands/modern.css";
@@ -18,16 +15,8 @@ import "@/themes/themes.css";
 import { getSiteTheme, themeNames } from "@/themes/config";
 export function BrandLayout() {
   const brand = useBrand();
-  const extraNav = useNavItems("header_extra").filter(
-    (item) => item.url.startsWith("/") && !item.url.startsWith("//"),
-  );
-  const wordmark = resolveMediaUrl(brand.settings.logo_wordmark?.url);
-  const [open, setOpen] = useState(false);
   const location = useLocation();
   useRedirects();
-  useEffect(() => {
-    setOpen(false);
-  }, [location.pathname, location.search]);
   const theme = getSiteTheme(brand.slug, location.search);
   const preview = import.meta.env.DEV;
   // Keep local preview selection while navigating between pages.
@@ -37,9 +26,7 @@ export function BrandLayout() {
     <div
       className={`brand-site theme-${theme}`}
       data-theme={theme}
-      onKeyDown={(event) => {
-        if (event.key === "Escape") setOpen(false);
-      }}
+
     >
       <a className="skip-link" href="#main">
         İçeriğe geç
@@ -82,70 +69,7 @@ export function BrandLayout() {
           </label>
         </div>
       )}
-      <header className="brand-header">
-        <Link
-          className="brand-logo"
-          to={link("/")}
-          aria-label={`${brand.name} anasayfa`}
-        >
-          {wordmark ? (
-            <img
-              src={wordmark}
-              alt={brand.name}
-              style={{ maxWidth: 220, maxHeight: 40 }}
-            />
-          ) : (
-            <>
-              <Box strokeWidth={1.7} />
-              {brand.name}
-            </>
-          )}
-        </Link>
-        <nav
-          id="main-navigation"
-          aria-label="Ana menü"
-          className={open ? "brand-nav is-open" : "brand-nav"}
-        >
-          {[
-            ["/3d-baski", "3D Baskı"],
-            ["/3d-tarama", "3D Tarama"],
-            ["/3d-modelleme", "3D Modelleme"],
-            ["/cozumler", "Çözümler"],
-            ["/araclar", "3D Araçlar"],
-            ...extraNav.map((item) => [item.url, item.label_tr]),
-          ].map(([path, label]) => (
-            <NavLink key={path} to={link(path)} onClick={() => setOpen(false)}>
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-        <Link className="brand-button header-quote" to={link("/teklif-al")}>
-          Teklif Al <ArrowUpRight size={17} />
-        </Link>
-        <button
-          className="menu-toggle"
-          aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
-          aria-expanded={open}
-          aria-controls="main-navigation"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X /> : <Menu />}
-        </button>
-      </header>
-      <nav className="resource-nav" aria-label="Bilgi ve sektör menüsü">
-        {[
-          ["/sektorler", "Sektörler"],
-          ["/malzemeler", "Malzemeler"],
-          ["/rehber", "Teknik rehberler"],
-          ["/bolgeler", "Hizmet bölgeleri"],
-          ["/hakkimizda", "Hakkımızda"],
-          ["/iletisim", "İletişim"],
-        ].map(([path, label]) => (
-          <Link key={path} to={link(path)}>
-            {label}
-          </Link>
-        ))}
-      </nav>
+      <BrandNavigation />
       <main id="main">
         <Outlet />
       </main>

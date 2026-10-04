@@ -116,3 +116,33 @@ and illustrations. The private hosted preview has NOT been republished this turn
 Chromium installation returned a truncated/non-ZIP archive in this environment.
 No new browser screenshot/responsive audit was completed. Do not mark these visual
 changes production-ready until browser verification and full release review succeed.
+
+## 2026-10-04 deployment and owner provisioning update
+
+All 34 repository migrations are now applied to project zdxjmhhjuomcpdtllnuq,
+including the exclusive-service-artwork migration. Canonical tenant domains are
+registered as <brand>.com and their aliases are synchronized by the existing trigger.
+No Cloudflare DNS or production Worker deployment was performed.
+
+The requested info@3dyanimda.com user was created and granted active owner membership
+in all four brand tenants. Password authentication and tenant resolution were tested
+against the real Supabase Auth/REST APIs; all four owner checks passed. This is not a
+claim that the business-domain frontends are deployed. No email invitation was sent.
+Initial credentials were not committed or stored in repository files.
+
+The navigation was rebuilt using accessible Popover/Sheet primitives: direct service
+links, a grouped desktop directory, mobile focus management, Escape dismissal,
+route-change dismissal, scrollable mobile contents and a persistent quote action.
+48 brand/theme/viewport browser cases passed at widths 320, 390, 768 and 1440, including
+service artwork loading and horizontal overflow checks. Menu screenshots were
+visually inspected. The prior Chromium blocker was resolved using a compatible
+packaged Chromium build. 22 component/unit tests also passed.
+
+The private design demo was republished successfully with source commit
+f38c758f150ad96b6d6c69d2a18e19bbbfbcfe85, deployment
+appgdep_6ac2a4dc71908191b39a1793ab5578ad. It intentionally remains offline/read-only;
+production owner login is not offered by the design preview.
+
+Remaining blockers still apply: full original editorial inventory, publication-review
+UI/issuer, production domain hosting and remaining integration verification. There
+are zero published landing rows. Do not describe the entire project as complete.

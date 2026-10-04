@@ -33,7 +33,8 @@
     "deploy:maketyanimda": "node scripts/cloudflare/brand.mjs deploy maketyanimda",
     "build:parcayanimda": "node scripts/cloudflare/brand.mjs build parcayanimda",
     "check:parcayanimda": "node scripts/cloudflare/brand.mjs check parcayanimda",
-    "deploy:parcayanimda": "node scripts/cloudflare/brand.mjs deploy parcayanimda"
+    "deploy:parcayanimda": "node scripts/cloudflare/brand.mjs deploy parcayanimda",
+    "test:navigation": "node scripts/test-navigation.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
