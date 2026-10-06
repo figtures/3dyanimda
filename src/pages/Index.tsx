@@ -13,7 +13,6 @@ import {
 import { useBrand } from "@/brands/config";
 import { useContent } from "@/content/useContent";
 import { Seo } from "@/components/site/Seo";
-import heroEngine from "@/assets/hero-engine-part.jpg";
 const serviceIntroductions: Record<string, string[]> = {
   "3dyanimda": ["Ürün ekibinizin sıradaki kararını fiziksel numuneyle netleştirin.", "Elinizdeki objenin formunu yeni ürün geliştirmede referans alın.", "Kullanım senaryonuzu ölçü ve geometriyle somutlaştırın."],
   "3dsanayi": ["Montaj istasyonunuz için işe özel yardımcı ekipman geliştirin.", "Çizimi bulunmayan geometrileri mühendislik değerlendirmesine taşıyın.", "Sabit referansları ve ayarlanabilir bölgeleri birlikte planlayın."],
@@ -57,9 +56,7 @@ export default function Index() {
   const { data: pages = [] } = useContent();
   const img =
     b.image ||
-    (b.slug === "3dyanimda"
-      ? heroEngine
-      : `/brand/industrial/${b.heroAsset}.webp`);
+    `/brand/industrial/${b.heroAsset}.webp`;
   return (
     <>
       <Seo

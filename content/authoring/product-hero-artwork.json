@@ -1,0 +1,14 @@
+{
+  "generator": "built-in image_gen",
+  "created": "2026-10-06",
+  "usage": "Concept illustration, not a customer case",
+  "file": "/brand/industrial/product-prototype.webp",
+  "sha256": "e79e4e032b92561587668135507c367d8bbb49fc2e911f9687db2985eaa98181",
+  "source_sha256": "6ce377d6fe1802103ebb34249b6b8cbb1ada9328246898ee74a92328410f7061",
+  "brief": "Two open cream handheld environmental-sensor prototype shells, visible bosses and matte sage tray, charcoal teal studio, diagonal close view; no logos or text.",
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "conversion": "PNG to WebP, quality 90, unchanged dimensions and composition"
+}

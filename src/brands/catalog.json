@@ -18,8 +18,8 @@
       "Küçük seri üretim"
     ],
     "description": "3dyanımda: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Prototip & kurumsal üretim için proje bazlı üretim.",
-    "heroAsset": "fixture",
-    "heroCaption": "Fonksiyonel parça prototipi",
+    "heroAsset": "product-prototype",
+    "heroCaption": "Elde kullanılan ürün için gövde prototipi",
     "applicationDetails": [
       "Tasarım kararlarını fiziksel model üzerinden değerlendirmek için form, yerleşim ve montaj prototipleri.",
       "Tekrarlayan montaj ve konumlandırma adımları için projeye özel yardımcı parçalar.",

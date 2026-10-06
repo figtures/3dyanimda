@@ -4,7 +4,7 @@
 
 This upgrade extends the recovered `figtures/3dyanimda` codebase at `d6bb46261f7cfe9a08fed10eb0fe6ff032de0004`, which already derives from the original 3D Yanında source snapshot. The existing tenant isolation, admin editor, quote workflow, static HTML exporter and publication review gates remain in place.
 
-The implementation is ready for the private design demo. It has **not** been deployed to the four public domains. The new database migration has been tested locally but not applied to the remote Supabase project. No Search Console, Bing or IndexNow submission has been made. GA4 collection is inactive until a brand measurement ID is configured and a visitor grants analytics consent.
+The implementation is ready for the private design demo. It has **not** been deployed to the four public domains. Both new draft-only database migrations have been tested locally but not applied to the remote Supabase project. No Search Console, Bing or IndexNow submission has been made. GA4 collection is inactive until a brand measurement ID is configured and a visitor grants analytics consent.
 
 Cloning source preserves reusable implementation; it does not transfer the original domain's backlinks, reputation, indexed history or search performance. No ranking, indexing deadline or sales outcome is promised.
 
@@ -15,13 +15,14 @@ Cloning source preserves reusable implementation; it does not transfer the origi
 | Canonical URLs | Strip query/fragment and trailing/index variants from canonical metadata; production Worker consolidates HTTPS, www and known legacy service aliases. Brand origins remain separate. |
 | Search presentation | Restore large image, unrestricted snippet and video preview directives on eligible pages; brand-specific titles, Open Graph, Twitter and actual content modification dates. |
 | Structured data | Linked Organization, WebSite and WebPage graph; Article for guides, Service for services, matching visible FAQ and breadcrumbs, ItemList for content hubs. Business address and ProfessionalService come from verified identity settings. |
-| Content | Enrich 12 service pages and add 8 buyer guides with direct answers, project decision criteria, comparison tables, FAQs and relevant service links. The format supports readers; it is not an AI inclusion requirement. |
+| Content | Enrich 12 service pages, add 8 buyer guides and rewrite the remaining 124 preview articles: 20 solution, 24 material, 32 sector, 44 guide and 4 evidenced city pages. Preserve all existing routes. Direct answers, decision criteria, FAQs and relevant service links address each brand's actual subject. The format supports readers; it is not an AI inclusion requirement. |
+| Artwork | Give 3dyanimda a separate product-prototype hero and use the assigned brand hero in social metadata. Remove irrelevant reused photographs from rewritten articles. The new image is a generated concept, not a customer project; its provenance is recorded. |
 | Quote conversion | Page subject and selected service carry into the quote form. Related content and contextual calls to action connect research to a technical request. |
 | Discovery | Export a sitemap index and segmented child sitemaps from rendered, published canonical pages; include actual modification dates only when known and same-origin image references. The optional llms.txt is a directory, not a ranking mechanism. |
 | Change notifications | Compare content fingerprints against the previous manifest. After deployment, verify the live ownership key, response status, robots directives and canonical URL before sending new/changed/removed URLs to IndexNow. |
 | Measurement | Consent-dependent GA4 events: page_view, quote_cta_click, quote_start, quote_submit_error, generate_lead and contact_click. Recognize Google/Bing and known AI referral channels. Application events omit form values, filenames and query parameters. |
 | Editor | Validated optional editorial JSON stores answers, takeaways, comparison tables, related paths and sources. Legacy rows remain readable. |
-| Migration | `20261006150000_search_editorial.sql` adds editorial data, updates only untouched draft service bodies, inserts guide drafts and preserves previously edited or published rows. Existing certificate hashes include editorial changes. |
+| Migrations | `20261006150000_search_editorial.sql` adds editorial data and 8 guide drafts. `20261006170000_original_editorial_inventory.sql` updates 124 untouched legacy drafts only when their previous content matches exactly. Both preserve owner edits and published records. Existing certificate hashes include editorial changes. |
 
 ## Eight new guides
 
@@ -32,21 +33,22 @@ Cloning source preserves reusable implementation; it does not transfer the origi
 | maketyanimda | `/rehber/mimari-maket-olcek-secimi`, `/rehber/maket-fiyati-teklif-kapsami` |
 | parcayanimda | `/rehber/kirik-parca-yeniden-uretim`, `/rehber/otomotiv-plastik-parca-malzeme` |
 
-The demo merges `src/content/search-pages.json` over the existing demo inventory. Production continues to read the database and its publication status; the local demo's published flags do not authorize database publication. Regenerate the overlay and migration with `npm run content:search`.
+The demo merges `src/content/editorial-pages.json` and then `src/content/search-pages.json` over the baseline inventory. Production continues to read the database and its publication status; the local demo's published flags do not authorize database publication. Regenerate with `npm run content:editorial` and `npm run content:search`. The resulting preview contains 144 visible content pages across four brands. Another 652 planning records remain drafts and are not presented as completed or indexable articles.
 
-## Validation and remaining content work
+## Validation and remaining release work
 
 - TypeScript check passed; 26 application tests and 8 discovery/deployment tests passed.
-- PostgreSQL/PGlite migration regression passed: new guide drafts, preserved owner edit, tenant access rules, editorial object constraint and unchanged publication gate behavior.
+- PostgreSQL/PGlite migration regression passed: new guide drafts, preserved owner edits in both migration cohorts, tenant access rules, editorial object constraint and unchanged publication gate behavior. No row is automatically published.
 - Browser QA passed 24 combinations of brand, theme and viewport, plus four service-to-quote transfers. Canonicals, preview noindex, Article/FAQ/website data, tables, headings and viewport overflow were checked. Desktop and mobile screenshots were inspected.
-- The full content audit still fails: 148 audited records including homepages, 87 repeated-paragraph groups, 522 near-duplicate pairs and 3 reused-asset groups in the inherited inventory. Counts refer to findings, not distinct affected pages. The release remains blocked.
-- The new 20-record cohort, with four automatically included homepage records, has no detected text duplication. That cohort audit still fails on the inherited homepage image shared by 3dyanimda and 3dsanayi. No audit or human-review certificate has been fabricated.
+- The expanded rendered inventory passed 1,224 route/theme/viewport cases: 144 content routes and 60 public utility routes, each in three themes at 1440 and 390 pixels. It checks authored sections, FAQ parity, headings, canonicals, preview noindex, source-company identity leakage, image loads and horizontal overflow. `docs/audits/rendered-editorial.json` records the result and per-content-route rendered fingerprints. This does not cover remote CMS data, admin workflows or a full visual review of every case.
+- The full automatic originality audit now passes for 148 records: 144 content pages and four homepage asset allocations. It reports zero repeated-paragraph, near-duplicate or reused-asset findings under the existing thresholds. The inherited findings were 87 paragraph groups, 522 similar pairs and 3 asset groups. This is a local lexical/perceptual/geometry check, not proof of web-wide originality.
+- The source-bound human publication review and live business evidence review are still outstanding. Automated results do not issue either repository or database publication certificates.
 - Vite emits existing large-chunk warnings. Browser function checks are not Core Web Vitals measurements; field performance remains to be measured on a real deployment.
 
 ## Production rollout, in order
 
-1. Resolve duplicate content and reused asset findings in the publication inventory, complete semantic/provenance review and obtain the existing release certificate. Use real specifications, approved sample reports and customer evidence where available. Do not invent test data, locations, testimonials or manufacturer certification.
-2. Apply the new draft-only migration to the existing Supabase project through its authorized deployment environment. Review the new records before publication. No browser editor may self-issue certificates.
+1. Review the authored publication inventory and automated evidence, complete semantic/provenance and business-fact review, and obtain the existing release certificate. Use real specifications, approved sample reports and customer evidence where available. Do not invent test data, locations, testimonials or manufacturer certification.
+2. Apply both new draft-only migrations to the existing Supabase project through its authorized deployment environment. Review the new records before publication. No browser editor may self-issue certificates.
 3. Configure each `deploy/<brand>/.env` from the documented brand setup. Existing Supabase public settings and Cloudflare credentials are required. New optional settings are `VITE_GA4_MEASUREMENT_ID`, `VITE_GOOGLE_SITE_VERIFICATION`, `VITE_BING_SITE_VERIFICATION`, and server-side `INDEXNOW_KEY`. Keep credentials out of source and chat.
 4. Run each brand's approved export/deploy command. This preserves tenant isolation, validates real rendered HTML, writes discovery artifacts and optionally performs verified post-deployment IndexNow notifications. The www hostname must also be routed to the Worker before its redirect can operate.
 5. Verify domain ownership in Search Console and Bing Webmaster Tools, submit the sitemap index and inspect priority canonical URLs. In Search Console, check inclusion in Search generative AI features and its Generative AI performance report. Allow legitimate OAI-SearchBot requests through robots and edge rules; its search control is independent of GPTBot training control.

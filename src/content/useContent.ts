@@ -12,7 +12,9 @@ export function useContent(includeDrafts = false) {
       if (demoMode) {
         const { default: defaults } = await import("./pages.json");
         const { default: enhancements } = await import("./search-pages.json");
+        const { default: editorial } = await import("./editorial-pages.json");
         const merged = new Map((defaults as LandingPage[]).map(p => [p.brand+p.path,p]));
+        for (const page of editorial as LandingPage[]) merged.set(page.brand+page.path,page);
         for (const page of enhancements as LandingPage[]) merged.set(page.brand+page.path,page);
         return Array.from(merged.values()).filter(
           (p) =>

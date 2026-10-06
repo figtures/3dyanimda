@@ -1,0 +1,52 @@
+{
+  "policy": "global-originality-v1",
+  "sourceHash": "952dda224626b230544be9adf7c3e7ab9e54b5aff4a4ef3ded6ee74bd70c25ee",
+  "result": "pending_human_review",
+  "sourceFileCount": 333,
+  "automatedEvidence": {
+    "globalOriginality": {
+      "result": "pass",
+      "report": "docs/audits/global-originality.json",
+      "records": 148
+    },
+    "renderedRoutes": {
+      "result": "pass",
+      "report": "docs/audits/rendered-editorial.json",
+      "cases": 1224
+    },
+    "databaseMigrations": {
+      "result": "pass",
+      "command": "npm run test:db",
+      "remoteApplied": false
+    },
+    "applicationTests": {
+      "result": "pass",
+      "command": "npm test",
+      "tests": 26
+    },
+    "typecheck": {
+      "result": "pass",
+      "command": "npm run typecheck"
+    },
+    "productionBuild": {
+      "result": "pass",
+      "command": "npm run build"
+    }
+  },
+  "requiredHumanChecks": {
+    "allBrandsAllThemesAllRoutes": "pending",
+    "renderedText": "pending",
+    "imageProvenance": "pending",
+    "visualSimilarity": "pending",
+    "modelGeometry": "pending",
+    "localEvidence": "pending",
+    "seoGeoParity": "pending"
+  },
+  "notes": [
+    "This request is evidence for review, not a publication certificate.",
+    "Automatic checks do not establish web-wide originality, commercial accuracy or production performance.",
+    "Production CMS/database records and asset registry still require server-side review."
+  ],
+  "reviewer": null,
+  "reviewedAt": null
+}

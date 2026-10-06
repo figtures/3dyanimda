@@ -288,4 +288,16 @@ assert.notEqual((await rows(`SELECT publication_payload_hash('{"editorial":{"ans
 await context("anon", "3dyanimda.localhost");
 assert.equal((await rows("SELECT * FROM landing_pages")).length,0);
 console.log("PASS search editorial migration: 8 new draft guides, 11 service upgrades, owner edit preserved, review hash and quarantine intact");
+await db.exec("RESET ROLE");
+await db.exec(`UPDATE landing_pages SET title='Owner-maintained title' WHERE tenant_id='${a}' AND path='/rehber/stl-dosya-hazirlama'`);
+await db.exec(readFileSync("supabase/migrations/20261006170000_original_editorial_inventory.sql", "utf8"));
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages WHERE editorial<>'{}'::jsonb"))[0].n,142);
+assert.equal((await rows(`SELECT title,editorial FROM landing_pages WHERE tenant_id='${a}' AND path='/rehber/stl-dosya-hazirlama'`))[0].title,'Owner-maintained title');
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages WHERE status='published'"))[0].n,0);
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages"))[0].n,796);
+await context("authenticated", "3dsanayi.localhost", null, user);
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages WHERE editorial<>'{}'::jsonb"))[0].n,36);
+await context("anon", "3dsanayi.localhost");
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages"))[0].n,0);
+console.log("PASS 124-route rewrite migration: 123 untouched drafts updated, owner title preserved, 796 rows retained, tenant isolation and quarantine intact");
 await db.close();

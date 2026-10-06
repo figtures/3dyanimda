@@ -38,7 +38,9 @@
     "test:search": "node --test scripts/search/*.test.mjs",
     "content:search": "node scripts/refresh-search-content.mjs",
     "indexnow:plan": "node scripts/search/submit-indexnow.mjs",
-    "test:search:browser": "node scripts/test-search-browser.mjs"
+    "test:search:browser": "node scripts/test-search-browser.mjs",
+    "content:editorial": "node scripts/refresh-editorial-content.mjs",
+    "test:content:browser": "node scripts/test-content-inventory.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

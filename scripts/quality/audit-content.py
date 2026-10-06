@@ -75,7 +75,8 @@ if __name__=='__main__':
  records=json.loads((ROOT/args.input).read_text())
  if args.input=='src/content/pages.json':
   merged={p['brand']+p['path']:p for p in records}
-  for p in json.loads((ROOT/'src/content/search-pages.json').read_text()):merged[p['brand']+p['path']]=p
+  for source in ['src/content/editorial-pages.json','src/content/search-pages.json']:
+   for p in json.loads((ROOT/source).read_text()):merged[p['brand']+p['path']]=p
   records=list(merged.values())
  records=[p for p in records if args.all or p['status']=='published']
  catalog=json.loads((ROOT/"src/brands/catalog.json").read_text())
