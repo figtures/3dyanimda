@@ -10,8 +10,9 @@ export default function Contact() {
     <>
       <Seo
         title="İletişim"
-        description={`${b.name} ile projenizi paylaşın. Örnek Mahallesi, İstanbul.`}
+        description={`${b.name} ile 3D üretim projenizi paylaşın; dosya, numune ve teklif kapsamını birlikte değerlendirelim.`}
         path="/iletisim"
+        pageType="ContactPage"
       />
       <section className="brand-inner">
         <p className="brand-eyebrow">TANIŞALIM</p>
@@ -31,10 +32,10 @@ export default function Contact() {
           Teknik teklif talebi <ArrowUpRight size={18} />
         </Link>
         <div className="contact-details">
-          <div>
+          {contact.address_tr && <div>
             <h2>Üretim noktamız</h2>
-            <p>{contact.address_tr || "Örnek Mahallesi, İstanbul"}</p>
-          </div>
+            <p>{contact.address_tr}</p>
+          </div>}
           <div>
             <h2>Hizmet alanımız</h2>
             <p>İstanbul'un tamamı. Teslimat planı proje özelinde belirlenir.</p>

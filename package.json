@@ -34,7 +34,11 @@
     "build:parcayanimda": "node scripts/cloudflare/brand.mjs build parcayanimda",
     "check:parcayanimda": "node scripts/cloudflare/brand.mjs check parcayanimda",
     "deploy:parcayanimda": "node scripts/cloudflare/brand.mjs deploy parcayanimda",
-    "test:navigation": "node scripts/test-navigation.mjs"
+    "test:navigation": "node scripts/test-navigation.mjs",
+    "test:search": "node --test scripts/search/*.test.mjs",
+    "content:search": "node scripts/refresh-search-content.mjs",
+    "indexnow:plan": "node scripts/search/submit-indexnow.mjs",
+    "test:search:browser": "node scripts/test-search-browser.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Cookie, X } from "lucide-react";
-
-const STORAGE_KEY = "3dy_cookie_consent_v1";
+import { useBrand } from "@/brands/config";
+import { CONSENT_EVENT, consentKey, clearAttribution } from "@/lib/growth-analytics";
 
 type Consent = {
   analytics: boolean;
@@ -22,7 +22,7 @@ declare global {
 const applyConsent = (c: Consent) => {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
-  const gtag = (...args: unknown[]) => window.dataLayer!.push(args);
+  const gtag = window.gtag || function () { window.dataLayer!.push(arguments); };
   gtag("consent", "update", {
     ad_storage: c.marketing ? "granted" : "denied",
     ad_user_data: c.marketing ? "granted" : "denied",
@@ -32,24 +32,31 @@ const applyConsent = (c: Consent) => {
 };
 
 export const CookieConsent = () => {
+  const brand = useBrand();
+  const STORAGE_KEY = consentKey(brand.slug);
   const [open, setOpen] = useState(false);
   const [settings, setSettings] = useState(false);
-  const [analytics, setAnalytics] = useState(true);
+  const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
+    const reopen = () => setOpen(true);
+    window.addEventListener("brand:privacy-settings", reopen);
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) {
         setOpen(true);
-        return;
+        return () => window.removeEventListener("brand:privacy-settings", reopen);
       }
       const c = JSON.parse(raw) as Consent;
+      setAnalytics(c.analytics === true);
+      setMarketing(c.marketing === true);
       applyConsent(c);
     } catch {
       setOpen(true);
     }
-  }, []);
+    return () => window.removeEventListener("brand:privacy-settings", reopen);
+  }, [STORAGE_KEY]);
 
   const save = (c: Omit<Consent, "ts">) => {
     const final: Consent = { ...c, ts: Date.now() };
@@ -59,6 +66,8 @@ export const CookieConsent = () => {
       /* ignore */
     }
     applyConsent(final);
+    if (!final.analytics) clearAttribution(brand.slug);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
     setOpen(false);
   };
 
@@ -77,8 +86,7 @@ export const CookieConsent = () => {
                 Çerez Tercihleri
               </h3>
               <p className="text-[13px] text-muted-foreground mt-1.5 leading-relaxed">
-                Sitenin çalışması için zorunlu çerezler dışında, deneyimi iyileştirmek ve trafiği analiz
-                etmek için çerezler kullanıyoruz. 6698 sayılı KVKK kapsamında tercihlerinizi siz belirlersiniz.{" "}
+                İzninizle ziyaret ve teklif adımlarını ölçerek siteyi geliştirmek için analitik çerezler kullanıyoruz. Tercihinizi istediğiniz zaman değiştirebilirsiniz.{" "}
                 <Link to="/cerez-politikasi" className="text-accent-blue underline underline-offset-2">
                   Detaylı bilgi
                 </Link>
@@ -95,7 +103,7 @@ export const CookieConsent = () => {
                   />
                   <Row
                     title="Analitik çerezler"
-                    desc="Google Analytics 4 — anonim ziyaret istatistikleri."
+                    desc="Google Analytics 4 — ziyaret ve teklif adımlarını ölçer."
                     checked={analytics}
                     onChange={setAnalytics}
                   />

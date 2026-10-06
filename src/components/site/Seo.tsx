@@ -4,6 +4,7 @@ import { useTenant } from "@/contexts/TenantContext";
 import { businessGraph, containsLegacyIdentity } from "@/lib/structured-data";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import catalog from "@/brands/catalog.json";
+import { canonicalPath, indexRobots, pageGraph } from "@/lib/search";
 interface SeoProps {
   title: string;
   description: string;
@@ -14,6 +15,8 @@ interface SeoProps {
   noindex?: boolean;
   geo?: { region?: string; placename?: string; position?: string };
   keywords?: string;
+  modified?: string;
+  pageType?: "WebPage" | "CollectionPage" | "AboutPage" | "ContactPage";
 }
 export const Seo = ({
   title,
@@ -25,6 +28,8 @@ export const Seo = ({
   noindex,
   geo,
   keywords,
+  modified,
+  pageType,
 }: SeoProps) => {
   const { tenant } = useTenant();
   const override = useSeoOverride(path);
@@ -33,7 +38,7 @@ export const Seo = ({
   const name = tenant?.name || "3D üretim";
   const domain = tenant?.custom_domain || tenant?.domain;
   const base = domain ? `https://${domain}` : window.location.origin;
-  const url = new URL(path, base).href;
+  const url = base + canonicalPath(path);
   const effectiveTitle = (override?.title || title).replace(
     /3D Yanında/g,
     name,
@@ -45,6 +50,7 @@ export const Seo = ({
   const noIndex = Boolean(
     noindex ||
       override?.noindex ||
+      import.meta.env.DEV ||
       !domain ||
       window.location.hostname !== domain,
   );
@@ -53,7 +59,7 @@ export const Seo = ({
   const identity = businessGraph({ name, origin: base, description: brand?.description,
     logo: verified.logo, email: verified.email, telephone: verified.telephone,
     sameAs: verified.sameAs, openingHoursSpecification: verified.openingHoursSpecification,
-    address: verified.address || {streetAddress:"Örnek Mahallesi",addressLocality:"Ataşehir",addressRegion:"İstanbul",addressCountry:"TR"},
+    address: verified.address,
     geo: verified.geo,
   });
   // Legacy schemas with source-company identity are excluded, not published under the new brand.
@@ -71,9 +77,11 @@ export const Seo = ({
       <meta
         name="robots"
         content={
-          noIndex ? "noindex,follow" : "index,follow,max-image-preview:large"
+          noIndex ? "noindex,follow" : indexRobots
         }
       />
+      {import.meta.env.VITE_GOOGLE_SITE_VERIFICATION && <meta name="google-site-verification" content={import.meta.env.VITE_GOOGLE_SITE_VERIFICATION} />}
+      {import.meta.env.VITE_BING_SITE_VERIFICATION && <meta name="msvalidate.01" content={import.meta.env.VITE_BING_SITE_VERIFICATION} />}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={desc} />
       <meta property="og:type" content={type} />
@@ -85,13 +93,17 @@ export const Seo = ({
         name="twitter:card"
         content={og ? "summary_large_image" : "summary"}
       />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={desc} />
+      {og && <meta name="twitter:image" content={new URL(og, base).href} />}
+      {modified && type === "article" && <meta property="article:modified_time" content={modified} />}
       {(override?.keywords || keywords) && (
         <meta name="keywords" content={override?.keywords || keywords} />
       )}
-      <meta name="geo.region" content={geo?.region || "TR-34"} />
-      <meta name="geo.placename" content={geo?.placename || "Örnek Mahallesi, Ataşehir, İstanbul"} />
+      {geo?.region && <meta name="geo.region" content={geo.region} />}
+      {geo?.placename && <meta name="geo.placename" content={geo.placename} />}
       {geo?.position && <meta name="geo.position" content={geo.position} />}
-      {[identity, ...schemas].map((item, i) => (
+      {[identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: og, modified, type: pageType }), ...schemas].map((item, i) => (
         <script key={i} type="application/ld+json">
           {JSON.stringify(item).replace(/</g, "\\u003c")}
         </script>

@@ -1,8 +1,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseEnv } from 'node:util';
 export const brands = ['3dyanimda', '3dsanayi', 'maketyanimda', 'parcayanimda'];
-const publicKeys = ['VITE_SUPABASE_URL','VITE_SUPABASE_PUBLISHABLE_KEY','VITE_SITE_THEME'];
-const configKeys = [...publicKeys,'SITE_DOMAIN','WORKER_NAME','WORKER_CUSTOM_DOMAIN','CLOUDFLARE_ACCOUNT_ID','CLOUDFLARE_API_TOKEN'];
+const publicKeys = ['VITE_SUPABASE_URL','VITE_SUPABASE_PUBLISHABLE_KEY','VITE_SITE_THEME','VITE_GA4_MEASUREMENT_ID','VITE_GOOGLE_SITE_VERIFICATION','VITE_BING_SITE_VERIFICATION'];
+const configKeys = [...publicKeys,'SITE_DOMAIN','WORKER_NAME','WORKER_CUSTOM_DOMAIN','CLOUDFLARE_ACCOUNT_ID','CLOUDFLARE_API_TOKEN','INDEXNOW_KEY'];
 export function loadBrandConfig(brand, environment=process.env, read=readFileSync, exists=existsSync) {
   if (!brands.includes(brand)) throw new Error('Select one of: '+brands.join(', '));
   const file=`deploy/${brand}/.env`;
@@ -23,6 +23,7 @@ export function loadBrandConfig(brand, environment=process.env, read=readFileSyn
   if(!key.startsWith('sb_publishable_') && !anon) throw new Error('Only a Supabase publishable or legacy anon key may enter the browser build.');
   if(!['true','false',''].includes(values.WORKER_CUSTOM_DOMAIN)) throw new Error('WORKER_CUSTOM_DOMAIN must be true or false.');
   return {brand,domain,name,customDomain:values.WORKER_CUSTOM_DOMAIN==='true',
+    indexNowKey:values.INDEXNOW_KEY,
     publicEnv:Object.fromEntries(publicKeys.map(k=>[k,values[k]])),
     credentials:Object.fromEntries(['CLOUDFLARE_ACCOUNT_ID','CLOUDFLARE_API_TOKEN'].filter(k=>values[k]).map(k=>[k,values[k]]))};
 }

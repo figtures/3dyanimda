@@ -29,7 +29,7 @@ for (const file of readdirSync("supabase/migrations")
     process.exit(1);
   }
 }
-console.log("All migrations applied to fresh PostgreSQL harness.");
+console.log("Baseline migrations applied to fresh PostgreSQL harness.");
 const corporateHero = (
   await db.query(
     "SELECT value FROM site_settings s JOIN tenants t ON t.id=s.tenant_id WHERE t.slug='3dsanayi' AND key='hero_content'",
@@ -277,4 +277,15 @@ console.log("PASS original service drafts remain quarantined");
 await db.exec(readFileSync("supabase/migrations/20261004200000_exclusive_service_artwork.sql", "utf8"));
 assert.equal((await rows("select * from landing_pages where image like '/brand/services/%' and status='draft'")).length,12);
 console.log("PASS exclusive service artwork stays draft");
+await db.exec(`UPDATE landing_pages SET sections='[{"title":"Owner edit","body":"Preserve this change"}]' WHERE tenant_id='${a}' AND path='/3d-baski'`);
+await db.exec(readFileSync("supabase/migrations/20261006150000_search_editorial.sql", "utf8"));
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages WHERE kind='guide' AND editorial<>'{}'::jsonb AND status='draft'"))[0].n,8);
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages WHERE kind='service' AND editorial<>'{}'::jsonb AND status='draft'"))[0].n,11);
+assert.equal((await rows(`SELECT sections->0->>'title' title FROM landing_pages WHERE tenant_id='${a}' AND path='/3d-baski'`))[0].title,'Owner edit');
+assert.equal((await rows("SELECT count(*)::int n FROM landing_pages WHERE status='published'"))[0].n,0);
+await rejected("UPDATE landing_pages SET editorial='[]'::jsonb WHERE path='/3d-baski'", "editorial must be a JSON object");
+assert.notEqual((await rows(`SELECT publication_payload_hash('{"editorial":{"answer":"A"}}') a,publication_payload_hash('{"editorial":{"answer":"B"}}') b`))[0].a,(await rows(`SELECT publication_payload_hash('{"editorial":{"answer":"B"}}') b`))[0].b);
+await context("anon", "3dyanimda.localhost");
+assert.equal((await rows("SELECT * FROM landing_pages")).length,0);
+console.log("PASS search editorial migration: 8 new draft guides, 11 service upgrades, owner edit preserved, review hash and quarantine intact");
 await db.close();

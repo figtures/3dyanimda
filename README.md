@@ -1,5 +1,7 @@
 # Dört marka · Ortak 3D üretim platformu
 
+6 Ekim 2026: Kaynak altyapı üzerine SEO, AI arama keşfi ve teklif dönüşümü geliştirmeleri eklendi. [Uygulama, doğrulama ve canlıya geçiş durumu](docs/SEARCH-GROWTH-2026-10.md). Kamuya açık domain yayını ve indeksleme bildirimi henüz yapılmadı; mevcut içerik yayın kontrolleri korunuyor.
+
 3dyanimda, 3dsanayi, maketyanimda ve parcayanimda için ortak React arayüzü, markaya özel içerik ve tek Supabase veritabanı. ATAVIER bu çalışmanın dışında.
 
 Kaynak: `figtures/3d-yaninda-website`, main snapshot `524bac7c98d6e791a406c312e6c03b2a40285b7d`. Özgün firmanın `.env` dosyası alınmadı; kaynak repoya veya veritabanına yazılmadı. Bu çalışma bağımsız bir Git kopyasıdır; upstream geçmişi içermez.

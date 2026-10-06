@@ -2,6 +2,15 @@
 export default {
   async fetch(request,env) {
     const url=new URL(request.url);
+    if (env.RELEASE_MODE === 'approved' && (url.hostname === env.SITE_DOMAIN || url.hostname === 'www.'+env.SITE_DOMAIN)) {
+      const aliases={'/hizmetler/3d-baski':'/3d-baski','/hizmetler/3d-tarama':'/3d-tarama','/hizmetler/3d-modelleme':'/3d-modelleme','/teklif':'/teklif-al'};
+      const clean=url.pathname.replace(/\/index\.html$/,'/').replace(/\/+$/,'') || '/';
+      const target=aliases[clean] || clean;
+      if(url.protocol!=='https:' || url.hostname!==env.SITE_DOMAIN || url.pathname!==target){
+        url.protocol='https:';url.hostname=env.SITE_DOMAIN;url.pathname=target;
+        return Response.redirect(url.href,308);
+      }
+    }
     const preview=env.RELEASE_MODE!=='approved' || url.hostname!==env.SITE_DOMAIN;
     if(url.pathname==='/robots.txt' && preview) return new Response('User-agent: *\nDisallow: /\n',{headers:{'Content-Type':'text/plain','X-Robots-Tag':'noindex'}});
     const privateRoute=/^\/(admin|studio)(\/|$)/.test(url.pathname);

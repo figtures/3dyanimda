@@ -15,12 +15,6 @@ export const orgSchema = () => {
     "@id": `${origin}/#organization`,
     name,
     url: origin,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Örnek Mahallesi",
-      addressRegion: "İstanbul",
-      addressCountry: "TR",
-    },
   };
 };
 export const istanbulSabSchema = (extras?: {
@@ -34,12 +28,6 @@ export const istanbulSabSchema = (extras?: {
     "@id": `${origin}/#localbusiness`,
     name,
     url: origin,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Örnek Mahallesi",
-      addressRegion: "İstanbul",
-      addressCountry: "TR",
-    },
     areaServed: { "@type": "Place", name: extras?.areaName || "İstanbul" },
   };
 };

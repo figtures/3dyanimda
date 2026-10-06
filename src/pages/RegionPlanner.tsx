@@ -100,9 +100,8 @@ export default function RegionPlanner() {
         <p className="brand-eyebrow">{b.name} / PROJE HAZIRLIĞI</p>
         <h1>{title}</h1>
         <p className="section-lead">
-          {b.focus} odağında projenizin ilk adımlarını hazırlayın. Atölyemiz
-          Örnek Mahallesi, Ataşehir’dedir; bu sayfa {route.name} içinde ayrı bir
-          şube bulunduğu anlamına gelmez.
+          {b.focus} odağında projenizin ilk adımlarını hazırlayın.
+          {route.name} için numune ve teslimat ihtiyacını teklif talebinize ekleyin.
         </p>
       </section>
       <div className="article-layout wrap">

@@ -19,4 +19,5 @@ export type LandingPage = {
   evidence: string;
   reviewed_at: string | null;
   updated_at?: string;
+  editorial?: import("./editorial").Editorial;
 };

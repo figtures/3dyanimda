@@ -9,7 +9,7 @@ import i18n from "@/lib/i18n";
 const fallbackItems = [
  { q: "3D dosyam olmadan başlayabilir miyim?", a: "Evet. Ölçülerini, örnek parçanı veya fikrini paylaş; modelleme ihtiyacını birlikte değerlendirelim." },
  { q: "Fiyat ve teslim süresi nasıl belirleniyor?", a: "Tasarım, malzeme, adet ve detay seviyesi incelendikten sonra proje özelinde teklif hazırlanır." },
- { q: "Hangi bölgelere hizmet veriyorsunuz?", a: "Örnek Mahallesi merkezimizden İstanbul'un tamamındaki projeleri değerlendiriyoruz. Teslimat planı birlikte netleştirilir." },
+ { q: "Hangi bölgelere hizmet veriyorsunuz?", a: "İstanbul'un tamamındaki projeleri değerlendiriyoruz. Numune ve teslimat planı projenin kapsamına göre birlikte netleştirilir." },
 ];
 
 const FaqPage = () => {

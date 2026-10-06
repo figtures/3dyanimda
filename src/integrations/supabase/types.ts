@@ -25,6 +25,7 @@ export type Database = {
           image: string;
           sections: Json;
           faq: Json;
+          editorial: Json;
           status: string;
           city: string;
           district: string;
@@ -46,6 +47,7 @@ export type Database = {
           image?: string;
           sections?: Json;
           faq?: Json;
+          editorial?: Json;
           status?: string;
           city?: string;
           district?: string;

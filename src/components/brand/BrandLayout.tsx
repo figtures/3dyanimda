@@ -13,8 +13,12 @@ import "@/brands/brand.css";
 import "@/brands/modern.css";
 import "@/themes/themes.css";
 import { getSiteTheme, themeNames } from "@/themes/config";
+import GrowthAnalytics from "./GrowthAnalytics";
+import { CookieConsent } from "@/components/site/CookieConsent";
 export function BrandLayout() {
   const brand = useBrand();
+  const address = brand.settings.verified_business_identity?.address;
+  const addressLabel = address ? [address.streetAddress, address.addressLocality, address.addressRegion].filter(Boolean).join(" · ") : "";
   const location = useLocation();
   useRedirects();
   const theme = getSiteTheme(brand.slug, location.search);
@@ -70,6 +74,7 @@ export function BrandLayout() {
         </div>
       )}
       <BrandNavigation />
+      <GrowthAnalytics />
       <main id="main">
         <Outlet />
       </main>
@@ -134,14 +139,14 @@ export function BrandLayout() {
           <span>
             © {new Date().getFullYear()} {brand.name}
           </span>
-          <span>
-            <MapPin size={14} /> Örnek Mahallesi · İstanbul
-          </span>
+          {addressLabel && <span><MapPin size={14} /> {addressLabel}</span>}
           <Link to={link("/gizlilik-politikasi")}>Gizlilik</Link>
           <Link to={link("/iletisim")}>İletişim</Link>
+          {import.meta.env.VITE_GA4_MEASUREMENT_ID && <button type="button" onClick={() => window.dispatchEvent(new Event("brand:privacy-settings"))}>Çerez tercihleri</button>}
         </div>
       </footer>
       <ScrollRestoration />
+      {!preview && import.meta.env.VITE_GA4_MEASUREMENT_ID && <CookieConsent />}
     </div>
   );
 }

@@ -51,8 +51,13 @@ export default function ContentPage() {
               : "Bilgi merkezi";
   const base = getTenantIdentity().origin;
   const related = pages
-    .filter((v) => v.path !== p.path && v.kind === p.kind)
-    .slice(0, 3);
+    .filter((v) => v.path !== p.path && (p.editorial?.relatedPaths?.includes(v.path) || v.kind === p.kind))
+    .sort((a, c) => Number(p.editorial?.relatedPaths?.includes(c.path)) - Number(p.editorial?.relatedPaths?.includes(a.path)))
+    .slice(0, 4);
+  const quoteParams = new URLSearchParams(query);
+  quoteParams.set("application", p.title);
+  if (p.kind === "service") quoteParams.set("service", p.path.slice(1));
+  const quoteUrl = "/teklif-al?" + quoteParams;
   return (
     <>
       <Seo
@@ -60,8 +65,10 @@ export default function ContentPage() {
         description={`${b.name}: ${p.summary}`}
         path={p.path}
         image={p.image || undefined}
+        type={p.kind === "guide" ? "article" : "website"}
+        modified={p.updated_at}
         keywords={[p.title, b.focus, p.city, p.district, p.neighborhood].filter(Boolean).join(", ")}
-        geo={{region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ") || "Örnek Mahallesi, Ataşehir, İstanbul"}}
+        geo={p.city ? {region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ")} : undefined}
         jsonLd={[
           {
             "@context": "https://schema.org",
@@ -128,12 +135,20 @@ export default function ContentPage() {
         </p>
         <h1>{p.title}</h1>
         <p className="section-lead">{p.summary}</p>
-        <Link className="brand-button" to={"/teklif-al" + query}>
+        <Link className="brand-button" to={quoteUrl}>
           Projeniz için teklif alın <ArrowUpRight size={18} />
         </Link>
       </section>
       <div className="article-layout wrap">
         <article className="content-article">
+          {p.editorial?.answer && (
+            <section className="answer-card" aria-labelledby="quick-answer">
+              <p className="brand-eyebrow">KISA YANIT</p>
+              <h2 id="quick-answer">{p.title}</h2>
+              <p>{p.editorial.answer}</p>
+              {!!p.editorial.takeaways?.length && <ul>{p.editorial.takeaways.map(item => <li key={item}>{item}</li>)}</ul>}
+            </section>
+          )}
           {p.image && (
             <figure>
               <img
@@ -157,6 +172,18 @@ export default function ContentPage() {
               <p>{s.body}</p>
             </section>
           ))}
+          {p.editorial?.comparison && (
+            <section id="karsilastirma">
+              <h2>{p.editorial.comparison.title}</h2>
+              <div className="comparison-scroll" tabIndex={0} role="region" aria-label={p.editorial.comparison.title}>
+                <table className="decision-table">
+                  <caption className="sr-only">{p.editorial.comparison.title}</caption>
+                  <thead><tr>{p.editorial.comparison.columns.map(c => <th key={c} scope="col">{c}</th>)}</tr></thead>
+                  <tbody>{p.editorial.comparison.rows.map((row,i) => <tr key={i}>{row.map((cell,j) => j === 0 ? <th key={j} scope="row">{cell}</th> : <td key={j}>{cell}</td>)}</tr>)}</tbody>
+                </table>
+              </div>
+            </section>
+          )}
           {p.logistics && (
             <section>
               <h2>Numune ve teslimat planı</h2>
@@ -164,7 +191,7 @@ export default function ContentPage() {
             </section>
           )}
           {!!p.faq.length && (
-            <section>
+            <section id="sorular">
               <h2>Sık sorulan sorular</h2>
               {p.faq.map((f) => (
                 <details key={f.q}>
@@ -174,6 +201,8 @@ export default function ContentPage() {
               ))}
             </section>
           )}
+          {!!p.editorial?.sources?.length && <section className="article-sources"><h2>Teknik başvuru kaynakları</h2><ul>{p.editorial.sources.map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
+          {p.updated_at && <p className="content-byline">{b.name} bilgi merkezi · Güncelleme: <time dateTime={p.updated_at}>{new Date(p.updated_at).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"})}</time></p>}
         </article>
         <aside className="article-aside">
           <p className="brand-eyebrow">PROJENİZE BAŞLAYALIM</p>
@@ -186,7 +215,7 @@ export default function ContentPage() {
             3D baskı, tarama ve modelleme taleplerinizi aynı Studio üzerinden
             paylaşabilirsiniz.
           </p>
-          <Link className="brand-button" to={"/teklif-al" + query}>
+          <Link className="brand-button" to={quoteUrl}>
             3D Studio’yu aç <ArrowUpRight size={16} />
           </Link>
           <hr />
@@ -196,8 +225,14 @@ export default function ContentPage() {
               {s.title}
             </a>
           ))}
+          {p.editorial?.comparison && <a href="#karsilastirma">Karşılaştırma</a>}
+          {!!p.faq.length && <a href="#sorular">Sorular ve yanıtlar</a>}
         </aside>
       </div>
+      <section className="wrap content-next-step">
+        <div><p className="brand-eyebrow">PROJENİZE UYGULAYALIM</p><h2>{p.kind === "guide" ? "Doğru üretim kararını birlikte verelim." : "Dosyanızı ve ihtiyacınızı paylaşın."}</h2><p>Bu sayfadaki konu teklif formuna aktarılır. Dosya, adet ve kullanım amacınızla değerlendirmeyi başlatın.</p></div>
+        <Link className="brand-button dark" to={quoteUrl}>Projemi değerlendirin</Link>
+      </section>
       <section className="wrap related-section">
         <p className="brand-eyebrow">KEŞFETMEYE DEVAM EDİN</p>
         <div className="editorial-grid">

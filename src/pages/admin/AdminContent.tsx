@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { editorialSchema } from "@/content/editorial";
 export default function AdminContent() {
   const { data: pages = [], isLoading, isError } = useContent(true);
   const { tenant } = useTenant();
@@ -18,11 +19,13 @@ export default function AdminContent() {
   const [draft, setDraft] = useState<LandingPage | null>(null);
   const [sections, setSections] = useState("[]");
   const [faq, setFaq] = useState("[]");
+  const [editorial, setEditorial] = useState("{}");
   const [busy, setBusy] = useState(false);
   const edit = (p: LandingPage) => {
     setDraft({ ...p });
     setSections(JSON.stringify(p.sections, null, 2));
     setFaq(JSON.stringify(p.faq, null, 2));
+    setEditorial(JSON.stringify(p.editorial || {}, null, 2));
   };
   const save = async (status: "draft" | "published") => {
     if (!draft || !tenant) return;
@@ -43,7 +46,7 @@ export default function AdminContent() {
         throw new Error(
           "Bölümler title/body, sorular q/a metinleri içeren diziler olmalı.",
         );
-      const p = { ...draft, sections: parsedSections, faq: parsedFaq, status };
+      const p = { ...draft, sections: parsedSections, faq: parsedFaq, editorial: editorialSchema.parse(JSON.parse(editorial)), status };
       const issues = publicationIssues(p, pages);
       if (status === "published" && issues.length)
         throw new Error(issues.join(" "));
@@ -223,6 +226,10 @@ export default function AdminContent() {
               </div>
             </>
           )}
+          <label className="block">Kısa yanıt, karşılaştırma ve ilişkili içerikler (JSON)
+            <Textarea className="min-h-60 font-mono" value={editorial} onChange={e => setEditorial(e.target.value)} />
+            <span className="text-sm text-muted-foreground">answer: kısa yanıt · takeaways: özet maddeleri · comparison: tablo · relatedPaths: ilgili sayfalar · sources: kaynaklar</span>
+          </label>
           <div className="flex gap-3">
             <Button
               disabled={busy}

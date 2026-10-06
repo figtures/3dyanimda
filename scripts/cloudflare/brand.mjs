@@ -20,10 +20,15 @@ if(action==='deploy') run('scripts/quality/release-preflight.mjs',[]);
 await mkdir(workspace,{recursive:true});
 await build({envDir:false,define:Object.fromEntries(Object.entries(publicEnv).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:assets,emptyOutDir:true}});
 let directory=assets;
+let previousManifest;
 if(action==='deploy') {
+ try {
+   const old=await fetch('https://'+config.domain+'/search-manifest.json',{redirect:'error',signal:AbortSignal.timeout(10000)});
+   if(old.ok){const data=await old.json();if(data.origin!=='https://'+config.domain)throw new Error('Previous manifest origin mismatch.');previousManifest=path.join(workspace,'previous-search-manifest.json');await writeFile(previousManifest,JSON.stringify(data));}
+ } catch { console.log('No previous public search manifest available; eligible URLs will be submitted as the initial inventory.'); }
  // Render approved public pages for SEO; do not deploy only the SPA shell.
  const output=path.join(workspace,'release');
- run('scripts/export-sites.mjs',[],{...process.env,...publicEnv,SITE_HOSTS:config.domain,SITE_BUILD_DIR:assets,SITE_OUTPUT_DIR:output});
+ run('scripts/export-sites.mjs',[],{...process.env,...publicEnv,INDEXNOW_KEY:config.indexNowKey||'',SITE_HOSTS:config.domain,SITE_BUILD_DIR:assets,SITE_OUTPUT_DIR:output});
  directory=path.join(output,config.domain);
  // Cloudflare Worker handles these routes; Pages-style catch-all redirects would shadow HTML.
  await rm(path.join(directory,'_redirects'),{force:true});
@@ -36,3 +41,6 @@ const wrangler={name:config.name,main:path.resolve('deploy/worker.mjs'),compatib
 await writeFile(configFile,JSON.stringify(wrangler,null,2)+'\n');
 if(action==='build') console.log(`Built ${brand}; config: .cloudflare/${brand}/wrangler.json (not deployed)`);
 else run('node_modules/wrangler/bin/wrangler.js',['deploy','--config',configFile,...(action==='check'?['--dry-run','--outdir',path.join(workspace,'dry-run')]:[])],{...process.env,...config.credentials,CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV:'false',WRANGLER_SEND_METRICS:'false'});
+if(action==='deploy' && config.indexNowKey) {
+ run('scripts/search/submit-indexnow.mjs',[directory,'--submit'],{...process.env,INDEXNOW_KEY:config.indexNowKey,...(previousManifest?{PREVIOUS_SEARCH_MANIFEST:previousManifest}:{}),INDEXNOW_RECEIPT_PATH:path.join(workspace,'indexnow-receipt.json')});
+}

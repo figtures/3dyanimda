@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, useRef, lazy, Suspense } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { z } from "zod";
@@ -6,6 +6,7 @@ import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
 import { supabase, demoMode } from "@/lib/supabase";
 import { Seo } from "@/components/site/Seo";
+import { trackGrowth } from "@/lib/growth-analytics";
 import type { StudioSpec } from "@/components/quote/QuoteStudio";
 const QuoteStudio = lazy(() => import("@/components/quote/QuoteStudio"));
 const schema = z.object({
@@ -34,10 +35,12 @@ export default function QuoteRequest() {
     [error, setError] = useState("");
   const application = new URLSearchParams(search).get("application") || "";
   const region = new URLSearchParams(search).get("region") || "";
+  const requestedService = ({"3d-baski":"3D Baskı","3d-tarama":"3D Tarama","3d-modelleme":"3D Modelleme"} as Record<string,string>)[new URLSearchParams(search).get("service") || ""];
+  const started = useRef(false);
   const [service, setService] = useState(() =>
     ["3D Baskı", "3D Tarama", "3D Modelleme"].includes(state?.studioService)
       ? state.studioService
-      : "3D Baskı",
+      : requestedService || "3D Baskı",
   );
   const [spec, setSpec] = useState<StudioSpec>({
     summary: "",
@@ -124,8 +127,10 @@ export default function QuoteRequest() {
           status: "new",
         });
       if (insertError) throw insertError;
+      trackGrowth(brand.slug, "generate_lead", {service});
       setDone(true);
     } catch {
+      trackGrowth(brand.slug, "quote_submit_error", {service});
       setError(
         "Talep kaydedilemedi. Lütfen tekrar deneyin; henüz bir onay oluşmadı.",
       );
@@ -185,7 +190,7 @@ export default function QuoteRequest() {
               />
             </Suspense>
             <div className="quote-grid">
-              <form className="brand-form" onSubmit={submit}>
+              <form className="brand-form" onSubmit={submit} onFocus={() => { if (!started.current && !demoMode) { trackGrowth(brand.slug,"quote_start",{service}); started.current = true; } }}>
                 <label>
                   Ad soyad *
                   <input

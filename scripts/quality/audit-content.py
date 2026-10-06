@@ -34,6 +34,8 @@ def audit(records):
  issues=[]; docs=[]; paragraphs=collections.defaultdict(list); refs=collections.defaultdict(list)
  for p in records:
   key=p['brand']+p['path'];chunks=[p.get('summary','')]+[s['body'] for s in p.get('sections',[])]+[f['a'] for f in p.get('faq',[])]+[p.get('local_context',''),p.get('logistics','')]
+  editorial=p.get('editorial') or {}
+  chunks += [editorial.get('answer','')] + editorial.get('takeaways',[]) + [' '.join(row) for row in (editorial.get('comparison') or {}).get('rows',[])]
   for chunk in chunks:
    if len(normalized(chunk).split())>=10:paragraphs[normalized(chunk)].append(key)
   docs.append((key,shingles(' '.join(chunks))))
@@ -70,7 +72,12 @@ def audit(records):
  return issues
 if __name__=='__main__':
  parser=argparse.ArgumentParser();parser.add_argument('--all',action='store_true');parser.add_argument('--input',default='src/content/pages.json');parser.add_argument('--output',default='docs/audits/global-originality.json');args=parser.parse_args()
- records=json.loads((ROOT/args.input).read_text());records=[p for p in records if args.all or p['status']=='published']
+ records=json.loads((ROOT/args.input).read_text())
+ if args.input=='src/content/pages.json':
+  merged={p['brand']+p['path']:p for p in records}
+  for p in json.loads((ROOT/'src/content/search-pages.json').read_text()):merged[p['brand']+p['path']]=p
+  records=list(merged.values())
+ records=[p for p in records if args.all or p['status']=='published']
  catalog=json.loads((ROOT/"src/brands/catalog.json").read_text())
  allocation=json.loads((ROOT/"src/themes/model-assignments.json").read_text())
  for b in catalog:records.append({"brand":b["slug"],"path":"/","image":"/brand/industrial/"+b["heroAsset"]+".webp","models":["/models/"+m+".glb" for m in allocation[b["slug"]]]})

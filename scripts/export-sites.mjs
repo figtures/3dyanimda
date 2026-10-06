@@ -5,6 +5,8 @@
 import "./quality/release-preflight.mjs";
 import { readFile, writeFile, mkdir, cp, stat, rm } from "node:fs/promises";
 import path from "node:path";
+import {createHash} from "node:crypto";
+import {discoveryFiles} from "./search/discovery.mjs";
 import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
@@ -197,31 +199,31 @@ try {
       const file = path.join(dest, url.slice(1), "index.html");
       await mkdir(path.dirname(file), { recursive: true });
       await writeFile(file, await page.content());
-      if (!utilityRoutes.has(url)) published.push({ url, lastmod });
+      if (!utilityRoutes.has(url)) {
+        const documentData=await page.evaluate(() => ({
+          title:document.title,
+          description:document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+          text:document.querySelector('main')?.textContent || '',
+          images:Array.from(document.querySelectorAll('main img')).map(i => i.src),
+          structuredData:Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(s => s.textContent),
+        }));
+        const {text,...data}=documentData;
+        published.push({path:url,lastmod,...data,hash:createHash('sha256').update(JSON.stringify(documentData)).digest('hex')});
+      }
     }
     await page.goto(base + "/__missing_public_page", {
       waitUntil: "networkidle",
     });
     await page.getByRole("heading", { name: "Sayfa bulunamadı." }).waitFor();
     await writeFile(path.join(dest, "404.html"), await page.content());
-    await writeFile(
-      path.join(dest, "sitemap.xml"),
-      '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
-        published
-          .map(
-            (p) =>
-              `<url><loc>${escape(base + p.url)}</loc>${p.lastmod ? `<lastmod>${escape(p.lastmod)}</lastmod>` : ""}</url>`,
-          )
-          .join("") +
-        "</urlset>",
-    );
-    await writeFile(
-      path.join(dest, "robots.txt"),
-      `User-agent: *\nDisallow: /admin\nDisallow: /studio\nSitemap: ${base}/sitemap.xml\n`,
-    );
+    const discovery=discoveryFiles({origin:base,brand:tenant.name,pages:published,indexNowKey:env.INDEXNOW_KEY});
+    for(const [file,body] of Object.entries(discovery)){
+      await mkdir(path.dirname(path.join(dest,file)),{recursive:true});
+      await writeFile(path.join(dest,file),body);
+    }
     await writeFile(
       path.join(dest, "_redirects"),
-      "/admin/* /app.html 200\n/studio/* /app.html 200\n/* /404.html 404\n",
+      "/hizmetler/3d-baski /3d-baski 301\n/hizmetler/3d-tarama /3d-tarama 301\n/hizmetler/3d-modelleme /3d-modelleme 301\n/teklif /teklif-al 301\n/admin/* /app.html 200\n/studio/* /app.html 200\n/* /404.html 404\n",
     );
     await writeFile(
       path.join(dest, "_headers"),

@@ -6,11 +6,12 @@ export default function BrandAbout() {
     <>
       <Seo
         title="Yaklaşımımız"
-        description={`${b.name}: Örnek Mahallesi'nden İstanbul'a, ihtiyaca göre 3D tasarım ve üretim.`}
+        description={`${b.name}: ${b.focus} için ihtiyaca göre 3D tasarım ve üretim yaklaşımımız.`}
         path="/hakkimizda"
+        pageType="AboutPage"
       />
       <section className="brand-inner">
-        <p className="brand-eyebrow">ÖRNEK MAHALLESİ · İSTANBUL</p>
+        <p className="brand-eyebrow">{b.name} · YAKLAŞIMIMIZ</p>
         <h1>
           Üretimin her adımında,
           <br />

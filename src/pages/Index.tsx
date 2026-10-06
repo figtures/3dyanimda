@@ -20,6 +20,12 @@ const serviceIntroductions: Record<string, string[]> = {
   "maketyanimda": ["Mimari kararlarınızı dokunulabilir ölçekte sunun.", "Özgün yüzey detaylarını maket çalışmasına aktarın.", "Kütle, cephe ve kurulum ilişkisini ölçeğe uyarlayın."],
   "parcayanimda": ["Eksik bileşeniniz için yeni üretim seçeneğini değerlendirin.", "Sağlam yüzeylerden yola çıkarak parça referansı oluşturun.", "Bağlantı noktanıza uyan yeni bir geometri tasarlayın."],
 };
+const searchTitles: Record<string,string> = {
+  '3dyanimda':'3D Baskı ve Ürün Prototipi | Tarama ve Modelleme',
+  '3dsanayi':'Endüstriyel 3D Baskı, Aparat ve Fikstür Üretimi',
+  'maketyanimda':'Mimari Maket ve Proje Sunumu için 3D Üretim',
+  'parcayanimda':'Özel Plastik Parça, Adaptör ve 3D Baskı',
+};
 const services = [
   [
     "3d-baski",
@@ -57,7 +63,7 @@ export default function Index() {
   return (
     <>
       <Seo
-        title="3D Baskı, 3D Tarama ve 3D Modelleme"
+        title={searchTitles[b.slug] || b.focus}
         description={b.description}
         image={img}
       />
@@ -208,6 +214,7 @@ export default function Index() {
         <div className="editorial-grid">
           {pages
             .filter((p) => p.kind === "guide")
+            .sort((a,c) => Number(!!c.editorial?.answer)-Number(!!a.editorial?.answer))
             .slice(0, 3)
             .map((p) => (
               <Link className="editorial-card" to={link(p.path)} key={p.path}>
