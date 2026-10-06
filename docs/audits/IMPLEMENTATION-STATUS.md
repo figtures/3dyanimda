@@ -9,10 +9,12 @@ guides are complemented by 124 individually rewritten legacy articles. Existing
 paths are preserved. A separate generated product-prototype hero replaces the
 shared 3dyanimda image; its provenance is recorded alongside the service artwork.
 
-The two October 6 migrations remain unapplied to the remote database. Local tests
-confirm that they preserve owner-edited records and keep all records in draft.
-The preview has 144 visible content pages; another 652 planning rows remain drafts.
-The last verified remote inventory is still 788 draft rows and zero published rows.
+The two October 6 migrations are now applied to the existing remote database.
+Live verification at 2026-10-06 17:30 UTC confirms all 144 authored routes match
+the committed content and both migration source fingerprints match. Each brand
+has 199 draft records, including 36 authored routes: 796 drafts in total, zero
+published rows. The other 652 planning records remain drafts. RLS remains enabled.
+Local regression tests also confirm that owner-edited rows are preserved.
 The source-bound human release review, asset registry approval and production
 hosting configuration are still required. No certificate has been fabricated.
 
