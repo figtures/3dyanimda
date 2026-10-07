@@ -1,0 +1,43 @@
+{
+  "project": "zdxjmhhjuomcpdtllnuq",
+  "operation": "Owner-confirmed service facts; existing text preserved, 16 FAQs appended",
+  "ownerConfirmedAt": "2026-10-07T20:48:02+03:00",
+  "brands": [
+    {
+      "slug": "3dsanayi",
+      "total": 199,
+      "confirmedLocalRecords": 164,
+      "updatedCoreRoutes": 4,
+      "published": 0
+    },
+    {
+      "slug": "3dyanimda",
+      "total": 199,
+      "confirmedLocalRecords": 164,
+      "updatedCoreRoutes": 4,
+      "published": 0
+    },
+    {
+      "slug": "maketyanimda",
+      "total": 199,
+      "confirmedLocalRecords": 164,
+      "updatedCoreRoutes": 4,
+      "published": 0
+    },
+    {
+      "slug": "parcayanimda",
+      "total": 199,
+      "confirmedLocalRecords": 164,
+      "updatedCoreRoutes": 4,
+      "published": 0
+    }
+  ],
+  "source": "Supabase execute_sql readback after committed transaction",
+  "tests": {
+    "typecheck": "pass",
+    "existingAuthoredContentOriginality": "pass; 148 records including 4 brand home asset records",
+    "allInventoryOriginality": "fail; 8 repeated paragraph groups; 52812 similar pairs"
+  },
+  "completedAllRequestedContent": false,
+  "publishedAllRequestedContent": false
+}

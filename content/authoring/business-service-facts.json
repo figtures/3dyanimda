@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-07T20:48:02+03:00",
+  "source": "Business owner statement in project conversation",
+  "statement": "Kargo kurye ve elden hepsi var. Kargo diğer şehirlere de var. 3D tarama hizmetimiz var ve evet yerinde de yapılıyor. Evet Örnek mahallesindeki atölyeye müşteriler gelmeden randevu almalı",
+  "brands": [
+    "3dyanimda",
+    "3dsanayi",
+    "maketyanimda",
+    "parcayanimda"
+  ],
+  "confirmed": {
+    "deliveryMethods": [
+      "cargo",
+      "courier",
+      "collection"
+    ],
+    "intercityCargo": true,
+    "scanningService": true,
+    "onsiteScanning": true,
+    "workshopVisits": "appointment_required",
+    "workshopNeighborhood": "Örnek Mahallesi, Ataşehir"
+  },
+  "notSpecified": [
+    "Carrier names",
+    "Delivery prices",
+    "Guaranteed turnaround",
+    "Onsite scanning travel radius",
+    "Scanner model and measurement accuracy"
+  ],
+  "scope": "Operational facts only; not a page originality, asset provenance or publication approval."
+}

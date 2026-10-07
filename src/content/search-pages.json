@@ -32,6 +32,10 @@
       {
         "q": "Modelim henüz tamamlanmadıysa nasıl başlayabilirim?",
         "a": "Mevcut eskizi, temel ölçüleri ve test etmek istediğiniz özelliği paylaşın. Önce modelleme kapsamını, ardından fiziksel numune ihtiyacını belirleyebiliriz."
+      },
+      {
+        "q": "Prototipimi nasıl teslim alabilirim?",
+        "a": "Baskı numuneleri kargo, kurye veya elden teslim edilebilir; İstanbul dışındaki adreslere de kargo gönderimi yapılır. Örnek Mahallesi, Ataşehir’deki atölyeden teslim alacaksanız gelmeden randevu oluşturun. Numunenin adedi, ambalaj ihtiyacı ve hedef adresi teklif talebinize ekleyin."
       }
     ],
     "status": "published",
@@ -87,7 +91,7 @@
         "/cozumler/urun-gelistirme-prototipleri"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "3dyanimda",
@@ -122,6 +126,10 @@
       {
         "q": "Tarama dosyasını sonradan modellemede kullanabilir miyim?",
         "a": "Referans olarak kullanılabilir; düzenlenebilir CAD geometrisine dönüşüm ayrı çalışma gerektirebilir. İstediğiniz düzenlemeleri teklif öncesinde tarif edin."
+      },
+      {
+        "q": "Prototipi taşımadan yerinde 3D tarama yaptırabilir miyim?",
+        "a": "Yerinde 3D tarama hizmeti veriyoruz. İncelenecek prototipin fotoğraflarını, yaklaşık boyutunu ve bulunduğu adresi paylaşın; erişim ve çekim koşullarını birlikte planlayalım. Atölyeye getirmeyi tercih ederseniz Örnek Mahallesi’ndeki çalışma noktası için önceden randevu alın."
       }
     ],
     "status": "published",
@@ -171,7 +179,7 @@
         "/cozumler/urun-gelistirme-prototipleri"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "3dyanimda",
@@ -206,6 +214,10 @@
       {
         "q": "Modelleme tesliminde hangi formatı istemeliyim?",
         "a": "Dosyayı üretim, görselleştirme veya sonraki CAD düzenlemesi için kullanacağınızı yazın. Teslim formatı ve düzenlenebilirlik beklentisi buna göre kapsamlandırılır."
+      },
+      {
+        "q": "Tasarım için fiziksel örneği nasıl ulaştırabilirim?",
+        "a": "Referans ürününüzü kargo veya kurye ile gönderebilir, randevu alarak elden getirebilirsiniz. Şehir dışındaki ekiplerle de kargo üzerinden numune alışverişi yapılabilir. Gönderiye ürün kodunu ve modelde değiştirilmesini istediğiniz özellikleri eklemek, örneği doğru çizim revizyonuyla eşleştirmeye yardımcı olur."
       }
     ],
     "status": "published",
@@ -255,7 +267,7 @@
         "/rehber/3d-baski-mi-cnc-mi"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "3dsanayi",
@@ -290,6 +302,10 @@
       {
         "q": "Birden fazla istasyon için aynı aparatı sipariş edebilir miyiz?",
         "a": "İstasyonlar arasında bağlantı veya çalışma koşulu farkı varsa bunları belirtin. Ortak dosyanın tüm istasyonlara uyduğu varsayılmadan referans ölçüler kontrol edilir."
+      },
+      {
+        "q": "Aparat numunesinin sevkiyatı nasıl yapılır?",
+        "a": "Aparat ve fikstür numunelerinde kurye, kargo ya da elden teslim seçeneklerini kullanabilirsiniz. Başka şehirdeki tesislere kargo gönderimi de yapılır. Teslim noktasını ve kabul edecek kişiyi talepte belirtin; elden teslim için Örnek Mahallesi’ndeki atölyeye gelmeden randevulaşın."
       }
     ],
     "status": "published",
@@ -345,7 +361,7 @@
         "/3d-modelleme"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "3dsanayi",
@@ -380,6 +396,10 @@
       {
         "q": "Tarama hassasiyetini önceden sabit bir değerle belirleyebilir miyiz?",
         "a": "Numune boyutu, yüzey durumu ve ölçüm amacı görülmeden tek bir değer vaat edilmez. Hedef toleransınızı belirtin; yöntem ve doğrulama kapsamı teknik incelemede netleşsin."
+      },
+      {
+        "q": "İş parçası tesisimizde taranabilir mi?",
+        "a": "Yerinde 3D tarama hizmetimiz bulunuyor. Tesis adresiyle birlikte parçanın ölçülerini, erişilebilen yüzeylerini ve çalışma alanının fotoğraflarını iletin. Saha çalışmasının kapsamı talebe göre belirlenir. Tarama ziyareti, makine kurulumu veya üretim hattında kabul testiyle aynı hizmet olarak değerlendirilmez."
       }
     ],
     "status": "published",
@@ -429,7 +449,7 @@
         "/cozumler/bakim-yardimcilari"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "3dsanayi",
@@ -464,6 +484,10 @@
       {
         "q": "Mevcut CAD dosyasındaki bir bağlantıyı değiştirebilir misiniz?",
         "a": "Dosya formatı, düzenlenebilirlik ve komşu parçalarla ilişki incelenir. İstenen bağlantı değişikliğini etkilediği montaj ölçüleriyle birlikte paylaşın."
+      },
+      {
+        "q": "Referans iş parçasını modelleme için gönderebilir miyiz?",
+        "a": "İş parçası kargo ya da kurye ile ulaştırılabilir; şehirler arası numune gönderimi de mümkündür. Parça kodu, çizim revizyonu ve korunacak referans yüzeylerini paket notunda belirtin. Numuneyi elden teslim etmek isteyen üretim ekipleri Ataşehir Örnek Mahallesi atölyesi için önceden randevu almalıdır."
       }
     ],
     "status": "published",
@@ -513,7 +537,7 @@
         "/3d-baski"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "maketyanimda",
@@ -548,6 +572,10 @@
       {
         "q": "Maketin bazı yapılarını sonradan değiştirmek mümkün mü?",
         "a": "Değişmesi beklenen kütleleri sökülebilir modüller olarak planlayabiliriz. Taban bağlantıları ve çevredeki peyzajın bu değişime uygun olması gerekir."
+      },
+      {
+        "q": "Maket parçalarını başka şehre gönderebilir misiniz?",
+        "a": "Diğer şehirlere kargo gönderimi yapılır; kurye ve elden teslim seçenekleri de bulunur. Maketin dış ölçüsü, narin detayları ve modüler parçaları taşıma hazırlığında değerlendirilmelidir. Örnek Mahallesi’ndeki atölyeden teslim almak için önceden randevu alın; kurulum ihtiyacını ayrıca belirtin."
       }
     ],
     "status": "published",
@@ -603,7 +631,7 @@
         "/3d-modelleme"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "maketyanimda",
@@ -638,6 +666,10 @@
       {
         "q": "Tarama çıktısını daha küçük ölçekte basmak yeterli midir?",
         "a": "Ölçek değiştikçe ince detaylar ve bağlantılar yeniden değerlendirilir. Salt küçültme yerine makette hangi öğelerin korunacağına karar verilmelidir."
+      },
+      {
+        "q": "Maket referansı bulunduğu yerde taranabilir mi?",
+        "a": "Yerinde 3D tarama sunuyoruz. Referans nesnenin fotoğrafı, yaklaşık boyutu ve bulunduğu mekâna erişim bilgisiyle talep oluşturabilirsiniz. Taranacak nesnenin tüm bir bina mı, bir cephe detayı mı yoksa küçük bir obje mi olduğunu açıkça belirtin; uygulanabilir kapsam ön değerlendirmede belirlenir."
       }
     ],
     "status": "published",
@@ -687,7 +719,7 @@
         "/3d-modelleme"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "maketyanimda",
@@ -722,6 +754,10 @@
       {
         "q": "Aydınlatmalı makette modelleme farklılaşır mı?",
         "a": "Işık kaynağı, kablo güzergâhı, erişim kapağı ve geçirgen bölgeler önceden planlanmalıdır. Elektrik sistemiyle fiziksel modelin sorumluluk sınırlarını ayrıca belirleyin."
+      },
+      {
+        "q": "Fiziksel maket veya obje üzerinden çalışmak için atölyeye gelebilir miyim?",
+        "a": "Ataşehir Örnek Mahallesi’ndeki atölyeyi randevu alarak ziyaret edebilirsiniz. Referans objeyi kargo ya da kurye ile ulaştırmak da mümkündür. Şehir dışından gelecek örneklerde pakete ölçek bilgisini, parça listesini ve dijital çizimlerin dosya adlarını ekleyin."
       }
     ],
     "status": "published",
@@ -771,7 +807,7 @@
         "/3d-baski"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "parcayanimda",
@@ -806,6 +842,10 @@
       {
         "q": "Bir parçanın rengini birebir eşleştirebilir misiniz?",
         "a": "Renk ve yüzey beklentisi referansla değerlendirilir; fotoğraf üzerinden birebir eşleşme varsayılmaz. İşlevsel malzeme ihtiyacıyla görünüş tercihi birlikte konuşulmalıdır."
+      },
+      {
+        "q": "Üretilen özel parçayı nasıl teslim alırım?",
+        "a": "Parçanız kargo veya kurye ile gönderilebilir; diğer şehirler için de kargo seçeneği vardır. Elden teslim tercihinde Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu almalısınız. Birden fazla parçanın sipariş edildiği işlerde parça kodlarını ve adetleri teslim listesiyle karşılaştırın."
       }
     ],
     "status": "published",
@@ -861,7 +901,7 @@
         "/3d-modelleme"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "parcayanimda",
@@ -896,6 +936,10 @@
       {
         "q": "Tek bir küçük bağlantı bölgesini incelemek mümkün mü?",
         "a": "İlgili bölgenin boyutu ve erişilebilirliği değerlendirilir. Bağlantının nasıl çalıştığını gösteren çevre geometri ve karşı parça bilgisi de istenir."
+      },
+      {
+        "q": "Sökülemeyen parçalar için yerinde tarama yapıyor musunuz?",
+        "a": "Yerinde 3D tarama hizmeti veriyoruz. Parçanın montaj üzerindeki durumunu, görünmeyen yüzeylerini ve bulunduğu adresi gösteren bilgilerle başvurun. Sökülmeyen bir parçanın kapalı yüzeylerinin de mutlaka ölçülebileceği varsayılmamalıdır; erişim ve istenen çıktı çalışma öncesinde değerlendirilir."
       }
     ],
     "status": "published",
@@ -945,7 +989,7 @@
         "/cozumler/ornekten-parca-modelleme"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "parcayanimda",
@@ -980,6 +1024,10 @@
       {
         "q": "İlk numune yerine tam oturmazsa nasıl ilerlenir?",
         "a": "Temas eden ve boşluk kalan bölgeleri aynı revizyon üzerinde işaretleyin. Model değişikliği ve yeni numune kapsamı bu somut geri bildirim üzerinden belirlenir."
+      },
+      {
+        "q": "Kırık numuneyi şehir dışından gönderebilir miyim?",
+        "a": "Evet, kargo ile numune ulaştırabilirsiniz. Kopan küçük parçaları ayrı koruyarak aynı numune koduyla paketleyin; montaj yerinin fotoğraflarını dijital olarak paylaşın. Kurye ve randevulu elden teslim de mümkündür. Örneğin size geri gönderilmesini istiyorsanız bunu talep notuna ekleyin."
       }
     ],
     "status": "published",
@@ -1029,7 +1077,7 @@
         "/3d-baski"
       ]
     },
-    "updated_at": "2026-10-06T15:00:00Z"
+    "updated_at": "2026-10-07"
   },
   {
     "brand": "3dyanimda",

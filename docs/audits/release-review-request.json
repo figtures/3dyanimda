@@ -1,6 +1,6 @@
 {
   "policy": "global-originality-v1",
-  "sourceHash": "952dda224626b230544be9adf7c3e7ab9e54b5aff4a4ef3ded6ee74bd70c25ee",
+  "sourceHash": "stale_after_2026_10_07_service_fact_update",
   "result": "pending_human_review",
   "sourceFileCount": 333,
   "automatedEvidence": {
@@ -53,7 +53,8 @@
   "notes": [
     "This request is evidence for review, not a publication certificate.",
     "Automatic checks do not establish web-wide originality, commercial accuracy or production performance.",
-    "Production CMS/database records and asset registry still require server-side review."
+    "Production CMS/database records and asset registry still require server-side review.",
+    "2026-10-07: 656 local records now carry owner-confirmed delivery/scanning/appointment facts; 16 FAQs added. The previous source hash and rendered review require refresh. Geographic expansion remains incomplete; all-route audit fails."
   ],
   "reviewer": null,
   "reviewedAt": null

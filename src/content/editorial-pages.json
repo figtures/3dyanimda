@@ -5784,6 +5784,10 @@
       {
         "q": "İlk prototip onayını kim vermeli?",
         "a": "Form, montaj ve görünüş kararları için yetkili proje kişisini belirleyin. Farklı ekiplerin aynı revizyonu değerlendirmesi, tekrar üretim kapsamının netleşmesini sağlar."
+      },
+      {
+        "q": "Atölye ziyareti ve İstanbul dışı gönderim nasıl düzenleniyor?",
+        "a": "Örnek Mahallesi, Ataşehir’deki atölyeye ziyaret öncesinde randevu alınmalıdır. Ürün tesliminde elden teslim, kurye ve kargo seçenekleri bulunur; diğer şehirlere de kargo gönderilir. Ürün yerinden taşınamıyorsa yerinde 3D tarama talebinizi adres ve ürün fotoğraflarıyla iletebilirsiniz."
       }
     ],
     "status": "published",
@@ -5793,9 +5797,9 @@
     "service": "",
     "local_context": "İstanbul’daki ürün ekiplerinin dijital ön değerlendirmeye başlaması için atölyeye yolculuk yapması gerekmez. Mevcut işletme beyanında çalışma noktası Ataşehir, Örnek Mahallesi olarak kayıtlıdır. Gönderilecek örneğin hangi karar için inceleneceğini ve ürün ekibinin güncel revizyonunu paylaşın; şehir içindeki toplantınızın tarihi numunenin üretim ve taşıma planından ayrı değerlendirilir.",
     "logistics": "Fiziksel prototip gönderiminde kutu içindeki parçaları revizyon ve adet listesiyle eşleştirin. Hassas dış yüzeyleri ayrı koruyun. Teslim alacak kişinin bilgisi ile gerekli gün talep görüşmesinde belirlenir; İstanbul içi ulaşım için süre ayrıca teyit edilir.",
-    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.",
-    "reviewed_at": "2026-10-02T00:00:00Z",
-    "updated_at": "2026-10-06",
+    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.\nİşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+    "reviewed_at": "2026-10-07T20:48:02+03:00",
+    "updated_at": "2026-10-07",
     "editorial": {
       "answer": "Yeni bir ürün fikrinde form denemesi için eskiz ve dış ölçüler, montaj kontrolü için bileşen bilgileri gerekir.",
       "takeaways": [
@@ -5835,6 +5839,10 @@
       {
         "q": "Üretim denemesi ne zaman planlanır?",
         "a": "İş istasyonu, kontrol sorumlusu ve uygun iş parçası hazır olduğunda deneme aralığı belirlenir. Numunenin teslim edilmesi üretim kabulünün tamamlandığı anlamına gelmez."
+      },
+      {
+        "q": "Saha taramasıyla numune teslimini birlikte planlayabilir miyiz?",
+        "a": "Talebinizde iki ihtiyacı ayrı belirterek planlayabilirsiniz: yerinde tarama hizmeti mevcuttur; üretilen numuneler kargo, kurye veya elden teslim edilebilir. İstanbul dışındaki tesislere kargo seçeneği de vardır. Atölyede görüşme ve elden teslim için önceden randevu gereklidir."
       }
     ],
     "status": "published",
@@ -5844,9 +5852,9 @@
     "service": "",
     "local_context": "İstanbul genelindeki üretim taleplerinde öncelikle istasyon verisi ile iş parçası referansını birlikte inceleriz. Çalışma yeri için eldeki işletme beyanı Ataşehir, Örnek Mahallesi’ni belirtir; ilçe listesi ayrı tesisler bulunduğunu ifade etmez. Fabrikadan fiziksel numune gönderilecekse bunun üretimi aksatıp aksatmayacağı ve aynı örneğin kabul denemesinde gerekli olup olmadığı talep aşamasında konuşulur.",
     "logistics": "İş parçasını gönderirken aparat talep kodunu ve numuneye zarar verilmemesi gereken yüzeyleri ambalaj notuna ekleyin. Gelen referansın geri dönüş ihtiyacı ayrıca kaydedilir. Sevkiyat, kurulum ve üretim denemesi farklı adımlar olarak planlanır; ilçe seçimi teslim süresi taahhüdü oluşturmaz.",
-    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.",
-    "reviewed_at": "2026-10-02T00:00:00Z",
-    "updated_at": "2026-10-06",
+    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.\nİşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+    "reviewed_at": "2026-10-07T20:48:02+03:00",
+    "updated_at": "2026-10-07",
     "editorial": {
       "answer": "Atölye veya fabrikanın bulunduğu ilçe tek başına aparat kapsamını açıklamaz.",
       "takeaways": [
@@ -5886,6 +5894,10 @@
       {
         "q": "Yerinde kurulum gerekiyorsa ne paylaşmalıyım?",
         "a": "Kaidenin yerini, mekâna giriş ölçülerini ve kurulum için uygun zaman aralığını talebe ekleyin. Kurulum desteğinin teklif kapsamı ayrıca görüşülür."
+      },
+      {
+        "q": "Maket tesliminde hangi ulaşım seçenekleri bulunuyor?",
+        "a": "Elden teslim, kurye ve kargo seçenekleri sunulur; İstanbul dışına da kargo gönderilebilir. Taşıma biçimi değerlendirilirken kaide ölçüsü ve ayrılabilir model parçaları paylaşılmalıdır. Randevulu atölye tesliminin yanında, fiziksel referanslar için yerinde 3D tarama da talep edilebilir."
       }
     ],
     "status": "published",
@@ -5895,9 +5907,9 @@
     "service": "",
     "local_context": "İstanbul’daki mimarlık ve gayrimenkul sunumlarında maketin kullanılacağı mekân, ölçek seçiminin bir parçasıdır. Proje çalışma noktası mevcut beyana göre Ataşehir, Örnek Mahallesi’ndedir. Avrupa ve Anadolu yakasındaki teslimler için modelin tek parça mı modüler mi taşınacağı, giriş koşulları ve kurulum zamanı talep görüşmesinde değerlendirilir; sunum günüyle taşıma gününü aynı kabul etmeyin.",
     "logistics": "Toplam taban ölçüsü, ambalaj hacmi ve çıkarılabilir parçalar taşıma planına yazılır. Teslim yerindeki kapı ve asansör bilgisi büyük maketlerde gereklidir. Kaideye yerleştirme, yerinde kurulum ve taşıma kutusu ayrı kapsam olabilir; kesin gün ve yöntem teklif değerlendirmesinden sonra belirlenir.",
-    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.",
-    "reviewed_at": "2026-10-02T00:00:00Z",
-    "updated_at": "2026-10-06",
+    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.\nİşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+    "reviewed_at": "2026-10-07T20:48:02+03:00",
+    "updated_at": "2026-10-07",
     "editorial": {
       "answer": "Bir ofis masası, satış alanı veya etkinlik mekânı farklı taban ve izleme koşulları yaratır.",
       "takeaways": [
@@ -5937,6 +5949,10 @@
       {
         "q": "Numune geri gönderilecekse bunu belirtmeli miyim?",
         "a": "Evet. Fiziksel örneğin korunması ve iade ihtiyacı baştan kayda alınmalıdır; yeni üretilen numuneyle eski referans birbirine karıştırılmaz."
+      },
+      {
+        "q": "Numuneyi getirmek zorunda mıyım; atölye randevusu gerekiyor mu?",
+        "a": "Numune için kargo ve kurye kullanabilir veya önceden randevu alarak Örnek Mahallesi’ndeki atölyeye gelebilirsiniz. Şehirler arası kargo seçeneği de bulunur. Parça bulunduğu yerde incelenecekse yerinde 3D tarama talebi oluşturun; erişim koşulları fotoğraflarla değerlendirilir."
       }
     ],
     "status": "published",
@@ -5946,9 +5962,9 @@
     "service": "",
     "local_context": "İstanbul’dan gelen özel parça taleplerinde ilk ayrım, elde sağlam örnek mi kırık numune mi yoksa yalnızca montaj yuvası mı bulunduğudur. Kayıtlı çalışma yeri beyanı Ataşehir, Örnek Mahallesi’dir. İlçenizi seçmek taşıma planına yardımcı olur; her ilçede fiziksel başvuru noktası olduğu anlamına gelmez. Ön fotoğraflar, parçayı cihazdan sökmeden hangi ölçülerin gerekli olduğunu konuşmayı sağlar.",
     "logistics": "Küçük tırnak ve kopmuş parçaları ana numuneyle aynı kimlik altında ayrı koruyun. Montaj yerine ait fotoğrafı talebe ekleyin; örneğin geri gönderilmesi gerekiyorsa bunu belirtin. Yeni numunenin teslimi ve cihaz üzerindeki uyum kontrolü ayrı planlanır; otomatik aynı gün üretim veya kurye taahhüdü verilmez.",
-    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.",
-    "reviewed_at": "2026-10-02T00:00:00Z",
-    "updated_at": "2026-10-06",
+    "evidence": "İşletme sahibinin çalışma yeri beyanı: Örnek Mahallesi, Ataşehir / İstanbul. 2 Ekim 2026 proje görüşmesi.\nİşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+    "reviewed_at": "2026-10-07T20:48:02+03:00",
+    "updated_at": "2026-10-07",
     "editorial": {
       "answer": "Kırık örneğin konumu, sağlam yüzeyleri ve ayrılan küçük parçaları fotoğrafta gösterin.",
       "takeaways": [

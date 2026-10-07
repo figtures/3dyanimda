@@ -1,0 +1,3920 @@
+{
+  "status": "proposal_not_applied",
+  "reason": "652 geographic route shells share the same brand paragraphs; owner-confirmed operational facts do not establish unique local page value.",
+  "requiresOwnerDecision": true,
+  "retainedAuthoredRoutes": 144,
+  "routes": [
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/adalar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/avcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bagcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/basaksehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/besiktas",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beykoz",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beyoglu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/catalca",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenyurt",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/fatih",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gungoren",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kadikoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kagithane",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kartal",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/maltepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/pendik",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sariyer",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/silivri",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultangazi",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sile",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sile/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sile/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sile/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sisli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/tuzla",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/umraniye",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/uskudar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/adalar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/adalar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/adalar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/arnavutkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/avcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/avcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bagcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bahcelievler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bakirkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/basaksehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bayrampasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/besiktas",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/besiktas/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beykoz",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beykoz/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beylikduzu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beyoglu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/buyukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/catalca",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/catalca/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/catalca/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/cekmekoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenyurt",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/eyupsultan",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/fatih",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/fatih/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/fatih/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gaziosmanpasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gungoren",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gungoren/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kadikoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kagithane",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kagithane/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kartal",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kartal/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kartal/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kucukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/maltepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/maltepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/pendik",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/pendik/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/pendik/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sancaktepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sariyer",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sariyer/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/silivri",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/silivri/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/silivri/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultanbeyli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultangazi",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sile",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sile/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sile/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sile/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sisli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sisli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sisli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/tuzla",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/tuzla/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/umraniye",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/umraniye/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/uskudar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/uskudar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/zeytinburnu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/ornek",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "3dsanayi",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/adalar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/avcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bagcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/basaksehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/besiktas",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beykoz",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beyoglu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/catalca",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenyurt",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/fatih",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gungoren",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kadikoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kagithane",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kartal",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/maltepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/pendik",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sariyer",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/silivri",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultangazi",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sile",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sile/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sile/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sile/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sisli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/tuzla",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/umraniye",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/uskudar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "maketyanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/adalar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/avcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bagcilar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bahcelievler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bakirkoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/basaksehir",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bayrampasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/besiktas",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beykoz",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beylikduzu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beyoglu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/catalca",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/cekmekoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenler",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenyurt",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/eyupsultan",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/fatih",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gungoren",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kadikoy",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kagithane",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kartal",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/maltepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/pendik",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sancaktepe",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sariyer",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/silivri",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultangazi",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sile",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sile/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sile/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sile/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sisli",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/tuzla",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/umraniye",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/uskudar",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek",
+      "to": "/bolgeler/istanbul",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "to": "/3d-baski",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "to": "/3d-tarama",
+      "proposedHttpStatus": 301
+    },
+    {
+      "brand": "parcayanimda",
+      "from": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "to": "/3d-modelleme",
+      "proposedHttpStatus": 301
+    }
+  ]
+}
