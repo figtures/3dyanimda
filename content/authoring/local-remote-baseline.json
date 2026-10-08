@@ -1,0 +1,3918 @@
+{
+  "recordedAt": "2026-10-08T14:28:01.064Z",
+  "project": "zdxjmhhjuomcpdtllnuq",
+  "records": [
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "expected_hash": "c6968147c0ea1f5d5a71b2092795361e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "expected_hash": "77ec17bfc199d67e9b69d9a7927a619a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "expected_hash": "855018a56cceae03074e92be66ce9ed3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/adalar",
+      "expected_hash": "f2a3d480d91a8fa64a4a898446ae7dc6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "expected_hash": "8377cf21caf884ab283821081fc866a1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "expected_hash": "cd6d27d013f6f595ef7ec235d3e33ab0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "expected_hash": "b26b8888030c379417dd39c76ffeb759",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "expected_hash": "f6e56cc83b4c60f4bd209c5a4e7436cc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "expected_hash": "f5eb40644973df1b118aad9069d67b9d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "expected_hash": "feb9a9f97fd47af7dd3cf6244d757400",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "expected_hash": "269894bdd6b104ccde8f4c238661ebe7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir",
+      "expected_hash": "c9728bda99dab2e2e579ec1cd131363b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "expected_hash": "e17ecd567d8aa7c162279739618d8a87",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "expected_hash": "4d14fcc12580155f6e0b757a79408109",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "expected_hash": "479b81de5d16834d4fc5a50622a6f925",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "expected_hash": "dcf8ad60ea196e4f054755a00c78f7fd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "expected_hash": "3e72a6cddc50ef974483663cf0561baf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "expected_hash": "7e31ba1886495463f23cca76b8f52a42",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "expected_hash": "c62d40a90af9177f05abbdfad5e580e4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/avcilar",
+      "expected_hash": "8361abdeb9eb795ba2f7f99f9a00edd2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "expected_hash": "0af620eded0b2c12520acd0e15c33023",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "expected_hash": "82fb7f7f53846dc057361c2126f7c009",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "expected_hash": "d3c62821d53329336bab8c5e2d6ba38e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "expected_hash": "0fd7d9d23c97d5dbcaf9c7069426c843",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "expected_hash": "062174413a9eb1e2d32aee60ac4b2b8b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "expected_hash": "be9f35ffa0ebdfdcf0fe262fdbe14cf8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "expected_hash": "ff5c14caab5d11d1740c6b2155282ae5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "expected_hash": "d3bf6f1ef22b46d665127eab4f47cb27",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "expected_hash": "10a1f07abaf3b8d5948ab21f71e67529",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "expected_hash": "edc2d5e2f545f8d8bf8ebe02ebd36eb2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "expected_hash": "5bb77355c22d7ad6c8644baefac4d077",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "expected_hash": "42568f171eaa3b1ef6afbd3d9e244936",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "expected_hash": "7cf76e21fc00d8c5c1f25a8b12f5528c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "expected_hash": "76755dd0096fd031e9f016e3956d4a46",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "expected_hash": "f5070b7bb60b97119bc8cf22c1f6f59d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "expected_hash": "ae11e9f105869696170fc2335ecce795",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "expected_hash": "b97ff4b03c175a8192bd853e898bf86a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "expected_hash": "2e5c81296f1d373f976d4a1809b19d8d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "expected_hash": "3f3e11879a65fc65f13a734403b8cfc8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "expected_hash": "bfa6e961bb3ea3c946bedb2d6eb3f736",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "expected_hash": "87b0af76fda1d7226d781a6a84e11c69",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "expected_hash": "2f5c3d17903834eaffb462e10470c336",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "expected_hash": "8118fd7c5dcecc39abafd1ef40849c7f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/besiktas",
+      "expected_hash": "0b0463306e68caf929412e9b3f92ba08",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "expected_hash": "e639d86fd2d94640d34f984f28d7ede5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "expected_hash": "9e76ca2f04c539d429b0a43fa71d0a37",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "expected_hash": "ec3759930d7f9a667c19e4850cad0700",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beykoz",
+      "expected_hash": "022cbd6816011af9d7a390ccc6fe1c06",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "expected_hash": "04ba8b2e48552cae01106ed8bd2c65fe",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "expected_hash": "9e7fa1c061888d975337572fffe6b184",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "expected_hash": "b248e15d360e2cfdbbef20a56d34c050",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "expected_hash": "5978358abb9c7e3c263df5fd7ecbb1bc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "expected_hash": "77648a1aa64dc7632b7bf70b2684819a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "expected_hash": "78239b8f4cad94465d5e134771140cd8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "expected_hash": "9b61ead9568ea690b2c212bb7f73de0a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "expected_hash": "4ecbc7e86d91376d8d968831d7aec7be",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "expected_hash": "7c3de5b9eb8bf08c6f6e3d681540376a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "expected_hash": "bab78357f0448636d8a118d6d05f9bde",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "expected_hash": "5a6e5d6ee5795693b34e45c651a04239",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "expected_hash": "8b4f179e9757a31b4e2e9b33414ff50f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "expected_hash": "1a10f6900283e8ca2e056a815e13c042",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "expected_hash": "0ce03f4eb1ef72eacb1cfff22752cb85",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "expected_hash": "9b9b54cbe63574c7cf08fc2c09b06275",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/catalca",
+      "expected_hash": "6fcb9cf17bbc5e5c8b2492348a18c46c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "expected_hash": "4d4eeae562cca9d0b6fa80abbcff2742",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "expected_hash": "165aceef93e122893683c18a5d0842ee",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "expected_hash": "c2e17a938cdc65f401c7c07af0813d28",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "expected_hash": "d0659bc7a3e9e107117408105b385b4b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "expected_hash": "83f42c0c08d45dc72aae5af2bec8f242",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "expected_hash": "e51d68f34487dbafb9a20e59ae2152a9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "expected_hash": "1ca8ff5e6cde599147803e8a32814ef0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenler",
+      "expected_hash": "5f63f18aa58694834f461c6d09d21289",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "expected_hash": "12e7a27ff75e911026b9b49144dda213",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "expected_hash": "3de6db07d705120e682f2c479283ead6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "expected_hash": "5d71a58a5e7f589a27fd8fb7e9ae52f3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "expected_hash": "a7e02464cf193d809fae655ddb786f4b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "expected_hash": "a55522e6bf3e3772772958a0f9a6ed29",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "expected_hash": "b6f78a98d7dbe8e1d7c07a649c17d9f4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "expected_hash": "f46e86ac5e16f0884136175bdf883cca",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "expected_hash": "e4ad9e3f5cd367a5c29ffa919f123dd9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "expected_hash": "9092ccce661eca671355674f85a8be90",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "expected_hash": "d6eef2e78f6d85689a74b721d0ce8001",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "expected_hash": "30550e47fba2bb3fb8e59c047807c4df",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/fatih",
+      "expected_hash": "a28fb89da1486981236531f5ae91045a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "expected_hash": "8d9ab4573bf6591a80756d5d3a65a5ba",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "expected_hash": "2648856e01682b5d98ab916ddd4eb099",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "expected_hash": "06c7cb2dd3d1b346786c25858eb4c583",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "expected_hash": "20e62e1cd12b4543869dc7257477d48a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "expected_hash": "e61dc28565cecc20805e430e6560d0f5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "expected_hash": "d957a89cd57c23a5ebd8d6974c6997d8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "expected_hash": "66c4d30494947f97178804484fb63932",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gungoren",
+      "expected_hash": "a6cf4c7c89bde124192ec26dbd5dbc6e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "expected_hash": "05c747fbd0aa55b6c888bdb5df815f5c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "expected_hash": "f137997fadb9a73af522fe6dc52f644f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "expected_hash": "9f51b9bec07e18d345c83246aa0e4791",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "expected_hash": "fb0e6c35b948728f44324a1a652069e5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "expected_hash": "28a1ea014e8bae393e21af8b3ae0b061",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "expected_hash": "5a820d9077e3e99817238462ad59332f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "expected_hash": "f23b4e818e0c0b80297f815fe6b5f95d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kagithane",
+      "expected_hash": "5b37345aa06c40d61730375c23e55de0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "expected_hash": "5db5d05e912ce637dbc0cbbb354b32cb",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "expected_hash": "869fe4578a6d6a2ece7f3602f4160a81",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "expected_hash": "99b893042551fa5eb904e033ccc2d5b2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kartal",
+      "expected_hash": "19a0542376a0b29c69b922157524d367",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "expected_hash": "bdf003f387ee832df569c042a59c34ab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "expected_hash": "843b6e6c1bf84d59c6989bfad4aa5d18",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "expected_hash": "0ee317be75a8397c4133b912d4b0dbbd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "expected_hash": "da9316c89c7ea8c0ac9cca6fbbcf1daf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "expected_hash": "a7f55b203e284e8252d6c8d660bceb7f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "expected_hash": "2688e6693c6b246fa4d8681c8d91fa9e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "expected_hash": "b01fee5673465ce3e8699c59b51444a6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/maltepe",
+      "expected_hash": "889a32f765db9c0c8149ac5a91c68e69",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "expected_hash": "fe9b2829086ac4538ce6186c88c75b6a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "expected_hash": "9d61fcbb5dc9d5a401b7d2406b2c5912",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "expected_hash": "7f4b10f8c022212baa7fce4d528afd98",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/pendik",
+      "expected_hash": "7c80df3ba54836de4a56a85ea934e3a3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "expected_hash": "d2c9fb44f42e171e996397434b21dd75",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "expected_hash": "97a58f9c24509c94c4f22e578d0f4afa",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "expected_hash": "cfcc3f91d999d48e77637829b511d85e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "expected_hash": "c6d71803f0e7140bfe499da7939bc46b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "expected_hash": "7fa9e60ba09628dc1ba832b62311408f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "expected_hash": "e0493448bb77041517eb87d16ffa3434",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "expected_hash": "eeedad0a5bea42f6f43cee1847cebfe8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sariyer",
+      "expected_hash": "bcefe346b5ac12c81599c3164978a93f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "expected_hash": "800b69e6780cb80613ee3b0c5fbd0b82",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "expected_hash": "3246229225d8ed5ad0703ed654051694",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "expected_hash": "aa43776d392bba2f04fd350785cedea4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sile",
+      "expected_hash": "77c1e3fc3cb46d105fab5d9dd2dc7fa9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "expected_hash": "f7a408f1d8d8a268db7eded816c8e398",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "expected_hash": "14d187c0a59d2bb78f7b4e75bf4d0b6e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "expected_hash": "806cebfbd745c9d611a19034504b1e4f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/silivri",
+      "expected_hash": "8b9d6f73a2998bc70d633c6c31312c07",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "expected_hash": "eeced3b6260a37e9ffc8f07203d5cfa0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "expected_hash": "62d1577310e1776781b2164c5e82288f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "expected_hash": "21cb9a0fda3062ed3c0f5048304cb233",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sisli",
+      "expected_hash": "784811d85424ffc22b1ebf7a9d2525bd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "expected_hash": "55e6917bdfa7b56c68e526d46811a911",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "expected_hash": "8e5c9bdd79e98892e32132e0a8f39745",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "expected_hash": "bcc3679a23080a353339ba92043ad9ec",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "expected_hash": "b8e78855db051b31be0f51069e295fab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "expected_hash": "4ae1d4c38aae2539866d3b5026a6e4b9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "expected_hash": "11e509ff862b96739901d52648fe3ef0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "expected_hash": "4778f3ab6c66b30c211ab0f86646b931",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "expected_hash": "e84201c4ce5e41fcb54b9b4e9b29f33d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "expected_hash": "9e1d90abcede8182a473cf705dfa76e0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "expected_hash": "b99fae52e348633ad14f69747e5e95ff",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "expected_hash": "aa875e0680d3d3abe31fe1ebfb38b6a4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/tuzla",
+      "expected_hash": "46c79bb64a6becd8aab3eb80e6fc3831",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "expected_hash": "8b8d48edb49aea3f1d1ff8276ec1c2bc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "expected_hash": "d6861a804f03f93f9bdbcbfbd91bf7d3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "expected_hash": "3661ac448dbd0caf8869648db9208965",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/umraniye",
+      "expected_hash": "8eb2a6751bc57121110445a2eaaedb73",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "expected_hash": "d7d8e96644c972df07f58140c8b5ce7e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "expected_hash": "5d6f00ce28696b2d7c9f38c9638ce68d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "expected_hash": "acaecf6881938ffa7465b9c7c8e8dbfe",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/uskudar",
+      "expected_hash": "7162bf4876a2695da837b0c8ee76abf7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "expected_hash": "d7d901db7c9e3dfa63cf5d545092bdaf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "expected_hash": "e9deebda1969ee8caa84c30b00ed2df1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "expected_hash": "d44e9fa8c16f0f269101977891ff1596",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "expected_hash": "7eafeb616858fa28845115c12b662b59",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "expected_hash": "f21375405d58c09d2488d6ed1025879a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "expected_hash": "8f5aba3030ee40048d33c182e349defd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "expected_hash": "847861b83b9564999ca009949def75fa",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "expected_hash": "01c64de2d69747176a9cd1ea5c9bcf49",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "expected_hash": "5ed34650b74c7f19214645c2f61679fa",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "expected_hash": "36dc5d4669d42eb571ac020db6b063a1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/adalar",
+      "expected_hash": "692632dc203e5c19b9ff63d262d47a5d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "expected_hash": "30347d37a443f0d50c44948e67ba5a3b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "expected_hash": "f95f1a3cd5828c75ca19137ad803a553",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "expected_hash": "528803018b88d543ccb13c414e4e62d1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "expected_hash": "e94b19952fe5360ebdbdbc0fc420b346",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "expected_hash": "d92d7be92781b229c88ca2a455d9a326",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "expected_hash": "9e6cef9ebdbb0c761adfbd272ecb46c1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "expected_hash": "b329b50e289facc4a000dbb94dbd14d0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir",
+      "expected_hash": "c83b3a76f13df8fc5ddd5c26afd09bcc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "expected_hash": "cb190f22fe8f4197876675a9cefcae6a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "expected_hash": "62223653e835c04f330dce1ab1b84304",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "expected_hash": "001d0f82ed7529cef351a546f10fa668",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "expected_hash": "ada601683f095151285f0904833146d0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "expected_hash": "f3299842a1b4c188a9785b2f2502daf3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "expected_hash": "591084a00e7c1380ed4148519088fd64",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "expected_hash": "b860e423551530c98ec599ac9a999362",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/avcilar",
+      "expected_hash": "0093895f30d039de66d425b180a44803",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "expected_hash": "3f2b9d90acb337e9ce0e917224c20659",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "expected_hash": "002cd2137461c3263e8d8c2d39602fb5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "expected_hash": "db65e7fb590c659779932ff87cd0bb18",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "expected_hash": "f2651329250af33c59d08b94e33fda11",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "expected_hash": "6cb50fffd1f9e9a85fdf1b2f95537caf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "expected_hash": "26eeea3e38b845e5d120a395a476a7d2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "expected_hash": "ec8731e794e3e6f02b7901e5b5a603fd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "expected_hash": "36b287979ee1e5a0f634a3664af2db2c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "expected_hash": "8966fa1ac8ee464619b946fdb888d86d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "expected_hash": "b4ff67c6578c22955bc635139c59ae21",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "expected_hash": "f44c215907d7f252109ae8a4abed8a45",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "expected_hash": "bc4cbdbe70eb41c9018a44470cc30145",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "expected_hash": "7ef37151b94816e2d3dc06257cc8a857",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "expected_hash": "5bb6bf1e28f48ca6321d8a1c2c7eb92d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "expected_hash": "84fcc5564ca37a329d399b152fb8dc52",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "expected_hash": "0971a03c20cf68a1833188c7eeef8cb8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "expected_hash": "ba8c8d05fbf27b45e609bb6281bf9825",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "expected_hash": "f4861d7a6cc9af8de717371dba0c48d9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "expected_hash": "9f870b1b852ecd979a1448c1aa4471c7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "expected_hash": "ddc62aaf18bfe2ef8adde7de4c0d07f3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "expected_hash": "cdff9972ea0d21500656fb70f2c11caf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "expected_hash": "01c0ed534211aab7e18a8e560d71beb2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "expected_hash": "47c1ada81d3b2401c238490b00f64394",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/besiktas",
+      "expected_hash": "c791138cdc227e5517421968b50d81ba",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "expected_hash": "f5dc790cbe08430b13b1d7e6b096fd5f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "expected_hash": "74a67d0291b667c359babe1132af0991",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "expected_hash": "3d0ece43e70dd041dc5d2e9970b5b838",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beykoz",
+      "expected_hash": "929ab6614b4e3cc707aa10b733be7c00",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "expected_hash": "c5c1999eb0a7ecf87a0cfb1030140cce",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "expected_hash": "0d86495638e9982dcda2a59ebd140eb0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "expected_hash": "e85f79d1468f0fdc4bb960e259883f27",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "expected_hash": "116c60e9671a4e180bb99dcbfb93d3f2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "expected_hash": "a1642c12f5ed41ff51e08a3bb25e2c4d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "expected_hash": "36a061d44fe2db83e3f9409cb3f7aa5f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "expected_hash": "b185d72afb8ed2a22cad6ce032908ab5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "expected_hash": "506750180fb02ebee026ac3e434d2676",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "expected_hash": "6f9374dd5ad2ed9e09138ccb4b31d7ae",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "expected_hash": "b57acd1b5af39153cc03329faf723707",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "expected_hash": "3e9a6d562b69b490a1c510f5e1c7fe29",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "expected_hash": "2f1c0fc85d8ee24e8a229e662fc8f244",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "expected_hash": "a755b4e227059cfc950f0208fa39cc06",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "expected_hash": "25278bb5f4076f1416d7dc4ecadd3caf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "expected_hash": "e09911f9b190339a7d6b47ec33abc77f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/catalca",
+      "expected_hash": "4189775d6851d9381cf3968090f4e301",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "expected_hash": "63b47413a4eb0f045c176fb24f039b36",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "expected_hash": "cb9a27305b9dc30dc12bd56f4d67dd26",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "expected_hash": "393a8748b66eec15c187d3d815f26bd0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "expected_hash": "9cfad29217e304338810092b33004c55",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "expected_hash": "672c3b91174292d24f949e83f206075a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "expected_hash": "34e958a7f68b38f466e2f2f8711568ee",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "expected_hash": "1832b3fd3059db0f73b9f1fac0b7325b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenler",
+      "expected_hash": "f48e730d63efeacfdda2deb6e6b8eb12",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "expected_hash": "7664f333813652c7d4c2d30c0c7a008f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "expected_hash": "8342f3eeb37a7c7b86ed9d4c0f7be745",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "expected_hash": "31beb8581cad0f03d4a9dcc949c5ab49",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "expected_hash": "471e8f0e8b8d104bf6ce1ff5293a7496",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "expected_hash": "c94bb9bd9d60781b109f4d565d028843",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "expected_hash": "43e1451a22b7a74210e00ea08012355f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "expected_hash": "0eedb21f2b87e3a2ce320ea83a8b0a00",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "expected_hash": "226a45476fc936a651660649a0ee1a15",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "expected_hash": "50dedc9bd5347d4620f9eaaa07af5a4c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "expected_hash": "8c73efab080dad281743e8b52a90a111",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "expected_hash": "e25dc4b8324ea14fe884114b1d5b23b4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/fatih",
+      "expected_hash": "cac49369ab2d3c3b4414a412ae73c19e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "expected_hash": "8f72241b66168f812dd5b787aba0f113",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "expected_hash": "3eff9b998f658cc85c0bb5340be0dc91",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "expected_hash": "92b4c8a259950d32d8dc08b076b3083d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "expected_hash": "904b5df0f07ca1a6d335217276f84c8c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "expected_hash": "3a3b2c8da13a61e0661f6d20dd5496cc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "expected_hash": "71171263b7085cb1bba2dec9c424ea2e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "expected_hash": "611972cffc92cce4fc8d0429bdfb773b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gungoren",
+      "expected_hash": "e5ff3150ccb48901d4e3a4a531431988",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "expected_hash": "d557ac4a6b70a8e6ac897119e49ff12b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "expected_hash": "9579f6889b3d2171f51ad67ae8cf535f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "expected_hash": "49a7171aa5f3435c84fbd751b9f71a45",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "expected_hash": "aa0d25c4c0841cdc6d0e576264fcc5d4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "expected_hash": "913ac49236b5dabc7e3df9b832620114",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "expected_hash": "5bd6c04e00ab07aba5fce6428ff20044",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "expected_hash": "842cfafb02479a0cef00d66269bba2b7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kagithane",
+      "expected_hash": "8f8a9ea39e917c68ffd4833e392bca91",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "expected_hash": "0420f3fb84451d9c0452ef9d504585c1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "expected_hash": "52136ccdd6e76f0c454539a86cd289d0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "expected_hash": "3c665b61b9e801d1727194557edb6ab5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kartal",
+      "expected_hash": "a2f463b7ace84bcd01fdbd0121825fa3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "expected_hash": "5de16ca61b07aa7ae6c4d375dabf0258",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "expected_hash": "22d78d9391d529dcfd88025159a3667d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "expected_hash": "efe44b077db5f840767fb413e1221f8e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "expected_hash": "837d6e0a0afb2e4d99eeb104c495c062",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "expected_hash": "c9c1aa8418e4674445d91d3bc04e388e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "expected_hash": "83de05f9f236da67241a7cefbb6814db",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "expected_hash": "eae3a846bb4565682e3975ab86232b64",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/maltepe",
+      "expected_hash": "997d96fb2b038a21fdbe529225704417",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "expected_hash": "2ff29ed12adda1cee38f5afc9849aa75",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "expected_hash": "e3eb7fb7cb1f9a76923ff8bac1334bcc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "expected_hash": "73a7d3d7d44bd0905332d2bbe1402dd8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/pendik",
+      "expected_hash": "bc77046e5ebe117bda9c1517f5792e13",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "expected_hash": "540c69208fc0f30f491a0ef4fa084198",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "expected_hash": "a17c6260a7486fbed4971457959b2325",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "expected_hash": "0c74e4a846d9824969fa576a8cf6c2d6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "expected_hash": "2059bffcb7c2d8713fbd9e42117519ba",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "expected_hash": "ac9df59bb84a1d0291d65d9714b4c2e0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "expected_hash": "20a69e2f861cf15d6bbe5130d684c3e3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "expected_hash": "f4b1ea71d8d3edfd4e9f7440403e7543",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sariyer",
+      "expected_hash": "e978b6da07f00f60aaee6f620fa45f3b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "expected_hash": "572e562e76588b26dfd8e39359770301",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "expected_hash": "36bc1bb35dfe7ad970db7912bf3b4c58",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "expected_hash": "5a83962b5c834056d29c391ed8ee5049",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sile",
+      "expected_hash": "11175bf76b159a6fea649e0e9763eace",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "expected_hash": "31cfdf2f63d326fdc227d2249a206152",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "expected_hash": "cce5744695a6ae0b50204ee5ff71367c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "expected_hash": "a506ebe531be67203319fd358c805889",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/silivri",
+      "expected_hash": "9609ed82df8378db1843bf823b08e5af",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "expected_hash": "1632dcda344623d9cc6726edd6440085",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "expected_hash": "b6129272c71a5332224e8d893f86e386",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "expected_hash": "ce2f70afde98460400ce7111ab55d118",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sisli",
+      "expected_hash": "ff44f412990a0a05a99f1ee86b5d6a30",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "expected_hash": "0a0fddc864272700644318bf50424075",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "expected_hash": "423b563673948bc2a50ac93dd9969150",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "expected_hash": "32713bdaf5b90ed74cd0f61b564af141",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "expected_hash": "e34fd623a503a9df07c12794cbc53bab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "expected_hash": "55397f6129705789224f9f0000fb4621",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "expected_hash": "aee3e1b4bcc34f8db6caca8aa1a6df33",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "expected_hash": "e469d315fedaf9ef7b660ab988be9e5c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "expected_hash": "0e72c97fe30782d698b1da5181d834f2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "expected_hash": "44f07216944945f3fe5d41e6e02b27da",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "expected_hash": "5216b15cffae06937f5e30a12a5b1d06",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "expected_hash": "d37581387cb3ce72a7f4ac6e1712c1e8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/tuzla",
+      "expected_hash": "e5bd7cfb5936713e914604ce0443cd5f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "expected_hash": "bb28614782e471b7bec0d909f5161413",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "expected_hash": "5f5999283bd74c360eb9e9555041a941",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "expected_hash": "83d3581e1b5e99d0fa0edc5fd1c48ccf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/umraniye",
+      "expected_hash": "991f72a252541771480f66628a7b788b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "expected_hash": "ba98e1fa21d0a74c4c67bd73113740f7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "expected_hash": "3e01ee7670f69752e94df69e14e5e4a0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "expected_hash": "33f0c1aa4f97cf3b38b20dc7f01d9342",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/uskudar",
+      "expected_hash": "c7c1153baba5437f3afa0a6637e9cfe8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "expected_hash": "ac9fc07e37e0c99b99f6a0f008e6a82e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "expected_hash": "0f3ad64507e8af653d38cc1d580118ef",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "expected_hash": "e980e52a283f4073b2c7850a28ddead4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "expected_hash": "7638869e288a39563f2e78cc050bf371",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "expected_hash": "0819899a21d54ce08cbd12b817ee4b2a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "expected_hash": "86dcdd929b9eba4d17518fa94e94483b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "expected_hash": "b8a2234e67acb58dbfa451fa898daa32",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "expected_hash": "8bddb9592583f421281e3935bdab1ca8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "expected_hash": "2956989fd8df6ee9c7ce080a77138f95",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "expected_hash": "f9e44a24c88a24e117594bddd8cc412e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/adalar",
+      "expected_hash": "a576ab47613d8a1771ee89a3775318d5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "expected_hash": "43ead1ed9c0855bd2dcbe5218f0e0428",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "expected_hash": "d87d997da5883e208c3ddda9a85fa6b6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "expected_hash": "d22092293895737c48b2d22ce87f884d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "expected_hash": "d8e3c776081a3634090e55b1cfc95586",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "expected_hash": "fd54eb205fb512bb22b6f8b101b99488",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "expected_hash": "853a46e0236a881b9286ccfb226513b4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "expected_hash": "667f5141d45e3d7e2b416978305ae36c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir",
+      "expected_hash": "bb898e69669cc1a043c2169a0ff7068d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "expected_hash": "5ba9716ad65d2ca7a6dc6b6701460149",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "expected_hash": "130b2afc24024057c06cb45a12259ccc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "expected_hash": "b11f2dcdee1be8f37c8b8c390300946f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "expected_hash": "5b21ea8d857bb36b9ccf6fa56460b22c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "expected_hash": "aeecd88819d679dce15da9297df14146",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "expected_hash": "3c14400f8359568da31abb1eb6f42c36",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "expected_hash": "c709138a50dc7efbecb5f3d2730c89cf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/avcilar",
+      "expected_hash": "1d570bafc798ebe4f3d403c91d7fcb69",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "expected_hash": "3234c79f766c3bf97a5b98ffde65caad",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "expected_hash": "a5d54d36b6b1b1b55986c506af94c87a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "expected_hash": "d27bc354286eda41f1ec53f22c55cc76",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "expected_hash": "06fe4c70b9d174293d7e7c13af29ba71",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "expected_hash": "8bb86c55d85497fca841f1963f9097a0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "expected_hash": "79ab1b63c16aab8c137142531af079ac",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "expected_hash": "66ef7b685348f9b6426110c8af902e28",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "expected_hash": "b6d42b99f15711b854bf5d8f782ecd80",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "expected_hash": "7c77f16d8504fb664e2e81a24425a007",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "expected_hash": "eb5dc3e2abafdea5138e185944969129",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "expected_hash": "76f9e3e56b8faabe641280e1fc911cba",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "expected_hash": "98bc02ca065df9f659598cd8348ed5c5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "expected_hash": "1d3b7b049b80b10617722438e6a8196d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "expected_hash": "cbf2bf203d3f7555802c7fc5993392f0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "expected_hash": "77229668594134e5cfc56fbde423664f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "expected_hash": "3728e912db3cd383b8a4c52ca41c947a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "expected_hash": "208b5cf77eb60c97ad472bd24f69665f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "expected_hash": "72f5f23690c526959f019f2ba0883952",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "expected_hash": "8bf81cea5602c72a705da0b4a867f0a6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "expected_hash": "265efc47cd398027a751d9be01c1e5a3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "expected_hash": "61071b0d9fbf5e20a32a9908f9ed3d48",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "expected_hash": "50eaa7484d9d30e7209a7f5143b375b7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "expected_hash": "770077866007c034fe2ede7e5a1f6375",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/besiktas",
+      "expected_hash": "1706971f22cfd0925d3b8deb1ecb6276",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "expected_hash": "a120a1efb631fd2ddf6e557286f8f418",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "expected_hash": "4ffd7abd6166eb2ad96f753b1c554b38",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "expected_hash": "3d7e7d329141cba1e03050e93da051e5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beykoz",
+      "expected_hash": "5971830b19c0b9d81ec1f78b6ae1b058",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "expected_hash": "0e865fedc762f0e48fe952430900c202",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "expected_hash": "8bd00d14670c2d17f699c0d957064f5e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "expected_hash": "70510648620bdacd6e409654deeecfb1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "expected_hash": "a826369e688ad308f92a22a733a59650",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "expected_hash": "c89331aa6bd237fccf77ac68d9c9c00b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "expected_hash": "d2fabe5b77837237adee0ee1317cd1b8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "expected_hash": "fe9a0b530cf947b6b19b9df0c81b2a40",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "expected_hash": "8a52ce8f956f47ee5f2bfc2795b0396e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "expected_hash": "05630623ce8cddc16a41e2ebbc5c9836",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "expected_hash": "a14eee362135a3647b437e7625d7ecb3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "expected_hash": "38403d823b533ee254762fa11fef289a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "expected_hash": "9a6978a6a0fc4dffc0ae147188786112",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "expected_hash": "da9568a38eb172d23c4596d8772fc6a3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "expected_hash": "1981351ac8f334cd92be575b8f81ef30",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "expected_hash": "2d3b506641d4de7be24ca07474336502",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/catalca",
+      "expected_hash": "6346b8d6a7dd053711616e83a0d58b63",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "expected_hash": "f9c9eeca4843dec6b56aa93921bb27db",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "expected_hash": "b5d430327eaf80b26759a607f3be7444",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "expected_hash": "6c899b24a97b701dd5a9ad75920169dd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "expected_hash": "66303b2314fb42c1cede5a228e6dafc3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "expected_hash": "7de036c6ccba2db01bc29c40a9921138",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "expected_hash": "96925139ed7b374664d3af7f31528796",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "expected_hash": "06fdfacdd7fc14f50f5738f7bfd0d9a1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenler",
+      "expected_hash": "c3b3223f61c10df162ee84a1371fc71c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "expected_hash": "a16d516bfa28bc4f907ce7d77df6fe7b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "expected_hash": "66fe8a5fac00f0c70c369a67fb0099eb",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "expected_hash": "2415821ed09bd46509c41866f0b219b7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "expected_hash": "69ec6e2fdebc1bf436825ae004fb8896",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "expected_hash": "d297695342008e39dd2a6ca7e63f6b7b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "expected_hash": "448c02471411a7991dc8d8880790e379",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "expected_hash": "77ac765a9a238fe3091d01856c3e84b6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "expected_hash": "447bfb39502da53e5730be16b0467b72",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "expected_hash": "235763df02b5d2c0a3f84fbe3b84cc4d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "expected_hash": "fbe4754c7129826a8958643c334ea2ae",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "expected_hash": "8e79ad3024e6afb1ccf9ede8e3cf1efe",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/fatih",
+      "expected_hash": "72d0aa6202150b54a5807ad2b4ecafe6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "expected_hash": "3de4923db9fbae30256038143861c436",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "expected_hash": "70e37029f019e89c7d4df0781761c3b9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "expected_hash": "e72a74e648cd6425511cd349e5f535da",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "expected_hash": "9d4a4827172eff44c250c81fb2c585a6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "expected_hash": "a94920e53cbf51cc21473b37a42c984e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "expected_hash": "710608cad369b6084697c0fc4a2ba1a7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "expected_hash": "61b4797c94be0ce2fc044d31d6f2887d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gungoren",
+      "expected_hash": "fba927e6a13d72aa75078b7fa23d1e43",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "expected_hash": "34e57a39c6c44a1471d9f250bb3353c9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "expected_hash": "eab0ce1d55909044d9b06dda17095d12",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "expected_hash": "8300a9e6f98a9b5b7d5fafac33b31ed2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "expected_hash": "9473aedb8d2298b233cd84f5c11c61e1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "expected_hash": "d578af245952497dd893b87182cedaf8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "expected_hash": "ab976910a5d4bbdc19b3c29bd4153c22",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "expected_hash": "c76b27ce45a1fd98c16a8fc420db5a43",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kagithane",
+      "expected_hash": "2ba22274257003134b05de823e4e6b14",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "expected_hash": "8869a0d15d928db98872d057b677b0cc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "expected_hash": "b004538e1d7b30f27edcde9dd56d0799",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "expected_hash": "4a09c1ea8a7e90ab3b9ad23fa9a199b7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kartal",
+      "expected_hash": "9a45262a0b81037d36c910721982d1bd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "expected_hash": "cb0004084ad55689c1b8dcd52624f055",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "expected_hash": "c501ba1b06124657c21ff7dc49c94fb0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "expected_hash": "0098ce22cff08c83fd51fce455e95ef3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "expected_hash": "7189bba350731293c84183e17788cc46",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "expected_hash": "07b821e2862967517c58d7b2de626cb2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "expected_hash": "e224fb0440b2dfa80fd4515c35306fe4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "expected_hash": "b9ad881da27baecb22bfdcbf3b35c00f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/maltepe",
+      "expected_hash": "5d18615eb5f80443a2595db8991d4469",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "expected_hash": "ec6f5d3b1df3ebd82e343dd2b95ed811",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "expected_hash": "7892aca96168a0ba0e237bf79f6383f3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "expected_hash": "958bf528be36f273b03c2d7cd73f3c0c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/pendik",
+      "expected_hash": "5752bf81d28d3467c3e01e634f43e279",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "expected_hash": "ac9917a5a25b0c040e274b490ce2aee7",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "expected_hash": "91e70cba552cb5180838649b99d2c88b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "expected_hash": "c95ed923920cd2b5b3fa90f9906b26ce",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "expected_hash": "fd6f56a92b80efeb4e703b69fc556048",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "expected_hash": "265b5adeabe80bdb02834afb52c1fa2e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "expected_hash": "b23706d8ec0e017216eb3b20673bbe07",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "expected_hash": "699774d6ff2084decde502800abb6b2b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sariyer",
+      "expected_hash": "92b573099fe02c3a04648a2ed83773b5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "expected_hash": "7b6eaff1bc138ff66364a5d86da88724",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "expected_hash": "b4d551b38e194746c826d97586bd3c88",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "expected_hash": "cbc68ed2006b591bbedf0ae6ba6e2c2b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sile",
+      "expected_hash": "587452db4000ff24f1ecaddbc87f7c56",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "expected_hash": "b828b6507bd499dd64e8cc6f97a963b4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "expected_hash": "014fd693ada4ea439adc57342c1b4de8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "expected_hash": "f5c15b55b273b715e12a25ed814e48fd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/silivri",
+      "expected_hash": "a1458fecab55815b9dd703fa84b305bd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "expected_hash": "b458a180d5e7ffd09a86fae0d9e92609",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "expected_hash": "5db4d57f4bdb87f5c2d005e9fc6310bc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "expected_hash": "6361363ef26bfe9c28bf8699b9d048ab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sisli",
+      "expected_hash": "2a643c31bf08a6f39d68ba784520e892",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "expected_hash": "cf8e9dc4e7c791c9859d4065165bbe4a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "expected_hash": "899866d6c6e72f3734bab4c4be49e0ad",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "expected_hash": "792fc80dd990b1053f02214ee7cf1e0a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "expected_hash": "3f7a890040f324508d65856c6ab7525b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "expected_hash": "04d254a7c4601b1f5be7def8808d352b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "expected_hash": "886cc85c507137c6644c85930ce3ccd1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "expected_hash": "3e805df6a809da43e770a331645eae3b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "expected_hash": "95e37fe1686959c871a28e5c890f73af",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "expected_hash": "9d64d3f5de44ecbe07ac72cf0a70fd92",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "expected_hash": "6af2a6387e6b414071ae3c7805d8664e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "expected_hash": "9d6b774a5f61bf2355603b2e802e3c6e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/tuzla",
+      "expected_hash": "97dbc0d6b34d4ca87cb9290daad036dc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "expected_hash": "28bebfea608051885d21e9a9427d9d5b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "expected_hash": "b095dcaf11b8aebd51f036fa1273a835",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "expected_hash": "3b9d387ac6373f8adebd88e148d84eff",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/umraniye",
+      "expected_hash": "b0d9a07b499310f4425bfe59043b5d35",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "expected_hash": "2e9369639c8630d8a5a8e25d6fc2a484",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "expected_hash": "050ba3f83ed6e41a37b02e5bea4eb37b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "expected_hash": "7938d5ce96f004d1a077ca6925596387",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/uskudar",
+      "expected_hash": "b06bc636074ba56270c876b7662f6915",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "expected_hash": "df207510a0ec8550b872afe4353544b5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "expected_hash": "94f82e4b66fe475243abae747a82d09a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "expected_hash": "4d5e5d368b31dc7cbd750b387a4dad98",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "expected_hash": "6ea6e506fb79b010db3c1d98ef7c1997",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "expected_hash": "e3521c8c11f6edf35eca112bed960b0d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "expected_hash": "9040664fb2ed74dbf9bfb1ed037ebf14",
+      "untouched_shell": true
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "expected_hash": "166872becd799ba1f583dace2f9dd3ab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "expected_hash": "f7466d33adea7f83d4f4031a3b54a4a9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "expected_hash": "af03376dcec5ae5175f66ceeb1869e86",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "expected_hash": "cb73fdb0d2eaeaa4ed61bbc513c1474d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/adalar",
+      "expected_hash": "598972f3ca7e5cdee4cdf49cbb7be34e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "expected_hash": "a477e3a55fa2dda96f1292f499a03fc2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "expected_hash": "08da86d6105a1f41569e71741a461cc3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "expected_hash": "c78b87f5b99cd50b7808ae911ddae091",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "expected_hash": "02f5d9666e9feae4bc12fc4e6d50c2af",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "expected_hash": "4f364710f3ce0c996ca2d3de10b4d00c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "expected_hash": "28105596b3a59da779ee17ba0817f611",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "expected_hash": "0b5d1bcf9f05e51cbd85c93c5210d517",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir",
+      "expected_hash": "f7ff15dc40939785bb3355865b7f5faf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "expected_hash": "df511ef46fdd1d1ef10c5b61e579bab2",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "expected_hash": "70edcea2f9c3172d6b1ae7545d6602a8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "expected_hash": "6315b4a82028bb857e94883b2a003f79",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "expected_hash": "8441bb2e50518bd2fefdd71fb6216099",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "expected_hash": "14decb45f521d8b7aa48970062559492",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "expected_hash": "4bfe765e754aa03684468c58842015ab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "expected_hash": "3ba132710c9b8141ccf78a2ec6bd93a0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/avcilar",
+      "expected_hash": "c9c44046b2419c5921636623360411b8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "expected_hash": "7a63afae2ee83a7051e14562cbb87735",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "expected_hash": "c6ab72829ef725fadaa0ee1055dc6e0d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "expected_hash": "a11ad49eb2d6c231e019ebce4d0df4c8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "expected_hash": "e00af2d9858ab1a5ed104ace3538f278",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "expected_hash": "24f26cdb6e74a8a191a5b9256edf0169",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "expected_hash": "3a6af1051f6ab1242758535bfb3c5b30",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "expected_hash": "4cdd87020c22df9d79e12b9f935a6d52",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "expected_hash": "aa8a475c5771a7a6090dbd633eb6b2a5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "expected_hash": "cf2c5dbaaa37e5b173ffa015b1e3681c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "expected_hash": "7fab1f87a0b73916d19fb1a06d0a096a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "expected_hash": "ba52304bdf892ebc7d1019e5236dcaeb",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "expected_hash": "9da45afcaaa7e975fb466c0784dfb5a3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "expected_hash": "563e2238cd45cfa15873812843842b2c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "expected_hash": "fa9b97a791025b821002a28693355cdd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "expected_hash": "2d73814956ea93ec4d920f7ee66cfaae",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "expected_hash": "1269a2d499499944ee91a16a987954da",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "expected_hash": "e16cf964c331f45467c30507c5a91756",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "expected_hash": "1e780e01297f515f6ec6bb006b789131",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "expected_hash": "53356add0fb1cb458b91fa3524ed8fec",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "expected_hash": "2bfb83cee23fbc02227a4cf7c61a0f3b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "expected_hash": "bb25d729d1042d92767bd495af304dc3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "expected_hash": "308539420dbbc83e67bd69fe7324f4db",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "expected_hash": "33796662e379963c167fe156e82ee487",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/besiktas",
+      "expected_hash": "13066b8d9adff6a29bd7972e731184d0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "expected_hash": "bfcc54058a27fd7677bda604fd6eadba",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "expected_hash": "82e76897053ba19a8485e7df384518c0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "expected_hash": "07290a50c7249a0233929021e7e1edb6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beykoz",
+      "expected_hash": "ce48b9ac3335baa270ea954af52f10a8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "expected_hash": "b9d28830eb7dfa35cfec36e5e5b58765",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "expected_hash": "accce957ffd6fe14dc480b4ac9604397",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "expected_hash": "41b2a23889589dd22c374e2dd3971e02",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "expected_hash": "84466ef6691ca293af8eac46e68fcc30",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "expected_hash": "bdbf451ba4183b449dc4f6a5c0fd9bde",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "expected_hash": "88c82a8e05cd1685b72e291d21272146",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "expected_hash": "b101d8dd6cdefb14391fd887311706dc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "expected_hash": "3403012e98fcc24063db9821cb189905",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "expected_hash": "3010857d95b8efdc85aaff4534f18f3b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "expected_hash": "71969759984c2a1e666db92ad990c323",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "expected_hash": "5200ed9c00a2339faac537c71ee90509",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "expected_hash": "90eb27068117e12a85aa479cdbcea8ea",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "expected_hash": "a6d97c19eeb84fbf95332c336f7fc183",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "expected_hash": "47a885747ce36cd7deddf1b8a6c00ff3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "expected_hash": "b97c1fb1b498280526ba9493bb52b7da",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/catalca",
+      "expected_hash": "36debfd466eb56dcdd536c041287c339",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "expected_hash": "e57da59525441c3a300b10c5dc6b9515",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "expected_hash": "a76fabaaaa016fcc0f189745ee0cecf8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "expected_hash": "353fd5d03bd5bbc3a403e008030e4272",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "expected_hash": "0e2ad738dd0ba2857e6b7dd4a87da924",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "expected_hash": "f1842dc5249cb426cb50f29d26e5ebb5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "expected_hash": "05527c08e68ac61a73fece8f5da2538e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "expected_hash": "bd3e6008d20911dfbce2e62ab9df59b9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenler",
+      "expected_hash": "366842549d1b6a50711376b3af355c2d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "expected_hash": "df40e42230cc1df5f4b1b869dde2272c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "expected_hash": "d1e18ad65604bee38271c71928112321",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "expected_hash": "74dec3677a0ca069d45203b7b12ed391",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "expected_hash": "9dcb87294542f3bf99b14406d4dcfbef",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "expected_hash": "df5948576a964efdf6e5ea1fe896141a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "expected_hash": "51c3e573f64ae8094c8bcb33bf22846b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "expected_hash": "3a8b6336865d0dc23fabdb1804c9425d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "expected_hash": "7dc7a5c5011680b2e36816d4232a2f89",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "expected_hash": "47ac43ea37126413523e1bab88c766d8",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "expected_hash": "7f8f9dc0c543b9698fda259c357957e6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "expected_hash": "7d2b6ba3d51637776addb7895d9864db",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/fatih",
+      "expected_hash": "7f865e789fecd18d6647de25d0f612f5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "expected_hash": "837bf454fc68f3a307a4b224b54539be",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "expected_hash": "60a2439efadc3da69fae19baf16e84cd",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "expected_hash": "e5895fa35d4efb8f78167495625f8e1d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "expected_hash": "ca98d541ff93ed4d21811ebfa7d26c33",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "expected_hash": "58c5d7fc918bf4ec03baf995bae0fa8e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "expected_hash": "74608a587568db6c34b61977e8018591",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "expected_hash": "780b5931c98e2431a204f8a79ae12efe",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gungoren",
+      "expected_hash": "b8327953c56581430bf0e02ffe19597f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "expected_hash": "20eea0a1de44af713fab9e4ecce292c9",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "expected_hash": "c9fc7ac588b2a9f55f90dbe1747ea6af",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "expected_hash": "29b67b16920043645fff3fa04b1d7996",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "expected_hash": "0e70737342a793db08d8ae7583474acf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "expected_hash": "883bffa54c4199aeeed9079b84f2867d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "expected_hash": "53b26aef0b06e8226d78cb6284131d5f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "expected_hash": "7d3ac7f66b26d9380620508c8ca16d1e",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kagithane",
+      "expected_hash": "d87b3b446e38934084513e7838f7ac60",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "expected_hash": "dcaf525f0159fbd4461f24e7d71c456a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "expected_hash": "144fb0186797937ee74f1fd1989a1320",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "expected_hash": "c911cafdc30eda080b0af2e0814bc2a4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kartal",
+      "expected_hash": "65c4abb15fba446098a53c968e29c40f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "expected_hash": "82c0578a56e4c8e9fc274afaabb162f4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "expected_hash": "761afcde3162162bcd53f427d0ab081f",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "expected_hash": "3322f2f6b5505a2c3283c6224d1260fa",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "expected_hash": "7c5b202e4fa8850a64e5686646b7991b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "expected_hash": "a1674ea0831dd9b4c763049b99f1e6ac",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "expected_hash": "bb5ffb14a9c17ff70b3d20f3f5a201f3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "expected_hash": "b669560268565200f1a26db6d64e4f8d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/maltepe",
+      "expected_hash": "092350452c7b9877a79c7765e4c38973",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "expected_hash": "e5cf49b1ad464907ed36fe5e3697c68c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "expected_hash": "3c486c064e92d73dbaf823c1aaf38487",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "expected_hash": "cb90f6ffd4f8e59cc829e3450b04f1bc",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/pendik",
+      "expected_hash": "547fe4efc7440a760b79dd8dbb067304",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "expected_hash": "ded9d1e4786054d005e68595cb5d2a6c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "expected_hash": "a7fd1c4486f933636912d22b45710c4d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "expected_hash": "1a58a1c1d09f73b3a4ac3440b9e2eaab",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "expected_hash": "c701b7b287a3ce76208bd551b95575bb",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "expected_hash": "706b6085872f7d10418b3cbb5abe890d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "expected_hash": "8261a3334907b88b783669129b6560e5",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "expected_hash": "79db74be3107add59874d7fbf50704c0",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sariyer",
+      "expected_hash": "ee66ea4a4637d3f996adc505af8d2119",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "expected_hash": "caa68abc4784f5b45b964fd7d0ecfebf",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "expected_hash": "edd76700bba05480abd2721c1bf00537",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "expected_hash": "7d027fda46a96f7d2a33b1db551e5108",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sile",
+      "expected_hash": "f08537b381512f2d0e05cd751e37dc9a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "expected_hash": "6ba58d9a529855491b7aa81ae8627c50",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "expected_hash": "f085ccf6a5e7e4e52bff147894fcd67d",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "expected_hash": "09c58e7b23fe84aadafb55a204e306b6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/silivri",
+      "expected_hash": "088d162f6baa54d7c116cc1e55919eca",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "expected_hash": "2189d28acfc59d564c443d844e12fc13",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "expected_hash": "e650ab584a2d340103c856ba0545398a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "expected_hash": "6ac6af619f02d4b451399190d039c076",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sisli",
+      "expected_hash": "8e4c9dda6a1a4534ac2000f62dd52740",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "expected_hash": "28531635b0584606a48b577c5012cc93",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "expected_hash": "fa84abca58fe4f3c377da525f73a3170",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "expected_hash": "1b60568813e7bf84ab135723246ad525",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "expected_hash": "9876e696c0c31c953e1cf3fdea67526c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "expected_hash": "cb886b31c56d5fc13950a8a87461a109",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "expected_hash": "0304564c0445802eec969df410b9ee5c",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "expected_hash": "0e543490a738cb8ded57685f3436fea3",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "expected_hash": "86deabfb21c5c6305a5b3ab6afc8d639",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "expected_hash": "0baf89e776f5ad24b5f0e6af71ca25b4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "expected_hash": "870fee240635e9449e6da7ddbffe6e2a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "expected_hash": "53b9c996023276e07af92d68ae35a3ed",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/tuzla",
+      "expected_hash": "5c9c7fce9a1c33b45b7756388d8b4c5b",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "expected_hash": "daf8d02e7da7b0a0437787431a0a9c93",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "expected_hash": "99a57541b2c921c4af52601db655c236",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "expected_hash": "0120424a86f06f0d7b6597c373d9d0b4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/umraniye",
+      "expected_hash": "a8803f32b4aedeedca7795cf40c2bbd6",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "expected_hash": "c60f3beb3c5d2d07cc41d38f93f10ea4",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "expected_hash": "95066cebf419ccea9b767c962e1f10ca",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "expected_hash": "652494283b970f34b3b5dc4c7a39e3b1",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/uskudar",
+      "expected_hash": "4136b4da67b95a77f4b0536c0f883bbe",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "expected_hash": "5ba0e32d93403bb16b670cf7f33a708a",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "expected_hash": "53fac306a3529c12265117e71e0bba56",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "expected_hash": "9d26880ad5a501aaa50ed61c3259c500",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "expected_hash": "1607e0b50a6aeebdb906c382d80f1214",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "expected_hash": "d835784ce72722439807fac6b522c287",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "expected_hash": "80e27c137c81578345574848e127a9da",
+      "untouched_shell": true
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "expected_hash": "4db30c17572706411560589ba6ef771b",
+      "untouched_shell": true
+    }
+  ]
+}

@@ -1,0 +1,1282 @@
+{
+  "checkedAt": "2026-10-08",
+  "scope": "39 Istanbul districts, Istanbul city and Ornek Mahallesi, Atasehir. Geographic support for existing local service pages; not evidence of completed local projects, offices, partners, clients or guaranteed service radii.",
+  "limitations": [
+    "Sources establish geography and administrative identity, not customer demand or sector concentration.",
+    "Operational implications are editorial inferences, not municipality-endorsed service promises.",
+    "Do not use public muhtarlık addresses or telephone numbers as the business workshop address.",
+    "Exact travel times, carrier availability, onsite scanning radius, fees, scanner accuracy and delivery dates remain unverified.",
+    "A district name and side alone do not establish an original, useful standalone page; service-specific practical substance remains necessary."
+  ],
+  "sources": [
+    {
+      "id": "istanbul-districts",
+      "title": "İstanbul Valiliği — İstanbul İlçeleri",
+      "url": "https://istanbul.gov.tr/",
+      "claims": [
+        "İstanbul’un 39 ilçesi: Adalar, Arnavutköy, Ataşehir, Avcılar, Bağcılar, Bahçelievler, Bakırköy, Başakşehir, Bayrampaşa, Beşiktaş, Beykoz, Beylikdüzü, Beyoğlu, Büyükçekmece, Çatalca, Çekmeköy, Esenler, Esenyurt, Eyüpsultan, Fatih, Gaziosmanpaşa, Güngören, Kadıköy, Kağıthane, Kartal, Küçükçekmece, Maltepe, Pendik, Sancaktepe, Sarıyer, Silivri, Sultanbeyli, Sultangazi, Şile, Şişli, Tuzla, Ümraniye, Üsküdar, Zeytinburnu."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08; direct homepage intermittently returned 500."
+    },
+    {
+      "id": "ibb-european-districts",
+      "title": "İBB Zabıta Daire Başkanlığı — Avrupa Yakası Zabıta Müdürlüğü",
+      "url": "https://zabita.ibb.gov.tr/birimlerimiz/avrupa-yakasi-zabita-mudurlugu/",
+      "claims": [
+        "Avrupa yakası sorumluluk alanı: Avcılar, Arnavutköy, Başakşehir, Beylikdüzü, Bakırköy, Beyoğlu, Beşiktaş, Esenyurt, Güngören, Esenler, Küçükçekmece, Sultangazi, Kağıthane, Sarıyer, Bağcılar, Bahçelievler, Bayrampaşa, Büyükçekmece, Gaziosmanpaşa, Eyüpsultan, Fatih, Çatalca, Silivri, Şişli, Zeytinburnu."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08; direct page returned 502."
+    },
+    {
+      "id": "ibb-anatolian-districts",
+      "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü",
+      "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+      "claims": [
+        "Anadolu yakası sorumluluk alanı: Adalar, Ataşehir, Beykoz, Çekmeköy, Kadıköy, Kartal, Maltepe, Üsküdar, Ümraniye, Pendik, Sultanbeyli, Sancaktepe, Tuzla, Şile."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08; direct page returned 502."
+    },
+    {
+      "id": "adalar-transport",
+      "title": "Adalar Kaymakamlığı — Ulaşım",
+      "url": "https://adalar.gov.tr/ulasim",
+      "claims": [
+        "Adalar ile Bostancı, Kadıköy, Kartal ve Kabataş arasında Şehir Hatları ve özel taşıma işletmelerinin düzenli seferleri bulunur."
+      ],
+      "retrieval": "Official page opened and read 2026-10-08."
+    },
+    {
+      "id": "adalar-sea-access",
+      "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri",
+      "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+      "claims": [
+        "Adalar ile ana kara arasında ulaşım deniz yoluyla sağlanır."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08."
+    },
+    {
+      "id": "atasehir-neighborhoods",
+      "title": "Ataşehir Belediyesi — Mahalle ve Muhtarlıklar",
+      "url": "https://www.atasehir.bel.tr/atasehir/muhtarliklar",
+      "claims": [
+        "Örnek Mahallesi, Ataşehir Belediyesi’nin mahalle ve muhtarlık dizininde yer alır."
+      ],
+      "retrieval": "Official page opened and read 2026-10-08. The muhtarlık address is a public institution address, not a workshop address."
+    },
+    {
+      "id": "atasehir-geography",
+      "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı",
+      "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi",
+      "claims": [
+        "Ataşehir; Kadıköy, Maltepe, Üsküdar, Ümraniye ve Sancaktepe ile komşudur.",
+        "Ataşehir; D100, E80 ve çevre yolu bağlantıları arasında yer alır."
+      ],
+      "retrieval": "Official page opened and read 2026-10-08. Historical administrative and economic claims are not reused."
+    },
+    {
+      "id": "bakirkoy-geography",
+      "title": "Bakırköy Belediyesi — Coğrafi Yapı",
+      "url": "https://bakirkoy.bel.tr/bakirkoy/cografi-yapi/",
+      "claims": [
+        "Bakırköy’ün kuzeyinde E-5 hattı boyunca Güngören ve Bahçelievler, doğusunda Zeytinburnu, batı ve kuzeybatısında Küçükçekmece, güneyinde Marmara Denizi bulunur."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08. Outdated airport traffic assertions are excluded."
+    },
+    {
+      "id": "pendik-geography",
+      "title": "Pendik Kaymakamlığı — Coğrafya",
+      "url": "https://pendik.gov.tr/cografya",
+      "claims": [
+        "Pendik, İstanbul’un doğusunda ve Marmara Denizi kıyısındadır; Tuzla, Kartal ve Sultanbeyli ile komşudur."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08. No travel times inferred."
+    },
+    {
+      "id": "silivri-geography",
+      "title": "Silivri Belediyesi — Silivri",
+      "url": "https://silivri.bel.tr/silivri",
+      "claims": [
+        "Silivri, Marmara Denizi kıyısında İstanbul ile Marmara Ereğlisi arasında yer alır."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08."
+    },
+    {
+      "id": "ibb-district-boundaries",
+      "title": "İBB — Yetki Alanı",
+      "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+      "claims": [
+        "İstanbul 39 ilçeden oluşur ve iki yakaya yayılır.",
+        "Nakkaş, Bahşayış ve Muratbey mahalleleri Çatalca’ya; Ayazağa, Maslak ve Huzur mahalleleri Sarıyer’e bağlıdır."
+      ],
+      "retrieval": "Official source search result, retrieved 2026-10-08; direct page timed out."
+    },
+    {
+      "id": "owner-confirmed-service-facts",
+      "title": "İşletme sahibinin 2026-10-07 tarihli hizmet doğrulaması",
+      "url": null,
+      "localPath": "content/authoring/business-service-facts.json",
+      "claims": [
+        "Atölye Örnek Mahallesi, Ataşehir’dedir; gelmeden önce randevu gerekir.",
+        "Kargo, kurye ve elden teslim seçenekleri bulunur; diğer şehirlere kargo gönderilir.",
+        "3D tarama hizmeti verilir; yerinde tarama da yapılır."
+      ],
+      "retrieval": "Explicit owner statement in project conversation, recorded 2026-10-07T20:48:02+03:00. No service-radius, price, delivery-date or accuracy promise was supplied."
+    }
+  ],
+  "places": {
+    "adalar": {
+      "name": "Adalar",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Adalar, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Ada ile ana kara arasındaki bağlantı deniz ulaşımına dayanır. Bostancı, Kadıköy, Kartal ve Kabataş iskelelerinden Adalar bağlantıları bulunur.",
+          "sourceIds": [
+            "adalar-transport",
+            "adalar-sea-access"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Teklif talebinde yalnızca Adalar yazmak yerine ada adını, mahalleyi, teslim adresini ve paketin ölçülerini belirtmek deniz geçişi ile son teslim adımının ayrı planlanmasına yardımcı olur.",
+          "basis": "inference",
+          "sourceIds": [
+            "adalar-transport",
+            "adalar-sea-access",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "Yerinde tarama için nesnenin ada dışına çıkarılması gerekip gerekmediği; ekipman, ada erişimi ve çalışma alanı birlikte değerlendirilmelidir. Kesin sefer veya aynı gün teslim sözü verilmez.",
+          "basis": "inference",
+          "sourceIds": [
+            "adalar-sea-access",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "arnavutkoy": {
+      "name": "Arnavutköy",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Arnavutköy, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Nakkaş ve Bahşayış mahalleleri Arnavutköy’den Çatalca’ya bağlanmıştır.",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Arnavutköy adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "atasehir": {
+      "name": "Ataşehir",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Ataşehir, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Örnek Mahallesi Ataşehir’dedir. İşletme sahibinin doğruladığı atölye bu mahallededir ve ziyaret öncesinde randevu gerekir.",
+          "sourceIds": [
+            "atasehir-neighborhoods",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "Ataşehir’in komşuları Kadıköy, Maltepe, Üsküdar, Ümraniye ve Sancaktepe’dir.",
+          "sourceIds": [
+            "atasehir-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Ataşehir ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "avcilar": {
+      "name": "Avcılar",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Avcılar, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Avcılar adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "bagcilar": {
+      "name": "Bağcılar",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Bağcılar, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Bağcılar adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "bahcelievler": {
+      "name": "Bahçelievler",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Bahçelievler, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Bahçelievler, Bakırköy ile komşudur.",
+          "sourceIds": [
+            "bakirkoy-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Bahçelievler adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "bakirkoy": {
+      "name": "Bakırköy",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Bakırköy, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Bakırköy; Marmara kıyısında, Güngören, Bahçelievler, Zeytinburnu ve Küçükçekmece ile komşudur.",
+          "sourceIds": [
+            "bakirkoy-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Bakırköy adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "basaksehir": {
+      "name": "Başakşehir",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Başakşehir, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Başakşehir adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "bayrampasa": {
+      "name": "Bayrampaşa",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Bayrampaşa, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Bayrampaşa adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "besiktas": {
+      "name": "Beşiktaş",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Beşiktaş, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Beşiktaş adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "beykoz": {
+      "name": "Beykoz",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Beykoz, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Beykoz ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "beylikduzu": {
+      "name": "Beylikdüzü",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Beylikdüzü, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Beylikdüzü adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "beyoglu": {
+      "name": "Beyoğlu",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Beyoğlu, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Beyoğlu adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "buyukcekmece": {
+      "name": "Büyükçekmece",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Büyükçekmece, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Muratbey Mahallesi Büyükçekmece’den Çatalca’ya bağlanmıştır.",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Büyükçekmece adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "catalca": {
+      "name": "Çatalca",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Çatalca, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Nakkaş, Bahşayış ve Muratbey mahalleleri Çatalca’ya bağlıdır.",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Çatalca adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "Nakkaş, Bahşayış veya Muratbey adreslerinde güncel ilçe bilgisini Çatalca olarak kaydetmek; eski Arnavutköy veya Büyükçekmece kaydına göre sevk hazırlamamak gerekir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ]
+    },
+    "cekmekoy": {
+      "name": "Çekmeköy",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Çekmeköy, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Çekmeköy ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "esenler": {
+      "name": "Esenler",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Esenler, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Esenler adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "esenyurt": {
+      "name": "Esenyurt",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Esenyurt, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Esenyurt adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "eyupsultan": {
+      "name": "Eyüpsultan",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Eyüpsultan, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Eyüpsultan adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "fatih": {
+      "name": "Fatih",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Fatih, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Fatih adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "gaziosmanpasa": {
+      "name": "Gaziosmanpaşa",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Gaziosmanpaşa, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Gaziosmanpaşa adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "gungoren": {
+      "name": "Güngören",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Güngören, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Güngören, Bakırköy ile komşudur.",
+          "sourceIds": [
+            "bakirkoy-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Güngören adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "kadikoy": {
+      "name": "Kadıköy",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Kadıköy, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Kadıköy, atölyenin bulunduğu Ataşehir ilçesiyle komşudur.",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Kadıköy ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "İlçe sınırlarının komşu olması, atölye ziyareti için randevu gereğini ortadan kaldırmaz; numune incelemesi ve teslim alma aynı görüşmede planlanabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "kagithane": {
+      "name": "Kağıthane",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Kağıthane, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Kağıthane adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "kartal": {
+      "name": "Kartal",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Kartal, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Kartal, Pendik ile komşudur.",
+          "sourceIds": [
+            "pendik-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Kartal ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "kucukcekmece": {
+      "name": "Küçükçekmece",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Küçükçekmece, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Küçükçekmece, Bakırköy ile komşudur.",
+          "sourceIds": [
+            "bakirkoy-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Küçükçekmece adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "maltepe": {
+      "name": "Maltepe",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Maltepe, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Maltepe, atölyenin bulunduğu Ataşehir ilçesiyle komşudur.",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Maltepe ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "İlçe sınırlarının komşu olması, atölye ziyareti için randevu gereğini ortadan kaldırmaz; numune incelemesi ve teslim alma aynı görüşmede planlanabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "pendik": {
+      "name": "Pendik",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Pendik, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Pendik, İstanbul’un doğusunda ve Marmara kıyısındadır; Tuzla, Kartal ve Sultanbeyli ile komşudur.",
+          "sourceIds": [
+            "pendik-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Pendik ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "sancaktepe": {
+      "name": "Sancaktepe",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Sancaktepe, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Sancaktepe, atölyenin bulunduğu Ataşehir ilçesiyle komşudur.",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Sancaktepe ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "İlçe sınırlarının komşu olması, atölye ziyareti için randevu gereğini ortadan kaldırmaz; numune incelemesi ve teslim alma aynı görüşmede planlanabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "sariyer": {
+      "name": "Sarıyer",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Sarıyer, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Ayazağa, Maslak ve Huzur mahalleleri Sarıyer’e bağlıdır.",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Sarıyer adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "Maslak, Ayazağa veya Huzur adresi verilirken ilçe bilgisini Sarıyer olarak kaydetmek, eski Şişli bilgisiyle oluşabilecek adres karışıklığını önler.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ]
+    },
+    "silivri": {
+      "name": "Silivri",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Silivri, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Silivri, Marmara Denizi kıyısında İstanbul ile Marmara Ereğlisi arasında yer alır.",
+          "sourceIds": [
+            "silivri-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Silivri adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "sultanbeyli": {
+      "name": "Sultanbeyli",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Sultanbeyli, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Sultanbeyli, Pendik ile komşudur.",
+          "sourceIds": [
+            "pendik-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Sultanbeyli ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "sultangazi": {
+      "name": "Sultangazi",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Sultangazi, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Sultangazi adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "sile": {
+      "name": "Şile",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Şile, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Şile ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "sisli": {
+      "name": "Şişli",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Şişli, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Ayazağa, Maslak ve Huzur mahalleleri Şişli’den Sarıyer’e bağlanmıştır.",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Şişli adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "Eski kayıtlarda Şişli görünen Maslak, Ayazağa veya Huzur teslimatlarında güncel ilçe ve açık adresi doğrulamak gerekir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-district-boundaries"
+          ]
+        }
+      ]
+    },
+    "tuzla": {
+      "name": "Tuzla",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Tuzla, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Tuzla, Pendik ile komşudur.",
+          "sourceIds": [
+            "pendik-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Tuzla ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "umraniye": {
+      "name": "Ümraniye",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Ümraniye, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Ümraniye, atölyenin bulunduğu Ataşehir ilçesiyle komşudur.",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Ümraniye ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "İlçe sınırlarının komşu olması, atölye ziyareti için randevu gereğini ortadan kaldırmaz; numune incelemesi ve teslim alma aynı görüşmede planlanabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "uskudar": {
+      "name": "Üsküdar",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Üsküdar, İstanbul’un Anadolu yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-anatolian-districts"
+          ]
+        },
+        {
+          "text": "Üsküdar, atölyenin bulunduğu Ataşehir ilçesiyle komşudur.",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Üsküdar ve Ataşehir Anadolu yakasında yer alır. Aynı yakada olmak sabit süre veya ücret anlamına gelmez; kurye ya da yerinde tarama talebinde açık adres, nesne boyutu ve erişim koşulları birlikte değerlendirilmelidir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        },
+        {
+          "text": "İlçe sınırlarının komşu olması, atölye ziyareti için randevu gereğini ortadan kaldırmaz; numune incelemesi ve teslim alma aynı görüşmede planlanabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "atasehir-geography",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "zeytinburnu": {
+      "name": "Zeytinburnu",
+      "side": "Avrupa",
+      "facts": [
+        {
+          "text": "Zeytinburnu, İstanbul’un Avrupa yakasındaki ilçelerden biridir.",
+          "sourceIds": [
+            "ibb-european-districts"
+          ]
+        },
+        {
+          "text": "Zeytinburnu, Bakırköy ile komşudur.",
+          "sourceIds": [
+            "bakirkoy-geography"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Zeytinburnu adresi ile Ataşehir’deki atölye farklı yakalardadır. Fiziksel numunenin gelişini ve bitmiş ürünün dönüşünü tek bir teslimat planında ele almak; ölçü, fotoğraf ve dosyaları ziyaret öncesinde paylaşmak gereksiz taşıma adımlarını azaltabilir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-european-districts",
+            "ibb-anatolian-districts",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "istanbul": {
+      "name": "İstanbul",
+      "side": "both",
+      "facts": [
+        {
+          "text": "İstanbul 39 ilçeden oluşur; Avrupa ve Anadolu yakalarına yayılır.",
+          "sourceIds": [
+            "istanbul-districts",
+            "ibb-district-boundaries"
+          ]
+        },
+        {
+          "text": "Doğrulanan atölye Örnek Mahallesi, Ataşehir’dedir; ziyaretler randevuyla yapılır.",
+          "sourceIds": [
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Şehir genelindeki talepte önce ilçe, mahalle, ihtiyaç türü ve dosya veya numune durumunu belirlemek; daha sonra kargo, kurye, randevulu teslim veya yerinde tarama seçeneğini netleştirmek gerekir.",
+          "basis": "inference",
+          "sourceIds": [
+            "ibb-district-boundaries",
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    },
+    "ornek": {
+      "name": "Örnek Mahallesi",
+      "side": "Anadolu",
+      "facts": [
+        {
+          "text": "Örnek Mahallesi Ataşehir’e bağlıdır.",
+          "sourceIds": [
+            "atasehir-neighborhoods"
+          ]
+        },
+        {
+          "text": "İşletme sahibi atölyenin Örnek Mahallesi’nde olduğunu ve müşterilerin ziyaret öncesi randevu alması gerektiğini doğrulamıştır.",
+          "sourceIds": [
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ],
+      "operationalImplications": [
+        {
+          "text": "Numune bırakma, tarama görüşmesi veya bitmiş ürünü elden alma için geliş amacı ve uygun zaman önceden paylaşılmalıdır; mahalle yakınlığı randevusuz kabul taahhüdü değildir.",
+          "basis": "inference",
+          "sourceIds": [
+            "owner-confirmed-service-facts"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -100,10 +100,15 @@ export default function AdminContent() {
         <h1 className="text-3xl">İçerik & Hizmet Bölgeleri</h1>
         <p className="text-sm text-muted-foreground mt-2">
           {pages.length} kayıt ·{" "}
-          {pages.filter((p) => p.status === "published").length} yayında. Yer
+          {pages.filter((p) => p.status === "published").length} yayında ·{" "}
+          {pages.filter((p) => publicationIssues(p).length === 0).length} kaydın zorunlu içerik alanları tamam. Yer
           adı değiştirilmiş kopyalar yayın kontrolünden geçmez. Kaynak alanına
           sadece kamuya açık kaynak veya kişisel veri içermeyen işletme teyidi
           yazın.
+        </p>
+        <p className="text-sm text-muted-foreground mt-2">
+          Alanların tamamlanması yayın onayı değildir. Taslak, henüz yayına
+          alınmamış kaydı belirtir; özgünlük ve yayın denetimleri ayrıca uygulanır.
         </p>
       </div>
       {draft ? (
@@ -309,6 +314,11 @@ export default function AdminContent() {
                 </span>
                 <span className="text-xs">
                   {p.status === "published" ? "Yayında" : "Taslak"}
+                  <small className="block text-muted-foreground mt-1">
+                    {publicationIssues(p).length === 0
+                      ? "Zorunlu içerik alanları tamam"
+                      : "Eksik içerik alanı var"}
+                  </small>
                 </span>
               </button>
             ))}

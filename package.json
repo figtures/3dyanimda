@@ -40,7 +40,9 @@
     "indexnow:plan": "node scripts/search/submit-indexnow.mjs",
     "test:search:browser": "node scripts/test-search-browser.mjs",
     "content:editorial": "node scripts/refresh-editorial-content.mjs",
-    "test:content:browser": "node scripts/test-content-inventory.mjs"
+    "test:content:browser": "node scripts/test-content-inventory.mjs",
+    "content:local": "node scripts/refresh-local-content.mjs",
+    "test:content:local": "node scripts/test-local-content.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

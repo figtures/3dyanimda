@@ -3,10 +3,17 @@ import { useTenant } from "@/contexts/TenantContext";
 import { supabase, demoMode } from "@/lib/supabase";
 import type { LandingPage } from "./types";
 import { readEditorial } from "./editorial";
+import { localDraftPreviewAllowed } from "./local-preview";
 export function useContent(includeDrafts = false) {
   const { tenant } = useTenant();
+  const localDraftPreview = localDraftPreviewAllowed({
+    development: import.meta.env.DEV,
+    demoMode,
+    hostname: window.location.hostname,
+    search: window.location.search,
+  });
   return useQuery({
-    queryKey: ["landing-pages", tenant?.id, includeDrafts],
+    queryKey: ["landing-pages", tenant?.id, includeDrafts, localDraftPreview],
     enabled: !!tenant,
     queryFn: async (): Promise<LandingPage[]> => {
       if (demoMode) {
@@ -19,7 +26,7 @@ export function useContent(includeDrafts = false) {
         return Array.from(merged.values()).filter(
           (p) =>
             p.brand === tenant!.slug &&
-            (includeDrafts || p.status === "published"),
+            (includeDrafts || localDraftPreview || p.status === "published"),
         );
       }
       let query = supabase

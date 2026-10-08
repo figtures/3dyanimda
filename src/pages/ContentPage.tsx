@@ -6,6 +6,7 @@ import { Seo } from "@/components/site/Seo";
 import RegionPlanner from "./RegionPlanner";
 import NotFound from "./NotFound";
 import { getTenantIdentity } from "@/lib/tenant";
+import places from "@/content/places.json";
 export default function ContentPage() {
   const { pathname, search } = useLocation();
   const b = useBrand();
@@ -57,6 +58,11 @@ export default function ContentPage() {
   const quoteParams = new URLSearchParams(query);
   quoteParams.set("application", p.title);
   if (p.kind === "service") quoteParams.set("service", p.path.slice(1));
+  if (p.kind === "location") {
+    if (p.service) quoteParams.set("service", p.service);
+    const district = places.find((place) => place.slug === p.district)?.name;
+    quoteParams.set("region", [p.neighborhood === "ornek" ? "Örnek Mahallesi" : "", district, "İstanbul"].filter(Boolean).join(", "));
+  }
   const quoteUrl = "/teklif-al?" + quoteParams;
   return (
     <>
@@ -201,7 +207,7 @@ export default function ContentPage() {
               ))}
             </section>
           )}
-          {!!p.editorial?.sources?.length && <section className="article-sources"><h2>Teknik başvuru kaynakları</h2><ul>{p.editorial.sources.map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
+          {!!p.editorial?.sources?.length && <section className="article-sources"><h2>{p.kind === "location" ? "Bölge ve hizmet kaynakları" : "Teknik başvuru kaynakları"}</h2><ul>{p.editorial.sources.map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
           {p.updated_at && <p className="content-byline">{b.name} bilgi merkezi · Güncelleme: <time dateTime={p.updated_at}>{new Date(p.updated_at).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"})}</time></p>}
         </article>
         <aside className="article-aside">
