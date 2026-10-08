@@ -43,10 +43,12 @@ under `.cloudflare/<brand>/`. A brand mismatch from Supabase fails closed.
   exports approved HTML/sitemap/robots from its public Supabase API, then deploys
   that brand's Worker. Failed checks stop before Cloudflare upload.
 
-The current editorial package fails the release gate, so production deployment is
-intentionally blocked. This command does not add an approval bypass. It can run
-once the outstanding content/SEO review described in docs/audits/IMPLEMENTATION-STATUS.md
-has passed and canonical domains are registered in the database.
+The automatic originality audit passes for all 796 authored content routes and
+four home asset records. Production deployment still requires the source-bound
+human release certificate and matching database publication reviews. Canonical
+domains are registered in Supabase; this does not establish Cloudflare ownership
+or DNS activation. See docs/audits/IMPLEMENTATION-STATUS.md for current evidence.
+This command does not add an approval bypass.
 
 The Worker serves exported HTML, true 404s and the admin/studio SPA shell. workers.dev
 responses are noindex and their robots.txt disallows crawling. Preview artifacts

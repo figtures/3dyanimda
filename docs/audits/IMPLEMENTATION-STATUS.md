@@ -1,6 +1,44 @@
-# Originality and SEO/GEO implementation status — 2026-10-06
+# Originality and SEO/GEO implementation status — 2026-10-08
 
-## Current status — 6 October 2026
+## Current status — 8 October 2026, publication preparation
+
+All 796 content records are authored, including the 652 previously empty local
+routes. They are saved in the repository and the intended remote Supabase project.
+The unchanged automatic originality audit passes all 800 records (796 content
+records plus four home allocations). The 652 local routes pass 3,912 browser
+cases; the earlier editorial and utility inventory passed 1,224 cases. The exact
+remote content readback and local completeness reports are in this directory.
+
+The owner has now requested publication. No production deployment has occurred.
+Fresh remote readback confirms 199 drafts per brand, zero published landing pages
+and zero publication review rows. A source-bound human review certificate is still
+absent; automatic test results are not human approval records. The 16 referenced
+raster assets have documented generation provenance, and 12 GLBs have reproducible
+generators, but the final review and asset registration remain outstanding.
+
+Four isolated Cloudflare build/packaging dry-runs succeeded. These dry-runs do not
+upload, verify account access, export approved content or activate domains. The
+Cloudflare dashboard is signed out and currently reports a verification problem
+in this cloud browser. No Cloudflare credentials are configured locally.
+
+The readiness audit identified real operational gaps beyond hosting:
+
+- All four tenants have zero legal documents; genuine privacy/legal information
+  and business identity/contact details are still required. Legal utility routes
+  are now included in the HTML exporter, kept out of indexing submissions, so
+  links from the footer and quote form will not become missing-route 404s.
+- No Edge Functions are deployed. Email provider/sender configuration and quote
+  notification scheduling are unverified. No messages were sent during this audit.
+- All four tenants have zero material and pricing settings. Technical quote
+  collection is supported, but instant price estimates are not configured.
+- GA4, Google/Bing verification and IndexNow configuration are absent locally.
+- Live quote submission/file upload, notification delivery and production crawl
+  verification remain to be performed after the required account setup.
+
+Earlier entries below are historical checkpoints. Their incomplete content and
+duplicate counts must not be presented as the current content state.
+
+## Historical checkpoint — 6 October 2026
 
 The automatic global audit now **passes** for all 144 preview content pages plus
 four homepage asset allocations. The inherited duplicate findings are resolved

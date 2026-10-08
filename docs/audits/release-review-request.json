@@ -1,6 +1,6 @@
 {
   "policy": "global-originality-v1",
-  "sourceHash": "605b3ccfafe65e63172939f342e483c3e803da6ad3d066083cba8a963fa09d64",
+  "sourceHash": "cdc048e3b50f3ad9e136d4080de806d371193cc7454efa5c6c571886042880cb",
   "result": "pending_human_review",
   "sourceFileCount": 358,
   "automatedEvidence": {
@@ -67,6 +67,17 @@
       "result": "pass",
       "report": "docs/audits/local-hero-contrast.json",
       "minimumMeasuredRatio": 10.07
+    },
+    "emailAuthorization": {
+      "result": "pass",
+      "tests": 10,
+      "command": "node --test supabase/functions/send-email/authorization.test.mjs",
+      "scope": "Stored quote recipient and tenant authorization; no email delivery attempted"
+    },
+    "cloudflarePackaging": {
+      "result": "pass",
+      "brands": 4,
+      "mode": "Wrangler dry-run; no upload, account authorization, approved export or DNS activation"
     }
   },
   "requiredHumanChecks": {
@@ -84,7 +95,8 @@
     "Production CMS/database records and asset registry still require server-side review.",
     "2026-10-07: 656 local records now carry owner-confirmed delivery/scanning/appointment facts; 16 FAQs added. The previous source hash and rendered review require refresh. Geographic expansion remains incomplete; all-route audit fails.",
     "2026-10-08: shared browser/admin/export redirect validation and canonical-domain-only analytics implemented. Production publication was not performed. Geographic consolidation remains a proposal.",
-    "2026-10-08: all 652 former local shells are now authored and saved to Supabase, with exact content readback. All-route automatic audit passes for 800 records. All 652 local routes passed three-theme/two-viewport private rendering. The consolidation proposal was superseded without applying redirects or deleting routes. All CMS rows remain unpublished; no human review certificate was created."
+    "2026-10-08: all 652 former local shells are now authored and saved to Supabase, with exact content readback. All-route automatic audit passes for 800 records. All 652 local routes passed three-theme/two-viewport private rendering. The consolidation proposal was superseded without applying redirects or deleting routes. All CMS rows remain unpublished; no human review certificate was created.",
+    "2026-10-08 publication attempt: release preflight stopped before upload because the source-bound human review certificate is absent. Legal utility export, verified contact facts and quote-reply authorization were corrected. Existing rendered reports cover the authored content inventory; the updated contact and admin source still belongs to the pending final review. Cloudflare dashboard access is separately blocked by a verification error in the cloud browser."
   ],
   "reviewer": null,
   "reviewedAt": null

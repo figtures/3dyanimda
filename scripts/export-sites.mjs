@@ -114,10 +114,20 @@ try {
         "/teklif-al",
       ].map((p) => [p, null]),
     );
-    const utilityRoutes = new Set();
+    // These routes read legal_documents rather than pages. Keep their HTML
+    // reachable from the footer and quote form even when a document is not yet
+    // available; BrandLegal marks that honest empty state noindex. They are
+    // utility pages and must never enter the discovery/indexing submission set.
+    const utilityRoutes = new Set([
+      "/yasal",
+      "/kvkk-aydinlatma-metni",
+      "/gizlilik-politikasi",
+      "/cerez-politikasi",
+      "/kullanim-kosullari",
+      "/basvuru-acik-riza-metni",
+    ]);
     for (const p of landing.data) {
       routes.set(p.path, p.updated_at);
-      utilityRoutes.delete(p.path);
     }
     for (const p of pages.data) {
       const url = "/" + p.slug.replace(/^\//, "");
@@ -126,6 +136,7 @@ try {
     }
     for (const p of posts.data) routes.set("/blog/" + p.slug, p.updated_at);
     for (const p of excluded) routes.delete(p);
+    for (const url of utilityRoutes) routes.set(url, null);
     const redirectMap=compileRedirects([...legacyRedirects,...redirects.data],new Set(routes.keys()));
     for(const source of Object.keys(redirectMap)) routes.delete(source);
     const dest = path.join(output, host);

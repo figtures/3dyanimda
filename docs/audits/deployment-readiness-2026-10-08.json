@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-08T15:39:20.409275+00:00",
+  "sourceHash": "cdc048e3b50f3ad9e136d4080de806d371193cc7454efa5c6c571886042880cb",
+  "result": "blocked_before_upload",
+  "productionPublished": false,
+  "content": {
+    "total": 796,
+    "completedFormerLocalShells": 652,
+    "remotePublished": 0,
+    "publicationReviews": 0
+  },
+  "deploymentAttempt": {
+    "brand": "3dyanimda",
+    "command": "npm run deploy:3dyanimda",
+    "stop": "Missing source-bound human release review certificate",
+    "cloudflareUploadAttempted": false
+  },
+  "cloudflare": {
+    "publicBrandConfigurationPrepared": true,
+    "packagingDryRuns": 4,
+    "successfulDryRuns": 4,
+    "credentialsPresentLocally": false,
+    "dashboard": "Signed out; verification error persists after one reload",
+    "domainActivationVerified": false
+  },
+  "fixes": [
+    "Export six legal utility routes as HTML outside indexing submissions",
+    "Contact page reflects confirmed cargo/courier/collection, on-site scanning and workshop appointment facts",
+    "Quote reply authorization uses stored quote recipient and tenant with quotes.edit; generic sending retains email_templates.edit"
+  ],
+  "validation": {
+    "applicationTests": 53,
+    "emailAuthorizationTests": 10,
+    "searchTests": 9,
+    "workerTests": 4,
+    "typecheck": "pass",
+    "allFourBuildsAndPackaging": "pass"
+  },
+  "remaining": {
+    "publicationReview": "Pending; no certificates fabricated",
+    "legalDocuments": "Zero for each of four brands",
+    "businessContact": "Public phone, email and verified business identity unset",
+    "emailDelivery": "No Edge Functions deployed; provider, brand routes and schedule require activation; remote secrets unverified",
+    "instantPricing": "Zero materials/pricing settings per brand; technical quote collection supported",
+    "searchAndAnalytics": "GA4, Google/Bing verification and IndexNow configuration absent locally",
+    "liveVerification": "Pending actual domain deployment: quote/file upload, notification delivery, canonical/robots/sitemap/HTTP crawl and real-user performance"
+  },
+  "sourceReports": [
+    "docs/audits/all-local-originality.json",
+    "docs/audits/local-content-completeness.json",
+    "docs/audits/remote-local-content-2026-10-08.json",
+    "docs/audits/release-review-request.json"
+  ]
+}

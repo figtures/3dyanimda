@@ -1,4 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { EmailAuthorizationError, resolveEmailDelivery } from "./authorization.mjs";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -9,7 +10,8 @@ const corsHeaders = {
 const GATEWAY_URL = "https://api.resend.com";
 
 type Body = {
-  to: string | string[];
+  to?: string | string[];
+  quoteId?: string;
   templateKey?: string;
   subject?: string;
   html?: string;
@@ -88,28 +90,31 @@ Deno.serve(async (req) => {
     }
 
     const body = (await req.json()) as Body;
-    if (!body.tenantId) return new Response("Tenant required", { status: 400, headers: corsHeaders });
     const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
-    const { data: allowed } = await admin.rpc("tenant_user_has_permission", { _tenant_id: body.tenantId, _permission: "email_templates.edit", _user_id: callerId });
-    if (!allowed) return new Response("Forbidden", { status: 403, headers: corsHeaders });
-    const { data: tenant } = await admin.from("tenants").select("name,slug,status").eq("id", body.tenantId).single();
+    const delivery = await resolveEmailDelivery(body, callerId, {
+      findQuote: async (quoteId: string) => {
+        const { data, error } = await admin.from("quote_requests")
+          .select("tenant_id,email,full_name").eq("id", quoteId).maybeSingle();
+        if (error) throw new EmailAuthorizationError("Quote lookup unavailable", 503);
+        return data;
+      },
+      hasPermission: async (tenantId: string, permission: string, userId: string) => {
+        const { data, error } = await admin.rpc("tenant_user_has_permission", {
+          _tenant_id: tenantId, _permission: permission, _user_id: userId,
+        });
+        return !error && data === true;
+      },
+    });
+    const { data: tenant } = await admin.from("tenants").select("name,slug,status").eq("id", delivery.tenantId).single();
     if (!tenant || tenant.status !== "active") return new Response("Tenant unavailable", { status: 404, headers: corsHeaders });
     const routes = JSON.parse(Deno.env.get("BRAND_EMAIL_ROUTES") || "{}");
     const configuredFrom = routes[tenant.slug]?.from;
     if (!configuredFrom) return new Response("Brand email not configured", { status: 503, headers: corsHeaders });
-    const recipients = Array.isArray(body.to) ? body.to : [body.to];
-    const validRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const cleaned = recipients.map((r) => String(r || "").trim().toLowerCase()).filter((r) => validRe.test(r));
-    if (!cleaned.length) {
-      return new Response(JSON.stringify({ error: "Geçerli alıcı yok." }), {
-        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
 
     let subject = body.subject ?? "";
     let html = body.html ?? "";
     let text = body.text ?? "";
-    const vars = body.variables ?? {};
+    const vars = delivery.variables;
     const locale = body.locale === "en" ? "en" : "tr";
 
     // Resolve from template if provided
@@ -118,7 +123,7 @@ Deno.serve(async (req) => {
       const key = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const admin = createClient(url, key);
       let q = admin.from("email_templates").select("*").eq("key", body.templateKey).eq("active", true).limit(1);
-      if (body.tenantId) q = q.eq("tenant_id", body.tenantId);
+      q = q.eq("tenant_id", delivery.tenantId);
       const { data: tpl, error } = await q.maybeSingle();
       if (error) {
         return new Response(JSON.stringify({ error: error.message }), {
@@ -154,7 +159,7 @@ Deno.serve(async (req) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
-      body: JSON.stringify({ from, to: cleaned, subject, html, text: text || undefined }),
+      body: JSON.stringify({ from, to: delivery.recipients, subject, html, text: text || undefined }),
     });
     const respBody = await resp.text();
     if (!resp.ok) {
@@ -167,7 +172,8 @@ Deno.serve(async (req) => {
     });
   } catch (e: any) {
     return new Response(JSON.stringify({ error: e?.message ?? "Bilinmeyen hata" }), {
-      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: e instanceof EmailAuthorizationError ? e.status : 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 });

@@ -32,13 +32,30 @@ export default function Contact() {
           Teknik teklif talebi <ArrowUpRight size={18} />
         </Link>
         <div className="contact-details">
-          {contact.address_tr && <div>
-            <h2>Üretim noktamız</h2>
-            <p>{contact.address_tr}</p>
-          </div>}
           <div>
-            <h2>Hizmet alanımız</h2>
-            <p>İstanbul'un tamamı. Teslimat planı proje özelinde belirlenir.</p>
+            <h2>Atölye ziyareti ve randevu</h2>
+            <p>
+              Örnek Mahallesi, Ataşehir'deki atölyemize gelmeden önce randevu
+              alın. Ziyaret ve elden teslim planını teklif talebinizde
+              belirtebilirsiniz.
+            </p>
+            {contact.address_tr && <p>{contact.address_tr}</p>}
+          </div>
+          <div>
+            <h2>Teslimat seçenekleri</h2>
+            <p>
+              Kargo, kurye ve elden teslim seçeneklerimiz vardır. İstanbul
+              dışındaki şehirlere de kargo gönderimi yapıyoruz. Teslimat yöntemi
+              ve takvimi proje özelinde birlikte belirlenir.
+            </p>
+          </div>
+          <div>
+            <h2>3D tarama ve yerinde hizmet</h2>
+            <p>
+              3D tarama hizmetimizi yerinde de sunuyoruz. Taranacak parçayı,
+              yaklaşık ölçülerini ve bulunduğu konumu paylaşın; uygun çalışma
+              koşullarını ve randevuyu birlikte değerlendirelim.
+            </p>
           </div>
           {contact.email && (
             <div>

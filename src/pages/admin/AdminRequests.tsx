@@ -286,11 +286,9 @@ function QuoteDetail({
     setSending(true);
     const { data, error } = await supabase.functions.invoke("send-email", {
       body: {
-        to: quote.email,
+        quoteId: quote.id,
         subject: replySubject || "Teklif talebiniz",
         text: replyBody,
-        tenantId: quote.tenant_id,
-        variables: { name: quote.full_name, email: quote.email },
       },
     });
     if (error || (data as any)?.error) {
