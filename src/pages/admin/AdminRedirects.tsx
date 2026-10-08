@@ -52,7 +52,7 @@ const AdminRedirects = () => {
     <div className="space-y-6">
       <div>
         <h1 className="font-display text-2xl">Yönlendirmeler</h1>
-        <p className="text-sm text-muted-foreground">Eski URL'leri yenisine yönlendirin (SPA içi yönlendirme).</p>
+        <p className="text-sm text-muted-foreground">Eski URL’leri yeni sayfalara yönlendirin. Sunucudaki kalıcı yönlendirmeler, site yeniden yayınlandığında güncellenir.</p>
       </div>
 
       <div className="border border-border rounded-lg p-4 bg-card space-y-3">

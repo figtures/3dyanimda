@@ -26,7 +26,7 @@ test('IndexNow changes include updated/new/removed URLs, not unchanged pages',()
 test('worker consolidates host, old service paths and index variants in one redirect',async()=>{
   const env={SITE_DOMAIN:'3dsanayi.com',RELEASE_MODE:'approved',ASSETS:{fetch:()=>new Response('missing',{status:404})}};
   const r=await worker.fetch(new Request('http://www.3dsanayi.com/hizmetler/3d-baski/index.html?utm_source=bing'),env);
-  assert.equal(r.status,308);assert.equal(r.headers.get('location'),'https://3dsanayi.com/3d-baski?utm_source=bing');
+  assert.equal(r.status,301);assert.equal(r.headers.get('location'),'https://3dsanayi.com/3d-baski?utm_source=bing');
   const missing=await worker.fetch(new Request(origin+'/missing'),env);
   assert.equal(missing.status,404);assert.match(missing.headers.get('X-Robots-Tag'),/noindex/);
   const preview=await worker.fetch(new Request('https://preview.workers.dev/robots.txt'),env);

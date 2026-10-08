@@ -5,10 +5,20 @@ export default {
     if (env.RELEASE_MODE === 'approved' && (url.hostname === env.SITE_DOMAIN || url.hostname === 'www.'+env.SITE_DOMAIN)) {
       const aliases={'/hizmetler/3d-baski':'/3d-baski','/hizmetler/3d-tarama':'/3d-tarama','/hizmetler/3d-modelleme':'/3d-modelleme','/teklif':'/teklif-al'};
       const clean=url.pathname.replace(/\/index\.html$/,'/').replace(/\/+$/,'') || '/';
-      const target=aliases[clean] || clean;
+      let redirects=aliases;
+      const manifestUrl=new URL('/redirect-manifest.json',url);
+      const manifestResponse=await env.ASSETS.fetch(new Request(manifestUrl));
+      if(manifestResponse.ok){
+        try {
+          const manifest=await manifestResponse.json();
+          if(manifest.origin==='https://'+env.SITE_DOMAIN && manifest.redirects && typeof manifest.redirects==='object') redirects={...aliases,...manifest.redirects};
+        } catch { /* An unavailable manifest must never become an open redirect. */ }
+      }
+      const mapped=redirects[clean];
+      const target=typeof mapped==='string' && /^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/.test(mapped) ? mapped : clean;
       if(url.protocol!=='https:' || url.hostname!==env.SITE_DOMAIN || url.pathname!==target){
         url.protocol='https:';url.hostname=env.SITE_DOMAIN;url.pathname=target;
-        return Response.redirect(url.href,308);
+        return Response.redirect(url.href,target!==clean?301:308);
       }
     }
     const preview=env.RELEASE_MODE!=='approved' || url.hostname!==env.SITE_DOMAIN;

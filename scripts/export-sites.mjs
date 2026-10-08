@@ -7,6 +7,7 @@ import { readFile, writeFile, mkdir, cp, stat, rm } from "node:fs/promises";
 import path from "node:path";
 import {createHash} from "node:crypto";
 import {discoveryFiles} from "./search/discovery.mjs";
+import {compileRedirects,legacyRedirects} from "./search/redirects.mjs";
 import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
@@ -68,7 +69,7 @@ try {
       .single();
     if ((tenant.custom_domain || tenant.domain) !== host)
       throw new Error(`Use canonical domain for ${host}`);
-    const [landing, pages, posts, seo] = await Promise.all([
+    const [landing, pages, posts, seo, redirects] = await Promise.all([
       api
         .from("landing_pages")
         .select("path,updated_at")
@@ -88,8 +89,9 @@ try {
           `published_at.is.null,published_at.lte.${new Date().toISOString()}`,
         ),
       api.from("seo_meta").select("path,noindex").eq("tenant_id", tenantId),
+      api.from("url_redirects").select("from_path,to_path,active").eq("tenant_id",tenantId).eq("active",true),
     ]);
-    for (const response of [landing, pages, posts, seo])
+    for (const response of [landing, pages, posts, seo, redirects])
       if (response.error) throw response.error;
     const excluded = new Set(
       seo.data.filter((s) => s.noindex).map((s) => s.path),
@@ -124,10 +126,13 @@ try {
     }
     for (const p of posts.data) routes.set("/blog/" + p.slug, p.updated_at);
     for (const p of excluded) routes.delete(p);
+    const redirectMap=compileRedirects([...legacyRedirects,...redirects.data],new Set(routes.keys()));
+    for(const source of Object.keys(redirectMap)) routes.delete(source);
     const dest = path.join(output, host);
     await rm(dest, { recursive: true, force: true });
     await mkdir(dest, { recursive: true });
     await cp(root, dest, { recursive: true });
+    await writeFile(path.join(dest,"redirect-manifest.json"),JSON.stringify({origin:base,redirects:redirectMap})+"\n");
     // API-backed administrative routes retain the SPA shell; missing public pages get true 404s.
     await writeFile(path.join(dest, "app.html"), shell);
     const context = await browser.newContext();
@@ -223,7 +228,7 @@ try {
     }
     await writeFile(
       path.join(dest, "_redirects"),
-      "/hizmetler/3d-baski /3d-baski 301\n/hizmetler/3d-tarama /3d-tarama 301\n/hizmetler/3d-modelleme /3d-modelleme 301\n/teklif /teklif-al 301\n/admin/* /app.html 200\n/studio/* /app.html 200\n/* /404.html 404\n",
+      Object.entries(redirectMap).map(([from,to])=>`${from} ${to} 301`).join("\n")+"\n/admin/* /app.html 200\n/studio/* /app.html 200\n/* /404.html 404\n",
     );
     await writeFile(
       path.join(dest, "_headers"),
