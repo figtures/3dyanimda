@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-08",
+  "brand": "3dyanimda",
+  "streamUrl": "https://3dyanimda.com",
+  "measurementId": "G-HBTDHJ45M7",
+  "source": "Owner-provided GA4 stream screenshot, visually verified by the parent agent.",
+  "status": "configured_locally_not_deployed",
+  "scope": {
+    "3dyanimda": "G-HBTDHJ45M7",
+    "3dsanayi": null,
+    "maketyanimda": null,
+    "parcayanimda": null
+  },
+  "implementation": [
+    "Existing GrowthAnalytics tag loader retained; no second gtag snippet added.",
+    "Only the 3dyanimda per-brand environment and example received this stream ID.",
+    "Analytics requires per-brand opt-in and the canonical tenant domain; DEV and demo modes remain excluded.",
+    "The Google ga-disable property now reflects current consent, active public layout and private-path exclusions on each read.",
+    "Admin, studio, API and auth paths, including encoded path equivalents, cannot initialize or emit custom analytics events.",
+    "Consent changes do not create a second custom page_view for the same mounted route.",
+    "Custom analytics payloads exclude URL query strings, fragments, full referrers, form values and filenames."
+  ],
+  "verification": {
+    "command": "npx vitest run src/lib/growth-analytics.test.ts src/lib/search.test.ts",
+    "passedTests": 17,
+    "newPrivacyTests": 12,
+    "typecheck": "pass",
+    "buildCommand": "npm run build:3dyanimda",
+    "build": "pass",
+    "productionBundleContainsMeasurementId": true,
+    "otherBrandConfigsContainMeasurementId": false,
+    "realGoogleTagOrCollectionRequestsSent": false,
+    "realtimeReceiptVerified": false,
+    "deploymentPerformed": false
+  },
+  "accountActionsStillRequired": [
+    "In GA4 enhanced measurement page-view settings, disable Page changes based on browser history events, because this application emits sanitized manual SPA page_view events.",
+    "Review automatic form-interaction, file-download, outbound-click and site-search collection before activation: these can collect full destination URLs, filenames or search terms. Disable unused automatic options; their remote settings were not changed or verified here.",
+    "After deployment, validate an explicitly consented public visit in Realtime/DebugView and confirm generate_lead handling without sending sensitive form fields."
+  ],
+  "officialSources": [
+    "https://developers.google.com/analytics/devguides/collection/ga4/views",
+    "https://developers.google.com/tag-platform/security/guides/privacy",
+    "https://support.google.com/analytics/answer/9216061"
+  ],
+  "changedSourceSha256": {
+    "deploy/3dyanimda/.env.example": "5cfb39672897bd741a244c599e6bbff8cae10c2062b94586fdc8eacb0f1bb308",
+    "src/lib/growth-analytics.ts": "f8c31f21f1382354a58be518ceef129d9855300c270f6a471e65be9ba75cbd2f",
+    "src/components/brand/GrowthAnalytics.tsx": "9d5e2002a04f6dbd127f7cf8eb514b08573c5ec4a8dded705ae94d2304265389",
+    "src/lib/growth-analytics.test.ts": "b78a1ec34110881363acefdd2dae2a92ff10a5f483eb72385bf876a63043ab26"
+  }
+}

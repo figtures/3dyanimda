@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-08T15:39:20.409275+00:00",
-  "sourceHash": "cdc048e3b50f3ad9e136d4080de806d371193cc7454efa5c6c571886042880cb",
+  "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
   "result": "blocked_before_upload",
   "productionPublished": false,
   "content": {
@@ -29,7 +29,7 @@
     "Quote reply authorization uses stored quote recipient and tenant with quotes.edit; generic sending retains email_templates.edit"
   ],
   "validation": {
-    "applicationTests": 53,
+    "applicationTests": 65,
     "emailAuthorizationTests": 10,
     "searchTests": 9,
     "workerTests": 4,
@@ -39,10 +39,10 @@
   "remaining": {
     "publicationReview": "Pending; no certificates fabricated",
     "legalDocuments": "Zero for each of four brands",
-    "businessContact": "Public phone, email and verified business identity unset",
+    "businessContact": "Public email, phone and street address are complete; registered legal operator/tax identity still unconfirmed for the legal documents",
     "emailDelivery": "No Edge Functions deployed; provider, brand routes and schedule require activation; remote secrets unverified",
     "instantPricing": "Zero materials/pricing settings per brand; technical quote collection supported",
-    "searchAndAnalytics": "GA4, Google/Bing verification and IndexNow configuration absent locally",
+    "searchAndAnalytics": "3dyanimda GA4 code configured; Enhanced Measurement history settings and live reception still need verification. Other brand streams, Google/Bing verification and IndexNow remain unconfigured.",
     "liveVerification": "Pending actual domain deployment: quote/file upload, notification delivery, canonical/robots/sitemap/HTTP crawl and real-user performance"
   },
   "sourceReports": [
@@ -50,5 +50,9 @@
     "docs/audits/local-content-completeness.json",
     "docs/audits/remote-local-content-2026-10-08.json",
     "docs/audits/release-review-request.json"
-  ]
+  ],
+  "completedSinceInitialAudit": {
+    "businessContact": "Owner-confirmed email, phone and full workshop address saved/read back for four tenants, eight settings",
+    "ga4": "3dyanimda stream G-HBTDHJ45M7 configured locally and build verified; not deployed"
+  }
 }

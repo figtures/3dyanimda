@@ -1,8 +1,8 @@
 {
   "policy": "global-originality-v1",
-  "sourceHash": "cdc048e3b50f3ad9e136d4080de806d371193cc7454efa5c6c571886042880cb",
+  "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
   "result": "pending_human_review",
-  "sourceFileCount": 358,
+  "sourceFileCount": 361,
   "automatedEvidence": {
     "globalOriginality": {
       "result": "pass",
@@ -23,7 +23,7 @@
     "applicationTests": {
       "result": "pass",
       "command": "npm test",
-      "tests": 53
+      "tests": 65
     },
     "typecheck": {
       "result": "pass",
@@ -78,6 +78,20 @@
       "result": "pass",
       "brands": 4,
       "mode": "Wrangler dry-run; no upload, account authorization, approved export or DNS activation"
+    },
+    "confirmedBusinessContact": {
+      "result": "pass",
+      "report": "docs/audits/confirmed-business-contact-2026-10-08.json",
+      "brands": 4,
+      "verifiedSettings": 8
+    },
+    "ga4Configuration": {
+      "result": "configured_not_deployed",
+      "report": "docs/audits/ga4-setup-2026-10-08.json",
+      "brand": "3dyanimda",
+      "measurementId": "G-HBTDHJ45M7",
+      "newPrivacyTests": 12,
+      "liveReceiptVerified": false
     }
   },
   "requiredHumanChecks": {
@@ -96,7 +110,8 @@
     "2026-10-07: 656 local records now carry owner-confirmed delivery/scanning/appointment facts; 16 FAQs added. The previous source hash and rendered review require refresh. Geographic expansion remains incomplete; all-route audit fails.",
     "2026-10-08: shared browser/admin/export redirect validation and canonical-domain-only analytics implemented. Production publication was not performed. Geographic consolidation remains a proposal.",
     "2026-10-08: all 652 former local shells are now authored and saved to Supabase, with exact content readback. All-route automatic audit passes for 800 records. All 652 local routes passed three-theme/two-viewport private rendering. The consolidation proposal was superseded without applying redirects or deleting routes. All CMS rows remain unpublished; no human review certificate was created.",
-    "2026-10-08 publication attempt: release preflight stopped before upload because the source-bound human review certificate is absent. Legal utility export, verified contact facts and quote-reply authorization were corrected. Existing rendered reports cover the authored content inventory; the updated contact and admin source still belongs to the pending final review. Cloudflare dashboard access is separately blocked by a verification error in the cloud browser."
+    "2026-10-08 publication attempt: release preflight stopped before upload because the source-bound human review certificate is absent. Legal utility export, verified contact facts and quote-reply authorization were corrected. Existing rendered reports cover the authored content inventory; the updated contact and admin source still belongs to the pending final review. Cloudflare dashboard access is separately blocked by a verification error in the cloud browser.",
+    "2026-10-08: owner supplied full workshop address, business phone/email and 3dyanimda GA4 screenshot. Contact and verified business identity settings were atomically updated and read back for four tenants. GA4 is configured only for 3dyanimda, with 12 additional privacy tests; account Enhanced Measurement and live collection are not verified. Publication review remains pending."
   ],
   "reviewer": null,
   "reviewedAt": null

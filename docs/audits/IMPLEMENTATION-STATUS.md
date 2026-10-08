@@ -24,14 +24,18 @@ in this cloud browser. No Cloudflare credentials are configured locally.
 The readiness audit identified real operational gaps beyond hosting:
 
 - All four tenants have zero legal documents; genuine privacy/legal information
-  and business identity/contact details are still required. Legal utility routes
+  and registered operator identity are still required. Owner-confirmed email,
+  telephone and the full workshop address were saved to all four tenants and
+  their structured business identity settings on 8 October. Legal utility routes
   are now included in the HTML exporter, kept out of indexing submissions, so
   links from the footer and quote form will not become missing-route 404s.
 - No Edge Functions are deployed. Email provider/sender configuration and quote
   notification scheduling are unverified. No messages were sent during this audit.
 - All four tenants have zero material and pricing settings. Technical quote
   collection is supported, but instant price estimates are not configured.
-- GA4, Google/Bing verification and IndexNow configuration are absent locally.
+- The owner's GA4 stream G-HBTDHJ45M7 is configured for 3dyanimda only. Its live
+  collection and Enhanced Measurement settings still need verification; the
+  other brand streams, Google/Bing verification and IndexNow remain unconfigured.
 - Live quote submission/file upload, notification delivery and production crawl
   verification remain to be performed after the required account setup.
 

@@ -3,6 +3,10 @@ import { canonicalPath } from "./search";
 export function analyticsHostAllowed(hostname: string, canonicalDomain?: string | null) {
   return Boolean(canonicalDomain && hostname === canonicalDomain);
 }
+export function analyticsPathAllowed(pathname: string) {
+  try { return !/^\/(admin|studio|api|auth)(\/|$)/i.test(decodeURIComponent(pathname)); }
+  catch { return false; }
+}
 
 export const CONSENT_EVENT = "brand:consent";
 export const consentKey = (brand: string) => `brand:${brand}:consent:v1`;
@@ -39,8 +43,17 @@ function acquisition(brand: string) {
   } catch { return {source_channel:"unknown",landing_path:canonicalPath(location.pathname)}; }
 }
 let initialized = "";
+let active = false;
+export function suspendAnalytics() { active = false; }
 export function initializeAnalytics(brand: string, measurementId: string) {
-  if (!analyticsAllowed(brand) || !/^G-[A-Z0-9]+$/.test(measurementId)) return false;
+  active = analyticsAllowed(brand) && analyticsPathAllowed(location.pathname) && /^G-[A-Z0-9]+$/.test(measurementId);
+  if (!active) return false;
+  // gtag checks this flag before sending data or setting cookies. Read current
+  // consent and URL on every check, including SPA transitions outside this layout.
+  Object.defineProperty(window, `ga-disable-${measurementId}`, {
+    configurable: true,
+    get: () => !active || !analyticsAllowed(brand) || !analyticsPathAllowed(location.pathname),
+  });
   if (initialized === measurementId) return true;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer!.push(arguments); };
@@ -56,7 +69,7 @@ export function initializeAnalytics(brand: string, measurementId: string) {
   return true;
 }
 export function trackGrowth(brand: string, event: "page_view" | "quote_cta_click" | "quote_start" | "quote_submit_error" | "generate_lead" | "contact_click", fields: {service?:string;contact_type?:string} = {}) {
-  if (!analyticsAllowed(brand) || !window.gtag || !initialized) return;
+  if (!active || !analyticsPathAllowed(location.pathname) || !analyticsAllowed(brand) || !window.gtag || !initialized) return;
   const path = canonicalPath(location.pathname);
   window.gtag("event", event, {
     brand, ...acquisition(brand), ...fields, page_path:path,

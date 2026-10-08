@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-08",
+  "result": "pass",
+  "project": "zdxjmhhjuomcpdtllnuq",
+  "brands": [
+    "3dyanimda",
+    "3dsanayi",
+    "maketyanimda",
+    "parcayanimda"
+  ],
+  "verifiedSettings": 8,
+  "fields": [
+    "email",
+    "phone",
+    "phone_display",
+    "address_tr",
+    "address_en",
+    "location_tr",
+    "location_en",
+    "structured email",
+    "structured telephone",
+    "PostalAddress"
+  ],
+  "source": "content/authoring/confirmed-business-contact.json",
+  "publicationStatusChanged": false,
+  "notes": [
+    "All eight targeted settings reread and compared to the owner-confirmed values after an atomic guarded DML upsert.",
+    "Unrelated settings preserved. No WhatsApp account, operating hours, coordinates, postcode or legal operator claimed.",
+    "Frontend Contact and footer read site_settings; Seo uses the separate verified_business_identity record."
+  ]
+}

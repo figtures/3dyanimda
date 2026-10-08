@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
 import { demoMode } from "@/lib/supabase";
-import { CONSENT_EVENT, analyticsHostAllowed, initializeAnalytics, trackGrowth } from "@/lib/growth-analytics";
+import { CONSENT_EVENT, analyticsHostAllowed, initializeAnalytics, suspendAnalytics, trackGrowth } from "@/lib/growth-analytics";
 
 export default function GrowthAnalytics() {
   const brand = useBrand();
@@ -13,7 +13,13 @@ export default function GrowthAnalytics() {
   const id = import.meta.env.VITE_GA4_MEASUREMENT_ID || "";
   useEffect(() => {
     if (demoMode || import.meta.env.DEV || !id || !analyticsHostAllowed(window.location.hostname,canonicalDomain)) return;
-    const pageView = () => { if (initializeAnalytics(brand.slug, id)) trackGrowth(brand.slug, "page_view"); };
+    let recorded = false;
+    const pageView = () => {
+      if (initializeAnalytics(brand.slug, id) && !recorded) {
+        trackGrowth(brand.slug, "page_view");
+        recorded = true;
+      }
+    };
     const timer = window.setTimeout(pageView, 0);
     window.addEventListener(CONSENT_EVENT, pageView);
     const clicked = (event: MouseEvent) => {
@@ -25,7 +31,7 @@ export default function GrowthAnalytics() {
         trackGrowth(brand.slug,"contact_click",{contact_type:url.hostname === "wa.me" ? "whatsapp" : url.protocol.slice(0,-1)});
     };
     document.addEventListener("click", clicked);
-    return () => { clearTimeout(timer); window.removeEventListener(CONSENT_EVENT,pageView); document.removeEventListener("click",clicked); };
+    return () => { suspendAnalytics(); clearTimeout(timer); window.removeEventListener(CONSENT_EVENT,pageView); document.removeEventListener("click",clicked); };
   }, [brand.slug, pathname, id, canonicalDomain]);
   return null;
 }
