@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-08T16:33:40.084611+00:00",
+  "checkedAt": "2026-10-08T16:49:46.085139+00:00",
   "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
-  "result": "review_approved_cms_published_html_export_in_progress",
+  "result": "approved_artifacts_ready_cloudflare_auth_required",
   "productionPublished": false,
   "content": {
     "total": 796,
@@ -20,8 +20,11 @@
       "parcayanimda"
     ],
     "command": "npm run deploy:<brand>",
-    "phase": "Approved HTML export in progress after source-bound preflight passes",
-    "cloudflareUploadAttempted": false
+    "phase": "All four approved HTML exports completed; all four Wrangler deploy commands stopped before upload",
+    "stop": "Missing CLOUDFLARE_API_TOKEN in non-interactive environment",
+    "cliDeployAttempted": true,
+    "cloudflareUploadAttempted": false,
+    "successfulUploads": 0
   },
   "cloudflare": {
     "publicBrandConfigurationPrepared": true,
@@ -29,7 +32,8 @@
     "successfulDryRuns": 4,
     "credentialsPresentLocally": false,
     "dashboard": "Signed out; verification error persists after one reload",
-    "domainActivationVerified": false
+    "domainActivationVerified": false,
+    "successfulApprovedArtifactDryRuns": 4
   },
   "fixes": [
     "Export six legal utility routes as HTML outside indexing submissions",
@@ -48,7 +52,10 @@
     "releasePreflight": "pass",
     "staleReviewRejection": "pass",
     "reviewEvidenceHashesMatched": 11,
-    "publicApiRelayTests": 7
+    "publicApiRelayTests": 7,
+    "approvedHtmlExport": "pass",
+    "approvedArtifactPackaging": "pass",
+    "identityGraphRegressionTests": 4
   },
   "remaining": {
     "publicationReview": "Complete: actual owner-delegated Codex AI review, humanReviewPerformed=false; certificate and all 796 DB approvals verified",
@@ -66,12 +73,54 @@
     "docs/audits/release-review-request.json",
     "content/release-review.json",
     "docs/audits/publication-applied-2026-10-08.json",
-    "docs/audits/public-api-export-relay-2026-10-08.json"
+    "docs/audits/public-api-export-relay-2026-10-08.json",
+    "docs/audits/approved-html-export-2026-10-08.json",
+    "docs/audits/quote-metadata-timing-2026-10-08.json"
   ],
   "completedSinceInitialAudit": {
     "businessContact": "Owner-confirmed email, phone and full workshop address saved/read back for four tenants, eight settings",
     "ga4": "3dyanimda stream G-HBTDHJ45M7 configured locally and build verified; not deployed",
     "finalReview": "Source-bound Codex AI approval under explicit owner delegation",
     "cmsPublication": "796 published, 0 drafts, 796 matching reviews, 28 registered assets"
-  }
+  },
+  "approvedHtmlExport": {
+    "result": "pass",
+    "report": "docs/audits/approved-html-export-2026-10-08.json",
+    "approvedLandingRoutes": 796,
+    "indexEligibleHTML": 852,
+    "noindexUtilityHTML": 24,
+    "totalRouteHTML": 876,
+    "postExportAuditNowRequiredBeforeUpload": true
+  },
+  "approvedPackaging": [
+    {
+      "brand": "3dyanimda",
+      "result": "pass",
+      "mode": "approved artifacts dry-run; no upload",
+      "assetFilesRead": 653
+    },
+    {
+      "brand": "3dsanayi",
+      "result": "pass",
+      "mode": "approved artifacts dry-run; no upload",
+      "assetFilesRead": 653
+    },
+    {
+      "brand": "maketyanimda",
+      "result": "pass",
+      "mode": "approved artifacts dry-run; no upload",
+      "assetFilesRead": 653
+    },
+    {
+      "brand": "parcayanimda",
+      "result": "pass",
+      "mode": "approved artifacts dry-run; no upload",
+      "assetFilesRead": 653
+    }
+  ],
+  "recoveryNotes": [
+    "Public API forwarding DNS failure resolved with real Node fetch relay; seven isolation/error regression tests pass",
+    "A four-way export process was terminated with exit 137; the affected brand was rebuilt and exported successfully alone",
+    "Complementary same-ID JSON-LD blocks on one quote page have no conflicting values; all required identity fields are present and a strict dataset-level audit passes"
+  ]
 }

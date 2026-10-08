@@ -39,6 +39,9 @@ const wrangler={name:config.name,main:path.resolve('deploy/worker.mjs'),compatib
  vars:{SITE_DOMAIN:config.domain,BRAND_SLUG:brand,RELEASE_MODE:action==='deploy'?'approved':'preview'},
  ...(config.customDomain && action==='deploy'?{routes:[{pattern:config.domain,custom_domain:true}]}:{})};
 await writeFile(configFile,JSON.stringify(wrangler,null,2)+'\n');
+// Validate the actual exported HTML, discovery files and approved Worker config
+// before any upload; a successful browser render alone is not the final gate.
+if(action==='deploy') run('scripts/quality/audit-approved-html.mjs',[brand]);
 if(action==='build') console.log(`Built ${brand}; config: .cloudflare/${brand}/wrangler.json (not deployed)`);
 else run('node_modules/wrangler/bin/wrangler.js',['deploy','--config',configFile,...(action==='check'?['--dry-run','--outdir',path.join(workspace,'dry-run')]:[])],{...process.env,...config.credentials,CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV:'false',WRANGLER_SEND_METRICS:'false'});
 if(action==='deploy' && config.indexNowKey) {

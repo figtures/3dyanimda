@@ -242,7 +242,8 @@
       "registeredAssets": 28,
       "gatesUnchanged": true
     },
-    "websiteDeployment": "Four real brand deployment commands started; completion not yet verified. Cloudflare account access remains unavailable."
+    "websiteDeployment": "Four approved HTML exports and packaging dry-runs pass. Actual uploads are blocked by missing Cloudflare credentials; no live-domain release is claimed.",
+    "exportEvidence": "docs/audits/approved-html-export-2026-10-08.json"
   },
   "historicalNotes": {
     "scope": "Prior dated checkpoints retained for traceability. Pending-review and incomplete-content statements describe superseded states; they are not the current review result.",

@@ -1,0 +1,103 @@
+{
+  "result": "pass",
+  "reviewType": "AI-assisted static verification of real public API HTML exports",
+  "testedAt": "2026-10-08T16:48:46.970Z",
+  "releaseSourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+  "publicationManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
+  "brands": [
+    {
+      "brand": "3dyanimda",
+      "domain": "3dyanimda.com",
+      "result": "pass",
+      "approvedLandingRoutes": 199,
+      "indexEligibleHTML": 213,
+      "noindexUtilityHTML": 6,
+      "totalRouteHTML": 219,
+      "sitemapURLs": 213,
+      "manifestHTMLHashesMatch": true,
+      "exportedHTMLSetHash": "c39df0009e2d367e005a2aef4d5f384c2134863daad1068af7b7efa79cc6cf17",
+      "workerReleaseMode": "approved",
+      "uploaded": false
+    },
+    {
+      "brand": "3dsanayi",
+      "domain": "3dsanayi.com",
+      "result": "pass",
+      "approvedLandingRoutes": 199,
+      "indexEligibleHTML": 213,
+      "noindexUtilityHTML": 6,
+      "totalRouteHTML": 219,
+      "sitemapURLs": 213,
+      "manifestHTMLHashesMatch": true,
+      "exportedHTMLSetHash": "629db6f0cbf093567fa4c1f1139ceb6a58e0b4d5e8df183f6f444a808e4eb50b",
+      "workerReleaseMode": "approved",
+      "uploaded": false
+    },
+    {
+      "brand": "maketyanimda",
+      "domain": "maketyanimda.com",
+      "result": "pass",
+      "approvedLandingRoutes": 199,
+      "indexEligibleHTML": 213,
+      "noindexUtilityHTML": 6,
+      "totalRouteHTML": 219,
+      "sitemapURLs": 213,
+      "manifestHTMLHashesMatch": true,
+      "exportedHTMLSetHash": "4095658c4bfb66031efa7a846d080cf38163ff3e91106006f8761deb124c11c5",
+      "workerReleaseMode": "approved",
+      "uploaded": false
+    },
+    {
+      "brand": "parcayanimda",
+      "domain": "parcayanimda.com",
+      "result": "pass",
+      "approvedLandingRoutes": 199,
+      "indexEligibleHTML": 213,
+      "noindexUtilityHTML": 6,
+      "totalRouteHTML": 219,
+      "sitemapURLs": 213,
+      "manifestHTMLHashesMatch": true,
+      "exportedHTMLSetHash": "2155b879da8a5d554d671920fcf89e795a95c4b345575c5a486809ee28a6da51",
+      "workerReleaseMode": "approved",
+      "uploaded": false
+    }
+  ],
+  "structuredDataSemantics": {
+    "source": "https://www.w3.org/TR/json-ld11/#embedding-json-ld-in-html-documents",
+    "rule": "JSON-LD blocks in one HTML document form one dataset. Same-ID fields are combined, with every overlapping property required to agree; verified identity must remain complete.",
+    "complementaryGraphs": [
+      {
+        "url": "https://3dsanayi.com/teklif-al",
+        "organizationBlocks": 2,
+        "distinctOrganizationIds": 1,
+        "conflictingProperties": 0,
+        "verifiedIdentityComplete": true
+      }
+    ],
+    "regressionTests": 4
+  },
+  "totals": {
+    "approvedLandingRoutes": 796,
+    "indexEligibleHTML": 852,
+    "noindexUtilityHTML": 24
+  },
+  "checks": [
+    "all approved landing routes present",
+    "one h1 and exact authored titles/content",
+    "canonical domain",
+    "index robots for discovery pages",
+    "owner-confirmed contact and one physical workshop schema",
+    "visible FAQ/structured-data parity",
+    "all manifest hashes match actual HTML",
+    "sitemap and search-manifest exact URL parity",
+    "six legal utilities reachable/noindex/excluded from discovery",
+    "404 noindex page",
+    "Worker approved mode and exact assets path",
+    "no Pages redirect file shadowing Worker routes"
+  ],
+  "limitations": [
+    "Verifies generated local artifacts, not deployed URLs.",
+    "No Cloudflare upload, DNS, TLS, Search Console indexing, GA4 receipt or transactional email is claimed.",
+    "Legal utility pages retain the honest unpublished-document state and are excluded from discovery."
+  ]
+}

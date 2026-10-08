@@ -40,7 +40,8 @@ under `.cloudflare/<brand>/`. A brand mismatch from Supabase fails closed.
 - `check:<brand>`: builds, then runs **Wrangler deploy --dry-run**. No upload or DNS
   change. Confirms packaging/configuration, not account access or production readiness.
 - `deploy:<brand>`: runs the global content release gate, builds the selected brand,
-  exports approved HTML/sitemap/robots from its public Supabase API, then deploys
+  exports approved HTML/sitemap/robots from its public Supabase API, audits the
+  actual HTML/content/identity/discovery files and Worker config, then deploys
   that brand's Worker. Failed checks stop before Cloudflare upload.
 
 The automatic originality audit passes for all 796 authored content routes and
@@ -50,7 +51,9 @@ AI review with `humanReviewPerformed: false`, and release preflight passes. Fres
 Supabase readback confirms 796 published records, zero drafts, 796 matching reviews,
 and 28 registered assets (16 images and 12 models). See
 `docs/audits/publication-applied-2026-10-08.json` for the committed database evidence.
-Four real deployment commands have started; their completion is not yet verified.
+All four approved exports pass: 852 index-eligible and 24 noindex utility HTML
+pages. Four Wrangler packaging dry-runs pass against those artifacts. All four
+real deploy commands stop before upload because `CLOUDFLARE_API_TOKEN` is absent.
 Cloudflare account access is still unavailable. Canonical domains registered in
 Supabase do not establish Cloudflare ownership or DNS activation. See
 `docs/audits/IMPLEMENTATION-STATUS.md` for scope and limitations. The release checks
@@ -81,8 +84,9 @@ Create four Worker projects connected to figtures/3dyanimda, each with root `/`:
 4. Disable automatic non-production branch deploys until a separate staging setup
    has been configured. The supplied pipeline targets the named brand Worker.
 
-No Cloudflare account credentials were available during implementation; account
-connection and a live deploy have not been tested or performed.
+No authenticated Cloudflare upload has succeeded. Deploy the brands sequentially
+on runners with limited memory; a terminated parallel export was successfully
+repeated alone. See the current deployment-readiness audit for actual outcomes.
 
 Official references:
 - https://developers.cloudflare.com/workers/static-assets/binding/

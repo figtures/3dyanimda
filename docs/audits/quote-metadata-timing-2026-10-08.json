@@ -1,0 +1,1358 @@
+{
+  "testedAt": "2026-10-08T16:45:09.537Z",
+  "scope": "3dsanayi quote page production bundle and actual public API; cold read then two warmed snapshot reads",
+  "trials": [
+    {
+      "trial": 1,
+      "samples": [
+        {
+          "phase": "networkidle",
+          "at": 14417,
+          "timeline": [
+            {
+              "at": 106,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 6713,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  }
+                ]
+              }
+            },
+            {
+              "at": 13694,
+              "state": {
+                "scripts": 3,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  },
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim."
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "two_frames",
+          "at": 14439,
+          "timeline": [
+            {
+              "at": 106,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 6713,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  }
+                ]
+              }
+            },
+            {
+              "at": 13694,
+              "state": {
+                "scripts": 3,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  },
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim."
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "one_second",
+          "at": 15443,
+          "timeline": [
+            {
+              "at": 106,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 6713,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  }
+                ]
+              }
+            },
+            {
+              "at": 13694,
+              "state": {
+                "scripts": 3,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  },
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim."
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "two_seconds",
+          "at": 16449,
+          "timeline": [
+            {
+              "at": 106,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 6713,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  }
+                ]
+              }
+            },
+            {
+              "at": 13694,
+              "state": {
+                "scripts": 3,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": null,
+                    "telephone": null
+                  },
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim."
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "samples": [
+        {
+          "phase": "networkidle",
+          "at": 754,
+          "timeline": [
+            {
+              "at": 98,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 186,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "phase": "two_frames",
+          "at": 778,
+          "timeline": [
+            {
+              "at": 98,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 186,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "phase": "one_second",
+          "at": 1786,
+          "timeline": [
+            {
+              "at": 98,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 186,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "phase": "two_seconds",
+          "at": 2791,
+          "timeline": [
+            {
+              "at": 98,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 186,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "samples": [
+        {
+          "phase": "networkidle",
+          "at": 757,
+          "timeline": [
+            {
+              "at": 135,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 207,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "phase": "two_frames",
+          "at": 764,
+          "timeline": [
+            {
+              "at": 135,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 207,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "phase": "one_second",
+          "at": 1771,
+          "timeline": [
+            {
+              "at": 135,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 207,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "phase": "two_seconds",
+          "at": 2779,
+          "timeline": [
+            {
+              "at": 135,
+              "state": {
+                "scripts": 0,
+                "organizations": []
+              }
+            },
+            {
+              "at": 207,
+              "state": {
+                "scripts": 2,
+                "organizations": [
+                  {
+                    "id": "https://3dsanayi.com/#organization",
+                    "email": "info@3dyanimda.com",
+                    "telephone": "+905364488230"
+                  }
+                ]
+              }
+            }
+          ],
+          "schemas": [
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://3dsanayi.com/#organization",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "description": "3dsanayi: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Endüstriyel parça & fikstür için proje bazlı üretim.",
+                  "email": "info@3dyanimda.com",
+                  "telephone": "+905364488230",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "customer service",
+                      "email": "info@3dyanimda.com",
+                      "telephone": "+905364488230",
+                      "availableLanguage": [
+                        "Turkish"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://3dsanayi.com/#website",
+                  "url": "https://3dsanayi.com",
+                  "name": "3dsanayi",
+                  "inLanguage": "tr-TR",
+                  "publisher": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  }
+                },
+                {
+                  "@type": "ProfessionalService",
+                  "@id": "https://3dsanayi.com/#localbusiness",
+                  "name": "3dsanayi",
+                  "url": "https://3dsanayi.com",
+                  "parentOrganization": {
+                    "@id": "https://3dsanayi.com/#organization"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "İstanbul",
+                    "streetAddress": "Örnek Mahallesi, Bestekar Sokak No: 17",
+                    "addressCountry": "TR",
+                    "addressLocality": "Ataşehir"
+                  },
+                  "areaServed": {
+                    "@type": "City",
+                    "name": "İstanbul"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://3dsanayi.com/teklif-al#webpage",
+              "url": "https://3dsanayi.com/teklif-al",
+              "name": "3D Studio & Teklif Al | 3dsanayi",
+              "description": "3dsanayi için 3D üretim talebi oluşturun.",
+              "inLanguage": "tr-TR",
+              "isPartOf": {
+                "@id": "https://3dsanayi.com/#website"
+              },
+              "publisher": {
+                "@id": "https://3dsanayi.com/#organization"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

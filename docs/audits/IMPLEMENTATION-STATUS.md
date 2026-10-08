@@ -23,13 +23,19 @@ models) in total. All 796 current payloads match their approved review fingerpri
 See `publication-applied-2026-10-08.json` for the committed database evidence.
 CMS publication and website deployment are separate operations.
 
-Four isolated Cloudflare build/packaging dry-runs succeeded. These dry-runs do not
-upload, verify account access, export approved content or activate domains. Four
-real brand deployment commands have now been started after the approval and
-database publication steps; their completion has not yet been verified. Cloudflare
-account access remains unavailable: the dashboard reports a verification problem
-in this cloud browser and no Cloudflare credentials are configured locally. No
-successful business-domain deployment is claimed by this checkpoint.
+All four real public-API HTML exports and their final artifact audits pass:
+**852 index-eligible pages and 24 noindex legal utility pages**, including all
+796 approved landing records. Canonical URLs, full authored content, structured
+data, verified contact/address, discovery manifests and sitemap URLs agree.
+Four Wrangler dry-runs also pass against these approved artifact directories.
+The artifact audit is now required by the deploy command before any upload.
+
+All four real Wrangler deploy commands stopped before upload because this
+non-interactive environment has no `CLOUDFLARE_API_TOKEN`. No successful upload,
+DNS activation or live-domain release is claimed. The earlier dashboard verification
+problem also remains unresolved. The review and CMS publication are complete;
+Cloudflare account access is the deployment blocker. See
+`approved-html-export-2026-10-08.json` and `deployment-readiness-2026-10-08.json`.
 
 The readiness audit identified real operational gaps beyond hosting:
 
