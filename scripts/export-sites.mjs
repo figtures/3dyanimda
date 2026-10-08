@@ -11,6 +11,7 @@ import {compileRedirects,legacyRedirects} from "./search/redirects.mjs";
 import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
+import { createPublicApiRelay } from "./public-api-relay.mjs";
 const env = { ...loadEnv("production", process.cwd(), ""), ...process.env };
 const hosts = (env.SITE_HOSTS || "").split(",").filter(Boolean);
 if (
@@ -62,11 +63,13 @@ try {
     const { data: tenantId, error: tenantError } =
       await api.rpc("current_tenant_id");
     if (tenantError || !tenantId) throw new Error(`Unregistered host: ${host}`);
-    const { data: tenant } = await api
+    const { data: tenant, error: tenantReadError } = await api
       .from("tenants")
       .select("*")
       .eq("id", tenantId)
       .single();
+    if (tenantReadError || !tenant)
+      throw tenantReadError || new Error(`Tenant read failed: ${host}`);
     if ((tenant.custom_domain || tenant.domain) !== host)
       throw new Error(`Use canonical domain for ${host}`);
     const [landing, pages, posts, seo, redirects] = await Promise.all([
@@ -161,27 +164,35 @@ try {
       } catch {}
       return route.fulfill({ body: shell, contentType: "text/html" });
     });
-    // Fetch the public API through Playwright's request context during build.
-    // This also supports an isolated localhost fixture without browser private-network restrictions.
+    const failed = [];
+    // Cache scope ends with this tenant export; successful reads are immutable
+    // snapshots of actual API responses, never shared with another host.
+    const relayPublicApi = createPublicApiRelay();
+    // Preserve the actual browser API request/response while using Node's
+    // configured network path (Playwright's resolver may not share that path).
     await context.route(
       env.VITE_SUPABASE_URL.replace(/\/$/, "") + "/**",
       async (route) => {
-        const response = await route.fetch();
-        await route.fulfill({
-          response,
-          headers: {
-            ...response.headers(),
-            "access-control-allow-origin": "*",
-          },
-        });
+        try { await relayPublicApi(route); }
+        catch (error) {
+          failed.push(error.message);
+          await route.abort("failed");
+        }
       },
     );
     const page = await context.newPage();
-    const failed = [];
     page.on("pageerror", (e) => failed.push(e.message));
     page.on("requestfailed", (r) =>
       failed.push(r.url() + ": " + r.failure()?.errorText),
     );
+    // HTTP failures do not emit requestfailed. Some settings/SEO/legal hooks
+    // intentionally render an empty state on an API error; never freeze that
+    // partial state into the public HTML export.
+    page.on("response", (response) => {
+      const url = new URL(response.url());
+      if (url.origin === new URL(env.VITE_SUPABASE_URL).origin && response.status() >= 400)
+        failed.push(`Public API returned ${response.status()}: ${url.pathname}`);
+    });
     const published = [];
     for (const [url, lastmod] of routes) {
       if (!/^\/[a-z0-9/-]*$/.test(url) || url.includes(".."))

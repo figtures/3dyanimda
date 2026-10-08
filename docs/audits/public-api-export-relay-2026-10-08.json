@@ -1,0 +1,21 @@
+{
+  "result": "pass",
+  "testedAt": "2026-10-08T16:24:06.298Z",
+  "scope": "Read-only real public Supabase RPC plus 3dyanimda home/contact production bundle rendering; no full export or deploy",
+  "rpcStatus": 200,
+  "relay": "scripts/public-api-relay.mjs",
+  "apiResponses": 21,
+  "cases": [
+    {
+      "path": "/",
+      "title": "Fikrinizden parçaya. Üretim yanınızda.",
+      "canonical": "https://3dyanimda.com/"
+    },
+    {
+      "path": "/iletisim",
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "canonical": "https://3dyanimda.com/iletisim"
+    }
+  ],
+  "failures": []
+}

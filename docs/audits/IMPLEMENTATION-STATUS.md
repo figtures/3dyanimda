@@ -1,6 +1,6 @@
 # Originality and SEO/GEO implementation status — 2026-10-08
 
-## Current status — 8 October 2026, publication preparation
+## Current status — 8 October 2026, review approved and CMS publication verified
 
 All 796 content records are authored, including the 652 previously empty local
 routes. They are saved in the repository and the intended remote Supabase project.
@@ -9,17 +9,27 @@ records plus four home allocations). The 652 local routes pass 3,912 browser
 cases; the earlier editorial and utility inventory passed 1,224 cases. The exact
 remote content readback and local completeness reports are in this directory.
 
-The owner has now requested publication. No production deployment has occurred.
-Fresh remote readback confirms 199 drafts per brand, zero published landing pages
-and zero publication review rows. A source-bound human review certificate is still
-absent; automatic test results are not human approval records. The 16 referenced
-raster assets have documented generation provenance, and 12 GLBs have reproducible
-generators, but the final review and asset registration remain outstanding.
+The owner explicitly delegated final review and approval to Codex. The source-bound
+certificate in `content/release-review.json` now passes release preflight. It records
+Codex as an owner-delegated AI reviewer and `humanReviewPerformed: false`; it does
+not claim a human inspection. The documented scope includes all four brands and
+three themes, the reconciled 5,136 historical render cases, 192 current runtime
+cases, 36 model-selection cases, and the stated semantic and asset review limits.
+
+The atomic Supabase publication transaction is committed. Fresh remote readback
+confirms 199 published records and zero drafts per brand: **796 published records,
+796 matching publication reviews, and 28 registered assets** (16 images and 12
+models) in total. All 796 current payloads match their approved review fingerprints.
+See `publication-applied-2026-10-08.json` for the committed database evidence.
+CMS publication and website deployment are separate operations.
 
 Four isolated Cloudflare build/packaging dry-runs succeeded. These dry-runs do not
-upload, verify account access, export approved content or activate domains. The
-Cloudflare dashboard is signed out and currently reports a verification problem
-in this cloud browser. No Cloudflare credentials are configured locally.
+upload, verify account access, export approved content or activate domains. Four
+real brand deployment commands have now been started after the approval and
+database publication steps; their completion has not yet been verified. Cloudflare
+account access remains unavailable: the dashboard reports a verification problem
+in this cloud browser and no Cloudflare credentials are configured locally. No
+successful business-domain deployment is claimed by this checkpoint.
 
 The readiness audit identified real operational gaps beyond hosting:
 

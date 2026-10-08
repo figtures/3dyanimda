@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-08T16:19:56.209Z",
+  "result": "pass",
+  "projectId": "zdxjmhhjuomcpdtllnuq",
+  "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "certificate": "content/release-review.json",
+  "manifestHash": "a533860fd477bba7b777d69b48f8082f3c4b7c74f19a8b258455315626f1c57f",
+  "sqlSha256": "9d537b6dc9bfd34acd027a25fd3da85d76d18344668f4fd899e41371edd2c2df",
+  "brands": [
+    {
+      "slug": "3dsanayi",
+      "total": 199,
+      "published": 199,
+      "drafts": 0,
+      "reviews": 199,
+      "approved_payload_matches": 199,
+      "registered_images": 4,
+      "registered_models": 3
+    },
+    {
+      "slug": "3dyanimda",
+      "total": 199,
+      "published": 199,
+      "drafts": 0,
+      "reviews": 199,
+      "approved_payload_matches": 199,
+      "registered_images": 4,
+      "registered_models": 3
+    },
+    {
+      "slug": "maketyanimda",
+      "total": 199,
+      "published": 199,
+      "drafts": 0,
+      "reviews": 199,
+      "approved_payload_matches": 199,
+      "registered_images": 4,
+      "registered_models": 3
+    },
+    {
+      "slug": "parcayanimda",
+      "total": 199,
+      "published": 199,
+      "drafts": 0,
+      "reviews": 199,
+      "approved_payload_matches": 199,
+      "registered_images": 4,
+      "registered_models": 3
+    }
+  ],
+  "totals": {
+    "published": 796,
+    "drafts": 0,
+    "reviews": 796,
+    "approvedPayloadMatches": 796,
+    "registeredImages": 16,
+    "registeredModels": 12
+  },
+  "execution": {
+    "atomic": true,
+    "gatesUnchanged": true,
+    "initialToolResponse": "MCP request timed out; did not retry mutation",
+    "resolution": "Fresh database readback confirmed commit, no in-flight transaction, all 796 matching reviewed payloads and 28 registered assets"
+  },
+  "websiteDeployment": "Separate from CMS publication; see deployment-readiness-2026-10-08.json"
+}

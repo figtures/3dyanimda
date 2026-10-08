@@ -1,0 +1,1390 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "reviewerType": "ai",
+  "reviewedAt": "2026-10-08",
+  "humanReviewPerformed": false,
+  "authority": "Owner explicitly requested Codex perform, approve and record the final review: son inceleme kaydını sen yap onayla ve geç.",
+  "scope": "All 16 raster and 12 GLB references allocated by the current merged editorial inventory and four homepages. Repetition across display themes is the same route, not cross-route asset allocation.",
+  "manifest": "docs/audits/reviewed-assets-2026-10-08.json",
+  "manifestSha256": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
+  "checks": {
+    "imageProvenance": {
+      "result": "pass",
+      "images": 16,
+      "evidence": [
+        "content/authoring/service-artwork.json",
+        "content/authoring/product-hero-artwork.json",
+        "docs/DESIGN.md"
+      ],
+      "method": "Read repository generation records and original briefs; independently checked all final images visually; hashed current output and evidence files. Product hero matches its recorded SHA256."
+    },
+    "visualSimilarity": {
+      "result": "pass",
+      "images": 16,
+      "pairComparisons": 120,
+      "variantComparisonsPerPair": 49,
+      "thresholdHammingDistance": 8,
+      "minimumObservedHammingDistance": 14,
+      "method": "Inspected the complete 16-image contact sheet for subject/composition differences, branding and misleading production claims, plus mirrored/rotated/cropped pHash checks."
+    },
+    "modelGeometry": {
+      "result": "pass",
+      "models": 12,
+      "byteIdenticalRegeneration": 12,
+      "geometryIdenticalRegeneration": 12,
+      "uniqueGeometryHashes": 12,
+      "pairComparisons": 66,
+      "similarityThreshold": 0.025,
+      "minimumObservedShapeVectorDelta": 0.1452,
+      "method": "Re-ran both local generators into an isolated temporary directory; compared each complete GLB byte-for-byte and normalized geometry fingerprint; visually inspected all 12 models rendered in the actual local viewer."
+    },
+    "exclusiveAllocation": {
+      "result": "pass",
+      "uniqueAssetPaths": 28,
+      "uniqueSha256": 28,
+      "modelsPerBrand": 3,
+      "imagesPerBrand": 4,
+      "method": "Enumerated all merged content image references and the brand catalog/model assignment. Each reviewed asset belongs to one brand and one editorial route."
+    },
+    "renderedModelViewer": {
+      "result": "pass",
+      "command": "CHROMIUM_EXECUTABLE=/workspace/scratch/c4ef6c7bcafd/qa-browser/chromium node scripts/test-model-showcase.mjs",
+      "brands": 4,
+      "themes": 3,
+      "modelSelectionCases": 36,
+      "surfaceWireframePointCloudControls": true,
+      "zoomAndReset": true,
+      "glbDownloadMagic": true,
+      "mobileOverflow": false,
+      "pageErrors": 0,
+      "failedDownloadFallback": true,
+      "additionalVisualEvidence": "Captured and inspected all 12 model surfaces from the actual 390px studio viewer."
+    },
+    "truthfulLabeling": {
+      "result": "pass",
+      "evidence": [
+        "src/themes/HomeHero.tsx",
+        "src/themes/ModelShowcase.tsx",
+        "src/pages/ContentPage.tsx"
+      ],
+      "method": "Hero, service illustrations and models are explicitly labeled illustrative; showcase text excludes real customer work and validated production drawings."
+    }
+  },
+  "nonBlockingDocumentationNotes": [
+    "docs/DESIGN.md preserves an older allocation note naming the same fixture for two brands. Current catalog and content references allocate it only to 3dsanayi; 3dyanimda uses product-prototype.",
+    "public/models/README.md describes the first nine generated models; the three additional industrial models have a separate explicit local generator. All twelve were reviewed and reproduced."
+  ],
+  "limitations": [
+    "This record accurately identifies its reviewer as AI acting on explicit owner delegation. No human review is claimed.",
+    "Originality is evaluated within this 28-asset brand-network inventory and the reviewed source records; web-wide uniqueness or exclusive legal rights are not asserted.",
+    "The result covers illustrative website assets, not engineering fitness, measured device capability, customer endorsement or production reliability."
+  ],
+  "imageComparisons": [
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/3dyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/3dyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 16
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/3dsanayi-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/3dsanayi-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/3dsanayi-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 14
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/maketyanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 28
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-print.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/3dyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 18
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/3dsanayi-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/3dsanayi-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/3dsanayi-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/maketyanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-scan.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/3dsanayi-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/3dsanayi-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/3dsanayi-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 18
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/maketyanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 28
+    },
+    {
+      "assets": [
+        "/brand/services/3dyanimda-model.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/3dsanayi-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/3dsanayi-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/maketyanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 28
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-print.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/3dsanayi-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/maketyanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 18
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-scan.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/services/maketyanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/3dsanayi-model.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/services/maketyanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-print.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/services/maketyanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 18
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-scan.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/services/parcayanimda-print.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/maketyanimda-model.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-print.webp",
+        "/brand/services/parcayanimda-scan.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-print.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-print.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-print.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-print.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-print.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-scan.webp",
+        "/brand/services/parcayanimda-model.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-scan.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 16
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-scan.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-scan.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-scan.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-model.webp",
+        "/brand/industrial/product-prototype.webp"
+      ],
+      "minimum_variant_hamming_distance": 28
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-model.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-model.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/services/parcayanimda-model.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 24
+    },
+    {
+      "assets": [
+        "/brand/industrial/product-prototype.webp",
+        "/brand/industrial/fixture.webp"
+      ],
+      "minimum_variant_hamming_distance": 26
+    },
+    {
+      "assets": [
+        "/brand/industrial/product-prototype.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/industrial/product-prototype.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/industrial/fixture.webp",
+        "/brand/industrial/architecture.webp"
+      ],
+      "minimum_variant_hamming_distance": 22
+    },
+    {
+      "assets": [
+        "/brand/industrial/fixture.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    },
+    {
+      "assets": [
+        "/brand/industrial/architecture.webp",
+        "/brand/industrial/parts.webp"
+      ],
+      "minimum_variant_hamming_distance": 20
+    }
+  ],
+  "modelComparisons": [
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/campus.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2519
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/clip.glb"
+      ],
+      "maximum_shape_vector_delta": 0.4962
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/district.glb"
+      ],
+      "maximum_shape_vector_delta": 0.19480000000000008
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/drill-gauge.glb"
+      ],
+      "maximum_shape_vector_delta": 1.5871
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/duct.glb"
+      ],
+      "maximum_shape_vector_delta": 0.3521000000000001
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/enclosure.glb"
+      ],
+      "maximum_shape_vector_delta": 0.3489
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2278
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.21219999999999994
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.6738
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 1.0882999999999998
+    },
+    {
+      "assets": [
+        "public/models/assembly-nest.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.18209999999999993
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/clip.glb"
+      ],
+      "maximum_shape_vector_delta": 0.5721
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/district.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2874000000000001
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/drill-gauge.glb"
+      ],
+      "maximum_shape_vector_delta": 1.535
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/duct.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2985
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/enclosure.glb"
+      ],
+      "maximum_shape_vector_delta": 0.22320000000000007
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2339
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2311
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.5481
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 0.8874999999999997
+    },
+    {
+      "assets": [
+        "public/models/campus.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.16890000000000002
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/district.glb"
+      ],
+      "maximum_shape_vector_delta": 0.5066999999999999
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/drill-gauge.glb"
+      ],
+      "maximum_shape_vector_delta": 1.9055
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/duct.glb"
+      ],
+      "maximum_shape_vector_delta": 0.669
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/enclosure.glb"
+      ],
+      "maximum_shape_vector_delta": 0.40700000000000003
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 0.5055000000000001
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.46240000000000003
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2219
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 1.2501000000000002
+    },
+    {
+      "assets": [
+        "public/models/clip.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.4471
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/drill-gauge.glb"
+      ],
+      "maximum_shape_vector_delta": 1.5369
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/duct.glb"
+      ],
+      "maximum_shape_vector_delta": 0.3004
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/enclosure.glb"
+      ],
+      "maximum_shape_vector_delta": 0.22130000000000005
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2307999999999999
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.23809999999999998
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.5462
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 0.9086000000000001
+    },
+    {
+      "assets": [
+        "public/models/district.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.1452
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/duct.glb"
+      ],
+      "maximum_shape_vector_delta": 1.2907
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/enclosure.glb"
+      ],
+      "maximum_shape_vector_delta": 1.7582
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 1.6133
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 1.6215
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 2.0831
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 1.0619000000000003
+    },
+    {
+      "assets": [
+        "public/models/drill-gauge.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 1.5914
+    },
+    {
+      "assets": [
+        "public/models/duct.glb",
+        "public/models/enclosure.glb"
+      ],
+      "maximum_shape_vector_delta": 0.5217
+    },
+    {
+      "assets": [
+        "public/models/duct.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 0.3226
+    },
+    {
+      "assets": [
+        "public/models/duct.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.385
+    },
+    {
+      "assets": [
+        "public/models/duct.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.8466
+    },
+    {
+      "assets": [
+        "public/models/duct.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 0.7361999999999997
+    },
+    {
+      "assets": [
+        "public/models/duct.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.3549
+    },
+    {
+      "assets": [
+        "public/models/enclosure.glb",
+        "public/models/fixture.glb"
+      ],
+      "maximum_shape_vector_delta": 0.2751000000000001
+    },
+    {
+      "assets": [
+        "public/models/enclosure.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.20500000000000002
+    },
+    {
+      "assets": [
+        "public/models/enclosure.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.3868
+    },
+    {
+      "assets": [
+        "public/models/enclosure.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 1.1049000000000002
+    },
+    {
+      "assets": [
+        "public/models/enclosure.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.16680000000000006
+    },
+    {
+      "assets": [
+        "public/models/fixture.glb",
+        "public/models/impeller.glb"
+      ],
+      "maximum_shape_vector_delta": 0.18469999999999998
+    },
+    {
+      "assets": [
+        "public/models/fixture.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.6000000000000001
+    },
+    {
+      "assets": [
+        "public/models/fixture.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 1.0139000000000002
+    },
+    {
+      "assets": [
+        "public/models/fixture.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.25439999999999996
+    },
+    {
+      "assets": [
+        "public/models/impeller.glb",
+        "public/models/knob.glb"
+      ],
+      "maximum_shape_vector_delta": 0.4619
+    },
+    {
+      "assets": [
+        "public/models/impeller.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 0.9664999999999997
+    },
+    {
+      "assets": [
+        "public/models/impeller.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.19640000000000002
+    },
+    {
+      "assets": [
+        "public/models/knob.glb",
+        "public/models/robot-gripper.glb"
+      ],
+      "maximum_shape_vector_delta": 1.4258000000000002
+    },
+    {
+      "assets": [
+        "public/models/knob.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.4917
+    },
+    {
+      "assets": [
+        "public/models/robot-gripper.glb",
+        "public/models/villa.glb"
+      ],
+      "maximum_shape_vector_delta": 0.9560000000000002
+    }
+  ]
+}

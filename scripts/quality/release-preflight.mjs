@@ -5,14 +5,14 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 const audit = spawnSync('python', ['scripts/quality/audit-content.py'], { stdio: 'inherit' });
 if (audit.status !== 0) throw new Error('Release blocked: network originality audit did not pass.');
-// Bind the human review to all shipped source, public assets and authoring records.
+// Bind the evidence-bearing final review to source, public assets and authoring records.
 const files = [];
 function walk(dir) {
   for (const entry of readdirSync(dir, {withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))) {
     const file=path.posix.join(dir,entry.name);
     if(entry.isDirectory()) walk(file);
     else if(entry.isFile() && file!=='content/release-review.json') files.push(file);
-    else throw new Error(`Unsupported release entry: ${file}`);
+    else if(!entry.isFile()) throw new Error(`Unsupported release entry: ${file}`);
   }
 }
 for (const dir of ['src','public','content']) walk(dir);

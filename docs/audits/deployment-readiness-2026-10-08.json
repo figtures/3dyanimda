@@ -1,18 +1,26 @@
 {
-  "checkedAt": "2026-10-08T15:39:20.409275+00:00",
+  "checkedAt": "2026-10-08T16:33:40.084611+00:00",
   "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
-  "result": "blocked_before_upload",
+  "result": "review_approved_cms_published_html_export_in_progress",
   "productionPublished": false,
   "content": {
     "total": 796,
     "completedFormerLocalShells": 652,
-    "remotePublished": 0,
-    "publicationReviews": 0
+    "remotePublished": 796,
+    "publicationReviews": 796,
+    "remoteDrafts": 0,
+    "approvedPayloadMatches": 796,
+    "registeredAssets": 28
   },
   "deploymentAttempt": {
-    "brand": "3dyanimda",
-    "command": "npm run deploy:3dyanimda",
-    "stop": "Missing source-bound human release review certificate",
+    "brands": [
+      "3dyanimda",
+      "3dsanayi",
+      "maketyanimda",
+      "parcayanimda"
+    ],
+    "command": "npm run deploy:<brand>",
+    "phase": "Approved HTML export in progress after source-bound preflight passes",
     "cloudflareUploadAttempted": false
   },
   "cloudflare": {
@@ -26,7 +34,9 @@
   "fixes": [
     "Export six legal utility routes as HTML outside indexing submissions",
     "Contact page reflects confirmed cargo/courier/collection, on-site scanning and workshop appointment facts",
-    "Quote reply authorization uses stored quote recipient and tenant with quotes.edit; generic sending retains email_templates.edit"
+    "Quote reply authorization uses stored quote recipient and tenant with quotes.edit; generic sending retains email_templates.edit",
+    "Fix valid review certificate being treated as an unsupported filesystem entry; stale review still rejected",
+    "Relay actual public browser reads through Node network path; isolate successful read snapshots per tenant export and fail on API errors"
   ],
   "validation": {
     "applicationTests": 65,
@@ -34,10 +44,14 @@
     "searchTests": 9,
     "workerTests": 4,
     "typecheck": "pass",
-    "allFourBuildsAndPackaging": "pass"
+    "allFourBuildsAndPackaging": "pass",
+    "releasePreflight": "pass",
+    "staleReviewRejection": "pass",
+    "reviewEvidenceHashesMatched": 11,
+    "publicApiRelayTests": 7
   },
   "remaining": {
-    "publicationReview": "Pending; no certificates fabricated",
+    "publicationReview": "Complete: actual owner-delegated Codex AI review, humanReviewPerformed=false; certificate and all 796 DB approvals verified",
     "legalDocuments": "Zero for each of four brands",
     "businessContact": "Public email, phone and street address are complete; registered legal operator/tax identity still unconfirmed for the legal documents",
     "emailDelivery": "No Edge Functions deployed; provider, brand routes and schedule require activation; remote secrets unverified",
@@ -49,10 +63,15 @@
     "docs/audits/all-local-originality.json",
     "docs/audits/local-content-completeness.json",
     "docs/audits/remote-local-content-2026-10-08.json",
-    "docs/audits/release-review-request.json"
+    "docs/audits/release-review-request.json",
+    "content/release-review.json",
+    "docs/audits/publication-applied-2026-10-08.json",
+    "docs/audits/public-api-export-relay-2026-10-08.json"
   ],
   "completedSinceInitialAudit": {
     "businessContact": "Owner-confirmed email, phone and full workshop address saved/read back for four tenants, eight settings",
-    "ga4": "3dyanimda stream G-HBTDHJ45M7 configured locally and build verified; not deployed"
+    "ga4": "3dyanimda stream G-HBTDHJ45M7 configured locally and build verified; not deployed",
+    "finalReview": "Source-bound Codex AI approval under explicit owner delegation",
+    "cmsPublication": "796 published, 0 drafts, 796 matching reviews, 28 registered assets"
   }
 }

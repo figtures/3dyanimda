@@ -1,0 +1,1590 @@
+{
+  "result": "pass",
+  "reviewType": "AI-assisted automated production-bundle runtime review",
+  "testedAt": "2026-10-08T16:06:07.281Z",
+  "cases": 192,
+  "brands": [
+    "3dyanimda",
+    "3dsanayi",
+    "maketyanimda",
+    "parcayanimda"
+  ],
+  "themes": [
+    "industrial",
+    "editorial",
+    "studio"
+  ],
+  "widths": [
+    1440,
+    390
+  ],
+  "routes": [
+    "/",
+    "/iletisim",
+    "/yasal",
+    "/kvkk-aydinlatma-metni",
+    "/gizlilik-politikasi",
+    "/cerez-politikasi",
+    "/kullanim-kosullari",
+    "/basvuru-acik-riza-metni"
+  ],
+  "contactFixture": "content/authoring/confirmed-business-contact.json",
+  "contactReadbackEvidence": "docs/audits/confirmed-business-contact-2026-10-08.json",
+  "checks": [
+    "single visible heading",
+    "brand/theme rendering",
+    "canonical domain per brand",
+    "preview noindex",
+    "owner-confirmed contact and appointment/delivery/scanning facts",
+    "verified JSON-LD identity and one physical workshop",
+    "legal empty-state reachable and noindex",
+    "no broken main images",
+    "no horizontal overflow",
+    "zero runtime errors",
+    "zero external network attempts"
+  ],
+  "limitations": [
+    "Deterministic public API fixture; this check does not validate production RLS, DNS, TLS or live Supabase availability.",
+    "Legal documents are absent in the fixture, matching the last recorded readiness state; actual legal text is not reviewed or approved here.",
+    "No quote submission, file storage, email delivery or GA4 receipt tested.",
+    "This test does not grant publication approval or change database statuses."
+  ],
+  "records": [
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/",
+      "width": 1440,
+      "title": "Üretiminize özel.\nİşinize hazır.",
+      "contentHash": "59f5d48ac3cf866d57a6c048b9c8ec484b5b2c0e3904bfdd8cccb9e4ea17b46e"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "width": 1440,
+      "title": "Fikrinizden parçaya.\nÜretim yanınızda.",
+      "contentHash": "d1b3a167a4e27a6bc2232be3047e50c0dd92c755979ef86ae073c1d3bf654b19"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "width": 1440,
+      "title": "Projenizi görün.\nDetayına dokunun.",
+      "contentHash": "0b7c1ad0cbca4fe35d4bc3d440a7582e13f40bf2d2b1361d69c68baa91cbdfb0"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/",
+      "width": 1440,
+      "title": "Aradığınız parça.\nYeni bir başlangıç.",
+      "contentHash": "fd04fc2aea5ae64db5db2f36c92b5330661bfef7a6e5ef46cfbb90c9094688d8"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "width": 390,
+      "title": "Fikrinizden parçaya.\nÜretim yanınızda.",
+      "contentHash": "d1b3a167a4e27a6bc2232be3047e50c0dd92c755979ef86ae073c1d3bf654b19"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/",
+      "width": 390,
+      "title": "Üretiminize özel.\nİşinize hazır.",
+      "contentHash": "59f5d48ac3cf866d57a6c048b9c8ec484b5b2c0e3904bfdd8cccb9e4ea17b46e"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "width": 390,
+      "title": "Projenizi görün.\nDetayına dokunun.",
+      "contentHash": "0b7c1ad0cbca4fe35d4bc3d440a7582e13f40bf2d2b1361d69c68baa91cbdfb0"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/",
+      "width": 390,
+      "title": "Aradığınız parça.\nYeni bir başlangıç.",
+      "contentHash": "fd04fc2aea5ae64db5db2f36c92b5330661bfef7a6e5ef46cfbb90c9094688d8"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "0dd5bc84d0c838ba392d828fbe95cc936b784d58225dff09638a22d799d93133"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "4b2fbcb3a624c0df15b9bbf0400fa4e83c8781dbdaff531bd0390f73371ff994"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "b4c5d6bd1b1627c7b5f7c4ca87da50535611d64e1b986bb47acf0f27f6e04082"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "33898fb198ee1c615eb709a0ba922fa77a92ab769f2666cf9e18ccaf2932f226"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "0dd5bc84d0c838ba392d828fbe95cc936b784d58225dff09638a22d799d93133"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "4b2fbcb3a624c0df15b9bbf0400fa4e83c8781dbdaff531bd0390f73371ff994"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "33898fb198ee1c615eb709a0ba922fa77a92ab769f2666cf9e18ccaf2932f226"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "b4c5d6bd1b1627c7b5f7c4ca87da50535611d64e1b986bb47acf0f27f6e04082"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "width": 1440,
+      "title": "Projenizi görün. Detayına dokunun.↗",
+      "contentHash": "b1902498779830a1d979a35df8dfaf83ce2e8e54a32b3768abe411d8e3892bce"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "width": 390,
+      "title": "Projenizi görün. Detayına dokunun.↗",
+      "contentHash": "b1902498779830a1d979a35df8dfaf83ce2e8e54a32b3768abe411d8e3892bce"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "width": 1440,
+      "title": "İyi fikirler, üretimle tamamlanır.↗",
+      "contentHash": "574abb4accc86e9f07423ebdf1978b7f3c512c4a3370b706a66b7cdd1c15d746"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/",
+      "width": 1440,
+      "title": "Üretiminize özel. İşinize hazır.↗",
+      "contentHash": "12348dc228b09c6745574f5f95b2803906ec7b20ad8aab6bbc6458ffb6d5c7de"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/",
+      "width": 1440,
+      "title": "Aradığınız parça. Yeni bir başlangıç.↗",
+      "contentHash": "4933c5669584e2a1cefce98f0c3eccf8763973b50b2d0b74f792d0431d4220d5"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/",
+      "width": 390,
+      "title": "Üretiminize özel. İşinize hazır.↗",
+      "contentHash": "12348dc228b09c6745574f5f95b2803906ec7b20ad8aab6bbc6458ffb6d5c7de"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "width": 390,
+      "title": "İyi fikirler, üretimle tamamlanır.↗",
+      "contentHash": "574abb4accc86e9f07423ebdf1978b7f3c512c4a3370b706a66b7cdd1c15d746"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/",
+      "width": 390,
+      "title": "Aradığınız parça. Yeni bir başlangıç.↗",
+      "contentHash": "4933c5669584e2a1cefce98f0c3eccf8763973b50b2d0b74f792d0431d4220d5"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "b4c5d6bd1b1627c7b5f7c4ca87da50535611d64e1b986bb47acf0f27f6e04082"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "b4c5d6bd1b1627c7b5f7c4ca87da50535611d64e1b986bb47acf0f27f6e04082"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "33898fb198ee1c615eb709a0ba922fa77a92ab769f2666cf9e18ccaf2932f226"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "4b2fbcb3a624c0df15b9bbf0400fa4e83c8781dbdaff531bd0390f73371ff994"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "0dd5bc84d0c838ba392d828fbe95cc936b784d58225dff09638a22d799d93133"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "4b2fbcb3a624c0df15b9bbf0400fa4e83c8781dbdaff531bd0390f73371ff994"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "33898fb198ee1c615eb709a0ba922fa77a92ab769f2666cf9e18ccaf2932f226"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "0dd5bc84d0c838ba392d828fbe95cc936b784d58225dff09638a22d799d93133"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/",
+      "width": 1440,
+      "title": "Üretime buradan başlayın.",
+      "contentHash": "b5cc3e69715ceee6a68612de733a7b40599ea8d8eea42ec20c26cdb9e90d7703"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/",
+      "width": 1440,
+      "title": "Projenizi görün. Detayına dokunun.",
+      "contentHash": "cd46abb4dd3aec210cd2062ca90e4bd5bfabc40a8bd19e51b384829965b8cad7"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/",
+      "width": 390,
+      "title": "Üretime buradan başlayın.",
+      "contentHash": "b5cc3e69715ceee6a68612de733a7b40599ea8d8eea42ec20c26cdb9e90d7703"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/",
+      "width": 390,
+      "title": "Projenizi görün. Detayına dokunun.",
+      "contentHash": "cd46abb4dd3aec210cd2062ca90e4bd5bfabc40a8bd19e51b384829965b8cad7"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/",
+      "width": 1440,
+      "title": "Üretiminize özel. İşinize hazır.",
+      "contentHash": "5680361f307dd7f0b6e310099399658fc688d80cf26ac526d11dc06630504cfa"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/",
+      "width": 1440,
+      "title": "Aradığınız parça. Yeni bir başlangıç.",
+      "contentHash": "e1daaacfcd8662bff202f894eb7ec1e2dac35eb75f5e531551337b47a28fe9b2"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/",
+      "width": 390,
+      "title": "Üretiminize özel. İşinize hazır.",
+      "contentHash": "5680361f307dd7f0b6e310099399658fc688d80cf26ac526d11dc06630504cfa"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/",
+      "width": 390,
+      "title": "Aradığınız parça. Yeni bir başlangıç.",
+      "contentHash": "e1daaacfcd8662bff202f894eb7ec1e2dac35eb75f5e531551337b47a28fe9b2"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "0dd5bc84d0c838ba392d828fbe95cc936b784d58225dff09638a22d799d93133"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "b4c5d6bd1b1627c7b5f7c4ca87da50535611d64e1b986bb47acf0f27f6e04082"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "0dd5bc84d0c838ba392d828fbe95cc936b784d58225dff09638a22d799d93133"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "b4c5d6bd1b1627c7b5f7c4ca87da50535611d64e1b986bb47acf0f27f6e04082"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "4b2fbcb3a624c0df15b9bbf0400fa4e83c8781dbdaff531bd0390f73371ff994"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 1440,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "33898fb198ee1c615eb709a0ba922fa77a92ab769f2666cf9e18ccaf2932f226"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "4b2fbcb3a624c0df15b9bbf0400fa4e83c8781dbdaff531bd0390f73371ff994"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "width": 390,
+      "title": "Bir fikir, bir parça\nya da bir soru.",
+      "contentHash": "33898fb198ee1c615eb709a0ba922fa77a92ab769f2666cf9e18ccaf2932f226"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/yasal",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/kvkk-aydinlatma-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/gizlilik-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/cerez-politikasi",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/kullanim-kosullari",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "6bdd8a60a030e03062c86257e89bc0f38171099db9307d908bb018f1e39fd431"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "f4efa33f9106e7e788f21f1a09ce91a4d196f1b984156ea17afae2210f554f3b"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 1440,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "067a078506cbc515fb5d779f044e7fa921ea0ae20161e816341e12cdf7cad2da"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/basvuru-acik-riza-metni",
+      "width": 390,
+      "title": "Gizlilik bilgileri",
+      "contentHash": "0932939929764ca2af96fea78513b66fa1030e73a7aa38f0b3ed97a887af8ef3"
+    }
+  ]
+}

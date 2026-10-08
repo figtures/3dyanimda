@@ -1,0 +1,96 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-08T16:11:34.076506+00:00",
+  "authorization": {
+    "source": "Current owner instruction in conversation",
+    "statement": "son inceleme kaydını sen yap onayla ve geç",
+    "receivedAt": "2026-10-08T19:00:37+03:00"
+  },
+  "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+  "sourceFileCount": 361,
+  "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
+  "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
+  "checks": {
+    "allBrandsAllThemesAllRoutes": true,
+    "renderedText": true,
+    "imageProvenance": true,
+    "visualSimilarity": true,
+    "modelGeometry": true,
+    "localEvidence": true,
+    "seoGeoParity": true
+  },
+  "scope": {
+    "contentRoutes": 796,
+    "brands": 4,
+    "themes": 3,
+    "images": 16,
+    "models": 12,
+    "reviewedRemotePayloadMatches": 796,
+    "historicalReconciledRenderCases": 5136,
+    "currentRuntimeCases": 192,
+    "modelSelectionCases": 36
+  },
+  "evidence": [
+    {
+      "file": "docs/audits/final-content-review-2026-10-08.json",
+      "sha256": "c57db32e4b632f9b5de373b8e3a6dc1da264146b1c98f27c301516a0a5ae0f9c"
+    },
+    {
+      "file": "docs/audits/final-asset-review-2026-10-08.json",
+      "sha256": "12f6af1e2bac5c221ae80029d5609f0dc33d7fd2971588efeead175af1e657b1"
+    },
+    {
+      "file": "docs/audits/final-runtime-review-2026-10-08.json",
+      "sha256": "e5161bd8bf1a4ae64aadb5fd25a9b4268d7622b6b9eb2aba3a16e9b1e3fe6627"
+    },
+    {
+      "file": "docs/audits/all-local-originality.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "docs/audits/rendered-local.json",
+      "sha256": "0fad9feb570b4d04b319424af750a1b0945db3731922505a206d60adc86ab73e"
+    },
+    {
+      "file": "docs/audits/rendered-editorial.json",
+      "sha256": "86bfde944a42ae50153e75640ed0e29a5da567f1f286686aa05112210fbb4d08"
+    },
+    {
+      "file": "docs/audits/local-content-completeness.json",
+      "sha256": "da6f5e6fb81db46c72c0b260ec506de7b159e3c759a1f3ac3792b315d09c9280"
+    },
+    {
+      "file": "docs/audits/confirmed-business-contact-2026-10-08.json",
+      "sha256": "d90882050dad93a5c716e6746362b70505e740a0ad8389ec88ecb07d9a01545c"
+    },
+    {
+      "file": "docs/audits/ga4-setup-2026-10-08.json",
+      "sha256": "28b44da3f4b78e589df3eba20a8762f902f3f762568f7123d87819e09866ebaa"
+    },
+    {
+      "file": "docs/audits/publication-content-manifest.json",
+      "sha256": "a689dba386e97afe0d4413cb223f36f709e14416546ba521cadb4af548e60dd7"
+    },
+    {
+      "file": "docs/audits/reviewed-assets-2026-10-08.json",
+      "sha256": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036"
+    }
+  ],
+  "limitations": [
+    "This is an actual AI review under explicit owner delegation; no human reviewer attestation is claimed.",
+    "Full inventory automated checks and prior rendered evidence were reconciled; targeted semantic full-text review covers 28 routes and 185 flagged technical/safety sentences, as itemized in the content report.",
+    "Asset originality is assessed within the brand-network inventory and documented generation records; no web-wide uniqueness or legal exclusivity guarantee.",
+    "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception."
+  ],
+  "remainingOperationalItems": [
+    "Cloudflare account/domain deployment access",
+    "Actual legal documents and registered operator identity",
+    "Mail provider/sender configuration, Edge Functions and notification schedule",
+    "GA4 enhanced measurement settings/live receipt; other brand analytics and search verification",
+    "Live quote/upload/email and public HTTP/robots/sitemap checks"
+  ]
+}

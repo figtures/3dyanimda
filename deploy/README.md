@@ -44,11 +44,17 @@ under `.cloudflare/<brand>/`. A brand mismatch from Supabase fails closed.
   that brand's Worker. Failed checks stop before Cloudflare upload.
 
 The automatic originality audit passes for all 796 authored content routes and
-four home asset records. Production deployment still requires the source-bound
-human release certificate and matching database publication reviews. Canonical
-domains are registered in Supabase; this does not establish Cloudflare ownership
-or DNS activation. See docs/audits/IMPLEMENTATION-STATUS.md for current evidence.
-This command does not add an approval bypass.
+four home asset records. On 8 October 2026, the owner delegated final approval to
+Codex. The source-bound `content/release-review.json` certificate records an actual
+AI review with `humanReviewPerformed: false`, and release preflight passes. Fresh
+Supabase readback confirms 796 published records, zero drafts, 796 matching reviews,
+and 28 registered assets (16 images and 12 models). See
+`docs/audits/publication-applied-2026-10-08.json` for the committed database evidence.
+Four real deployment commands have started; their completion is not yet verified.
+Cloudflare account access is still unavailable. Canonical domains registered in
+Supabase do not establish Cloudflare ownership or DNS activation. See
+`docs/audits/IMPLEMENTATION-STATUS.md` for scope and limitations. The release checks
+remain active; no approval bypass was added.
 
 The Worker serves exported HTML, true 404s and the admin/studio SPA shell. workers.dev
 responses are noindex and their robots.txt disallows crawling. Preview artifacts

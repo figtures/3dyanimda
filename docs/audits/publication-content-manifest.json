@@ -1,0 +1,4785 @@
+{
+  "policy": "global-originality-v1",
+  "result": "prepared_not_approved",
+  "records": 796,
+  "manifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
+  "hashMethod": "PostgreSQL JSONB md5 of all landing payload fields excluding id, status and updated_at; timestamps normalized in UTC",
+  "routes": [
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/3d-baski",
+      "payload_hash": "83907405b1777dd658697f253c7e38b0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/3d-modelleme",
+      "payload_hash": "7e1714488bf0205558867d6fd35607ba"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/3d-tarama",
+      "payload_hash": "5f4dfce2cb72e9ca0d47c36c6fee0be3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul",
+      "payload_hash": "7de0eae6b7f89dd4d1dbdf4f79a59f3f"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "payload_hash": "17d08e5154cf6819c75e561beb5c7a70"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "payload_hash": "c9935af712151e37dcb10022e8670347"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "payload_hash": "29438c8da9f687865be4bfb2e4d273e2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/adalar",
+      "payload_hash": "e74777be335a8fdf5f33e206ec707034"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "payload_hash": "48b86599385cc1118eadf1e19695d894"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "payload_hash": "54807d78d0a201d1055a4f30fe148f20"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "payload_hash": "5754489bb69599457efe3302619d06c7"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "payload_hash": "d81f8c600c7a11d3469b448e75a565c0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "payload_hash": "bb9664b17d2659ef680bd428375dbf94"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "payload_hash": "e60d34be8e79f2e9f703ba4df233ef86"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "payload_hash": "c7aaaebfafb125d1ee6637d35c5b5010"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir",
+      "payload_hash": "881f27e9d3b7498499de008dbc36d863"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "payload_hash": "10af5064a1bb7d35af463c8ba8cfb8d1"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "payload_hash": "c49dff3451bdf837e8edfd59d64e0a44"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "payload_hash": "7f7c010844b979cbfb12f90009fa5555"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "payload_hash": "8b3866a165e4820b694489d8a752787d"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "payload_hash": "e9e83ecdbc9798d155dd6eb7d4178af7"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "payload_hash": "f380ae7eae2289745f964053df7d246e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "payload_hash": "16bc7fbd7ee7e018c40e99763881aeb2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/avcilar",
+      "payload_hash": "f7527c3c1c20da6bb53494cf9c377aaa"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "payload_hash": "8a91fd0782029eba8fd5fc56ba58941e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "payload_hash": "87b4b0e5c217cf5dc4473534a9d0999c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "payload_hash": "efa3e4297e810b1516f992b4e40531f5"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "payload_hash": "8ad3f692d19a132fc034a6f298745115"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "payload_hash": "3c3eec832899502c9b64cea4c667f1ab"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "payload_hash": "75d40096c1e37c281908908b9947548c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "payload_hash": "c0157850360bf56ae61a90de07ae3944"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "payload_hash": "ff48977d1f01c11b79b6dff64023e922"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "payload_hash": "eebb22da229bd8d2d1cacc3f13d84d70"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "payload_hash": "86e732b90d855e08913451830af64bd7"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "payload_hash": "b42c98d5aefc45b30fadd7b39b2fd30b"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "payload_hash": "0c69d3072815e4ea11d3b390e1c3e3d5"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "payload_hash": "7538b1d24a54050aced56247245b83e3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "payload_hash": "131da11706fc16bac35f6b314dfcc165"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "payload_hash": "41984d82b03e4a91c532ebf3453311db"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "payload_hash": "0186b465e072e31c20fbf37409afcc77"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "payload_hash": "f64d3694b9c0b36d07315340990aa293"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "payload_hash": "8866db2b7082adcfb040a804273b2185"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "payload_hash": "30cf012faf1807189173e9a2c625c102"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "payload_hash": "762406b166b0b45aa03b854dd0367cb0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "payload_hash": "715198453c11695eed4f25e0a80ec0ca"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "payload_hash": "b14cbf0c89f89947f49d481b5f5bf96f"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "payload_hash": "f9213fb6c3942f2d9e63ea7c1c5e3cc0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/besiktas",
+      "payload_hash": "0dc17fbd770ac29721ac2e991122ef17"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "payload_hash": "7fe10024295420691c7fe18d587866cc"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "payload_hash": "b8088f77db4c913d5a3f7281e9c30ccb"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "payload_hash": "948cced9a37d7775cc07c665952b3cc9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beykoz",
+      "payload_hash": "fe35d97af4c96233bb909f2399e07a8e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "payload_hash": "aa411ba031e2f382aa9e571a8533f20f"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "payload_hash": "1132646203865ff3eeed016c867711d2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "payload_hash": "8222ac6cb6a3fde0cfd4f228e418c20a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "payload_hash": "4b5058f120ce3312f39c22bb548a7fd7"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "payload_hash": "12562c80cc983f12a0298f552bf4e9dd"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "payload_hash": "7704c0f0942eb2c6740f11c8cfd1d185"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "payload_hash": "4a17fd41421ab56ca2c41a3d47fc001a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "payload_hash": "cc5237a033fd386ee9553ce5d602003f"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "payload_hash": "c70a86e154659be118af63b98cb97607"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "payload_hash": "07c4810efc9cd16af5d0f1b1e4642f84"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "payload_hash": "55cb63f35ebd2d8674d92b0903b57b10"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "payload_hash": "d187bf90b2e9d028efb9db898743db04"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "payload_hash": "462d1582a98610ee12f06474104abd51"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "payload_hash": "01d5ad63f680eaf22c27aa8484c5965c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "payload_hash": "3694750a6d0083556929978ed7ede3c9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/catalca",
+      "payload_hash": "094171838bd66b2161da51e85752f69c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "payload_hash": "fce339e30281b24bd2c6ac5ee3f2eff0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "payload_hash": "e7ffae9e6a325dc9316e13600e24429d"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "payload_hash": "900aa25eaf368d8a5cd2f92afae62f19"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "payload_hash": "1700cef87c795fd6a9e4c2b15a5faf25"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "payload_hash": "da0400e82528dfb241e758af2c03426a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "payload_hash": "fa1795734099991c264d8083efeba4c3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "payload_hash": "f4c59b157bac0e04392fe0eb4784ac57"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenler",
+      "payload_hash": "b1339ac9ae19399dccb8d182d134bd36"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "payload_hash": "1d15653d606c78f466e7b58d0cc376be"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "payload_hash": "fc4c0e4cd92d5c408a91c7c7ecff9b56"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "payload_hash": "02006cdfe00ed9a1c4a44818e9aa671c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "payload_hash": "a199e2efc1f9b27dcaf567bed9ddc699"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "payload_hash": "49b15467d89ea13c8dbc8a313235caf8"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "payload_hash": "e2579dfdabb7577ef2c7d1d1acd13212"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "payload_hash": "b79ef51470a82bceafa0c0679d796aab"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "payload_hash": "4b18a11f5f5fa65a076f9c6e840e7b33"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "payload_hash": "4aaeb6e15da5c79a0db2d55991a7666e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "payload_hash": "7fce71be6a35feb10c9ba8ad4f32f3de"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "payload_hash": "1b54e24ee0edd129fd8070492a6923da"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/fatih",
+      "payload_hash": "9c0e111fd65649506dce6b4e76cc2c21"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "payload_hash": "778fd6ec7f74e0112e275ce4b7524bf2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "payload_hash": "c8521847c1fa5737076e14f6de895086"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "payload_hash": "419e9d382bfbd426b135a1ffc6193947"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "payload_hash": "9826724e405c9f2a2b3fca4873f353ff"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "payload_hash": "73a1a23353599b1fc6b253e7bc15525b"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "payload_hash": "1433afdf73305ceb4e7c3ddfcb88cee5"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "payload_hash": "3e6c872ef9a2fdf062ab00144d8b6c46"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gungoren",
+      "payload_hash": "0514636bd5c28b56a988709264f7675a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "payload_hash": "cd51999c1b92b8d50bc627118720df40"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "payload_hash": "c644b2273f3bcc5f728a4b6a9bf86ff0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "payload_hash": "a842f50bcd8647fd2b863a0a18e63e17"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "payload_hash": "1229cd6468b169c2a6e634005955fa68"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "payload_hash": "c2c2d76759814c400911d836b2b6ea69"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "payload_hash": "54405c2d5ab64ab51a2d9d1b01f47cc3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "payload_hash": "9b35192f6a0d8055e3f162ce0440abd4"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kagithane",
+      "payload_hash": "3b195470b77250b3f188a9f0026d3a1e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "payload_hash": "74e5f6caf4eaae8bf818f94d21bdae3e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "payload_hash": "a85767f145f3ee4ebb2a6f4b6fabc7ff"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "payload_hash": "42eeb1bdaaae957a65e038bb5bc7e9b6"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kartal",
+      "payload_hash": "2f9084781d69e3c3a19bf26a9a2269a2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "payload_hash": "6674a655294dd4d701ae57b94a4693be"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "payload_hash": "2bb362b5931d65939b23f1d0382974f5"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "payload_hash": "706f2f6469781e737beb0ff8e0505b41"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "payload_hash": "f53da72857ecd7eaa8978805594d143a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "payload_hash": "c96c75b72e0b4d69c90d71ae24522b1f"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "payload_hash": "1168085244bd039925cf620146284e48"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "payload_hash": "663cad2e251fa3ded8d37ed1bfa07cb2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/maltepe",
+      "payload_hash": "b717a6564cc74a55cc58b84197d744eb"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "payload_hash": "6847dd3da6df22ef01e0bcfd277e36e0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "payload_hash": "6499a6363080bed4d626ee60065ef02d"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "payload_hash": "a1dd130ac160ec73da2f417681c4e889"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/pendik",
+      "payload_hash": "464ed4ddf4d5f3cca8d6f33de3312b7e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "payload_hash": "16a839d13044f0497f90c393e4527420"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "payload_hash": "33cffef898a337f1d979abf5955c2fde"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "payload_hash": "ede963d6da0c0514b617cd8594ec3f93"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "payload_hash": "734fc800c2f7bfd1eda6953065722115"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "payload_hash": "6b345ee870ea99a2c6beaeb1f3ab497e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "payload_hash": "d0dbc2eb17b609bde21f6fe989f31155"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "payload_hash": "373e4a5eb6659b6294a5401c637b7cab"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sariyer",
+      "payload_hash": "44666e8293dfa238e5d9bd3737400494"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "payload_hash": "72e74b1ea47ec10c304fcaf59231939e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "payload_hash": "6285409930e22f773633ab51759938b9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "payload_hash": "5625a0f6c3d7eda0256cebb112eac523"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sile",
+      "payload_hash": "433cc2700dc220592faddc3852a77d71"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "payload_hash": "3f01afff509f4b006b1a1665fe9a8c18"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "payload_hash": "6aaaedd3ddc7a58cd9f9514e45fbd015"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "payload_hash": "af3608979f728762931ca958aaf3caf8"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/silivri",
+      "payload_hash": "fde5b56d32c8672ba91d7a1b9f532ca4"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "payload_hash": "5438c595ae5484b9f9e28ad2cc10863e"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "payload_hash": "fa6e287e53fd67a05398e85cf5343cc3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "payload_hash": "95419c7e93f9cf28d82d156ef5a2c854"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sisli",
+      "payload_hash": "0acfcf3d019862fbbcd1a98f59be3189"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "payload_hash": "1a2278658aa4164952ef39c2e1bc0431"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "payload_hash": "8d76eab40a447582d18717e5d9aa1978"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "payload_hash": "ca27fc072fb4f8d013252bf48fef62f2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "payload_hash": "2677d79cd0cfac4ac000d376f3bfce49"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "payload_hash": "342c9067f7c9509277ed6b6d04ca2701"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "payload_hash": "a6efd9955b2ba177ff209eaf5094361c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "payload_hash": "938526423abffac4e3804e8d927270be"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "payload_hash": "2cd8e11cb7d39140f6481a1a4f3afb37"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "payload_hash": "98eae4dcc6cd5e8270089a87634095ae"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "payload_hash": "dc7a959d882f63df84540b0f2c5887a0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "payload_hash": "62c6c0c9fac66d48f5cc589a3f7b2f9d"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/tuzla",
+      "payload_hash": "492730289aa25b2f85893bc90a14d6b3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "payload_hash": "d5dbf9c9caeac70a063b23979e5c5f94"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "payload_hash": "60670a008b0783bb55d801fcaa7632e6"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "payload_hash": "ec3b45abe6e22fda708cf1dd2a2443f9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/umraniye",
+      "payload_hash": "adb42f30a3e9c3e2cb9c8c44c4f4e4fd"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "payload_hash": "7f2187abf2ff55ed8ce0008876500e32"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "payload_hash": "508107e3935aad6a340976464582ee8d"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "payload_hash": "4baabb9dc64ffba812741f41bfa5a8c9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/uskudar",
+      "payload_hash": "dd928ebc31e48a3de393257f8d582e28"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "payload_hash": "40093e3424e6de35a9759b98460dacc9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "payload_hash": "6e9e2ed9dc72e6eb5dd86cb323676d70"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "payload_hash": "d7bd7acac7d7daff88f5e5ced0ad61e9"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "payload_hash": "5f6e9e88db3c0048036c1b620e21de89"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "payload_hash": "2029489f94052072dc30b37b582e50c2"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "payload_hash": "fcebe224d694a6b92b3b5a8c5b992624"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "payload_hash": "455826ba91b9d9638d5aefa0370e8abd"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/cozumler/bakim-yardimcilari",
+      "payload_hash": "2352d52329e4c7e1ee54d457f2015851"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/cozumler/cihaz-muhafazalari",
+      "payload_hash": "ab2d63ada3090e9aa90ff844a80411a5"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/cozumler/kurumsal-proje-yonetimi",
+      "payload_hash": "fa16285d7714f59f6f58a091a633ca85"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/cozumler/montaj-konumlandirma",
+      "payload_hash": "e584c74b8030721c2d7155e8d658fba0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/cozumler/test-kontrol-aparatlari",
+      "payload_hash": "f603f1e7d8db998075a373aaf8b0367f"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/malzemeler/abs",
+      "payload_hash": "c5ced717569b85fe9137ff292df39a99"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/malzemeler/asa",
+      "payload_hash": "3ff386d5abf08b99975902a547ae4bc6"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/malzemeler/muhendislik-polimerleri",
+      "payload_hash": "42b6cff9354e6f0e4249018c27a5ee69"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/malzemeler/petg",
+      "payload_hash": "d8c7d47ae53e3131d5584329b0d24c00"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/malzemeler/pla",
+      "payload_hash": "4a40919eccd6b81f80e135d221936a21"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/malzemeler/tpu",
+      "payload_hash": "5ee6bf348c2a9deea2c29d4052ff2289"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/3d-baski-fiyatlandirma",
+      "payload_hash": "642d5a7cac64752cc7b78f11a3294315"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/aparat-malzeme-secimi",
+      "payload_hash": "60ccb91207e8988264ca2b93f4c8d898"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/fikstur-numune-kabul-plani",
+      "payload_hash": "99626c0848974bd7d5c3dcc1debbd634"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/kesit-nasil-incelenir",
+      "payload_hash": "f0bfb327865394f0c161e708ebb9dae1"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/maket-olcek-planlama",
+      "payload_hash": "9cc24f5fcd3916c5b90a9296507dffc8"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/malzeme-secim-sorulari",
+      "payload_hash": "9c9d4a3d7d16dd35c4d6cc17093bbf44"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/numune-kabul-plani",
+      "payload_hash": "f59104da992cd99f4abdfdb962f3df52"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/numune-ve-revizyon",
+      "payload_hash": "2945bbef33584bddf64ba5fe8c2d795a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/stl-dosya-hazirlama",
+      "payload_hash": "3f2fe06d7cbe3bbf5937e4eb8434317b"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "payload_hash": "eeee2493343cf1bcbb10c87dfdcd68f0"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/tarama-verisinden-cad",
+      "payload_hash": "41c244a40b89d2cbd8d297ce45939af3"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/teklif-icin-dosya-hazirlama",
+      "payload_hash": "5204976dd5d68bd4241ce4c4b068768c"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "payload_hash": "79d624cc15427c6fd5865ff54c796762"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/drone-hobi",
+      "payload_hash": "f2c4db039342e26b3f7121f6d6bfa478"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/egitim-arge",
+      "payload_hash": "6c2f6815fdc214e6ab19d860111bdbaa"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/endustriyel",
+      "payload_hash": "5706882ed5954ed600d6c58ce5c62d73"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/medikal",
+      "payload_hash": "f506c2adff27a06b52ac410e8ea9a4a4"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/mimari-tasarim",
+      "payload_hash": "b1acaef20be284cb2c2a0b635126e95a"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/otomotiv",
+      "payload_hash": "0bcf9ec7857b0d87a782ae4963d6c328"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/sanat-mucevher",
+      "payload_hash": "8affb2361a815dc1b72928346a84ef13"
+    },
+    {
+      "brand": "3dsanayi",
+      "tenant_id": "10000000-0000-4000-8000-000000000002",
+      "path": "/sektorler/savunma-havacilik",
+      "payload_hash": "900c5382f2026a447f58e001a9d6322e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/3d-baski",
+      "payload_hash": "98795703a2d35e88fec66c537eeca56e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/3d-modelleme",
+      "payload_hash": "c929aba3ed7cf719dd44464513aa0248"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/3d-tarama",
+      "payload_hash": "5db089f85b332b58870637bc72700a4f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul",
+      "payload_hash": "3f02fed0c268bd28377ed2e1b2208ffe"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "payload_hash": "b53676b3bb5144aa18b603f23687f6cf"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "payload_hash": "30d7ebd4d7c0113ba7b104ee3825e537"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "payload_hash": "920f3f3cf9e5cbba81f2a3f6520b571f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/adalar",
+      "payload_hash": "f6b1794ec07980e7ca3adec402ae3299"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "payload_hash": "6e26f9f93d05cacd44b07ed692d641b3"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "payload_hash": "ae5e266db23760d0f963709122d4247f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "payload_hash": "bbec9eed37570ee2124cd799373bd698"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "payload_hash": "55df9f0c5223ec2ff7571ce3065aca24"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "payload_hash": "02ec97a838706533f224ea8bdee486f4"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "payload_hash": "4a115f085e19711f3265d38b2ecf5b15"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "payload_hash": "f9e601de13195cc2e1da6950f58a2306"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir",
+      "payload_hash": "bd2d7ba7c8b0fc72c72876c34cdb36f2"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "payload_hash": "9119cd6cf0f52f36d618af0fd3c248e8"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "payload_hash": "ee5d1d429702dce82046db97f7fbb73b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "payload_hash": "f5ad76580a1a2d16847eb8bd51fb7f31"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "payload_hash": "3c808f85258792e758237eea7aff295b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "payload_hash": "eb329163932dd37c1fdb4896b6998d0b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "payload_hash": "5d936ac450b63082882b9b5b2faf8332"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "payload_hash": "dbcd8dbd63f78bd2caa9bbb59dc4d498"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/avcilar",
+      "payload_hash": "c904dd693557a8aff158d3e03fef7ba1"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "payload_hash": "0f40cc696fa49e10f940ee3f23d2769e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "payload_hash": "87c56dd289ec9c8c41ca23bf384d1a90"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "payload_hash": "be0cdf8b49010d2fcc1993c78bdb7b45"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "payload_hash": "2e3ab0bfc8d8c0145c058d59e66334c5"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "payload_hash": "b97c678aed8dc4f8550ff3aa3f930c92"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "payload_hash": "3ceeafa898b057a949ba3a709d7e9e4f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "payload_hash": "94678e5001e246620e32074e655335b7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "payload_hash": "aceb5bda78d07f4a67f7dd45e9c59a85"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "payload_hash": "9b395f9279e9b68948a12540cebe640f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "payload_hash": "5c837f2787ca957c2a2caa7c3d1aec86"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "payload_hash": "b0c5ab3a3dd078b81d1b794651fd9aab"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "payload_hash": "d3a2586b823d690a0e922480e220e17a"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "payload_hash": "25e2a0c752d93ac328252543955b12c3"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "payload_hash": "aa53a0d27f583f8afc9b5452a5bf644f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "payload_hash": "5c873b76b1556dc058e6dc75b4923542"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "payload_hash": "55ff48f2ab475ce51cb49483b5446f14"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "payload_hash": "9b377f3b2eb3451ab290894d5561d3a6"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "payload_hash": "b8475b3a75540044111eec7dc70866c5"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "payload_hash": "3915c802c3f7ca6b3e1c224d9564d449"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "payload_hash": "13500e034f28a9d4222496d4265b3fee"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "payload_hash": "51ea6b4ce7911aa98c2e9f30507a2b04"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "payload_hash": "f6af8c5a356d22db70e1a7c039c49114"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "payload_hash": "85b21b635c4614723c1780f59b5677b4"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/besiktas",
+      "payload_hash": "e423ff72f33cbeb82f6422500171a3a7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "payload_hash": "e74652143af9db29c639b66a39085c91"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "payload_hash": "205e58ae78421df3e1279110a2de4d38"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "payload_hash": "09f0210d32f3ba8d29559ac45f80babe"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beykoz",
+      "payload_hash": "0334422048d4838e1cced4099e5a6324"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "payload_hash": "ee8eee2b2d9668000380f7d8ed3260ba"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "payload_hash": "4d323d435c97c75da867b7b43e010b73"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "payload_hash": "fc4d9b2c0653b6810b2b1b6f3363dec0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "payload_hash": "f8ef24bd6386dde5ddec90dff4f4606c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "payload_hash": "ed4adafc9187ee08b727d865c839afc9"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "payload_hash": "456d8941035fa3d35ed828b00768f0ed"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "payload_hash": "e4c7d625f23cab94aea7f750bf135f6a"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "payload_hash": "f5b2c132f66ea79cb4eb96145b1d090b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "payload_hash": "01d8b7bd39c61a486505f378df610e92"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "payload_hash": "b3f53b048dd85b283941dac333e44158"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "payload_hash": "c0e6cbbf08a59a8ea1096f4b0ef5d7e7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "payload_hash": "ba194b57c3aa92204edbd8be4f6cc6a4"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "payload_hash": "8d03408daa91720a77a1d3a0d84e1996"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "payload_hash": "d7cb4e01af0bf3c7bf4ca984f3d74579"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "payload_hash": "583a255e43aa6544d06b188eb2537f60"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/catalca",
+      "payload_hash": "f6225d313209a1b1986a47d96b9a7204"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "payload_hash": "a2876d9c550e9219d85de3b6cf87cfce"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "payload_hash": "ab95af1335e3fa18e70f8a00a9385101"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "payload_hash": "5206beb88a2cc22351c43490ec224ecc"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "payload_hash": "bf67a7cf522c3cf6cd50c12fe954f2dd"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "payload_hash": "e95f9631038846fa30729c914d63a97f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "payload_hash": "bc99ba22992d12e1cdc2191a4591e84a"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "payload_hash": "2032dd8b23b6d15163bec65cb10e78f2"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenler",
+      "payload_hash": "8ae087d8e39bdd35d05a28478b1f1272"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "payload_hash": "ba1752dd7b3f3f0e30281c621e4ea48c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "payload_hash": "60682710d3fde4f2afb9c55b1c03efe1"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "payload_hash": "7f5bdf44bc8441160c8a84a5131ac2c2"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "payload_hash": "6d2383f6686af8ac0593d63300a5ea4c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "payload_hash": "a2a3d57bff535e783bf70d8a457d6714"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "payload_hash": "2cbda7128b8f2c074b2849f7cc8d9a5e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "payload_hash": "2f468f809f9107e14bc3d9640886b61e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "payload_hash": "8ad3c9fb23e0a1a179b93ebedd424df5"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "payload_hash": "ba3829c63f12fe229e344bf531d5f384"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "payload_hash": "ef79c6353cdcf988ddb08bd1e727b9b8"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "payload_hash": "baeec51b66ce2c75c2c1f559a8450094"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/fatih",
+      "payload_hash": "051906cce57cd12e0d770b19ebf196a3"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "payload_hash": "e9f7d691db8aff02a01160a09784d397"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "payload_hash": "f48a250408f9eefd77cddc0487ef6f4c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "payload_hash": "1e636d920fdbfc15de753a8729da8873"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "payload_hash": "e001b943480dc594e93c65540c2d5d5c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "payload_hash": "bdf47d8f1b1345510580c8d149232869"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "payload_hash": "07d844aeacd9dc011d411d11caaaa91d"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "payload_hash": "ce7da1df53fa60d5f4daeb891067659f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gungoren",
+      "payload_hash": "09fe3ef3b79f8dd21060dfb3512dff21"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "payload_hash": "825087683c87f2cfbbd5e3d5aeeda60f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "payload_hash": "950ead742f5adb65df8c40633c7d8cbe"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "payload_hash": "608ac6ea071c8b6be1aa48421d9a03ae"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "payload_hash": "ed3ed29872a56aac2d03cf34f8002f71"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "payload_hash": "a5e429d91d04959307b0877fe020c454"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "payload_hash": "b4168950ea20632621eef2aabd8bcb29"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "payload_hash": "5ce5330f77b6974a134b530710344111"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kagithane",
+      "payload_hash": "4bbc43427db35cdc594ed6f075185d14"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "payload_hash": "f77d205b3f30acb16fe2dfe2cb39868d"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "payload_hash": "aeb12f970f57d8afccdafc2fe87bf73a"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "payload_hash": "de2c27bbb922151f4c4f1fb31705d047"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kartal",
+      "payload_hash": "78f668377f94de9c67d9fa9b8bd79c57"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "payload_hash": "14ff4cd0f7094ac80c406893908306cc"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "payload_hash": "fc19516632d2939f0ba2444efb197dad"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "payload_hash": "6e5916ed6f0ddc4f5efcd2b13aeac9a7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "payload_hash": "4d4989c397586073d403e9ca744168bc"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "payload_hash": "788e46758647d9bfef79c1c6f75777cb"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "payload_hash": "124a2b099d138a9cd02d5c707d796a72"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "payload_hash": "3c60413209dd31815ad507686d0f03f0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/maltepe",
+      "payload_hash": "650235616481bdc16d401a2de2d4d62e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "payload_hash": "9e82f675e3e118f6abe33497002d1d0c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "payload_hash": "017fad75a6b20a6286df7785136901d0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "payload_hash": "7cc5452f3b212a9afec084297974525a"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/pendik",
+      "payload_hash": "fcfb8f0e4bfa373d0750fac3c86138d3"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "payload_hash": "4faca1d31b650ed7d943d6b766de51ab"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "payload_hash": "88accd8372d5d9b0075cd1cffa129604"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "payload_hash": "a03df91d2bd4b69a8aa788e6927966d6"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "payload_hash": "f829a1bdfd4e73897aeb5fcbccc03443"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "payload_hash": "208555bcb57e1eb77256df87e0b756a3"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "payload_hash": "f4857849977f19517e245f6a8f3a7b41"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "payload_hash": "532b45239021772e5874cec8e561c731"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sariyer",
+      "payload_hash": "79b395677bfdc347c1b05de987f57f3b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "payload_hash": "f057c72a3d0c197b5dd71be49202f3ab"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "payload_hash": "4bd1cf52bc14ed0c6be7f35a8e40989f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "payload_hash": "73f41d48a048abe321b4a95b49d653e7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sile",
+      "payload_hash": "c8d4b582a805e29135427efcb38425c2"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "payload_hash": "e70bc0725a2147c254b34e069a3971c5"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "payload_hash": "9b3b2b008d08ef0a1dda44fc9473334c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "payload_hash": "1bb34499207e72b5e05980167052b30d"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/silivri",
+      "payload_hash": "c35893af17f45e47e781c818953b0ad8"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "payload_hash": "a3f1a4beae5862f3470cba31acfc9eab"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "payload_hash": "7a61dbe6fbb721aa6a8901ed13afe7cf"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "payload_hash": "31d460378270a9384c7afb1595cc769f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sisli",
+      "payload_hash": "e14f7aef7074d27c81a5c4eb9cdb2dd9"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "payload_hash": "8aed9d59835990dd65889bfc1df1ed91"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "payload_hash": "ae453e46294513b97e70c03501c93008"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "payload_hash": "bfd0fa1a7c90cada9f71a54906d7ceb9"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "payload_hash": "fb2253f1aa464096bf9765e6379f11f0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "payload_hash": "427575df63dd296b9c2df4162e625072"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "payload_hash": "40eec466a9f63b8a984af1eb63ee4878"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "payload_hash": "4596e7221245a2311d0a4e764733c803"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "payload_hash": "dc76c1173662312fae672d8c998fadf0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "payload_hash": "5eeca6c07fa6b2aaf9929f27eda21e03"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "payload_hash": "16b10a01adc24864b177cde26c54e816"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "payload_hash": "fbf3e26a22f105f6ba1c9336fa1d8e62"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/tuzla",
+      "payload_hash": "2da4a90f28ba9f89861ee2d17802e5a4"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "payload_hash": "024d2a1e9492533cbbea6599682f4f6d"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "payload_hash": "bd7f52af23423120761b06e26ba52337"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "payload_hash": "7b7a88af94e6ba293e8fdca978b8f11c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/umraniye",
+      "payload_hash": "75cc8c450879523521a62bd86b0f25f0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "payload_hash": "f1dd69c358abc8b6239f5d4d08c11ed2"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "payload_hash": "7315d22da7d682c1cc33f80df968370b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "payload_hash": "0d56813af75f4a250591e0be88c4c569"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/uskudar",
+      "payload_hash": "dc5d1b9b9c5f54611f053d05b340955f"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "payload_hash": "31ef9875ce67434a4af5123324827393"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "payload_hash": "16bdb9454e86cd5ed8d6afc773fd5255"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "payload_hash": "52bb7fdd485d38294f62a326bc4902d7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "payload_hash": "29e5c9d3b2db79dec030c8eb38dc7940"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "payload_hash": "4324f3961a8ff8489104cd3d95e956b8"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "payload_hash": "b2b0ab6604c4e20227b387b0dfef1d18"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "payload_hash": "e1263d068a29221609d5a7de3fe6663a"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/cozumler/kucuk-seri-uretim",
+      "payload_hash": "b05e396568f05c86e48db87a6c1f5379"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/cozumler/kurumsal-proje-yonetimi",
+      "payload_hash": "7cefe5fafb58cbd5fbd463d47016ec31"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/cozumler/montaj-yardimcilari",
+      "payload_hash": "5635fcddb63b7f651e305622e7341a86"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/cozumler/ozel-muhafaza-aparatlar",
+      "payload_hash": "7a7a2985bf145e6473114648ccff9337"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/cozumler/urun-gelistirme-prototipleri",
+      "payload_hash": "e6ac2071c3e419f047fa1473d4b8cc0e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/malzemeler/abs",
+      "payload_hash": "47b60a0223532bf3d8ca27b08e1ca20c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/malzemeler/asa",
+      "payload_hash": "b1fe9c292df312efe9ae99bb29f64771"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/malzemeler/muhendislik-polimerleri",
+      "payload_hash": "14236f8e95d28f4b6b173d48ef92c945"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/malzemeler/petg",
+      "payload_hash": "ec9df565b16ce14ac7371e6d9ac81158"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/malzemeler/pla",
+      "payload_hash": "d1e103ee6e068588b31af0832d72b2d8"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/malzemeler/tpu",
+      "payload_hash": "aac867edd8f67f6bccc5abcd67394db0"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/3d-baski-fiyatlandirma",
+      "payload_hash": "4f8801cbe7c110691c6ec0610e1ed4cf"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/3d-baski-mi-cnc-mi",
+      "payload_hash": "77c02302b6b4d5b4f9407dda80cdf716"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/kesit-nasil-incelenir",
+      "payload_hash": "8365b2e6c96c7be010b42abc91d11f8e"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/maket-olcek-planlama",
+      "payload_hash": "39809aee4d221723925882af6fbdcdf9"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/malzeme-secim-sorulari",
+      "payload_hash": "98af6c62bdb3211fbd9873494c0d1953"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/numune-kabul-plani",
+      "payload_hash": "ac46e7e4448b353b3cc39e5fb57dc2a3"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/numune-ve-revizyon",
+      "payload_hash": "e7dbe71a947c26909aaf5ebe50423ea7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/prototip-maliyetini-ne-belirler",
+      "payload_hash": "91b0346731104d80cc86aac0d3bb3cb7"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/stl-dosya-hazirlama",
+      "payload_hash": "02111e1f27b1a013afa2669c9c6955ea"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "payload_hash": "d1890e903c22d75f2464256ae39b89a8"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/tarama-verisinden-cad",
+      "payload_hash": "da3b43ae4f8b3bc73183623b5651064c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/teklif-icin-dosya-hazirlama",
+      "payload_hash": "7574d975b3a6dfbe6522d9fd5957d432"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "payload_hash": "85df54338bd86b899fb9c38f0b73826b"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/drone-hobi",
+      "payload_hash": "2ff58f8bc5050c45077ca891f59b3f09"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/egitim-arge",
+      "payload_hash": "dd23235c17af8c16ea46355c6a66038c"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/endustriyel",
+      "payload_hash": "cf3eab4dfbee96ada8b8451c5a628bcf"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/medikal",
+      "payload_hash": "eb0163103e5fbb10d50667d49fe2a437"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/mimari-tasarim",
+      "payload_hash": "b689b47e492d05c0e1bf0c62a63576c5"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/otomotiv",
+      "payload_hash": "7b271db136e797836921a08078d39e40"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/sanat-mucevher",
+      "payload_hash": "d4bfed31ef3081d608568bc9221d9564"
+    },
+    {
+      "brand": "3dyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "path": "/sektorler/savunma-havacilik",
+      "payload_hash": "f0d8ff4fb45fc59916b399746f0cfef7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/3d-baski",
+      "payload_hash": "0accfe82220a6631f104cd96c9993644"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/3d-modelleme",
+      "payload_hash": "1cb3f20bc6ec448e65b7d7ec0f0a30bb"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/3d-tarama",
+      "payload_hash": "13a5af801171123dc2d64b224ad44937"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul",
+      "payload_hash": "1ef60bf667f58d3ad459e4581ac32a76"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "payload_hash": "fdc32756ef48ed1238aaf617c3c99315"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "payload_hash": "18e1a071d5d67ef1618aea08da0f0a8a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "payload_hash": "4dacd832c5a07f6336b2c3f8ffdd1fff"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/adalar",
+      "payload_hash": "5838834b6bdfa3be3989f0481ea9c907"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "payload_hash": "6994a7dafbf647e1e5de42654a9bcab3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "payload_hash": "08902f6dc43f99d325a1b22864f42cf5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "payload_hash": "18db1a9a4b35cdbd02185a1220f152de"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "payload_hash": "9bba5809f24f349b643965e43f261b79"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "payload_hash": "2f56ad3650e43ec55c77a3867bef5e33"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "payload_hash": "742b601609472c6812f1d3583f4bccb4"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "payload_hash": "fbfa9b2ebed6ca9e732f75150f6a89c3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir",
+      "payload_hash": "66f8b524e81d04753c1a06355cab0685"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "payload_hash": "2481b6232b1d4bff22526a07488d5676"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "payload_hash": "bc9d95272142a4c9ba59017e5eb13af7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "payload_hash": "f9a91fb735b2aab552025af5f3574333"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "payload_hash": "2c678cc9ecc24d3e3fbf1d9378bd2616"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "payload_hash": "0aa231d6215d46dfd647893504763f5d"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "payload_hash": "3f7104d8b2304c0bc241b42ee19a6fee"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "payload_hash": "c3c4dd709e13135020ceacc993e2a2ac"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/avcilar",
+      "payload_hash": "c7c4a218ca167f897fe2932878b5ae70"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "payload_hash": "98efbbd8e16647c76382ca0b27f79b1c"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "payload_hash": "47782b09adf2b0a317d66eb13bf38a19"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "payload_hash": "b51bd0bfe977dc8505dffdd26166d24c"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "payload_hash": "af86cfad7e303e635bd493f030977ce8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "payload_hash": "323e7cf91ea68cb1479664b75cec5186"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "payload_hash": "34d7197acd13c1697b087d5e675719b0"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "payload_hash": "61b4d9d54ab9a9f3d55b6ce4fdf320c3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "payload_hash": "2ea93a0eb8b87d04c965f773e22d96e2"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "payload_hash": "f4664ffaeb27f69222a08c72a23a0921"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "payload_hash": "074399317041eb65b8854be0818b2d53"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "payload_hash": "3f148dc94c073154dbeef3ccc05551da"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "payload_hash": "0bdb404172c566ba1f3981215fe0a512"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "payload_hash": "0ebb4eea1ef3212159c21b687a0d9108"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "payload_hash": "04629b38cc4d9199bdbc711e404fb5c7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "payload_hash": "25ed85bcdd4c509f42783647e8b78d2e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "payload_hash": "fedf74bbc3e173aff7480f52d2dba5f0"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "payload_hash": "340cbe5c401e0acc3af562e87af19278"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "payload_hash": "ab4eb0bcee5d952d95d17959ddea47e8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "payload_hash": "3ea6c260543307063ff6d84fa981415f"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "payload_hash": "111f711e58da7b73fd60eb108589e3a3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "payload_hash": "7ad84ebbb22e0a1e8e7ec1443b8d4c5d"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "payload_hash": "2ac49beced9c96db72905795348611e5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "payload_hash": "b54d0e9b15ecc711bd40ca4c5bb57d72"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/besiktas",
+      "payload_hash": "db894efa4e48aec65efe18afbf68ee91"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "payload_hash": "600eed18419f886526b125d61f61c483"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "payload_hash": "5ed186c14941c1de0e33a523b9358fb1"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "payload_hash": "44cf765e74c751808f26a05b93e65ccf"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beykoz",
+      "payload_hash": "1f32d57b0abd5dc92277151cf8c3192c"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "payload_hash": "7626de56d16b75827fef157a91b4c62e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "payload_hash": "d57afa257e8d5a9c74547cf0b3933149"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "payload_hash": "a1b45673c16be3ae107e6d0944ece67a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "payload_hash": "a3c97f5f71a06e5e68478b7517d7a435"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "payload_hash": "9d687034fc1e8b02a10d1b3781c7f5d3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "payload_hash": "41c782665678220e4c8fc6ada6f99372"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "payload_hash": "630f6b1af1eca6c6b6db101674ae2eb2"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "payload_hash": "bce73c94b53c1c758b2bff1c9c2c2cf7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "payload_hash": "769d79fb8aa7a83dde9bced55614867a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "payload_hash": "c520d9418525522199d113dc5cfb92a3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "payload_hash": "3d0a90c0f1bbc015780cbdbfbcd036f3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "payload_hash": "e8c34b4b31433d2ce5b0866721197c64"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "payload_hash": "f30f44d3940a13a6e05bc2512582fc25"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "payload_hash": "9a34c6753da0160041ae2b1282a17882"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "payload_hash": "3a46fd48cb03e5e39d4b6845cc8f4fc5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/catalca",
+      "payload_hash": "c5fe8b73819984126753d666c34b52f5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "payload_hash": "0a5485d2ce28bcf0e3540f022c6df8e5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "payload_hash": "cd746a9b5d67ac4256129faa3e303572"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "payload_hash": "cf873a2ae1a00597322d5566492686d5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "payload_hash": "66dacb05a1ca7ce6b3b9fb7d4405dcca"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "payload_hash": "fc24ab89bb5dc665a71384f506891dcb"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "payload_hash": "b737ce57e50bf887f51bfc8cfd1c6475"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "payload_hash": "35602329ea5703f65857c821e6990abc"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenler",
+      "payload_hash": "f53808d15bf12b32728a0fb1e93b36a5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "payload_hash": "5d0b258c8aa9769ebccd8b9cb8c06234"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "payload_hash": "535e2fec0fe794fb0ed9d87f68c105c7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "payload_hash": "6b15f82b9c3a2dcd43f85347a3d2e6d8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "payload_hash": "89268747da7e76b3c65dd2f23ac3d1e2"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "payload_hash": "50f23c845b3d04b64b90ade8075714f0"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "payload_hash": "b09453353b4fd7729f377c868dd57bf1"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "payload_hash": "887ee606bbd086f1c2c053f030dbff3a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "payload_hash": "31a3e9aec084e3173b046f2c1844af91"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "payload_hash": "8cb28c70e3b8bb59b9b03cfe1fc04630"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "payload_hash": "19e4f9bb4e90c72a8a6d93bb125c468a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "payload_hash": "baee4c5f0e97beb858c08bc52c774a07"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/fatih",
+      "payload_hash": "cb88d96d99b1ac84874b764e6d51139c"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "payload_hash": "06c669771e83f3205f74eed0492002f8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "payload_hash": "fea3905e6c77d37446ccec91558825b4"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "payload_hash": "99cc66de4e69816a4fc2a61fe7246cdc"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "payload_hash": "21332eb15fc2ae8a8ddb01112e532703"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "payload_hash": "83757aed15a928c1d2bdcbac30124189"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "payload_hash": "535515dd9ddcd3f8eb1aa66092939b3b"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "payload_hash": "a2fb6e747c8769d652c37e9055d0c735"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gungoren",
+      "payload_hash": "704c4d9a3732e4d1629876db9ea45ed7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "payload_hash": "4eb54db1a0a6cc378b142ff201fa05a5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "payload_hash": "fc15de2c1a7bebed45faace3ad0a620b"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "payload_hash": "d90adfa71034836eb0a6ecb0d4bcb5d8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "payload_hash": "f11b1da446b59e548d67b138de975909"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "payload_hash": "b85268943ea0fe61cddacd0c66bd043d"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "payload_hash": "3cc545f1bb7cead4e17b713e2b2dba7e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "payload_hash": "dd2af53dc58c3e34a366419f81f3b64d"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kagithane",
+      "payload_hash": "b7099d4b930f75bc24df7306c9a14416"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "payload_hash": "afda26f40817733b83ffbb8b4347a9e1"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "payload_hash": "a911ad1bcb955375d45d5d2486f67870"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "payload_hash": "240d43125ca38603f42ade852b3d06a3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kartal",
+      "payload_hash": "13fc3b4504771d40f5fe1ac73a6c710e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "payload_hash": "a83670fbf6c9e2aa4b781ecfe99558c2"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "payload_hash": "93825d690fd9cd52820b7adb6d0c1630"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "payload_hash": "ffd2dedb6b8b9166c7006b87bad95eed"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "payload_hash": "7f8f10e491fa5d72a87e56046a783322"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "payload_hash": "fc80f56df34760c2ff8ad800e74a6996"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "payload_hash": "889438be29ec63d14e0ee89d1d878e13"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "payload_hash": "4cc63fc12c9e777d757ce5b2d27393ac"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/maltepe",
+      "payload_hash": "d987ec132582ba31554126329e49349e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "payload_hash": "54f71b304a430f4697619aed9bf536e9"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "payload_hash": "bcd616d3c3ad119927b3a4fea63e80c9"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "payload_hash": "489550fe18e6c5562ed9c89db9811d2a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/pendik",
+      "payload_hash": "e76ec760550548ded12dea215c6f56a4"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "payload_hash": "89e919e7481ed15061d406c89700a165"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "payload_hash": "40a1044a3520abf46b34adb4dd1d57bb"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "payload_hash": "cdbaceb927f0f38dc0cfff5ba1ebb97e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "payload_hash": "c0c78f195e1e9424bea88d7cf0becf47"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "payload_hash": "88d6b2cedc68fc455daf46d2de7ffd12"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "payload_hash": "f3a06d86b78e4e9971eb5a077092a7d0"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "payload_hash": "7883391584e23032ae31936e4a124b08"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sariyer",
+      "payload_hash": "2a0b8e7e871c28f11449f39e812b7f9e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "payload_hash": "bea683527062c23f32b4d71636723f12"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "payload_hash": "d6a7a7df8de2f75f091a5286eea67442"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "payload_hash": "a8a1a858550e3abf4312e6377a182508"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sile",
+      "payload_hash": "8676191f3e76706f55b6e971dc9ad353"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "payload_hash": "f9fd4ddae57be45bf2791b0c9971d89b"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "payload_hash": "b00122539f7f6e1eefa4c0400dcfe38e"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "payload_hash": "086056a625335e9ba58d9dadcd3f16f8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/silivri",
+      "payload_hash": "c38fb33aac1fe5b5bfcf6e83c6683862"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "payload_hash": "a247c6797b071a25b25c207aa00c0501"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "payload_hash": "242fa7f268557997d7399f941e64a751"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "payload_hash": "e4932d30927c8af71ecef6611c603814"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sisli",
+      "payload_hash": "a90c1dbb833e5f51b9ba4ed284021720"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "payload_hash": "6e9dca073648de960fa96b8b2c3dfad6"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "payload_hash": "0d69ccb66cd7de743d6c03213e2f6748"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "payload_hash": "33594d1b301070415c8eff2e7604d505"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "payload_hash": "bf7b52794ccc9d9041273507eea6e9a6"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "payload_hash": "a3ed4aa61dfe280cd377de823882ac0a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "payload_hash": "862ad3b35cb96e7d385cfe46599de735"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "payload_hash": "5f19932abc88be8538092d359c2733b7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "payload_hash": "2acf2c8b1e54ac888b709380662ffee4"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "payload_hash": "8ba6df5ee0af2d0a5294595813159594"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "payload_hash": "63f6f9b89e93f1a646d11744707c5dba"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "payload_hash": "3691e92d5d5f86491a1195f66e0a299c"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/tuzla",
+      "payload_hash": "5cbbf2a5ace678c0db051ced4ae54652"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "payload_hash": "2795b39f611433211e11a0bea3585f87"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "payload_hash": "69c61162e5176440316cd17423a27824"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "payload_hash": "18a4978bc95cd1d8902fd0abe4637fc3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/umraniye",
+      "payload_hash": "4bfec9218eae951ca0e52a99ac36dcb7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "payload_hash": "d1ed160918d166bed35613334f9a26e6"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "payload_hash": "720a3810851517f0e1ddda8800bff9db"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "payload_hash": "6b019ec9853ada6d8e27fe1d714df872"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/uskudar",
+      "payload_hash": "c3f8f19a1d8b25151fe9a6fd1f1f45fa"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "payload_hash": "aa5b61c1c23484a58fa47b35f5582369"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "payload_hash": "e0a72f7e8a6b2ef4209b9070cc533993"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "payload_hash": "e43c1d1c29f8726016a371c98fd74f40"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "payload_hash": "fbdb0b9a96f855372786b44be17fef93"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "payload_hash": "f3969483e5cc493dbde3868e62d76714"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "payload_hash": "4004c3ff8d25fb7bc1383a41efec5f0f"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "payload_hash": "4f9647d547223fcd1b18029802c76380"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/cozumler/arazi-yerlesim-modelleri",
+      "payload_hash": "e619f7e5f65c0387ad08e11620aef6fd"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/cozumler/endustriyel-tesis-maketleri",
+      "payload_hash": "68b4e224555c7bda75f17a673fb3b865"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/cozumler/gayrimenkul-sunum-maketleri",
+      "payload_hash": "141b7a2ce3a8f6d38a1f2673b04e7ff2"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/cozumler/kurumsal-proje-yonetimi",
+      "payload_hash": "920ead2f993a983ad733cd11f51e4d5a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/cozumler/mimari-kutle-calismalari",
+      "payload_hash": "bfcf15832b95b13f745b299095281446"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/malzemeler/abs",
+      "payload_hash": "2f471cafd5075f5f84f189b146a7f1d3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/malzemeler/asa",
+      "payload_hash": "0d4540ea3774dbe273bf5753e95dea8b"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/malzemeler/muhendislik-polimerleri",
+      "payload_hash": "56dd1d5677d4266519fa36529b69a44a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/malzemeler/petg",
+      "payload_hash": "2b9c3e5ad3126d61248d2b7d134fc7e3"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/malzemeler/pla",
+      "payload_hash": "3e4c6f0284d5ba30191744bfe7208406"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/malzemeler/tpu",
+      "payload_hash": "515430f6c9779b9642f6771666a14862"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/3d-baski-fiyatlandirma",
+      "payload_hash": "4e2b06d40b10981da62036a6b20cfc48"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/kesit-nasil-incelenir",
+      "payload_hash": "0691cdd4d452f4a793946456e53c1b32"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/maket-fiyati-teklif-kapsami",
+      "payload_hash": "25f007a5412954c97f3a3c1525af47ad"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/maket-olcek-planlama",
+      "payload_hash": "2e934e354d6631f75b68a02624a71ca2"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/malzeme-secim-sorulari",
+      "payload_hash": "8ab3e1fe05703615cd144befa629235a"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/mimari-maket-olcek-secimi",
+      "payload_hash": "bd403cc5d45be74a961aa4afa45d0d25"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/numune-kabul-plani",
+      "payload_hash": "d831c0ad10191254340a1f6b288a86eb"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/numune-ve-revizyon",
+      "payload_hash": "7f05bfdc1c9d8dd90b5282dddfeb52d5"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/stl-dosya-hazirlama",
+      "payload_hash": "cfdd86ac308e484d7892195727fa23d8"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "payload_hash": "e75bd4d1aac5db1dfa3ee345d3fd6b49"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/tarama-verisinden-cad",
+      "payload_hash": "c355b3af4cbeefd5e09f7dd6a3672ddf"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/teklif-icin-dosya-hazirlama",
+      "payload_hash": "de0e6504bf00422a2122c5ded037b885"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "payload_hash": "f2a4e3d3db7d8eb76e86fd0511f40bd9"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/drone-hobi",
+      "payload_hash": "206b61e8238327ec01986ef9dd964038"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/egitim-arge",
+      "payload_hash": "85e3109d1819657b9e54ac85baa40356"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/endustriyel",
+      "payload_hash": "3587351a18cc9595a09d4707ef7aa954"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/medikal",
+      "payload_hash": "82efc4b862026117932e34c0333ffece"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/mimari-tasarim",
+      "payload_hash": "efc65fb3742116fc29fb6f430c80cd3c"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/otomotiv",
+      "payload_hash": "a3940f3a263b85717e3eb858d1864e4d"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/sanat-mucevher",
+      "payload_hash": "b341c584c8bd11476bb5070ab2b577e7"
+    },
+    {
+      "brand": "maketyanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000003",
+      "path": "/sektorler/savunma-havacilik",
+      "payload_hash": "d8dfa69ae29d80cea5715a6e450d53cc"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/3d-baski",
+      "payload_hash": "26f3157df4d7086e10f49c5112e09409"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/3d-modelleme",
+      "payload_hash": "6db4b3715c2b38b50592925d653bd6cf"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/3d-tarama",
+      "payload_hash": "4d2e3753c15000d013519b68f6b20c35"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul",
+      "payload_hash": "46445dbfd31e1337eaaebc2634b6f462"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/3d-baski",
+      "payload_hash": "3aa0699d7bcce3936e71deee80b035da"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/3d-modelleme",
+      "payload_hash": "eec13188a88973b8a927fcc883a0f4d8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/3d-tarama",
+      "payload_hash": "f94ff3da99771072dec3fa354f9931ba"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/adalar",
+      "payload_hash": "e5520056d0f7d9b54f95330253d190fe"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "payload_hash": "9ff0843a637cf11956f57a82f33ca46e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "payload_hash": "ef01936b5bd22fd2fa6e637f3d87d0a1"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "payload_hash": "3d36c5df1164e350f1cc5666b0e629d7"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/arnavutkoy",
+      "payload_hash": "835c8a0975b6faabe8ff8f4fcb82b3c9"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-baski",
+      "payload_hash": "b6fba6cdb469899f96d844f493bb387b"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-modelleme",
+      "payload_hash": "e6a8ef41119b379dc8839e1324a8a0e2"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/arnavutkoy/3d-tarama",
+      "payload_hash": "ab693a5c9816b5144f82cd94676bc45d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir",
+      "payload_hash": "f5944a5a4bc1fc9dbd7962ffcf1cceda"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/3d-baski",
+      "payload_hash": "6007c45efc39907b2b4c74869871b34f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/3d-modelleme",
+      "payload_hash": "3469ff9631565e2eb9da4aff7f3c0bb8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/3d-tarama",
+      "payload_hash": "9a7534a5eb681a48cd9ed43748245c16"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/ornek",
+      "payload_hash": "40759166e3cabd1832f617ad6938c4b1"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-baski",
+      "payload_hash": "b95114a7db0d6bcf3a8a8dc5b37ff354"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+      "payload_hash": "9ebd49ad73036d7d4ee3609cbe9200c8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+      "payload_hash": "edd3c404407365ff2425212741757a85"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/avcilar",
+      "payload_hash": "047e5af1f9046db79d9807aae24626eb"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/avcilar/3d-baski",
+      "payload_hash": "617fb599e5b81fa327ae67ae9f66139b"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/avcilar/3d-modelleme",
+      "payload_hash": "6c1491f6e9a612341b0f45130a40989f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/avcilar/3d-tarama",
+      "payload_hash": "0c1dd8047b3ffdb65087ffb6feff8f0d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bagcilar",
+      "payload_hash": "36e4134aad2fcc71c6227fc0f5b7b78a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bagcilar/3d-baski",
+      "payload_hash": "c6904b52fb123a1a3076aae7de177914"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bagcilar/3d-modelleme",
+      "payload_hash": "4ded3e5fa884cb9868a9b51846d162c8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bagcilar/3d-tarama",
+      "payload_hash": "decb3c6719c5303de9dae3e3c948cc46"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bahcelievler",
+      "payload_hash": "fdd4896218c61bb9654e33e32f01da55"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-baski",
+      "payload_hash": "1d03dcc4cefe95455fdf98f7178fc822"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-modelleme",
+      "payload_hash": "f9f363ae7a236965789c4f71470bdea0"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bahcelievler/3d-tarama",
+      "payload_hash": "5b5b02d89ef77cf1fe7dca20cad9d109"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bakirkoy",
+      "payload_hash": "2247c8ccde0428ec3799f93435827130"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-baski",
+      "payload_hash": "a2b4f0b6ef74f9c224b957aa04b3b20a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-modelleme",
+      "payload_hash": "fcf7eb611e701f54d2bf1689fdbe2f3a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bakirkoy/3d-tarama",
+      "payload_hash": "d88c4194cc19b5e29f5378af9dc2ba74"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/basaksehir",
+      "payload_hash": "3e5fc3d790bd471b68bda84fdb4b5800"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+      "payload_hash": "3b11fb78993d10a1a9ffe3962e0f3809"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/basaksehir/3d-modelleme",
+      "payload_hash": "4fea592166f6f7749b760c8a27caecac"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/basaksehir/3d-tarama",
+      "payload_hash": "3daf353d67720e96d34e2f60f9c6d60d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bayrampasa",
+      "payload_hash": "5af79ebd5f6c8a30dfd0fb65dd3676b4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-baski",
+      "payload_hash": "0fbfca719ef5471c670e1fdb8ce8e02c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-modelleme",
+      "payload_hash": "8bb86e656a813f41498695340768a87d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/bayrampasa/3d-tarama",
+      "payload_hash": "1958d54edd2a57725a62d0d7354fad2c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/besiktas",
+      "payload_hash": "b8286aaa65987ece95c25bc05d76b162"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/besiktas/3d-baski",
+      "payload_hash": "8c08d635fc39f609a0dd60add9c569e2"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/besiktas/3d-modelleme",
+      "payload_hash": "38475d41324dd2e3b17528ea71c021bb"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/besiktas/3d-tarama",
+      "payload_hash": "99b591c8fa47dd775018a2fd72acd855"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beykoz",
+      "payload_hash": "4fba4c024db775b1594eda525dae988e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beykoz/3d-baski",
+      "payload_hash": "3124ed247535fd6336e036e80fd3ac6b"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beykoz/3d-modelleme",
+      "payload_hash": "df0d34442447fe8333b5eed72c10a1bb"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beykoz/3d-tarama",
+      "payload_hash": "5a6901d4a7502e8cd89a543fa8289f6c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beylikduzu",
+      "payload_hash": "a34e474ce6d77935dc8d6fe08cce167f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-baski",
+      "payload_hash": "1cf2408bf5c3be15b58ee96a9f50816f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-modelleme",
+      "payload_hash": "e5f4d11a7c8cb45e2a6f604ebb9204d2"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beylikduzu/3d-tarama",
+      "payload_hash": "1a3c4b3e2863e09eb5331132958a9e3d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beyoglu",
+      "payload_hash": "9302cb96d35804b471aa369fe41313a1"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beyoglu/3d-baski",
+      "payload_hash": "06b4c5922f5da40b89aa27105fce5a6f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+      "payload_hash": "b0403a70effbab63e613364b0e97bd26"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/beyoglu/3d-tarama",
+      "payload_hash": "065873db599fb4cfd5111ef6a54ae227"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/buyukcekmece",
+      "payload_hash": "2682393eedbcf7f099c4b5bbe4fe37db"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-baski",
+      "payload_hash": "a867e8c10b617eef1a6849acde155306"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-modelleme",
+      "payload_hash": "b01b86c97edec238fefa4420d7ecfd09"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/buyukcekmece/3d-tarama",
+      "payload_hash": "d69b8c49012ebcf4d6b866ac1d1f8e6e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/catalca",
+      "payload_hash": "8c40232e5fc5f90311fad51cc96a9cf5"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/catalca/3d-baski",
+      "payload_hash": "c084ddea88f8434df2475834228217be"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/catalca/3d-modelleme",
+      "payload_hash": "59214dd9f5e68d2caaa337ecf04a1ccf"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/catalca/3d-tarama",
+      "payload_hash": "ef0a68e9b3e76f7792955b5974cab7e3"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/cekmekoy",
+      "payload_hash": "3ecf080f7cd4d97a8a40863b19c626b9"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-baski",
+      "payload_hash": "896c692c15e271c399b9a232a4b5d8ec"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-modelleme",
+      "payload_hash": "e668a71c27a8528369428dfc603ac436"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/cekmekoy/3d-tarama",
+      "payload_hash": "647319f539fadceb75bdfe2272b54784"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenler",
+      "payload_hash": "d64fef32c6643e6258ff02b228235494"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenler/3d-baski",
+      "payload_hash": "8bb73cd6097bcfd7a133234a48301c0a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenler/3d-modelleme",
+      "payload_hash": "0889de50cb90e8ee54fdc597dc228f3f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenler/3d-tarama",
+      "payload_hash": "f50a4b0f2e0a5c07bb4adfa11fda20b6"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenyurt",
+      "payload_hash": "5db9aa3a33ee89506766f992c309d15f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenyurt/3d-baski",
+      "payload_hash": "6b886465c366017d9056bf4fde888bf7"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenyurt/3d-modelleme",
+      "payload_hash": "46af26e382cc76cc4677b6103cac25e9"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/esenyurt/3d-tarama",
+      "payload_hash": "c23efb9642686d544bcd03f67f482bad"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/eyupsultan",
+      "payload_hash": "b4a1225dfd406032ee44bae0a2fb4d6c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-baski",
+      "payload_hash": "f6006457522234a99c9ad9c42f048105"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-modelleme",
+      "payload_hash": "af602e32ce514cd751a33221d3a2ee2e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/eyupsultan/3d-tarama",
+      "payload_hash": "08e461d528f1a86d42e7d224eac1193d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/fatih",
+      "payload_hash": "6996102242b5762b0956bff2f091a23c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/fatih/3d-baski",
+      "payload_hash": "9bd7d901a09d20eb99bc996223e480e0"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/fatih/3d-modelleme",
+      "payload_hash": "5f37814ec800a6b73f0c70473d772300"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/fatih/3d-tarama",
+      "payload_hash": "aaa59e1911753cf9b1cdb2aab0ea6751"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gaziosmanpasa",
+      "payload_hash": "5ebde4a198fbd7bf18d294e429299b8c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-baski",
+      "payload_hash": "bc0a8faa4aff50c064ce58a68d6b2fbb"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-modelleme",
+      "payload_hash": "fbef68b8dfe66ae84daf3b088d3d5be8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gaziosmanpasa/3d-tarama",
+      "payload_hash": "9b67e907f56e89b614703df9b2a202d3"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gungoren",
+      "payload_hash": "e86e835c5fa8592f27dffb4fd33815e6"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gungoren/3d-baski",
+      "payload_hash": "434442589c67818e86f262d17abb2933"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gungoren/3d-modelleme",
+      "payload_hash": "f8b3445446769605a9871d7c64a6f097"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/gungoren/3d-tarama",
+      "payload_hash": "34969029db0d3b0b4c3f06e3d57d6bea"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kadikoy",
+      "payload_hash": "3749715f47ad60b91d1de6957099a518"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+      "payload_hash": "c07f882360dc6ce2462cda58fb991aac"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "payload_hash": "9058c187f51f1ef282d5ec63f06337b3"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+      "payload_hash": "ba2f91223955c7fbe99754afb7a26ee7"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kagithane",
+      "payload_hash": "2258425653ba74328b5cc2672284609f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kagithane/3d-baski",
+      "payload_hash": "4ad508020365deed5ec6cfd573146033"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kagithane/3d-modelleme",
+      "payload_hash": "d9ed32f975a2bc2cd065a2ff77803c47"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kagithane/3d-tarama",
+      "payload_hash": "1875d825a7f6ea8e647fbf292e19de0c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kartal",
+      "payload_hash": "e9159519f5e3d22c1a0aac8beb312e06"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kartal/3d-baski",
+      "payload_hash": "29f200cbe25bb12c809de56424ce581d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kartal/3d-modelleme",
+      "payload_hash": "cfbedfb23fff594784153b299c0b7ca1"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kartal/3d-tarama",
+      "payload_hash": "e4779b37ac0ec47353627a0a3e2ddd9e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kucukcekmece",
+      "payload_hash": "90b0a339131557ae6a34ddd3b22946cc"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-baski",
+      "payload_hash": "ab9133807c727d46ffa4a6449eadbf7e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-modelleme",
+      "payload_hash": "ddefed601f0f6dda56cba2e8f64cce84"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/kucukcekmece/3d-tarama",
+      "payload_hash": "e6af26aa4345fb4f603fed5ed865b891"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/maltepe",
+      "payload_hash": "1fb9624221d134a45a1b5828628c5dd6"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/maltepe/3d-baski",
+      "payload_hash": "6d3215526c663420be04c657c7bf2691"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/maltepe/3d-modelleme",
+      "payload_hash": "5d5a159ffc5411db6c25e5d0f37500cc"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/maltepe/3d-tarama",
+      "payload_hash": "d9746da18c6b7694d339db486ae5ebc4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/pendik",
+      "payload_hash": "a5f6ffbb64ccf3c383c19532acd164f9"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/pendik/3d-baski",
+      "payload_hash": "c45f7f5c0e2353dcd79020ac698297c7"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+      "payload_hash": "23a8cb4e8d8f9e591cf255c83e27509e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/pendik/3d-tarama",
+      "payload_hash": "66da321e8a2bf72b9671ac3841f19517"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sancaktepe",
+      "payload_hash": "2bd4d31739dad89ee62294a031e46bea"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-baski",
+      "payload_hash": "63b1aaaf6542d1e993e19ed6e3754765"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-modelleme",
+      "payload_hash": "c9b9ac2edd32b6db01b48c17632df001"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sancaktepe/3d-tarama",
+      "payload_hash": "55db9545c75c35f14b320d52d4cc9fec"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sariyer",
+      "payload_hash": "dda5f6f11a202ef3869316bdd5a796ab"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sariyer/3d-baski",
+      "payload_hash": "b8a09c4d9b5cd463176afd518f7a842e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sariyer/3d-modelleme",
+      "payload_hash": "06e76547bd0f3fe0c10eb2fcbcc0ddce"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sariyer/3d-tarama",
+      "payload_hash": "b12a17c5b32c8153e0fbf98a55898348"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sile",
+      "payload_hash": "cac42907c0dcf00f63e558898d804c9d"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sile/3d-baski",
+      "payload_hash": "823b9cf5f154042a23cd267da37be194"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sile/3d-modelleme",
+      "payload_hash": "fc1815de62db6bb0f59a57129dbc2430"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sile/3d-tarama",
+      "payload_hash": "c092fb3005421a6364f3c6298a97832c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/silivri",
+      "payload_hash": "31d3b433b9c2cc9792642f69d81cbc52"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/silivri/3d-baski",
+      "payload_hash": "d75e83fa986506b57e3bb75b7a59b6fd"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/silivri/3d-modelleme",
+      "payload_hash": "d8c2c9ee0c04126fe06f26f439d12f75"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/silivri/3d-tarama",
+      "payload_hash": "3ef0306ec36f07a532acfd58e81cb8af"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sisli",
+      "payload_hash": "bfa93598290c5c36a314b8517e78ec20"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sisli/3d-baski",
+      "payload_hash": "c75e731c41621ee76df0c3d18afbc38c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sisli/3d-modelleme",
+      "payload_hash": "e21b60b41ba3717ec1198f26668e8acb"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sisli/3d-tarama",
+      "payload_hash": "64a9af5752d7cc0e96e5f5c501ff4a6b"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultanbeyli",
+      "payload_hash": "75ac9b5519f2ba75e10684ae49e99720"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-baski",
+      "payload_hash": "3b800e2cc57a05957c3f049d16881718"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-modelleme",
+      "payload_hash": "e7ed90166de7f4b87b2f1e32534f0a71"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultanbeyli/3d-tarama",
+      "payload_hash": "b4924bc10c93d36dd5276036708fd048"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultangazi",
+      "payload_hash": "1e9e12a0e4335d1b97dfe4d7bb805cf6"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultangazi/3d-baski",
+      "payload_hash": "a968695c0d931f6ff8e06d64d1ccfb9a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultangazi/3d-modelleme",
+      "payload_hash": "e0355645f09b40d3234d0a9e68731e07"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/sultangazi/3d-tarama",
+      "payload_hash": "fce9b7767c1eb26bc6449970c6ba630c"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/tuzla",
+      "payload_hash": "75a5806efaacbe7f2a130d9c6b473491"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/tuzla/3d-baski",
+      "payload_hash": "0cabae4923cfca419359c633bbcbfa81"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/tuzla/3d-modelleme",
+      "payload_hash": "0ea482dc8d9751de14b5d87bd977239f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+      "payload_hash": "95d54a13f24bd5de73173b398c4cf16a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/umraniye",
+      "payload_hash": "cf2f39670992088a03e37a55450e7e3a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/umraniye/3d-baski",
+      "payload_hash": "6dc35a204496aeffdc89a85ef0bb75b1"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/umraniye/3d-modelleme",
+      "payload_hash": "ef96d7f60c38d43aa21b919bb28bfc88"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/umraniye/3d-tarama",
+      "payload_hash": "a49ecc74a3dd10e6d8bce758b78a7de8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/uskudar",
+      "payload_hash": "743c84d0c12d7c5bf836f54f60f617ea"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/uskudar/3d-baski",
+      "payload_hash": "7065e42687c81dc6ecaffc3742546f00"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/uskudar/3d-modelleme",
+      "payload_hash": "88f1584eb97da258fb3c6545a5efe7dc"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/uskudar/3d-tarama",
+      "payload_hash": "5c4b44ef1765d95a2a7003e5500f840e"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/zeytinburnu",
+      "payload_hash": "7f1044f95f784dab3a2156f428f05923"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-baski",
+      "payload_hash": "06800f6beeddb3848d7ab607a178b778"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-modelleme",
+      "payload_hash": "fa157735c685066c6d6af30268ce3672"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/bolgeler/istanbul/zeytinburnu/3d-tarama",
+      "payload_hash": "1d99d3fd6a7442af3ee1200de9859433"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/cozumler/baglanti-sabitleme",
+      "payload_hash": "6ab75da9060e17021b28d9ede644efe4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/cozumler/ic-trim-kapaklar",
+      "payload_hash": "bc9fc0d1eb1a87e1f446688f2b463f63"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/cozumler/kurumsal-proje-yonetimi",
+      "payload_hash": "027b42dccf29c4c94745992fbbf23da5"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/cozumler/ornekten-parca-modelleme",
+      "payload_hash": "513177b5912345d1d474578a964d0466"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/cozumler/ozel-adaptorler",
+      "payload_hash": "d23a8df14a92707d8dac6c57af2275d4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/malzemeler/abs",
+      "payload_hash": "5c49b492f280567163e464aa9e3dcb4b"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/malzemeler/asa",
+      "payload_hash": "0aa5f9825205d06e99bc28f7d532bc5a"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/malzemeler/muhendislik-polimerleri",
+      "payload_hash": "dcc5361b029955a9d3b0563d3b80df98"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/malzemeler/petg",
+      "payload_hash": "d002caa8cba22b889e68a4ae28b87022"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/malzemeler/pla",
+      "payload_hash": "62a03fa637a42e50608c248afee62e0b"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/malzemeler/tpu",
+      "payload_hash": "dafd942dfff81392e9c2476a6cb09d28"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/3d-baski-fiyatlandirma",
+      "payload_hash": "24f0f8616ec8253b7300b6914d2e3bc7"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/kesit-nasil-incelenir",
+      "payload_hash": "ebb0c5580d798d5d10f94f651e3e3774"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/kirik-parca-yeniden-uretim",
+      "payload_hash": "7f69658b9e76124b8ef5b8a34f9717fe"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/maket-olcek-planlama",
+      "payload_hash": "4f1524e0ec44d974427f2480dd1acd9f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/malzeme-secim-sorulari",
+      "payload_hash": "865b77ce2bc86fb3fe482efc95ac6cbd"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/numune-kabul-plani",
+      "payload_hash": "dba2780a8723e8c29d54b6d83b27806f"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/numune-ve-revizyon",
+      "payload_hash": "e074f2f6890479cbf3090d35580a0b04"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/otomotiv-plastik-parca-malzeme",
+      "payload_hash": "49f9f9a584073e00265d455817d4d9d9"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/stl-dosya-hazirlama",
+      "payload_hash": "bc459760fb99d87471759e9f4b01cecf"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "payload_hash": "aecd7652f6b47635566f68413e8c3831"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/tarama-verisinden-cad",
+      "payload_hash": "9f84da396090333adcb325fa92c2beb4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/teklif-icin-dosya-hazirlama",
+      "payload_hash": "b4c3ff2ba6a638292e42a745cedf53a7"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "payload_hash": "9694ae84c4d897d3dbfc0858a973cf98"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/drone-hobi",
+      "payload_hash": "f01b3ed6e958e5f5b53cd9af8c9636e4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/egitim-arge",
+      "payload_hash": "77706643aeebc0e25ec50f86ad485bb9"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/endustriyel",
+      "payload_hash": "bc58f0a5f292d445ae95ae16b4aed511"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/medikal",
+      "payload_hash": "6eda3d06d485a7789f09770138d9c2e8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/mimari-tasarim",
+      "payload_hash": "051358df7bfd3e2a4efe6be0311d53e4"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/otomotiv",
+      "payload_hash": "adae0411e30fc05f7fe8610f990e26c8"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/sanat-mucevher",
+      "payload_hash": "c4857fb0794d63cb0119abf012f42d26"
+    },
+    {
+      "brand": "parcayanimda",
+      "tenant_id": "10000000-0000-4000-8000-000000000004",
+      "path": "/sektorler/savunma-havacilik",
+      "payload_hash": "4e04c671d3cd611ee2424a44fed5e692"
+    }
+  ]
+}

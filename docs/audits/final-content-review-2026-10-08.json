@@ -1,0 +1,385 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewedAt": "2026-10-08T16:08:03.585Z",
+  "reviewer": {
+    "name": "Codex",
+    "type": "ai_agent",
+    "role": "Owner-authorized editorial, local-evidence and SEO reviewer",
+    "authorization": {
+      "source": "Current user instruction in this conversation",
+      "statement": "son inceleme kaydını sen yap onayla ve geç",
+      "receivedAt": "2026-10-08T19:00:37+03:00"
+    },
+    "humanReviewClaimed": false
+  },
+  "sourceCommit": "afe83192c1dd92231b035d65f993334d9ef3da39",
+  "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+  "sourceFileCount": 361,
+  "scope": "Editorial publication-readiness review of the current authored route inventory. Full inventory is checked programmatically and against existing rendered evidence; targeted semantic review is explicitly enumerated. Asset provenance and visual/geometry review are separate reports. This review does not itself mutate database status or deploy a website.",
+  "inventory": {
+    "routes": 796,
+    "localRoutes": 656,
+    "completedFormerLocalShells": 652,
+    "uniqueTitles": 796,
+    "uniqueSummaries": 796,
+    "uniqueDirectAnswers": 796,
+    "mergedInventorySha256": "9fced5d81147bc988a68aef10bd71062238870e6e808c5d545469a825b9072b9",
+    "localInventorySha256": "be84020ada2bba9392436acede10d70ed042e30dd8f9dcb29e6312697e487ad2",
+    "sourceFiles": [
+      {
+        "path": "src/content/pages.json",
+        "sha256": "a7b2caff3e7c94c41fa0786fa5f581d7c981371da92d2a471c49fc635178a3f3"
+      },
+      {
+        "path": "src/content/editorial-pages.json",
+        "sha256": "1058930e40715f7633462cf6012d3ca0e1eaea49f29c94d5f371643a58473a9b"
+      },
+      {
+        "path": "src/content/search-pages.json",
+        "sha256": "336e268976c4a344cd32ca840664790c91062ad54c9710711aa6db59e11e77ca"
+      }
+    ],
+    "perBrand": {
+      "3dyanimda": {
+        "routes": 199,
+        "localRoutes": 164,
+        "sections": 408,
+        "faqAnswers": 374,
+        "sourceReferences": 268
+      },
+      "3dsanayi": {
+        "routes": 199,
+        "localRoutes": 164,
+        "sections": 408,
+        "faqAnswers": 374,
+        "sourceReferences": 431
+      },
+      "maketyanimda": {
+        "routes": 199,
+        "localRoutes": 164,
+        "sections": 408,
+        "faqAnswers": 374,
+        "sourceReferences": 268
+      },
+      "parcayanimda": {
+        "routes": 199,
+        "localRoutes": 164,
+        "sections": 411,
+        "faqAnswers": 377,
+        "sourceReferences": 269
+      }
+    }
+  },
+  "checks": {
+    "allBrandsAllThemesAllRoutes": {
+      "result": "pass",
+      "brands": [
+        "3dyanimda",
+        "3dsanayi",
+        "maketyanimda",
+        "parcayanimda"
+      ],
+      "themes": [
+        "industrial",
+        "editorial",
+        "studio"
+      ],
+      "viewports": [
+        1440,
+        390
+      ],
+      "contentRoutes": 796,
+      "utilityRoutes": 60,
+      "renderedCases": 5136,
+      "caseBreakdown": {
+        "local": 3912,
+        "coreAndUtility": 1224
+      },
+      "method": "Reconciled all current 796 route identities, titles, section counts and FAQ counts to the union of the two passing browser reports. Local inventory hash matches exactly. Compared relevant source files against commit 21f1ae9: authored JSON, ContentPage, Seo and theme CSS are unchanged since that evidence. These are prior automated render cases, not 5136 individually inspected screenshots."
+    },
+    "renderedText": {
+      "result": "pass",
+      "method": "Read the two browser QA implementations: sections are matched to visible DOM, FAQs are visible in expandable details, canonical/noindex/h1 and image/overflow checks run per route/theme. Local FAQ JSON-LD is deep-equal to source Q/A; core FAQ count is checked and the shared renderer maps its questions and answers directly from the same p.faq array. Read full text for the 28 named routes and all 185 sentences flagged by guarantee or safety-claim patterns.",
+      "fullTextSemanticSamples": [
+        {
+          "brand": "3dyanimda",
+          "path": "/bolgeler/istanbul/adalar",
+          "sha256": "e9ab62f0a2ea20994907d2f2026a43191bbb982ec09b4d50e4646c69bf94bb7c"
+        },
+        {
+          "brand": "3dyanimda",
+          "path": "/bolgeler/istanbul/atasehir/ornek/3d-tarama",
+          "sha256": "8d4c2eef19a25aeb3d43b33d90e40190a43e74e82abde2debcbd0fd2f47bf93f"
+        },
+        {
+          "brand": "3dyanimda",
+          "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+          "sha256": "5aa646dd08fbee614b6c741ee99ff6ca8a311ac43f9a5f946b84b04c609d1e5d"
+        },
+        {
+          "brand": "3dyanimda",
+          "path": "/malzemeler/muhendislik-polimerleri",
+          "sha256": "c9bc9bd5ea08d61fbe925f7be9d75f3ccf1bc61804f8e3439b19ad287551e969"
+        },
+        {
+          "brand": "3dyanimda",
+          "path": "/3d-baski",
+          "sha256": "d99601b996646f54b0a2b536c627423492d85c56ecb6fe98c154d2ef672fd918"
+        },
+        {
+          "brand": "3dyanimda",
+          "path": "/sektorler/medikal",
+          "sha256": "056e1253acd011a12494a91055cd656da43a02fe1f498f6ada009c2ae5ac3311"
+        },
+        {
+          "brand": "3dyanimda",
+          "path": "/sektorler/savunma-havacilik",
+          "sha256": "67cb035d8b6e8215045886a9c6b19596a76f9267dc76bcadd715f3853932edd8"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/bolgeler/istanbul/basaksehir/3d-baski",
+          "sha256": "718a41090d8e69d1f5dbbece232802ec15e8ee95a77e4cd5a6590c08318bbce0"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/bolgeler/istanbul/tuzla/3d-tarama",
+          "sha256": "38e9e28b1ce2d908b7a1149a604c2d04e5dc2de5df5bf4fd1b2bd1a09143c66f"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/bolgeler/istanbul/atasehir/ornek/3d-modelleme",
+          "sha256": "53d451911938bdfacaa584e6b4f58602fd36ae3cf80cb649a9303ed19d11b47f"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/3d-tarama",
+          "sha256": "6d0b014e056d3ed949f60c1859187865c41de1b73e2d31feca781723cb3ca68c"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/bolgeler/istanbul",
+          "sha256": "5f4ab37f7eaf0391c897c6e4080335de6f8c8b31e8ffcf9ae1a22bb2c53a43c3"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/sektorler/medikal",
+          "sha256": "acc201551d0b8a344aa85daeb89092aa446f13aca45828fa5e7568c45ecd696c"
+        },
+        {
+          "brand": "3dsanayi",
+          "path": "/sektorler/savunma-havacilik",
+          "sha256": "907d8a3e52914da650200533a6db399c83f0735a2a6bf5ecac7c8e3475eebfd4"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/bolgeler/istanbul/adalar/3d-baski",
+          "sha256": "0e6e0a221ac6794ecea240e60a3a6c8c511c24c188450f565bff7f06e3812e07"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/bolgeler/istanbul/atasehir/ornek",
+          "sha256": "bcb2455a39fa70b1ac88920ee3543fa18b87d5d45f7fa78d28380d0a99951e80"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/bolgeler/istanbul/beyoglu/3d-modelleme",
+          "sha256": "6e3c720b3e6f52f14d4ce030786bc412e456a5da03c0c459c7214b891d96832a"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/3d-modelleme",
+          "sha256": "c4671046cf5852aadd6ce6ac6b8ebf61d1938b646e8e7f9fa8003c9eb9a29e9c"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/malzemeler/pla",
+          "sha256": "453584237461de8e0a876508002ee8c523d20f807d26669f79e420f46d4afc1b"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/sektorler/medikal",
+          "sha256": "896816b77229703531e8ebac6fafef07c75ad22bc7951f9940eaccb4301e68c5"
+        },
+        {
+          "brand": "maketyanimda",
+          "path": "/sektorler/savunma-havacilik",
+          "sha256": "fe357fc44500136c1f58cad228ebd00e14707acf9f1454d9ee8da3f699e5749e"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/bolgeler/istanbul/pendik/3d-modelleme",
+          "sha256": "d1191427d0722804fba9868259797642e8007026006157debf4eae300f1f7e0d"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/bolgeler/istanbul/atasehir/ornek",
+          "sha256": "b5c3886c5472b404c7408fe01c3cdf0a00e689c99d723ea691bfe63cb36de3cd"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/bolgeler/istanbul/silivri/3d-tarama",
+          "sha256": "09bd6222932737ea8b61648214428eeaf26bf6a1cb0bc0882137b93ee136a1fd"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/3d-tarama",
+          "sha256": "a3d365160efdfe4d322b92a43582b809ffac91a2863b30cba619e5e951f87cc0"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/malzemeler/tpu",
+          "sha256": "34ec99a3b77bb9eeedab424f5d74f42aeabb9064e95eed2d72517f657cef9d64"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/sektorler/medikal",
+          "sha256": "77de7265a957e324f7886cab20d92036ce1fa00f88b20c7fd978f90a2c538985"
+        },
+        {
+          "brand": "parcayanimda",
+          "path": "/sektorler/savunma-havacilik",
+          "sha256": "4e1442534d5d58d59fb838514c0231ac02b9f0114d946a1c77819b9d65fe634f"
+        }
+      ]
+    },
+    "localEvidence": {
+      "result": "pass",
+      "geographicPlaces": 41,
+      "geographicSources": 11,
+      "ownerFactSources": 2,
+      "method": "Checked every location identity and source URL shape, verified municipality/official source records, reconciled direct district-side assertions, and reread owner service and full-contact confirmations. All 656 local pages have evidence/review dates. District pages identify a service area; only the owner-confirmed Örnek Mahallesi workshop is claimed. No public muhtarlık address is used as the workshop.",
+      "ownerConfirmedFacts": [
+        "Cargo, courier and collection available",
+        "Intercity cargo available",
+        "3D scanning and onsite scanning offered",
+        "Workshop visits require an appointment",
+        "info@3dyanimda.com",
+        "+90 536 448 82 30",
+        "Örnek Mahallesi, Bestekar Sokak No: 17, Ataşehir / İstanbul"
+      ],
+      "notClaimed": [
+        "Carrier identity",
+        "Guaranteed delivery time/fee",
+        "Guaranteed scanner precision",
+        "Universal onsite service radius",
+        "Customer projects or local branch offices",
+        "Clinical, aviation, food-contact or mechanical-safety certification"
+      ]
+    },
+    "seoGeoParity": {
+      "result": "pass",
+      "method": "Reviewed ContentPage, Seo, structured-data and search canonical helpers. Visible title/summary, direct answer, article/FAQ/breadcrumb data and tenant identity are derived from the same content records. Canonicals remove query/fragment and use tenant origin. Published runtime reads the tenant-scoped database; preview drafts remain loopback-development only. Related editorial links resolve to current content or valid utility routes. Verified contact identity remains a separate factual record; geo labels do not create district branches.",
+      "findings": [
+        "All 796 titles, summaries and direct-answer strings are unique in the current merged inventory.",
+        "All 796 records have sections, FAQs and direct answers.",
+        "No unresolved related editorial paths or non-HTTPS source references found.",
+        "No legacy source-company identity found in authored text.",
+        "Local sources support geography; conditional technical scenarios are not represented as completed local customer projects."
+      ]
+    }
+  },
+  "claimScan": {
+    "scope": "title, summary, section bodies, FAQ answers, local_context, logistics and direct answers for all 796 routes",
+    "results": {
+      "unsupportedPastCustomerPatternHits": 0,
+      "firstPersonBranchOfficePatternHits": 0,
+      "numericPrecisionPatternHits": 0,
+      "placeholderPatternHits": 0,
+      "legacyCompanyPatternHits": 0,
+      "guaranteeOrCertaintySentencesReviewed": 109,
+      "safetyOrCertificationSentencesReviewed": 76
+    },
+    "interpretation": "The 185 flagged sentence occurrences were read in this review. Certainty and certification references limit scope or require validation; none establishes a fabricated guarantee. Pattern scans are supplementary evidence, not proof that every possible claim has been captured."
+  },
+  "currentOfficialGuidance": {
+    "checkedAt": "2026-10-08",
+    "sources": [
+      {
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+        "reviewNote": "Geographic page counts and low lexical similarity alone do not establish usefulness or immunity from doorway/scaled-content policies."
+      },
+      {
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+        "reviewNote": "Usefulness, accuracy and transparent authorship matter; no invented expert identity is added."
+      },
+      {
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "reviewNote": "AI Search eligibility relies on standard SEO, crawl/index eligibility and visible structured-data parity; neither citations nor indexing is guaranteed."
+      },
+      {
+        "url": "https://developers.google.com/search/updates",
+        "reviewNote": "The official changelog says FAQ rich results stopped appearing from May 7, 2026. Existing visible FAQs/FAQPage parity is retained for structured clarity, not counted as a promised Google rich-result feature."
+      },
+      {
+        "url": "https://www.atasehir.bel.tr/atasehir/muhtarliklar",
+        "reviewNote": "Reopened; official list includes Örnek Mahallesi. Municipality contact information is not business contact evidence."
+      },
+      {
+        "url": "https://www.adalar.gov.tr/adalar-ilcemizde-ulasim",
+        "reviewNote": "Official retrieval confirms mainland access through Bostancı, Kadıköy, Kartal and Kabataş. No timetable or travel-time promise is made."
+      },
+      {
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm",
+        "reviewNote": "Reopened; mesh modification/conversion tools support the broad distinction between scan mesh and editable model. This is not evidence of workshop equipment or measurement accuracy."
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "path": "docs/audits/rendered-local.json",
+      "sha256": "0fad9feb570b4d04b319424af750a1b0945db3731922505a206d60adc86ab73e"
+    },
+    {
+      "path": "docs/audits/rendered-editorial.json",
+      "sha256": "86bfde944a42ae50153e75640ed0e29a5da567f1f286686aa05112210fbb4d08"
+    },
+    {
+      "path": "docs/audits/all-local-originality.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "path": "docs/audits/local-content-completeness.json",
+      "sha256": "da6f5e6fb81db46c72c0b260ec506de7b159e3c759a1f3ac3792b315d09c9280"
+    },
+    {
+      "path": "docs/audits/remote-local-content-2026-10-08.json",
+      "sha256": "546d324b30bb67c1c2954a7cfd5f594ae275a412f4373463b4d4dd82fdb25fbb"
+    },
+    {
+      "path": "docs/audits/confirmed-business-contact-2026-10-08.json",
+      "sha256": "d90882050dad93a5c716e6746362b70505e740a0ad8389ec88ecb07d9a01545c"
+    },
+    {
+      "path": "content/authoring/localities-evidence.json",
+      "sha256": "274d7b828b14e6fe3e378a001f081c68c54154205e7f7d9dd8617de0b923fbf7"
+    },
+    {
+      "path": "content/authoring/business-service-facts.json",
+      "sha256": "e3f5be4353b8d3b73943af1e0e6d0f4624997daeb56508c50d02195fe7465be7"
+    },
+    {
+      "path": "content/authoring/confirmed-business-contact.json",
+      "sha256": "816e934a71de7260be64debd19fa3f8cb42766265f8c4bc08a2d86f0ab002872"
+    },
+    {
+      "path": "docs/audits/publication-content-manifest.json",
+      "sha256": "a689dba386e97afe0d4413cb223f36f709e14416546ba521cadb4af548e60dd7"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "This is an actual Codex review under explicit owner authorization, not a human reviewer attestation.",
+    "The 5136 cases are previously completed automated browser cases reconciled to unchanged authored data/renderers; this pass did not independently inspect every rendered pixel.",
+    "Semantic full-text sampling covers 28 listed routes plus flagged sentences across all routes; it is not described as a line-by-line human read of every paragraph.",
+    "An originality audit does not prove web-wide originality or satisfy search-engine quality judgments. Geographic expansion should be judged by real reader value and search feedback after launch.",
+    "Production HTTP, robots/sitemap delivery, crawl/index status, analytics receipt, legal disclosures and lead/email workflows require their separate deployment/operational checks. No rankings, AI citations, indexing speed or sales result is promised."
+  ],
+  "databaseCorrespondence": {
+    "result": "pass",
+    "records": 796,
+    "manifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
+    "method": "Root agent compared remote PostgreSQL payload hashes to all current merged local fields and reported zero mismatches. This reviewer read the resulting 796-route manifest; remote execution was performed by root. The manifest remains prepared_not_approved and this review does not mutate publication status."
+  }
+}
