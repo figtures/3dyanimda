@@ -1,0 +1,48 @@
+{
+  "result": "pass",
+  "testedAt": "2026-10-08T15:20:21.504Z",
+  "scope": "Industrial local hero summary text; four brands and two viewports",
+  "minimumRequired": 4.5,
+  "records": [
+    {
+      "brand": "3dyanimda",
+      "foreground": "rgb(200, 217, 219)",
+      "background": "rgb(8, 44, 57)",
+      "contrastRatio": 10.07,
+      "viewports": [
+        1440,
+        390
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "foreground": "rgb(200, 217, 219)",
+      "background": "rgb(8, 44, 57)",
+      "contrastRatio": 10.07,
+      "viewports": [
+        1440,
+        390
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "foreground": "rgb(200, 217, 219)",
+      "background": "rgb(8, 44, 57)",
+      "contrastRatio": 10.07,
+      "viewports": [
+        1440,
+        390
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "foreground": "rgb(200, 217, 219)",
+      "background": "rgb(8, 44, 57)",
+      "contrastRatio": 10.07,
+      "viewports": [
+        1440,
+        390
+      ]
+    }
+  ]
+}

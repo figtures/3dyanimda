@@ -1,0 +1,8 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "records": 800,
+  "issue_counts": {},
+  "issues": [],
+  "scope": "Editorial records and referenced public assets. Full rendered-site and human semantic/provenance review are separately required; this audit alone cannot authorize publication."
+}

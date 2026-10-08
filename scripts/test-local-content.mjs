@@ -112,7 +112,7 @@ if (!staticOnly) {
   const { chromium } = await import('@playwright/test');
   const port = Number(process.env.LOCAL_CONTENT_QA_PORT || 8092);
   const origin = `http://127.0.0.1:${port}`;
-  const server = await createServer({ server: { host: '127.0.0.1', port, strictPort: true } });
+  const server = await createServer({ server: { host: '127.0.0.1', port, strictPort: true, hmr: false } });
   await server.listen();
   let browser;
   const evidence = [], failures = [];
@@ -130,9 +130,23 @@ if (!staticOnly) {
       assert.equal(await page.locator('.answer-card').count(), 0, `${brand}: authored draft is hidden without explicit local preview`);
       assert.notEqual(await page.locator('h1').innerText(), brandRecords[0].title, `${brand}: draft title is hidden without explicit local preview`);
       for (const theme of themes) {
+        let themeLoaded = false;
         for (const p of brandRecords) {
           await page.setViewportSize({ width: widths[0], height: 960 });
-          await page.goto(`${origin}${p.path}?tenant=${brand}&theme=${theme}&previewDrafts=1`);
+          const target = `${origin}${p.path}?tenant=${brand}&theme=${theme}&previewDrafts=1`;
+          if (!themeLoaded) {
+            await page.goto(target);
+            themeLoaded = true;
+          } else {
+            // Exercise the router while retaining the tenant's cached content.
+            // Each theme still starts with a full document load; every route is rendered.
+            await page.evaluate(url => {
+              const state = { ...history.state, key: url, idx: (history.state?.idx || 0) + 1 };
+              history.pushState(state, '', url);
+              dispatchEvent(new PopStateEvent('popstate', { state }));
+            }, target);
+          }
+          await page.waitForFunction(({ title, canonical }) => document.querySelector('h1')?.textContent === title && document.querySelector('link[rel="canonical"]')?.getAttribute('href') === canonical, { title: p.title, canonical: origin + p.path });
           await page.locator('.answer-card').waitFor();
           assert.deepEqual(await page.locator('h1').allTextContents(), [p.title], `${key(p)}: one correct h1`);
           assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), origin + p.path);
@@ -166,7 +180,8 @@ if (!staticOnly) {
         }
         console.log(`PASS ${brand}/${theme}: ${brandRecords.length} draft routes, ${widths.length} widths`);
       }
-      await page.close();
+      // Keep contexts alive until all brands finish: single-process Chromium
+      // can close sibling contexts when one finishes earlier than the others.
     }));
     assert.deepEqual(failures, [], 'Browser runtime errors');
     assert.equal(cases, 652 * 3 * 2);

@@ -1,7 +1,7 @@
 {
-  "status": "proposal_not_applied",
-  "reason": "652 geographic route shells share the same brand paragraphs; owner-confirmed operational facts do not establish unique local page value.",
-  "requiresOwnerDecision": true,
+  "status": "superseded_without_application",
+  "reason": "All 652 routes were retained and authored on 2026-10-08 at the owner’s request; the proposed redirect consolidation was never applied.",
+  "requiresOwnerDecision": false,
   "retainedAuthoredRoutes": 144,
   "routes": [
     {
@@ -3916,5 +3916,8 @@
       "to": "/3d-modelleme",
       "proposedHttpStatus": 301
     }
-  ]
+  ],
+  "historicalReason": "652 geographic route shells share the same brand paragraphs; owner-confirmed operational facts do not establish unique local page value.",
+  "currentAuthoredRoutes": 796,
+  "evidence": "docs/audits/remote-local-content-2026-10-08.json"
 }

@@ -1,0 +1,334 @@
+{
+  "result": "pass",
+  "verifiedAt": "2026-10-08T15:12:03.960Z",
+  "project": "zdxjmhhjuomcpdtllnuq",
+  "routes": 652,
+  "brands": [
+    {
+      "brand": "3dsanayi",
+      "total_rows": 199,
+      "published_rows": 0,
+      "completed_scope": 163,
+      "incomplete_local_rows": 0
+    },
+    {
+      "brand": "3dyanimda",
+      "total_rows": 199,
+      "published_rows": 0,
+      "completed_scope": 163,
+      "incomplete_local_rows": 0
+    },
+    {
+      "brand": "maketyanimda",
+      "total_rows": 199,
+      "published_rows": 0,
+      "completed_scope": 163,
+      "incomplete_local_rows": 0
+    },
+    {
+      "brand": "parcayanimda",
+      "total_rows": 199,
+      "published_rows": 0,
+      "completed_scope": 163,
+      "incomplete_local_rows": 0
+    }
+  ],
+  "exactContentReadback": {
+    "fields": [
+      "title",
+      "summary",
+      "sections",
+      "faq",
+      "local_context",
+      "logistics",
+      "evidence",
+      "reviewed_at",
+      "editorial"
+    ],
+    "verified": 652,
+    "method": "Locked brand transactions checked each record against authored JSON before committing; initial row hashes protect concurrent edits."
+  },
+  "sourceBatches": [
+    {
+      "filename": "3dyanimda-000.sql",
+      "brand": "3dyanimda",
+      "offset": 0,
+      "routes": 20,
+      "sha256": "52c258ee606c3ee07d91181db47ae7b5605055584f7b97d4e45223af8540be1b"
+    },
+    {
+      "filename": "3dyanimda-020.sql",
+      "brand": "3dyanimda",
+      "offset": 20,
+      "routes": 20,
+      "sha256": "c637d27a5e5aad2df76583892d52a8f9e5ee2bedb8bda1df6015ca93f6db612b"
+    },
+    {
+      "filename": "3dyanimda-040.sql",
+      "brand": "3dyanimda",
+      "offset": 40,
+      "routes": 20,
+      "sha256": "f6ffb2f80703f36fa0624fb51d3a9c4e1fffcc8bf7a1ded9a36010db74cde50a"
+    },
+    {
+      "filename": "3dyanimda-060.sql",
+      "brand": "3dyanimda",
+      "offset": 60,
+      "routes": 20,
+      "sha256": "f6b7ba24c9521406c0c8dc82facb637930239f3ec7006fd0656b15edbacf96e9"
+    },
+    {
+      "filename": "3dyanimda-080.sql",
+      "brand": "3dyanimda",
+      "offset": 80,
+      "routes": 20,
+      "sha256": "aec46bc8039ed5b0bd8586cdeb46fe885cf1a6a65ef5b634f7296b37e92f57a7"
+    },
+    {
+      "filename": "3dyanimda-100.sql",
+      "brand": "3dyanimda",
+      "offset": 100,
+      "routes": 20,
+      "sha256": "6d0f77900a4e89378e0e5854fe3b8a58136251999d25247b08fba2e7292ff09b"
+    },
+    {
+      "filename": "3dyanimda-120.sql",
+      "brand": "3dyanimda",
+      "offset": 120,
+      "routes": 20,
+      "sha256": "78cd03cffff0519c1f9c6b649f0fdfeaf498b062db0db5de517a484c12400e2f"
+    },
+    {
+      "filename": "3dyanimda-140.sql",
+      "brand": "3dyanimda",
+      "offset": 140,
+      "routes": 20,
+      "sha256": "da2886695a2e2baf8a14dbe4b16637f27f1e491f212f9f3e9f83ea75252746da"
+    },
+    {
+      "filename": "3dyanimda-160.sql",
+      "brand": "3dyanimda",
+      "offset": 160,
+      "routes": 3,
+      "sha256": "a6a84db90d04e491f9fa4d3de8a76458688ab03260f82d9bd2afd5d6c1fb4d15"
+    },
+    {
+      "filename": "3dsanayi-000.sql",
+      "brand": "3dsanayi",
+      "offset": 0,
+      "routes": 20,
+      "sha256": "fd494b4e8cd78f5632cb986bc6bf58d8c090bcaa34e4b780cb731b90784e341b"
+    },
+    {
+      "filename": "3dsanayi-020.sql",
+      "brand": "3dsanayi",
+      "offset": 20,
+      "routes": 20,
+      "sha256": "46ef1e145c14de1a8e1e34886455dce82642b4f451bec747f163b423e04f6656"
+    },
+    {
+      "filename": "3dsanayi-040.sql",
+      "brand": "3dsanayi",
+      "offset": 40,
+      "routes": 20,
+      "sha256": "d6ad8f69ce44c0c6b205f210a307379f472bc61f123f5ed134e218d8c070936e"
+    },
+    {
+      "filename": "3dsanayi-060.sql",
+      "brand": "3dsanayi",
+      "offset": 60,
+      "routes": 20,
+      "sha256": "5dabf16cdb7f1765c45b059ce183970cf84a281d01fd78c8e6cd4d01c58f0de0"
+    },
+    {
+      "filename": "3dsanayi-080.sql",
+      "brand": "3dsanayi",
+      "offset": 80,
+      "routes": 20,
+      "sha256": "deb77b9b62672d0323c952953137acd79213a0ac98b13df987006957c81c80fa"
+    },
+    {
+      "filename": "3dsanayi-100.sql",
+      "brand": "3dsanayi",
+      "offset": 100,
+      "routes": 20,
+      "sha256": "7e7d274365bea6b6fede9758da9237a181645f6e2aeb67c53fce3ece176d5087"
+    },
+    {
+      "filename": "3dsanayi-120.sql",
+      "brand": "3dsanayi",
+      "offset": 120,
+      "routes": 20,
+      "sha256": "2d0a0268a8151d54886ff06d246665f60a87be95c2925e149441dda8e6f53719"
+    },
+    {
+      "filename": "3dsanayi-140.sql",
+      "brand": "3dsanayi",
+      "offset": 140,
+      "routes": 20,
+      "sha256": "79db2ec81da7789becb23bfef35ef5d74a0398adab8aec4ba9aa7515edae6d39"
+    },
+    {
+      "filename": "3dsanayi-160.sql",
+      "brand": "3dsanayi",
+      "offset": 160,
+      "routes": 3,
+      "sha256": "2d1f1d38651eebaa12653b8565e3555d2bb8d2d6763924e358df24562727ec13"
+    },
+    {
+      "filename": "maketyanimda-000.sql",
+      "brand": "maketyanimda",
+      "offset": 0,
+      "routes": 20,
+      "sha256": "7b5dd0d8c5b735aa3b5e9daa7412c0b649667f84fb15dee4d099c37ccf8cb26e"
+    },
+    {
+      "filename": "maketyanimda-020.sql",
+      "brand": "maketyanimda",
+      "offset": 20,
+      "routes": 20,
+      "sha256": "c022546949224c8f8def6d116f5aff9ab3d2b5f00ab6fb00299024b459f84e6d"
+    },
+    {
+      "filename": "maketyanimda-040.sql",
+      "brand": "maketyanimda",
+      "offset": 40,
+      "routes": 20,
+      "sha256": "cff5223826af02e60b26b9f917be13db65fd0d1b1b54416e4781e036c1b9e459"
+    },
+    {
+      "filename": "maketyanimda-060.sql",
+      "brand": "maketyanimda",
+      "offset": 60,
+      "routes": 20,
+      "sha256": "8448d7bb2aca78705714e89f8c0ea0bfc5bab61ff32049c669e718eeca219079"
+    },
+    {
+      "filename": "maketyanimda-080.sql",
+      "brand": "maketyanimda",
+      "offset": 80,
+      "routes": 20,
+      "sha256": "b52e4becfbbe36660baea3073d96985ec76cd5654b17eee6309abcdf365b1035"
+    },
+    {
+      "filename": "maketyanimda-100.sql",
+      "brand": "maketyanimda",
+      "offset": 100,
+      "routes": 20,
+      "sha256": "67fdb4eaa6508ddb4846db31c5ebcfc428fdf739cc4dd72f08b1c2369b59d000"
+    },
+    {
+      "filename": "maketyanimda-120.sql",
+      "brand": "maketyanimda",
+      "offset": 120,
+      "routes": 20,
+      "sha256": "111e80c02fab7d63494e7ba459373a9d9d18fcd5531bca59305235aed12e90ce"
+    },
+    {
+      "filename": "maketyanimda-140.sql",
+      "brand": "maketyanimda",
+      "offset": 140,
+      "routes": 20,
+      "sha256": "dc7f31f1d5f2721aa0a3c767c098a332de9cb9c873ee4a845bedc30c3bf7383a"
+    },
+    {
+      "filename": "maketyanimda-160.sql",
+      "brand": "maketyanimda",
+      "offset": 160,
+      "routes": 3,
+      "sha256": "1a222b083d0b0a485fe68d53b6734997e7aff8103b183673d80281971d33c160"
+    },
+    {
+      "filename": "parcayanimda-000.sql",
+      "brand": "parcayanimda",
+      "offset": 0,
+      "routes": 20,
+      "sha256": "61c38112434bfa490aa17e4586a29a23bea465320b92407aa17078e99a90877c"
+    },
+    {
+      "filename": "parcayanimda-020.sql",
+      "brand": "parcayanimda",
+      "offset": 20,
+      "routes": 20,
+      "sha256": "618c3b5eee04f82d9f8396347eda878bf36ec87f32aea1252ce9327916a1bc98"
+    },
+    {
+      "filename": "parcayanimda-040.sql",
+      "brand": "parcayanimda",
+      "offset": 40,
+      "routes": 20,
+      "sha256": "a1031a368ed0d017b4e88bf5639d4712390a1d18f697e599d19d1665f1bf84b9"
+    },
+    {
+      "filename": "parcayanimda-060.sql",
+      "brand": "parcayanimda",
+      "offset": 60,
+      "routes": 20,
+      "sha256": "1885e2b4bb29d3e469a7dd599b7a3fd1d687e6b7c0c261b2a0daff3db612a537"
+    },
+    {
+      "filename": "parcayanimda-080.sql",
+      "brand": "parcayanimda",
+      "offset": 80,
+      "routes": 20,
+      "sha256": "c1d85c26dfe5ffe008d5bf88f6479b2c18fa825909cd7f40855255cc72863c58"
+    },
+    {
+      "filename": "parcayanimda-100.sql",
+      "brand": "parcayanimda",
+      "offset": 100,
+      "routes": 20,
+      "sha256": "f0e432cce5fbcca3f221bd4131e30e2696759176f335a1f79bbddc167b8e78b8"
+    },
+    {
+      "filename": "parcayanimda-120.sql",
+      "brand": "parcayanimda",
+      "offset": 120,
+      "routes": 20,
+      "sha256": "ca83cbe3a033c19c550edc9b4fb058be8a64157b9f61a1c350cb9db5b3449387"
+    },
+    {
+      "filename": "parcayanimda-140.sql",
+      "brand": "parcayanimda",
+      "offset": 140,
+      "routes": 20,
+      "sha256": "cf2a7542983e5c0ff5b37f9b7c9489714d7eaf83a842c674267ae99c4f50c97d"
+    },
+    {
+      "filename": "parcayanimda-160.sql",
+      "brand": "parcayanimda",
+      "offset": 160,
+      "routes": 3,
+      "sha256": "b66f1434da9e25f0233ea02322aa881c090ad6fd1fa5cb4cc02392c4b00ac0f1"
+    }
+  ],
+  "appliedBrands": [
+    {
+      "brand": "3dyanimda",
+      "verifiedRoutes": 163,
+      "at": "2026-10-08T15:09:26.944Z"
+    },
+    {
+      "brand": "3dsanayi",
+      "verifiedRoutes": 163,
+      "at": "2026-10-08T15:10:05.182Z"
+    },
+    {
+      "brand": "maketyanimda",
+      "verifiedRoutes": 163,
+      "at": "2026-10-08T15:10:39.914Z"
+    },
+    {
+      "brand": "parcayanimda",
+      "verifiedRoutes": 163,
+      "at": "2026-10-08T15:11:17.619Z"
+    }
+  ],
+  "publication": {
+    "performed": false,
+    "publishedRows": 0,
+    "humanReviewIssued": false,
+    "redirectsCreated": false
+  },
+  "scope": "Completed editorial data only; no deployment or publication approval."
+}

@@ -1,0 +1,862 @@
+{
+  "sariyer": {
+    "": {
+      "summary": "Sarıyer’den katlanır sehpa dış kapağı talebinde kırığın geçmişini, sağlam eş örneği ve beklenen kullanım sınırını birlikte kayda alın.",
+      "faq": [
+        {
+          "q": "Aynı sehpadaki diğer kapağı örnek alabilir miyiz?",
+          "a": "Sağlam kapak yardımcı referanstır; karşı taraftaki vida düzeni ve menteşe yönü aynıysa kullanılabilir. İki tarafı gösteren fotoğraf gereklidir."
+        },
+        {
+          "q": "Kırık kapağı önceden yapıştırmam yararlı olur mu?",
+          "a": "Kırık yüzeyleri önce ayrı ayrı belgeleyin. Yapıştırıcının bağlantı ölçüsünü değiştirmesi veya sonradan ayrılmayı zorlaştırması değerlendirmeyi etkileyebilir."
+        }
+      ],
+      "local_context": "Sarıyer Avrupa yakasındadır; Ayazağa, Maslak ve Huzur adresleri de bu ilçeye bağlıdır. Sehpa kapağını değerlendirmeye gönderen kişinin adresiyle eşyanın bulunduğu adres farklıysa ikisini ayırın. Özellikle birden fazla sehpa için sağlam referansın hangi ürüne ait olduğu bilgisi, kapakların birbirine karışmasını önler.",
+      "logistics": "Kargo veya kurye paketine sehpanın tamamı yerine hangi sökülebilir referansın konacağı ön görüşmede belirlenebilir. Elden numune bırakılacaksa Örnek Mahallesi atölyesi için randevu alın; geri gönderilecek kırık parçaları teslim listesinde ayrı sayın.",
+      "answer": "Sarıyer’den sehpa kapağı talebinde sağlam referansı, kırık geçmişini ve doğru teslim adresini birlikte paylaşın.",
+      "takeaways": [
+        "Sağlam eş örneği tanımlayın",
+        "Kırıkları ayrı belgeleyin",
+        "Gönderici ve ürün adresini ayırın"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Sarıyer için sehpa kapağı baskısında dosya revizyonunu ve deneme parçasının hangi sehpayla eşleşeceğini açık bir kayıtla belirleyin.",
+      "faq": [
+        {
+          "q": "Bir kapak uyarsa diğer bütün sehpalar için çoğaltabilir miyim?",
+          "a": "Önce diğer sehpaların bağlantı biçimi ve ölçüleri karşılaştırılmalıdır. Benzer görünüş, farklı üretim serilerindeki kapağın aynı olduğu anlamına gelmez."
+        },
+        {
+          "q": "Deneme kapağının üzerine not yazabilir miyim?",
+          "a": "Bağlantı yüzeyine müdahale etmeyen bir etiket kullanılabilir. Değişiklik önerisini parçanın fotoğrafında işaretlemek ölçü yorumunu daha açık tutar."
+        }
+      ],
+      "local_context": "Sarıyer’de yapılacak montaj denemesiyle Ataşehir’deki üretim değerlendirmesini aynı parça kodunda buluşturmak gerekir. Birden çok menteşe biçimi varsa örnekleri yalnız renklerine göre ayırmayın; sehpanın altındaki model etiketi ve kapağın yönünü kaydedin. Avrupa yakasındaki alıcıdan gelecek geri bildirim böylece doğru baskı sürümüne bağlanabilir.",
+      "logistics": "İlk deneme kapağını taşıyan kargo ya da kurye paketinde dosya sürümü ve sehpa kodu bulunmalıdır. Elden teslim tercihinde randevu notuna birlikte incelenecek sehpa fotoğraflarını ekleyin; farklı varyantları iç içe geçirerek paketlemeyin.",
+      "answer": "Sehpa kapağı baskısında onayı belirli ürün ve dosya sürümüne bağlayın; çoğaltma kararını eşleşme kontrolünden sonra verin.",
+      "takeaways": [
+        "Sehpa kodunu ekleyin",
+        "Baskı sürümünü koruyun",
+        "Varyantları ayrı paketleyin"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Sarıyer’de sehpa kapağının taranması için nesnenin geçmişi, ayrılabilen yüzeyler ve kayıt sırasında kullanılacak konumlar açıklanmalıdır.",
+      "faq": [
+        {
+          "q": "Eski bir yedek kapak tarama için yeterli midir?",
+          "a": "Ölçülen parçanın hedef sehpayla eşleştiği ayrıca gösterilmelidir. Kaynağı belirsiz yedek kapak tek başına mevcut montajın doğrusu olarak kabul edilmez."
+        },
+        {
+          "q": "Taramada kırık kenarlar dosyadan çıkarılır mı?",
+          "a": "Ham yüzey kaydıyla düzeltilmiş tasarım ayrı çıktılardır. Kusurun korunması, temizlenmesi veya yeniden kurulması istenen teslim kapsamında yazılmalıdır."
+        }
+      ],
+      "local_context": "Sarıyer’den gelen tarama talebinde kapağın başka bir sehpadan sökülmüş olup olmadığını belirtin. Ayazağa, Maslak veya Huzur’daki bir nesne için güncel ilçe bilgisini Sarıyer olarak yazın. Fotoğraflarda sehpanın kimliğiyle taranacak parçanın kimliğini eşleştirmek, eski bir yedek kapağın mevcut ürüne ait sanılmasını önler.",
+      "logistics": "Fiziksel referans atölyeye kargo veya kurye ile ulaştırılabilir; elden inceleme randevuyla planlanır. Sehpa taşınmayacaksa yerinde tarama talebine eşyanın açık ve kapalı haldeki çevre fotoğraflarını ekleyin; erişim düzenini önceden görüşün.",
+      "answer": "Tarama öncesinde kapağın hangi sehpaya ait olduğunu ve hangi kusurların düzeltilmesini istediğinizi belirtin.",
+      "takeaways": [
+        "Referansın geçmişini yazın",
+        "Ham ve düzeltilmiş veriyi ayırın",
+        "Yerinde erişimi fotoğraflayın"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Sarıyer için sehpa kapağı modellemesinde eski parçanın korunacak özelliklerini, değişiklik sınırlarını ve dosya teslim biçimini seçin.",
+      "faq": [
+        {
+          "q": "Eski kapağın logosu veya kabartması korunabilir mi?",
+          "a": "Kullanım yetkisi ve istenen görünüş belirtilmelidir. Logonun bulunması parçanın orijinal üretici tarafından yapılmış veya onaylanmış olduğu anlamına gelmez."
+        },
+        {
+          "q": "Yalnızca baskıya uygun dosya istemek yeterli mi?",
+          "a": "İleride bağlantı ölçülerini değiştirmek istiyorsanız düzenlenebilir CAD ihtiyacını da açıklayın. Baskı ağı ve düzenlenebilir tasarım farklı teslimlerdir."
+        }
+      ],
+      "local_context": "Sarıyer’deki kullanıcıdan alınan sehpa fotoğrafları, modelleme talebinin hangi ürüne ait olduğunu gösterecek şekilde adlandırılmalıdır. Avrupa yakası ile Ataşehir arasında yalnızca numune taşıyarak revizyon yapmak yerine kararlar dijital görsellerde işaretlenebilir. Kapak renginden önce değiştirilemeyecek bağlantı ve hareket sınırlarını açıklamak bu görüşmeyi somutlaştırır.",
+      "logistics": "Model incelemesi için işaretli görseller ve dosyalar dijital paylaşılabilir. Fiziksel karşılaştırma gerekiyorsa referans kargo, kurye veya randevulu elden teslimle ulaştırılır; model onayından sonra geri istenen numunenin kime döneceğini kaydedin.",
+      "answer": "Modellemede değişmeyecek bağlantıları, görünüş tercihlerini ve düzenlenebilir dosya ihtiyacını baştan belirleyin.",
+      "takeaways": [
+        "Korunacak ölçüleri seçin",
+        "Görünüş yetkisini açıklayın",
+        "Teslim formatını belirleyin"
+      ]
+    }
+  },
+  "silivri": {
+    "": {
+      "summary": "Silivri’den stor perde rozeti talebini fotoğraflı parça kimliği, montaj yönü ve sökmeden görülebilen referanslarla başlatın.",
+      "faq": [
+        {
+          "q": "Rozetin marka ve modelini bilmiyorsam başlayabilir miyim?",
+          "a": "Perdenin genel görünüşü, braketin yakın fotoğrafı ve mevcut kapaktaki işaretler ilk değerlendirmeye yardımcı olur; belirsiz bağlantılar ayrıca netleştirilir."
+        },
+        {
+          "q": "Sağdaki rozet soldaki eksik parçanın ölçüsünü verir mi?",
+          "a": "İki uçta kumanda ve bağlantı düzeni farklı olabilir. Sağlam kapağı göndermeden önce her iki uçtan aynı açıyla fotoğraf çekin."
+        }
+      ],
+      "local_context": "Silivri, İstanbul’un Avrupa yakasında ve Marmara Denizi kıyısındadır. Stor rozeti talebinizde pencerenin adresi ile numuneyi gönderecek kişinin adresini ayırın. Perde yerinde kalırken eski rozet başka bir adresten gönderiliyorsa, hangi pencereye ait olduğunu gösteren fotoğraf ve yön etiketi iki referansı birbirine bağlar.",
+      "logistics": "Rozet sökülebiliyorsa yönünü gösteren fotoğrafı çekip kırılgan tırnakları koruyarak kargo veya kurye ile gönderebilirsiniz. Örnek Mahallesi atölyesine elden gelmeden randevu alın; perdeyi tutan braketi yalnız numune elde etmek için sökmeyin.",
+      "answer": "Stor rozeti talebinde kapak kimliğini ve montaj yönünü fotoğraflayın; taşıyıcı braketi dekoratif parçadan ayırın.",
+      "takeaways": [
+        "İki uçtan fotoğraf çekin",
+        "Parça işaretlerini kaydedin",
+        "Numune dönüşünü belirtin"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Silivri için stor rozeti baskısında kapak görünüşü, bağlantı denemesi ve seri çoğaltma onayını birbirine karıştırmadan ilerleyin.",
+      "faq": [
+        {
+          "q": "Renk örneğini fotoğraf olarak göndersem yeterli olur mu?",
+          "a": "Fotoğraf ön tercih için kullanılabilir; ışık ve ekran görünüşü değiştirir. Kritik renk uyumunda fiziksel örnekle değerlendirilecek beklenti ayrıca belirtilmelidir."
+        },
+        {
+          "q": "Tek pencere için onaylanan rozeti bütün eve çoğaltabilir miyim?",
+          "a": "Önce diğer braketlerin aynı tipte olduğu ve rozetin aynı yönde kullanılacağı kontrol edilmelidir. Farklı pencere montajları ayrı varyant gerektirebilir."
+        }
+      ],
+      "local_context": "Silivri’de denenecek rozetin hangi pencereye ve hangi perde ucuna ait olduğunu dosya adına ekleyin. Avrupa yakasındaki farklı teslim noktalarında aynı görünümlü kapaklar kullanılacaksa birini bütün setin örneği saymadan bağlantı farklarını karşılaştırın. Baskı varyantının duvar rengiyle değil montaj referansıyla tanımlanması yanlış tekrar sipariş riskini azaltır.",
+      "logistics": "Deneme kapağı için kargo, kurye veya randevulu elden teslim seçenekleri görüşülebilir. Pakete pencere ve sağ-sol etiketini ekleyin; ince tırnakların üzerine başka numune yüklemeyin. Montaj geri bildirimini aynı kodla iletin.",
+      "answer": "Baskı rozetini pencere ve montaj yönüyle kodlayın; görünüş tercihinden önce gerçek bağlantı eşleşmesini kontrol edin.",
+      "takeaways": [
+        "Pencere kodunu yazın",
+        "Renk beklentisini ayırın",
+        "Tırnakları paket içinde koruyun"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Silivri’de stor rozeti taraması için mevcut kapağın kaynağını ve sökülmeden erişilebilen referans yüzeylerini belgeleyin.",
+      "faq": [
+        {
+          "q": "Rozetin üstündeki boya da tarama şekline dahil olur mu?",
+          "a": "Görünen yüzey kayda girer. Sonradan eklenen kalın boya veya dolgu varsa bunların özgün geometri olup olmadığı talep notunda açıklanmalıdır."
+        },
+        {
+          "q": "Tarama için perdeyi indirmem gerekir mi?",
+          "a": "Buna fotoğraflar ve gereken ölçü yüzeyleri üzerinden karar verilir. Söküm gereksinimi netleşmeden taşıyıcı bağlantıya müdahale etmeyin."
+        }
+      ],
+      "local_context": "Silivri’deki pencere üzerinde kalan parçanın kaydı isteniyorsa cam önü, perde ucu ve çevredeki erişim alanı ayrı fotoğraflanmalıdır. İlçenin Avrupa yakasında olması nedeniyle yerinde çalışma talebi ile parçanın Ataşehir’e gönderilmesi farklı düzenlemelerdir. Hangi seçeneğin gerekli olduğunu, kapağın özgün konumunu kaybetmeden ayrılabilmesi belirler.",
+      "logistics": "Sökülebilir rozet kargo veya kurye ile, yön etiketi ve montaj fotoğrafıyla ulaştırılabilir. Yerinde tarama isteniyorsa pencereye erişim biçimini önceden açıklayın; atölyeye numuneyle gelmek için randevu alın. Çalışma kapsamını yalnızca bir adres üzerinden varsaymayın.",
+      "answer": "Tarama kapsamını görünen yüzeylere ve erişime göre belirleyin; sonradan eklenen kaplamaları özgün formdan ayırın.",
+      "takeaways": [
+        "Pencere erişimini gösterin",
+        "Boya eklerini belirtin",
+        "Söküm kararını önceden görüşün"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Silivri’den stor rozeti modelleme talebinde kapama sınırı, değiştirilebilir görünüş ve istenen dosya kullanım hakkı açıklanmalıdır.",
+      "faq": [
+        {
+          "q": "Aynı bağlantıyla farklı bir dış desen tasarlanabilir mi?",
+          "a": "Bağlantı ve erişim sınırları korunabildiği ölçüde görünüş alternatifleri değerlendirilebilir. Dış desendeki değişiklik de montaj incelemesine dahil edilmelidir."
+        },
+        {
+          "q": "Dosyada marka adı kullanılması parçayı orijinal yapar mı?",
+          "a": "Hayır. Tasarlanan yedek parçanın kaynağı açık kalmalı; marka ve grafiklerin kullanım yetkisi ayrıca değerlendirilmelidir."
+        }
+      ],
+      "local_context": "Silivri’de birden fazla stor için dijital rozet modeli hazırlanacaksa her montajın referansını ayrı numaralandırın. Avrupa yakasından atölyeye giden bir kapağın tüm pencereleri temsil ettiği düşünülmemelidir. Duvara temas çizgisi ve kumanda tarafı farklıysa ortak dış tasarımın altında birden fazla bağlantı varyantı bulunabilir.",
+      "logistics": "Çizim ve fotoğrafları dijital paylaşarak ilk modelleme görüşmesini başlatın. Fiziksel rozet gerekiyorsa kargo, kurye veya randevulu atölye ziyareti planlanabilir; gönderilen örneğin sonradan kendi penceresine döneceğini not edin.",
+      "answer": "Rozet modellemesinde ortak görünüş ile montaja özel bağlantı varyantlarını ayrı tanımlayın.",
+      "takeaways": [
+        "Montajları numaralandırın",
+        "Desen sınırlarını belirtin",
+        "Referansın iadesini planlayın"
+      ]
+    }
+  },
+  "sultanbeyli": {
+    "": {
+      "summary": "Sultanbeyli’den kapı stoperi kılıfı talebinde arızanın hangi parçada olduğunu ve kapının kullanım bağlamını fotoğraflarla netleştirin.",
+      "faq": [
+        {
+          "q": "Kapı stoperinin hangi bölümünün kırıldığını nasıl göstereyim?",
+          "a": "Önce bütün düzeneği, sonra kırık bölgeyi aynı yönden fotoğraflayın. Parçaların birbirine göre konumunu değiştirmeden işaretlemek değerlendirmeyi kolaylaştırır."
+        },
+        {
+          "q": "Yumuşak tampon da kayıpsa yalnız dış kılıf yeterli olur mu?",
+          "a": "İhtiyaç iki ayrı parçayı kapsayabilir. Kılıf tasarımına başlamadan tamponun mevcut olup olmadığı ve bağlantı biçimi açıklanmalıdır."
+        }
+      ],
+      "local_context": "Sultanbeyli Anadolu yakasındadır ve Pendik ile komşudur. Kılıf örneği gönderilirken kapının bulunduğu adres ile teslim alacak kişinin adresi ayrıysa ikisini de yazın. Zemine bağlı gövdeyi taşımadan hazırlanacak fotoğraflar; eksik kapama, gevşek bağlantı ve yıpranmış tamponun birbirinden ayrılmasına yardımcı olur.",
+      "logistics": "Küçük kılıf kargo veya kurye paketinde ayrı korunabilir; yere sabit tabanı numune elde etmek için sökmek şart kabul edilmez. Örnek Mahallesi atölyesine elden teslim randevuyla yapılır; geri istenen eski parçaları kabul notunda listeleyin.",
+      "answer": "Stoper kılıfı talebinde kapama, sabitleme ve tampon ihtiyacını ayrı gösterin; numune kapsamını buna göre seçin.",
+      "takeaways": [
+        "Bütün düzeneği belgeleyin",
+        "Tampon durumunu yazın",
+        "Eski parçaları sayın"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Sultanbeyli için stoper kılıfı baskısını gerçek taban, bağlantı donanımı ve zemindeki yerleşimle eşleşen bir numune üzerinden değerlendirin.",
+      "faq": [
+        {
+          "q": "Numuneyi vidaları çok sıkarak yerine oturtabilir miyim?",
+          "a": "Zorlayarak oturtma, ölçü hatasını gizleyebilir veya numuneyi bozabilir. Sıkışan bölgeyi işaretleyip revizyon gereğini bildirin; montaj yaklaşımı ayrıca değerlendirilmelidir."
+        },
+        {
+          "q": "Zemin hafif eğriyse baskı dosyasını değiştirmek gerekir mi?",
+          "a": "Temas düzleminin durumu önce ölçü ve fotoğrafla açıklanmalıdır. Zemindeki bozukluk ile kılıfın ölçü hatası aynı değişiklikle giderilmiş varsayılmaz."
+        }
+      ],
+      "local_context": "Sultanbeyli’de kullanılacak kılıfın denemesi için yalnız kırık plastik değil, mevcut vida ve tabanın fotoğrafı da gerekir. Atölye de Anadolu yakasında olsa da yerleşim kontrolünün hangi adreste yapılacağı açıkça seçilmelidir. Çok sayıda kapı için aynı parça isteniyorsa zemin ve taban farkları sipariş listesinde ayrı tutulur.",
+      "logistics": "Baskı numunesi kargo veya kurye ile gönderilebilir; atölyeden randevuyla alınacaksa eşleşen bağlantı fotoğraflarını yanınızda bulundurun. Vidayı parçaya takılı taşıyarak ince kenarı zorlamak yerine donanımı etiketli küçük bir bölmede tutun.",
+      "answer": "Kılıf baskısını gerçek tabanla eşleştirin; zorlayarak montaj yapmak yerine uyumsuzluğu işaretli geri bildirimle anlatın.",
+      "takeaways": [
+        "Vida bilgisini ekleyin",
+        "Zemin farkını gösterin",
+        "Numuneyi zorlamayın"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Sultanbeyli’de stoper kılıfı taraması, zemindeki parçanın konumunu koruyan fotoğraf ve bilinen montaj referanslarıyla hazırlanmalıdır.",
+      "faq": [
+        {
+          "q": "Tarama sırasında zemin yüzeyi de kaydedilmeli mi?",
+          "a": "Kılıfın oturuşunu belirleyen yakın çevre gerekiyorsa kapsama alınabilir. Tüm odanın taranması, küçük bir taban referansı için kendiliğinden gerekli değildir."
+        },
+        {
+          "q": "Üst yüzey yeterince görünüyorsa alt boşluğu çıkarabilir miyiz?",
+          "a": "Görünen dış kontur gizli iç bağlantıyı kesinleştirmez. Alt yüzey için ayrı ölçü, erişim veya sağlam eş örnek gerekebilir."
+        }
+      ],
+      "local_context": "Sultanbeyli’de zemine bağlı bir stoperin taranması isteniyorsa odaya erişim, kapının kayıt sırasında hareket ettirilebilmesi ve numunenin ayrılabilirliği açıklanmalıdır. İlçenin Anadolu yakasında bulunması çalışma adresini tanımlamaya yardımcı olur; tarama kararını ise gizli alt yüzeylerin gerekip gerekmediği ve nesnenin korunma koşulları belirler.",
+      "logistics": "Ayrılabilen kılıf, konum fotoğrafı eşliğinde kargo veya kurye ile atölyeye ulaşabilir. Sabit gövde için yerinde tarama talebinde kapı çevresinin görüntüsünü paylaşın; elden getirilecek numune varsa Örnek Mahallesi ziyaretini randevuyla planlayın.",
+      "answer": "Tarama için kapının çevresini ve tabanın erişilebilirliğini gösterin; gizli bağlantıyı yalnız dış görüntüden kesinleştirmeyin.",
+      "takeaways": [
+        "Yakın çevreyi belgeleyin",
+        "Gizli ölçüleri ayırın",
+        "Erişim koşulunu yazın"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Sultanbeyli için stoper dış kılıfı modellemesinde görünüş değişikliklerini ve bağlantı parçalarından gelen sabit ölçüleri ayrı yönetin.",
+      "faq": [
+        {
+          "q": "Kılıfın yüksekliğini yalnız daha güzel görünsün diye artırabilir miyiz?",
+          "a": "Dış ölçü değişikliği kapı ve tampon çevresindeki açıklıkları etkileyebilir. Görünüş önerisi, korunacak montaj ilişkileriyle birlikte incelenmelidir."
+        },
+        {
+          "q": "Sonradan tampon tipi değişirse eski dosya yeterli olur mu?",
+          "a": "Yeni tamponun boyutu ve bağlanma biçimi farklıysa model revizyonu gerekebilir. Eski dosyayı yeni donanım koduyla aynı ad altında saklamayın."
+        }
+      ],
+      "local_context": "Sultanbeyli’den birden fazla kapı için model isteniyorsa her taban fotoğrafını aynı dosyada konum koduyla işaretleyin. Anadolu yakasındaki adresten gönderilen tek kılıfın bütün kapılara uyması varsayılmamalıdır. Zemine temas şekli, tampon yüksekliği ve vida donanımı farklı olduğunda değişkenleri görünüş seçeneklerinden ayrı bir listede tutmak gerekir.",
+      "logistics": "Ölçülü fotoğraf ve eskizleri dijital paylaşabilirsiniz. Karşılaştırma numunesinin taşınması gerekiyorsa kargo, kurye ya da randevulu elden teslim seçilir; fiziksel örneklerin model kodlarıyla aynı etiketleri taşımasını sağlayın.",
+      "answer": "Modellemede sabit bağlantı ölçülerini görünüş tercihlerinden ayırın; donanım değişikliklerini ayrı revizyon olarak kaydedin.",
+      "takeaways": [
+        "Kapıları kodlayın",
+        "Donanım değişimini izleyin",
+        "Örnekle dosyayı eşleştirin"
+      ]
+    }
+  },
+  "sultangazi": {
+    "": {
+      "summary": "Sultangazi’den raf uç kapağı talebini profilin gerçek kesiti, mevcut kapak örneği ve gerekli adetlerin eşleştirilmesiyle hazırlayın.",
+      "faq": [
+        {
+          "q": "Eski kapak sıkıştığı için kesilerek çıkarıldıysa kullanılabilir mi?",
+          "a": "Kesilen ve sağlam bölgeleri belirtirseniz referans değeri değerlendirilebilir. Sonradan açılan yarıklar özgün tasarım ayrıntısı gibi kabul edilmemelidir."
+        },
+        {
+          "q": "Raf sayısını bildirmek kapak adedi için yeterli mi?",
+          "a": "Her rafın açık profil ucu ve kullanılacak yönü farklı olabilir. Adedi kapak takılacak uçların listesi üzerinden belirlemek karışıklığı azaltır."
+        }
+      ],
+      "local_context": "Sultangazi İstanbul’un Avrupa yakasında yer alır. Raf uç kapağı için atölyeye gönderilecek referansın hangi raf ve hangi profil ucundan alındığı yazılmalıdır. Bir depodaki benzer rafların aynı kesitten üretildiği varsayılmadan, kullanılacak kapakları fotoğraf ve ürün etiketiyle gruplayarak hangi örneğin hangi talebi temsil ettiğini belirleyin.",
+      "logistics": "Kargo veya kurye paketine küçük profil örneği ancak uygun biçimde ayrılmışsa eklenebilir; kesilmiş kenarlar güvenli biçimde korunmalıdır. Elden karşılaştırma için Örnek Mahallesi atölyesinden randevu alın. Aynı görünen kapakları etiketli ayrı bölmelere koyun.",
+      "answer": "Raf kapağı talebinde her profil grubunu gerçek kesiti ve uç adediyle tanımlayın.",
+      "takeaways": [
+        "Profil gruplarını ayırın",
+        "Kesilmiş bölgeleri belirtin",
+        "Adedi uçlara göre sayın"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Sultangazi için raf kapağı baskısında bir deneme parçasının hangi profil grubunu temsil ettiğini ve çoğaltma kararını belgeleyin.",
+      "faq": [
+        {
+          "q": "Baskı kapağı çekiçle oturtmak doğru bir deneme midir?",
+          "a": "Zorlayıcı müdahale, bağlantı ölçüsünü ve parçayı değiştirebilir. Sıkışmanın yeri kaydedilip uygun montaj yaklaşımı değerlendirilmeden bu yöntem onay kabul edilmemelidir."
+        },
+        {
+          "q": "İç kanatlardan birini kesersem aynı dosyadan devam edebilir miyim?",
+          "a": "Kesilmiş numune artık ilk tasarımı temsil etmez. Müdahaleyi fotoğraflayıp hangi geometri değişikliğinin gerektiğini dosyaya geri işlemek gerekir."
+        }
+      ],
+      "local_context": "Sultangazi’deki raflarda denenecek baskılar için profil grubunu gösteren etiket kullanın. Avrupa yakasındaki sahaya gönderilen ilk numune farklı genişlikteki raflara gelişigüzel denenirse hangi bağlantının onaylandığı belirsizleşir. Nominal ölçünün yanında profil ağzının yakın fotoğrafı ve kaplamanın durumu, tekrar siparişin doğru örneğe bağlanmasını sağlar.",
+      "logistics": "Numune kapaklar kargo veya kurye ile ayrı gözlerde taşınabilir; elden teslim için atölye randevusu gerekir. Deneme sırasını ürün kodlarıyla yazın ve keskin profil parçasını plastik numuneye temas etmeyecek şekilde koruyun.",
+      "answer": "İlk baskıyı belirli profil grubunda deneyin; fiziksel müdahaleleri kaydederek çoğaltmayı onaylı dosya sürümüne bağlayın.",
+      "takeaways": [
+        "Numuneyi gruba bağlayın",
+        "Müdahaleyi kaydedin",
+        "Onaylı dosyayı koruyun"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Sultangazi’de raf kapağı taraması için sağlam bağlantı alanı, sonradan kesilmiş yüzeyler ve hedef profilin kaynağı birlikte açıklanmalıdır.",
+      "faq": [
+        {
+          "q": "Sağlam kapak yoksa profil ağzı taranabilir mi?",
+          "a": "Erişilebilir kesit tasarıma girdi sağlayabilir. Yeni kapağın bağlantı biçimi yine ayrı modelleme konusu olur; tarama kendiliğinden eksik kapak üretmez."
+        },
+        {
+          "q": "Eski kapağın aşınmış kanatları aynen kopyalanır mı?",
+          "a": "Aşınmış yüzeyler işaretlenmelidir. Mevcut durumun kaydı ile hedef bağlantının yeniden tasarlanması ayrı teslim kapsamları olarak ele alınır."
+        }
+      ],
+      "local_context": "Sultangazi’den gönderilen tarama örneğinin raf üstünden mi yoksa kullanılmayan bir yedek kutusundan mı alındığını belirtin. Avrupa yakasındaki konumdan Ataşehir’e yalnız kapağın ulaşması, hedef profil ölçüsünün de bilindiği anlamına gelmez. Kapakla profil ağzının aynı karede görüldüğü fotoğraf, dijitalleştirilecek nesnenin hangi bağlantıyı temsil ettiğini gösterir.",
+      "logistics": "Kapağı kurye veya kargoyla gönderecekseniz profil referansının ayrıca gerekip gerekmediğini görüşün. Büyük raf taşınmayacaksa yerinde tarama ihtiyacını açık adres ve erişim fotoğrafıyla iletin; atölyeye numune bırakma randevuyla planlanır.",
+      "answer": "Tarama talebinde kapağın kaynağını ve hedef profil eşleşmesini gösterin; aşınmış bağlantıyı özgün ölçü diye sunmayın.",
+      "takeaways": [
+        "Referans kaynağını açıklayın",
+        "Profil eşleşmesini fotoğraflayın",
+        "Aşınma alanını işaretleyin"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Sultangazi için raf uç kapağı modellemesinde profil ailesi, bağlantı varyantları ve gelecekte değiştirilecek ölçüler açıkça tanımlanmalıdır.",
+      "faq": [
+        {
+          "q": "Kapakta raf numarasını kabartma olarak kullanabilir miyiz?",
+          "a": "Numaranın okunacağı yüzey ve bağlantıya etkisi değerlendirilerek düşünülebilir. Bilgi alanı, kapağın profille temas eden ölçülerinden ayrı tutulmalıdır."
+        },
+        {
+          "q": "Aynı dış görünüşü farklı profil ölçülerine uyarlamak mümkün mü?",
+          "a": "Bağlantı kesitleri ayrı varyantlar olarak tanımlanabilir. Tek dosya adını bütün ölçülere vermek yerine her profil için eşleşen sürüm korunmalıdır."
+        }
+      ],
+      "local_context": "Sultangazi’de birden fazla raf grubuna kapak hazırlanıyorsa kesitleri aynı ölçü tablosunda fakat ayrı kodlarda tutun. İlçenin Avrupa yakasında olması fiziksel referansın atölyeye sevkinde adres bilgisidir; hangi kapakların ortak tasarımdan türetilebileceğini profil geometrisi belirler. Eski yedekler ile halen kullanılan profil örnekleri aynı klasörde karıştırılmamalıdır.",
+      "logistics": "Kesit çizimleri ve profil fotoğrafları dijital iletilebilir. Ölçü karşılaştırması için örnek gerekiyorsa kargo, kurye veya randevulu elden teslim planlayın; her örneğe talep tablosundaki kodu ekleyerek dönüşte doğru raf grubuna ayrılmasını sağlayın.",
+      "answer": "Modellemede dış görünüşü ortak tutarken profil bağlantılarını ayrı varyantlarla yönetin.",
+      "takeaways": [
+        "Kesit tablosu hazırlayın",
+        "Varyantlara kod verin",
+        "Bilgi yüzeyini ayırın"
+      ]
+    }
+  },
+  "sile": {
+    "": {
+      "summary": "Şile’den sineklik köşe kapağı talebinde çerçevenin yönünü, eksik parçanın sınırını ve pencere üzerinde kalan referansları belgeleyin.",
+      "faq": [
+        {
+          "q": "Karşı köşedeki kapak eksik köşe için örnek olur mu?",
+          "a": "Bağlantı ve yön ilişkisi incelenmelidir. Sağlam köşenin yalnız ön fotoğrafı yerine profil birleşimini ve arka tarafını da göstermek gerekir."
+        },
+        {
+          "q": "Çerçeve markası okunmuyorsa nasıl tarif edebilirim?",
+          "a": "Genel görünüş, profil kesiti ve kapağın çerçeveyle birleştiği alanları gönderin. Bilinen ölçüler ölçek referansı sağlar; marka tahmini tek dayanak olmamalıdır."
+        }
+      ],
+      "local_context": "Şile İstanbul’un Anadolu yakasındadır. Sineklik köşe kapağı için konum bilgisine ek olarak pencerenin erişim durumu ve çerçevenin sökülebilirliği açıklanmalıdır. Sağlam köşenin hangi yönde takıldığını gösteren fotoğraf, çerçeve üzerindeki yerini koruyan bir referans sağlar. Eski kapağın daha önce başka bir pencereye uyarlanmış olması halinde bu değişiklik de talep notuna eklenmelidir.",
+      "logistics": "Sökülebilen eski kapak kargo veya kurye ile ayrı korunarak gönderilebilir; bütün çerçevenin taşınması gerektiği varsayılmaz. Elden numune incelemesi için Örnek Mahallesi atölyesine randevu alın. Çerçevenin üst-alt yönünü fotoğrafta kaydedin.",
+      "answer": "Sineklik kapağı talebinde sağlam köşenin yönünü ve pencere erişimini gösterin; hedef bağlantıyı fotoğraflarla tanımlayın.",
+      "takeaways": [
+        "Üst-alt yönü işaretleyin",
+        "Sağlam köşeyi gösterin",
+        "Bilinen ölçüleri ekleyin"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Şile için sineklik kapağı baskısında dış ortam beklentisini, çerçeve varyantını ve ilk numunenin kontrol kapsamını ayrı kaydedin.",
+      "faq": [
+        {
+          "q": "Mevcut çerçeve rengine yakın bir görünüş istenebilir mi?",
+          "a": "Renk tercihi ile yüzey beklentisi talepte belirtilebilir. Dış ortam kullanımına uygunluk, yalnız renk veya ilk görünüş değerlendirmesinden çıkarılmamalıdır."
+        },
+        {
+          "q": "Deneme parçasını bütün sezon kullanıp sonra karar verebilir miyim?",
+          "a": "Denemenin amacı ve hangi koşullarda değerlendirileceği baştan belirlenmelidir. Kısa bir yerleşim kontrolü, tanımlanmamış uzun dönem kullanımı onaylamaz."
+        }
+      ],
+      "local_context": "Şile’de kullanılacak kapağın sürekli dışarıda mı yoksa korunaklı bir yüzeyde mi bulunacağını talebe ekleyin. Anadolu yakasındaki adres, güneş ve temizlik maruziyetini tek başına açıklamaz; gerçek pencere konumu ve kullanım şekli gereklidir. Bir evde farklı çerçeveler varsa aynı renkli köşe kapaklarını ölçü açısından aynı varyant saymayın.",
+      "logistics": "Baskı örnekleri kargo veya kurye paketinde köşe yönüyle etiketlenebilir. Atölyeden randevulu elden teslim alınacaksa sağlam referansı yanınızda getireceğinizi önceden belirtin; uzun çerçeve parçalarını ince kapakla temas ettirmeden taşıyın.",
+      "answer": "Sineklik kapağı baskısında gerçek maruziyeti ve çerçeve varyantını belirtin; ilk denemeyi açık bir kontrol amacıyla yapın.",
+      "takeaways": [
+        "Maruziyeti tarif edin",
+        "Köşe yönünü kodlayın",
+        "Deneme amacını belirleyin"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Şile’de sineklik köşesi taraması, yerinden ayrılabilen referans ve pencereye güvenli erişim bilgileriyle kapsamlandırılır.",
+      "faq": [
+        {
+          "q": "Cepheden çekilen fotoğraf tarama planı için yeterli mi?",
+          "a": "Başlangıç görünüşü sağlar; profilin derinliği ve arka tutunma alanı için başka açılar gerekebilir. Erişilemeyen yüzeyler ayrıca belirtilmelidir."
+        },
+        {
+          "q": "Sağlam köşe zaten boyalıysa boya temizlenmeli mi?",
+          "a": "Önce yüzeyin durumu ve korunması gereken görünüş bildirilmelidir. Numuneye zarar verebilecek hazırlık işlemi kendiliğinden uygulanmamalı, yöntem önceden konuşulmalıdır."
+        }
+      ],
+      "local_context": "Şile’de yerinde tarama talebi varsa pencerenin bulunduğu kat, çerçevenin iç taraftan erişilebilirliği ve parçanın ayrılıp ayrılamadığı açıklanmalıdır. Atölyeyle aynı yakada olmak bu bilgilerin yerini tutmaz. Başlangıç fotoğrafları taranacak köşe ile yerinde kalacak çerçeve arasındaki sınırı göstererek gereksiz söküm varsayımını önler.",
+      "logistics": "Köşe örneği ayrılabiliyorsa kargo ya da kurye ile gönderim değerlendirilebilir. Çerçeve yerinde kalacaksa tarama erişimini ön görüşmede açıklayın; elde numuneyle atölyeye gelmek için randevu alın. Ulaşılması zor pencereye yalnız fotoğraf için müdahale etmeyin.",
+      "answer": "Tarama öncesinde köşeye erişimi ve korunacak yüzeyleri açıklayın; gizli bağlantılar için ek bilgi gereksinimini görünür tutun.",
+      "takeaways": [
+        "Erişim fotoğrafı paylaşın",
+        "Arka yüzeyi belirtin",
+        "Hazırlık yöntemini görüşün"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Şile için sineklik köşe kapağı modellemesinde sağ-sol yönü, profil kesiti ve değiştirilebilir görünüş birlikte ele alınır.",
+      "faq": [
+        {
+          "q": "Bir köşenin modelini aynalamak diğer köşeyi verir mi?",
+          "a": "Dış biçim benzer olsa da bağlantı yönü farklı olabilir. Aynalanan modelin ilgili profil birleşimiyle eşleşmesi ayrıca kontrol edilmelidir."
+        },
+        {
+          "q": "Köşe kapağını daha yuvarlak yapmak mümkün mü?",
+          "a": "Görünüş değişikliği, çerçeve ve pencere açıklıkları korunarak değerlendirilebilir. Yuvarlatma bağlantı dudağını veya tül kanalını değiştirmemelidir."
+        }
+      ],
+      "local_context": "Şile’deki çerçeve için yapılacak CAD çalışmasında fotoğrafların pencereye içeriden mi dışarıdan mı bakılarak çekildiğini belirtin. Aynı Anadolu yakası adresindeki farklı pencerelerin köşe yönleri karışabilir. Hedef parçayı konum koduyla tanımlamak, ayna görüntüsü alınan bir modelin yanlış köşeye bağlanmasını önler ve revizyon iletişimini netleştirir.",
+      "logistics": "Kesit eskizi ve yön işaretli görseller dijital paylaşılabilir. Fiziksel karşılaştırma için eski kapak kargo, kurye veya randevulu elden teslimle ulaştırılır; dosya adında kullanılan pencere kodunu numunenin paketine de yazın.",
+      "answer": "Modellemede bakış yönünü ve köşe kodunu açık tutun; aynalanan parçanın bağlantısını ayrıca kontrol edin.",
+      "takeaways": [
+        "Bakış yönünü belirtin",
+        "Pencere kodu kullanın",
+        "Aynalanan modeli doğrulayın"
+      ]
+    }
+  },
+  "sisli": {
+    "": {
+      "summary": "Şişli’den koltuk ayar tutamağı talebinde koltuğun kimliğini, kırılan dış sapı ve mekanizmanın mevcut davranışını birlikte açıklayın.",
+      "faq": [
+        {
+          "q": "Koltuğun etiketini nereden tarif etmeliyim?",
+          "a": "Bulabildiğiniz üretici veya model etiketinin fotoğrafını ekleyin. Etiket yoksa koltuğun genel görünüşünü ve kolun bağlantı bölgesini birlikte gösterin."
+        },
+        {
+          "q": "Tutamak kırılmadan önce ayar da sorunluydu; bunu yazmalı mıyım?",
+          "a": "Evet. Önceden var olan mekanizma davranışı, plastik sapın yenilenmesiyle hangi sorunun çözülebileceğini belirlemek için ayrı kaydedilmelidir."
+        }
+      ],
+      "local_context": "Şişli İstanbul’un Avrupa yakasındadır; Maslak, Ayazağa ve Huzur’un güncel ilçe bilgisi Sarıyer’dir. Bir ofisten birden fazla koltuk için numune gönderilecekse her tutamağın hangi koltuğa ait olduğunu kodlayın. Eski satın alma adresiyle teslim adresini ayırmak, fiziksel referansın ve üretilen örneğin doğru kişiye ulaşmasına yardımcı olur.",
+      "logistics": "Dış sap sökülebiliyorsa kırıkları ayrı poşette koruyarak kargo veya kurye ile gönderebilirsiniz. Elden karşılaştırma için Örnek Mahallesi atölyesine randevu alın. Koltuğun tamamını göndermeden önce hangi referansların gerekli olduğunu fotoğraflarla görüşün.",
+      "answer": "Koltuk tutamağı talebinde ürün kimliğini ve arızanın geçmişini açıklayın; birden fazla koltuğun parçalarını ayrı kodlayın.",
+      "takeaways": [
+        "Koltuk kimliğini ekleyin",
+        "Arıza geçmişini anlatın",
+        "Parçaları koltukla eşleştirin"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Şişli için koltuk tutamağı baskısında bağlantı çeşidi, kullanıcının tutuş tercihi ve numunenin hangi koltukta deneneceği belirlenir.",
+      "faq": [
+        {
+          "q": "Daha büyük tutamak daha kolay kullanım sağlar mı?",
+          "a": "Kavrama tercihi konuşulabilir; büyütülen formun döşemeye ve diğer kollara yaklaşması da değerlendirilmelidir. Kullanım kararı yalnız dış boyuta bağlanmamalıdır."
+        },
+        {
+          "q": "Numuneyi iki farklı koltukta deneyebilir miyim?",
+          "a": "Her koltuğun bağlantı bilgisi ve gözlemi ayrı tutulmalıdır. Birindeki sonuç, farklı mekanizmaya sahip diğer koltuğun onayı olarak kaydedilmemelidir."
+        }
+      ],
+      "local_context": "Şişli’deki ofise gönderilecek tutamak baskıları, koltuk modeli ve bağlantı biçimine göre ayrılmalıdır. Avrupa yakasındaki bir teslim noktasında farklı koltuklar yan yana kullanılabilir; aynı dış görünüş, metal ayar kolunun aynı kesitte olduğunu göstermez. İlk örneğin hangi koltukta incelendiğini kaydetmek sonraki çoğaltma kararını somutlaştırır.",
+      "logistics": "Kargo ya da kurye ile gönderilen deneme saplarına koltuk kodu eklenmelidir. Atölyeden elden teslim randevuyla yapılır; kırık örnek geri isteniyorsa baskıdan ayrı bölmede paketlenmesini belirtin. Bağlantı donanımını kaybolmayacak kapalı bir poşette tutun.",
+      "answer": "Tutamak baskısını belirli koltukla eşleştirin; kavrama tercihlerini bağlantı ve çevre açıklıklarıyla birlikte değerlendirin.",
+      "takeaways": [
+        "Koltuk kodunu koruyun",
+        "Tutuş beklentisini anlatın",
+        "Denemeleri ayrı kaydedin"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Şişli’de dış koltuk tutamağı taraması için parçanın bağlantı geçmişi, sağlam yüzeyleri ve erişilebilen referansları kayda alınmalıdır.",
+      "faq": [
+        {
+          "q": "Sap sonradan bantla sarılmışsa taramaya etkisi olur mu?",
+          "a": "Eklenen bant dış ölçüyü değiştirebilir. Sonradan eklenen malzemeyi belgeleyin; çıkarılıp çıkarılmayacağına numunenin korunma koşullarıyla birlikte karar verilir."
+        },
+        {
+          "q": "Ayar kolunun yalnız fotoğrafı bağlantıyı tarif eder mi?",
+          "a": "Kesitin biçimini gösterebilir; kritik ölçüleri kesinleştirmek için ek ölçü veya fiziksel referans gerekebilir. Fotoğrafın sınırları teslim kapsamından ayrılmalıdır."
+        }
+      ],
+      "local_context": "Şişli’de yerinde kalacak koltuğun tarama talebinde çalışma alanının fotoğrafını ve oturma bölümünün altına erişim durumunu paylaşın. Maslak, Ayazağa veya Huzur adreslerinde güncel ilçe Sarıyer olarak yazılmalıdır. Tarama için dış sapı çıkarmanın mı yoksa koltuğun yanında çalışmanın mı gerekli olduğu, korunacak bağlantı ve erişim koşullarına göre değerlendirilir.",
+      "logistics": "Ayrılabilen tutamak, kırık parçalarıyla birlikte kargo veya kurye üzerinden ulaştırılabilir. Koltuğun taşınması uygun değilse yerinde tarama talebini çalışma alanı görselleriyle gönderin. Atölyeye örnek getirmeden randevu alın ve parçanın iade ihtiyacını belirtin.",
+      "answer": "Tarama öncesinde tutamağa yapılmış müdahaleleri ve koltuk altındaki erişimi açıklayın.",
+      "takeaways": [
+        "Bant ve ekleri kaydedin",
+        "Erişim alanını gösterin",
+        "Bağlantı ölçüsünü ayırın"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Şişli için koltuk tutamağı modellemesinde kavrama biçimi, montaj yönü ve koltuk ailesine özgü bağlantı varyantları ayrı tanımlanır.",
+      "faq": [
+        {
+          "q": "Sol elle kullanım için farklı biçim istenebilir mi?",
+          "a": "Kullanıcının erişim yönü ve çevredeki koltuk parçaları açıklanırsa alternatif değerlendirilebilir. Dış şeklin değişmesi montaj yönünü otomatik değiştirmez."
+        },
+        {
+          "q": "Koltuğun eski tutamağını daha kalın çizmek yeterli midir?",
+          "a": "Kalınlık artışı bağlantı ve hareket boşluklarını etkileyebilir. Tasarım kararı, kırığın nerede oluştuğu ve kullanılan mekanizmanın koşullarıyla birlikte ele alınmalıdır."
+        }
+      ],
+      "local_context": "Şişli’de bir ofisin farklı koltuklarına tutamak hazırlanacaksa model listesi koltuk envanteriyle eşleşmelidir. Avrupa yakasından gönderilen tek bir dış sap, bütün mekanizmaların referansı sayılmamalıdır. Dijital görüşmede bağlantı kesiti sabit tutularak dış kavrama alternatifleri gösterilebilir; hangi koltukta hangi seçeneğin kullanılacağı onay notuna yazılır.",
+      "logistics": "İşaretli koltuk fotoğrafları ve kavrama eskizleri dijital iletilebilir. Fiziksel ölçü örneği gerekiyorsa kargo, kurye veya randevulu elden teslim planlanır; dosya varyantı ile numune etiketi aynı kodu taşımalıdır.",
+      "answer": "Modellemede koltuk envanterini, bağlantı varyantını ve kavrama seçeneğini aynı kodlarla ilişkilendirin.",
+      "takeaways": [
+        "Envanteri modele bağlayın",
+        "Kullanım yönünü yazın",
+        "Varyant kodlarını eşleştirin"
+      ]
+    }
+  },
+  "tuzla": {
+    "": {
+      "summary": "Tuzla’dan kasa etiket klipsi talebinde kasa çeşidini, gerçek bilgi kartını ve klipsin takılacağı kenarı birlikte tarif edin.",
+      "faq": [
+        {
+          "q": "Etiket yerine kalın bir plastik kart kullanılacaksa belirtmeli miyim?",
+          "a": "Evet. Kartın kalınlığı, esnekliği ve takılıp çıkarılma şekli klips kanalını etkiler; yalnız dış ölçüyle tarif edilmemelidir."
+        },
+        {
+          "q": "Kasanın farklı kenarlarına aynı klips takılabilir mi?",
+          "a": "Kenar kesitleri ve çevre çıkıntıları aynıysa değerlendirilebilir. Her konumu gösteren fotoğraf olmadan tek kenardaki uyum bütün kasaya genellenmemelidir."
+        }
+      ],
+      "local_context": "Tuzla Anadolu yakasında yer alır ve Pendik ile komşudur. Kasa klipsi için hazırlanan talepte depo adresiyle numuneyi gönderecek kişinin adresini ayırın. Bir işletmede farklı kasa serileri bulunabileceğinden, seçilen referansın hangi kenar kesitini ve hangi kart ölçüsünü temsil ettiğini fotoğrafla belgelemek doğru parça kapsamını kurar.",
+      "logistics": "Kargo veya kurye ile gönderilecek küçük klipse gerçek bilgi kartından bir örnek ekleyebilirsiniz. Kasayı komple taşımadan önce gerekli referans alanını fotoğraflarla görüşün. Örnek Mahallesi atölyesinde elden inceleme için randevu alın; kart üzerindeki hassas bilgileri paylaşmadan önce düzenleyin.",
+      "answer": "Kasa klipsi talebinde gerçek kartı ve hedef kenarı eşleştirin; farklı kasa serilerini ayrı tanımlayın.",
+      "takeaways": [
+        "Gerçek kartı tanımlayın",
+        "Kenar kesitini gösterin",
+        "Kasa serilerini ayırın"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Tuzla için etiket klipsi baskısında kart değiştirme sıklığı, kasa çeşidi ve renk kodlarının teknik varyantlardan ayrılması önemlidir.",
+      "faq": [
+        {
+          "q": "Etiket sık değişiyorsa numune kontrolüne ne eklemeliyim?",
+          "a": "Kartın takılması ve çıkarılması için kullanılan gerçek hareketi tarif edin. İlk oturuşun yanında tekrar kullanım beklentisi de değerlendirme planına yazılmalıdır."
+        },
+        {
+          "q": "Renkli klipsler dosyadaki ölçü farklarını temsil edebilir mi?",
+          "a": "Renk yardımcı işaret olabilir; dosya ve parça kodu yine korunmalıdır. Sonraki üretimde renk tercihi değişse de teknik varyant karışmamalıdır."
+        }
+      ],
+      "local_context": "Tuzla’daki kullanım noktasına gönderilecek klips baskıları için kasa kodunu ve kart tipini aynı listede tutun. Anadolu yakasındaki birden fazla depoya dağıtım yapılacaksa teslim noktasını ürün varyantından ayrı sütunda belirtin. Renk, kolay ayırma için tercih edilebilir; farklı bağlantı kesitlerinin hangi kasaya ait olduğunu tek başına güvenilir biçimde açıklamaz.",
+      "logistics": "İlk baskı seti kargo, kurye veya randevulu elden teslimle alınabilir. Farklı kart kanallarını ayrı küçük paketlere koyun ve her pakete kasa kodu ekleyin. Değerlendirme sonrasında hangi varyantın seçildiğini renk yerine dosya numarasıyla bildirin.",
+      "answer": "Baskı klipslerini kasa ve kart koduyla takip edin; renk seçimini bağlantı ölçüsünden ayrı yönetin.",
+      "takeaways": [
+        "Kart değiştirmeyi tarif edin",
+        "Kasa kodunu ekleyin",
+        "Varyantı dosyayla onaylayın"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Tuzla’da kasa etiketi klipsi için tarama, bütün kasanın yerine gerek duyulan temas bölgesine odaklanan bir kayıt olarak planlanabilir.",
+      "faq": [
+        {
+          "q": "Kasa doluyken alınan şekil boş kasaya da uygulanır mı?",
+          "a": "Doluluk cidarın duruşunu değiştiriyorsa tek kayıt bütün durumları temsil etmeyebilir. Modelin hangi kullanım durumuna göre kurulacağı belirtilmelidir."
+        },
+        {
+          "q": "Eski klipsin kırık ucu yoksa tarama işe yarar mı?",
+          "a": "Mevcut sağlam bölgeler ve kasa bağlantısı referans sağlayabilir. Eksik bölümün tasarlanması tarama kaydından ayrı bir çalışma olarak tanımlanır."
+        }
+      ],
+      "local_context": "Tuzla’daki kasadan referans alınacaksa hangi kenarın kullanıldığı ve kasanın boş mu dolu mu olduğu başlangıç fotoğrafında gösterilmelidir. Pendik komşuluğu adresi tanımlayan bilgidir; kayıt kapsamını kasanın çalışma durumu belirler. Aynı kasanın taşınma ve depolanma anındaki biçimleri farklıysa ölçü için seçilen durum açıkça yazılmalıdır.",
+      "logistics": "Taşınabilir kenar örneği veya eski klips kargo ve kurye ile gönderilebilir; kasanın kesilmesi gerektiği varsayılmaz. Yerinde tarama talebinde kasanın ayrı bir çalışma alanına alınabilmesini açıklayın. Elden referans karşılaştırması için atölye randevusu gereklidir.",
+      "answer": "Kasa taramasında ölçü alınan kullanım durumunu ve hedef kenarı belirtin; eksik klips geometrisini ayrı tasarım konusu olarak tutun.",
+      "takeaways": [
+        "Boş-dolu durumu kaydedin",
+        "Hedef kenarı işaretleyin",
+        "Eksik bölümü tanımlayın"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Tuzla için kasa klipsi modellemesinde kart ölçüleri, kasa kesitleri ve farklı okuma yönleri kontrollü varyantlar halinde düzenlenir.",
+      "faq": [
+        {
+          "q": "Kartın üzerinde barkod varsa tasarımda ne belirtmeliyim?",
+          "a": "Okunacak alanı ve kartın görünür kalması gereken sınırlarını gösterin. Klipsin kenarı bu alanı kapatmamalı; gerçek kullanımda okunurluk ayrıca kontrol edilmelidir."
+        },
+        {
+          "q": "Farklı kasa markaları için tek CAD dosyası olur mu?",
+          "a": "Ortak dış tasarım altında ayrı bağlantı varyantları kurulabilir. Gerçek kenar kesitleri farklıysa bunların aynı geometriye zorlanması doğru bir kabul yaklaşımı değildir."
+        }
+      ],
+      "local_context": "Tuzla’daki bir kullanım akışı için farklı kartlar isteniyorsa her kartın boyutu ve kasanın görünür kalması gereken yüzü talep tablosunda yer almalıdır. Atölye de Anadolu yakasındadır; dijital ön görüşmede kasa kesitini ve fotoğrafları birlikte paylaşmak hangi fiziksel örneğin gerektiğini belirlemeyi kolaylaştırır. Klipsin yatay veya dikey kullanım seçeneği, kasanın depoda hangi yönde durduğuyla eşleştirilir.",
+      "logistics": "Kart şablonları ve kasa fotoğrafları dijital paylaşılabilir. Bağlantı örneği gerektiğinde kargo, kurye veya randevulu elden teslim seçilir; örneğin hangi kart ölçüsüne ait olduğunu etiketleyin. Dosya revizyonuyla dağıtım listesini aynı tarihte güncelleyin.",
+      "answer": "Klips modelinde kartın okunur alanını, kasa kesitini ve kullanım yönünü ayrı parametreler olarak tanımlayın.",
+      "takeaways": [
+        "Okunur alanı gösterin",
+        "Kesit varyantlarını ayırın",
+        "Dağıtım listesini güncelleyin"
+      ]
+    }
+  },
+  "umraniye": {
+    "": {
+      "summary": "Ümraniye’den kahve makinesi dış damlalık çerçevesi talebinde cihaz kimliği, eksik parça ve kullanım koşullarını birlikte kaydedin.",
+      "faq": [
+        {
+          "q": "Cihazın sadece ticari adı yeterli olur mu?",
+          "a": "Aynı ad altında farklı modeller bulunabilir. Etiket fotoğrafı, model kodu ve mevcut haznenin görüntüsü parçanın hangi cihaza ait olduğunu belirlemeye yardımcı olur."
+        },
+        {
+          "q": "Izgara sağlam ama çerçeve eksikse ikisini de göndermeli miyim?",
+          "a": "Birbirine nasıl oturdukları önemlidir. Önce birlikte çekilmiş fotoğrafları paylaşın; fiziksel referansın hangi parçaları kapsayacağı buna göre belirlenebilir."
+        }
+      ],
+      "local_context": "Ümraniye Anadolu yakasındadır ve atölyenin bulunduğu Ataşehir ile komşudur. Kahve makinesi çerçevesi talebinde cihazın bulunduğu adres ve model etiketi ayrı bilgi olarak yazılmalıdır. Fotoğrafların hazne çıkarılmış ve takılmış konumları göstermesi, hangi dış çerçevenin istendiğini ve cihazda hangi parçaların kalacağını açıklığa kavuşturur.",
+      "logistics": "Çıkarılabilir dış referansı göndermeden önce sıvısız ve korunabilir durumda olduğunu teyit edin. Kargo, kurye veya randevulu elden teslim görüşülebilir. Örnek Mahallesi ziyaretinde cihazın tamamını getirmeniz gerekip gerekmediğini önceden fotoğraflarla netleştirin.",
+      "answer": "Damlalık çerçevesi talebinde model kodunu, hazne konumlarını ve korunacak parçaları açıkça gösterin.",
+      "takeaways": [
+        "Model etiketini ekleyin",
+        "Hazneyi iki konumda gösterin",
+        "Referans kapsamını seçin"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Ümraniye için dış damlalık çerçevesi baskısı, mekanik yerleşim numunesi ile kullanım uygunluğu değerlendirmesi ayrı tutularak ele alınır.",
+      "faq": [
+        {
+          "q": "Baskı örneğinin yalnız kuru oturuşunu kontrol etmek neyi gösterir?",
+          "a": "Çerçevenin geometrik yerleşimi ve çıkarma hareketi hakkında bilgi sağlar. Sıcaklık, sıvı ve temizlik koşullarındaki kullanım ayrı değerlendirme kapsamıdır."
+        },
+        {
+          "q": "Metal ızgara eğilmişse yeni çerçeve buna göre yapılmalı mı?",
+          "a": "Eğriliğin arıza mı yoksa özgün biçim mi olduğu açıklanmalıdır. Hasarlı bir referansa uydurulan modelin hedefi ayrıca kayda alınmalıdır."
+        }
+      ],
+      "local_context": "Ümraniye’deki cihazda denenecek baskının hangi model ve hazneye ait olduğunu kayıt altına alın. Ataşehir’e komşu olmak örneğin doğrudan kullanıma alınması için gerekçe değildir; cihaz üzerindeki temas alanları ve temizlik alışkanlığı teknik girdidir. Farklı cihazlarda aynı görünen çerçeveler bulunuyorsa ilk numunenin hangi cihazı temsil ettiği açık kalmalıdır.",
+      "logistics": "Kargo ve kurye tesliminde numune ile varsa metal ızgara birbirini çizmeyecek bölmelerde tutulmalıdır. Randevulu elden incelemede kullanılacak cihaz fotoğraflarını ve hazne örneğini önceden belirtin. Gelen numuneyi cihaz koduyla eşleşen kayıt içinde saklayın.",
+      "answer": "Çerçeve baskısını cihaz kimliğiyle eşleştirin; kuru yerleşim gözlemini diğer kullanım koşullarından ayrı değerlendirin.",
+      "takeaways": [
+        "Cihaz kodunu koruyun",
+        "Izgaranın durumunu yazın",
+        "Numuneyi ayrı saklayın"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Ümraniye’de damlalık çerçevesi taraması için numunenin mevcut durumu, sonradan değişmiş yüzeyleri ve korunacak bağlantıları açıklanmalıdır.",
+      "faq": [
+        {
+          "q": "Numuneyi taramadan önce güçlü bir temizleyiciyle yıkamalı mıyım?",
+          "a": "Korunması gereken yüzey ve malzeme bilinmeden özel işlem uygulanmamalıdır. Mevcut durumu bildirin; gerekli hazırlık ve güvenli temizleme koşullarını önceden görüşün."
+        },
+        {
+          "q": "Tarama dosyası eski çerçevenin kusurlarını gösterir mi?",
+          "a": "Kaydedilebilen mevcut yüzeyi içerir. Hangi bozuklukların düzeltilmesinin istendiği ayrıca belirtilmedikçe tarama kaydı bir onarım kararı oluşturmaz."
+        }
+      ],
+      "local_context": "Ümraniye’den tarama referansı gönderilirken haznenin cihaza takılı konumu da fotoğraflanmalıdır. İlçe atölyenin bulunduğu Ataşehir’e komşudur; yine de inceleme randevusu ve numune kapsamı önceden seçilir. Eski çerçevedeki aşınma ile temizleme sırasında oluşan yüzey değişikliklerini ayırmak, mevcut durumun hedef tasarım diye kopyalanmasını önler.",
+      "logistics": "Çıkarılabilen parça sıvısız biçimde kargo veya kurye ile ulaştırılabilir. Cihaz bulunduğu yerde kalacaksa yerinde tarama talebine erişilebilir çıkarma yolunu gösteren fotoğraf ekleyin. Elden inceleme için Örnek Mahallesi atölyesiyle randevu planlayın.",
+      "answer": "Tarama öncesinde çerçevenin mevcut durumunu belgeleyin; temizleme ve geometri düzeltme kararlarını ayrı açıklayın.",
+      "takeaways": [
+        "Aşınmayı fotoğraflayın",
+        "Hazne konumunu ekleyin",
+        "Hazırlığı önceden görüşün"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Ümraniye için damlalık çerçevesi modellemesinde cihaz varyantı, ızgara ilişkisi ve değiştirilemeyecek yerleşim ölçüleri birlikte tanımlanır.",
+      "faq": [
+        {
+          "q": "Çerçeveye özel yazı eklemek istenebilir mi?",
+          "a": "Yazının bulunacağı yüzey ve temizleme erişimine etkisi değerlendirilmelidir. Görsel kişiselleştirme, temas yüzeyleri ve kullanım uygunluğu kararlarının yerine geçmez."
+        },
+        {
+          "q": "Cihazın yeni hazne sürümü gelirse aynı model kullanılabilir mi?",
+          "a": "Bağlantı ve oturma ölçüleri yeniden karşılaştırılmalıdır. Yeni fiziksel referansın eski CAD dosyasıyla aynı ad altında karıştırılması önlenmelidir."
+        }
+      ],
+      "local_context": "Ümraniye’deki kahve makinesine göre CAD hazırlanırken cihaz kodu, hazne sürümü ve ızgara örneği aynı dosya grubunda bulunmalıdır. Komşu Ataşehir atölyesine yapılacak görüşmenin öncesinde bu bilgileri dijital paylaşmak, fiziksel karşılaştırmada hangi ölçülere bakılacağını belirler. Görünüş tercihi ile cihazın çıkarma yolundan gelen zorunlu sınırlar ayrı tutulur.",
+      "logistics": "Eskiz, fotoğraf ve varsa mevcut CAD verisi dijital iletilebilir. Ölçü referansı kargo, kurye veya randevulu elden teslimle ulaştırılacaksa hazne ile ızgarayı ayrı koruyun; model onayının hangi fiziksel takım üzerinden verileceğini not edin.",
+      "answer": "Modellemede cihaz, hazne ve ızgara sürümlerini eşleştirin; görünüş değişikliklerini zorunlu yerleşim ölçülerinden ayrı yönetin.",
+      "takeaways": [
+        "Fiziksel takımı tanımlayın",
+        "Sürümleri eşleştirin",
+        "Çıkarma yolunu koruyun"
+      ]
+    }
+  },
+  "uskudar": {
+    "": {
+      "summary": "Üsküdar’dan müzik standı tutamağı talebinde plastik kavrama, metal bağlantı ve standın mevcut davranışı ayrı ayrı açıklanmalıdır.",
+      "faq": [
+        {
+          "q": "Dış tutamak kırıldıysa metal somunu saklamalı mıyım?",
+          "a": "Mevcut metal eleman önemli bir referans olabilir. Kaybolmaması için ayrı saklayın ve bulunduğu konumu fotoğraflayın; yeniden kullanım durumu ayrıca değerlendirilir."
+        },
+        {
+          "q": "Stand zaten aşağı kayıyorsa yeni tutamak çözüm olur mu?",
+          "a": "Kaymanın nedeni dış plastikten farklı olabilir. Mekanizmanın mevcut davranışı talepte açıklanmalı ve tutamağın hangi işlevi üstleneceği belirlenmelidir."
+        }
+      ],
+      "local_context": "Üsküdar Anadolu yakasındadır ve Ataşehir ile komşudur. Stand tutamağı için örnek hazırlanırken dış plastikle beraber hangi metal donanımın kullanılacağı fotoğraflanmalıdır. Evde veya prova alanında birden fazla stand varsa parçaların birbirinden alınması ölçü karışıklığı yaratabilir; hangi tutamağın hangi standdan geldiğini bir konum etiketiyle belirtin.",
+      "logistics": "Kargo veya kurye paketinde küçük metal elemanları plastik kırıklardan ayrı kapalı bir poşette tutun. Örnek Mahallesi atölyesinde elden karşılaştırma için randevu alın. Standın tamamını taşımadan önce bağlantı fotoğrafları üzerinden referans ihtiyacını görüşün.",
+      "answer": "Stand tutamağı talebinde metal bağlantıyı saklayın, arızayı açıklayın ve parçanın hangi standa ait olduğunu belirtin.",
+      "takeaways": [
+        "Metal elemanı saklayın",
+        "Stand kodunu yazın",
+        "Kayma davranışını açıklayın"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Üsküdar için müzik standı dış tutamağı baskısında metal ek parçayla uyum ve kavrama denemesi kayıtlı bir numune üzerinde incelenir.",
+      "faq": [
+        {
+          "q": "Metal parçayı numuneye kendim yerleştirebilir miyim?",
+          "a": "Yerleştirme yöntemi tasarım kapsamında belirlenmelidir. Belirsiz bağlantıya zorlayarak müdahale etmek numunenin değerlendirme sonucunu değiştirebilir."
+        },
+        {
+          "q": "Küçük ve büyük tutamağı nasıl karşılaştırmalıyım?",
+          "a": "Aynı stand ve bağlantı düzeni üzerinden tutuş, erişim ve çevreye yaklaşma gözlemlerini ayrı kaydedin. Bir şekli beğenmek bağlantı onayı yerine geçmez."
+        }
+      ],
+      "local_context": "Üsküdar’da denenecek baskı tutamağı için stand modeli ve kullanılacak metal donanım aynı örnek kodunda tutulmalıdır. Ataşehir’e komşu bir adreste birden fazla stand bulunması, bağlantılarının aynı olduğu anlamına gelmez. Deneme sonrası geri bildirimde tutuş hissinden ayrı olarak ek parçanın yerinde duruşu ve gözlenen hareketi tarif etmek gerekir.",
+      "logistics": "Baskı numunesi kargo veya kurye ile, metal donanımı ayrı korunarak gönderilebilir. Elden teslim randevuyla yapılır. Çeşitli kavrama biçimleri karşılaştırılacaksa her numuneyi görünüş adı yerine tasarım koduyla etiketleyin ve denenecek standı belirtin.",
+      "answer": "Baskı tutamağını metal donanımla eşleştirin; kavrama seçeneklerini aynı referans üzerinde ayrı kayıtlarla karşılaştırın.",
+      "takeaways": [
+        "Donanımı eşleştirin",
+        "Numuneleri kodlayın",
+        "Tutuş gözlemini ayırın"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Üsküdar’da stand tutamağı taraması, sağlam dış yüzey ve metal bağlantı referansının hangi kısmının kaydedileceği seçilerek hazırlanır.",
+      "faq": [
+        {
+          "q": "Metal somun çıkmış haldeyse tarama için tekrar takmalı mıyım?",
+          "a": "Önce ayrı parçaları ve çıktıkları bölgeyi belgeleyin. Gevşek donanımı tahmini konuma yerleştirmek özgün bağlantı referansını belirsizleştirebilir."
+        },
+        {
+          "q": "Başka standın sağlam tutamağı taranabilir mi?",
+          "a": "Referans olarak kaydedilebilir; hedef standla bağlantı eşleşmesi ayrıca gösterilmelidir. Sağlam örneğin bulunması evrensel uyum anlamına gelmez."
+        }
+      ],
+      "local_context": "Üsküdar’daki standın yerinde kalması isteniyorsa taranacak sapın ayrılabilirliğini ve çevresindeki erişimi önceden gösterin. Ataşehir komşuluğu adres planına yardımcı olur; kayıt kapsamını belirleyen, dış tutamağın sağlam referansının ve metal birleşiminin görünür olmasıdır. Başka bir standdan alınan örnek kullanılacaksa bu eşleştirme talep notunda açık kalmalıdır.",
+      "logistics": "Ayrılmış tutamak kargo veya kurye ile, metal parçası küçük kapalı bir bölmede korunarak gönderilebilir. Yerinde tarama talebinde standın çalışma alanını paylaşın. Örnek Mahallesi atölyesinde elden numune incelemesi için randevu alın.",
+      "answer": "Tarama öncesinde ayrılmış metal ve plastik parçaları belgeleyin; başka standdan gelen referansın kaynağını açık tutun.",
+      "takeaways": [
+        "Parçaları ayrı fotoğraflayın",
+        "Örneğin kaynağını yazın",
+        "Hedef bağlantıyı karşılaştırın"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Üsküdar için stand tutamağı modellemesinde metal donanım yuvası, kavrama seçeneği ve revizyonların hangi standa ait olduğu açıklanır.",
+      "faq": [
+        {
+          "q": "Tutamağa daha uzun bir kanat eklemek uygun olur mu?",
+          "a": "Erişim ve kullanıcı hareketi değişebilir; bağlantıya aktarılan etki de değerlendirilmelidir. Uzatma yalnız görünüş seçeneği olarak ele alınmamalıdır."
+        },
+        {
+          "q": "Teslim dosyasında metal somun da bulunacak mı?",
+          "a": "Plastik gövde ile satın alınan donanımın kapsamı baştan seçilmelidir. Dosyada bir referans hacminin görünmesi metal parçanın üretileceği anlamına gelmez."
+        }
+      ],
+      "local_context": "Üsküdar’dan gönderilen modelleme talebinde birden fazla stand çeşidi varsa donanım ölçülerini ayrı satırlarda tutun. Atölyenin bulunduğu Ataşehir’le komşu ilçede yapılacak fiziksel görüşmenin öncesinde bu ölçüleri dijital paylaşabilirsiniz. Dış kavrama biçimi ortaklaştırılmak istense de metal yuvalar farklıysa bağlantı varyantları ayrı dosya kodlarıyla yönetilmelidir.",
+      "logistics": "Ölçü notları ve stand fotoğrafları dijital olarak paylaşılabilir. Fiziksel donanım örneği gerektiğinde kargo, kurye ya da randevulu elden teslim seçilir. Metal parçanın iade edileceği standı paket etiketinde göstererek örnekler arası karışmayı önleyin.",
+      "answer": "Modellemede metal donanım kapsamını ve plastik kavrama varyantını ayırın; her dosyayı hedef standla eşleştirin.",
+      "takeaways": [
+        "Donanım kapsamını seçin",
+        "Bağlantı varyantını ayırın",
+        "Hedef standı kodlayın"
+      ]
+    }
+  },
+  "zeytinburnu": {
+    "": {
+      "summary": "Zeytinburnu’ndan duvar saati dış kapağı talebinde kapağın kaynağını, pil erişimini ve hasarın sınırını birlikte belgeleyin.",
+      "faq": [
+        {
+          "q": "Saatin ön yüzündeki marka bilgisi yeterli midir?",
+          "a": "Arka gövde, model etiketi ve mekanizma yerleşimi de gereklidir. Aynı görünümlü ön yüzlerin arkasında farklı kapak düzenleri bulunabilir."
+        },
+        {
+          "q": "Eski kapağın yalnız yarısı varsa talep hazırlanabilir mi?",
+          "a": "Mevcut sağlam sınırlar ve saatte kalan oturma alanı bilgi sağlayabilir. Eksik bölgelerin nasıl tamamlanacağı ayrıca modelleme kapsamında değerlendirilir."
+        }
+      ],
+      "local_context": "Zeytinburnu İstanbul’un Avrupa yakasındadır ve Bakırköy ile komşudur. Saat kapağı talebinde saatin bulunduğu yer ile kargoyu gönderecek adres farklıysa ikisini ayırın. Aynı mekânda benzer saatler varsa her arka gövdeyi ürün kimliğiyle kaydetmek, sağlam bir kapağın yanlış mekanizmaya referans gösterilmesini önler.",
+      "logistics": "Eski kapağı kargo veya kurye ile, saat mekanizmasına ait gevşek küçük parçaları ayrı koruyarak gönderebilirsiniz. Elden inceleme için Örnek Mahallesi atölyesine randevu alın. Saatin tamamının gerekli olup olmadığını ön görüşmede fotoğraflarla belirleyin.",
+      "answer": "Saat kapağı talebinde arka gövdeyi ve mevcut sağlam sınırları gösterin; referansı doğru saatle eşleştirin.",
+      "takeaways": [
+        "Arka gövdeyi fotoğraflayın",
+        "Sağlam sınırları işaretleyin",
+        "Saat kimliğini ekleyin"
+      ]
+    },
+    "3d-baski": {
+      "summary": "Zeytinburnu için saat kapağı baskısında pil değiştirme erişimi, mekanizma boşluğu ve numunenin hangi saatle eşleştiği kayda alınır.",
+      "faq": [
+        {
+          "q": "Kapağı takınca pil değişimi zorlaşırsa neyi bildirmeliyim?",
+          "a": "Takıldığı yönü ve parmağın erişemediği alanı fotoğrafta gösterin. Görünüşte kapanması tek başına gerekli bakım erişiminin korunduğunu göstermez."
+        },
+        {
+          "q": "Numuneyi zımparalayarak oturttum; dosyayı onaylayabilir miyim?",
+          "a": "Hangi yüzeyden malzeme alındığı kaydedilmelidir. Düzeltilmiş fiziksel numuneyle eski dosyanın aynı olduğu varsayılmadan revizyon gereği değerlendirilir."
+        }
+      ],
+      "local_context": "Zeytinburnu’ndaki saatte denenecek baskı kapağı için arka gövde fotoğrafıyla dosya sürümünü eşleştirin. Avrupa yakasına gönderilecek birden fazla numune varsa yalnız kapak rengine göre ayırmayın; model kodu ve pil yuvası düzeni de belirtilmelidir. Böylece deneme geri bildirimi başka bir saatin kapağına yanlışlıkla uygulanmaz.",
+      "logistics": "Kargo veya kurye paketinde ince kapağın düzlüğünü koruyan bir bölme kullanın. Randevulu elden teslimde karşılaştırma için getirilecek saati önceden bildirin. Sağlam eski kapak geri gönderilecekse yeni numuneye sürtünmeyecek biçimde ayrı tutulmasını isteyin.",
+      "answer": "Saat kapağı baskısını bakım erişimiyle birlikte değerlendirin; elle yapılan düzeltmeleri dosya revizyonuna aktarın.",
+      "takeaways": [
+        "Saatle dosyayı eşleştirin",
+        "Pil erişimini gözleyin",
+        "Düzeltmeleri işaretleyin"
+      ]
+    },
+    "3d-tarama": {
+      "summary": "Zeytinburnu’nda saat kapağı taraması için çıkarılabilir yüzeyler, kırık geçmişi ve mekanizmaya komşu boşlukların kapsamı belirlenir.",
+      "faq": [
+        {
+          "q": "Saatin arkasına eklenmiş dolgu tarama öncesi çıkarılmalı mı?",
+          "a": "Dolgunun amacı ve ne zaman eklendiği açıklanmalıdır. Numuneye zarar verebilecek müdahale yerine mevcut durumu belgeleyerek hazırlık yöntemini görüşün."
+        },
+        {
+          "q": "Tarama saatin çalışmasını da kontrol eder mi?",
+          "a": "Geometrik kayıt mekanizmanın çalışma değerlendirmesinden farklıdır. İşlem kapsamına yalnız kapağın yüzeyi giriyorsa saat arızasının incelendiği varsayılmamalıdır."
+        }
+      ],
+      "local_context": "Zeytinburnu’ndan tarama örneği hazırlanırken saatin arka yüzünü olduğu haliyle fotoğraflayın; kapağı söktükten sonraki görünüşü ayrı tutun. Bakırköy komşuluğu coğrafi bilgidir, nesnenin hangi parçasının taşınabileceğini açıklamaz. Kapağın başka bir saatten alınıp alınmadığını belirtmek, kayıt edilen dış biçimle hedef oturma çevresinin karıştırılmasını önler.",
+      "logistics": "Sökülebilen kapak kargo ya da kurye ile korunarak gönderilebilir. Saat yerinde kalacaksa yerinde tarama talebine erişim fotoğrafını ve nesnenin hassasiyetini ekleyin. Atölyede elden inceleme randevuyla yapılır; kırılgan mekanizmayı yalnız taşıma kolaylığı için sökmeyin.",
+      "answer": "Saat kapağı taramasında sonradan eklenen malzemeleri ve referansın kaynağını açıklayın; geometri kapsamını mekanizma kontrolünden ayırın.",
+      "takeaways": [
+        "Mevcut durumu kaydedin",
+        "Dolgu geçmişini yazın",
+        "Kapsam sınırını seçin"
+      ]
+    },
+    "3d-modelleme": {
+      "summary": "Zeytinburnu için saat kapağı modellemesinde bakım erişimi, gövde varyantı ve dekoratif değişikliklerin sınırı açıkça tanımlanır.",
+      "faq": [
+        {
+          "q": "Kapağı tek parça yerine açılır pil bölmesiyle modelleyebilir miyiz?",
+          "a": "Gövde geometrisi ve kullanım ihtiyacı uygunsa bir seçenek olarak incelenebilir. Yeni bölümün bağlantısı ve mekanizmaya yaklaşması ayrıca değerlendirilmelidir."
+        },
+        {
+          "q": "Dış kapağın biçimini değiştirirken saatin duvara uzaklığı önemli mi?",
+          "a": "Evet, korunacak arka yerleşim sınırları talepte belirtilmelidir. Görünüş için eklenen hacmin saatin duruşunu değiştirmesi ayrı bir tasarım kararıdır."
+        }
+      ],
+      "local_context": "Zeytinburnu’nda kullanılacak saat kapağı için CAD talebine mekanizma yerleşimini ve pil yuvasının yönünü gösteren fotoğraf ekleyin. Avrupa yakasından gelen farklı saat referansları aynı görünüş ailesine ait olsa bile arka oturma çevresi değişebilir. Ortak dış tasarım isteniyorsa hangi bağlantı ölçülerinin her saat için ayrı kalacağı model listesinde belirtilmelidir.",
+      "logistics": "İşaretli fotoğraflar ve ölçü notları dijital paylaşılabilir. Fiziksel kapak veya gövde referansı kargo, kurye ya da randevulu elden teslimle ulaştırılır. Numunenin hangi saatten alındığını paket ve dosya üzerinde aynı adla saklayın.",
+      "answer": "Modellemede bakım erişimini ve arka yerleşim sınırını koruyun; farklı saat gövdelerini ayrı bağlantı varyantlarıyla yönetin.",
+      "takeaways": [
+        "Pil yönünü belirtin",
+        "Yerleşim sınırını yazın",
+        "Gövde varyantlarını ayırın"
+      ]
+    }
+  }
+}

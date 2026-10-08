@@ -347,7 +347,7 @@
   width: 100%;
   padding-inline: max(4.5%, calc((100% - 1320px) / 2));
 }
-.theme-industrial
+.brand-site.theme-industrial
   .content-hero
   :is(.breadcrumbs, .brand-eyebrow, .section-lead) {
   color: #c8d9db;

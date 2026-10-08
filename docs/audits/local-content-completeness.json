@@ -1,0 +1,34 @@
+{
+  "result": "pass",
+  "testedAt": "2026-10-08T15:18:36.921Z",
+  "input": "merged source",
+  "routes": 652,
+  "perBrand": {
+    "3dyanimda": 163,
+    "3dsanayi": 163,
+    "maketyanimda": 163,
+    "parcayanimda": 163
+  },
+  "inventoryHash": "be84020ada2bba9392436acede10d70ed042e30dd8f9dcb29e6312697e487ad2",
+  "publicationStatus": "unchanged; all 652 draft",
+  "scope": "Automatic field completeness, route coverage, links and source URL shape only. Not an originality or human publication approval.",
+  "checks": [
+    "all 652 existing routes",
+    "location identity preserved",
+    "draft status preserved",
+    "required content fields",
+    "direct answers and FAQs",
+    "related route resolution",
+    "HTTPS source references",
+    "no unreviewed local images"
+  ],
+  "issues": [],
+  "localSimilarityDiagnostic": {
+    "threshold": 0.8,
+    "comparedRoutes": 656,
+    "conflictingPairs": 0,
+    "condition": "Prospective publication of all location pages; existing DB trigger compares local_context against published location peers across every brand.",
+    "tokenFunction": "Exact local_content_tokens SQL loaded from existing migration into isolated PGlite",
+    "samples": []
+  }
+}

@@ -11,13 +11,19 @@ describe("local publishing", () => {
       ),
     ).toBe(1);
   });
-  it("keeps geographic shells in draft and out of publication", () => {
-    for (const p of pages.filter(
+  it("keeps all completed local records unpublished until release review", () => {
+    const localPages = pages.filter(
       (p) => p.kind === "location" && p.path !== "/bolgeler/istanbul",
-    )) {
+    );
+    expect(localPages).toHaveLength(652);
+    for (const p of localPages) {
       expect(p.status).toBe("draft");
-      expect(publicationIssues(p as LandingPage).length).toBeGreaterThan(0);
+      expect(publicationIssues(p as LandingPage)).toEqual([]);
     }
+  });
+  it("still rejects a local shell when its required fields are removed", () => {
+    const page = pages.find((p) => p.kind === "location") as LandingPage;
+    expect(publicationIssues({ ...page, sections: [], faq: [], local_context: "", logistics: "", evidence: "", reviewed_at: null }).length).toBeGreaterThan(0);
   });
   it("has the full content inventory for each brand without URL collisions", () => {
     for (const brand of [

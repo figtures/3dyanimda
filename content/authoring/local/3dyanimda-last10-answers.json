@@ -1,0 +1,162 @@
+{
+  "/bolgeler/istanbul/sariyer": {
+    "answer": "Ses ürününde önce dış hacim, kontrol erişimi ve gerçek bileşen yerleşiminden hangisinin sınanacağını seçin; çalışma amacı, prototipin ayrıntı ve donanım ihtiyacını belirler.",
+    "localNote": "Çalışan bileşenler farklı bir adreste kalıyorsa kabuk incelemesinin bunların gerçek yerleşimini kapsamadığı kaydedilmelidir. Fiziksel kabul için aynı ürün sürümündeki ön yüz ve iç parçalar eşleştirilir."
+  },
+  "/bolgeler/istanbul/sariyer/3d-baski": {
+    "answer": "Izgara numunesini desenin görünüşü ve düğmeye yaklaşma üzerinden değerlendirin; ön çerçevenin bağlantısını koruyun, ses performansı için ayrıca tanımlanmış bir deney gerektiğini belirtin.",
+    "localNote": "Ön yüz varyantları ayrı kişilerce incelenecekse parça kodlarıyla fotoğraf yönü aynı olmalıdır. Taşımada çerçeve üzerinden desteklenmeyen ince desenlerin bozulması, görsel karşılaştırmayı etkileyebilir."
+  },
+  "/bolgeler/istanbul/sariyer/3d-tarama": {
+    "answer": "Kavisli kabuğun kaydında gerekli yüzeyleri işaretleyin; ızgaranın kapattığı bölgeler için erişim planı hazırlayın ve yeniden tasarımda kullanılacak ölçü referanslarını ayrıca tanımlayın.",
+    "localNote": "Objenin bulunduğu yerde önü görülebilirken yan veya arka yüzü kapalı kalabilir. Tarama adresiyle birlikte çevresindeki çalışma boşluğunu gösteren görüntüler paylaşmak, gereksiz sökme kararını önler."
+  },
+  "/bolgeler/istanbul/sariyer/3d-modelleme": {
+    "answer": "Ön çerçevenin dış formunu iç bileşen zarfıyla birlikte kurun; kontrol eksenlerini sabitleyin ve kabuğun servis sırasında hangi açıklıktan ayrılacağını modelleme öncesinde kararlaştırın.",
+    "localNote": "Bileşen çizimleri merkez ofiste, fiziksel gövde başka bir yerdeyse aynı revizyonu kullandıkları doğrulanmalıdır. Tasarım görüşmesine yalnız beğenilen dış görünüşü getirmek montaj ilişkisini açıklamaz."
+  },
+  "/bolgeler/istanbul/silivri": {
+    "answer": "Taşınabilir ürünü bölmeden önce kapalı çanta hacmini ve yeniden kurulum sırasını belirleyin; modül sayısını azaltma ile parçaları rahat yerleştirme hedeflerini birlikte değerlendirin.",
+    "localNote": "Çanta iç ölçüsünün dış ölçüden farklı olması yerleşim kararını değiştirebilir. Ürün ile çanta ayrı adreslerden gelecekse aynı incelemede buluşacakları ve geri dönüş düzeni baştan belirlenir."
+  },
+  "/bolgeler/istanbul/silivri/3d-baski": {
+    "answer": "Modüler bağlantıyı küçük bir baskıyla sınarken büyük parçaların giriş yolunu da temsil edin; yön işaretini, tutma alanını ve görünen birleşim çizgisini karşılaştırın.",
+    "localNote": "Deneme kesitleri kurulum yapacak kişiye ulaştırılmalı; modülün yalnız tasarım ekibince görülmesi kullanım zorluğunu gizleyebilir. Gönderi listesi hangi iki parçanın eşleştiğini açıkça göstermelidir."
+  },
+  "/bolgeler/istanbul/silivri/3d-tarama": {
+    "answer": "Taşıma tasarımı için objeyi kullanım ve paketleme durumlarında ayrı tanımlayın; sökülen modüllerin dış zarfını adlandırın ve koruyucu boşlukları tasarım kararı olarak bırakın.",
+    "localNote": "Bir montajın paketlenmeden önce ayrılması konum ilişkisini kaybettirebilir. Gönderilecek referansın modül kodları ve kurulu fotoğrafı, tarama dosyalarının sonradan doğru birleştirilmesine yardımcı olur."
+  },
+  "/bolgeler/istanbul/silivri/3d-modelleme": {
+    "answer": "Gövdeyi çantaya sığacak modüllere ayırırken birleşim sırasını da modelleyin; kurulu hacim, görünür ek yerleri ve taşıma düzenini aynı onay paketinde karşılaştırın.",
+    "localNote": "Kullanıcı sunuma yanında alet götüremiyorsa bağlantı seçimi buna göre ele alınmalıdır. İnceleme adresine gönderilen dosyalarda çanta yerleşimi ile kurulmuş montajın aynı revizyonda bulunması gerekir."
+  },
+  "/bolgeler/istanbul/sultanbeyli": {
+    "answer": "Dokunarak bulunan kontroller için görev, yaklaşma yönü ve karıştırılan düğmeleri açıklayın; biçim değişikliğini önce seçilmiş kullanım hareketleriyle deneyip sonuçları ayrı ayrı kaydedin.",
+    "localNote": "Denemeyi yapacak kişinin yalnız paneli görmesi yetmeyebilir; kontrolün hangi görevi başlattığını da bilmesi gerekir. Numunenin kullanım kartı ve görev sırası fiziksel görüşmeden önce paylaşılır."
+  },
+  "/bolgeler/istanbul/sultanbeyli/3d-baski": {
+    "answer": "Düğme kapağı varyantlarında bağlantıyı sabit tutup yüzey biçimini karşılaştırın; parmak erişimini ve yanlışlıkla komşu kontrole dokunmayı gerçek panel üzerinde ayrı ayrı gözleyin.",
+    "localNote": "Kapak denemesi için doğru kontrol gövdesinin alıcı noktada hazır olması gerekir. Yüzey işlemleri farklı numuneler aynı kodla dolaşırsa dokunsal değerlendirmede hangi değişikliğin etkili olduğu anlaşılmaz."
+  },
+  "/bolgeler/istanbul/sultanbeyli/3d-tarama": {
+    "answer": "Panel taramasında elin yaklaştığı eğimi ve kontrol merkezlerini kapsayın; hareketli öğelerin kayıt konumunu belirtip küçük bağlantılarda ek ölçü gerekip gerekmediğini önceden görüşün.",
+    "localNote": "Panel cihazdan ayrıldığında kullanım açısı kaybolabilir. Saha fotoğrafında normal konumun görülmesi ve geçici desteklerin tanımlanması, atölyeye gelen düz panelin yanlış yorumlanmasını azaltır."
+  },
+  "/bolgeler/istanbul/sultanbeyli/3d-modelleme": {
+    "answer": "Paneli düğme sayısına göre değil görev sırasına göre düzenleyin; sık kullanılan kontrollerin erişimini, yazı alanını ve arka bileşen zarfını birlikte gözden geçirin.",
+    "localNote": "Farklı operatörler farklı kontrol sırası tarif ediyorsa tek bir varsayım üzerinden çizime başlanmamalıdır. Tasarım görüşmesi için esas alınacak kullanım adımları ve onay verecek kişi belirlenir."
+  },
+  "/bolgeler/istanbul/sultangazi": {
+    "answer": "Kartuşlu üründe çıkarma, yeniden doldurma ve doğru yönde takmayı tek kullanım döngüsü olarak anlatın; ilk prototipin hangi adımı doğrulayacağını ve neyi temsil etmediğini seçin.",
+    "localNote": "Dolu kartuş kullanım hissini etkiliyorsa boş numuneyle yapılan ilk incelemenin sınırı kaydedilmelidir. Gerçek içerik gerekmeyen görüşmede yalnız dış zarfı gösteren temiz referans hazırlanabilir."
+  },
+  "/bolgeler/istanbul/sultangazi/3d-baski": {
+    "answer": "Kartuş girişini görmek için açılan baskı kesitinde kılavuzları koruyun; sürtünme yerlerini ve son konumun anlaşılmasını gerçek kartuşla, gövdenin değişen esnekliğini dikkate alarak değerlendirin.",
+    "localNote": "Açık kesit numunesi ile kapalı kabuk aynı ambalajda bulunuyorsa etiketleri farklı olmalıdır. Kabul noktasındaki kişinin hangi örneği hangi amaçla kullanacağı teslim notunda gösterilir."
+  },
+  "/bolgeler/istanbul/sultangazi/3d-tarama": {
+    "answer": "Derin kartuş yuvasında görülebilen dayamaları ve erişim engellerini fotoğraflayın; tarama verisini gizli iç yüzeyler için gerekli ek ölçü ve sökme kararından ayırın.",
+    "localNote": "Sökülemeyen kapak yuvanın bir bölümünü kapatıyorsa yerinde ziyaret bunu kendiliğinden çözmez. İnceleme öncesinde erişilecek bölgeler ve nesneye müdahale izni açıkça belirlenmelidir."
+  },
+  "/bolgeler/istanbul/sultangazi/3d-modelleme": {
+    "answer": "Kartuşun doğru yönünü belirleyen geometriyi çıkarma tutamağıyla birlikte tasarlayın; ters giriş senaryosunu model üzerinde inceleyin ve fiziksel denemede kullanıcının hareketini ayrıca gözleyin.",
+    "localNote": "Eski kartuş başka bir gövdeyle kullanılmışsa sadece dış fotoğraf yeterli referans değildir. Tasarım talebinde eşleşen ürün kodları ve yanlış yönde takılma örneği aynı dosyada gösterilir."
+  },
+  "/bolgeler/istanbul/sile": {
+    "answer": "Açık alan aksesuarının ilk örneğini montaj, erişim veya görünüş kararına bağlayın; kısa biçim denemesiyle uzun süreli çevre dayanımı beklentisini ayrı çalışma konuları olarak tutun.",
+    "localNote": "Kurulumun açıkta mı korunak altında mı olduğu adres bilgisinden anlaşılmaz. Yerinde görüşme istenirken nesnenin çevresi, bağlantı yüzeyi ve ulaşılması gereken alan birlikte fotoğraflanmalıdır."
+  },
+  "/bolgeler/istanbul/sile/3d-baski": {
+    "answer": "Birikme bölgelerini inceleyen baskıyı gerçek kurulum açısında değerlendirin; kanal çıkışını kapatan çevreyi temsil edin ve gözlenen davranışı nihai malzemenin performansı olarak genellemeyin.",
+    "localNote": "Numune farklı bir masada yatay tutulursa kullanımdaki eğim kaybolabilir. Deneme adresine gönderilen fotoğraf ve açı referansı, sonraki geri bildirimin aynı koşulda verilmesini sağlar."
+  },
+  "/bolgeler/istanbul/sile/3d-tarama": {
+    "answer": "Sabit dış yüzeye oturacak aksesuar için temas bölgesiyle yaklaşma yolunu birlikte seçin; çevre fotoğraflarıyla erişimi tarif edin ve görünmeyen alanları eksik veri olarak ayırın.",
+    "localNote": "Nesneye ulaşmak için yer değiştirmesi gereken eşya veya geçici engel bulunabilir. Ön hazırlık fotoğrafları yalnız taranacak yüzeyi değil ekibin çalışacağı alanı da göstermelidir."
+  },
+  "/bolgeler/istanbul/sile/3d-modelleme": {
+    "answer": "Dış aksesuarı kullanım yönünde modelleyin; montaj deliklerini, kablo yolunu ve korunacak iç hacmi aynı kesitlerde inceleyip çevresel doğrulama ihtiyaçlarını ayrı bir listede bırakın.",
+    "localNote": "Kurulum fotoğrafı ile gelen ölçü çizimi farklı yönleri gösteriyorsa önce ortak referans belirlenir. Dijital incelemede onaylanan açının fiziksel numune kurulurken de kullanılması gerekir."
+  },
+  "/bolgeler/istanbul/sisli": {
+    "answer": "Döner sunum ürününde gösterilecek açıları ve elin tabana erişimini önce belirleyin; boş görünüş kabuğunun gerçek ürünün ağırlık ve denge davranışını temsil etmediğini kaydedin.",
+    "localNote": "Sunum yüzeyinin önünde ziyaretçi, arkasında görevli durması bekleniyorsa iki yaklaşma yönü de tarif edilmelidir. Numunenin değerlendirileceği masa ölçüsü, yalnız ürün fotoğrafıyla anlaşılamaz."
+  },
+  "/bolgeler/istanbul/sisli/3d-baski": {
+    "answer": "Taban baskısında ürünün dış taşmalarını ve tutulacak kenarı birlikte temsil edin; dönüşte sürtünme, parmak erişimi ve sabit yüzeye çarpma noktalarını ayrı ayrı kaydedin.",
+    "localNote": "Üst ürün numuneye sonradan eklenecekse alıcıdaki sürümle tabanın dosyası eşleşmelidir. Gönderilen tabanın tek başına kolay dönmesi, kurulu düzenin kabulünü tamamlamaz."
+  },
+  "/bolgeler/istanbul/sisli/3d-tarama": {
+    "answer": "Sunum desteği için objenin alt temas yüzeyini erişilebilir hale getirmeyi planlayın; tarama kaydıyla destek boşluğunu ve ağırlık dağılımına ilişkin bilgileri ayrı girdiler olarak tutun.",
+    "localNote": "Değerli veya hassas bir objenin ters çevrilmesi uygun olmayabilir. Tarama görüşmesinde mevcut desteği ve güvenli erişim sınırı gösterilmeli; kapalı alt yüzeye ulaşılabileceği varsayılmamalıdır."
+  },
+  "/bolgeler/istanbul/sisli/3d-modelleme": {
+    "answer": "Döner tabanın CAD modelinde ekseni ve en dış çıkıntıyı birlikte inceleyin; kablonun tarafını belirleyip dönüş sınırlarını ve el erişimini farklı konumlarda gösterin.",
+    "localNote": "Model incelemesi yalnız ön görselle yapılırsa arka taraftaki kablo veya çıkıntı gözden kaçabilir. Onay verecek ekip aynı dönüş konumlarını gösteren bir görsel dizisi kullanmalıdır."
+  },
+  "/bolgeler/istanbul/tuzla": {
+    "answer": "Kablolu üründe gerçek konektör ölçüsüyle başlayın; takma, kullanım ve servis durumlarını ayrı tarif ederek prototipin yalnızca hangi geometrik soruyu çözeceğini baştan açıkça belirleyin.",
+    "localNote": "Bağlantı ailesindeki kablolar benzer görünse de kılıf ve baş ölçüleri değişebilir. Fiziksel denemeye gönderilecek kablonun ürün kodu, gövde çiziminde kullanılan referansla aynı olmalıdır."
+  },
+  "/bolgeler/istanbul/tuzla/3d-baski": {
+    "answer": "Konektör giriş numunesine parmağın yaklaşacağı çerçeveyi de ekleyin; fiş takıldıktan sonraki kablo dönüşünü gözleyin ve zorlayarak tamamlanan montajı uygunluk sonucu olarak kaydetmeyin.",
+    "localNote": "Kablo alıcı noktada farklı bir çıkış yönünde kullanılıyorsa deneme koşulu değişir. Numuneye eşlik eden kısa kullanım krokisi, bağlantının masada hangi yönden denenmesi gerektiğini açıklamalıdır."
+  },
+  "/bolgeler/istanbul/tuzla/3d-tarama": {
+    "answer": "Kablo çevresini tararken sabit kabukla esnek hattı ayrı referanslar olarak adlandırın; kayıt pozisyonunu ve gizlenen bağlantı yüzeyleri için gereken ek bilgileri baştan belirtin.",
+    "localNote": "Cihazın bulunduğu yerde kablo sabit bir kanala bağlıysa hareket ettirme izni ayrı görüşülür. Konum fotoğrafı, taşınan gövdenin kullanım sırasında nereden kısıtlandığını açıklamaya yardımcı olur."
+  },
+  "/bolgeler/istanbul/tuzla/3d-modelleme": {
+    "answer": "CAD üzerinde konektörün girişini kapak açılışıyla birlikte planlayın; bilinen kablo sınırlarını kullanın ve iç hacim, servis yolu, bağlantı noktalarını aynı incelemede kontrol edin.",
+    "localNote": "Kablo teknik bilgisi bir ekipte, gövde dosyası başka ekipteyse kullanılan sürümler birlikte doğrulanmalıdır. İletilen çizimde bilinmeyen bükülme sınırları kesin değer gibi gösterilmemelidir."
+  },
+  "/bolgeler/istanbul/umraniye": {
+    "answer": "İç içe saklama ile üst üste kullanım durumlarını ayırın; her boyun tutma alanını, sırasını ve dolu durumunu tanımlayıp prototip kabulünü bu ilişkilere bağlayın.",
+    "localNote": "Farklı boylar farklı adreslerde değerlendiriliyorsa aynı eşleşmelerin denendiği anlaşılmalıdır. Yalnız tek bir kabın rahat kullanılması, ürün ailesinin iç içe yerleşimini doğrulamaz."
+  },
+  "/bolgeler/istanbul/umraniye/3d-baski": {
+    "answer": "İstifleme numunesinde birleşim dudağıyla parmak boşluğunu beraber koruyun; üst parçanın yerleşmesi ve çıkarılması sırasında hangi yüzeyin temas ettiğini gerçek eşleşme üzerinden ayrı ayrı kaydedin.",
+    "localNote": "Deneme çiftinin iki yarısı ayrı paketlerdeyse parça kodları aynı eşleşme kartına bağlanmalıdır. İnce dudaktaki taşıma deformasyonu tasarım boşluğu sanılmadan önce numunenin geliş durumu incelenir."
+  },
+  "/bolgeler/istanbul/umraniye/3d-tarama": {
+    "answer": "Farklı boydaki gövdeleri kendi kimlikleriyle kaydedin; dış taramayı ölçekleyerek bilinmeyen iç ölçüleri üretmeyin ve derin yüzeylerde eksik kalan veriyi teslim kapsamından açıkça ayırın.",
+    "localNote": "Örnekler atölyeye iç içe sıkıştırılmış gelirse ayrılma sırasında biçimleri değişebilir. Her boyun serbest duruş fotoğrafı ve hangi yüzeylerden tutulabileceği, gönderi hazırlığında paylaşılmalıdır."
+  },
+  "/bolgeler/istanbul/umraniye/3d-modelleme": {
+    "answer": "Ürün ailesinde ortak biçimle boyuta özel ölçüleri ayırın; iç hacmi, tutma alanını ve eşleşen yüzeyleri her boy için ayrıca inceleyerek değişikliklerin etkisini takip edin.",
+    "localNote": "Onay ekibinin elinde yalnız bir boy varsa diğer eşleşmelerin dijital incelemeyle sınırlı kaldığı belirtilir. Fiziksel örneklerin hangi sırada karşılaştırılacağı tasarım görüşmesinden önce listelenir."
+  },
+  "/bolgeler/istanbul/uskudar": {
+    "answer": "Tek elle tutulan ürün için önce kavrama, kontrol erişimi veya ağırlık hissinden hangisinin değerlendirileceğini seçin; boş numunenin temsil edemediği kullanım özelliklerini kabul listesinde belirtin.",
+    "localNote": "Farklı kişilerin deneyeceği numunelerde kullanım hareketi aynı açıklamayla tarif edilmelidir. Referans ürünün bir yerde, iç bileşenlerin başka yerde olması ağırlık değerlendirmesini ertelemeyi gerektirebilir."
+  },
+  "/bolgeler/istanbul/uskudar/3d-baski": {
+    "answer": "Kavrama baskılarını karşılaştırırken bağlantı ve kontrol konumlarını sabit tutun; değişen konturu, sonradan eklenen ağırlığı ve yüzey işlemlerini ayrı kodlarla değerlendirme kaydına açıkça yazın.",
+    "localNote": "Elden görüşmeye gelen numunelerden biri zımparalanmışsa yalnız şekil farkı kıyaslanmış olmaz. Kullanıcı denemesinden önce her örneğe yapılan işlemler ve uygulanan tutuş biçimi kaydedilir."
+  },
+  "/bolgeler/istanbul/uskudar/3d-tarama": {
+    "answer": "Elle biçimlendirilmiş kavrama örneğinde korunacak temasları ve tesadüfi izleri ayırın; taramayı mevcut şeklin kaydı olarak isteyip sonraki düzeltmeleri ayrı modelleme kararları halinde tanımlayın.",
+    "localNote": "Yumuşak referans elde tutulmadığında biçim değiştiriyorsa bu durum gönderiden önce gösterilmelidir. Tarama hazırlığı için normal tutuş fotoğrafı kadar örneğin serbest durumunun görüntüsü de yararlıdır."
+  },
+  "/bolgeler/istanbul/uskudar/3d-modelleme": {
+    "answer": "Kavrama yüzeyini iç bileşen zarfı ve kontrol erişimiyle birlikte kurun; farklı tutuş yönlerini ayrı inceleyin ve fiziksel kullanıcı denemesinde sınanacak hareketleri onay listesine ekleyin.",
+    "localNote": "Tasarım görüşmesinde sağ ve sol el beklentileri farklı kişilerce aktarılıyorsa tek hedefte uzlaşılmalıdır. Dijital incelemeyi yapan kişinin fiziksel denemede hangi hareketlerin değerlendirileceğini bilmesi gerekir."
+  },
+  "/bolgeler/istanbul/zeytinburnu": {
+    "answer": "Tekstile bağlanan sert plakanın görünüşünü kumaş temasından ayırın; bağlantı yerlerini gerçek kumaşla değerlendirip ilk numunenin dikim, kullanım hissi veya sunum amacını baştan açıkça seçin.",
+    "localNote": "Kumaşın kat sayısı ve kullanım gerginliği değiştiğinde plakanın oturuşu da yeniden değerlendirilmelidir. Fiziksel örneğin tesliminde yalnız kumaş adını değil kullanılacağı düzeni gösteren fotoğraf paylaşılır."
+  },
+  "/bolgeler/istanbul/zeytinburnu/3d-baski": {
+    "answer": "Plaka varyantlarında deseni ve bağlantıları koruyup temas kenarını değiştirin; düz ve bükülen kumaş üzerindeki davranışı karşılaştırın, yüzey işlemi farklarını ayrı deneme notları olarak saklayın.",
+    "localNote": "Varyantların farklı kumaş parçalarında denenmesi sonuçları karşılaştırmayı zorlaştırabilir. Deneme noktasında aynı örnek grubunun hazır olması ve dikim yönünün kodlarla eşleştirilmesi planlanmalıdır."
+  },
+  "/bolgeler/istanbul/zeytinburnu/3d-tarama": {
+    "answer": "Kavisli aksesuar taramasında görünen desenle arka temas yüzeyini ayrı seçin; kumaştan ayrılma iznini netleştirip küçük bağlantılarda tamamlayıcı ölçü gereksinimini ön incelemede açıkça değerlendirin.",
+    "localNote": "Dikili referans ayrılmadan taşınacaksa kumaşın çekilmesi aksesuarın duruşunu değiştirebilir. Tarama görüşmesinde arka yüzün açık olup olmadığı ve mevcut bağlantının korunması gereği birlikte açıklanır."
+  },
+  "/bolgeler/istanbul/zeytinburnu/3d-modelleme": {
+    "answer": "Tekstil aksesuarını desen, bağlantı ve arka temas yüzeyiyle beraber modelleyin; dikim erişimini kesitte gösterin ve kumaş davranışını fiziksel numuneyle değerlendirecek bir kabul planı hazırlayın.",
+    "localNote": "Bağlantı yöntemi üretim sırasında değişecekse eski dikim örneği yeni geometriyi tam temsil etmeyebilir. Onay dosyası hazırlanırken kullanılacak kumaş düzeni ve bağlantı sürümü eşleştirilmelidir."
+  }
+}
