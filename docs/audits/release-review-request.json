@@ -1,8 +1,8 @@
 {
   "policy": "global-originality-v1",
-  "sourceHash": "stale_after_2026_10_07_service_fact_update",
+  "sourceHash": "3e1dbb4fffcee0c97641b82f542855866ed00e0c639be1ffdd4b1e957cedeeec",
   "result": "pending_human_review",
-  "sourceFileCount": 333,
+  "sourceFileCount": 338,
   "automatedEvidence": {
     "globalOriginality": {
       "result": "pass",
@@ -22,7 +22,7 @@
     "applicationTests": {
       "result": "pass",
       "command": "npm test",
-      "tests": 26
+      "tests": 37
     },
     "typecheck": {
       "result": "pass",
@@ -39,6 +39,16 @@
       "totalDraftRows": 796,
       "publishedRows": 0,
       "rlsEnabled": true
+    },
+    "redirectTests": {
+      "result": "pass",
+      "tests": 9,
+      "command": "npm run test:search"
+    },
+    "workerTests": {
+      "result": "pass",
+      "tests": 4,
+      "command": "npm run test:cloudflare"
     }
   },
   "requiredHumanChecks": {
@@ -54,7 +64,8 @@
     "This request is evidence for review, not a publication certificate.",
     "Automatic checks do not establish web-wide originality, commercial accuracy or production performance.",
     "Production CMS/database records and asset registry still require server-side review.",
-    "2026-10-07: 656 local records now carry owner-confirmed delivery/scanning/appointment facts; 16 FAQs added. The previous source hash and rendered review require refresh. Geographic expansion remains incomplete; all-route audit fails."
+    "2026-10-07: 656 local records now carry owner-confirmed delivery/scanning/appointment facts; 16 FAQs added. The previous source hash and rendered review require refresh. Geographic expansion remains incomplete; all-route audit fails.",
+    "2026-10-08: shared browser/admin/export redirect validation and canonical-domain-only analytics implemented. Production publication was not performed. Geographic consolidation remains a proposal."
   ],
   "reviewer": null,
   "reviewedAt": null

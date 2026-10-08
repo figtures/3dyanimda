@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { supabase } from "@/lib/supabase";
+import { compileRedirects } from "@/lib/redirects.mjs";
+import { supabase, demoMode } from "@/lib/supabase";
 import { useTenant } from "@/contexts/TenantContext";
 const cache = new Map<string, { at: number; routes: Record<string, string> }>();
 export function useRedirects() {
@@ -8,21 +9,22 @@ export function useRedirects() {
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
-    if (!tenant) return;
+    if (!tenant || demoMode) return;
     let cancelled = false;
     (async () => {
       let entry = cache.get(tenant.id);
       if (!entry || Date.now() - entry.at > 60000) {
-        const { data } = await supabase
+        const { data, error } = await supabase
           .from("url_redirects")
           .select("from_path,to_path")
           .eq("tenant_id", tenant.id)
           .eq("active", true);
+        if (error) return;
+        let routes: Record<string,string>;
+        try { routes = compileRedirects(data || []); } catch { return; }
         entry = {
           at: Date.now(),
-          routes: Object.fromEntries(
-            (data || []).map((row) => [row.from_path, row.to_path]),
-          ),
+          routes,
         };
         cache.set(tenant.id, entry);
       }

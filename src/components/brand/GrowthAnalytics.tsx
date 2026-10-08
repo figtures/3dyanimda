@@ -1,15 +1,18 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useBrand } from "@/brands/config";
+import { useTenant } from "@/contexts/TenantContext";
 import { demoMode } from "@/lib/supabase";
-import { CONSENT_EVENT, initializeAnalytics, trackGrowth } from "@/lib/growth-analytics";
+import { CONSENT_EVENT, analyticsHostAllowed, initializeAnalytics, trackGrowth } from "@/lib/growth-analytics";
 
 export default function GrowthAnalytics() {
   const brand = useBrand();
+  const {tenant}=useTenant();
+  const canonicalDomain=tenant?.custom_domain || tenant?.domain;
   const { pathname } = useLocation();
   const id = import.meta.env.VITE_GA4_MEASUREMENT_ID || "";
   useEffect(() => {
-    if (demoMode || import.meta.env.DEV || !id) return;
+    if (demoMode || import.meta.env.DEV || !id || !analyticsHostAllowed(window.location.hostname,canonicalDomain)) return;
     const pageView = () => { if (initializeAnalytics(brand.slug, id)) trackGrowth(brand.slug, "page_view"); };
     const timer = window.setTimeout(pageView, 0);
     window.addEventListener(CONSENT_EVENT, pageView);
@@ -23,6 +26,6 @@ export default function GrowthAnalytics() {
     };
     document.addEventListener("click", clicked);
     return () => { clearTimeout(timer); window.removeEventListener(CONSENT_EVENT,pageView); document.removeEventListener("click",clicked); };
-  }, [brand.slug, pathname, id]);
+  }, [brand.slug, pathname, id, canonicalDomain]);
   return null;
 }

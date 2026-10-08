@@ -1,5 +1,9 @@
 import { canonicalPath } from "./search";
 
+export function analyticsHostAllowed(hostname: string, canonicalDomain?: string | null) {
+  return Boolean(canonicalDomain && hostname === canonicalDomain);
+}
+
 export const CONSENT_EVENT = "brand:consent";
 export const consentKey = (brand: string) => `brand:${brand}:consent:v1`;
 export function analyticsAllowed(brand: string) {

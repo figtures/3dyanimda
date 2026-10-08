@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import { compileRedirects } from "@/lib/redirects.mjs";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,26 +26,30 @@ const AdminRedirects = () => {
   useEffect(() => { load(); }, []);
 
   const add = async () => {
-    if (!from.startsWith("/") || !to.startsWith("/")) {
-      toast.error("Yollar / ile başlamalı");
-      return;
-    }
+    const source=from.trim(), target=to.trim();
+    if(items.some(r=>r.from_path===source)) return toast.error("Bu kaynak URL zaten kayıtlı.");
+    try { compileRedirects([...items,{from_path:source,to_path:target,active:true}]); }
+    catch { return toast.error("Geçerli site içi yollar girin. Kendine veya döngü oluşturan yönlendirmeye izin verilmez."); }
     const { getTenantId } = await import("@/lib/tenant");
     const tid = getTenantId();
     if (!tid) return toast.error("Tenant bulunamadı");
-    const { error } = await supabase.from("url_redirects").insert({ tenant_id: tid, from_path: from, to_path: to });
+    const { error } = await supabase.from("url_redirects").insert({ tenant_id: tid, from_path: source, to_path: target });
     if (error) return toast.error(error.message);
     setFrom(""); setTo(""); load();
   };
 
   const toggle = async (r: R, active: boolean) => {
-    await supabase.from("url_redirects").update({ active }).eq("id", r.id);
+    try { compileRedirects(items.map(item=>item.id===r.id?{...item,active}:item)); }
+    catch { return toast.error("Bu yönlendirme geçersiz bir yol veya döngü oluşturuyor."); }
+    const {error}=await supabase.from("url_redirects").update({ active }).eq("id", r.id);
+    if(error) return toast.error(error.message);
     load();
   };
 
   const remove = async (id: string) => {
     if (!confirm("Silinsin mi?")) return;
-    await supabase.from("url_redirects").delete().eq("id", id);
+    const {error}=await supabase.from("url_redirects").delete().eq("id", id);
+    if(error) return toast.error(error.message);
     load();
   };
 

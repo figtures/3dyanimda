@@ -1,6 +1,6 @@
 import {describe,it,expect,beforeEach} from 'vitest';
 import {canonicalPath,pageGraph} from './search';
-import {referralChannel,analyticsAllowed,consentKey} from './growth-analytics';
+import {referralChannel,analyticsAllowed,consentKey,analyticsHostAllowed} from './growth-analytics';
 import {editorialSchema} from '@/content/editorial';
 describe('search signals and attribution',()=>{
   it('consolidates campaign and index variants without cross-host canonicals',()=>{
@@ -26,6 +26,12 @@ describe('search signals and attribution',()=>{
     expect(analyticsAllowed('3dsanayi')).toBe(false);
     localStorage.setItem(consentKey('3dsanayi'),'broken');
     expect(analyticsAllowed('3dsanayi')).toBe(false);
+  });
+  it('does not count previews or other brand domains as production visits',()=>{
+    expect(analyticsHostAllowed('3dyanimda.com','3dyanimda.com')).toBe(true);
+    expect(analyticsHostAllowed('preview.workers.dev','3dyanimda.com')).toBe(false);
+    expect(analyticsHostAllowed('3dsanayi.com','3dyanimda.com')).toBe(false);
+    expect(analyticsHostAllowed('localhost',null)).toBe(false);
   });
   it('rejects unusable comparison tables and unsafe source links',()=>{
     expect(editorialSchema.safeParse({comparison:{title:'Test',columns:['A','B'],rows:[['Only one']]}}).success).toBe(false);

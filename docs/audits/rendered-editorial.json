@@ -1,6 +1,6 @@
 {
   "result": "pass",
-  "testedAt": "2026-10-06T16:43:08.832Z",
+  "testedAt": "2026-10-08T14:10:23.811Z",
   "contentRoutes": 144,
   "utilityRoutes": 60,
   "themes": [
@@ -25,119 +25,119 @@
   ],
   "records": [
     {
-      "brand": "parcayanimda",
+      "brand": "3dyanimda",
       "path": "/3d-baski",
-      "title": "Bulunamayan plastik parçalar için üretim değerlendirmesi",
-      "description": "parçayanımda: Kırık bir kapak, eksik kontrol düğmesi veya özel adaptör ihtiyacını mevcut montajla birlikte inceleyin. Uygun üretim kararına parçanın şekli kadar görevi ve çalışma ortamı yön verir.",
-      "contentHash": "439a82bd5a002759bd760239df59f1dc269b783105a087b53bb647ec2b971eb9",
+      "title": "Ürün geliştirme için 3D baskı",
+      "description": "3dyanımda: Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
+      "contentHash": "413fba8a432e53d9cb49358be87f780714727c4a741bc86564eb682ca02e568d",
       "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
       "brand": "maketyanimda",
       "path": "/3d-baski",
       "title": "Mimari maket parçaları için 3D baskı",
       "description": "maketyanımda: Kütle, cephe ve yerleşim detaylarını sunum ölçeğine uygun fiziksel parçalara dönüştürün. Maketin tabanı, okunacak detayları ve montaj sırası üretim planıyla birlikte ele alınır.",
-      "contentHash": "01dcc853d8227b37e9e8e34930271a94ecc00a946fba5efb32d785535716646c",
+      "contentHash": "d44d72aba9944e4548c24b23f59ba550143ef3683de6779a3ff60e82403a2825",
       "sections": 4,
-      "faqs": 2
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/3d-baski",
-      "title": "Ürün geliştirme için 3D baskı",
-      "description": "3dyanımda: Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
-      "contentHash": "7f9eeb41884e59f1055b54364bb1e69eb7769122837b1cced9e4e32a3e051b87",
-      "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
       "brand": "3dsanayi",
       "path": "/3d-baski",
       "title": "Üretim hattı yardımcıları için 3D baskı",
       "description": "3dsanayi: Konumlandırma, montaj ve operatör kullanımına yönelik parçaları hat koşullarıyla birlikte değerlendirin. Fikstür ve aparat taleplerinde referans yüzeyler, çevrim içindeki görev ve kabul kontrolü başlangıç verisidir.",
-      "contentHash": "69e9381daefdb24ef8af5cb26ca1bbec5d59f6470b2eaee2d692dde49338059c",
+      "contentHash": "6ee0f6be7e22616b5ed7c30906d9c34bdfd750326bef4f10ba12b7eedceb4c54",
       "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
-      "brand": "maketyanimda",
-      "path": "/3d-tarama",
-      "title": "Objelerden ve mimari detaylardan maket referansı",
-      "description": "maketyanımda: Elinizdeki süsleme, obje veya fiziksel maketin yüzey bilgisini yeni sunum çalışmasına aktarın. Hedef ölçek ve görünmesi gereken ayrıntılar tarama verisinin nasıl kullanılacağını belirler.",
-      "contentHash": "596aea3e46e71e20b8ae6e6591fa92aa000c117f86fa8475b62226728054247a",
+      "brand": "parcayanimda",
+      "path": "/3d-baski",
+      "title": "Bulunamayan plastik parçalar için üretim değerlendirmesi",
+      "description": "parçayanımda: Kırık bir kapak, eksik kontrol düğmesi veya özel adaptör ihtiyacını mevcut montajla birlikte inceleyin. Uygun üretim kararına parçanın şekli kadar görevi ve çalışma ortamı yön verir.",
+      "contentHash": "81757ac91d4a451de2a4af8803cc5de2fd46eea602fcd33950743f58acd7ba58",
       "sections": 4,
-      "faqs": 2
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/3d-tarama",
-      "title": "Teknik numune ve aparatların 3D taraması",
-      "description": "3dsanayi: Çizimi eksik bir bileşenin geometrisini, üretimdeki görevini bilen teknik ekiple birlikte ele alın. Tarama planında erişilebilir yüzeyler, fonksiyonel referanslar ve hedef teslim verisi açıkça tanımlanır.",
-      "contentHash": "ab0f4b3dfa8f728ab242d0738241db65bbbc50f74703f38b26d62b9e577b6ab7",
-      "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
       "brand": "3dyanimda",
       "path": "/3d-tarama",
       "title": "Ürün referanslarını dijitale taşıyan 3D tarama",
       "description": "3dyanımda: Elinizdeki objeyi yeni tasarımın referansı yapmak için tarama kapsamını belirleyin. Dış formu görmek, mevcut ürüne oturan bir aksesuar geliştirmek ve CAD referansı oluşturmak farklı çıktılar gerektirir.",
-      "contentHash": "a61eeacec7a16b1fd7cdee97e9c1b7d5fda2f8ea0bdd3a2591c90126b3dfc96d",
+      "contentHash": "b626c3e1eff0f58fd8b03fb78f5523aa95907f23628e7771a9ad12dce55a49a3",
       "sections": 4,
-      "faqs": 2
+      "faqs": 3
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/3d-tarama",
+      "title": "Objelerden ve mimari detaylardan maket referansı",
+      "description": "maketyanımda: Elinizdeki süsleme, obje veya fiziksel maketin yüzey bilgisini yeni sunum çalışmasına aktarın. Hedef ölçek ve görünmesi gereken ayrıntılar tarama verisinin nasıl kullanılacağını belirler.",
+      "contentHash": "eeb77bda21d6f82eea566d2bcc970b7451e448b7a69121744250840e88810ff3",
+      "sections": 4,
+      "faqs": 3
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/3d-tarama",
+      "title": "Teknik numune ve aparatların 3D taraması",
+      "description": "3dsanayi: Çizimi eksik bir bileşenin geometrisini, üretimdeki görevini bilen teknik ekiple birlikte ele alın. Tarama planında erişilebilir yüzeyler, fonksiyonel referanslar ve hedef teslim verisi açıkça tanımlanır.",
+      "contentHash": "f8d38c6652baf47dd332adb8392dd0e99ed77c8d9ba951befe4808e641380abe",
+      "sections": 4,
+      "faqs": 3
     },
     {
       "brand": "parcayanimda",
       "path": "/3d-tarama",
       "title": "Yedek parça numunesinden dijital referans",
       "description": "parçayanımda: Çizimi olmayan bir parçayı yeniden değerlendirmek için sağlam yüzeyleri, hasarlı bölgeleri ve montaj ilişkisini ayırın. Tarama verisini yeniden üretim hedefiyle birlikte kapsamlandıralım.",
-      "contentHash": "9d619e53cacb0e3fc963bc181809512a6328dbd06ab1a211a33c8a31c920d8cd",
+      "contentHash": "0c22cae7b5ae9dac8be9b34ea03e608dec2ef693cdd9551ef895dd13a79692ea",
       "sections": 4,
-      "faqs": 2
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/3d-modelleme",
-      "title": "İmalat ve montaj ihtiyaçlarına yönelik CAD modelleme",
-      "description": "3dsanayi: Teknik resim, fiziksel numune veya istasyon ihtiyacını izlenebilir CAD geometrisine dönüştürün. Fonksiyonel ölçüler, bağlantı ilişkileri ve onay sorumluluğu tasarım çalışmasının temelini oluşturur.",
-      "contentHash": "5eb1cd5d05c147550788884aa70a0a18afb4a30d83dda26f67d4b7820506c971",
-      "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
       "brand": "3dyanimda",
       "path": "/3d-modelleme",
       "title": "Fikirden test edilebilir ürün modeline",
       "description": "3dyanımda: Eskiz, ölçü ve kullanım senaryosunu birlikte ele alarak ilk ürün geometrisini geliştirin. Modelleme sürecinin çıktısını yalnızca görünüşe değil, prototiple sınanacak tasarım kararlarına bağlayın.",
-      "contentHash": "35d3d6c7d2512c2850e20e4cbf715e8534b19737b8b154511121729fe2adce75",
+      "contentHash": "a94849035335a451e1acb69578791c0ac588640856f404deae0ef62eaf28adf1",
       "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
       "brand": "maketyanimda",
       "path": "/3d-modelleme",
       "title": "Sunum ölçeğine göre maket modelleme",
       "description": "maketyanımda: Mimari tasarım dosyanızı okunaklı, üretilebilir ve kurulabilir maket geometrisine uyarlayın. Kütle sadakati, detay seçimi ve taban ilişkisi aynı modelleme planında buluşur.",
-      "contentHash": "28160b3cdde7f2ec7899c55c421a2ee9c6ad8d5011253dfc6b31dd57f0803d20",
+      "contentHash": "e58d56b2352d569045f9f847d4c8bdced455cf5c4731a82fc9ef5e99004942ea",
       "sections": 4,
-      "faqs": 2
+      "faqs": 3
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/3d-modelleme",
+      "title": "İmalat ve montaj ihtiyaçlarına yönelik CAD modelleme",
+      "description": "3dsanayi: Teknik resim, fiziksel numune veya istasyon ihtiyacını izlenebilir CAD geometrisine dönüştürün. Fonksiyonel ölçüler, bağlantı ilişkileri ve onay sorumluluğu tasarım çalışmasının temelini oluşturur.",
+      "contentHash": "f2890064155bed77d9de89b0649cd2495f427bf80a8fbd2e7902b7ab1b30983f",
+      "sections": 4,
+      "faqs": 3
     },
     {
       "brand": "parcayanimda",
       "path": "/3d-modelleme",
       "title": "Montaja uyumlu özel parça modelleme",
       "description": "parçayanımda: Fotoğraf, referans ölçü ve numuneden başlayarak kapak, klips veya adaptör geometrisini geliştirin. Tasarımın odağında parçanın yerine oturması, erişilebilir olması ve kullanım ihtiyacı bulunur.",
-      "contentHash": "6550a28d2790e0cfe4f8682761cb418820ebad99a78e7d1ec5a61d8df7eba398",
+      "contentHash": "87eb3c8940812d6e39f509b9b0d144eb6cea9def2472f18dc95e3522160dd09e",
       "sections": 4,
-      "faqs": 2
+      "faqs": 3
     },
     {
-      "brand": "3dsanayi",
-      "path": "/cozumler/montaj-konumlandirma",
-      "title": "Montaj istasyonu için konumlandırma fikstürü",
-      "description": "3dsanayi: İş parçasının dayama yüzeylerini, yükleme yönünü ve operatör hareketini birlikte tanımlayan fikstür tasarımı.",
-      "contentHash": "9db025a52fc3dd32f0caeb6f51eb5f92ef7e54fb4d5fdeba3b3658cc3cda0e55",
+      "brand": "maketyanimda",
+      "path": "/cozumler/mimari-kutle-calismalari",
+      "title": "Tasarım alternatifleri için mimari kütle maketi",
+      "description": "maketyanımda: Yerleşim, yükseklik ve boşluk ilişkilerini hızlı değiştirilebilir fiziksel kütleler üzerinden karşılaştırın.",
+      "contentHash": "3388bc469f16eea2c72b98bd88ba18fa633cac6af2e25867568954750ecfc08a",
       "sections": 2,
       "faqs": 1
     },
@@ -160,11 +160,20 @@
       "faqs": 1
     },
     {
-      "brand": "maketyanimda",
-      "path": "/cozumler/mimari-kutle-calismalari",
-      "title": "Tasarım alternatifleri için mimari kütle maketi",
-      "description": "maketyanımda: Yerleşim, yükseklik ve boşluk ilişkilerini hızlı değiştirilebilir fiziksel kütleler üzerinden karşılaştırın.",
-      "contentHash": "3388bc469f16eea2c72b98bd88ba18fa633cac6af2e25867568954750ecfc08a",
+      "brand": "3dsanayi",
+      "path": "/cozumler/montaj-konumlandirma",
+      "title": "Montaj istasyonu için konumlandırma fikstürü",
+      "description": "3dsanayi: İş parçasının dayama yüzeylerini, yükleme yönünü ve operatör hareketini birlikte tanımlayan fikstür tasarımı.",
+      "contentHash": "9db025a52fc3dd32f0caeb6f51eb5f92ef7e54fb4d5fdeba3b3658cc3cda0e55",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/cozumler/montaj-yardimcilari",
+      "title": "Ürün montajı için hizalama ve yerleştirme yardımcıları",
+      "description": "3dyanımda: Küçük seri ürün montajında parça yerini, bağlantı yönünü ve operatör erişimini belirleyen yardımcı aparatları planlayın.",
+      "contentHash": "4ef6f7281e034bbf4cb35674aeee90a43502ad6a7e163863d33232654bd8277d",
       "sections": 2,
       "faqs": 1
     },
@@ -178,11 +187,11 @@
       "faqs": 1
     },
     {
-      "brand": "3dyanimda",
-      "path": "/cozumler/montaj-yardimcilari",
-      "title": "Ürün montajı için hizalama ve yerleştirme yardımcıları",
-      "description": "3dyanımda: Küçük seri ürün montajında parça yerini, bağlantı yönünü ve operatör erişimini belirleyen yardımcı aparatları planlayın.",
-      "contentHash": "4ef6f7281e034bbf4cb35674aeee90a43502ad6a7e163863d33232654bd8277d",
+      "brand": "maketyanimda",
+      "path": "/cozumler/gayrimenkul-sunum-maketleri",
+      "title": "Satış ofisi ve yatırımcı sunumu için gayrimenkul maketi",
+      "description": "maketyanımda: Yapı, peyzaj ve dolaşım ilişkilerini ziyaretçinin bakış mesafesine göre anlatan ölçekli proje sunumu.",
+      "contentHash": "860198cae9b5f9a2f4cb01096a4c0b419ffbff49815ed0c7e6bbf2273b013825",
       "sections": 2,
       "faqs": 1
     },
@@ -197,19 +206,10 @@
     },
     {
       "brand": "maketyanimda",
-      "path": "/cozumler/gayrimenkul-sunum-maketleri",
-      "title": "Satış ofisi ve yatırımcı sunumu için gayrimenkul maketi",
-      "description": "maketyanımda: Yapı, peyzaj ve dolaşım ilişkilerini ziyaretçinin bakış mesafesine göre anlatan ölçekli proje sunumu.",
-      "contentHash": "860198cae9b5f9a2f4cb01096a4c0b419ffbff49815ed0c7e6bbf2273b013825",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/cozumler/cihaz-muhafazalari",
-      "title": "Sensör ve otomasyon ekipmanı için cihaz muhafazası",
-      "description": "3dsanayi: Kablo rakoru, pano bağlantısı, sensör yönü ve bakım erişimini birlikte değerlendiren uygulamaya özel gövdeler.",
-      "contentHash": "303edb34d052136c6e7d763a82713ec6524449eea57b7409e582c049371c16e9",
+      "path": "/cozumler/arazi-yerlesim-modelleri",
+      "title": "Topoğrafya ve yerleşim için arazi maketi",
+      "description": "maketyanımda: Kotlar, yapı oturumları ve ulaşım izlerini tek referans sisteminde birleştiren okunabilir arazi modelleri.",
+      "contentHash": "d7bffed66da30b1b5cce11ff3a6a6986b10e06366d35a8ae349462b77ec7a2a4",
       "sections": 2,
       "faqs": 1
     },
@@ -232,29 +232,20 @@
       "faqs": 1
     },
     {
-      "brand": "maketyanimda",
-      "path": "/cozumler/arazi-yerlesim-modelleri",
-      "title": "Topoğrafya ve yerleşim için arazi maketi",
-      "description": "maketyanımda: Kotlar, yapı oturumları ve ulaşım izlerini tek referans sisteminde birleştiren okunabilir arazi modelleri.",
-      "contentHash": "d7bffed66da30b1b5cce11ff3a6a6986b10e06366d35a8ae349462b77ec7a2a4",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "3dsanayi",
-      "path": "/cozumler/bakim-yardimcilari",
-      "title": "Bakım ekiplerine özel parça tutucu ve işlem yardımcıları",
-      "description": "3dsanayi: Sökme, ayırma ve yeniden montaj sırasında kullanılan yardımcı geometrileri bakım adımına göre tasarlayın.",
-      "contentHash": "909143485724c48a83931c5dc0f4f7f6a42caa07f83fbf4213d75a59e931fd6e",
+      "path": "/cozumler/cihaz-muhafazalari",
+      "title": "Sensör ve otomasyon ekipmanı için cihaz muhafazası",
+      "description": "3dsanayi: Kablo rakoru, pano bağlantısı, sensör yönü ve bakım erişimini birlikte değerlendiren uygulamaya özel gövdeler.",
+      "contentHash": "303edb34d052136c6e7d763a82713ec6524449eea57b7409e582c049371c16e9",
       "sections": 2,
       "faqs": 1
     },
     {
-      "brand": "parcayanimda",
-      "path": "/cozumler/ornekten-parca-modelleme",
-      "title": "Eski veya kırık örnekten üretilebilir parça modeli",
-      "description": "parçayanımda: Aşınmış numunedeki mevcut şekli, parçanın olması gereken bağlantı geometrisinden ayırarak yeni model oluşturun.",
-      "contentHash": "72b0a1fa28d735658bff139b1de053eee32cf9075c2a2bc0bfdd0a277f41dc24",
+      "brand": "maketyanimda",
+      "path": "/cozumler/endustriyel-tesis-maketleri",
+      "title": "Tesis yerleşimi ve operasyon anlatımı için ölçekli maket",
+      "description": "maketyanımda: Üretim alanları, ekipman kümeleri ve dolaşım koridorlarını toplantı veya ziyaretçi sunumunda ortak bir modelle gösterin.",
+      "contentHash": "17283de79907075883cecf217721feef54848cd1dd610ed0edbe2e29cdc18073",
       "sections": 2,
       "faqs": 1
     },
@@ -268,11 +259,38 @@
       "faqs": 1
     },
     {
+      "brand": "parcayanimda",
+      "path": "/cozumler/ornekten-parca-modelleme",
+      "title": "Eski veya kırık örnekten üretilebilir parça modeli",
+      "description": "parçayanımda: Aşınmış numunedeki mevcut şekli, parçanın olması gereken bağlantı geometrisinden ayırarak yeni model oluşturun.",
+      "contentHash": "72b0a1fa28d735658bff139b1de053eee32cf9075c2a2bc0bfdd0a277f41dc24",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/cozumler/bakim-yardimcilari",
+      "title": "Bakım ekiplerine özel parça tutucu ve işlem yardımcıları",
+      "description": "3dsanayi: Sökme, ayırma ve yeniden montaj sırasında kullanılan yardımcı geometrileri bakım adımına göre tasarlayın.",
+      "contentHash": "909143485724c48a83931c5dc0f4f7f6a42caa07f83fbf4213d75a59e931fd6e",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
       "brand": "maketyanimda",
-      "path": "/cozumler/endustriyel-tesis-maketleri",
-      "title": "Tesis yerleşimi ve operasyon anlatımı için ölçekli maket",
-      "description": "maketyanımda: Üretim alanları, ekipman kümeleri ve dolaşım koridorlarını toplantı veya ziyaretçi sunumunda ortak bir modelle gösterin.",
-      "contentHash": "17283de79907075883cecf217721feef54848cd1dd610ed0edbe2e29cdc18073",
+      "path": "/malzemeler/pla",
+      "title": "Mimari kütle ve iç mekân sunumlarında PLA",
+      "description": "maketyanımda: Maketin okunabilirliği, renk ve yüzey beklentisi için PLA adayını ölçek ve sergileme koşullarıyla değerlendirin.",
+      "contentHash": "6dfd10794e449375c6c8180939d7f533ff0a0a1da9bd4d6f3c6f572cc94c1767",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/malzemeler/pla",
+      "title": "Yedek parçada ölçü kontrolü için PLA numune",
+      "description": "parçayanımda: Eksik parçanın montaj şeklini denemek için hazırlanan PLA örneğini nihai kullanım parçasından ayrı değerlendirin.",
+      "contentHash": "9753aa9bd588c4d5e89b5a84a81dd9f8c45ed6c6e5e06084feabe17224839564",
       "sections": 2,
       "faqs": 1
     },
@@ -296,37 +314,10 @@
     },
     {
       "brand": "parcayanimda",
-      "path": "/malzemeler/pla",
-      "title": "Yedek parçada ölçü kontrolü için PLA numune",
-      "description": "parçayanımda: Eksik parçanın montaj şeklini denemek için hazırlanan PLA örneğini nihai kullanım parçasından ayrı değerlendirin.",
-      "contentHash": "9753aa9bd588c4d5e89b5a84a81dd9f8c45ed6c6e5e06084feabe17224839564",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "maketyanimda",
-      "path": "/malzemeler/pla",
-      "title": "Mimari kütle ve iç mekân sunumlarında PLA",
-      "description": "maketyanımda: Maketin okunabilirliği, renk ve yüzey beklentisi için PLA adayını ölçek ve sergileme koşullarıyla değerlendirin.",
-      "contentHash": "6dfd10794e449375c6c8180939d7f533ff0a0a1da9bd4d6f3c6f572cc94c1767",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dyanimda",
       "path": "/malzemeler/petg",
-      "title": "Montaj prototiplerinde PETG değerlendirmesi",
-      "description": "3dyanımda: Kapak, bağlantı yuvası ve yardımcı gövde denemelerinde PETG adayını geometri ve kullanım koşullarıyla birlikte karşılaştırın.",
-      "contentHash": "283726a54865656548dfac82e8bb5087a6f8143c6c44eb407c675dc215be492f",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/malzemeler/petg",
-      "title": "Üretim yardımcılarında PETG için seçim soruları",
-      "description": "3dsanayi: Hafif muhafaza ve yardımcı tutucularda PETG kararını temas yükü, temizlik biçimi ve bağlantı geometrisiyle verin.",
-      "contentHash": "ce640ab1dcce8e81886734b3ac15127530e39207499d3d37ff1ccddb36bfd542",
+      "title": "Özel kapak ve yardımcı bağlantılarda PETG",
+      "description": "parçayanımda: Gündelik yardımcı parçalar için PETG adayını yük, montaj sıkılığı ve ortam koşullarıyla birlikte değerlendirin.",
+      "contentHash": "faced3bd33a8bd87b65d2e38d03d15cca2c2cb4de71a13af8ba87a77200c141e",
       "sections": 2,
       "faqs": 1
     },
@@ -340,11 +331,29 @@
       "faqs": 1
     },
     {
-      "brand": "parcayanimda",
+      "brand": "3dsanayi",
       "path": "/malzemeler/petg",
-      "title": "Özel kapak ve yardımcı bağlantılarda PETG",
-      "description": "parçayanımda: Gündelik yardımcı parçalar için PETG adayını yük, montaj sıkılığı ve ortam koşullarıyla birlikte değerlendirin.",
-      "contentHash": "faced3bd33a8bd87b65d2e38d03d15cca2c2cb4de71a13af8ba87a77200c141e",
+      "title": "Üretim yardımcılarında PETG için seçim soruları",
+      "description": "3dsanayi: Hafif muhafaza ve yardımcı tutucularda PETG kararını temas yükü, temizlik biçimi ve bağlantı geometrisiyle verin.",
+      "contentHash": "ce640ab1dcce8e81886734b3ac15127530e39207499d3d37ff1ccddb36bfd542",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/malzemeler/petg",
+      "title": "Montaj prototiplerinde PETG değerlendirmesi",
+      "description": "3dyanımda: Kapak, bağlantı yuvası ve yardımcı gövde denemelerinde PETG adayını geometri ve kullanım koşullarıyla birlikte karşılaştırın.",
+      "contentHash": "283726a54865656548dfac82e8bb5087a6f8143c6c44eb407c675dc215be492f",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi",
+      "description": "parçayanımda: Eski parça üzerindeki malzeme işareti, montaj şartı ve yüzey beklentisini yeni baskı tasarımına doğru aktarın.",
+      "contentHash": "9f7dcc6e04e3bdc02c85497a3dcca06fefac0d5a8b802848036bcdf5138a5925",
       "sections": 2,
       "faqs": 1
     },
@@ -377,10 +386,10 @@
     },
     {
       "brand": "parcayanimda",
-      "path": "/malzemeler/abs",
-      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi",
-      "description": "parçayanımda: Eski parça üzerindeki malzeme işareti, montaj şartı ve yüzey beklentisini yeni baskı tasarımına doğru aktarın.",
-      "contentHash": "9f7dcc6e04e3bdc02c85497a3dcca06fefac0d5a8b802848036bcdf5138a5925",
+      "path": "/malzemeler/asa",
+      "title": "Dışarıda kullanılan plastik parçalarda ASA",
+      "description": "parçayanımda: Güneş gören kapak ve güvenlik kritik olmayan aksesuarlar için çevre, bağlantı ve yüzey koşullarını ayrı tanımlayın.",
+      "contentHash": "484c8125186cf6813cf47b509ea37e68c3735d69b68939a6dba290950072c5d7",
       "sections": 2,
       "faqs": 1
     },
@@ -390,6 +399,15 @@
       "title": "Açıkta sergilenecek maketler için ASA değerlendirmesi",
       "description": "maketyanımda: Maketin güneş gören konumu ve korunma biçimini malzeme seçiminden önce açıklayın.",
       "contentHash": "cc5a2429179371091b0190ec03fcb001bae4f428b009e0cc2500decbb496272a",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/malzemeler/asa",
+      "title": "Dış ortam ürün prototipleri için ASA",
+      "description": "3dyanımda: Açıkta kullanılacak gövde ve aksesuar tasarımlarında güneş, sıcaklık, bağlantı ve yüzey gereksinimlerini beraber ele alın.",
+      "contentHash": "9e20ce094113be34ea572000dc44e92b8520385229512e34150013cd1538520a",
       "sections": 2,
       "faqs": 1
     },
@@ -404,28 +422,10 @@
     },
     {
       "brand": "parcayanimda",
-      "path": "/malzemeler/asa",
-      "title": "Dışarıda kullanılan plastik parçalarda ASA",
-      "description": "parçayanımda: Güneş gören kapak ve güvenlik kritik olmayan aksesuarlar için çevre, bağlantı ve yüzey koşullarını ayrı tanımlayın.",
-      "contentHash": "484c8125186cf6813cf47b509ea37e68c3735d69b68939a6dba290950072c5d7",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/malzemeler/asa",
-      "title": "Dış ortam ürün prototipleri için ASA",
-      "description": "3dyanımda: Açıkta kullanılacak gövde ve aksesuar tasarımlarında güneş, sıcaklık, bağlantı ve yüzey gereksinimlerini beraber ele alın.",
-      "contentHash": "9e20ce094113be34ea572000dc44e92b8520385229512e34150013cd1538520a",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "maketyanimda",
       "path": "/malzemeler/tpu",
-      "title": "Maket taşımada esnek destek ve temas parçaları",
-      "description": "maketyanımda: Sergi modelinin narin bölgelerini taşıma sırasında destekleyen esnek yardımcıları temas yüzeyine göre tasarlayın.",
-      "contentHash": "f5233ede8e4935032ded19dbc709501c39a782c6f9e38fa0a5c0160b6b572aad",
+      "title": "Esnek kapak, ayak ve temas elemanlarında TPU",
+      "description": "parçayanımda: Yumuşak parça ihtiyacını sertlik, sıkışma ve yüzeye tutunma beklentileriyle tarif ederek numune seçin.",
+      "contentHash": "f4622d11201e40f54e217bb83c1066722b4dfe469e40635664f79d320fcf7f2b",
       "sections": 2,
       "faqs": 1
     },
@@ -435,15 +435,6 @@
       "title": "İş parçasına yumuşak temas eden TPU yardımcıları",
       "description": "3dsanayi: Temas pedi, koruyucu uç ve ayırıcı parçaları sıkışma miktarı ve değişim ihtiyacı üzerinden planlayın.",
       "contentHash": "21d75630d22137ca19bd6d68293244cbfbbe084ac1ab4bada52644332bfc63fa",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "parcayanimda",
-      "path": "/malzemeler/tpu",
-      "title": "Esnek kapak, ayak ve temas elemanlarında TPU",
-      "description": "parçayanımda: Yumuşak parça ihtiyacını sertlik, sıkışma ve yüzeye tutunma beklentileriyle tarif ederek numune seçin.",
-      "contentHash": "f4622d11201e40f54e217bb83c1066722b4dfe469e40635664f79d320fcf7f2b",
       "sections": 2,
       "faqs": 1
     },
@@ -458,10 +449,19 @@
     },
     {
       "brand": "maketyanimda",
+      "path": "/malzemeler/tpu",
+      "title": "Maket taşımada esnek destek ve temas parçaları",
+      "description": "maketyanımda: Sergi modelinin narin bölgelerini taşıma sırasında destekleyen esnek yardımcıları temas yüzeyine göre tasarlayın.",
+      "contentHash": "f5233ede8e4935032ded19dbc709501c39a782c6f9e38fa0a5c0160b6b572aad",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "parcayanimda",
       "path": "/malzemeler/muhendislik-polimerleri",
-      "title": "Maket mekanizmalarında özel polimer ihtiyacı",
-      "description": "maketyanımda: Çıkarılabilir katlar, hareketli sunum elemanları ve montaj bağlantılarında hangi özelliğin gerekli olduğunu belirleyin.",
-      "contentHash": "e18cc064b0a0ef132719adc8120b22cbae9e2539a0f7dbd9a7517b5b88275189",
+      "title": "Zorlayıcı kullanımda özel parça malzemesi nasıl seçilir?",
+      "description": "parçayanımda: Katalogda bulunamayan bir parçanın yük, aşınma ve ortam sorununu teknik gereksinime dönüştürün.",
+      "contentHash": "492dbb83e07a9fc37a2209a65522190cb6ef79cb6bfd003720e0bebc9c70e48e",
       "sections": 2,
       "faqs": 1
     },
@@ -484,11 +484,11 @@
       "faqs": 1
     },
     {
-      "brand": "parcayanimda",
+      "brand": "maketyanimda",
       "path": "/malzemeler/muhendislik-polimerleri",
-      "title": "Zorlayıcı kullanımda özel parça malzemesi nasıl seçilir?",
-      "description": "parçayanımda: Katalogda bulunamayan bir parçanın yük, aşınma ve ortam sorununu teknik gereksinime dönüştürün.",
-      "contentHash": "492dbb83e07a9fc37a2209a65522190cb6ef79cb6bfd003720e0bebc9c70e48e",
+      "title": "Maket mekanizmalarında özel polimer ihtiyacı",
+      "description": "maketyanımda: Çıkarılabilir katlar, hareketli sunum elemanları ve montaj bağlantılarında hangi özelliğin gerekli olduğunu belirleyin.",
+      "contentHash": "e18cc064b0a0ef132719adc8120b22cbae9e2539a0f7dbd9a7517b5b88275189",
       "sections": 2,
       "faqs": 1
     },
@@ -498,6 +498,15 @@
       "title": "Kırık veya kayıp parça için ilk talep nasıl hazırlanır?",
       "description": "parçayanımda: Parçanın işlevini, montaj yerini ve eldeki referansları teknik değerlendirmeye hazır bir fotoğraf ve ölçü paketine dönüştürün.",
       "contentHash": "ad666500cc4e3f339f52b616ca553a96084f417dcc661704ff192ac336f8ff2c",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Aparat talebi için saha dosyası nasıl hazırlanır?",
+      "description": "3dsanayi: Fikstürün görevini iş istasyonu, iş parçası ve operatör hareketiyle birlikte tarif eden bir başlangıç paketi oluşturun.",
+      "contentHash": "ed4623d3b51a9586a0a9b50e202615bd1937b78ec3341f52c79a70c3c37cc8ab",
       "sections": 2,
       "faqs": 1
     },
@@ -520,20 +529,20 @@
       "faqs": 1
     },
     {
-      "brand": "3dsanayi",
-      "path": "/rehber/teklif-icin-dosya-hazirlama",
-      "title": "Aparat talebi için saha dosyası nasıl hazırlanır?",
-      "description": "3dsanayi: Fikstürün görevini iş istasyonu, iş parçası ve operatör hareketiyle birlikte tarif eden bir başlangıç paketi oluşturun.",
-      "contentHash": "ed4623d3b51a9586a0a9b50e202615bd1937b78ec3341f52c79a70c3c37cc8ab",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "parcayanimda",
       "path": "/rehber/3d-baski-fiyatlandirma",
       "title": "Tek adet özel parçanın fiyatında neler bulunur?",
       "description": "parçayanımda: Yeniden modelleme, bağlantı denemesi, parça üretimi ve görünür yüzey işini ayrı kalemler olarak değerlendirin.",
       "contentHash": "1547785d3bafe681f25526e419ef147f6ab4768fff54414a4be74bfc32ec0617",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/rehber/3d-baski-fiyatlandirma",
+      "title": "Fikstür teklifinde toplam iş kapsamını karşılaştırma",
+      "description": "3dsanayi: Tasarım, baskı, montaj donanımı ve kontrol işlerinin teklif bedeline nasıl yansıdığını aynı teknik kapsamla okuyun.",
+      "contentHash": "132583d8f19c7dc7ef339b6dc474ee1cbec961c5e5b9cc6fe367888a08a09e82",
       "sections": 2,
       "faqs": 1
     },
@@ -556,11 +565,20 @@
       "faqs": 1
     },
     {
+      "brand": "parcayanimda",
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Kırık parçayı taramak eksik kısmı tamamlar mı?",
+      "description": "parçayanımda: Taramanın kaydettiği mevcut yüzeyi, eksik geometriyi yeniden kurmak için gereken referanslardan ayırın.",
+      "contentHash": "1979b12a03967d2c5f4223253e42ad323d7c44416729745204046dbc95008c25",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
       "brand": "3dsanayi",
-      "path": "/rehber/3d-baski-fiyatlandirma",
-      "title": "Fikstür teklifinde toplam iş kapsamını karşılaştırma",
-      "description": "3dsanayi: Tasarım, baskı, montaj donanımı ve kontrol işlerinin teklif bedeline nasıl yansıdığını aynı teknik kapsamla okuyun.",
-      "contentHash": "132583d8f19c7dc7ef339b6dc474ee1cbec961c5e5b9cc6fe367888a08a09e82",
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Eski fikstürü taramak mı yeniden tasarlamak mı?",
+      "description": "3dsanayi: Mevcut aparatın aşınmış yüzeylerini, korunacak referanslarını ve değiştirilmek istenen işlevini ayrı değerlendirin.",
+      "contentHash": "56ae2c4de14a8342060e998b01e0ce6199847033fa72bfd3ef74a3eecd86c5ba",
       "sections": 2,
       "faqs": 1
     },
@@ -583,29 +601,11 @@
       "faqs": 1
     },
     {
-      "brand": "3dsanayi",
-      "path": "/rehber/tarama-ve-tersine-muhendislik",
-      "title": "Eski fikstürü taramak mı yeniden tasarlamak mı?",
-      "description": "3dsanayi: Mevcut aparatın aşınmış yüzeylerini, korunacak referanslarını ve değiştirilmek istenen işlevini ayrı değerlendirin.",
-      "contentHash": "56ae2c4de14a8342060e998b01e0ce6199847033fa72bfd3ef74a3eecd86c5ba",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "parcayanimda",
-      "path": "/rehber/tarama-ve-tersine-muhendislik",
-      "title": "Kırık parçayı taramak eksik kısmı tamamlar mı?",
-      "description": "parçayanımda: Taramanın kaydettiği mevcut yüzeyi, eksik geometriyi yeniden kurmak için gereken referanslardan ayırın.",
-      "contentHash": "1979b12a03967d2c5f4223253e42ad323d7c44416729745204046dbc95008c25",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dyanimda",
       "path": "/rehber/numune-ve-revizyon",
-      "title": "Prototip revizyonunu gözlemden üretim kararına taşıma",
-      "description": "3dyanımda: Bir denemede görülen sorunu tarif edilebilir model değişikliğine dönüştürün ve sonraki numunede aynı noktayı tekrar kontrol edin.",
-      "contentHash": "9d1c914cd7de51b7e1516d98e8584482945b05410f2127d1d79f808f5347bb2b",
+      "title": "Özel parçanın ilk uyum denemesini kaydetme",
+      "description": "parçayanımda: Takılma, boşluk ve sökme sorunlarını fotoğrafla belirleyerek revizyonu montaj koşuluna bağlayın.",
+      "contentHash": "f38649cdb28d2c226e7ee7777e5fb74f1e60f6bdd067fdf7836ab380243bd9fb",
       "sections": 2,
       "faqs": 1
     },
@@ -619,11 +619,11 @@
       "faqs": 1
     },
     {
-      "brand": "parcayanimda",
+      "brand": "3dyanimda",
       "path": "/rehber/numune-ve-revizyon",
-      "title": "Özel parçanın ilk uyum denemesini kaydetme",
-      "description": "parçayanımda: Takılma, boşluk ve sökme sorunlarını fotoğrafla belirleyerek revizyonu montaj koşuluna bağlayın.",
-      "contentHash": "f38649cdb28d2c226e7ee7777e5fb74f1e60f6bdd067fdf7836ab380243bd9fb",
+      "title": "Prototip revizyonunu gözlemden üretim kararına taşıma",
+      "description": "3dyanımda: Bir denemede görülen sorunu tarif edilebilir model değişikliğine dönüştürün ve sonraki numunede aynı noktayı tekrar kontrol edin.",
+      "contentHash": "9d1c914cd7de51b7e1516d98e8584482945b05410f2127d1d79f808f5347bb2b",
       "sections": 2,
       "faqs": 1
     },
@@ -637,49 +637,22 @@
       "faqs": 1
     },
     {
-      "brand": "3dyanimda",
+      "brand": "parcayanimda",
       "path": "/bolgeler/istanbul",
-      "title": "İstanbul’da ürün prototipi ve 3D üretim talebi",
-      "description": "3dyanımda: İstanbul’daki ürün geliştirme projeniz için dijital dosya, numune amacı ve ilk deneme kapsamını tek talepte toplayın.",
-      "contentHash": "fcb6d22826c1476f3fa8f3801ebdd9f9a1a0a85bb9ed6dc909e4edf384f9f720",
+      "title": "İstanbul’da kırık veya eksik plastik parça değerlendirmesi",
+      "description": "parçayanımda: Parçanızın fotoğrafını, montaj yuvasını ve kullanım görevini paylaşarak özel üretim için gerekli referansları belirleyin.",
+      "contentHash": "14df1b4808267a76657d4b74b079b8824093cd5a5d6bca61f2a4ed50349d9d59",
       "sections": 2,
-      "faqs": 2
+      "faqs": 3
     },
     {
       "brand": "3dsanayi",
       "path": "/bolgeler/istanbul",
       "title": "İstanbul üretim ekipleri için aparat ve fikstür talebi",
       "description": "3dsanayi: İş istasyonu görüntüleri, iş parçası referansı ve numune kabul planıyla İstanbul’daki üretim ihtiyacınızı teknik talebe dönüştürün.",
-      "contentHash": "d8c21461b7ecf5a4f016228640316558a09d872fe4ca93c4facc34316b919c15",
+      "contentHash": "d03d59cd4976bc273e393fea19297cc9ceb62428f12c21d68bb1248f47085142",
       "sections": 2,
-      "faqs": 2
-    },
-    {
-      "brand": "parcayanimda",
-      "path": "/bolgeler/istanbul",
-      "title": "İstanbul’da kırık veya eksik plastik parça değerlendirmesi",
-      "description": "parçayanımda: Parçanızın fotoğrafını, montaj yuvasını ve kullanım görevini paylaşarak özel üretim için gerekli referansları belirleyin.",
-      "contentHash": "e00b7cb78713594f3e7941ee2d5bd73c4b8d6f63cea50634a3fe353f5ab410ff",
-      "sections": 2,
-      "faqs": 2
-    },
-    {
-      "brand": "maketyanimda",
-      "path": "/bolgeler/istanbul",
-      "title": "İstanbul’daki mimari sunumlar için maket proje planı",
-      "description": "maketyanımda: Maketin ölçeğini, sunum mekânını ve taşıma sınırlarını mimari dosyalarla birlikte değerlendirin.",
-      "contentHash": "61a9db6a454b3199cad327e7ad15d26a055943dd87e92536fcf1a136e8a18b30",
-      "sections": 2,
-      "faqs": 2
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/sektorler/endustriyel",
-      "title": "Endüstriyel ürün geliştirmede prototip ve gövde denemesi",
-      "description": "3dyanımda: Makineye eklenecek yeni bir ürünün dış hacmini, arayüzlerini ve servis erişimini ilk fiziksel numuneyle değerlendirin.",
-      "contentHash": "ab120fd625b2d6ac041fb0f9195f7fa2c90d3c0d3502ed13dfb235a3fe7da7b3",
-      "sections": 2,
-      "faqs": 1
+      "faqs": 3
     },
     {
       "brand": "3dsanayi",
@@ -691,11 +664,47 @@
       "faqs": 1
     },
     {
+      "brand": "3dyanimda",
+      "path": "/bolgeler/istanbul",
+      "title": "İstanbul’da ürün prototipi ve 3D üretim talebi",
+      "description": "3dyanımda: İstanbul’daki ürün geliştirme projeniz için dijital dosya, numune amacı ve ilk deneme kapsamını tek talepte toplayın.",
+      "contentHash": "e3e4ae1c3997274a3177724cdd9656489480993469b964c3c944290f003c9e8a",
+      "sections": 2,
+      "faqs": 3
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/bolgeler/istanbul",
+      "title": "İstanbul’daki mimari sunumlar için maket proje planı",
+      "description": "maketyanımda: Maketin ölçeğini, sunum mekânını ve taşıma sınırlarını mimari dosyalarla birlikte değerlendirin.",
+      "contentHash": "85423009dbe2a1e42dfe159eb934bed0ab43ba6de9bc50c0d6c4bb66ab8f18a1",
+      "sections": 2,
+      "faqs": 3
+    },
+    {
       "brand": "parcayanimda",
       "path": "/sektorler/endustriyel",
       "title": "Eski ekipmanlar için yardımcı plastik parça yenileme",
       "description": "parçayanımda: Katalogda bulunamayan kapak, yönlendirici ve yardımcı bağlantıları cihazın görev sınırları içinde değerlendirin.",
       "contentHash": "41956d1a1d2d0683d77e1ad27b0b860c9fd2d02f2ca97faabc3d107f4c1c74ca",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/sektorler/otomotiv",
+      "title": "Restorasyon ve servis için özel iç trim parçaları",
+      "description": "parçayanımda: Eksik veya kırık güvenlik kritik olmayan plastik parçaları araç varyantı ve gerçek montaj örneği üzerinden ele alın.",
+      "contentHash": "b7869cf1e22ac501d03e58459bd2389063eceb3aebef1f58f3f7c401f0e4c9b8",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/sektorler/otomotiv",
+      "title": "Otomotiv üretim ekipleri için yardımcı fikstürler",
+      "description": "3dsanayi: Araç parçası üretimi veya montajında kullanılan işlem yardımcılarını ürün geometrisi ve kalite kontrolüyle birlikte tanımlayın.",
+      "contentHash": "f5fcf2ea53aeff13935e1e5598332d6d13e60fd0a4821e4a830a93bed7bbeef1",
       "sections": 2,
       "faqs": 1
     },
@@ -709,11 +718,29 @@
       "faqs": 1
     },
     {
+      "brand": "3dyanimda",
+      "path": "/sektorler/endustriyel",
+      "title": "Endüstriyel ürün geliştirmede prototip ve gövde denemesi",
+      "description": "3dyanımda: Makineye eklenecek yeni bir ürünün dış hacmini, arayüzlerini ve servis erişimini ilk fiziksel numuneyle değerlendirin.",
+      "contentHash": "ab120fd625b2d6ac041fb0f9195f7fa2c90d3c0d3502ed13dfb235a3fe7da7b3",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/sektorler/mimari-tasarim",
+      "title": "Yapı bileşeni üretiminde montaj yardımcıları",
+      "description": "3dsanayi: Doğrama, panel ve tasarım ürünü atölyelerinde tekrarlanan hizalama işlemlerini ölçüye özel aparatlarla değerlendirin.",
+      "contentHash": "fc2edf62047f2e317fc7b9c5871ba3442a2b210590ec5d9d2a6d263c36d0c835",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
       "brand": "parcayanimda",
-      "path": "/sektorler/otomotiv",
-      "title": "Restorasyon ve servis için özel iç trim parçaları",
-      "description": "parçayanımda: Eksik veya kırık güvenlik kritik olmayan plastik parçaları araç varyantı ve gerçek montaj örneği üzerinden ele alın.",
-      "contentHash": "b7869cf1e22ac501d03e58459bd2389063eceb3aebef1f58f3f7c401f0e4c9b8",
+      "path": "/sektorler/mimari-tasarim",
+      "title": "Mobilya ve iç mekân ürünleri için özel plastik parçalar",
+      "description": "parçayanımda: Bulunamayan kapak, profil ucu ve yardımcı bağlantıları kullanılacağı ürünün ölçü ve yüzeyleriyle birlikte değerlendirin.",
+      "contentHash": "b91adc565cea3d7acffb933972cb1b20b3709b02a01e4ce550faf072b0f63257",
       "sections": 2,
       "faqs": 1
     },
@@ -737,28 +764,10 @@
     },
     {
       "brand": "3dsanayi",
-      "path": "/sektorler/otomotiv",
-      "title": "Otomotiv üretim ekipleri için yardımcı fikstürler",
-      "description": "3dsanayi: Araç parçası üretimi veya montajında kullanılan işlem yardımcılarını ürün geometrisi ve kalite kontrolüyle birlikte tanımlayın.",
-      "contentHash": "f5fcf2ea53aeff13935e1e5598332d6d13e60fd0a4821e4a830a93bed7bbeef1",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "parcayanimda",
-      "path": "/sektorler/mimari-tasarim",
-      "title": "Mobilya ve iç mekân ürünleri için özel plastik parçalar",
-      "description": "parçayanımda: Bulunamayan kapak, profil ucu ve yardımcı bağlantıları kullanılacağı ürünün ölçü ve yüzeyleriyle birlikte değerlendirin.",
-      "contentHash": "b91adc565cea3d7acffb933972cb1b20b3709b02a01e4ce550faf072b0f63257",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "maketyanimda",
-      "path": "/sektorler/mimari-tasarim",
-      "title": "Mimarlık ofislerine tasarım ve jüri maketleri",
-      "description": "maketyanımda: Kütle, boşluk, cephe ve arazi kararlarını projenin aşamasına uygun ölçekli modellerle görünür kılın.",
-      "contentHash": "ec12805b31efcbd102c53301780091e836bb0e7d91e0e835f005ed2ed8c96fda",
+      "path": "/sektorler/medikal",
+      "title": "Medikal ekipman üretiminde operasyon dışı montaj yardımcıları",
+      "description": "3dsanayi: Cihaz geliştirme ve montaj çalışmalarındaki tutucu ihtiyacını temizlenebilirlik, erişim ve kullanım sınırlarıyla tanımlayın.",
+      "contentHash": "26796177d4e1911d47a66edfd332b91c950fb71dfeb883d33fdd873f12faaa6b",
       "sections": 2,
       "faqs": 1
     },
@@ -772,11 +781,11 @@
       "faqs": 1
     },
     {
-      "brand": "3dsanayi",
+      "brand": "maketyanimda",
       "path": "/sektorler/mimari-tasarim",
-      "title": "Yapı bileşeni üretiminde montaj yardımcıları",
-      "description": "3dsanayi: Doğrama, panel ve tasarım ürünü atölyelerinde tekrarlanan hizalama işlemlerini ölçüye özel aparatlarla değerlendirin.",
-      "contentHash": "fc2edf62047f2e317fc7b9c5871ba3442a2b210590ec5d9d2a6d263c36d0c835",
+      "title": "Mimarlık ofislerine tasarım ve jüri maketleri",
+      "description": "maketyanımda: Kütle, boşluk, cephe ve arazi kararlarını projenin aşamasına uygun ölçekli modellerle görünür kılın.",
+      "contentHash": "ec12805b31efcbd102c53301780091e836bb0e7d91e0e835f005ed2ed8c96fda",
       "sections": 2,
       "faqs": 1
     },
@@ -799,20 +808,11 @@
       "faqs": 1
     },
     {
-      "brand": "3dyanimda",
-      "path": "/sektorler/medikal",
-      "title": "Medikal ürün fikirleri için eğitim ve ergonomi modelleri",
-      "description": "3dyanımda: Klinik kullanım dışındaki cihaz gövdesi, eğitim maketi ve kullanıcı arayüzü çalışmalarını kontrollü prototip kapsamıyla ele alın.",
-      "contentHash": "644126d402cf41c20cfc4f09b3ae7e240f1465a43516caed24259b9bb807f595",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "3dsanayi",
-      "path": "/sektorler/medikal",
-      "title": "Medikal ekipman üretiminde operasyon dışı montaj yardımcıları",
-      "description": "3dsanayi: Cihaz geliştirme ve montaj çalışmalarındaki tutucu ihtiyacını temizlenebilirlik, erişim ve kullanım sınırlarıyla tanımlayın.",
-      "contentHash": "26796177d4e1911d47a66edfd332b91c950fb71dfeb883d33fdd873f12faaa6b",
+      "path": "/sektorler/savunma-havacilik",
+      "title": "Havacılık Ar-Ge ekiplerine operasyon dışı işlem yardımcıları",
+      "description": "3dsanayi: Kavramsal yerleşim, montaj erişimi ve kontrollü atölye denemeleri için yardımcı aparat kapsamını tanımlayın.",
+      "contentHash": "03557672e19cee01ae732df2af221eebe99089cd6d4d8f36682c18fc9b0d97d2",
       "sections": 2,
       "faqs": 1
     },
@@ -826,38 +826,11 @@
       "faqs": 1
     },
     {
-      "brand": "maketyanimda",
-      "path": "/sektorler/savunma-havacilik",
-      "title": "Havacılık yerleşkeleri için kavramsal tesis maketleri",
-      "description": "maketyanımda: Hangar, yapı grubu ve operasyon alanlarını onaylanmış sunum verisiyle fiziksel yerleşim modeline dönüştürün.",
-      "contentHash": "784414f6586e466079ba005178009a6313f37accf518ca1053347e7c78710d33",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/sektorler/savunma-havacilik",
-      "title": "Havacılık Ar-Ge ekiplerine operasyon dışı işlem yardımcıları",
-      "description": "3dsanayi: Kavramsal yerleşim, montaj erişimi ve kontrollü atölye denemeleri için yardımcı aparat kapsamını tanımlayın.",
-      "contentHash": "03557672e19cee01ae732df2af221eebe99089cd6d4d8f36682c18fc9b0d97d2",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "3dyanimda",
-      "path": "/sektorler/savunma-havacilik",
-      "title": "Havacılık Ar-Ge sunumları için işlev dışı fiziksel prototip",
-      "description": "3dyanımda: Kavramsal yerleşim ve tasarım değerlendirmelerinde kullanılacak modelin görevini, veri kapsamını ve teslim biçimini netleştirin.",
-      "contentHash": "0e9749a541b72d046e46f666403456d410be84d52dbafeedc6e8db6e65b99637",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/sektorler/egitim-arge",
-      "title": "Eğitim projeleri ve Ar-Ge deneyleri için fiziksel prototip",
-      "description": "3dyanımda: Bir fikri göstermek veya kontrollü bir denemeyi kurmak için gereken model, geometri ve gözlem planını birlikte hazırlayın.",
-      "contentHash": "be124452e4d7b70d6a983e7c56f2b2fb3eaf3ee889fa3aff8701199941214155",
+      "path": "/sektorler/medikal",
+      "title": "Medikal ürün fikirleri için eğitim ve ergonomi modelleri",
+      "description": "3dyanımda: Klinik kullanım dışındaki cihaz gövdesi, eğitim maketi ve kullanıcı arayüzü çalışmalarını kontrollü prototip kapsamıyla ele alın.",
+      "contentHash": "644126d402cf41c20cfc4f09b3ae7e240f1465a43516caed24259b9bb807f595",
       "sections": 2,
       "faqs": 1
     },
@@ -871,29 +844,29 @@
       "faqs": 1
     },
     {
-      "brand": "parcayanimda",
-      "path": "/sektorler/egitim-arge",
-      "title": "Laboratuvar ve eğitim setlerinde eksik plastik parçalar",
-      "description": "parçayanımda: Bir deney setinin kapağı, taşıyıcısı veya yardımcı bağlantısını işlevi ve eşleşen elemanlarıyla birlikte yeniden değerlendirin.",
-      "contentHash": "198a66df1b324a93067dd43882b3ea853c9dcb494f1ee05644ae811902c64001",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "maketyanimda",
-      "path": "/sektorler/egitim-arge",
-      "title": "Atölye, üniversite ve araştırma sunumları için maket",
-      "description": "maketyanımda: Bir kavramı dokunarak açıklamak için ölçek, sökülebilirlik ve tekrar kullanım ihtiyaçlarını birlikte planlayın.",
-      "contentHash": "e2c984bae9527dc9dc0791c9866d91d1bab8a0cf4520969469fbc1221622e58c",
+      "path": "/sektorler/savunma-havacilik",
+      "title": "Havacılık yerleşkeleri için kavramsal tesis maketleri",
+      "description": "maketyanımda: Hangar, yapı grubu ve operasyon alanlarını onaylanmış sunum verisiyle fiziksel yerleşim modeline dönüştürün.",
+      "contentHash": "784414f6586e466079ba005178009a6313f37accf518ca1053347e7c78710d33",
       "sections": 2,
       "faqs": 1
     },
     {
       "brand": "3dyanimda",
-      "path": "/sektorler/sanat-mucevher",
-      "title": "Obje ve takı tasarımlarında ölçek ve form prototipi",
-      "description": "3dyanımda: Heykel, dekoratif obje ve aksesuar tasarımlarının oranını ve eldeki hissini fiziksel örnekle değerlendirin.",
-      "contentHash": "2a1cabbe15fc102155ad3cdb1dfd883272406953980e175fc8980d002bce3c98",
+      "path": "/sektorler/savunma-havacilik",
+      "title": "Havacılık Ar-Ge sunumları için işlev dışı fiziksel prototip",
+      "description": "3dyanımda: Kavramsal yerleşim ve tasarım değerlendirmelerinde kullanılacak modelin görevini, veri kapsamını ve teslim biçimini netleştirin.",
+      "contentHash": "0e9749a541b72d046e46f666403456d410be84d52dbafeedc6e8db6e65b99637",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/sektorler/egitim-arge",
+      "title": "Laboratuvar ve eğitim setlerinde eksik plastik parçalar",
+      "description": "parçayanımda: Bir deney setinin kapağı, taşıyıcısı veya yardımcı bağlantısını işlevi ve eşleşen elemanlarıyla birlikte yeniden değerlendirin.",
+      "contentHash": "198a66df1b324a93067dd43882b3ea853c9dcb494f1ee05644ae811902c64001",
       "sections": 2,
       "faqs": 1
     },
@@ -908,10 +881,19 @@
     },
     {
       "brand": "maketyanimda",
-      "path": "/sektorler/sanat-mucevher",
-      "title": "Sergi mekânları ve heykel yerleşimleri için sunum modeli",
-      "description": "maketyanımda: Obje, kaide ve ziyaretçi alanının ilişkisini ölçekli bir sahne üzerinde karşılaştırın.",
-      "contentHash": "37585ff7764e4d6d08628e4e704f5e6b9d5ad401c8ea4b4f87da4621196fed5f",
+      "path": "/sektorler/egitim-arge",
+      "title": "Atölye, üniversite ve araştırma sunumları için maket",
+      "description": "maketyanımda: Bir kavramı dokunarak açıklamak için ölçek, sökülebilirlik ve tekrar kullanım ihtiyaçlarını birlikte planlayın.",
+      "contentHash": "e2c984bae9527dc9dc0791c9866d91d1bab8a0cf4520969469fbc1221622e58c",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/sektorler/egitim-arge",
+      "title": "Eğitim projeleri ve Ar-Ge deneyleri için fiziksel prototip",
+      "description": "3dyanımda: Bir fikri göstermek veya kontrollü bir denemeyi kurmak için gereken model, geometri ve gözlem planını birlikte hazırlayın.",
+      "contentHash": "be124452e4d7b70d6a983e7c56f2b2fb3eaf3ee889fa3aff8701199941214155",
       "sections": 2,
       "faqs": 1
     },
@@ -925,20 +907,29 @@
       "faqs": 1
     },
     {
-      "brand": "3dyanimda",
-      "path": "/sektorler/drone-hobi",
-      "title": "Robotik ve hobi projelerinde gövde ve yerleşim prototipi",
-      "description": "3dyanımda: Elektronik, batarya ve mekanik bileşenleri bir arada konumlandırmak için tasarım numuneleri hazırlayın.",
-      "contentHash": "d8406733e89888aeecf015f01526fc009cc7ccb1c2b6189a8f1eecf93a0177cc",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "3dsanayi",
       "path": "/sektorler/drone-hobi",
       "title": "Robotik geliştirmede montaj sehpası ve test tutucuları",
       "description": "3dsanayi: Robotik bileşenlerin masa üstü montajını ve kontrollü denemelerini kolaylaştıran destek geometrilerini tanımlayın.",
       "contentHash": "86ffd5aa2c14fde6722cdcefc2528c811cf7899bdc97c57489f7a711146f9053",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/sektorler/sanat-mucevher",
+      "title": "Sergi mekânları ve heykel yerleşimleri için sunum modeli",
+      "description": "maketyanımda: Obje, kaide ve ziyaretçi alanının ilişkisini ölçekli bir sahne üzerinde karşılaştırın.",
+      "contentHash": "37585ff7764e4d6d08628e4e704f5e6b9d5ad401c8ea4b4f87da4621196fed5f",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/sektorler/sanat-mucevher",
+      "title": "Obje ve takı tasarımlarında ölçek ve form prototipi",
+      "description": "3dyanımda: Heykel, dekoratif obje ve aksesuar tasarımlarının oranını ve eldeki hissini fiziksel örnekle değerlendirin.",
+      "contentHash": "2a1cabbe15fc102155ad3cdb1dfd883272406953980e175fc8980d002bce3c98",
       "sections": 2,
       "faqs": 1
     },
@@ -952,15 +943,6 @@
       "faqs": 1
     },
     {
-      "brand": "maketyanimda",
-      "path": "/sektorler/drone-hobi",
-      "title": "Robotik etkinlikler ve model sahalar için ölçekli çevre",
-      "description": "maketyanımda: Parkur, arazi veya çalışma alanını sunum ve masa üstü senaryo için fiziksel bir çevre modeli olarak hazırlayın.",
-      "contentHash": "77a6b6e164664ca3466981108160a642a5290e84c6a2e97003ad2e91fcfdae11",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "3dsanayi",
       "path": "/rehber/stl-dosya-hazirlama",
       "title": "Aparat STL dosyasında kritik arayüz kontrolü",
@@ -970,20 +952,38 @@
       "faqs": 1
     },
     {
-      "brand": "3dyanimda",
-      "path": "/rehber/stl-dosya-hazirlama",
-      "title": "Ürün prototipi için STL dışa aktarma kontrolü",
-      "description": "3dyanımda: Baskıya gönderilecek ağ modelde birim, yüzey bütünlüğü ve çok parçalı montaj yapısını kontrol edin.",
-      "contentHash": "4aecb6e13d7d0ae9ba01b2ccd3a3f4b92358d9e0796a8ce2147985cfdb211e0b",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "parcayanimda",
       "path": "/rehber/stl-dosya-hazirlama",
       "title": "İndirilen yedek parça STL dosyasını kontrol etme",
       "description": "parçayanımda: Hazır dosyanın cihazınıza uygunluğunu, ölçü birimini ve kullanım iznini baskıdan önce gözden geçirin.",
       "contentHash": "ae4a94085a2f2ae4a6d06a950fda2133bcd41f42bb35bcf64a440ae2a0593b71",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/sektorler/drone-hobi",
+      "title": "Robotik ve hobi projelerinde gövde ve yerleşim prototipi",
+      "description": "3dyanımda: Elektronik, batarya ve mekanik bileşenleri bir arada konumlandırmak için tasarım numuneleri hazırlayın.",
+      "contentHash": "d8406733e89888aeecf015f01526fc009cc7ccb1c2b6189a8f1eecf93a0177cc",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "maketyanimda",
+      "path": "/sektorler/drone-hobi",
+      "title": "Robotik etkinlikler ve model sahalar için ölçekli çevre",
+      "description": "maketyanımda: Parkur, arazi veya çalışma alanını sunum ve masa üstü senaryo için fiziksel bir çevre modeli olarak hazırlayın.",
+      "contentHash": "77a6b6e164664ca3466981108160a642a5290e84c6a2e97003ad2e91fcfdae11",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/rehber/stl-dosya-hazirlama",
+      "title": "Ürün prototipi için STL dışa aktarma kontrolü",
+      "description": "3dyanımda: Baskıya gönderilecek ağ modelde birim, yüzey bütünlüğü ve çok parçalı montaj yapısını kontrol edin.",
+      "contentHash": "4aecb6e13d7d0ae9ba01b2ccd3a3f4b92358d9e0796a8ce2147985cfdb211e0b",
       "sections": 2,
       "faqs": 1
     },
@@ -1006,6 +1006,15 @@
       "faqs": 1
     },
     {
+      "brand": "3dsanayi",
+      "path": "/rehber/tarama-verisinden-cad",
+      "title": "Aparat referanslarını tarama verisinden kurma",
+      "description": "3dsanayi: Taranmış iş parçasına uygun bir fikstür geliştirmek için yüzey verisini dayama ve eksen kararlarıyla birleştirin.",
+      "contentHash": "06e9eff2a81917372daf17f50aeb4c2e7016011b0c35cd14f226dd8aae058b1d",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
       "brand": "3dyanimda",
       "path": "/rehber/tarama-verisinden-cad",
       "title": "Tarama ağından revizyon yapılabilir ürün modeline",
@@ -1024,29 +1033,11 @@
       "faqs": 1
     },
     {
-      "brand": "3dsanayi",
-      "path": "/rehber/tarama-verisinden-cad",
-      "title": "Aparat referanslarını tarama verisinden kurma",
-      "description": "3dsanayi: Taranmış iş parçasına uygun bir fikstür geliştirmek için yüzey verisini dayama ve eksen kararlarıyla birleştirin.",
-      "contentHash": "06e9eff2a81917372daf17f50aeb4c2e7016011b0c35cd14f226dd8aae058b1d",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
       "brand": "parcayanimda",
       "path": "/rehber/kesit-nasil-incelenir",
       "title": "Özel parçada tırnak, yuva ve iç boşluğu kesitte inceleme",
       "description": "parçayanımda: Dış fotoğrafta görünmeyen bağlantı ilişkilerini kesitle açarak uyum probleminin yerini belirleyin.",
       "contentHash": "0dbf84deedefcb3328e4ec44acf0cf218e5ccf97ffc23a091ccaecac82259a5d",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/rehber/kesit-nasil-incelenir",
-      "title": "Ürün gövdesi kesitinde duvar ve montaj boşluğu okuma",
-      "description": "3dyanımda: Dış yüzeyin sakladığı iç hacmi kesitlerle inceleyerek kart, vida ve kapak ilişkilerini görünür kılın.",
-      "contentHash": "ef5be304a9a5fede38d8273a49fdf4d5d08ac7a9b1b307137dede0a13542c910",
       "sections": 2,
       "faqs": 1
     },
@@ -1060,11 +1051,38 @@
       "faqs": 1
     },
     {
+      "brand": "parcayanimda",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "title": "Servis ve restorasyon için parça talep kartı",
+      "description": "parçayanımda: Cihaz kimliği, numune, kullanım koşulu ve istenen çıktı bilgilerini tek bir parça kaydında toplayın.",
+      "contentHash": "5dedb9d4527ece5b7351339dfe25f87801ec829f3569bc68c3244b8420848aa1",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/rehber/kesit-nasil-incelenir",
+      "title": "Ürün gövdesi kesitinde duvar ve montaj boşluğu okuma",
+      "description": "3dyanımda: Dış yüzeyin sakladığı iç hacmi kesitlerle inceleyerek kart, vida ve kapak ilişkilerini görünür kılın.",
+      "contentHash": "ef5be304a9a5fede38d8273a49fdf4d5d08ac7a9b1b307137dede0a13542c910",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
       "brand": "maketyanimda",
       "path": "/rehber/kesit-nasil-incelenir",
       "title": "Maket kesitinde iç mekânı ve kat ilişkisini gösterme",
       "description": "maketyanımda: Kesit düzlemini anlatılacak mekânsal ilişkiye göre seçerek maketin nasıl açılıp okunacağını planlayın.",
       "contentHash": "e22d8f8bad16bca976001e0d675ed92b1c3e7680b1dcbdd06d52b866e3c50ad6",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "title": "Üretim aparatı için satın alma teknik eki",
+      "description": "3dsanayi: İş parçası, istasyon ve kabul gereksinimlerini satın alma siparişine bağlayan açık bir teknik ek hazırlayın.",
+      "contentHash": "17ae0785860a158879035f2459e9f35ef43ffe95e1f798ff7d1e6b1367f44030",
       "sections": 2,
       "faqs": 1
     },
@@ -1079,46 +1097,10 @@
     },
     {
       "brand": "parcayanimda",
-      "path": "/rehber/teknik-teklif-dosyasi",
-      "title": "Servis ve restorasyon için parça talep kartı",
-      "description": "parçayanımda: Cihaz kimliği, numune, kullanım koşulu ve istenen çıktı bilgilerini tek bir parça kaydında toplayın.",
-      "contentHash": "5dedb9d4527ece5b7351339dfe25f87801ec829f3569bc68c3244b8420848aa1",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/rehber/teknik-teklif-dosyasi",
-      "title": "Üretim aparatı için satın alma teknik eki",
-      "description": "3dsanayi: İş parçası, istasyon ve kabul gereksinimlerini satın alma siparişine bağlayan açık bir teknik ek hazırlayın.",
-      "contentHash": "17ae0785860a158879035f2459e9f35ef43ffe95e1f798ff7d1e6b1367f44030",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "maketyanimda",
-      "path": "/rehber/teknik-teklif-dosyasi",
-      "title": "Mimari maket için üretim ve teslim şartları dosyası",
-      "description": "maketyanımda: Ölçek, model sınırı, bitiş örneği ve sunum donanımını tek bir teslim listesinde tanımlayın.",
-      "contentHash": "4004a5ef624df91566b9c6ceef0b157abe2fa429bd41f40e5f6becfca59a7e45",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "parcayanimda",
       "path": "/rehber/malzeme-secim-sorulari",
       "title": "Yedek parça malzemesi için kullanım koşullarını tarif etme",
       "description": "parçayanımda: Kırılan parçanın nerede, nasıl ve ne kadar süre kullanıldığını yeni malzeme değerlendirmesine taşıyın.",
       "contentHash": "682f52766de405e9c03cf067609a2982a85e7310e6ac6f17201899e910997bbe",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/rehber/malzeme-secim-sorulari",
-      "title": "Ürün prototipinde malzeme seçmeden önce beş kullanım sorusu",
-      "description": "3dyanımda: Malzeme adından önce temas, sıcaklık, yük, görünüş ve numune amacını açıklayın.",
-      "contentHash": "9afabdb832ffa8d9c3f466e6ecc49aaedce84daa2415d7c3470d269b8bd87fb2",
       "sections": 2,
       "faqs": 1
     },
@@ -1133,10 +1115,10 @@
     },
     {
       "brand": "maketyanimda",
-      "path": "/rehber/malzeme-secim-sorulari",
-      "title": "Maket malzemesini seçerken görünüş ve kullanım soruları",
-      "description": "maketyanımda: Sergileme, dokunma, taşınma ve yüzey beklentisini malzeme kararına taşıyın.",
-      "contentHash": "b45fadee542fc3b830988e0c29c9a93a534fe46f49cb43a8223dfd8161ca4164",
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "title": "Mimari maket için üretim ve teslim şartları dosyası",
+      "description": "maketyanımda: Ölçek, model sınırı, bitiş örneği ve sunum donanımını tek bir teslim listesinde tanımlayın.",
+      "contentHash": "4004a5ef624df91566b9c6ceef0b157abe2fa429bd41f40e5f6becfca59a7e45",
       "sections": 2,
       "faqs": 1
     },
@@ -1150,11 +1132,38 @@
       "faqs": 1
     },
     {
-      "brand": "3dyanimda",
+      "brand": "maketyanimda",
+      "path": "/rehber/malzeme-secim-sorulari",
+      "title": "Maket malzemesini seçerken görünüş ve kullanım soruları",
+      "description": "maketyanımda: Sergileme, dokunma, taşınma ve yüzey beklentisini malzeme kararına taşıyın.",
+      "contentHash": "b45fadee542fc3b830988e0c29c9a93a534fe46f49cb43a8223dfd8161ca4164",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dsanayi",
       "path": "/rehber/maket-olcek-planlama",
-      "title": "Ürün sunum modelinde ölçek ve parçalama planı",
-      "description": "3dyanımda: Büyük bir ürün fikrini küçültülmüş sunum modeline çevirirken görülecek ayrıntıları ve taşınabilirliği birlikte belirleyin.",
-      "contentHash": "34e8f5dbe7728af7692181469330e92c90f0f99ca0472314cb5aa7a66b0c1009",
+      "title": "Üretim hücresini ölçekli modelle değerlendirme",
+      "description": "3dsanayi: Tam boyutlu fikstür üretiminden önce istasyon düzeni ve erişim fikrini bir yerleşim modeliyle tartışın.",
+      "contentHash": "7b5b7fd796fe18e4e8ff046d6b0fe6b72ef22443205d6a5445f7754b65db26ec",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/rehber/malzeme-secim-sorulari",
+      "title": "Ürün prototipinde malzeme seçmeden önce beş kullanım sorusu",
+      "description": "3dyanımda: Malzeme adından önce temas, sıcaklık, yük, görünüş ve numune amacını açıklayın.",
+      "contentHash": "9afabdb832ffa8d9c3f466e6ecc49aaedce84daa2415d7c3470d269b8bd87fb2",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "parcayanimda",
+      "path": "/rehber/numune-kabul-plani",
+      "title": "Özel yedek parçayı teslim alırken uyum kontrolü",
+      "description": "parçayanımda: Parçanın takılması, yerinde kalması ve amaçlanan hareketi yapmasını görünüş beklentisinden ayrı değerlendirin.",
+      "contentHash": "29549773b4c9ed552f8d444597fa57da245a1c69a350dcc2b8860899685d4e58",
       "sections": 2,
       "faqs": 1
     },
@@ -1169,28 +1178,19 @@
     },
     {
       "brand": "3dsanayi",
-      "path": "/rehber/maket-olcek-planlama",
-      "title": "Üretim hücresini ölçekli modelle değerlendirme",
-      "description": "3dsanayi: Tam boyutlu fikstür üretiminden önce istasyon düzeni ve erişim fikrini bir yerleşim modeliyle tartışın.",
-      "contentHash": "7b5b7fd796fe18e4e8ff046d6b0fe6b72ef22443205d6a5445f7754b65db26ec",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "parcayanimda",
       "path": "/rehber/numune-kabul-plani",
-      "title": "Özel yedek parçayı teslim alırken uyum kontrolü",
-      "description": "parçayanımda: Parçanın takılması, yerinde kalması ve amaçlanan hareketi yapmasını görünüş beklentisinden ayrı değerlendirin.",
-      "contentHash": "29549773b4c9ed552f8d444597fa57da245a1c69a350dcc2b8860899685d4e58",
+      "title": "Fikstür numunesi için ölçü ve operasyon kontrol listesi",
+      "description": "3dsanayi: Bir aparatın parçayı tutmasıyla üretim sürecine kabul edilmesi arasındaki kontrol adımlarını ayırın.",
+      "contentHash": "486958827a2a3d100d7d11ed421437c4ac5c505f399643e8c64ae7f677ab1a31",
       "sections": 2,
       "faqs": 1
     },
     {
       "brand": "3dyanimda",
-      "path": "/rehber/numune-kabul-plani",
-      "title": "Ürün prototipini kabul ederken hangi kararlar kaydedilir?",
-      "description": "3dyanımda: Form, montaj ve görünüş denemelerinin sonucunu aynı prototip sürümüne bağlayan pratik kabul düzeni.",
-      "contentHash": "0fe77bfb4cc87e287c33cfd6264978e91b99f72c55f9b6b835be4cab6adde2d2",
+      "path": "/rehber/maket-olcek-planlama",
+      "title": "Ürün sunum modelinde ölçek ve parçalama planı",
+      "description": "3dyanımda: Büyük bir ürün fikrini küçültülmüş sunum modeline çevirirken görülecek ayrıntıları ve taşınabilirliği birlikte belirleyin.",
+      "contentHash": "34e8f5dbe7728af7692181469330e92c90f0f99ca0472314cb5aa7a66b0c1009",
       "sections": 2,
       "faqs": 1
     },
@@ -1213,6 +1213,24 @@
       "faqs": 1
     },
     {
+      "brand": "3dsanayi",
+      "path": "/cozumler/kurumsal-proje-yonetimi",
+      "title": "Üretim aparatı için teknik satın alma ve kabul dosyası",
+      "description": "3dsanayi: Üretim, kalite ve satın alma ekiplerinin aynı fikstür ihtiyacını ve numune kabul koşullarını takip etmesi için kapsam düzeni.",
+      "contentHash": "52229fd5cf99d7b5c23e97de72d71d1f0ae7536d50276dcfac3ddcb20e59684a",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
+      "brand": "3dyanimda",
+      "path": "/rehber/numune-kabul-plani",
+      "title": "Ürün prototipini kabul ederken hangi kararlar kaydedilir?",
+      "description": "3dyanımda: Form, montaj ve görünüş denemelerinin sonucunu aynı prototip sürümüne bağlayan pratik kabul düzeni.",
+      "contentHash": "0fe77bfb4cc87e287c33cfd6264978e91b99f72c55f9b6b835be4cab6adde2d2",
+      "sections": 2,
+      "faqs": 1
+    },
+    {
       "brand": "maketyanimda",
       "path": "/cozumler/kurumsal-proje-yonetimi",
       "title": "Mimari makette dosya dondurma ve sunum teslim planı",
@@ -1222,20 +1240,20 @@
       "faqs": 1
     },
     {
+      "brand": "3dsanayi",
+      "path": "/rehber/fikstur-numune-kabul-plani",
+      "title": "3D baskı fikstür için numune kabul planı",
+      "description": "3dsanayi: Montaj aparatını üretim hattına almadan önce uyum, referanslama, operatör erişimi ve tekrar kullanım için kontrol maddeleri oluşturun.",
+      "contentHash": "3d5e2f89eca1e3a5f420f11490adf613a25711f646ee09c04b7950be4f0bdaf9",
+      "sections": 4,
+      "faqs": 3
+    },
+    {
       "brand": "3dyanimda",
       "path": "/cozumler/kurumsal-proje-yonetimi",
       "title": "Ar-Ge prototipinde kapsam, revizyon ve satın alma planı",
       "description": "3dyanımda: Ürün geliştirme ekibiyle satın almanın aynı dosya sürümü, numune amacı ve teslimat beklentisi üzerinden ilerlemesini sağlayın.",
       "contentHash": "a8183375c1c64825f90befcce5fe95081130a6038b9181aa22d6fdf20c9b0ed1",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "3dsanayi",
-      "path": "/rehber/numune-kabul-plani",
-      "title": "Fikstür numunesi için ölçü ve operasyon kontrol listesi",
-      "description": "3dsanayi: Bir aparatın parçayı tutmasıyla üretim sürecine kabul edilmesi arasındaki kontrol adımlarını ayırın.",
-      "contentHash": "486958827a2a3d100d7d11ed421437c4ac5c505f399643e8c64ae7f677ab1a31",
       "sections": 2,
       "faqs": 1
     },
@@ -1250,28 +1268,10 @@
     },
     {
       "brand": "3dsanayi",
-      "path": "/cozumler/kurumsal-proje-yonetimi",
-      "title": "Üretim aparatı için teknik satın alma ve kabul dosyası",
-      "description": "3dsanayi: Üretim, kalite ve satın alma ekiplerinin aynı fikstür ihtiyacını ve numune kabul koşullarını takip etmesi için kapsam düzeni.",
-      "contentHash": "52229fd5cf99d7b5c23e97de72d71d1f0ae7536d50276dcfac3ddcb20e59684a",
-      "sections": 2,
-      "faqs": 1
-    },
-    {
-      "brand": "maketyanimda",
-      "path": "/rehber/mimari-maket-olcek-secimi",
-      "title": "Mimari maket ölçeği nasıl seçilir?",
-      "description": "maketyanımda: 1:50, 1:100 veya 1:200 kararını sunum alanı, anlatılacak detay ve taşıma boyutuyla birlikte verin. Ölçek hesabını bir yerleşim örneğiyle inceleyin.",
-      "contentHash": "bce131b99cd2a14bca39ffc9a0b13c063b3d400d9465642985ffeb095c8d418c",
-      "sections": 4,
-      "faqs": 3
-    },
-    {
-      "brand": "3dyanimda",
-      "path": "/rehber/prototip-maliyetini-ne-belirler",
-      "title": "Prototip maliyetini ne belirler?",
-      "description": "3dyanımda: 3D baskı teklifini gramajdan öte okuyun: dosya hazırlığı, geometri, numune, revizyon ve tekrar üretim maliyetini aynı kapsamda değerlendirin.",
-      "contentHash": "ccb86e15cae422604f83ae5e8f6d9cf8901d3511da7fcfef2efd9237b51986ed",
+      "path": "/rehber/aparat-malzeme-secimi",
+      "title": "Montaj aparatı için malzeme nasıl seçilir?",
+      "description": "3dsanayi: Aparat malzemesini yalnızca sertlik veya filament adına göre seçmeyin; yük yönü, sıcaklık, kimyasal temas ve aşınmayı bir kullanım dosyasında toplayın.",
+      "contentHash": "968957262bc9696fb608800ed5efd2c4c7c829642bf6f20541173e4e1679dd5a",
       "sections": 4,
       "faqs": 3
     },
@@ -1285,20 +1285,20 @@
       "faqs": 3
     },
     {
-      "brand": "maketyanimda",
-      "path": "/rehber/maket-fiyati-teklif-kapsami",
-      "title": "Mimari maket fiyatı için hangi bilgiler gerekir?",
-      "description": "maketyanımda: Maket teklifini ölçek, model hazırlığı, çevre düzeni, yüzey bitişi ve teslim kapsamıyla netleştirin; son dakika revizyonlarını başlangıçta planlayın.",
-      "contentHash": "61114661af9a4986f8d6e9d6f654e33e6e36a018f92c3274ce6f953b4d011120",
+      "brand": "3dyanimda",
+      "path": "/rehber/prototip-maliyetini-ne-belirler",
+      "title": "Prototip maliyetini ne belirler?",
+      "description": "3dyanımda: 3D baskı teklifini gramajdan öte okuyun: dosya hazırlığı, geometri, numune, revizyon ve tekrar üretim maliyetini aynı kapsamda değerlendirin.",
+      "contentHash": "ccb86e15cae422604f83ae5e8f6d9cf8901d3511da7fcfef2efd9237b51986ed",
       "sections": 4,
       "faqs": 3
     },
     {
-      "brand": "3dsanayi",
-      "path": "/rehber/fikstur-numune-kabul-plani",
-      "title": "3D baskı fikstür için numune kabul planı",
-      "description": "3dsanayi: Montaj aparatını üretim hattına almadan önce uyum, referanslama, operatör erişimi ve tekrar kullanım için kontrol maddeleri oluşturun.",
-      "contentHash": "3d5e2f89eca1e3a5f420f11490adf613a25711f646ee09c04b7950be4f0bdaf9",
+      "brand": "maketyanimda",
+      "path": "/rehber/mimari-maket-olcek-secimi",
+      "title": "Mimari maket ölçeği nasıl seçilir?",
+      "description": "maketyanımda: 1:50, 1:100 veya 1:200 kararını sunum alanı, anlatılacak detay ve taşıma boyutuyla birlikte verin. Ölçek hesabını bir yerleşim örneğiyle inceleyin.",
+      "contentHash": "bce131b99cd2a14bca39ffc9a0b13c063b3d400d9465642985ffeb095c8d418c",
       "sections": 4,
       "faqs": 3
     },
@@ -1312,11 +1312,11 @@
       "faqs": 3
     },
     {
-      "brand": "3dsanayi",
-      "path": "/rehber/aparat-malzeme-secimi",
-      "title": "Montaj aparatı için malzeme nasıl seçilir?",
-      "description": "3dsanayi: Aparat malzemesini yalnızca sertlik veya filament adına göre seçmeyin; yük yönü, sıcaklık, kimyasal temas ve aşınmayı bir kullanım dosyasında toplayın.",
-      "contentHash": "968957262bc9696fb608800ed5efd2c4c7c829642bf6f20541173e4e1679dd5a",
+      "brand": "maketyanimda",
+      "path": "/rehber/maket-fiyati-teklif-kapsami",
+      "title": "Mimari maket fiyatı için hangi bilgiler gerekir?",
+      "description": "maketyanımda: Maket teklifini ölçek, model hazırlığı, çevre düzeni, yüzey bitişi ve teslim kapsamıyla netleştirin; son dakika revizyonlarını başlangıçta planlayın.",
+      "contentHash": "61114661af9a4986f8d6e9d6f654e33e6e36a018f92c3274ce6f953b4d011120",
       "sections": 4,
       "faqs": 3
     }
