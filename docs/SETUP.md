@@ -59,29 +59,41 @@ Yeni markalarda yasal unvan, telefon, e-posta veya teslimat taahhüdü uydurulma
 
 ## 5. E-posta yönlendirmeleri
 
-Supabase secrets olarak `RESEND_API_KEY`, uzun rastgele `QUOTE_WORKER_SECRET` ve `BRAND_EMAIL_ROUTES` tanımlayın. Sonuncusu marka slug'ını alıcı ve doğrulanmış göndericiye bağlayan JSON'dur:
+11 Ekim 2026 kullanıcı talimatı: dört markanın web formu bildirimleri EmailJS üzerinden
+**info@3dyanimda.com** adresine gönderilir. Form önce Supabase'e kaydedilir; aynı
+transaction'da bildirim kuyruğu oluşur. E-posta hatası talebi silmez. Marka, müşteri
+iletişim bilgileri, hizmet, adet, malzeme, açıklama ve dosya adı bildirimde yer alır.
+Özel dosyalar eklenmez; yetkili kullanıcı yönetim panelinden açar.
 
-```json
-{
-  "3dyanimda": {"from": "3D Yanımda <DOGRULANMIS_GONDERICI>", "to": ["BILDIRIM_ALICISI"]},
-  "3dsanayi": {"from": "3D Sanayi <DOGRULANMIS_GONDERICI>", "to": ["BILDIRIM_ALICISI"]},
-  "maketyanimda": {"from": "Maket Yanımda <DOGRULANMIS_GONDERICI>", "to": ["BILDIRIM_ALICISI"]},
-  "parcayanimda": {"from": "Parça Yanımda <DOGRULANMIS_GONDERICI>", "to": ["BILDIRIM_ALICISI"]}
-}
-```
+Kurulum, hazır şablon ve doğrulama adımları: [EMAILJS.md](EMAILJS.md).
 
-```sh
-npx supabase functions deploy send-email
-npx supabase functions deploy send-quote-email
-npx supabase functions deploy sitemap
-npx supabase functions deploy invite-tenant-user
-npx supabase functions deploy provision-tenant-user
-npx supabase functions deploy eject-tenant
-```
+Supabase Edge Function secrets:
+- EMAILJS_SERVICE_ID
+- EMAILJS_QUOTE_TEMPLATE_ID
+- EMAILJS_PUBLIC_KEY
+- EMAILJS_PRIVATE_KEY
+- QUOTE_WORKER_SECRET
 
-`send-quote-email` artık tarayıcıdan çağrılmaz. Sunucu cron işinin POST ile çağıracağı bir worker'dır; Authorization başlığında `Bearer QUOTE_WORKER_SECRET` ister. Cron ayrıca yapılandırılmalıdır; bu çalışmada gerçek e-posta gönderilmedi. Eksik e-posta ayarında teklifler ve bildirim kuyruğu saklanmaya devam eder. Beş başarısız denemeden sonra kayıtlar operatör incelemesi bekler. Aynı bildirim için Resend idempotency anahtarı kullanılır; sağlayıcının idempotency süresi dışında otomatik exactly-once garantisi yoktur.
+Bu değerler VITE_* değişkenlerine veya Git'e yazılmaz. EmailJS hesabında sunucu
+isteklerini ve private-key yetkilendirmesini etkinleştirin. Servisin bağlı e-posta
+hesabını ve şablonun sabit alıcısını doğrulayın.
 
-`send-email` Auth kullanıcısını ve tenant yetkisini doğrular; gönderici marka secret'ından seçilir. `bootstrap-first-admin` dağıtılmaz; eski otomatik yetki verme davranışı kapatılmıştır.
+`send-quote-email` tarayıcıdan çağrılmaz. Tek ve çakışmayan bir zamanlayıcı POST
+ile çağırır; Authorization başlığında `Bearer QUOTE_WORKER_SECRET` ister. Dört
+marka için ayrı zamanlayıcılar oluşturmayın. İşlem başına en çok beş kayıt alınır,
+gönderimler en az 1,1 saniye arayla yapılır. Hatalı kayıt beş deneme sonrası operatör
+incelemesi bekler. EmailJS kabulü gelen kutusuna teslim kanıtı değildir. Ağ zaman
+aşımı veya kabul sonrası veritabanı yazma hatası tekrar gönderime yol açabilir;
+EmailJS için exactly-once/idempotency garantisi verilmez. Testte Quote ID ile eşleştirin.
+
+Yalnızca web formu bildirimleri bu değişiklik kapsamındadır. Admin panelinden
+müşteriye yanıt gönderen ayrı `send-email` fonksiyonu mevcut Resend yapılandırmasını
+kullanır; yeni EmailJS bildirim kurulumu onu etkinleştirmez. Müşteri yanıtları ortak
+bildirim kutusuna yönlendirilmez. Auth şifre sıfırlama/davet iletileri de bu işleme
+dahil değildir.
+
+Fonksiyon yayını, zamanlayıcı, hesap ayarları ve gerçek gelen-kutusu testi henüz
+tamamlanmadı. Eski sağlayıcıya otomatik geri dönüş yapılmaz.
 
 ## 6. Hosting ve SEO
 
@@ -113,3 +125,4 @@ STL dışında OBJ/3MF/STEP/IGES dosyaları teknik incelemeye alınır; bu forma
 ## Durum
 
 Yeni arayüz, içerik altyapısı, Studio ve HTML export kodu hazırdır. Canlı Supabase migration, domain/DNS, hosting ve e-posta dağıtımı henüz yapılmadı.
+
