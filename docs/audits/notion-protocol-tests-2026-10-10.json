@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-10T23:44:58.667577Z",
+  "scope": "Focused Node regression tests and runner syntax; not Lighthouse, browser, full application or production testing",
+  "command": [
+    "node",
+    "--test",
+    "scripts/search/discovery.test.mjs",
+    "scripts/search/llms-directory.test.mjs",
+    "scripts/quality/check-protocols.test.mjs"
+  ],
+  "nodeVersion": "v24.19.0",
+  "exitCode": 0,
+  "rawOutput": "✔ complete discovery inventory stays explicitly non-release (0.899753ms)\n✔ missing and duplicate gates are rejected (0.563587ms)\n✔ historical evidence and preparation cannot be converted into release PASS (0.475476ms)\n✔ sitemap, image references and optional directory share one canonical inventory (8.047905ms)\n✔ private routes, duplicates and cross-brand manifests are rejected (0.430557ms)\n✔ IndexNow changes include updated/new/removed URLs, not unchanged pages (0.730278ms)\n✔ worker consolidates host, old service paths and index variants in one redirect (4.846589ms)\n✔ 213-page inventory produces a bounded, deterministic, category-balanced directory without shrinking sitemap (11.944095ms)\n✔ unpublished, noindex, redirected and noncanonical inputs cannot enter discovery (0.537479ms)\n✔ untrusted multiline labels cannot inject links and Turkish characters survive normalization (0.283537ms)\n✔ oversized URL records fail publication instead of silently exceeding the byte budget (1.5292ms)\nℹ tests 11\nℹ suites 0\nℹ pass 11\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 95.123605\n",
+  "lighthouseRunnerSyntaxExitCode": 0,
+  "releaseReadinessCommand": [
+    "node",
+    "scripts/quality/check-protocols.mjs",
+    "docs/search-program/requirements.json",
+    "--release"
+  ],
+  "releaseReadinessExitCode": 2,
+  "releaseReadinessOutput": {
+    "valid": true,
+    "errors": [],
+    "gates": 20,
+    "groupedControls": 123,
+    "releaseReady": false
+  },
+  "expectedReadinessExitCode": 2
+}

@@ -42,7 +42,9 @@
     "content:editorial": "node scripts/refresh-editorial-content.mjs",
     "test:content:browser": "node scripts/test-content-inventory.mjs",
     "content:local": "node scripts/refresh-local-content.mjs",
-    "test:content:local": "node scripts/test-local-content.mjs"
+    "test:content:local": "node scripts/test-local-content.mjs",
+    "audit:lighthouse": "node scripts/quality/run-lighthouse.mjs",
+    "audit:protocols": "node scripts/quality/check-protocols.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -130,3 +132,4 @@
     "wrangler": "^4.147.0"
   }
 }
+

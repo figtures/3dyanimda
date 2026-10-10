@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": 1,
+  "kind": "compliance-discovery-not-release-certificate",
+  "reviewedAt": "2026-10-10T23:44:58.667577Z",
+  "baselineCommit": "dda4d28a0141a2036b933ee608bed83e0ce94674",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "programStatus": "BLOCKED",
+  "decision": "NO-GO",
+  "brands": [
+    "3dyanimda",
+    "3dsanayi",
+    "maketyanimda",
+    "parcayanimda"
+  ],
+  "roots": [
+    {
+      "id": "SEO",
+      "url": "https://app.notion.com/p/SEO-Klasik-Arama-Motoru-Optimizasyonu-AI-Prompt-3e51fd693ee080a18f79f1ede4c42fcf?source=copy_link"
+    },
+    {
+      "id": "GEO",
+      "url": "https://app.notion.com/p/GEO-Generative-Engine-Optimization-AI-Prompt-3ea1fd693ee08042a6d5d41d947cfd2c?source=copy_link"
+    }
+  ],
+  "scope": "All 20 protocol pages read, including expanded sections; grouped controls below identify current evidence and gaps. Not every source control has been executed.",
+  "gateDependencies": "Gates stay BLOCKED until their own evidence and upstream requirements are met. Component tests do not certify a whole gate.",
+  "gates": [
+    {
+      "id": "SEO-01",
+      "title": "Program, roles and change control",
+      "source": "https://app.notion.com/p/SEO-01-Program-RACI-RFC-Gate-3e51fd693ee080fe8173d913bfebee42?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-01-01",
+          "requirement": "Named accountable owner and distinct backup for every workstream",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-01-02",
+          "requirement": "RFC scope, alternatives, URL/social impact and risk",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-01-03",
+          "requirement": "Rollback revision and timed validation plan of at least 10 URLs",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-01-04",
+          "requirement": "Real role approvals and 48-hour review evidence",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-01-05",
+          "requirement": "DoD and 90-day change register",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-01-06",
+          "requirement": "Owner-approved contact facts",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Existing AI review is owner-delegated, explicitly not human review.",
+        "Contact identity is backed by the owner's 8 October record."
+      ],
+      "blockers": [
+        "Backup/on-call and independent required reviewers are not assigned.",
+        "No protocol-specific signed RFC or review-window evidence."
+      ]
+    },
+    {
+      "id": "SEO-02",
+      "title": "Information architecture and URL policy",
+      "source": "https://app.notion.com/p/SEO-02-Information-Architecture-URL-Policy-3e51fd693ee080319f87eb3da92a162f?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-02-01",
+          "requirement": "Complete URL inventory with intent, owner, indexability, template and review date",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-02-02",
+          "requirement": "One owner URL for each of the top 50 search intents",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-02-03",
+          "requirement": "HTTPS/apex/lowercase/ASCII/no-trailing-slash policy",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-02-04",
+          "requirement": "Canonical and OG agreement; live 20-URL sample",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-02-05",
+          "requirement": "Orphan and click-depth graph audit with contextual internal links",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-02-06",
+          "requirement": "Query/facet/search controls and genuine locale variants",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Publication manifest supplies 796 landing paths; exporter adds 14 index pages per brand.",
+        "Canonical and sitemap parity passed the 8 October static export."
+      ],
+      "blockers": [
+        "GSC demand-backed top-query ownership and full BFS/internal-link audit missing.",
+        "Live canonical status and all inventory ownership/review fields unverified."
+      ]
+    },
+    {
+      "id": "SEO-03",
+      "title": "Crawl, index and sitemaps",
+      "source": "https://app.notion.com/p/SEO-03-Crawl-Index-robots-txt-Sitemap-3e51fd693ee080798f52ce38f6716e92?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-03-01",
+          "requirement": "Production robots is 200 and CSS/JS crawlable",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-03-02",
+          "requirement": "Private/staging controls and negative draft tests",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-03-03",
+          "requirement": "Sitemap uses only 200 self-canonical indexable URLs and real lastmod",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-03-04",
+          "requirement": "Sitemap size limits and at least 10 live samples",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-03-05",
+          "requirement": "Verified GSC domain property, submission, crawl/manual-action evidence",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-03-06",
+          "requirement": "Crawler policy, logs, trap and error-rate review",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Export has sitemap chunking and private path exclusions.",
+        "8 October audit proved local 852-page sitemap/HTML parity."
+      ],
+      "blockers": [
+        "No production or GSC verification.",
+        "Content-hash/dateModified/lastmod semantic parity not enforced end to end."
+      ]
+    },
+    {
+      "id": "SEO-04",
+      "title": "Rendering and initial HTML",
+      "source": "https://app.notion.com/p/SEO-04-Rendering-SPA-Prerender-3e51fd693ee08029afacfd9271e061c5?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-04-01",
+          "requirement": "Render mode and >=10 critical URL or 80% traffic coverage",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-04-02",
+          "requirement": "Initial HTML contains title, description, canonical, H1, content, navigation and JSON-LD",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-04-03",
+          "requirement": "JavaScript-disabled content and bot/user parity",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-04-04",
+          "requirement": "Cold-load and client navigation metadata timing",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-04-05",
+          "requirement": "GSC crawled HTML compared with browser HTML",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-04-06",
+          "requirement": "Social crawler initial-HTML samples and reachable utilities",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "876 exported route HTML documents passed the prior local audit.",
+        "Quote metadata timing and actual API error handling have existing tests."
+      ],
+      "blockers": [
+        "No GSC crawled-HTML comparison or production bot/CDN evidence.",
+        "New export after discovery change has not been generated."
+      ]
+    },
+    {
+      "id": "SEO-05",
+      "title": "On-page and international metadata",
+      "source": "https://app.notion.com/p/SEO-05-On-Page-SERP-International-3e51fd693ee080b8bc62d8fc29813eef?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-05-01",
+          "requirement": "Zero duplicate indexable titles and descriptions",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-05-02",
+          "requirement": "One visible H1 and sensible heading/content hierarchy",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-05-03",
+          "requirement": "Pixel-width measurement on top 20 templates",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-05-04",
+          "requirement": "CMS/render parity for at least 10 URLs",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-05-05",
+          "requirement": "Canonical, language and OG locale consistency",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-05-06",
+          "requirement": "Real human/subject-expert review where required",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Static export previously checked H1, canonical, authored text and metadata parity.",
+        "Site language is Turkish; other locales are not invented."
+      ],
+      "blockers": [
+        "Full duplicate-title/description and pixel-width evidence missing.",
+        "Risk-specific independent review and locale scope sign-off missing."
+      ]
+    },
+    {
+      "id": "SEO-06",
+      "title": "Structured-data pipeline",
+      "source": "https://app.notion.com/p/SEO-06-Structured-Data-Pipeline-3e51fd693ee080f080d7fcb37d6a5893?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-06-01",
+          "requirement": "Versioned schema type map and typed generation",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-06-02",
+          "requirement": "Required fields originate in verified source data",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-06-03",
+          "requirement": "Visible DOM, FAQ and schema agree",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-06-04",
+          "requirement": "Global stable IDs and no conflicting graph properties",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-06-05",
+          "requirement": "Rich Results evidence only for supported feature types; vocabulary validation separately",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-06-06",
+          "requirement": "Negative fixtures, generator changelog and RFC",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Prior audit verified business identity, visible FAQ and nonconflicting same-ID graph merging.",
+        "Unknown rating/price/hour fields are not fabricated."
+      ],
+      "blockers": [
+        "External validator records and versioned comprehensive schema contracts missing.",
+        "Multi-block compatible graph is valid, but requested single-generator consolidation remains unimplemented."
+      ]
+    },
+    {
+      "id": "SEO-07",
+      "title": "Core Web Vitals and budgets",
+      "source": "https://app.notion.com/p/SEO-07-Core-Web-Vitals-Performance-Budget-3e51fd693ee0801ba516d2d9ef2fb99e?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-07-01",
+          "requirement": "Route-specific JS/image/font/third-party budgets",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-07-02",
+          "requirement": "Repeated mobile and desktop Lighthouse on key templates",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-07-03",
+          "requirement": "CrUX 28-day p75 LCP<=2.5s, INP<=200ms, CLS<=0.1",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-07-04",
+          "requirement": "No Poor critical URL group without a scoped expiring exception",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-07-05",
+          "requirement": "LCP image priority, responsive sizing and visual CLS review",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-07-06",
+          "requirement": "CI regressions, before/after release evidence and weekly/monthly review",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "A production-artifact-matching Lighthouse runner is prepared.",
+        "A blocked attempt records zero runs rather than invented scores."
+      ],
+      "blockers": [
+        "Approved exported artifacts unavailable locally; live artifact could not be verified from this environment.",
+        "No Lighthouse results, CrUX/GSC field data, CI trend or accepted budget."
+      ]
+    },
+    {
+      "id": "SEO-08",
+      "title": "Social previews",
+      "source": "https://app.notion.com/p/SEO-08-Social-Graph-Meta-LinkedIn-X-3e51fd693ee080b8891aee0e50eba1ab?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-08-01",
+          "requirement": "Complete OG and large Twitter card on all shareable pages",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-08-02",
+          "requirement": "Canonical/OG URL equality and correct locale",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-08-03",
+          "requirement": "Public absolute raster image with verified dimensions/MIME/bytes",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-08-04",
+          "requirement": "Initial HTML accessible to social crawlers",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-08-05",
+          "requirement": "At least 10 real Meta/LinkedIn/X preview checks",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-08-06",
+          "requirement": "Cache refresh and approved global metadata RFC",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Seo.tsx emits OG fields and conditional image/card metadata."
+      ],
+      "blockers": [
+        "og:image is optional; pages without it emit the small summary card.",
+        "No branded universal social image fallback or platform debugger evidence."
+      ]
+    },
+    {
+      "id": "SEO-09",
+      "title": "Measurement and incidents",
+      "source": "https://app.notion.com/p/SEO-09-Measurement-Incidents-3e51fd693ee080809ea0cfbd09fa6bff?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-09-01",
+          "requirement": "GSC, GA4, CrUX and lab dashboards with actual access evidence",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-09-02",
+          "requirement": "Separate branded/non-branded metrics and conversion/consent context",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-09-03",
+          "requirement": "At least two weeks of weekly review and 28-day GSC export",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-09-04",
+          "requirement": "Named on-call and separate backup with required access",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-09-05",
+          "requirement": "Incident detection, rollback and postmortem records",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "3dyanimda GA4 configuration exists in the prior implementation report."
+      ],
+      "blockers": [
+        "No verified analytics receipt, dashboard exports or weekly operating history.",
+        "Other brand streams and GSC permissions remain unverified."
+      ]
+    },
+    {
+      "id": "SEO-10",
+      "title": "Launch and redirect registry",
+      "source": "https://app.notion.com/p/SEO-10-Launch-Migration-Redirect-Registry-3e51fd693ee08052ad3ccbf5fe5f01ea?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "SEO-10-01",
+          "requirement": "All previous gates and required approvals",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-10-02",
+          "requirement": "Complete launch crawl and signed redirect registry synchronized with code",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-10-03",
+          "requirement": "One-hop permanent redirects with documented query policy",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-10-04",
+          "requirement": "Executed staging rollback and cutover checklist",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-10-05",
+          "requirement": "Production robots, sitemap, validators and GSC inspection",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "SEO-10-06",
+          "requirement": "T+7/T+30 monitoring ownership and recorded results",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Worker and redirect compiler have existing one-hop/cycle/tenant-isolation checks.",
+        "8 October Cloudflare uploads stopped before publication due to missing authentication."
+      ],
+      "blockers": [
+        "No completed production rollout, rollback drill or sign-off.",
+        "New-site requirement for prelaunch Indexed evidence needs a documented bootstrap exception; indexing cannot precede public discovery."
+      ]
+    },
+    {
+      "id": "GEO-01",
+      "title": "Program governance",
+      "source": "https://app.notion.com/p/GEO-01-Program-RACI-RFC-Gate-3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-01-01",
+          "requirement": "Charter, measurable baseline, scope, anti-goals and budget",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-01-02",
+          "requirement": "RACI with named distinct backups and actual access",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-01-03",
+          "requirement": "RFC alternatives, risk register, expiring exceptions and real sign-offs",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-01-04",
+          "requirement": "Evidence classification, retention, link access and checksums",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-01-05",
+          "requirement": "Rollback RTO drills and vendor-change review",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-01-06",
+          "requirement": "SEO-01 to SEO-03 dependencies; discovery allowed while blocked",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Owner's business facts and explicit AI review delegation are recorded.",
+        "This audit is risk discovery and implementation preparation, not a release approval."
+      ],
+      "blockers": [
+        "Independent roles, signed charter, budget, retention jobs and drills missing."
+      ]
+    },
+    {
+      "id": "GEO-02",
+      "title": "Entity architecture",
+      "source": "https://app.notion.com/p/GEO-02-Entity-Brand-Knowledge-Architecture-3ea1fd693ee0801eb182cf82c18aca43?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-02-01",
+          "requirement": "Stable IDs, lifecycle, aliases and canonical entity inventory",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-02-02",
+          "requirement": "Legal operating entity distinguished from brand and workshop",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-02-03",
+          "requirement": "Verified NAP, official profiles and ownership-backed sameAs",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-02-04",
+          "requirement": "Parent relationships without cycles or fake branches",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-02-05",
+          "requirement": "Entity parity across source, UI, graph and controlled profiles",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-02-06",
+          "requirement": "Google/Bing brand observations and rename/tombstone process",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Owner-confirmed contact and one workshop are retained.",
+        "Four distinct brand domains and brand catalog exist."
+      ],
+      "blockers": [
+        "Registered legal operator, official profile ownership and independent parity checks missing.",
+        "No guessed business hours, tax identity, coordinates or social accounts may fill those gaps."
+      ]
+    },
+    {
+      "id": "GEO-03",
+      "title": "AI bots and indexability",
+      "source": "https://app.notion.com/p/GEO-03-AI-Crawler-robots-Indexability-3ea1fd693ee080458f85c39c71f0bcac?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-03-01",
+          "requirement": "Separate search, training, user-triggered and social vendor registry",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-03-02",
+          "requirement": "Current official token/IP verification sources and ownership",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-03-03",
+          "requirement": "Robots RFC9309 fixtures and per-path matrix",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-03-04",
+          "requirement": "CDN/WAF origin/edge parity, spoof tests and safe rate policy",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-03-05",
+          "requirement": "Observed bot log samples and error baselines",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-03-06",
+          "requirement": "Multi-region propagation, vendor-change monitor and timed rollback",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Current robots applies the same public crawl policy through wildcard group.",
+        "No new crawler restrictions were introduced."
+      ],
+      "blockers": [
+        "Purpose-specific decision registry, Legal/Marketing decisions and WAF/log access missing.",
+        "Curling an arbitrary user-agent is not evidence of an authentic vendor bot."
+      ]
+    },
+    {
+      "id": "GEO-04",
+      "title": "Citation-ready content",
+      "source": "https://app.notion.com/p/GEO-04-Citation-Ready-Content-Chunk-Design-3ea1fd693ee08057b923cbb565bdcf1a?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-04-01",
+          "requirement": "Versioned answer-unit IDs, owner intent and direct self-contained answer",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-04-02",
+          "requirement": "Claim/source locator mapping with risk and validity",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-04-03",
+          "requirement": "Chunk, procedure, FAQ and table readability limits",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-04-04",
+          "requirement": "Critical claim support from appropriate primary/independent sources",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-04-05",
+          "requirement": "Rights/attribution, accessibility, PII and Unicode validation",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-04-06",
+          "requirement": "Negative fixtures, conflict correction and subject-expert review",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "796 authored landing pages and original-content checks exist."
+      ],
+      "blockers": [
+        "Full answer-unit/source-license/claim-level support contract absent.",
+        "Prior targeted AI semantic review is not a complete independent fact-check of 796 pages."
+      ]
+    },
+    {
+      "id": "GEO-05",
+      "title": "Intent and topic ownership",
+      "source": "https://app.notion.com/p/GEO-05-Query-Intent-Answers-Topic-Ownership-3ea1fd693ee080dc9606d7298594ac0d?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-05-01",
+          "requirement": "Versioned 20-50 intent map and one canonical owner per intent",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-05-02",
+          "requirement": "Query/sales evidence distinguished from hypotheses",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-05-03",
+          "requirement": "Twelve intent types and balanced branded/unbranded/comparison/how-to/risk set",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-05-04",
+          "requirement": "Turkish market scope, negative cases and false-premise questions",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-05-05",
+          "requirement": "Prioritized gaps with reviewer, SLA and 7/30-day validation",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-05-06",
+          "requirement": "Append-only changes and seasonality limitations",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "A 50-prompt Turkish candidate set and actual route inventory are prepared in this change."
+      ],
+      "blockers": [
+        "Demand data, approved reference answers and production baseline missing.",
+        "Candidate prompts are hypotheses, not claimed customer queries or observed model results."
+      ]
+    },
+    {
+      "id": "GEO-06",
+      "title": "Schema, facts and llms",
+      "source": "https://app.notion.com/p/GEO-06-Structured-Facts-Schema-llms-txt-Pipeline-3ea1fd693ee0808fb11fc496576c424d?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-06-01",
+          "requirement": "Versioned CMS-to-DOM-to-schema field contracts and stable graph IDs",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-06-02",
+          "requirement": "Unknown facts omitted; normalized values and global conflict checks",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-06-03",
+          "requirement": "All validator layers and external evidence",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-06-04",
+          "requirement": "Optional llms directory is bounded, deterministic and indexable-only",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-06-05",
+          "requirement": "Same artifact promotion, atomic publication and last-known-good policy",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-06-06",
+          "requirement": "CDN/content-type/encoding/ETag/304 and negative live fixtures",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "llms generator now caps at 80 links/50 KiB; sitemap remains complete.",
+        "Eight discovery/worker tests pass including explicit noindex/noncanonical rejection."
+      ],
+      "blockers": [
+        "Live link checks, headers, external schema validation and LKG rollback drill missing.",
+        "Directory bounds pass does not make the whole GEO-06 gate PASS."
+      ]
+    },
+    {
+      "id": "GEO-07",
+      "title": "Freshness and provenance",
+      "source": "https://app.notion.com/p/GEO-07-Freshness-Provenance-E-E-A-T-3ea1fd693ee080178b05df5343b7ef68?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-07-01",
+          "requirement": "Content-risk SLA and change-event triggers",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-07-02",
+          "requirement": "Source trust scoring with dated rationale",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-07-03",
+          "requirement": "Real author/reviewer competence, conflict and independence records",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-07-04",
+          "requirement": "Semantic content/dateModified/UI/schema/sitemap integrity",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-07-05",
+          "requirement": "Source-link and claim-change monitors plus stale dashboard",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-07-06",
+          "requirement": "Archive/deprecation/correction policy and emergency drill",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-07-07",
+          "requirement": "Risk-appropriate human/YMYL approvals",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "AI release review explicitly records humanReviewPerformed=false.",
+        "Owner-confirmed facts are not relabeled as external research."
+      ],
+      "blockers": [
+        "Human/independent credentials, source scoring, scheduled monitoring and correction drill missing.",
+        "Semantic date-change guard not implemented; no automatic freshness date change performed."
+      ]
+    },
+    {
+      "id": "GEO-08",
+      "title": "Off-site authority",
+      "source": "https://app.notion.com/p/GEO-08-Off-Site-Authority-Third-Party-Graph-3ea1fd693ee080fab746cd3813461d25?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-08-01",
+          "requirement": "Platform account IDs, ownership, backups and parity",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-08-02",
+          "requirement": "LinkedIn/Meta/X real preview evidence and cache checkpoints",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-08-03",
+          "requirement": "Permission register for any partner/customer logo or testimonial",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-08-04",
+          "requirement": "Evidence-backed corrections without unsolicited outreach",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-08-05",
+          "requirement": "Impersonation, crisis and abandoned-account runbooks/drills",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-08-06",
+          "requirement": "Policy-compliant neutral reviews and verified sameAs",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "No new accounts, reviews, purchased mentions or unsolicited correction messages were created."
+      ],
+      "blockers": [
+        "Verified official profile inventory and platform access absent.",
+        "No claimed partner permissions, actual preview runs or incident drills."
+      ]
+    },
+    {
+      "id": "GEO-09",
+      "title": "Prompt lab and measurement",
+      "source": "https://app.notion.com/p/GEO-09-Measurement-Prompt-Labs-Incidents-3ea1fd693ee080808541d6be8d70a648?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-09-01",
+          "requirement": "Versioned prompt/reference/rubric manifests and immutable baseline",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-02",
+          "requirement": "At least two real model surfaces; Turkish-only locale scope explicit",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-03",
+          "requirement": "50 balanced prompts, repeated fresh sessions, model/time/browsing metadata",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-04",
+          "requirement": "Default 5 repetitions; 10 comparison/risk; >=100 runs and >=30 prompts per main cell",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-05",
+          "requirement": "Claim-level factual/citation scoring and critical-error override",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-06",
+          "requirement": "Blind double evaluation >=20% plus all critical outputs and adjudication",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-07",
+          "requirement": "Cluster-aware 95% intervals, agreement and paired baseline/release guards",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-08",
+          "requirement": "Provider terms, cost, rate, retention, deletion and redaction controls",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-09-09",
+          "requirement": "Referral attribution limits and actual incident closure tests",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "Candidate protocol records 0 completed model runs; no score fabricated."
+      ],
+      "blockers": [
+        "Model access/surface choice, budget, terms approval, evaluators and live published reference sources missing.",
+        "No baseline, repeated output, confidence interval, referral dashboard or after-release trend."
+      ]
+    },
+    {
+      "id": "GEO-10",
+      "title": "Final evidence and release control",
+      "source": "https://app.notion.com/p/GEO-10-Launch-Bot-Registry-Program-Release-Gate-3ea1fd693ee0805a80c5cb7856eac7a0?pvs=25",
+      "status": "BLOCKED",
+      "owner": "Project owner",
+      "backup": null,
+      "controls": [
+        {
+          "id": "GEO-10-01",
+          "requirement": "All SEO/GEO dependencies and production smoke evidence",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-10-02",
+          "requirement": "Strict machine-readable manifest with hashes/access/expiry/retention",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-10-03",
+          "requirement": "Independent release sign-offs and no hard-stop exception",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-10-04",
+          "requirement": "Real RTO/RPO rollback, partial/failed restore and monitoring proof",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-10-05",
+          "requirement": "T+1/T+7/T+30 reports and re-open triggers",
+          "verification": "NOT_FULLY_VERIFIED"
+        },
+        {
+          "id": "GEO-10-06",
+          "requirement": "Checksum/redaction/access-verified customer evidence package",
+          "verification": "NOT_FULLY_VERIFIED"
+        }
+      ],
+      "existingOrPreparedEvidence": [
+        "This change supplies a non-release compliance inventory and an explicit NO-GO status.",
+        "Historical successful static checks are distinguished from current live evidence."
+      ],
+      "blockers": [
+        "Required production evidence, approvals, drills and ongoing operating history missing.",
+        "No AI-ready, completed-program or guaranteed indexing claim is supported."
+      ]
+    }
+  ],
+  "sourceConflicts": [
+    {
+      "topic": "Contact identity",
+      "decision": "Owner-confirmed info@3dyanimda.com overrides the Figtures template email.",
+      "status": "RESOLVED_OWNER_INSTRUCTION"
+    },
+    {
+      "topic": "Pagination",
+      "decision": "Google no longer uses rel=next/prev; keep each real pagination URL self-canonical. Pagination not currently in scope.",
+      "reference": "https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading",
+      "status": "RESOLVED_OFFICIAL_GUIDANCE"
+    },
+    {
+      "topic": "llms.txt",
+      "decision": "Keep optional bounded discovery file; it is not a Google AI requirement or ranking guarantee.",
+      "reference": "https://developers.google.com/search/docs/appearance/ai-features",
+      "status": "RESOLVED_OFFICIAL_GUIDANCE"
+    },
+    {
+      "topic": "Review",
+      "decision": "Owner delegated AI review remains valid within its stated scope, but is not an independent human/Legal review required by the new playbook.",
+      "status": "SCOPE_LIMIT"
+    },
+    {
+      "topic": "Retention",
+      "decision": "GEO-01 and GEO-09 give different raw transcript/incident periods. No deletion policy is activated without a resolved project record.",
+      "status": "OPEN"
+    },
+    {
+      "topic": "RTO",
+      "decision": "GEO-01 and GEO-10 disagree for some layers. Propose stricter GEO-10 target; no successful drill or operational commitment is claimed.",
+      "status": "OPEN"
+    },
+    {
+      "topic": "Sampling",
+      "decision": "Use the stricter expanded GEO-09 release protocol: 50 balanced prompts, at least two surfaces, 5 standard / 10 comparison-risk repetitions. No paid/automated calls started.",
+      "status": "PROPOSED"
+    },
+    {
+      "topic": "First launch",
+      "decision": "Prelaunch GSC Indexed, 28-day CrUX and multiweek operating history cannot be manufactured for a new domain. Bootstrap and field-data exceptions need explicitly scoped decisions.",
+      "status": "OPEN"
+    }
+  ],
+  "liveProbe": {
+    "capturedAt": "2026-10-10T23:37:54Z",
+    "path": "/search-manifest.json",
+    "results": [
+      {
+        "domain": "3dyanimda.com",
+        "status": 502,
+        "contentType": "text/html",
+        "location": null
+      },
+      {
+        "domain": "3dsanayi.com",
+        "status": 502,
+        "contentType": "text/html",
+        "location": null
+      },
+      {
+        "domain": "maketyanimda.com",
+        "status": 502,
+        "contentType": "text/html",
+        "location": null
+      },
+      {
+        "domain": "parcayanimda.com",
+        "status": 502,
+        "contentType": "text/html",
+        "location": null
+      }
+    ],
+    "interpretation": "Observed from this execution environment only. Origin outage is not established; approved live artifacts could not be verified."
+  },
+  "limitations": [
+    "No production publication in this change.",
+    "No Lighthouse score or real GEO output was obtained.",
+    "Historical 8 October audit is not a fresh production test.",
+    "Governance records below are engineering preparations, not human signatures."
+  ]
+}

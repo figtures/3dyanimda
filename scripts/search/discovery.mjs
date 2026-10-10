@@ -1,3 +1,4 @@
+import { llmsDirectory } from './llms-directory.mjs';
 export const escapeXml = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
 const privatePath = /^\/(admin|studio|api|auth)(\/|$)/;
 export function canonicalOrigin(value) {
@@ -14,6 +15,7 @@ export function discoveryFiles({origin,brand,pages,indexNowKey}) {
   const seen=new Set();
   const records=pages.map(p=>{
     const path=publicPath(p.path);
+    if(p.noindex || p.indexable===false || (p.status!==undefined && p.status!==200) || (p.canonical!==undefined && p.canonical!==origin+path)) throw new Error('Discovery requires an indexable 200 self-canonical page: '+path);
     if(seen.has(path))throw new Error('Duplicate canonical path: '+path);seen.add(path);
     const lastmod=p.lastmod ? new Date(p.lastmod) : null;
     if(lastmod && (!Number.isFinite(+lastmod) || +lastmod>Date.now()+300000))throw new Error('Invalid content modification date: '+path);
@@ -33,8 +35,7 @@ export function discoveryFiles({origin,brand,pages,indexNowKey}) {
   files['sitemap.xml']='<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+maps.map(p=>`<sitemap><loc>${origin}/${p}</loc></sitemap>`).join('\n')+'\n</sitemapindex>\n';
   // No separate bot group: the same crawl permissions apply to search/AI crawlers.
   files['robots.txt']=`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /studio\nDisallow: /api/\nDisallow: /auth/\nSitemap: ${origin}/sitemap.xml\n`;
-  const oneLine=s=>String(s||'').replace(/[\r\n\[\]]/g,' ').trim();
-  files['llms.txt']=`# ${oneLine(brand)}\n\n> Resmî hizmet ve bilgi sayfaları. Güncel kapsam, ilgili sayfada açıklanır.\n\n## İçerik dizini\n\n`+records.map(p=>`- [${oneLine(p.title)}](${p.url}): ${oneLine(p.description)}`).join('\n')+'\n';
+  files['llms.txt']=llmsDirectory({brand,records});
   files['search-manifest.json']=JSON.stringify({version:1,origin,brand,pages:records},null,2)+'\n';
   if(indexNowKey){
     if(!/^[a-zA-Z0-9-]{8,128}$/.test(indexNowKey))throw new Error('Invalid IndexNow verification key.');
@@ -59,3 +60,4 @@ export function changedUrls(current,previous){
   }
   return changes;
 }
+

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED",
+  "startedAt": "2026-10-10T23:38:43.196Z",
+  "kind": "production-lab",
+  "fieldData": false,
+  "runs": [],
+  "blockers": [
+    "ENOENT: no such file or directory, open '.cloudflare/3dyanimda/release/3dyanimda.com/search-manifest.json'"
+  ],
+  "thresholds": {
+    "lcpMs": 2500,
+    "cls": 0.1,
+    "tbtMs": 200
+  },
+  "limitations": [
+    "Lighthouse lab data is not CrUX p75 field data. TBT is not INP. No indexing or GEO visibility claim is inferred."
+  ],
+  "finishedAt": "2026-10-10T23:38:43.197Z"
+}

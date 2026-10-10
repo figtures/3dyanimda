@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "implementation-evidence-index-not-release-manifest",
+  "createdAt": "2026-10-10T23:44:58.667577Z",
+  "baselineCommit": "dda4d28a0141a2036b933ee608bed83e0ce94674",
+  "producer": "Codex (AI)",
+  "humanReviewPerformed": false,
+  "productionPublished": false,
+  "lighthouseCompletedRuns": 0,
+  "geoCompletedRuns": 0,
+  "signatureStatus": "No independent release sign-off",
+  "retentionStatus": "Versioned in project repository; automated retention/deletion and customer access validation not configured",
+  "files": [
+    {
+      "path": "scripts/search/discovery.mjs",
+      "sha256": "ff7abd1f25a083d0be209677703b20aa98074819f28cff162567bd6ca3ee8ec1",
+      "bytes": 4201
+    },
+    {
+      "path": "scripts/search/llms-directory.mjs",
+      "sha256": "ca86ee06cc48e42e0e5359fb891e6c7f4332a257dfdeb27c274c121b40a6cbf0",
+      "bytes": 2014
+    },
+    {
+      "path": "scripts/search/llms-directory.test.mjs",
+      "sha256": "35d82a621b078d7ee7be221dfee82837c271e4a5370702720233766c506086e6",
+      "bytes": 2238
+    },
+    {
+      "path": "scripts/quality/run-lighthouse.mjs",
+      "sha256": "ff3703012eba03325698b4aac8a504ec79be21c5773ee2b64a79be67b4288e46",
+      "bytes": 5062
+    },
+    {
+      "path": "scripts/quality/check-protocols.mjs",
+      "sha256": "2894cd4c9412f41ff22f8fb7b2e1fdc50a21dcfebbdcca721e54b784a2f48228",
+      "bytes": 1918
+    },
+    {
+      "path": "scripts/quality/check-protocols.test.mjs",
+      "sha256": "e05d84228f177df9c5822985432c011a3ff74aa4cf4900993442515bd900bc2a",
+      "bytes": 1207
+    },
+    {
+      "path": "docs/search-program/requirements.json",
+      "sha256": "d80348de1c452bbe4d849b3cafc9cc986a96fa7096a8483d501f45ce371e3127",
+      "bytes": 40683
+    },
+    {
+      "path": "docs/search-program/prompt-set-v1.json",
+      "sha256": "6bbf1226973659803f9fcc45d87d508eb2b29b50c4bd83f7d534838f968e9cd9",
+      "bytes": 71722
+    },
+    {
+      "path": "docs/search-program/url-inventory.json",
+      "sha256": "56641c285251cd658d7797e45a2f1c63bf858712de01524f49f9ffe4141f136b",
+      "bytes": 395808
+    },
+    {
+      "path": "docs/search-program/README.md",
+      "sha256": "f13d3b7788cc750ec51a938cff351cb918340c57f9079e25d7385b333060f0a6",
+      "bytes": 7727
+    },
+    {
+      "path": "docs/search-program/RFC-SEARCH-001.md",
+      "sha256": "c87cd0124975cc739000775da8f570a636162336c35281c28c7fd4591385649c",
+      "bytes": 4656
+    },
+    {
+      "path": "docs/audits/notion-protocol-tests-2026-10-10.json",
+      "sha256": "bef1bb668d74b20eb37f3367a95de503d6a2f70999b5437e39c0541804271210",
+      "bytes": 1999
+    },
+    {
+      "path": "docs/audits/lighthouse-attempt-2026-10-10.json",
+      "sha256": "c4307d88f5f25dfb22893023be88c9fedcbaa474082fb5e01fb65fa1c0df0edc",
+      "bytes": 551
+    },
+    {
+      "path": "package.json",
+      "sha256": "a7460f8abc5dd6a902930a75b3e4ee5d40dd09fd9424d4b9409a66d8c77d08dd",
+      "bytes": 5579
+    }
+  ]
+}

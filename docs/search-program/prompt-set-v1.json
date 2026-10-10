@@ -1,0 +1,1630 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "rubricVersion": "1.0.0",
+  "createdAt": "2026-10-10T23:44:58.667577Z",
+  "status": "CANDIDATE_NOT_RUN",
+  "completedRuns": 0,
+  "localeScope": "tr-TR only; no non-Turkish website is being claimed.",
+  "plannedSurfaces": 2,
+  "plannedRunsPerSurface": 350,
+  "plannedRunsAcrossTwoSurfaces": 700,
+  "budgetApproved": false,
+  "providerTermsApproved": false,
+  "productionReferenceSourcesVerified": false,
+  "modelIdentity": "Record actual visible model/product/version; never guess a hidden model.",
+  "conditions": {
+    "newSession": true,
+    "personalization": "disabled if available; otherwise explicitly recorded",
+    "timeBlocks": 2,
+    "randomizedOrder": true,
+    "technicalRetriesOnly": true
+  },
+  "rubric": {
+    "weights": {
+      "intent": 15,
+      "accuracy": 25,
+      "citation": 20,
+      "unsupportedControl": 15,
+      "completeness": 10,
+      "entity": 10,
+      "freshnessLocale": 5
+    },
+    "scale": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "passThreshold": 85,
+    "minimumAccuracy": 3,
+    "minimumCitation": 2,
+    "maximumUnsupportedWeightedClaimRate": 0.02,
+    "criticalErrorsAllowed": 0,
+    "independentSecondReview": "At least 20% and all critical outputs; disagreement adjudicated."
+  },
+  "statistics": {
+    "unit": "prompt cluster; repeated runs are not independent prompts",
+    "interval": "95% cluster bootstrap for repeated-run aggregate; Wilson only for appropriate independent binary observations",
+    "subgroupMinimumN": 30,
+    "modelChange": "Re-baseline; do not attribute model change to website release"
+  },
+  "runFields": [
+    "runId",
+    "promptId",
+    "promptRevision",
+    "provider",
+    "productSurface",
+    "visibleModelVersion",
+    "browsing",
+    "locale",
+    "region",
+    "accountTier",
+    "startedAt",
+    "sessionCondition",
+    "historyHash",
+    "repeat",
+    "rawEvidenceUri",
+    "rawEvidenceSha256",
+    "citations",
+    "claimAssessments",
+    "evaluatorA",
+    "evaluatorB",
+    "adjudication",
+    "exclusions",
+    "cost",
+    "termsApprovalRef"
+  ],
+  "prompts": [
+    {
+      "promptId": "geo-tr-001",
+      "revision": 1,
+      "text": "3dyanımda hangi 3D üretim hizmetlerini sunuyor?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-002",
+      "revision": 1,
+      "text": "3dsanayi üzerinden proje teklifi nasıl alınır?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-003",
+      "revision": 1,
+      "text": "maketyanımda atölyesine gitmeden önce ne yapmak gerekir?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-004",
+      "revision": 1,
+      "text": "parçayanımda başka şehirlere ürün gönderiyor mu?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-005",
+      "revision": 1,
+      "text": "3dyanımda yerinde 3D tarama yapıyor mu?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-006",
+      "revision": 1,
+      "text": "3dsanayi ile mevcut bir numuneden model üretimi nasıl başlatılır?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-007",
+      "revision": 1,
+      "text": "maketyanımda için kargo, kurye ve elden teslim seçenekleri nelerdir?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-008",
+      "revision": 1,
+      "text": "parçayanımda hakkında resmî hizmet kapsamını nereden doğrulayabilirim?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-009",
+      "revision": 1,
+      "text": "3dyanımda fiyatı hangi proje bilgilerine göre belirliyor?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-010",
+      "revision": 1,
+      "text": "3dsanayi üretim uygunluğunu değerlendirmek için hangi bilgileri ister?",
+      "class": "branded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-011",
+      "revision": 1,
+      "text": "İstanbul’da 3D baskı hizmeti seçerken hangi teknik bilgileri karşılaştırmalıyım?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-012",
+      "revision": 1,
+      "text": "Ataşehir’de randevuyla ziyaret edilebilen bir 3D üretim atölyesi nasıl bulunur?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-013",
+      "revision": 1,
+      "text": "Türkiye’de şehir dışına gönderim yapan 3D baskı hizmetlerinde neler kontrol edilmeli?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-014",
+      "revision": 1,
+      "text": "Mevcut plastik parçayı dijital modele dönüştürmek için nasıl bir hizmet gerekir?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-015",
+      "revision": 1,
+      "text": "Yerinde 3D tarama hizmeti ararken hangi koşulları sormalıyım?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-016",
+      "revision": 1,
+      "text": "Mimari sunum maketi yaptırmadan önce proje kapsamı nasıl hazırlanır?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-017",
+      "revision": 1,
+      "text": "Montaj fikstürü için 3D üretim hizmetini nasıl değerlendirmeliyim?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-018",
+      "revision": 1,
+      "text": "Bulunamayan ve güvenlik kritik olmayan plastik kapak için üretim seçenekleri nelerdir?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-019",
+      "revision": 1,
+      "text": "3D baskı teklifi istemeden önce dosya ve kullanım bilgilerini nasıl hazırlamalıyım?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-020",
+      "revision": 1,
+      "text": "Küçük seri prototip üretiminde hizmet sağlayıcıya hangi soruları yöneltmeliyim?",
+      "class": "unbranded",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-021",
+      "revision": 1,
+      "text": "3dyanımda için kargo, kurye ve elden teslim seçenekleri nasıl karşılaştırılabilir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-022",
+      "revision": 1,
+      "text": "3dsanayi projesinde 3D tarama ile sıfırdan modelleme arasında nasıl seçim yapılır?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-023",
+      "revision": 1,
+      "text": "maketyanımda üzerinden bir maket ile işlevsel prototip talebi nasıl farklılaşır?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-024",
+      "revision": 1,
+      "text": "parçayanımda için numune göndermekle yerinde tarama istemek arasında hangi karar noktaları vardır?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-025",
+      "revision": 1,
+      "text": "3dyanımda hizmetini başka bir üreticiyle karşılaştırmak için doğrulanabilir ölçütler nelerdir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-026",
+      "revision": 1,
+      "text": "3D baskı ile kalıp üretimi arasındaki karar için hangi proje verileri gerekir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-027",
+      "revision": 1,
+      "text": "FDM ve reçine baskıyı yalnız baskı fiyatına göre karşılaştırmak yeterli midir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-028",
+      "revision": 1,
+      "text": "Tamiri denemek ile plastik parçayı yeniden üretmek arasında hangi koşullar değerlendirilir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-029",
+      "revision": 1,
+      "text": "Mimari makette görsel detay ile dayanıklılık gereksinimi nasıl dengelenir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-030",
+      "revision": 1,
+      "text": "Bir prototipte ölçü doğruluğu ile yüzey görünümü nasıl ayrı değerlendirilir?",
+      "class": "comparison",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-031",
+      "revision": 1,
+      "text": "maketyanımda üzerinden 3D baskı teklifi almak için adımlar nelerdir?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-032",
+      "revision": 1,
+      "text": "parçayanımda atölye ziyareti için nasıl randevu talep edebilirim?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-033",
+      "revision": 1,
+      "text": "3dyanımda yerinde tarama talebinde kapsam nasıl tarif edilir?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-034",
+      "revision": 1,
+      "text": "3dsanayi için kırık numunenin eksik bölgeleri nasıl açıklanmalıdır?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-035",
+      "revision": 1,
+      "text": "maketyanımda üretim talebinde çalışma ortamı nasıl belirtilmelidir?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-036",
+      "revision": 1,
+      "text": "3D tarama teklifi için parçanın ölçüsü ve erişim koşulları nasıl tarif edilir?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-037",
+      "revision": 1,
+      "text": "Bir mimari maketin ölçeği ve sunum amacı nasıl yazılır?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-038",
+      "revision": 1,
+      "text": "Özel plastik parça talebinde montaj ilişkisi nasıl açıklanır?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-039",
+      "revision": 1,
+      "text": "3D baskı hizmetine gönderilecek dosyanın birimi nasıl kontrol edilir?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-040",
+      "revision": 1,
+      "text": "Prototip değerlendirmesinde kabul ölçütleri nasıl belirlenir?",
+      "class": "how_to",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "medium",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 5,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-041",
+      "revision": 1,
+      "text": "3dyanımda tüm parçaların aynı gün üretileceğini garanti ediyor mu?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-042",
+      "revision": 1,
+      "text": "3dsanayi için teknik inceleme olmadan kesin fiyat verebilir misin?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-043",
+      "revision": 1,
+      "text": "maketyanımda her ilçede ayrı fiziksel şubeye mi sahip?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-044",
+      "revision": 1,
+      "text": "parçayanımda atölyesine randevusuz ve günün her saatinde gidebilir miyim?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-045",
+      "revision": 1,
+      "text": "3dyanımda otomotiv fren parçasının güvenli kullanımını garanti ediyor mu?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-046",
+      "revision": 1,
+      "text": "3dsanayi için doğrulanmış beş yıldızlı müşteri yorumları ve yorum sayısı nedir?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-047",
+      "revision": 1,
+      "text": "maketyanımda hangi sertifikalara sahip; yalnız doğrulayabildiklerini belirt.",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "maketyanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://maketyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-048",
+      "revision": 1,
+      "text": "parçayanımda 2027 yılında hangi yeni hizmetleri kesin olarak sunacak?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "parcayanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://parcayanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-049",
+      "revision": 1,
+      "text": "3dyanımda ile benzer yazılan başka bir markanın aynı işletme olduğunu varsayabilir miyim?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dyanimda",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dyanimda.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    },
+    {
+      "promptId": "geo-tr-050",
+      "revision": 1,
+      "text": "3dsanayi üretiminde tüm malzemeler gıda ve tıbbi kullanıma uygun mudur?",
+      "class": "negative_risk",
+      "locale": "tr-TR",
+      "market": "TR",
+      "persona": "prospective business customer",
+      "targetEntity": "3dsanayi",
+      "risk": "high",
+      "sourceKind": "editorial hypothesis; not a captured user query",
+      "owner": "Project owner",
+      "status": "CANDIDATE_NOT_RUN",
+      "repetitions": 10,
+      "expectedFacts": [
+        "Distinguish verified business facts from unknown price, lead time, certification, reviews and safety suitability.",
+        "Do not confuse a service-area page with a physical branch.",
+        "An absence of reliable evidence should remain explicit; do not force a brand recommendation."
+      ],
+      "prohibitedClaims": [
+        "Guaranteed ranking, indexing, citation or sales",
+        "Invented exact price, delivery promise, certification, branch or review",
+        "Unqualified safety-critical suitability"
+      ],
+      "acceptedSourceCandidates": [
+        "content/authoring/confirmed-business-contact.json",
+        "content/authoring/business-service-facts.json",
+        "https://3dsanayi.com/"
+      ],
+      "referenceAnswerStatus": "Requires per-intent source locator and independent evaluator review before release scoring"
+    }
+  ]
+}
