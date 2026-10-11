@@ -1,10 +1,13 @@
 import { Helmet } from "react-helmet-async";
+import { useLayoutEffect } from 'react';
 import { useSeoOverride } from "@/hooks/useSeoOverride";
 import { useTenant } from "@/contexts/TenantContext";
 import { businessGraph, containsLegacyIdentity } from "@/lib/structured-data";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import catalog from "@/brands/catalog.json";
 import { canonicalPath, indexRobots, pageGraph } from "@/lib/search";
+import { socialImage } from "@/lib/social-meta";
+import { composeSchemaGraph } from "@/lib/schema-graph";
 interface SeoProps {
   title: string;
   description: string;
@@ -54,7 +57,8 @@ export const Seo = ({
       !domain ||
       window.location.hostname !== domain,
   );
-  const og = override?.og_image_url || image;
+  const share = socialImage(base, tenant?.slug, override?.og_image_url);
+  const og = share.url;
   const brand = catalog.find((b) => b.slug === tenant?.slug);
   const identity = businessGraph({ name, origin: base, description: brand?.description,
     logo: verified.logo, email: verified.email, telephone: verified.telephone,
@@ -68,6 +72,16 @@ export const Seo = ({
   ).filter(
     (item) => !containsLegacyIdentity(item),
   );
+  const structured = JSON.stringify(composeSchemaGraph([identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: image || og, modified, type: pageType }), ...schemas],base,url)).replace(/</g,'\\u003c');
+  // React 18 suspended renders can leave stale Helmet script registrations.
+  // Commit one owned node in an effect, after React commits the current page.
+  useLayoutEffect(()=>{
+    const id='site-structured-data';
+    const script=document.getElementById(id) || document.createElement('script');
+    script.id=id;script.setAttribute('type','application/ld+json');script.textContent=structured;
+    if(!script.isConnected)document.head.appendChild(script);
+    return ()=>{if(script.textContent===structured)script.remove();};
+  },[structured]);
   return (
     <Helmet>
       <html lang="tr" />
@@ -88,14 +102,18 @@ export const Seo = ({
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={name} />
       <meta property="og:locale" content="tr_TR" />
-      {og && <meta property="og:image" content={new URL(og, base).href} />}
+      <meta property="og:image" content={og} />
+      <meta property="og:image:alt" content={share.alt} />
+      {share.width && <meta property="og:image:width" content={String(share.width)} />}
+      {share.height && <meta property="og:image:height" content={String(share.height)} />}
       <meta
         name="twitter:card"
-        content={og ? "summary_large_image" : "summary"}
+        content="summary_large_image"
       />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
-      {og && <meta name="twitter:image" content={new URL(og, base).href} />}
+      <meta name="twitter:image" content={og} />
+      <meta name="twitter:image:alt" content={share.alt} />
       {modified && type === "article" && <meta property="article:modified_time" content={modified} />}
       {(override?.keywords || keywords) && (
         <meta name="keywords" content={override?.keywords || keywords} />
@@ -103,11 +121,6 @@ export const Seo = ({
       {geo?.region && <meta name="geo.region" content={geo.region} />}
       {geo?.placename && <meta name="geo.placename" content={geo.placename} />}
       {geo?.position && <meta name="geo.position" content={geo.position} />}
-      {[identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: og, modified, type: pageType }), ...schemas].map((item, i) => (
-        <script key={i} type="application/ld+json">
-          {JSON.stringify(item).replace(/</g, "\\u003c")}
-        </script>
-      ))}
     </Helmet>
   );
 };

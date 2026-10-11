@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Seo } from "@/components/site/Seo";
@@ -58,7 +59,7 @@ export default function RegionPlanner() {
   const { pathname, search } = useLocation();
   const route = regions.find((r) => r.path === pathname.replace(/\/$/, ""));
   const b = useBrand();
-  const q = import.meta.env.DEV ? search : "";
+  const q = previewSearch(search);
   const [checked, setChecked] = useState<string[]>([]);
   const [method, setMethod] = useState("Dijital dosya ile başlayacağım");
   if (!route) return <NotFound />;

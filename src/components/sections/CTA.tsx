@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useBrand } from "@/brands/config";
@@ -19,7 +20,7 @@ export const CTA = () => {
       </div>
       <Link
         className="brand-button accent"
-        to={`/teklif-al${import.meta.env.DEV ? search : ""}`}
+        to={`/teklif-al${previewSearch(search)}`}
       >
         Teknik teklif talebi
         <ArrowUpRight size={18} />

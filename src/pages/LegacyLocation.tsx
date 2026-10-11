@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { Navigate, useLocation, useParams } from "react-router-dom";
 import { useContent } from "@/content/useContent";
 import regions from "@/content/region-routes.json";
@@ -10,7 +11,7 @@ export default function LegacyLocation() {
   if (isLoading) return <p role="status">İçerik yükleniyor…</p>;
   return data.some((p) => p.path === path) ||
     regions.some((p) => p.path === path) ? (
-    <Navigate replace to={path + (import.meta.env.DEV ? search : "")} />
+    <Navigate replace to={path + (previewSearch(search))} />
   ) : (
     <NotFound />
   );

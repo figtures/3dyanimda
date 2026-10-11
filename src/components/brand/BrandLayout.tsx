@@ -8,6 +8,7 @@ import {
 import { ArrowUpRight, Box, MapPin } from "lucide-react";
 import { brands, useBrand } from "@/brands/config";
 import { demoMode } from "@/lib/supabase";
+import { isPrivatePreview, previewSearch } from '@/lib/tenant';
 import { useRedirects } from "@/hooks/useRedirects";
 import "@/brands/brand.css";
 import "@/brands/modern.css";
@@ -22,9 +23,9 @@ export function BrandLayout() {
   const location = useLocation();
   useRedirects();
   const theme = getSiteTheme(brand.slug, location.search);
-  const preview = import.meta.env.DEV;
+  const preview = import.meta.env.DEV || isPrivatePreview;
   // Keep local preview selection while navigating between pages.
-  const query = preview ? location.search : "";
+  const query = previewSearch(location.search);
   const link = (path: string) => `${path}${query}`;
   return (
     <div
@@ -40,7 +41,7 @@ export function BrandLayout() {
           <span>
             {demoMode
               ? "Tasarım önizlemesi · Formlar gönderilmez"
-              : "Geliştirme ortamı"}
+              : "Özel önizleme · Veritabanı bağlı"}
           </span>
           <div>
             {brands.map((b) => (
@@ -59,7 +60,7 @@ export function BrandLayout() {
               aria-label="Önizleme teması"
               value={theme}
               onChange={(event) => {
-                const params = new URLSearchParams(location.search);
+                const params = new URLSearchParams(query);
                 params.set("theme", event.target.value);
                 window.location.assign(`${location.pathname}?${params}`);
               }}

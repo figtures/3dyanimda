@@ -1380,7 +1380,7 @@
 .decision-table thead{background:#89939d18}.decision-table tbody th{font-weight:600}
 .content-article,.article-layout{min-width:0}.content-article p{white-space:pre-line}
 .article-sources a{text-decoration:underline;text-underline-offset:3px}.article-sources ul{padding-left:1.25rem;list-style:disc}
-.content-byline{font-size:.875rem;opacity:.75;border-top:1px solid #89939d44;padding-top:1.25rem}
+.content-byline{font-size:.875rem;opacity:1;border-top:1px solid #89939d44;padding-top:1.25rem}
 .content-next-step{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-top:3rem;padding-bottom:3rem;border-top:1px solid #89939d44}
 .content-next-step h2{font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.15;margin:.75rem 0}
 .content-next-step p{max-width:58ch;line-height:1.75}.content-next-step .brand-button{flex-shrink:0}

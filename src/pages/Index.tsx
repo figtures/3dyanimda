@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import "@/engineering/engineering.css";
 import ModelShowcase from "@/themes/ModelShowcase";
 import HomeHero from "@/themes/HomeHero";
@@ -51,7 +52,7 @@ const services = [
 export default function Index() {
   const b = useBrand();
   const { search } = useLocation();
-  const q = import.meta.env.DEV ? search : "";
+  const q = previewSearch(search);
   const link = (s: string) => s + q;
   const { data: pages = [] } = useContent();
   const img =

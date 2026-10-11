@@ -1,0 +1,77 @@
+{
+  "kind": "responsive encodings of previously reviewed illustrative assets; originals retained",
+  "images": [
+    {
+      "source": "public/brand/industrial/product-prototype.webp",
+      "sourceHash": "e79e4e032b92561587668135507c367d8bbb49fc2e911f9687db2985eaa98181",
+      "file": "public/brand/optimized/product-prototype-768.avif",
+      "width": 768,
+      "height": 512,
+      "bytes": 15261,
+      "sha256": "909803e86f9a35fac379026ff4f8a0022b549485a73fcf9a4af0c121f1dcb20d"
+    },
+    {
+      "source": "public/brand/industrial/product-prototype.webp",
+      "sourceHash": "e79e4e032b92561587668135507c367d8bbb49fc2e911f9687db2985eaa98181",
+      "file": "public/brand/optimized/product-prototype-1536.avif",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 36342,
+      "sha256": "0d81a975486f37d8a4ea5b928e6bc641ac1c79ed464bb00636fa841d09fe0b1b"
+    },
+    {
+      "source": "public/brand/industrial/fixture.webp",
+      "sourceHash": "d82a5f8a7cb98a0cbcc356215b7776022e3a5b6f8e5d47922c700abd28dc4fad",
+      "file": "public/brand/optimized/fixture-768.avif",
+      "width": 768,
+      "height": 512,
+      "bytes": 20893,
+      "sha256": "0c5e3230e0719b0962f385a9b82d9972dbefdf3e106330da2435df24889c19d1"
+    },
+    {
+      "source": "public/brand/industrial/fixture.webp",
+      "sourceHash": "d82a5f8a7cb98a0cbcc356215b7776022e3a5b6f8e5d47922c700abd28dc4fad",
+      "file": "public/brand/optimized/fixture-1536.avif",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 73853,
+      "sha256": "85a3aa9d0688593e2fa79f3249dbe6ed3d749946e2bc2275625fd67338451398"
+    },
+    {
+      "source": "public/brand/industrial/architecture.webp",
+      "sourceHash": "6677827061ffbb0c473d82b13b26e1f55786ad4a45468b3135fe93298268a701",
+      "file": "public/brand/optimized/architecture-768.avif",
+      "width": 768,
+      "height": 512,
+      "bytes": 35374,
+      "sha256": "18690fdbe6bbe872abc8dbbd2840e1125fc35a686aca937dd93614c198255970"
+    },
+    {
+      "source": "public/brand/industrial/architecture.webp",
+      "sourceHash": "6677827061ffbb0c473d82b13b26e1f55786ad4a45468b3135fe93298268a701",
+      "file": "public/brand/optimized/architecture-1536.avif",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 95600,
+      "sha256": "a86431de66162fbfa93cb6a89bb36911ad745c04e0833c3505617df825771855"
+    },
+    {
+      "source": "public/brand/industrial/parts.webp",
+      "sourceHash": "a898621b605190b66fead4c645ac5d52681551ca2b962040f1e367ce596c433c",
+      "file": "public/brand/optimized/parts-768.avif",
+      "width": 768,
+      "height": 512,
+      "bytes": 16508,
+      "sha256": "4456bc47bdd9d6c09ce75992b43cbb7f256e48424bfa94ca22db100649f5584b"
+    },
+    {
+      "source": "public/brand/industrial/parts.webp",
+      "sourceHash": "a898621b605190b66fead4c645ac5d52681551ca2b962040f1e367ce596c433c",
+      "file": "public/brand/optimized/parts-1536.avif",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 64742,
+      "sha256": "286e17cae36caf1399340ff0cf7fe2f7029ff6d3548beecf4b831620ef113f47"
+    }
+  ]
+}

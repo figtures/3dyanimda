@@ -1,6 +1,7 @@
+import { previewSearch } from "@/lib/tenant";
 import ServiceVisual from "./ServiceVisual";
 import { modelsForBrand } from "./models";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowUpRight,
@@ -49,7 +50,19 @@ export function Part({
 }) {
   const brand = useBrand();
   const selected = modelsForBrand(brand.slug)[0];
+  const host = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    if (!host.current) return;
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { setVisible(true); observer.disconnect(); }
+    }, {rootMargin:'100px'});
+    observer.observe(host.current);
+    return () => observer.disconnect();
+  }, []);
   return (
+    <div ref={host} style={{minHeight:320}}>
+    {!visible ? <div className="part-scene scene-loading"><Box size={64} strokeWidth={1} /></div> :
     <Suspense
       fallback={
         <div className="part-scene scene-loading">
@@ -64,7 +77,8 @@ export function Part({
         interactive={interactive}
         fallback={`/brand/industrial/${brand.heroAsset}.webp`}
       />
-    </Suspense>
+    </Suspense>}
+    </div>
   );
 }
 export default function HomeHero() {
@@ -74,7 +88,7 @@ export default function HomeHero() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState("");
-  const q = import.meta.env.DEV ? search : "";
+  const q = previewSearch(search);
   const link = (path: string) => path + q;
   function openStudio(file?: File) {
     if (
@@ -105,14 +119,19 @@ export default function HomeHero() {
     return (
       <>
         <section className="immersive-hero">
+          <picture>
+          {!brand.image && <source type="image/avif" srcSet={`/brand/optimized/${brand.heroAsset}-768.avif 768w, /brand/optimized/${brand.heroAsset}-1536.avif 1536w`} sizes="100vw" />}
           <img
             className="immersive-image"
             src={brand.image || `/brand/industrial/${brand.heroAsset}.webp`}
             alt={brand.heroCaption + " — temsili uygulama"}
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
             width="1536"
             height="1024"
           />
+          </picture>
           <div className="immersive-shade" />
           <div className="wrap immersive-content">
             <div className="theme-overline">

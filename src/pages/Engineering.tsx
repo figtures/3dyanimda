@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, Upload, Box } from "lucide-react";
@@ -24,7 +25,7 @@ const tools = [
 ];
 export default function Engineering() {
   const { pathname, search } = useLocation();
-  const query = import.meta.env.DEV ? search : "";
+  const query = previewSearch(search);
   const [model, setModel] = useState<ModelData>();
   const [filename, setFilename] = useState("");
   const [busy, setBusy] = useState(false);

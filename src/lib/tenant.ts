@@ -30,8 +30,22 @@ export function requestHost(
   }
   return normalized;
 }
+/** Explicitly enrolled private demo only; public domains always resolve by host. */
+export function previewRequestHost(host: string, search: string, enrolledHost?: string) {
+  if (!enrolledHost || normalizeHost(host) !== normalizeHost(enrolledHost)) return undefined;
+  const slug = new URLSearchParams(search).get('tenant') || '3dyanimda';
+  return ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'].includes(slug) ? `${slug}.com` : 'invalid.preview';
+}
+export const isPrivatePreview = Boolean(import.meta.env.VITE_PRIVATE_PREVIEW_HOST && normalizeHost(window.location.hostname) === normalizeHost(import.meta.env.VITE_PRIVATE_PREVIEW_HOST));
+const initialPreview = new URLSearchParams(window.location.search);
+export function previewSearch(search: string) {
+  if (!import.meta.env.DEV && !isPrivatePreview) return '';
+  const params=new URLSearchParams(search);
+  if (isPrivatePreview) for(const key of ['tenant','theme']) if(!params.has(key) && initialPreview.has(key)) params.set(key,initialPreview.get(key)!);
+  return params.size ? '?'+params : '';
+}
 // Keep the resolved host stable during SPA navigation; brand switches use full navigation.
-const initialRequestHost = import.meta.env.VITE_TENANT_HOST || requestHost(
+const initialRequestHost = previewRequestHost(window.location.hostname,window.location.search,import.meta.env.VITE_PRIVATE_PREVIEW_HOST) || import.meta.env.VITE_TENANT_HOST || requestHost(
   window.location.hostname,
   window.location.search,
   import.meta.env.DEV,

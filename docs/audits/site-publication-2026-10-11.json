@@ -1,0 +1,19 @@
+{
+  "id": "appgdep_6acae0480e708191932ac2e81f6c06f6",
+  "project_id": "appgprj_6ac1008a1e8c81918641a135766c065c",
+  "title": "3D Markaları — Tema Demosu",
+  "version_id": "appgprj_6ac1008a1e8c81918641a135766c065c~appgver_81c79a3c49808191bf98508a9525dab6",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://figtures-3d-tema-demo.dev-busraaktas.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6ac1008a1e8c81918641a135766c065c",
+  "failure_message": null,
+  "env_set_revision": 1,
+  "updated_at": "2026-10-11T01:03:22.634300+00:00",
+  "commit_sha": "aaf5a9c0d7e18699c9236a3972acaddb48fc6026",
+  "scope": "Existing owner-private demo; not the four public business domains",
+  "audienceChanged": false,
+  "browserLiveSmoke": false
+}

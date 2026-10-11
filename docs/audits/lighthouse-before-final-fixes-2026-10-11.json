@@ -1,0 +1,1660 @@
+{
+  "kind": "candidate-artifact-lab",
+  "production": false,
+  "fieldData": false,
+  "api": "actual public API; no cached fixtures during measurement",
+  "startedAt": "2026-10-11T00:41:24.470Z",
+  "runs": [
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:41:45.669Z",
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2875.1295,
+        "cumulative-layout-shift": 0.003121996799138369,
+        "total-blocking-time": 13
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.87,
+          "displayValue": "1.9\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.81,
+          "displayValue": "2.9\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.99,
+          "displayValue": "80\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.84,
+          "displayValue": "4.3\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-home-mobile-1.json.gz",
+      "sha256": "35f9bf56ab926b0d6cc8cc27b1bfe8bd9ab81700d1807d2154ec357f317a05ee"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:41:54.165Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.6057,
+        "cumulative-layout-shift": 0.003121996799138369,
+        "total-blocking-time": 32.5
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.99,
+          "displayValue": "1.7\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.95,
+          "displayValue": "110\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.84,
+          "displayValue": "4.4\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-home-mobile-2.json.gz",
+      "sha256": "bdff57a444fd4ddf631573d34f85843f527736bf10fb49f7d64b65d39df91aab"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:42:08.127Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2265.2505,
+        "cumulative-layout-shift": 0.003121996799138369,
+        "total-blocking-time": 54.5
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "displayValue": "2.3\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.93,
+          "displayValue": "120\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.83,
+          "displayValue": "4.4\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-home-mobile-3.json.gz",
+      "sha256": "f799069d3422c40cf4d264092032f1a5e40e823349c9b20651c436a9092fed30"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:42:47.559Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2260.90575,
+        "cumulative-layout-shift": 0.01594278779613733,
+        "total-blocking-time": 17.5
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.98,
+          "displayValue": "1.4\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "displayValue": "2.3\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.98,
+          "displayValue": "80\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.82,
+          "displayValue": "4.5\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dsanayi-home-mobile-1.json.gz",
+      "sha256": "65905decf3b723c26aa83535945ee87a2906acddc11b41f92e53d2917d229dc4"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:48:16.942Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2562.62535,
+        "cumulative-layout-shift": 0.01230686624365205,
+        "total-blocking-time": 48
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.88,
+          "displayValue": "2.6\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.88,
+          "displayValue": "140\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.82,
+          "displayValue": "4.5\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dsanayi-home-mobile-2.json.gz",
+      "sha256": "787e436829ad292465e973f3e75fef80955cf859596eb032582359a772004604"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:48:29.507Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2559.5149499999998,
+        "cumulative-layout-shift": 0.01594278779613733,
+        "total-blocking-time": 20.5
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.88,
+          "displayValue": "2.6\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.98,
+          "displayValue": "90\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.82,
+          "displayValue": "4.5\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dsanayi-home-mobile-3.json.gz",
+      "sha256": "00e37e67bed8e71e35cc33d6827937db6c0f18477273fdf834e51d4f87cd0e0c"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:49:00.871Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2708.99025,
+        "cumulative-layout-shift": 0.02377720678500132,
+        "total-blocking-time": 21
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.85,
+          "displayValue": "2.7\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.97,
+          "displayValue": "90\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.81,
+          "displayValue": "4.6\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 8\u00a0KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/maketyanimda-home-mobile-1.json.gz",
+      "sha256": "2fcce5e1bd4d7b6db92b44d8100cd39d7b8e0d86ef1bdc1e26b594c7066f40b6"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:49:15.227Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2708.83575,
+        "cumulative-layout-shift": 0.02368351732808296,
+        "total-blocking-time": 49.5
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.85,
+          "displayValue": "2.7\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.9,
+          "displayValue": "130\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.8,
+          "displayValue": "4.7\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 8\u00a0KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/maketyanimda-home-mobile-2.json.gz",
+      "sha256": "fc73cc3d00dca19997d3217c58bbd35dd4ec6e91dc37c33ca3d2109144370a0a"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:49:26.975Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 1955.5767,
+        "cumulative-layout-shift": 0.02377720678500132,
+        "total-blocking-time": 32.5
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.97,
+          "displayValue": "2.0\u00a0s"
+        },
+        {
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "displayValue": "2.2\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.95,
+          "displayValue": "110\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.81,
+          "displayValue": "4.6\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 8\u00a0KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/maketyanimda-home-mobile-3.json.gz",
+      "sha256": "162981eed5c8559ddd81df4b5e3d8c5eafc13547126912601e49bd00850800c8"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:49:55.140Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 1830.6782,
+        "cumulative-layout-shift": 0.029409468660251677,
+        "total-blocking-time": 16
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.98,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.79,
+          "displayValue": "170\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.83,
+          "displayValue": "4.5\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/parcayanimda-home-mobile-1.json.gz",
+      "sha256": "7a0660a718dc6e30b33024b611158f870499c5c80274cd300d948ee264e6963a"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:50:02.958Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2404.6257,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 14
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.91,
+          "displayValue": "2.4\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.99,
+          "displayValue": "80\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.83,
+          "displayValue": "4.4\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/parcayanimda-home-mobile-2.json.gz",
+      "sha256": "cd946998277722d10a532ccbd74472a9687d39ab630483bec4de15678735ad17"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:50:16.481Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2411.59695,
+        "cumulative-layout-shift": 0.02907925536873227,
+        "total-blocking-time": 19
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.91,
+          "displayValue": "2.4\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.99,
+          "displayValue": "80\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.83,
+          "displayValue": "4.4\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/parcayanimda-home-mobile-3.json.gz",
+      "sha256": "48a1ac0d9b60886e9f73b2fc3ce371eeb9e1604c2c3fe8ddb0dfb94b5ceb5bca"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:50:45.271Z",
+      "scores": {
+        "performance": 78,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 6076.24835,
+        "cumulative-layout-shift": 0.006020416653151032,
+        "total-blocking-time": 14
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.12,
+          "displayValue": "6.1\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.79,
+          "displayValue": "160\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.63,
+          "displayValue": "6.1\u00a0s"
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 30\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 130\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 85\u00a0KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-3d-baski-mobile-1.json.gz",
+      "sha256": "6eaf2149982e1c9b9a5fdf0f2ba80bd466359362430843c1bb108aa6678ca8d9"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:50:53.152Z",
+      "scores": {
+        "performance": 78,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 6054.1414,
+        "cumulative-layout-shift": 0.006020416653151032,
+        "total-blocking-time": 0
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.12,
+          "displayValue": "6.1\u00a0s"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.63,
+          "displayValue": "6.1\u00a0s"
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 30\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 130\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 85\u00a0KiB"
+        },
+        {
+          "id": "lcp-breakdown-insight",
+          "title": "LCP breakdown",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-3d-baski-mobile-2.json.gz",
+      "sha256": "075b9f6f4e053810c62a96ec2f16b4b14eff3ffaa1cc1a5c43b9f2124f0f261e"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:51:07.660Z",
+      "scores": {
+        "performance": 78,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 5979.6214,
+        "cumulative-layout-shift": 0.006020416653151032,
+        "total-blocking-time": 18
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.13,
+          "displayValue": "6.0\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.78,
+          "displayValue": "170\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.64,
+          "displayValue": "6.0\u00a0s"
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 30\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 130\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 85\u00a0KiB"
+        },
+        {
+          "id": "lcp-breakdown-insight",
+          "title": "LCP breakdown",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-3d-baski-mobile-3.json.gz",
+      "sha256": "e211488382c21064cb6f7150c42e24dbfd3b5c7d7e6e10257558e115b73eedbf"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:51:40.195Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "largest-contentful-paint": 1431.289,
+        "cumulative-layout-shift": 0.01605268537523755,
+        "total-blocking-time": 1.5
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.99,
+          "displayValue": "1.2\u00a0s"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.96,
+          "displayValue": "3.0\u00a0s"
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 30\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 139\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-teklif-al-mobile-1.json.gz",
+      "sha256": "73e6a5ef745b2634768326d9b17757b1a866278c103ba019831b0793fd1e4ed1"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:51:51.568Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "largest-contentful-paint": 1215.8191,
+        "cumulative-layout-shift": 0.01605268537523755,
+        "total-blocking-time": 45.09045000000003
+      },
+      "issues": [
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.95,
+          "displayValue": "110\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.83,
+          "displayValue": "4.5\u00a0s"
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 30\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 139\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-teklif-al-mobile-2.json.gz",
+      "sha256": "6e13e1b0b9487b9c2726e4285c62bc482a9d9c155b58249620522ac7911fb5d2"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:52:10.793Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "largest-contentful-paint": 1204.0818,
+        "cumulative-layout-shift": 0.01605268537523755,
+        "total-blocking-time": 6
+      },
+      "issues": [
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.84,
+          "displayValue": "4.3\u00a0s"
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 30\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 139\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-teklif-al-mobile-3.json.gz",
+      "sha256": "8efb75d11f766cf934598198c74df79852c828ae7062dfcd864669e0156090eb"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:52:30.910Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2258.2268999999997,
+        "cumulative-layout-shift": 0.003121996799138369,
+        "total-blocking-time": 19
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.89,
+          "displayValue": "1.8\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "displayValue": "2.3\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.98,
+          "displayValue": "90\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.84,
+          "displayValue": "4.3\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-home-desktop-1.json.gz",
+      "sha256": "01ca4045e1fd642dcc4ce461087d1a298387feb3f7e2554d44dcc5cfc315f97b"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:52:38.615Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 1973.2926,
+        "cumulative-layout-shift": 0.003121996799138369,
+        "total-blocking-time": 120.5
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.97,
+          "displayValue": "1.4\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.97,
+          "displayValue": "2.0\u00a0s"
+        },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.97,
+          "displayValue": "120\u00a0ms"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.85,
+          "displayValue": "150\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.84,
+          "displayValue": "4.3\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-home-desktop-2.json.gz",
+      "sha256": "9401032d28f1125ea4c9492283863359da2e575578e95e5c27ee6eaec5c0c8b6"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:52:58.400Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.3697,
+        "cumulative-layout-shift": 0.003121996799138369,
+        "total-blocking-time": 15
+      },
+      "issues": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.99,
+          "displayValue": "1.7\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.99,
+          "displayValue": "80\u00a0ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.84,
+          "displayValue": "4.3\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 28\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 128\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": "docs/audits/lighthouse-raw-before-final-fixes-2026-10-11/3dyanimda-home-desktop-3.json.gz",
+      "sha256": "2136d285d442e1deff50adf033b1904dc57f4631636bf188cfa4874564125439"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Real localhost HTTP server with gzip; CDN, public DNS, TLS and production availability are not measured.",
+    "Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.",
+    "Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion."
+  ],
+  "resumedAt": "2026-10-11T00:47:53.261Z",
+  "interruptedRuns": [
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-11T00:43:06.910Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "metrics": {
+        "largest-contentful-paint": 2263.01505,
+        "cumulative-layout-shift": 0.01594278779613733,
+        "total-blocking-time": 17
+      },
+      "issues": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.96,
+          "displayValue": "1.5\u00a0s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "displayValue": "2.3\u00a0s"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.98,
+          "displayValue": "80\u00a0ms"
+        },
+        {
+          "id": "errors-in-console",
+          "title": "Browser errors were logged to the console",
+          "score": 0
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.79,
+          "displayValue": "4.8\u00a0s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 29\u00a0KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0.5,
+          "displayValue": "Est savings of 132\u00a0KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "raw": null,
+      "sha256": null,
+      "invalidation": "Executor transport interrupted public API reads; original raw superseded by validated rerun."
+    }
+  ],
+  "priorErrors": [
+    "TimeoutError: The operation was aborted due to timeout",
+    "TimeoutError: The operation was aborted due to timeout",
+    "TimeoutError: The operation was aborted due to timeout",
+    "TimeoutError: The operation was aborted due to timeout",
+    "TimeoutError: The operation was aborted due to timeout",
+    "TimeoutError: The operation was aborted due to timeout",
+    "TimeoutError: The operation was aborted due to timeout"
+  ],
+  "finishedAt": "2026-10-11T00:53:10.606Z"
+}

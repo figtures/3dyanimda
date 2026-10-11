@@ -4,8 +4,14 @@ import {
   requestHost,
   tenantFetch,
   setTenantId,
+  previewRequestHost,
 } from "@/lib/tenant";
 describe("tenant routing", () => {
+  it('limits private preview selection to the enrolled host and four public brands',()=>{
+    expect(previewRequestHost('preview.example','?tenant=3dsanayi','preview.example')).toBe('3dsanayi.com');
+    expect(previewRequestHost('3dyanimda.com','?tenant=3dsanayi','preview.example')).toBeUndefined();
+    expect(previewRequestHost('preview.example','?tenant=other','preview.example')).toBe('invalid.preview');
+  });
   it("normalizes ports, case and trailing DNS dot", () =>
     expect(normalizeHost("BRAND.EXAMPLE.:8080")).toBe("brand.example"));
   it("does not allow production query strings to select another brand", () =>

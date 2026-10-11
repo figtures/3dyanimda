@@ -1,3 +1,4 @@
+import { isPrivatePreview, previewSearch } from '@/lib/tenant';
 export const themeNames = ["industrial", "editorial", "studio"] as const;
 export type SiteTheme = (typeof themeNames)[number];
 export function isSiteTheme(value: unknown): value is SiteTheme {
@@ -22,8 +23,8 @@ export function getSiteTheme(brand: string, search = ""): SiteTheme {
   return resolveTheme(
     import.meta.env.VITE_SITE_THEME,
     overrides[brand],
-    import.meta.env.DEV
-      ? new URLSearchParams(search).get("theme") || undefined
+    (import.meta.env.DEV || isPrivatePreview)
+      ? new URLSearchParams(previewSearch(search)).get("theme") || undefined
       : undefined,
   );
 }

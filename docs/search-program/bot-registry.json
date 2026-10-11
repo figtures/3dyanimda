@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "lastCheckedDate": "2026-10-10",
+  "baseSourceCommit": "8d5a169",
+  "scope": {
+    "brands": [
+      "3dyanimda",
+      "3dsanayi",
+      "maketyanimda",
+      "parcayanimda"
+    ],
+    "documentationOnly": true,
+    "productionDeploymentVerified": false
+  },
+  "existing_generated_policy": {
+    "source": "scripts/search/discovery.mjs",
+    "userAgent": "*",
+    "allow": [
+      "/"
+    ],
+    "disallow": [
+      "/admin",
+      "/studio",
+      "/api/",
+      "/auth/"
+    ],
+    "decision": "preserve_existing_policy",
+    "newVendorSpecificRules": false,
+    "interpretation": "Default public crawl permission; no independent business or legal approval is inferred. Rules are crawl preferences, not authentication or authorization.",
+    "knownBoundaryCases": {
+      "/api": "allowed_by_robots",
+      "/auth": "allowed_by_robots",
+      "/administrator": "disallowed_by_prefix",
+      "/studio-old": "disallowed_by_prefix"
+    },
+    "otherArtifacts": [
+      {
+        "source": "public/robots.txt",
+        "disallow": [
+          "/admin",
+          "/studio"
+        ],
+        "note": "Development/static fallback differs from generated deployment robots; not evidence of deployed policy."
+      },
+      {
+        "source": "deploy/worker.mjs",
+        "note": "Preview mode serves Disallow: / and noindex. Preview restrictions must remain intact."
+      }
+    ],
+    "legalApproval": null,
+    "marketingApproval": null,
+    "securityApproval": null
+  },
+  "ownership": {
+    "accountablePerson": null,
+    "backupPerson": null,
+    "vendorReviewCadenceApproved": null,
+    "incidentResponseSlaApproved": null
+  },
+  "productionEvidence": {
+    "deployedRobotsSnapshots": null,
+    "edgeRulesSnapshot": null,
+    "originParityChecks": null,
+    "edgeLogSamples": null,
+    "verifiedVendorTrafficBaseline": null,
+    "multiRegionPropagationChecks": null,
+    "spoofResistanceTest": null,
+    "socialPreviewValidation": null
+  },
+  "verificationMethods": {
+    "google_ip_or_forward_confirmed_reverse_dns": "Use the correct current vendor IP feed, or PTR lookup with the documented hostname suffix and forward DNS resolving back to the original source IP. Record timestamp and result.",
+    "official_ip_feed_and_token": "Compare a trusted edge-recorded source IP to the current matching vendor CIDRs and classify the user-agent token. Save feed retrieval time/hash. A token alone is spoofable. IP identity is separate from permission.",
+    "no_separate_http_agent": "Treat this as a robots product control, not a network actor. Do not fabricate a dedicated IP range or user-agent hit.",
+    "vendor_verification_pending": "Keep requests unverified until a current primary identity method or independently trusted edge verification is available. A local curl with a chosen token tests response parity only."
+  },
+  "sources": {
+    "googlebot": {
+      "url": "https://developers.google.com/search/docs/crawling-indexing/googlebot",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "google_common": {
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "google_verification": {
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "openai": {
+      "url": "https://developers.openai.com/api/docs/bots",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "anthropic": {
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "perplexity": {
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "meta": {
+      "url": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+      "status": "retrieval_blocked",
+      "detail": "Official page returned HTTP 429. Current tokens, purposes and robots exceptions are not certified by this review.",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "meta_legacy": {
+      "url": "https://developers.facebook.com/docs/sharing/webmasters/crawler/",
+      "status": "retrieval_failed",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "linkedin_sharing": {
+      "url": "https://www.linkedin.com/help/linkedin/answer/a521928",
+      "status": "retrieved",
+      "detail": "Confirms Open Graph sharing metadata and image accessibility, not crawler IP verification or token mapping.",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "linkedin_token": {
+      "url": "https://www.linkedin.com/help/recruiter/answer/a6547297",
+      "status": "retrieved",
+      "detail": "Documents LinkedInBot for a Teams/Graph integration; does not establish social preview identity or an IP list.",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "x_cards": {
+      "url": "https://developer.x.com/en/docs/x-for-websites/cards/guides/getting-started",
+      "status": "redirected_to_generic_docs",
+      "resolvedUrl": "https://docs.x.com/overview",
+      "detail": "Current destination does not document Twitterbot behavior. Legacy knowledge is not treated as current verification.",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "x_cards_legacy": {
+      "url": "https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/troubleshooting-cards",
+      "status": "redirected_to_generic_docs",
+      "resolvedUrl": "https://docs.x.com/overview",
+      "lastCheckedDate": "2026-10-10"
+    },
+    "rfc9309": {
+      "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+      "status": "retrieved",
+      "lastCheckedDate": "2026-10-10"
+    }
+  },
+  "bots": [
+    {
+      "token": "Googlebot",
+      "vendor": "Google",
+      "purposeCategory": "search",
+      "purpose": "Crawling for Google Search.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "googlebot",
+        "google_verification"
+      ],
+      "robotsBehavior": "honors_robots_for_automatic_crawls",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "google_ip_or_forward_confirmed_reverse_dns",
+        "officialIpFeed": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json",
+        "feedRetrievalStatus": "retrieved",
+        "observedVerifiedRequest": null,
+        "notes": "Match the relevant Google crawler class; do not treat a user-agent string alone as identity."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "Google-Extended",
+      "vendor": "Google",
+      "purposeCategory": "training_and_grounding_control",
+      "purpose": "Product control for future Gemini training and specified Gemini/Vertex grounding; does not control Google Search inclusion or ranking.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "google_common"
+      ],
+      "robotsBehavior": "robots_product_control",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "no_separate_http_agent",
+        "officialIpFeed": null,
+        "feedRetrievalStatus": null,
+        "observedVerifiedRequest": null,
+        "notes": "No separate HTTP user agent exists. Existing Google crawlers fetch content. Verify their identities separately; a Google-Extended log count is not a valid metric."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "OAI-SearchBot",
+      "vendor": "OpenAI",
+      "purposeCategory": "search",
+      "purpose": "Discovery for ChatGPT search results.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "openai"
+      ],
+      "robotsBehavior": "robots_search_control",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://openai.com/searchbot.json",
+        "feedRetrievalStatus": "retrieved",
+        "observedVerifiedRequest": null,
+        "notes": null
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "GPTBot",
+      "vendor": "OpenAI",
+      "purposeCategory": "training",
+      "purpose": "Collects content that may be used for foundation-model training.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "openai"
+      ],
+      "robotsBehavior": "robots_training_control",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://openai.com/gptbot.json",
+        "feedRetrievalStatus": "retrieved",
+        "observedVerifiedRequest": null,
+        "notes": null
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "ChatGPT-User",
+      "vendor": "OpenAI",
+      "purposeCategory": "user_triggered",
+      "purpose": "Fetches for certain user actions; not an automatic web crawler or Search inclusion control.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "openai"
+      ],
+      "robotsBehavior": "user_triggered_robots_may_not_apply",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://openai.com/chatgpt-user.json",
+        "feedRetrievalStatus": "retrieval_failed",
+        "observedVerifiedRequest": null,
+        "notes": "Feed is documented by OpenAI; this review could not retrieve it. Do not substitute GPTBot ranges."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "ClaudeBot",
+      "vendor": "Anthropic",
+      "purposeCategory": "training",
+      "purpose": "Collects potential model-training content.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "anthropic"
+      ],
+      "robotsBehavior": "honors_robots",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://claude.com/crawling/bots.json",
+        "feedRetrievalStatus": "retrieved",
+        "observedVerifiedRequest": null,
+        "notes": null
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "Claude-SearchBot",
+      "vendor": "Anthropic",
+      "purposeCategory": "search",
+      "purpose": "Indexes content to improve search responses.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "anthropic"
+      ],
+      "robotsBehavior": "honors_robots",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://claude.com/crawling/bots.json",
+        "feedRetrievalStatus": "retrieved",
+        "observedVerifiedRequest": null,
+        "notes": null
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "Claude-User",
+      "vendor": "Anthropic",
+      "purposeCategory": "user_triggered",
+      "purpose": "Retrieves content in response to user queries.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "anthropic"
+      ],
+      "robotsBehavior": "honors_robots",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://claude.com/crawling/bots.json",
+        "feedRetrievalStatus": "retrieved",
+        "observedVerifiedRequest": null,
+        "notes": "Anthropic documents robots compliance for its bots, including this user-directed token; do not generalize other vendors' exceptions."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "PerplexityBot",
+      "vendor": "Perplexity",
+      "purposeCategory": "search",
+      "purpose": "Surfaces and links websites in search, not foundation-model training.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "perplexity"
+      ],
+      "robotsBehavior": "robots_search_control",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://www.perplexity.com/perplexitybot.json",
+        "feedRetrievalStatus": "retrieved_after_redirect",
+        "observedVerifiedRequest": null,
+        "notes": "Feed currently resolves to https://www.perplexity.ai/perplexitybot.json."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "Perplexity-User",
+      "vendor": "Perplexity",
+      "purposeCategory": "user_triggered",
+      "purpose": "Retrieves a page for a user query; not training collection.",
+      "purposeVerification": "primary_source_verified",
+      "officialSourceIds": [
+        "perplexity"
+      ],
+      "robotsBehavior": "user_triggered_generally_ignores_robots",
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "official_ip_feed_and_token",
+        "officialIpFeed": "https://www.perplexity.com/perplexity-user.json",
+        "feedRetrievalStatus": "retrieved_after_redirect",
+        "observedVerifiedRequest": null,
+        "notes": "Feed currently resolves to https://www.perplexity.ai/perplexity-user.json."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "facebookexternalhit",
+      "vendor": "Meta",
+      "purposeCategory": "social_preview_candidate",
+      "purpose": "Candidate token for social link previews; current primary-source behavior remains unverified.",
+      "purposeVerification": "primary_source_retrieval_blocked",
+      "officialSourceIds": [
+        "meta",
+        "meta_legacy"
+      ],
+      "robotsBehavior": null,
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "vendor_verification_pending",
+        "officialIpFeed": null,
+        "feedRetrievalStatus": null,
+        "observedVerifiedRequest": null,
+        "notes": "Official documentation was unavailable. Do not infer an IP allowlist, robots compliance, or policy for other Meta tokens from this entry."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "LinkedInBot",
+      "vendor": "LinkedIn",
+      "purposeCategory": "social_preview_candidate",
+      "purpose": "LinkedIn sharing requires readable Open Graph metadata/images; this review did not verify that this token uniquely identifies preview requests.",
+      "purposeVerification": "sharing_requirements_verified_token_mapping_unverified",
+      "officialSourceIds": [
+        "linkedin_sharing",
+        "linkedin_token"
+      ],
+      "robotsBehavior": null,
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "vendor_verification_pending",
+        "officialIpFeed": null,
+        "feedRetrievalStatus": null,
+        "observedVerifiedRequest": null,
+        "notes": "Token is documented for another LinkedIn integration. No preview-specific IP verification source or robots guarantee was established."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    },
+    {
+      "token": "Twitterbot",
+      "vendor": "X",
+      "purposeCategory": "social_preview_candidate",
+      "purpose": "Candidate token for X link cards; current primary-source crawler behavior remains unverified.",
+      "purposeVerification": "primary_source_content_unavailable",
+      "officialSourceIds": [
+        "x_cards",
+        "x_cards_legacy"
+      ],
+      "robotsBehavior": null,
+      "accessDecision": "preserve_existing_wildcard_public_allow_and_private_path_exclusions",
+      "policyRef": "existing_generated_policy",
+      "verification": {
+        "method": "vendor_verification_pending",
+        "officialIpFeed": null,
+        "feedRetrievalStatus": null,
+        "observedVerifiedRequest": null,
+        "notes": "Official legacy Cards URLs redirect to generic documentation. No current IP verification or robots guarantee established."
+      },
+      "lastCheckedDate": "2026-10-10",
+      "legalApproval": null,
+      "marketingApproval": null,
+      "edgeLogEvidence": null
+    }
+  ],
+  "reviewGaps": [
+    "Meta current official crawler documentation was blocked during retrieval; all behavioral statements remain unverified.",
+    "X legacy Cards documentation redirected to generic docs; current Twitterbot behavior remains unverified.",
+    "LinkedIn social preview requirements are verified, but preview token/IP mapping and robots handling are unverified.",
+    "ChatGPT-User IP feed is referenced by official documentation but could not be retrieved in this review.",
+    "No legal/marketing purpose approval, production edge access, real bot sample, current error baseline or operational owner assignment was supplied."
+  ]
+}

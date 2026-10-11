@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Box, Layers, ScanLine, Download } from "lucide-react";
@@ -12,7 +13,7 @@ export default function ModelShowcase() {
     [mode, setMode] = useState<"solid" | "wire" | "points">("solid");
   const stage = useRef<HTMLDivElement>(null);
   const model = models[index],
-    q = import.meta.env.DEV ? search : "";
+    q = previewSearch(search);
   return (
     <section className="showcase-section wrap" aria-labelledby="showcase-title">
       <div className="showcase-heading">
@@ -68,7 +69,7 @@ export default function ModelShowcase() {
             <a
               href={`/models/${model.id}.glb`}
               download
-              aria-label={`${model.material} örnek GLB dosyasını indir`}
+              aria-label={`Örnek modeli indir: ${model.material} (GLB)`}
             >
               <Download size={15} /> Örnek modeli indir
             </a>

@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import {useEffect,useState} from 'react';
 import {Link,NavLink,useLocation} from 'react-router-dom';
 import {ArrowUpRight,Box,ChevronDown,Layers3,Menu,ScanLine,Printer,ArrowRight} from 'lucide-react';
@@ -15,7 +16,7 @@ export default function BrandNavigation(){
  const [expanded,setExpanded]=useState(false);const [mobile,setMobile]=useState(false);
  const extra=useNavItems('header_extra').filter(i=>i.url.startsWith('/')&&!i.url.startsWith('//'));
  const wordmark=resolveMediaUrl(brand.settings.logo_wordmark?.url);
- const link=(path:string)=>path+(import.meta.env.DEV?location.search:'');
+ const link=(path:string)=>path+previewSearch(location.search);
  useEffect(()=>{setExpanded(false);setMobile(false)},[location.pathname,location.search]);
  useEffect(()=>{const mq=window.matchMedia('(min-width: 1100px)');const close=()=>{setMobile(false);setExpanded(false)};mq.addEventListener('change',close);return()=>mq.removeEventListener('change',close)},[]);
  const logo=<Link to={link('/')} className="product-wordmark" aria-label={brand.name+' anasayfa'}>{wordmark?<img src={wordmark} alt={brand.name}/>:<><Box size={27} strokeWidth={1.5}/><span>{brand.name}</span></>}</Link>;

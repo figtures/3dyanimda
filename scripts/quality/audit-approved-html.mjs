@@ -31,7 +31,7 @@ const inspectIdentity=(document,origin,route)=>{
  const organizationBlocks=schemas.flatMap(s=>s['@graph']||[]).filter(s=>s['@type']==='Organization');
  if(organizationBlocks.length>1)complementaryGraphs.push({url:origin+route,organizationBlocks:organizationBlocks.length,distinctOrganizationIds:organizations.length,conflictingProperties:0,verifiedIdentityComplete:true});
  assert.ok(!JSON.stringify(schemas).includes('https://3dyaninda.com'),'No inherited source-brand schema');
- return schemas;
+ return schemas.flatMap(schema=>schema['@graph']||[schema]);
 };
 async function collectHTML(dir,prefix=''){
  const files=[];
@@ -100,5 +100,5 @@ for(const brand of selected){
 }
 const complete=selected.length===allBrands.length;
 const report={result:complete?'pass':'partial_scope_pass',reviewType:'AI-assisted static verification of real public API HTML exports',testedAt:new Date().toISOString(),releaseSourceHash:certificate.sourceHash,publicationManifestHash:publication.manifestHash,brands:results,structuredDataSemantics:{source:'https://www.w3.org/TR/json-ld11/#embedding-json-ld-in-html-documents',rule:'JSON-LD blocks in one HTML document form one dataset. Same-ID fields are combined, with every overlapping property required to agree; verified identity must remain complete.',complementaryGraphs,regressionTests:4},totals:{approvedLandingRoutes:results.reduce((sum,row)=>sum+row.approvedLandingRoutes,0),indexEligibleHTML:results.reduce((sum,row)=>sum+row.indexEligibleHTML,0),noindexUtilityHTML:results.reduce((sum,row)=>sum+row.noindexUtilityHTML,0)},checks:['all approved landing routes present','one h1 and exact authored titles/content','canonical domain','index robots for discovery pages','owner-confirmed contact and one physical workshop schema','visible FAQ/structured-data parity','all manifest hashes match actual HTML','sitemap and search-manifest exact URL parity','six legal utilities reachable/noindex/excluded from discovery','404 noindex page','Worker approved mode and exact assets path','no Pages redirect file shadowing Worker routes'],limitations:['Verifies generated local artifacts, not deployed URLs.','No Cloudflare upload, DNS, TLS, Search Console indexing, GA4 receipt or transactional email is claimed.','Legal utility pages retain the honest unpublished-document state and are excluded from discovery.']};
-const output=complete?'docs/audits/approved-html-export-2026-10-08.json':'/tmp/approved-html-export-partial.json';
+const output=complete?`docs/audits/approved-html-export-${new Date().toISOString().slice(0,10)}.json`:'/tmp/approved-html-export-partial.json';
 await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('Report: '+output);

@@ -4,8 +4,9 @@ import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { loadBrandConfig } from './config.mjs';
 const [action,brand]=process.argv.slice(2);
-if(!['build','check','deploy'].includes(action)) throw new Error('Usage: node scripts/cloudflare/brand.mjs build|check|deploy <brand>');
+if(!['build','check','export','deploy'].includes(action)) throw new Error('Usage: node scripts/cloudflare/brand.mjs build|check|export|deploy <brand>');
 const config=loadBrandConfig(brand);
+const release=['export','deploy'].includes(action);
 const workspace=path.resolve('.cloudflare',brand);
 const assets=path.join(workspace,'assets');
 const configFile=path.join(workspace,'wrangler.json');
@@ -16,12 +17,12 @@ const run=(file,args,env=process.env)=>{
  const result=spawnSync(process.execPath,[file,...args],{stdio:'inherit',env});
  if(result.status!==0) throw new Error('Command failed: '+path.basename(file));
 };
-if(action==='deploy') run('scripts/quality/release-preflight.mjs',[]);
+if(release) run('scripts/quality/release-preflight.mjs',[]);
 await mkdir(workspace,{recursive:true});
 await build({envDir:false,define:Object.fromEntries(Object.entries(publicEnv).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:assets,emptyOutDir:true}});
 let directory=assets;
 let previousManifest;
-if(action==='deploy') {
+if(release) {
  try {
    const old=await fetch('https://'+config.domain+'/search-manifest.json',{redirect:'error',signal:AbortSignal.timeout(10000)});
    if(old.ok){const data=await old.json();if(data.origin!=='https://'+config.domain)throw new Error('Previous manifest origin mismatch.');previousManifest=path.join(workspace,'previous-search-manifest.json');await writeFile(previousManifest,JSON.stringify(data));}
@@ -36,13 +37,16 @@ if(action==='deploy') {
 const wrangler={name:config.name,main:path.resolve('deploy/worker.mjs'),compatibility_date:'2026-10-03',
  workers_dev:true,preview_urls:false,
  assets:{directory,binding:'ASSETS',run_worker_first:true,not_found_handling:'none'},
- vars:{SITE_DOMAIN:config.domain,BRAND_SLUG:brand,RELEASE_MODE:action==='deploy'?'approved':'preview'},
- ...(config.customDomain && action==='deploy'?{routes:[{pattern:config.domain,custom_domain:true}]}:{})};
+ vars:{SITE_DOMAIN:config.domain,BRAND_SLUG:brand,RELEASE_MODE:release?'approved':'preview'},
+ ...(config.customDomain && release?{routes:[{pattern:config.domain,custom_domain:true}]}:{})};
 await writeFile(configFile,JSON.stringify(wrangler,null,2)+'\n');
 // Validate the actual exported HTML, discovery files and approved Worker config
 // before any upload; a successful browser render alone is not the final gate.
-if(action==='deploy') run('scripts/quality/audit-approved-html.mjs',[brand]);
-if(action==='build') console.log(`Built ${brand}; config: .cloudflare/${brand}/wrangler.json (not deployed)`);
+if(release) {
+ run('scripts/quality/audit-approved-html.mjs',[brand]);
+ run('scripts/quality/audit-search-contracts.mjs',[directory]);
+}
+if(action==='build' || action==='export') console.log(`Built ${brand}; config: .cloudflare/${brand}/wrangler.json (not deployed)`);
 else run('node_modules/wrangler/bin/wrangler.js',['deploy','--config',configFile,...(action==='check'?['--dry-run','--outdir',path.join(workspace,'dry-run')]:[])],{...process.env,...config.credentials,CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV:'false',WRANGLER_SEND_METRICS:'false'});
 if(action==='deploy' && config.indexNowKey) {
  run('scripts/search/submit-indexnow.mjs',[directory,'--submit'],{...process.env,INDEXNOW_KEY:config.indexNowKey,...(previousManifest?{PREVIOUS_SEARCH_MANIFEST:previousManifest}:{}),INDEXNOW_RECEIPT_PATH:path.join(workspace,'indexnow-receipt.json')});

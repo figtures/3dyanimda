@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useBrand } from "@/brands/config";
@@ -41,7 +42,7 @@ export default function BrandServices() {
               <p>{desc}</p>
               <Link
                 className="text-link"
-                to={`/teklif-al${import.meta.env.DEV ? search : ""}`}
+                to={`/teklif-al${previewSearch(search)}`}
               >
                 Projenizi paylaşın <ArrowUpRight size={16} />
               </Link>

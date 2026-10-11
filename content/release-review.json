@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-08T16:11:34.076506+00:00",
+  "reviewedAt": "2026-10-11T00:55:52.862026+00:00",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
-  "sourceFileCount": 361,
+  "sourceHash": "32eab1ae1a0749edafc7d139a75b17d8e0f0f215bee3a34bdc9860542917b096",
+  "sourceFileCount": 389,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -32,7 +32,9 @@
     "reviewedRemotePayloadMatches": 796,
     "historicalReconciledRenderCases": 5136,
     "currentRuntimeCases": 192,
-    "modelSelectionCases": 36
+    "modelSelectionCases": 36,
+    "deltaRuntimeCases": 375,
+    "deltaReview": "docs/audits/final-delta-review-2026-10-11.json"
   },
   "evidence": [
     {
@@ -78,19 +80,48 @@
     {
       "file": "docs/audits/reviewed-assets-2026-10-08.json",
       "sha256": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036"
+    },
+    {
+      "file": "docs/audits/candidate-render-2026-10-11.json",
+      "sha256": "96b59bbc4d828cc11f88fe60cde0930910006790a53549bcc65a9818bf56c448"
+    },
+    {
+      "file": "docs/audits/candidate-final-delta-2026-10-11.json",
+      "sha256": "4588d3df7789125c239e52b67e42806998f9f45792c0edd894d0ef522a5319b9"
+    },
+    {
+      "file": "docs/audits/final-delta-review-2026-10-11.json",
+      "sha256": "386be0680c1c070445c1d780f460748e6f112028baad46c39035fea29f666262"
+    },
+    {
+      "file": "docs/audits/social-card-assets-2026-10-11.json",
+      "sha256": "9a20eff81aa79254e17f863ee8a90a36a29a7056238ef46be478a2636e7c9cfb"
+    },
+    {
+      "file": "docs/audits/hero-encoding-2026-10-11.json",
+      "sha256": "9c047f718bc81d8eda0e4b0322b54a1424c0ab45db3dd54e12ea04eee2c15b18"
+    },
+    {
+      "file": "docs/audits/font-optimization-2026-10-11.json",
+      "sha256": "0703fc6b075317af1f31ec998a2faef1c748c3abf994e550305d2858ba6ab594"
+    },
+    {
+      "file": "content/authoring/source-register.json",
+      "sha256": "ba607c34b4216ed4dd1448c7048e24096b1197d64c719681f94993699881c886"
     }
   ],
   "limitations": [
     "This is an actual AI review under explicit owner delegation; no human reviewer attestation is claimed.",
     "Full inventory automated checks and prior rendered evidence were reconciled; targeted semantic full-text review covers 28 routes and 185 flagged technical/safety sentences, as itemized in the content report.",
     "Asset originality is assessed within the brand-network inventory and documented generation records; no web-wide uniqueness or legal exclusivity guarantee.",
-    "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception."
+    "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception.",
+    "The 11 October review carries forward unchanged original content/assets and adds 375 targeted rendered cases plus isolated bootstrap tests; it does not relabel historical 5136 cases as a fresh full crawl."
   ],
   "remainingOperationalItems": [
-    "Cloudflare account/domain deployment access",
-    "Actual legal documents and registered operator identity",
-    "Mail provider/sender configuration, Edge Functions and notification schedule",
-    "GA4 enhanced measurement settings/live receipt; other brand analytics and search verification",
-    "Live quote/upload/email and public HTTP/robots/sitemap checks"
+    "Cloudflare account/domain deployment and real HTTP checks",
+    "Legal operator identity and publishable legal documents",
+    "EmailJS credentials, worker secret, notification schedule and delivery proof (worker code deployed)",
+    "Search Console/Bing ownership, GA4 live receipt and other brand analytics",
+    "Independent GEO observations, production monitoring and required human protocol sign-offs"
   ]
 }

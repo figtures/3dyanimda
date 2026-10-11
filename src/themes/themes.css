@@ -1713,3 +1713,12 @@
 .brand-site .content-article figcaption{padding:12px 2px;font-size:11px;color:var(--muted);line-height:1.5}
 @media(max-width:600px){.brand-site .service-card-index{min-height:82px;padding:20px}.brand-site .service-card-index>span:first-child{font-size:40px}.brand-site .content-article figure{border-radius:12px;margin-bottom:28px}}
 @media(prefers-reduced-motion:reduce){.brand-site .service-card{transition:none}.brand-site .service-card:hover{transform:none}}
+
+/* Small secondary labels retain AA contrast on the light industrial surface. */
+.theme-industrial .service-strip a div span,
+.theme-industrial .strip-num,
+.theme-industrial .application-list > a > span { color: #526570; }
+
+/* Readable secondary instructions on the warm industrial surfaces. */
+.theme-industrial .studio-empty p,
+.theme-industrial .quote-studio .text-slate-500 { color:#475b6d; }

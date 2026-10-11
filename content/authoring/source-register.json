@@ -1,0 +1,897 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-source-register-not-human-approval",
+  "researchedOn": "2026-10-10",
+  "review": {
+    "reviewerType": "AI",
+    "independentHumanReview": false,
+    "technicalExpertSignoff": false,
+    "legalSignoff": false,
+    "publicationApproval": false,
+    "changesAllowed": "Register and review report only; existing content, timestamps and publication states are unchanged."
+  },
+  "inventory": {
+    "mergeOrder": [
+      "src/content/pages.json",
+      "src/content/editorial-pages.json",
+      "src/content/search-pages.json"
+    ],
+    "effectiveRecords": 796,
+    "countsByKind": {
+      "service": 12,
+      "solution": 20,
+      "material": 24,
+      "guide": 52,
+      "location": 656,
+      "sector": 32
+    },
+    "countsByStatus": {
+      "published": 144,
+      "draft": 652
+    },
+    "recordsWithAnyEditorialSources": 676,
+    "sourceFiles": [
+      {
+        "path": "src/content/pages.json",
+        "recordCount": 788,
+        "sha256": "a7b2caff3e7c94c41fa0786fa5f581d7c981371da92d2a471c49fc635178a3f3"
+      },
+      {
+        "path": "src/content/editorial-pages.json",
+        "recordCount": 124,
+        "sha256": "1058930e40715f7633462cf6012d3ca0e1eaea49f29c94d5f371643a58473a9b"
+      },
+      {
+        "path": "src/content/search-pages.json",
+        "recordCount": 20,
+        "sha256": "336e268976c4a344cd32ca840664790c91062ad54c9710711aa6db59e11e77ca"
+      }
+    ]
+  },
+  "sourceUrlPolicy": "URLs were opened during research. Use verified section anchors where available; otherwise the exact article URL plus named section is recorded. No unobserved fragment IDs are invented. PDF page fragments are one-based viewer page numbers, not printed page labels.",
+  "sources": [
+    {
+      "id": "prusa-pla",
+      "title": "PLA",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/pla_2062",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Basic info",
+          "url": "https://help.prusa3d.com/article/pla_2062",
+          "anchorVerified": false
+        },
+        {
+          "title": "Description",
+          "url": "https://help.prusa3d.com/article/pla_2062",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "PLA is used for form/concept models and quick prototypes with limited demands on heat, chemicals and mechanical performance."
+      ],
+      "limitations": [
+        "General manufacturer guidance is not the technical data sheet for the actual filament used by the workshop.",
+        "Does not verify workshop equipment, stock, prices, production capacity, tolerances, turnaround or finished-part suitability.",
+        "No nozzle/bed temperature or broad material-property number may become a guaranteed service temperature or finished-part rating.",
+        "Do not turn this into a universal maximum service temperature, automotive approval, biodegradability claim or food-contact suitability."
+      ]
+    },
+    {
+      "id": "prusa-petg",
+      "title": "PETG",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/petg_2059",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Description",
+          "url": "https://help.prusa3d.com/article/petg_2059",
+          "anchorVerified": false
+        },
+        {
+          "title": "Tips for successful printing",
+          "url": "https://help.prusa3d.com/article/petg_2059",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "PETG is a candidate for mechanical prototypes; additives and processing affect the printed result.",
+        "The guide discusses layer bonding and perimeter settings; more infill alone is not a complete performance specification."
+      ],
+      "limitations": [
+        "General manufacturer guidance is not the technical data sheet for the actual filament used by the workshop.",
+        "Does not verify workshop equipment, stock, prices, production capacity, tolerances, turnaround or finished-part suitability.",
+        "No nozzle/bed temperature or broad material-property number may become a guaranteed service temperature or finished-part rating.",
+        "The source does not validate snap-fit force, sealing, optical clarity, original-part equivalence or a specific chemical exposure."
+      ]
+    },
+    {
+      "id": "prusa-abs",
+      "title": "ABS",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/abs_2058",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Basic info",
+          "url": "https://help.prusa3d.com/article/abs_2058",
+          "anchorVerified": false
+        },
+        {
+          "title": "Description",
+          "url": "https://help.prusa3d.com/article/abs_2058",
+          "anchorVerified": false
+        },
+        {
+          "title": "Tips for successful printing → Shrinkage",
+          "url": "https://help.prusa3d.com/article/abs_2058",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "Warping and cooling shrinkage matter for ABS process planning; a test object can be compared with the digital model."
+      ],
+      "limitations": [
+        "General manufacturer guidance is not the technical data sheet for the actual filament used by the workshop.",
+        "Does not verify workshop equipment, stock, prices, production capacity, tolerances, turnaround or finished-part suitability.",
+        "No nozzle/bed temperature or broad material-property number may become a guaranteed service temperature or finished-part rating.",
+        "Its broad shrinkage example is not the workshop tolerance. Do not reuse hobby acetone-smoothed examples as a safe finishing procedure or a certification."
+      ]
+    },
+    {
+      "id": "prusa-asa",
+      "title": "ASA",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/asa_1809",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Basic info",
+          "url": "https://help.prusa3d.com/article/asa_1809",
+          "anchorVerified": false
+        },
+        {
+          "title": "Description",
+          "url": "https://help.prusa3d.com/article/asa_1809",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "UV resistance makes ASA a material candidate to assess for outdoor applications."
+      ],
+      "limitations": [
+        "General manufacturer guidance is not the technical data sheet for the actual filament used by the workshop.",
+        "Does not verify workshop equipment, stock, prices, production capacity, tolerances, turnaround or finished-part suitability.",
+        "No nozzle/bed temperature or broad material-property number may become a guaranteed service temperature or finished-part rating.",
+        "No claim of a specific outdoor lifespan, color stability, automotive homologation, ingress-protection rating or whole-assembly durability is supported."
+      ]
+    },
+    {
+      "id": "prusa-flex",
+      "title": "Flexible materials",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/flexible-materials_2057",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Description",
+          "url": "https://help.prusa3d.com/article/flexible-materials_2057",
+          "anchorVerified": false
+        },
+        {
+          "title": "Tips for successful printing",
+          "url": "https://help.prusa3d.com/article/flexible-materials_2057",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "Flexible filaments vary in hardness; perimeter and infill choices influence the balance between flexibility and mechanical behavior."
+      ],
+      "limitations": [
+        "General manufacturer guidance is not the technical data sheet for the actual filament used by the workshop.",
+        "Does not verify workshop equipment, stock, prices, production capacity, tolerances, turnaround or finished-part suitability.",
+        "No nozzle/bed temperature or broad material-property number may become a guaranteed service temperature or finished-part rating.",
+        "No universal Shore number, chemical-resistance rating, compression-set limit, anti-slip behavior or sealing/pressure suitability is supported."
+      ]
+    },
+    {
+      "id": "prusa-pa",
+      "title": "Polyamide (Nylon)",
+      "publisher": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/polyamide-nylon_167188",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Description",
+          "url": "https://help.prusa3d.com/article/polyamide-nylon_167188",
+          "anchorVerified": false
+        },
+        {
+          "title": "Tips for successful printing → Keep the filament dry",
+          "url": "https://help.prusa3d.com/article/polyamide-nylon_167188",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "Polyamide is hygroscopic; storage and drying are process considerations."
+      ],
+      "limitations": [
+        "General manufacturer guidance is not the technical data sheet for the actual filament used by the workshop.",
+        "Does not verify workshop equipment, stock, prices, production capacity, tolerances, turnaround or finished-part suitability.",
+        "No nozzle/bed temperature or broad material-property number may become a guaranteed service temperature or finished-part rating.",
+        "Do not generalize a drying schedule to every PA grade, PC, reinforced polymer, printer or finished part. Carbon-fiber availability is not established."
+      ]
+    },
+    {
+      "id": "nist-matex-pc-2020",
+      "title": "AMB2018-03: Benchmark Physical Property Measurements for Material Extrusion Additive Manufacturing of Polycarbonate",
+      "publisher": "NIST",
+      "url": "https://www.nist.gov/publications/amb2018-03-benchmark-physical-property-measurements-material-extrusion-additive",
+      "kind": "primary-research",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Abstract",
+          "url": "https://www.nist.gov/publications/amb2018-03-benchmark-physical-property-measurements-material-extrusion-additive",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "This polycarbonate experiment documents directional mechanical behavior, interfacial bonding and process-related changes in tensile properties."
+      ],
+      "limitations": [
+        "Direct evidence concerns tested polycarbonate material-extrusion specimens. Application to other polymers is a bounded engineering inference, not a measured result for every filament.",
+        "Does not give the workshop a strength rating, certified tolerance or equivalence to injection-molded ABS."
+      ],
+      "publishedYear": 2020,
+      "doi": "10.1007/s40192-020-00188-y"
+    },
+    {
+      "id": "nist-am-program",
+      "title": "Measurement Science for Additive Manufacturing Program",
+      "publisher": "NIST",
+      "url": "https://www.nist.gov/programs-projects/measurement-science-additive-manufacturing-program",
+      "kind": "government-research-overview",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Summary; Description → What is the Problem?",
+          "url": "https://www.nist.gov/programs-projects/measurement-science-additive-manufacturing-program",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "General context for additive-manufacturing variability and the importance of material, machine, process and part qualification."
+      ],
+      "limitations": [
+        "Much of the detailed research program concerns metal AM.",
+        "A program overview does not directly substantiate each local fixture example, process parameter or workshop capability."
+      ]
+    },
+    {
+      "id": "autodesk-stl-export",
+      "title": "3D print a design",
+      "publisher": "Autodesk",
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-3D-PRINT.htm",
+      "kind": "official-software-documentation",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Export to a 3MF, STL, or OBJ file",
+          "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-3D-PRINT.htm#export-to-a-3mf-stl-or-obj-file",
+          "anchorVerified": true
+        }
+      ],
+      "supportedScope": [
+        "STL is a unitless triangulated surface format. Unit choice and mesh refinement settings should be checked in the export workflow."
+      ],
+      "limitations": [
+        "Fusion documentation describes its software behavior; it is not proof of a complete mesh, physical tolerance or another application’s exact export behavior."
+      ]
+    },
+    {
+      "id": "autodesk-mesh-tools",
+      "title": "Mesh modify tools",
+      "publisher": "Autodesk",
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm",
+      "kind": "official-software-documentation",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Convert Mesh",
+          "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm#convert-mesh",
+          "anchorVerified": true
+        },
+        {
+          "title": "Reduce; Erase And Fill",
+          "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "Fusion provides operations to reduce mesh face count, fill holes and convert a mesh to a solid or surface body."
+      ],
+      "limitations": [
+        "Creating a watertight mesh or filling a hole does not recover the true missing geometry.",
+        "A converted solid is not necessarily a meaningful design-history model, and software operations do not validate physical accuracy."
+      ]
+    },
+    {
+      "id": "artec-reverse-engineering",
+      "title": "What is reverse engineering?",
+      "publisher": "Artec 3D",
+      "url": "https://www.artec3d.com/learning-center/what-reverse-engineering",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Scanning with structured light; Scan processing, CAD design, and additive manufacturing; CAD design work",
+          "url": "https://www.artec3d.com/learning-center/what-reverse-engineering",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "Structured-light capture produces a polygon mesh that can serve as a reference for a subsequent CAD modeling step."
+      ],
+      "limitations": [
+        "This manufacturer article does not establish the workshop’s scanner brand, accuracy, scan time or ability to inspect internal features.",
+        "Do not use the article’s legal/IP discussion as Turkish legal advice or an authorization to reproduce parts.",
+        "Internal scanning with CT is a separate technology and is not an established workshop service."
+      ]
+    },
+    {
+      "id": "artec-leo-surfaces",
+      "title": "How to 3D scan with Artec Leo: The complete guide",
+      "publisher": "Artec 3D",
+      "url": "https://www.artec3d.com/learning-center/how-3d-scan-leo",
+      "kind": "manufacturer-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "Before you scan: object, environment, technique → Check the object; Check the environment; Scanning technique",
+          "url": "https://www.artec3d.com/learning-center/how-3d-scan-leo",
+          "anchorVerified": false
+        }
+      ],
+      "supportedScope": [
+        "Surface appearance, object stability and access around the object affect optical scanning preparation. Reflective and transparent surfaces can be challenging."
+      ],
+      "limitations": [
+        "Operational distances, angles, scan error values and HD-mode claims apply to Artec Leo; the workshop’s scanner model is unknown.",
+        "Do not infer that spray is safe for a customer object. Surface-treatment suitability and permission must be considered for the actual object.",
+        "Do not promise that every shiny, transparent or hidden feature can be captured."
+      ]
+    },
+    {
+      "id": "fda-am-medical-2017",
+      "title": "Technical Considerations for Additive Manufactured Medical Devices",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/technical-considerations-additive-manufactured-medical-devices",
+      "kind": "official-regulatory-technical-guidance",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [
+        {
+          "title": "VI.E Removing Manufacturing Material Residues and Sterilization (printed p.25; PDF p.29)",
+          "url": "https://www.fda.gov/media/97633/download#page=29",
+          "anchorVerified": true
+        },
+        {
+          "title": "VI.F Biocompatibility (printed p.27; PDF p.31)",
+          "url": "https://www.fda.gov/media/97633/download#page=31",
+          "anchorVerified": true
+        }
+      ],
+      "supportedScope": [
+        "The guidance calls for evaluation of final-device cleaning/sterilization and biocompatibility; material naming alone is insufficient evidence of clinical suitability."
+      ],
+      "limitations": [
+        "This is nonbinding U.S. medical-device guidance issued in December 2017, not a statement of current Turkish law.",
+        "It does not certify this business, any of its services, or a particular part.",
+        "Clinical scope, classification, local legal requirements and current device-specific standards require qualified human review."
+      ],
+      "publishedDate": "2017-12",
+      "jurisdiction": "United States; technical background only for this Turkish project"
+    },
+    {
+      "id": "owner-service-facts",
+      "title": "Owner-confirmed service facts",
+      "publisher": "Business owner",
+      "url": null,
+      "kind": "first-party-owner-record",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [],
+      "supportedScope": [
+        "Cargo, courier and collection; cargo to other cities; 3D scanning including on-site service; appointment required before visiting the Örnek Mahallesi workshop."
+      ],
+      "limitations": [
+        "No carrier, delivery price, turnaround, travel radius, scanner model or accuracy was confirmed."
+      ],
+      "localFile": "content/authoring/business-service-facts.json",
+      "ownerRecordTimestamp": "2026-10-07T20:48:02+03:00"
+    },
+    {
+      "id": "owner-contact-facts",
+      "title": "Owner-confirmed business contact",
+      "publisher": "Business owner",
+      "url": null,
+      "kind": "first-party-owner-record",
+      "accessedOn": "2026-10-10",
+      "verification": "AI read the official source; no independent human review",
+      "sections": [],
+      "supportedScope": [
+        "info@3dyanimda.com; +905364488230; one workshop at Örnek Mahallesi, Bestekar Sokak No: 17, Ataşehir / İstanbul."
+      ],
+      "limitations": [
+        "No opening hours, postal code, coordinates, WhatsApp availability or registered legal operator/tax identity was confirmed.",
+        "A geographic service page is not evidence of another workshop or local branch."
+      ],
+      "localFile": "content/authoring/confirmed-business-contact.json",
+      "ownerRecordTimestamp": "2026-10-08T18:50:50+03:00"
+    }
+  ],
+  "claims": [
+    {
+      "id": "pla-form-prototype",
+      "statement": "PLA can be considered for form prototypes; geometric fit is not final thermal or mechanical approval.",
+      "sourceIds": [
+        "prusa-pla"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/malzemeler/pla"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dyanimda",
+          "path": "/malzemeler/pla",
+          "field": "sections[0].body",
+          "currentExcerpt": "PLA; form modelleri ve sunum numuneleri için değerlendirilen bir seçenektir."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "petg-grade-process",
+      "statement": "Evaluate the actual PETG grade and print geometry/process against the part’s function.",
+      "sourceIds": [
+        "prusa-petg"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/malzemeler/petg"
+        }
+      ],
+      "examples": [],
+      "notes": [
+        "The source is general background; it does not validate every individual brand-specific fit or surface sentence."
+      ]
+    },
+    {
+      "id": "abs-warp-shrink",
+      "statement": "ABS planning should allow for warping/shrinkage and sample measurement.",
+      "sourceIds": [
+        "prusa-abs"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/malzemeler/abs"
+        }
+      ],
+      "examples": [],
+      "notes": [
+        "Use the specific ABS article in place of the broad material index. Current detailed pages mostly use design checks; do not append numeric shrinkage or temperature values."
+      ]
+    },
+    {
+      "id": "outdoor-asa-candidate",
+      "statement": "ASA may be considered for outdoor applications; life and assembly performance require actual product data and tests.",
+      "sourceIds": [
+        "prusa-asa"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/malzemeler/asa"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dyanimda",
+          "path": "/malzemeler/asa",
+          "field": "sections[0].body",
+          "currentExcerpt": "ASA dış ortam adayları arasında değerlendirilse de belirli kullanım ömrü veya renk kararlılığı için gerçek malzeme verisi ve test kapsamı gerekir."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "flex-grade-hardness",
+      "statement": "Flexible-filament hardness and print construction must be considered together.",
+      "sourceIds": [
+        "prusa-flex"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/malzemeler/tpu"
+        }
+      ],
+      "examples": [],
+      "notes": [
+        "Do not turn support for flexibility into sealing, anti-slip, chemical or pressure suitability."
+      ]
+    },
+    {
+      "id": "nylon-moisture",
+      "statement": "Moisture control is relevant when selecting and processing polyamide.",
+      "sourceIds": [
+        "prusa-pa"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/malzemeler/muhendislik-polimerleri"
+        }
+      ],
+      "examples": [],
+      "notes": [
+        "Only the polyamide portion is supported; PC, composite grades and workshop production capability need specific data."
+      ]
+    },
+    {
+      "id": "orientation-and-process",
+      "statement": "Direction and processing can affect material-extrusion mechanical behavior.",
+      "sourceIds": [
+        "nist-matex-pc-2020"
+      ],
+      "risk": "high",
+      "status": "supported-with-scope-limits",
+      "scope": "primary-polycarbonate-evidence-with-explicit-cross-material-inference",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/rehber/aparat-malzeme-secimi"
+        },
+        {
+          "brand": "*",
+          "path": "/rehber/otomotiv-plastik-parca-malzeme"
+        },
+        {
+          "brand": "*",
+          "path": "/malzemeler/muhendislik-polimerleri"
+        },
+        {
+          "brand": "*",
+          "path": "/malzemeler/abs"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dsanayi",
+          "path": "/rehber/aparat-malzeme-secimi",
+          "field": "sections[2].body",
+          "currentExcerpt": "Katmanlı parçanın yükü hangi yönde aldığı önemlidir."
+        }
+      ],
+      "notes": [
+        "NIST tested polycarbonate; it supports caution about transferring properties, not an ABS-specific strength figure."
+      ]
+    },
+    {
+      "id": "infill-not-whole-spec",
+      "statement": "Infill alone does not describe part construction; perimeter and process choices also matter.",
+      "sourceIds": [
+        "prusa-petg",
+        "prusa-flex"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/rehber/aparat-malzeme-secimi"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dsanayi",
+          "path": "/rehber/aparat-malzeme-secimi",
+          "field": "faq[1].a",
+          "currentExcerpt": "Tek başına garanti etmez. Duvar düzeni, geometri, yük yönü ve bağlantı tasarımı birlikte değerlendirilmelidir."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "stl-unit-refinement",
+      "statement": "Check units and mesh refinement when exporting/importing STL.",
+      "sourceIds": [
+        "autodesk-stl-export"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/rehber/stl-dosya-hazirlama"
+        },
+        {
+          "brand": "*",
+          "path": "/rehber/teklif-icin-dosya-hazirlama"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dyanimda",
+          "path": "/rehber/stl-dosya-hazirlama",
+          "field": "editorial.answer",
+          "currentExcerpt": "STL dosyalarında ölçü birimi bilgisi her iş akışında korunmayabilir."
+        }
+      ],
+      "notes": [
+        "The source is more precise: STL itself is unitless. A future authorized editorial revision could state that directly; this register does not alter the current text."
+      ]
+    },
+    {
+      "id": "scan-versus-cad",
+      "statement": "Surface acquisition/mesh processing and CAD remodeling are different steps.",
+      "sourceIds": [
+        "artec-reverse-engineering",
+        "autodesk-mesh-tools"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/3d-tarama"
+        },
+        {
+          "brand": "*",
+          "path": "/rehber/tarama-verisinden-cad"
+        },
+        {
+          "brand": "*",
+          "path": "/rehber/tarama-ve-tersine-muhendislik"
+        },
+        {
+          "brand": "*",
+          "path": "/rehber/kirik-parca-yeniden-uretim"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dyanimda",
+          "path": "/3d-tarama",
+          "field": "sections[1].body",
+          "currentExcerpt": "Elde edilen yüzeyin doğrudan görüntülenmesi ile düzenlenebilir bir tasarım referansına dönüştürülmesi ayrı işlemlerdir."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "optical-surface-access",
+      "statement": "Optical scanning preparation depends on surface, stability and access.",
+      "sourceIds": [
+        "artec-leo-surfaces"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "pathSuffix": "/3d-tarama"
+        }
+      ],
+      "examples": [],
+      "notes": [
+        "Review the exact paragraph before applying. This selector identifies candidates; it does not assert support for every scanning page."
+      ]
+    },
+    {
+      "id": "medical-final-device-evidence",
+      "statement": "Clinical, biocompatibility and sterilization claims need evidence for the final device and applicable scope.",
+      "sourceIds": [
+        "fda-am-medical-2017"
+      ],
+      "risk": "high",
+      "status": "supported-with-scope-limits",
+      "scope": "technical-background-only-not-Turkish-legal-opinion",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "path": "/sektorler/medikal"
+        }
+      ],
+      "examples": [
+        {
+          "brand": "3dsanayi",
+          "path": "/sektorler/medikal",
+          "field": "faq[0].a",
+          "currentExcerpt": "Sterilite, hasta teması veya biyouyumluluk gereksinimi ayrıca tanımlanmış süreç ve kanıt ister."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "qualification-context",
+      "statement": "General AM variability and qualification background only.",
+      "sourceIds": [
+        "nist-am-program"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "general-technical-guidance",
+      "pageSelectors": [
+        {
+          "existingSourceUrl": "https://www.nist.gov/programs-projects/measurement-science-additive-manufacturing-program"
+        }
+      ],
+      "examples": [],
+      "notes": [
+        "81 existing occurrences are context links, not proof of the local fixture scenarios. Do not label them direct verification of all page claims."
+      ]
+    },
+    {
+      "id": "owner-delivery-onsite",
+      "statement": "Only the owner-confirmed delivery, scanning and appointment facts are established.",
+      "sourceIds": [
+        "owner-service-facts"
+      ],
+      "risk": "medium",
+      "status": "supported-with-scope-limits",
+      "scope": "owner-confirmed-business-facts",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "operationalFields": [
+            "logistics",
+            "evidence"
+          ]
+        }
+      ],
+      "examples": [],
+      "notes": []
+    },
+    {
+      "id": "owner-contact-one-workshop",
+      "statement": "Use one workshop identity and the confirmed email and telephone across all brands.",
+      "sourceIds": [
+        "owner-contact-facts"
+      ],
+      "risk": "high",
+      "status": "supported-with-scope-limits",
+      "scope": "owner-confirmed-business-facts",
+      "pageSelectors": [
+        {
+          "brand": "*",
+          "operationalFields": [
+            "contact",
+            "address",
+            "localBusinessSchema"
+          ]
+        }
+      ],
+      "examples": [],
+      "notes": []
+    }
+  ],
+  "openEvidenceRequirements": [
+    {
+      "id": "actual-material-grades",
+      "required": "Supplier, exact product/grade, current TDS/SDS revision, conditioning and actual process evidence before quantitative performance claims."
+    },
+    {
+      "id": "equipment-and-capability",
+      "required": "Owner/equipment records for scanner model, measurement uncertainty, print processes, build envelope, tolerances and qualified stock."
+    },
+    {
+      "id": "regulated-critical-use",
+      "required": "Qualified human review for medical, food contact, pressure/sealing, electrical/fire, lifting/guarding, automotive safety, aviation and defense claims. Jurisdiction and actual intended use must be identified."
+    },
+    {
+      "id": "legal-identity",
+      "required": "Owner-verified registered operator and applicable legal notices; no inferred identity or legal approval."
+    },
+    {
+      "id": "price-availability",
+      "required": "Current owner-approved commercial evidence for prices, stock, lead times, courier coverage and any SLA."
+    },
+    {
+      "id": "ip-rights",
+      "required": "Rights/permission evidence for customer-supplied designs and reproduction where applicable; manufacturer marketing is not legal clearance."
+    },
+    {
+      "id": "independent-human-review",
+      "required": "A named competent reviewer and genuine review evidence, if the release gate requires independent human approval. This AI register cannot satisfy that gate."
+    }
+  ],
+  "automationRecommendations": [
+    {
+      "id": "claim-linked-citations",
+      "action": "Store sourceIds and claimIds separately from generic page links; display citations close to only the supported statement or in a clearly scoped source note."
+    },
+    {
+      "id": "source-scope-lint",
+      "action": "Validate all referenced source IDs, HTTPS URLs, named sections, supported scope, limitations and date. Never satisfy claim evidence merely because a source list is nonempty."
+    },
+    {
+      "id": "risk-claim-preflight",
+      "action": "Flag new numeric units, currency, delivery-time promises, certification/approval, clinical/food/critical-use and stock language. Review negation and context before marking a violation."
+    },
+    {
+      "id": "no-false-freshness",
+      "action": "Access dates belong to the register; never overwrite authored reviewed_at, updated_at, publication state or human approval with this research date."
+    },
+    {
+      "id": "first-party-schema-guard",
+      "action": "Build organization/local schema from owner-confirmed records; prevent branch, hours, rating, price, certification and stock inference from geographic or manufacturer links."
+    },
+    {
+      "id": "source-review-expiry",
+      "action": "Recheck source applicability when a technical claim or material grade changes; commercial facts require separate owner confirmation. Automated link health is not a technical re-review."
+    }
+  ],
+  "auditObservations": {
+    "method": "Automated patterns over all effective content and authoring JSON, followed by AI contextual review of higher-risk matches and recurring claims; not independent human review.",
+    "affirmativeNumericPerformancePriceLeadTimeCertificationGuaranteesIdentified": 0,
+    "illustrativeUnitPatternMatches": 4,
+    "illustrativeUnitMatchScope": [
+      "maketyanimda /rehber/maket-olcek-planlama FAQ question: 300 mm",
+      "maketyanimda /rehber/mimari-maket-olcek-secimi comparison rows: 60 cm, 30 cm, 15 cm"
+    ],
+    "existingBroadIndexMaterialPages": 8,
+    "existingNistProgramCitationOccurrences": 81,
+    "existingAutodeskMeshOverviewCitationOccurrences": 82,
+    "publishedRecordsWithoutEditorialSourceLinks": 120,
+    "caveat": "Absence of matched promises is a bounded audit finding, not proof of exhaustive compliance. Citations do not verify all sentences on a page."
+  }
+}

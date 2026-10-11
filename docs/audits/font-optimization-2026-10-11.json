@@ -1,0 +1,39 @@
+{
+  "kind": "lossless glyph subset; original licensed fonts retained",
+  "fonts": [
+    {
+      "source": "public/fonts/inter-latin-ext-wght-normal.woff2",
+      "subset": "public/fonts/inter-latin-ext-wght-normal-tr-v1.woff2",
+      "originalBytes": 85068,
+      "subsetBytes": 3716,
+      "coveredCodepoints": 7,
+      "sha256": "04e5bc9ee365749df135528bb91c358c92a6f2eb3ee198e69774a7afce1af911"
+    },
+    {
+      "source": "public/fonts/inter-latin-wght-normal.woff2",
+      "subset": "public/fonts/inter-latin-wght-normal-tr-v1.woff2",
+      "originalBytes": 48256,
+      "subsetBytes": 30920,
+      "coveredCodepoints": 139,
+      "sha256": "89c1e220d1f9094feb8e02f49a6e88824e0362211d1b7238269dd4b2ac754613"
+    },
+    {
+      "source": "public/fonts/rethink-sans-latin-ext-wght-normal.woff2",
+      "subset": "public/fonts/rethink-sans-latin-ext-wght-normal-tr-v1.woff2",
+      "originalBytes": 16716,
+      "subsetBytes": 3024,
+      "coveredCodepoints": 6,
+      "sha256": "7ba22c654ff28af1bc954030e3cc04c69d05150abb69fe5a8826acfe1cfd6bf7"
+    },
+    {
+      "source": "public/fonts/rethink-sans-latin-wght-normal.woff2",
+      "subset": "public/fonts/rethink-sans-latin-wght-normal-tr-v1.woff2",
+      "originalBytes": 35676,
+      "subsetBytes": 25900,
+      "coveredCodepoints": 134,
+      "sha256": "ed3224f853e498ee06bbbcaaffae3c2de319d90ef6bdb64d9514428c6b765d14"
+    }
+  ],
+  "originalBytes": 185716,
+  "subsetBytes": 63560
+}

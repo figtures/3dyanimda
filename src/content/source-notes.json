@@ -1,0 +1,166 @@
+{
+  "/malzemeler/pla": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "PLA, biçim ve sunum prototipleri için değerlendirilebilir. Prototipte geometrinin uygun görünmesi, son parçanın ısıl veya mekanik kullanım onayı değildir.",
+    "scope": "Genel malzeme bilgisi; kullanılacak ürünün teknik verileri ayrıca değerlendirilir.",
+    "sources": [
+      {
+        "id": "prusa-pla",
+        "title": "Prusa Research — PLA",
+        "url": "https://help.prusa3d.com/article/pla_2062"
+      }
+    ]
+  },
+  "/malzemeler/petg": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "PETG seçiminde yalnızca malzeme adı yeterli değildir; parçanın geometrisi, üretim düzeni ve kullanım koşulları birlikte değerlendirilir.",
+    "scope": "Üretici rehberi genel başvuru içindir; belirli bir parça için performans garantisi oluşturmaz.",
+    "sources": [
+      {
+        "id": "prusa-petg",
+        "title": "Prusa Research — PETG",
+        "url": "https://help.prusa3d.com/article/petg_2059"
+      }
+    ]
+  },
+  "/malzemeler/abs": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "ABS baskı planında çarpılma ve büzülme dikkate alınmalıdır. Montaj ilişkileri numune üzerinden kontrol edilmelidir.",
+    "scope": "Genel baskı davranışı; bu kaynak atölyenin ekipmanını veya parça toleransını belgelemez.",
+    "sources": [
+      {
+        "id": "prusa-abs",
+        "title": "Prusa Research — ABS",
+        "url": "https://help.prusa3d.com/article/abs_2058"
+      }
+    ]
+  },
+  "/malzemeler/asa": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "ASA dış ortam uygulamaları için bir malzeme adayıdır. Belirli kullanım ömrü ve montaj performansı, gerçek ürün verisi ve uygulama testleriyle değerlendirilir.",
+    "scope": "Genel malzeme seçimi; süre veya dayanım taahhüdü değildir.",
+    "sources": [
+      {
+        "id": "prusa-asa",
+        "title": "Prusa Research — ASA",
+        "url": "https://help.prusa3d.com/article/asa_1809"
+      }
+    ]
+  },
+  "/malzemeler/tpu": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "Esnek filamentlerde sertlik sınıfı ve parçanın baskı yapısı birlikte ele alınmalıdır. Esneklik tek başına sızdırmazlık veya basınca uygunluk göstermez.",
+    "scope": "Genel esnek filament bilgisi; belirli TPU sınıfı ve uygulama ayrıca doğrulanır.",
+    "sources": [
+      {
+        "id": "prusa-flex",
+        "title": "Prusa Research — Flexible materials",
+        "url": "https://help.prusa3d.com/article/flexible-materials_2057"
+      }
+    ]
+  },
+  "/malzemeler/muhendislik-polimerleri": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "Poliamid değerlendirmesinde nem koşulları ve malzemenin hazırlanması önemlidir. Farklı mühendislik polimerlerinin özellikleri birbirinin yerine kullanılamaz.",
+    "scope": "Bu kaynak yalnızca poliamid hakkındaki genel bilgiyi destekler; stok veya üretim kapasitesi beyanı değildir.",
+    "sources": [
+      {
+        "id": "prusa-pa",
+        "title": "Prusa Research — Polyamide (Nylon)",
+        "url": "https://help.prusa3d.com/article/polyamide-nylon_167188"
+      }
+    ]
+  },
+  "/rehber/stl-dosya-hazirlama": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "STL biçimi kendi başına ölçü birimi taşımaz. Dışa aktarımda birimi ve ağ inceliğini seçin; teslimde hedef birimi ayrıca belirtin ve bilinen bir ölçüyü kontrol edin.",
+    "scope": "Autodesk Fusion dışa aktarım belgelerine dayanan dosya hazırlama bilgisi.",
+    "sources": [
+      {
+        "id": "autodesk-stl-export",
+        "title": "Autodesk — 3D print a design",
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-3D-PRINT.htm"
+      }
+    ]
+  },
+  "/rehber/teklif-icin-dosya-hazirlama": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "STL biçimi kendi başına ölçü birimi taşımaz. Dışa aktarımda birimi ve ağ inceliğini seçin; teslimde hedef birimi ayrıca belirtin ve bilinen bir ölçüyü kontrol edin.",
+    "scope": "Autodesk Fusion dışa aktarım belgelerine dayanan dosya hazırlama bilgisi.",
+    "sources": [
+      {
+        "id": "autodesk-stl-export",
+        "title": "Autodesk — 3D print a design",
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-3D-PRINT.htm"
+      }
+    ]
+  },
+  "/3d-tarama": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "Taramadan elde edilen yüzey ağı ile düzenlenebilir CAD modelinin hazırlanması ayrı iş adımlarıdır. Teslim beklentisi, yüzey verisi ve yeniden modelleme kapsamı olarak açıkça belirtilmelidir.",
+    "scope": "Genel iş akışı açıklaması; ölçüm doğruluğu veya otomatik dönüşüm garantisi değildir.",
+    "sources": [
+      {
+        "id": "artec-reverse-engineering",
+        "title": "Artec 3D — What is reverse engineering?",
+        "url": "https://www.artec3d.com/learning-center/what-reverse-engineering"
+      },
+      {
+        "id": "autodesk-mesh-tools",
+        "title": "Autodesk — Mesh modify tools",
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm"
+      }
+    ]
+  },
+  "/rehber/tarama-verisinden-cad": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "Taramadan elde edilen yüzey ağı ile düzenlenebilir CAD modelinin hazırlanması ayrı iş adımlarıdır. Teslim beklentisi, yüzey verisi ve yeniden modelleme kapsamı olarak açıkça belirtilmelidir.",
+    "scope": "Genel iş akışı açıklaması; ölçüm doğruluğu veya otomatik dönüşüm garantisi değildir.",
+    "sources": [
+      {
+        "id": "artec-reverse-engineering",
+        "title": "Artec 3D — What is reverse engineering?",
+        "url": "https://www.artec3d.com/learning-center/what-reverse-engineering"
+      },
+      {
+        "id": "autodesk-mesh-tools",
+        "title": "Autodesk — Mesh modify tools",
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm"
+      }
+    ]
+  },
+  "/rehber/tarama-ve-tersine-muhendislik": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "Taramadan elde edilen yüzey ağı ile düzenlenebilir CAD modelinin hazırlanması ayrı iş adımlarıdır. Teslim beklentisi, yüzey verisi ve yeniden modelleme kapsamı olarak açıkça belirtilmelidir.",
+    "scope": "Genel iş akışı açıklaması; ölçüm doğruluğu veya otomatik dönüşüm garantisi değildir.",
+    "sources": [
+      {
+        "id": "artec-reverse-engineering",
+        "title": "Artec 3D — What is reverse engineering?",
+        "url": "https://www.artec3d.com/learning-center/what-reverse-engineering"
+      },
+      {
+        "id": "autodesk-mesh-tools",
+        "title": "Autodesk — Mesh modify tools",
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm"
+      }
+    ]
+  },
+  "/rehber/kirik-parca-yeniden-uretim": {
+    "revisedAt": "2026-10-11T00:10:00.000Z",
+    "text": "Taramadan elde edilen yüzey ağı ile düzenlenebilir CAD modelinin hazırlanması ayrı iş adımlarıdır. Teslim beklentisi, yüzey verisi ve yeniden modelleme kapsamı olarak açıkça belirtilmelidir.",
+    "scope": "Genel iş akışı açıklaması; ölçüm doğruluğu veya otomatik dönüşüm garantisi değildir.",
+    "sources": [
+      {
+        "id": "artec-reverse-engineering",
+        "title": "Artec 3D — What is reverse engineering?",
+        "url": "https://www.artec3d.com/learning-center/what-reverse-engineering"
+      },
+      {
+        "id": "autodesk-mesh-tools",
+        "title": "Autodesk — Mesh modify tools",
+        "url": "https://help.autodesk.com/cloudhelp/ENU/Fusion-Mesh/files/MESH-MODIFY-TOOLS.htm"
+      }
+    ]
+  }
+}

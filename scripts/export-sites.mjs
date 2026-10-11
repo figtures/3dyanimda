@@ -12,6 +12,8 @@ import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
 import { createPublicApiRelay } from "./public-api-relay.mjs";
+import {inlineCriticalCss} from './quality/critical-css.mjs';
+import {capturePublicBootstrap} from './quality/public-bootstrap.mjs';
 const env = { ...loadEnv("production", process.cwd(), ""), ...process.env };
 const hosts = (env.SITE_HOSTS || "").split(",").filter(Boolean);
 if (
@@ -36,6 +38,7 @@ const mime = {
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".webp": "image/webp",
+  ".avif": "image/avif",
   ".woff2": "font/woff2",
   ".txt": "text/plain",
 };
@@ -181,6 +184,9 @@ try {
       },
     );
     const page = await context.newPage();
+    page.setDefaultTimeout(60000);
+    page.setDefaultNavigationTimeout(60000);
+    const bootstrap=capturePublicBootstrap(page,env.VITE_SUPABASE_URL,host);
     page.on("pageerror", (e) => failed.push(e.message));
     page.on("requestfailed", (r) =>
       failed.push(r.url() + ": " + r.failure()?.errorText),
@@ -195,10 +201,22 @@ try {
     });
     const published = [];
     for (const [url, lastmod] of routes) {
+      bootstrap.clear();
       if (!/^\/[a-z0-9/-]*$/.test(url) || url.includes(".."))
         throw new Error("Unsafe public path");
-      await page.goto(base + url, { waitUntil: "networkidle" });
-      await page.locator("h1").waitFor();
+      // A transient browser/transport timeout must not produce an incomplete
+      // release. Retry once; the second attempt still passes every assertion.
+      for (let attempt=0;attempt<2;attempt++) {
+        try {
+          await page.goto(base + url, { waitUntil: "networkidle" });
+          await page.locator("h1").waitFor();
+          break;
+        } catch(error) {
+          if(attempt===1)throw error;
+          console.warn(`Retrying timed-out render: ${base+url}`);
+          failed.length=0;bootstrap.clear();
+        }
+      }
       if ((await page.locator("h1").innerText()) === "Site henüz hazır değil.")
         throw new Error(
           "Tenant render failed: " +
@@ -225,6 +243,9 @@ try {
       if (failed.length) throw new Error(failed.join("\n"));
       const file = path.join(dest, url.slice(1), "index.html");
       await mkdir(path.dirname(file), { recursive: true });
+      await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});
+      await inlineCriticalCss(page);
+      await bootstrap.embed();
       await writeFile(file, await page.content());
       if (!utilityRoutes.has(url)) {
         const documentData=await page.evaluate(() => ({
@@ -235,7 +256,8 @@ try {
           structuredData:Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(s => s.textContent),
         }));
         const {text,...data}=documentData;
-        published.push({path:url,lastmod,...data,hash:createHash('sha256').update(JSON.stringify(documentData)).digest('hex')});
+        const semanticDate=await page.evaluate(()=>document.querySelector('[data-content-modified]')?.getAttribute('datetime')||null);
+        published.push({path:url,lastmod:semanticDate||lastmod,...data,hash:createHash('sha256').update(JSON.stringify(documentData)).digest('hex')});
       }
     }
     await page.goto(base + "/__missing_public_page", {

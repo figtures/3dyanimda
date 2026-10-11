@@ -75,8 +75,10 @@ Run adapter regression tests:
 node --test supabase/functions/send-quote-email/emailjs.test.mjs
 ```
 
-Current status: implementation and local adapter tests complete; EmailJS account
-configuration, function publication, scheduling and real delivery remain unverified.
+11 October status: implementation and adapter tests complete. `send-quote-email`
+version 1 is ACTIVE in project `zdxjmhhjuomcpdtllnuq`; an invalid worker secret was
+rejected with HTTP 401. EmailJS account credentials, one non-overlapping schedule
+and actual inbox delivery remain unverified. No notification was sent by this check.
 The separate admin-to-customer reply function and Supabase Auth emails are not part
 of inbound form notification routing.
 

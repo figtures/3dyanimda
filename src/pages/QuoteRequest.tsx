@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { useState, useRef, lazy, Suspense } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
@@ -284,7 +285,7 @@ export default function QuoteRequest() {
                   kullanılır.{" "}
                   <Link
                     className="underline"
-                    to={`/gizlilik-politikasi${import.meta.env.DEV ? search : ""}`}
+                    to={`/gizlilik-politikasi${previewSearch(search)}`}
                   >
                     Gizlilik bilgileri
                   </Link>

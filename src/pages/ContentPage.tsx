@@ -1,18 +1,21 @@
+import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
-import { useContent } from "@/content/useContent";
+import { useContent, useContentPage } from "@/content/useContent";
 import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import RegionPlanner from "./RegionPlanner";
 import NotFound from "./NotFound";
 import { getTenantIdentity } from "@/lib/tenant";
 import places from "@/content/places.json";
+import {contentMetaTitle,contentMetaDescription} from '@/content/metadata';
+import {sourceNote,contentModified} from '@/content/source-notes';
 export default function ContentPage() {
   const { pathname, search } = useLocation();
   const b = useBrand();
-  const { data: pages = [], isLoading, isError } = useContent();
-  const p = pages.find((p) => p.path === pathname.replace(/\/$/, ""));
-  const query = import.meta.env.DEV ? search : "";
+  const { data: pages = [] } = useContent();
+  const {data:p,isLoading,isError}=useContentPage(pathname.replace(/\/$/,''));
+  const query = previewSearch(search);
   if (isLoading)
     return (
       <div className="brand-inner" role="status">
@@ -51,6 +54,8 @@ export default function ContentPage() {
               ? "Hizmet bölgeleri"
               : "Bilgi merkezi";
   const base = getTenantIdentity().origin;
+  const technicalNote=sourceNote(p.path);
+  const modified=contentModified(p.updated_at,p.path);
   const related = pages
     .filter((v) => v.path !== p.path && (p.editorial?.relatedPaths?.includes(v.path) || v.kind === p.kind))
     .sort((a, c) => Number(p.editorial?.relatedPaths?.includes(c.path)) - Number(p.editorial?.relatedPaths?.includes(a.path)))
@@ -67,12 +72,12 @@ export default function ContentPage() {
   return (
     <>
       <Seo
-        title={p.title}
-        description={`${b.name}: ${p.summary}`}
+        title={contentMetaTitle(p)}
+        description={contentMetaDescription(p.summary,b.name)}
         path={p.path}
         image={p.image || undefined}
         type={p.kind === "guide" ? "article" : "website"}
-        modified={p.updated_at}
+        modified={modified}
         keywords={[p.title, b.focus, p.city, p.district, p.neighborhood].filter(Boolean).join(", ")}
         geo={p.city ? {region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ")} : undefined}
         jsonLd={[
@@ -100,7 +105,7 @@ export default function ContentPage() {
               },
             ],
           },
-          ...(p.kind === "guide" ? [{"@context":"https://schema.org","@type":"Article",headline:p.title,description:p.summary,mainEntityOfPage:base+p.path,author:{"@id":base+"/#organization"},publisher:{"@id":base+"/#organization"},...(p.updated_at?{dateModified:p.updated_at}:{}),...(p.image?{image:new URL(p.image,base).href}:{})}] : []),
+          ...(p.kind === "guide" ? [{"@context":"https://schema.org","@type":"Article",headline:p.title,description:p.summary,mainEntityOfPage:base+p.path,author:{"@id":base+"/#organization"},publisher:{"@id":base+"/#organization"},...(modified?{dateModified:modified}:{}),...(p.image?{image:new URL(p.image,base).href}:{})}] : []),
           ...(p.kind === "service"
             ? [
                 {
@@ -162,6 +167,8 @@ export default function ContentPage() {
                 alt={p.title + " temsili uygulama görseli"}
                 width="1000"
                 height="660"
+                loading="lazy"
+                decoding="async"
               />
               <figcaption>Uygulama alanını anlatan temsili görsel.</figcaption>
             </figure>
@@ -207,8 +214,9 @@ export default function ContentPage() {
               ))}
             </section>
           )}
-          {!!p.editorial?.sources?.length && <section className="article-sources"><h2>{p.kind === "location" ? "Bölge ve hizmet kaynakları" : "Teknik başvuru kaynakları"}</h2><ul>{p.editorial.sources.map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
-          {p.updated_at && <p className="content-byline">{b.name} bilgi merkezi · Güncelleme: <time dateTime={p.updated_at}>{new Date(p.updated_at).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"})}</time></p>}
+          {technicalNote && <section className="article-sources" data-source-note><h2>Teknik kaynak notu</h2><p>{technicalNote.text}</p><p>{technicalNote.scope}</p><ul>{technicalNote.sources.map(s=><li key={s.id}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
+          {!!p.editorial?.sources?.length && <section className="article-sources"><h2>{p.kind === "location" ? "Bölge ve hizmet kaynakları" : "Teknik başvuru kaynakları"}</h2><p>Bağlantılar ilgili konu için genel başvuru kaynaklarıdır. İşletmeye özgü kapasite, teslimat süresi veya parça performansını belgelemez.</p><ul>{p.editorial.sources.filter(s=>!technicalNote || !s.url.includes('/category/material-guide_')).map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
+          {modified && <p className="content-byline">{b.name} bilgi merkezi · Güncelleme: <time data-content-modified dateTime={modified}>{new Date(modified).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"})}</time></p>}
         </article>
         <aside className="article-aside">
           <p className="brand-eyebrow">PROJENİZE BAŞLAYALIM</p>

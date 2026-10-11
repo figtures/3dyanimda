@@ -1,0 +1,2953 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-11T00:17:36.952Z",
+  "kind": "real-public-API candidate render",
+  "published": false,
+  "cases": [
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "e5fad297063a3e17553decdf727fb0315621c2557c1d55bdc20c8c8fded18c02",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/hizmetler",
+      "title": "Prototip için 3D baskı, tarama ve modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "4f2f11e6c4527dcc52d79bfc0627ad9e40a2f14d7c784ae4e15a1d6da468cfbd",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/cozumler",
+      "title": "Ürün geliştirme ve küçük seri çözümleri | 3dyanımda",
+      "date": null,
+      "textHash": "069b7c86671b476188f96f5bcafa5887840b1c7a6cb05547d485e3196d33a3eb",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler",
+      "title": "Prototip için 3D baskı malzemeleri | 3dyanımda",
+      "date": null,
+      "textHash": "c12701b35cad94d5fbe9975593a6da911b498ec9de8a89c7551947d92a3a7081",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/rehber",
+      "title": "Prototip ve ürün geliştirme bilgi merkezi | 3dyanımda",
+      "date": null,
+      "textHash": "7997272358d8553b88ffe2bae0d61de818a6e4a780c29f7b50bc5824641f35b9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | 3dyanımda",
+      "date": null,
+      "textHash": "57c6dbf36989473f4af8778a986ef6a8f8f4e299253551cc35815030e2fb2270",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | 3dyanımda",
+      "date": null,
+      "textHash": "b61e5bf4b3d54da410ad3dbc349e39c1bd9236b1580393efdf6e8ecb5a6f7f96",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "title": "İletişim | 3dyanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | 3dyanımda",
+      "date": null,
+      "textHash": "96ce1979598393f7d600d9eac404c921dc054a031333b45ce26aba5c2ae3bfbf",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | 3dyanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’da ürün prototipi ve 3D üretim talebi | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "0db96c4db1713de1de077705f00ef1d183d3dfc77e2288fa83cbae80ff8ed9ea",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul 3D baskı | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "7d6b9f22b2c7109c30cfba80c52ec471406c28d80ccb910b44e162d26bc3a431",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul 3D tarama | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "3fbf056c43e457802e7b0ca33afd1b7f48d36f6247aa1b153ad5325ad27bb975",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul 3D modelleme | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "f6697166b7474525d9241f3c3ac2f563e0a15ffbc19b4d0138a093717785954a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar 3D ürün geliştirme | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "506fd2a1966378822049e254f7dd9c2dc3be0c74be83c81ebc4439fa4f977256",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/pla",
+      "title": "Ürün formu ve ergonomi denemelerinde PLA | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f4456209e18bc00bfc6ada27ea6ba322c181cc66cba12170483dfaa97df2d785",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/petg",
+      "title": "Montaj prototiplerinde PETG değerlendirmesi | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "4f01d2e88c3a595b215a23f0d1a5fd2bec10a8c7661da05885c6fd05542b802a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Ürün gövdesi prototipinde ABS ne zaman konuşulur? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e89ed72da4d6c854b30134a4e8c0c0ea17fa432f824fa26a4f2c5a08248e5788",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/asa",
+      "title": "Dış ortam ürün prototipleri için ASA | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f4b5ee836740a633e884c7f39488c72c10716301b290e1886d904d30c2e7010e",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/tpu",
+      "title": "Yumuşak temas ve kavrama prototipleri için TPU | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "c840569b8d84a55f0a3ce34a0b377cf7c1e1b5188c9d8c154c0102bf7531a596",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Özel performans isteyen prototiplerde malzeme seçimi | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "669e1a1b8d7f768006653715c7268fe0c8f4b912ce6bff3e49f719b9787b2f4a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Ürün prototipi için STL dışa aktarma kontrolü | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ea4f50249d945a4cd898c2c9f2dba12ce4d1507606bc50d4bdd1dfc5e5308dcc",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "İlk prototip talebine hangi dosyalar eklenmeli? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "3117b8f0e070180f41db725a75a4dca9bd5ec2ebeb1b6df6c884c174c48d241f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/3d-tarama",
+      "title": "Ürün referanslarını dijitale taşıyan 3D tarama | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "7934ae94ef55cb595f0b8b4fd63b7a2d57fcb8f5b1d4d8d564721d421c6a4874",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Tarama ağından revizyon yapılabilir ürün modeline | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "4a6a2bedb38110af79bcebc4a887aefeb2a038d6bd26fa63c84ac76fc29f26b9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Ürün yenilemede tarama ile yeniden modelleme arasındaki fark | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "58cc91db43b7e35f0e5ebb5e3f5503ee4fca879b049303af6abae1f0eaf1733e",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dsanayi",
+      "date": null,
+      "textHash": "5020257486726895fd4ec6cc9c3942a33490da70ff326434259aa7f195cae0e9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/hizmetler",
+      "title": "Sanayi için 3D parça ve aparat hizmetleri | 3dsanayi",
+      "date": null,
+      "textHash": "adf687861fe76fd950d8d02d33952c388dd49525b95a6fa008de93272188153f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/cozumler",
+      "title": "Üretim hattına özel aparat çözümleri | 3dsanayi",
+      "date": null,
+      "textHash": "a1994e88b79ceb54a42b78c590bbf2a492482a44ae1c95c28f222406f7310199",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler",
+      "title": "Endüstriyel aparatlarda malzeme seçimi | 3dsanayi",
+      "date": null,
+      "textHash": "99463ee03fd3ea93311f6183d3552238acea01de2c7cea65d7f6f26e9e00fc5a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/rehber",
+      "title": "Aparat, fikstür ve endüstriyel üretim rehberleri | 3dsanayi",
+      "date": null,
+      "textHash": "21a5a37f8af9d535aac7a7e22776f313dc753588822aa8a9a6d5959a3681a14f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | 3dsanayi",
+      "date": null,
+      "textHash": "0660c75c82f57986d12f6732990c0301bcd688b37ed7f967a3f4cfb1ba8903af",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | 3dsanayi",
+      "date": null,
+      "textHash": "b91d163e9d1f5151f9b086624176ac7942c8bc555dcd3dc1911051859995fcf1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dsanayi",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "title": "İletişim | 3dsanayi",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | 3dsanayi",
+      "date": null,
+      "textHash": "482ff71da9635a528e2d4a438a909e803bc3ab1b689ad7623cfbb29a0c11e15c",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | 3dsanayi",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul üretim ekipleri için aparat ve fikstür talebi | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "6d5c6243f76441c44a610c7617deee649caaa74e2a7b9013be5dfe25a6dfee69",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul 3D baskı | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "d91a1dd894fc3df2606ce1c5f174ab37ef6202869ca13afdf6bfe410a28d8b10",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul 3D tarama | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9f68314869bf77780bc74619e631c3513a3dd9a2950382f2aeddbc0df4cf8d57",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul 3D modelleme | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "51b5966bf58edb476703f5ccade092c4f3f826b8f66f383165acef7a6fecc9b4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar 3D üretim talebi | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "b91a5ad6629b2907b300c6ea4be4312cc0ce45081a8c397792dbb15ee3f9bd1b",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/pla",
+      "title": "Fikstür yerleşimini denemek için PLA taslak | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "a0fc85f557567885e5abec4fcbb9e59bc46e6a31044259fb960761278fc5a803",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/petg",
+      "title": "Üretim yardımcılarında PETG için seçim soruları | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e4da847639437fb488fdcde11a716bcf1c16fbeedc57de6e62ac8322aaf47c03",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Atölye gövde ve aparatlarında ABS değerlendirmesi | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f9f53bb72ccba252dbbccd92d63401a92ad82ac07c85dba0fd45243382874470",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/asa",
+      "title": "Dış saha sensör ve muhafazalarında ASA | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "cd7274d958bf9b1d006ab0a1f876440e3b078984d142ecde8fe7709ef6dffba6",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/tpu",
+      "title": "İş parçasına yumuşak temas eden TPU yardımcıları | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9cd5c9b6d47d9ca347635a9e5968dadfe12d9da31e0b6186fd354a73fa1cd11",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Fikstürlerde PA, PC ve takviyeli malzeme kararı | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "a173f94b2839f0010a35f4c359b9fd6f888cfc47108a668086ba4abd694eb3ea",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Aparat STL dosyasında kritik arayüz kontrolü | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "d3bcb465a8268b61e2f6dacd1db0e20e4718e50456a4798b224533d288adee72",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Aparat talebi için saha dosyası nasıl hazırlanır? | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ea3536b1cc9098031653287ba4e4d1d043bd4a9f26cc0001ab4021911e1228d6",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/3d-tarama",
+      "title": "Teknik numune ve aparatların 3D taraması | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "40ec9df4e4be48a415ec404c8efd89e3c2b598c4b7642e172845c0c022f2fb8d",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Aparat referanslarını tarama verisinden kurma | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "803e4533001db1c832afb4b07afe493da019105a2e31b224af1d330e1bebbd73",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Eski fikstürü taramak mı yeniden tasarlamak mı? | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "2dedfa166d4a8da099509d7e11b599b926cc148e40a7848644b73826c9ffa310",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | maketyanımda",
+      "date": null,
+      "textHash": "b8bbe980fc869ad1bf2474f48cfe73b58c0921ab1543ea9be1acc3373b8706c0",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/hizmetler",
+      "title": "Mimari maket için 3D üretim hizmetleri | maketyanımda",
+      "date": null,
+      "textHash": "ddd6e0a27a1b8ee01cfa68c5617faa1613eee63f36e9a8e57bc3e788d4347c5b",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/cozumler",
+      "title": "Mimari proje ve gayrimenkul sunum maketleri | maketyanımda",
+      "date": null,
+      "textHash": "3fa9a425a7de6985e6b2f556cf2ad31bbb380767ca4eafa571d9de6421fd9809",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler",
+      "title": "Maket üretiminde malzeme ve yüzey kararları | maketyanımda",
+      "date": null,
+      "textHash": "2264d7a2a2ba517d1a3ed667be6130b92597a56918ff1bd58b1b58234941be64",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/rehber",
+      "title": "Mimari maket, ölçek ve sunum rehberleri | maketyanımda",
+      "date": null,
+      "textHash": "44138ed8f277e5881a8b8a2aa22b54fb6cd5a9dc21774a1792a15271e74c628c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | maketyanımda",
+      "date": null,
+      "textHash": "767b245d571fe1daf6a1a1bf296cd8cf19e6504d0073fdf23d00a661b8a3c59a",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | maketyanımda",
+      "date": null,
+      "textHash": "2a99a415ecaca41db49a0e7cbe93778eac64a0bb4f2b1e0164d61c7c5a23553c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | maketyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "title": "İletişim | maketyanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | maketyanımda",
+      "date": null,
+      "textHash": "715578a3154baddec8e250d48c6e04692ca607bf485a85ac3d33612efa5ef230",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | maketyanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’daki mimari sunumlar için maket proje planı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "ae2551395187d7e9bf5ee114cc69b30044f7c794eccda3fd39e8f003ba8f80fd",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul — maket için 3D baskı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "fdd6ba3c86587da50a4ea7525ceb67663610441370d1686f6205bf16a9eb2f2d",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul — maket referansı için 3D tarama | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "1e0bf035b1a3efcfa31c68807fe408aa644e05770920b47ff8e9f31008415f5f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul — üretime uygun 3D maket modelleme | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "65aedfe7c2e03d4cb9035fa21982945bc838b7f68b17a3892c6309c452d1276e",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar — maket proje planı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "c88fc7f15c70d0693645b46a50f666ec9a81e1438e3ac4c41531abedaa514202",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/pla",
+      "title": "Mimari kütle ve iç mekân sunumlarında PLA | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "362b859dd62e80dff115b231e75c2fdb94d197a8a14a51638974651f24d7f2de",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/petg",
+      "title": "Maket kapakları ve dayanıklı detaylarda PETG | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "56f2ae997561f7f984c145ffd3b6d036ee631ec5839639842ec437a952c0b45a",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Boyanacak maket bileşenlerinde ABS seçimi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "eabe7176273143d00c5b0617b32e929849102384a79eaf9d1da97f7e042330c1",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/asa",
+      "title": "Açıkta sergilenecek maketler için ASA değerlendirmesi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "878e48589c7d6596496b6317c9f2ac929e9ddbc97fd5fe441be99d2823ff56e0",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/tpu",
+      "title": "Maket taşımada esnek destek ve temas parçaları | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "8cd8a0ca6621234c49699529685d38b1964963cb75af2b3ab8b23f174771ba0f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Maket mekanizmalarında özel polimer ihtiyacı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "8f28bb10c6b858e0e799def1121cbb859afd03633c010300db57ae474fcf7ee3",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Mimari modelin baskı için STL hazırlığı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "7caf0611ddc2e2bf720bec6a4acb961ead09c52dc06bb2a98f06b8464cc72e6c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Mimari maket teklifi için dosya paketi hazırlama | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "bdedb6d28ab1f37e78ab46e49b1102516135a4e6abe2d465d46a2d14beacfd4f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/3d-tarama",
+      "title": "Objelerden ve mimari detaylardan maket referansı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "d8cabdc3df60ccc0c76cff0f5ca398be5f1902a8b16e2095f331d3e3b14d6516",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Mevcut yapı veya maket taramasını sunum modeline dönüştürme | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ed71d2146bc21e2d8e13d80c54471e17433b83e4f815d93ff740552f433ec3c9",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Fiziksel maketi taramak mı dijitalden yeniden kurmak mı? | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "cbcbda40586be3c86913cab2fd7b1172341751082026f477e85610f9141ce757",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | parçayanımda",
+      "date": null,
+      "textHash": "abbdc64657124bff85d2bdb6eae3071e0af4e2cf5eb43cc339de85597e0c2ac4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/hizmetler",
+      "title": "Özel plastik parça için 3D baskı ve modelleme | parçayanımda",
+      "date": null,
+      "textHash": "1974d8ee273ea717d71aeb2234fb49512840bc770154c31ef449de49979ff0cb",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/cozumler",
+      "title": "Kapak, adaptör ve bağlantı parçası çözümleri | parçayanımda",
+      "date": null,
+      "textHash": "42d9781a11b4ae5022e0b6ba85659133bf1f6c2ac79a42a9168849b1b8e399be",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler",
+      "title": "Plastik parçalarda malzeme ve kullanım koşulları | parçayanımda",
+      "date": null,
+      "textHash": "4312b3fdc55026377d676680fd8ada4ac2a63cfc5015ff54103662499d41bd5b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/rehber",
+      "title": "Özel parça üretimi ve montaj uyumu rehberleri | parçayanımda",
+      "date": null,
+      "textHash": "f2e1c01f676e764124cf442974c915ba902befb486ee30f01eb5a362a1ec48a2",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | parçayanımda",
+      "date": null,
+      "textHash": "f8fbc258fde1efd736156c25f5526d8807e504bb4e7fb7ed70ff5e5c5fbc0c83",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | parçayanımda",
+      "date": null,
+      "textHash": "9e1b63edb8198efdf9157bbff78162ec4122aefd73b60f32bfc48f4b8ae61406",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | parçayanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/iletisim",
+      "title": "İletişim | parçayanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | parçayanımda",
+      "date": null,
+      "textHash": "48f2e1ce827e929f4707dc973bd2ce9c3f1d54de58ef21838e17eac149b26a2c",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | parçayanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’da kırık veya eksik plastik parça değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "3cfc759203942a513a9ca890997eebc1d39b81ab18bcbfdcf5992b17a61cdb1e",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul özel plastik parça baskısı | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "369b016f1e957de92cfce6107b1dd40a5a4d5515dc677cd7b4892142f41f8199",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul yedek parça taraması | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "83edb9f6ee26231897c2a936d93ad698227f38ec25d72e39b1247de4e48a65f4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul özel parça modelleme | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "fbd1581bc4139c344c230edef8c53cd3da6d5ed8a9a636b086aeef8e42be00e1",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar Özel parça değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "32d0fd3032f77f29532ab7cb82d1018042c9a9e340ca8eb0f989f1d8e73ac8e4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/pla",
+      "title": "Yedek parçada ölçü kontrolü için PLA numune | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "5fcd31ca207f20a2742e37ccd2d09d0c7b94a80f15eecaeccb1b4f78a6619b0b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/petg",
+      "title": "Özel kapak ve yardımcı bağlantılarda PETG | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9e796aad1c327b4a27df0e681b8609d0d7106029d45c2d8873031df5a295a64",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "86e771e5d4193e66d0b0070d9ca144fad2808a49da51247b0bf631b599480c4b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/asa",
+      "title": "Dışarıda kullanılan plastik parçalarda ASA | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "819d171aeed2b6bbbca12713836773cfb23a889e695196d311e5e1db47e30f64",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/tpu",
+      "title": "Esnek kapak, ayak ve temas elemanlarında TPU | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "66921b70c80361c762a4d677c337e40dd78ad97563ea12b3a2bfd626f48ccebd",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Zorlayıcı kullanımda özel parça malzemesi nasıl seçilir? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "95cae51b084cbf50794dc29bfdfbca2877d8317b295fc8c9435e0b2900852f1e",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "İndirilen yedek parça STL dosyasını kontrol etme | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9b2d7dca92c624a58975e29205a7e70f62fa30c4f4a5b8fb8238275e5228640",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Kırık veya kayıp parça için ilk talep nasıl hazırlanır? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ce8fffa56357788e729ce2be7317863db090b2424f103013fc41681188174026",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/3d-tarama",
+      "title": "Yedek parça numunesinden dijital referans | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "64aa3b47b5f95463a78a1943c4716d4af084c28b46100df745c29e46cd118ab4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Aşınmış numuneden sağlam bağlantı geometrisi kurma | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "dd9a0f5ce083a30a1874d9850b21f0bb0f58c71d0ce1ac76e7231d54d7ab5699",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Kırık parçayı taramak eksik kısmı tamamlar mı? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "5ee46fc05c4138da4bedcb0db24205278371b1f7f953f0d3b8396b614f1b56d7",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/rehber/kirik-parca-yeniden-uretim",
+      "title": "Kırık plastik parça yeniden nasıl üretilir? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "677125628e1dd52aac3ed28a512d056d45839454f73496f9d1ddb5b2c14283bc",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "8518e797038d9232b121ed26067597ed55f8df8ee8111f26ee727c0d9210f5ba",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/hizmetler",
+      "title": "Prototip için 3D baskı, tarama ve modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "4f2f11e6c4527dcc52d79bfc0627ad9e40a2f14d7c784ae4e15a1d6da468cfbd",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/cozumler",
+      "title": "Ürün geliştirme ve küçük seri çözümleri | 3dyanımda",
+      "date": null,
+      "textHash": "069b7c86671b476188f96f5bcafa5887840b1c7a6cb05547d485e3196d33a3eb",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler",
+      "title": "Prototip için 3D baskı malzemeleri | 3dyanımda",
+      "date": null,
+      "textHash": "c12701b35cad94d5fbe9975593a6da911b498ec9de8a89c7551947d92a3a7081",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/rehber",
+      "title": "Prototip ve ürün geliştirme bilgi merkezi | 3dyanımda",
+      "date": null,
+      "textHash": "7997272358d8553b88ffe2bae0d61de818a6e4a780c29f7b50bc5824641f35b9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | 3dyanımda",
+      "date": null,
+      "textHash": "57c6dbf36989473f4af8778a986ef6a8f8f4e299253551cc35815030e2fb2270",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | 3dyanımda",
+      "date": null,
+      "textHash": "b61e5bf4b3d54da410ad3dbc349e39c1bd9236b1580393efdf6e8ecb5a6f7f96",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "title": "İletişim | 3dyanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | 3dyanımda",
+      "date": null,
+      "textHash": "96ce1979598393f7d600d9eac404c921dc054a031333b45ce26aba5c2ae3bfbf",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | 3dyanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’da ürün prototipi ve 3D üretim talebi | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "0db96c4db1713de1de077705f00ef1d183d3dfc77e2288fa83cbae80ff8ed9ea",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul 3D baskı | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "7d6b9f22b2c7109c30cfba80c52ec471406c28d80ccb910b44e162d26bc3a431",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul 3D tarama | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "3fbf056c43e457802e7b0ca33afd1b7f48d36f6247aa1b153ad5325ad27bb975",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul 3D modelleme | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "f6697166b7474525d9241f3c3ac2f563e0a15ffbc19b4d0138a093717785954a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar 3D ürün geliştirme | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "506fd2a1966378822049e254f7dd9c2dc3be0c74be83c81ebc4439fa4f977256",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/pla",
+      "title": "Ürün formu ve ergonomi denemelerinde PLA | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f4456209e18bc00bfc6ada27ea6ba322c181cc66cba12170483dfaa97df2d785",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/petg",
+      "title": "Montaj prototiplerinde PETG değerlendirmesi | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "4f01d2e88c3a595b215a23f0d1a5fd2bec10a8c7661da05885c6fd05542b802a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Ürün gövdesi prototipinde ABS ne zaman konuşulur? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e89ed72da4d6c854b30134a4e8c0c0ea17fa432f824fa26a4f2c5a08248e5788",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/asa",
+      "title": "Dış ortam ürün prototipleri için ASA | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f4b5ee836740a633e884c7f39488c72c10716301b290e1886d904d30c2e7010e",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/tpu",
+      "title": "Yumuşak temas ve kavrama prototipleri için TPU | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "c840569b8d84a55f0a3ce34a0b377cf7c1e1b5188c9d8c154c0102bf7531a596",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Özel performans isteyen prototiplerde malzeme seçimi | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "669e1a1b8d7f768006653715c7268fe0c8f4b912ce6bff3e49f719b9787b2f4a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Ürün prototipi için STL dışa aktarma kontrolü | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ea4f50249d945a4cd898c2c9f2dba12ce4d1507606bc50d4bdd1dfc5e5308dcc",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "İlk prototip talebine hangi dosyalar eklenmeli? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "3117b8f0e070180f41db725a75a4dca9bd5ec2ebeb1b6df6c884c174c48d241f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/3d-tarama",
+      "title": "Ürün referanslarını dijitale taşıyan 3D tarama | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "7934ae94ef55cb595f0b8b4fd63b7a2d57fcb8f5b1d4d8d564721d421c6a4874",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Tarama ağından revizyon yapılabilir ürün modeline | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "4a6a2bedb38110af79bcebc4a887aefeb2a038d6bd26fa63c84ac76fc29f26b9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Ürün yenilemede tarama ile yeniden modelleme arasındaki fark | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "58cc91db43b7e35f0e5ebb5e3f5503ee4fca879b049303af6abae1f0eaf1733e",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dsanayi",
+      "date": null,
+      "textHash": "253719fa59deed647695546d9105e1755fe6a714f1e85a6c88e1ab48b1e4e8a1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/hizmetler",
+      "title": "Sanayi için 3D parça ve aparat hizmetleri | 3dsanayi",
+      "date": null,
+      "textHash": "adf687861fe76fd950d8d02d33952c388dd49525b95a6fa008de93272188153f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/cozumler",
+      "title": "Üretim hattına özel aparat çözümleri | 3dsanayi",
+      "date": null,
+      "textHash": "a1994e88b79ceb54a42b78c590bbf2a492482a44ae1c95c28f222406f7310199",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler",
+      "title": "Endüstriyel aparatlarda malzeme seçimi | 3dsanayi",
+      "date": null,
+      "textHash": "99463ee03fd3ea93311f6183d3552238acea01de2c7cea65d7f6f26e9e00fc5a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/rehber",
+      "title": "Aparat, fikstür ve endüstriyel üretim rehberleri | 3dsanayi",
+      "date": null,
+      "textHash": "21a5a37f8af9d535aac7a7e22776f313dc753588822aa8a9a6d5959a3681a14f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | 3dsanayi",
+      "date": null,
+      "textHash": "0660c75c82f57986d12f6732990c0301bcd688b37ed7f967a3f4cfb1ba8903af",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | 3dsanayi",
+      "date": null,
+      "textHash": "b91d163e9d1f5151f9b086624176ac7942c8bc555dcd3dc1911051859995fcf1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dsanayi",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "title": "İletişim | 3dsanayi",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | 3dsanayi",
+      "date": null,
+      "textHash": "482ff71da9635a528e2d4a438a909e803bc3ab1b689ad7623cfbb29a0c11e15c",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | 3dsanayi",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul üretim ekipleri için aparat ve fikstür talebi | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "6d5c6243f76441c44a610c7617deee649caaa74e2a7b9013be5dfe25a6dfee69",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul 3D baskı | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "d91a1dd894fc3df2606ce1c5f174ab37ef6202869ca13afdf6bfe410a28d8b10",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul 3D tarama | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9f68314869bf77780bc74619e631c3513a3dd9a2950382f2aeddbc0df4cf8d57",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul 3D modelleme | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "51b5966bf58edb476703f5ccade092c4f3f826b8f66f383165acef7a6fecc9b4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar 3D üretim talebi | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "b91a5ad6629b2907b300c6ea4be4312cc0ce45081a8c397792dbb15ee3f9bd1b",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/pla",
+      "title": "Fikstür yerleşimini denemek için PLA taslak | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "a0fc85f557567885e5abec4fcbb9e59bc46e6a31044259fb960761278fc5a803",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/petg",
+      "title": "Üretim yardımcılarında PETG için seçim soruları | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e4da847639437fb488fdcde11a716bcf1c16fbeedc57de6e62ac8322aaf47c03",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Atölye gövde ve aparatlarında ABS değerlendirmesi | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f9f53bb72ccba252dbbccd92d63401a92ad82ac07c85dba0fd45243382874470",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/asa",
+      "title": "Dış saha sensör ve muhafazalarında ASA | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "cd7274d958bf9b1d006ab0a1f876440e3b078984d142ecde8fe7709ef6dffba6",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/tpu",
+      "title": "İş parçasına yumuşak temas eden TPU yardımcıları | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9cd5c9b6d47d9ca347635a9e5968dadfe12d9da31e0b6186fd354a73fa1cd11",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Fikstürlerde PA, PC ve takviyeli malzeme kararı | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "a173f94b2839f0010a35f4c359b9fd6f888cfc47108a668086ba4abd694eb3ea",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Aparat STL dosyasında kritik arayüz kontrolü | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "d3bcb465a8268b61e2f6dacd1db0e20e4718e50456a4798b224533d288adee72",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Aparat talebi için saha dosyası nasıl hazırlanır? | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ea3536b1cc9098031653287ba4e4d1d043bd4a9f26cc0001ab4021911e1228d6",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/3d-tarama",
+      "title": "Teknik numune ve aparatların 3D taraması | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "40ec9df4e4be48a415ec404c8efd89e3c2b598c4b7642e172845c0c022f2fb8d",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Aparat referanslarını tarama verisinden kurma | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "803e4533001db1c832afb4b07afe493da019105a2e31b224af1d330e1bebbd73",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Eski fikstürü taramak mı yeniden tasarlamak mı? | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "2dedfa166d4a8da099509d7e11b599b926cc148e40a7848644b73826c9ffa310",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | maketyanımda",
+      "date": null,
+      "textHash": "06508d8fd653b1028e4a9d1436f85d1207e9d3f02d24a76f37c5ea6f68da9757",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/hizmetler",
+      "title": "Mimari maket için 3D üretim hizmetleri | maketyanımda",
+      "date": null,
+      "textHash": "ddd6e0a27a1b8ee01cfa68c5617faa1613eee63f36e9a8e57bc3e788d4347c5b",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/cozumler",
+      "title": "Mimari proje ve gayrimenkul sunum maketleri | maketyanımda",
+      "date": null,
+      "textHash": "3fa9a425a7de6985e6b2f556cf2ad31bbb380767ca4eafa571d9de6421fd9809",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler",
+      "title": "Maket üretiminde malzeme ve yüzey kararları | maketyanımda",
+      "date": null,
+      "textHash": "2264d7a2a2ba517d1a3ed667be6130b92597a56918ff1bd58b1b58234941be64",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/rehber",
+      "title": "Mimari maket, ölçek ve sunum rehberleri | maketyanımda",
+      "date": null,
+      "textHash": "44138ed8f277e5881a8b8a2aa22b54fb6cd5a9dc21774a1792a15271e74c628c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | maketyanımda",
+      "date": null,
+      "textHash": "767b245d571fe1daf6a1a1bf296cd8cf19e6504d0073fdf23d00a661b8a3c59a",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | maketyanımda",
+      "date": null,
+      "textHash": "2a99a415ecaca41db49a0e7cbe93778eac64a0bb4f2b1e0164d61c7c5a23553c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | maketyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "title": "İletişim | maketyanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | maketyanımda",
+      "date": null,
+      "textHash": "715578a3154baddec8e250d48c6e04692ca607bf485a85ac3d33612efa5ef230",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | maketyanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’daki mimari sunumlar için maket proje planı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "ae2551395187d7e9bf5ee114cc69b30044f7c794eccda3fd39e8f003ba8f80fd",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul — maket için 3D baskı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "fdd6ba3c86587da50a4ea7525ceb67663610441370d1686f6205bf16a9eb2f2d",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul — maket referansı için 3D tarama | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "1e0bf035b1a3efcfa31c68807fe408aa644e05770920b47ff8e9f31008415f5f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul — üretime uygun 3D maket modelleme | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "65aedfe7c2e03d4cb9035fa21982945bc838b7f68b17a3892c6309c452d1276e",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar — maket proje planı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "c88fc7f15c70d0693645b46a50f666ec9a81e1438e3ac4c41531abedaa514202",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/pla",
+      "title": "Mimari kütle ve iç mekân sunumlarında PLA | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "362b859dd62e80dff115b231e75c2fdb94d197a8a14a51638974651f24d7f2de",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/petg",
+      "title": "Maket kapakları ve dayanıklı detaylarda PETG | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "56f2ae997561f7f984c145ffd3b6d036ee631ec5839639842ec437a952c0b45a",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Boyanacak maket bileşenlerinde ABS seçimi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "eabe7176273143d00c5b0617b32e929849102384a79eaf9d1da97f7e042330c1",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/asa",
+      "title": "Açıkta sergilenecek maketler için ASA değerlendirmesi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "878e48589c7d6596496b6317c9f2ac929e9ddbc97fd5fe441be99d2823ff56e0",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/tpu",
+      "title": "Maket taşımada esnek destek ve temas parçaları | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "8cd8a0ca6621234c49699529685d38b1964963cb75af2b3ab8b23f174771ba0f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Maket mekanizmalarında özel polimer ihtiyacı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "8f28bb10c6b858e0e799def1121cbb859afd03633c010300db57ae474fcf7ee3",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Mimari modelin baskı için STL hazırlığı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "7caf0611ddc2e2bf720bec6a4acb961ead09c52dc06bb2a98f06b8464cc72e6c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Mimari maket teklifi için dosya paketi hazırlama | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "bdedb6d28ab1f37e78ab46e49b1102516135a4e6abe2d465d46a2d14beacfd4f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/3d-tarama",
+      "title": "Objelerden ve mimari detaylardan maket referansı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "d8cabdc3df60ccc0c76cff0f5ca398be5f1902a8b16e2095f331d3e3b14d6516",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Mevcut yapı veya maket taramasını sunum modeline dönüştürme | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ed71d2146bc21e2d8e13d80c54471e17433b83e4f815d93ff740552f433ec3c9",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Fiziksel maketi taramak mı dijitalden yeniden kurmak mı? | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "cbcbda40586be3c86913cab2fd7b1172341751082026f477e85610f9141ce757",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | parçayanımda",
+      "date": null,
+      "textHash": "e2d34469101184d178c5643c825c28cd9e4af39dbb974d14068781dcd648c750",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/hizmetler",
+      "title": "Özel plastik parça için 3D baskı ve modelleme | parçayanımda",
+      "date": null,
+      "textHash": "1974d8ee273ea717d71aeb2234fb49512840bc770154c31ef449de49979ff0cb",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/cozumler",
+      "title": "Kapak, adaptör ve bağlantı parçası çözümleri | parçayanımda",
+      "date": null,
+      "textHash": "42d9781a11b4ae5022e0b6ba85659133bf1f6c2ac79a42a9168849b1b8e399be",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler",
+      "title": "Plastik parçalarda malzeme ve kullanım koşulları | parçayanımda",
+      "date": null,
+      "textHash": "4312b3fdc55026377d676680fd8ada4ac2a63cfc5015ff54103662499d41bd5b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/rehber",
+      "title": "Özel parça üretimi ve montaj uyumu rehberleri | parçayanımda",
+      "date": null,
+      "textHash": "f2e1c01f676e764124cf442974c915ba902befb486ee30f01eb5a362a1ec48a2",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | parçayanımda",
+      "date": null,
+      "textHash": "f8fbc258fde1efd736156c25f5526d8807e504bb4e7fb7ed70ff5e5c5fbc0c83",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | parçayanımda",
+      "date": null,
+      "textHash": "9e1b63edb8198efdf9157bbff78162ec4122aefd73b60f32bfc48f4b8ae61406",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | parçayanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/iletisim",
+      "title": "İletişim | parçayanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | parçayanımda",
+      "date": null,
+      "textHash": "48f2e1ce827e929f4707dc973bd2ce9c3f1d54de58ef21838e17eac149b26a2c",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | parçayanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’da kırık veya eksik plastik parça değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "3cfc759203942a513a9ca890997eebc1d39b81ab18bcbfdcf5992b17a61cdb1e",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul özel plastik parça baskısı | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "369b016f1e957de92cfce6107b1dd40a5a4d5515dc677cd7b4892142f41f8199",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul yedek parça taraması | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "83edb9f6ee26231897c2a936d93ad698227f38ec25d72e39b1247de4e48a65f4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul özel parça modelleme | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "fbd1581bc4139c344c230edef8c53cd3da6d5ed8a9a636b086aeef8e42be00e1",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar Özel parça değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "32d0fd3032f77f29532ab7cb82d1018042c9a9e340ca8eb0f989f1d8e73ac8e4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/pla",
+      "title": "Yedek parçada ölçü kontrolü için PLA numune | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "5fcd31ca207f20a2742e37ccd2d09d0c7b94a80f15eecaeccb1b4f78a6619b0b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/petg",
+      "title": "Özel kapak ve yardımcı bağlantılarda PETG | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9e796aad1c327b4a27df0e681b8609d0d7106029d45c2d8873031df5a295a64",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "86e771e5d4193e66d0b0070d9ca144fad2808a49da51247b0bf631b599480c4b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/asa",
+      "title": "Dışarıda kullanılan plastik parçalarda ASA | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "819d171aeed2b6bbbca12713836773cfb23a889e695196d311e5e1db47e30f64",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/tpu",
+      "title": "Esnek kapak, ayak ve temas elemanlarında TPU | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "66921b70c80361c762a4d677c337e40dd78ad97563ea12b3a2bfd626f48ccebd",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Zorlayıcı kullanımda özel parça malzemesi nasıl seçilir? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "95cae51b084cbf50794dc29bfdfbca2877d8317b295fc8c9435e0b2900852f1e",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "İndirilen yedek parça STL dosyasını kontrol etme | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9b2d7dca92c624a58975e29205a7e70f62fa30c4f4a5b8fb8238275e5228640",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Kırık veya kayıp parça için ilk talep nasıl hazırlanır? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ce8fffa56357788e729ce2be7317863db090b2424f103013fc41681188174026",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/3d-tarama",
+      "title": "Yedek parça numunesinden dijital referans | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "64aa3b47b5f95463a78a1943c4716d4af084c28b46100df745c29e46cd118ab4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Aşınmış numuneden sağlam bağlantı geometrisi kurma | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "dd9a0f5ce083a30a1874d9850b21f0bb0f58c71d0ce1ac76e7231d54d7ab5699",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Kırık parçayı taramak eksik kısmı tamamlar mı? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "5ee46fc05c4138da4bedcb0db24205278371b1f7f953f0d3b8396b614f1b56d7",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/rehber/kirik-parca-yeniden-uretim",
+      "title": "Kırık plastik parça yeniden nasıl üretilir? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "677125628e1dd52aac3ed28a512d056d45839454f73496f9d1ddb5b2c14283bc",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "c650d1f7768582a9ab9e486b4e8abcf97d17150252df7242cbff2391781e704d",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/hizmetler",
+      "title": "Prototip için 3D baskı, tarama ve modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "4f2f11e6c4527dcc52d79bfc0627ad9e40a2f14d7c784ae4e15a1d6da468cfbd",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/cozumler",
+      "title": "Ürün geliştirme ve küçük seri çözümleri | 3dyanımda",
+      "date": null,
+      "textHash": "069b7c86671b476188f96f5bcafa5887840b1c7a6cb05547d485e3196d33a3eb",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler",
+      "title": "Prototip için 3D baskı malzemeleri | 3dyanımda",
+      "date": null,
+      "textHash": "c12701b35cad94d5fbe9975593a6da911b498ec9de8a89c7551947d92a3a7081",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/rehber",
+      "title": "Prototip ve ürün geliştirme bilgi merkezi | 3dyanımda",
+      "date": null,
+      "textHash": "7997272358d8553b88ffe2bae0d61de818a6e4a780c29f7b50bc5824641f35b9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | 3dyanımda",
+      "date": null,
+      "textHash": "57c6dbf36989473f4af8778a986ef6a8f8f4e299253551cc35815030e2fb2270",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | 3dyanımda",
+      "date": null,
+      "textHash": "b61e5bf4b3d54da410ad3dbc349e39c1bd9236b1580393efdf6e8ecb5a6f7f96",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "title": "İletişim | 3dyanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | 3dyanımda",
+      "date": null,
+      "textHash": "96ce1979598393f7d600d9eac404c921dc054a031333b45ce26aba5c2ae3bfbf",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | 3dyanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’da ürün prototipi ve 3D üretim talebi | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "0db96c4db1713de1de077705f00ef1d183d3dfc77e2288fa83cbae80ff8ed9ea",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul 3D baskı | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "7d6b9f22b2c7109c30cfba80c52ec471406c28d80ccb910b44e162d26bc3a431",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul 3D tarama | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "3fbf056c43e457802e7b0ca33afd1b7f48d36f6247aa1b153ad5325ad27bb975",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul 3D modelleme | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "f6697166b7474525d9241f3c3ac2f563e0a15ffbc19b4d0138a093717785954a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar 3D ürün geliştirme | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "506fd2a1966378822049e254f7dd9c2dc3be0c74be83c81ebc4439fa4f977256",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/pla",
+      "title": "Ürün formu ve ergonomi denemelerinde PLA | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f4456209e18bc00bfc6ada27ea6ba322c181cc66cba12170483dfaa97df2d785",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/petg",
+      "title": "Montaj prototiplerinde PETG değerlendirmesi | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "4f01d2e88c3a595b215a23f0d1a5fd2bec10a8c7661da05885c6fd05542b802a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Ürün gövdesi prototipinde ABS ne zaman konuşulur? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e89ed72da4d6c854b30134a4e8c0c0ea17fa432f824fa26a4f2c5a08248e5788",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/asa",
+      "title": "Dış ortam ürün prototipleri için ASA | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f4b5ee836740a633e884c7f39488c72c10716301b290e1886d904d30c2e7010e",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/tpu",
+      "title": "Yumuşak temas ve kavrama prototipleri için TPU | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "c840569b8d84a55f0a3ce34a0b377cf7c1e1b5188c9d8c154c0102bf7531a596",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Özel performans isteyen prototiplerde malzeme seçimi | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "669e1a1b8d7f768006653715c7268fe0c8f4b912ce6bff3e49f719b9787b2f4a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Ürün prototipi için STL dışa aktarma kontrolü | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ea4f50249d945a4cd898c2c9f2dba12ce4d1507606bc50d4bdd1dfc5e5308dcc",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "İlk prototip talebine hangi dosyalar eklenmeli? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "3117b8f0e070180f41db725a75a4dca9bd5ec2ebeb1b6df6c884c174c48d241f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/3d-tarama",
+      "title": "Ürün referanslarını dijitale taşıyan 3D tarama | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "7934ae94ef55cb595f0b8b4fd63b7a2d57fcb8f5b1d4d8d564721d421c6a4874",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Tarama ağından revizyon yapılabilir ürün modeline | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "4a6a2bedb38110af79bcebc4a887aefeb2a038d6bd26fa63c84ac76fc29f26b9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Ürün yenilemede tarama ile yeniden modelleme arasındaki fark | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "58cc91db43b7e35f0e5ebb5e3f5503ee4fca879b049303af6abae1f0eaf1733e",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dsanayi",
+      "date": null,
+      "textHash": "53a563f904a8b9580a204dd97b4c5c4d6b5395621c08f30d5cf26a28da40d0f1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/hizmetler",
+      "title": "Sanayi için 3D parça ve aparat hizmetleri | 3dsanayi",
+      "date": null,
+      "textHash": "adf687861fe76fd950d8d02d33952c388dd49525b95a6fa008de93272188153f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/cozumler",
+      "title": "Üretim hattına özel aparat çözümleri | 3dsanayi",
+      "date": null,
+      "textHash": "a1994e88b79ceb54a42b78c590bbf2a492482a44ae1c95c28f222406f7310199",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler",
+      "title": "Endüstriyel aparatlarda malzeme seçimi | 3dsanayi",
+      "date": null,
+      "textHash": "99463ee03fd3ea93311f6183d3552238acea01de2c7cea65d7f6f26e9e00fc5a",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/rehber",
+      "title": "Aparat, fikstür ve endüstriyel üretim rehberleri | 3dsanayi",
+      "date": null,
+      "textHash": "21a5a37f8af9d535aac7a7e22776f313dc753588822aa8a9a6d5959a3681a14f",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | 3dsanayi",
+      "date": null,
+      "textHash": "0660c75c82f57986d12f6732990c0301bcd688b37ed7f967a3f4cfb1ba8903af",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | 3dsanayi",
+      "date": null,
+      "textHash": "b91d163e9d1f5151f9b086624176ac7942c8bc555dcd3dc1911051859995fcf1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dsanayi",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/iletisim",
+      "title": "İletişim | 3dsanayi",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | 3dsanayi",
+      "date": null,
+      "textHash": "482ff71da9635a528e2d4a438a909e803bc3ab1b689ad7623cfbb29a0c11e15c",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | 3dsanayi",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul üretim ekipleri için aparat ve fikstür talebi | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "6d5c6243f76441c44a610c7617deee649caaa74e2a7b9013be5dfe25a6dfee69",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul 3D baskı | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "d91a1dd894fc3df2606ce1c5f174ab37ef6202869ca13afdf6bfe410a28d8b10",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul 3D tarama | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9f68314869bf77780bc74619e631c3513a3dd9a2950382f2aeddbc0df4cf8d57",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul 3D modelleme | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "51b5966bf58edb476703f5ccade092c4f3f826b8f66f383165acef7a6fecc9b4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar 3D üretim talebi | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "b91a5ad6629b2907b300c6ea4be4312cc0ce45081a8c397792dbb15ee3f9bd1b",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/pla",
+      "title": "Fikstür yerleşimini denemek için PLA taslak | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "a0fc85f557567885e5abec4fcbb9e59bc46e6a31044259fb960761278fc5a803",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/petg",
+      "title": "Üretim yardımcılarında PETG için seçim soruları | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e4da847639437fb488fdcde11a716bcf1c16fbeedc57de6e62ac8322aaf47c03",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Atölye gövde ve aparatlarında ABS değerlendirmesi | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f9f53bb72ccba252dbbccd92d63401a92ad82ac07c85dba0fd45243382874470",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/asa",
+      "title": "Dış saha sensör ve muhafazalarında ASA | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "cd7274d958bf9b1d006ab0a1f876440e3b078984d142ecde8fe7709ef6dffba6",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/tpu",
+      "title": "İş parçasına yumuşak temas eden TPU yardımcıları | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9cd5c9b6d47d9ca347635a9e5968dadfe12d9da31e0b6186fd354a73fa1cd11",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Fikstürlerde PA, PC ve takviyeli malzeme kararı | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "a173f94b2839f0010a35f4c359b9fd6f888cfc47108a668086ba4abd694eb3ea",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Aparat STL dosyasında kritik arayüz kontrolü | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "d3bcb465a8268b61e2f6dacd1db0e20e4718e50456a4798b224533d288adee72",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Aparat talebi için saha dosyası nasıl hazırlanır? | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ea3536b1cc9098031653287ba4e4d1d043bd4a9f26cc0001ab4021911e1228d6",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/3d-tarama",
+      "title": "Teknik numune ve aparatların 3D taraması | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "40ec9df4e4be48a415ec404c8efd89e3c2b598c4b7642e172845c0c022f2fb8d",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Aparat referanslarını tarama verisinden kurma | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "803e4533001db1c832afb4b07afe493da019105a2e31b224af1d330e1bebbd73",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Eski fikstürü taramak mı yeniden tasarlamak mı? | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "2dedfa166d4a8da099509d7e11b599b926cc148e40a7848644b73826c9ffa310",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | maketyanımda",
+      "date": null,
+      "textHash": "f4c6eb6f5d373d9b9398d38fec3da2a867d9a65b8354ed6bd72800e12755339c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/hizmetler",
+      "title": "Mimari maket için 3D üretim hizmetleri | maketyanımda",
+      "date": null,
+      "textHash": "ddd6e0a27a1b8ee01cfa68c5617faa1613eee63f36e9a8e57bc3e788d4347c5b",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/cozumler",
+      "title": "Mimari proje ve gayrimenkul sunum maketleri | maketyanımda",
+      "date": null,
+      "textHash": "3fa9a425a7de6985e6b2f556cf2ad31bbb380767ca4eafa571d9de6421fd9809",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler",
+      "title": "Maket üretiminde malzeme ve yüzey kararları | maketyanımda",
+      "date": null,
+      "textHash": "2264d7a2a2ba517d1a3ed667be6130b92597a56918ff1bd58b1b58234941be64",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/rehber",
+      "title": "Mimari maket, ölçek ve sunum rehberleri | maketyanımda",
+      "date": null,
+      "textHash": "44138ed8f277e5881a8b8a2aa22b54fb6cd5a9dc21774a1792a15271e74c628c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | maketyanımda",
+      "date": null,
+      "textHash": "767b245d571fe1daf6a1a1bf296cd8cf19e6504d0073fdf23d00a661b8a3c59a",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | maketyanımda",
+      "date": null,
+      "textHash": "2a99a415ecaca41db49a0e7cbe93778eac64a0bb4f2b1e0164d61c7c5a23553c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | maketyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "title": "İletişim | maketyanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | maketyanımda",
+      "date": null,
+      "textHash": "715578a3154baddec8e250d48c6e04692ca607bf485a85ac3d33612efa5ef230",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | maketyanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’daki mimari sunumlar için maket proje planı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "ae2551395187d7e9bf5ee114cc69b30044f7c794eccda3fd39e8f003ba8f80fd",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul — maket için 3D baskı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "fdd6ba3c86587da50a4ea7525ceb67663610441370d1686f6205bf16a9eb2f2d",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul — maket referansı için 3D tarama | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "1e0bf035b1a3efcfa31c68807fe408aa644e05770920b47ff8e9f31008415f5f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul — üretime uygun 3D maket modelleme | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "65aedfe7c2e03d4cb9035fa21982945bc838b7f68b17a3892c6309c452d1276e",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar — maket proje planı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "c88fc7f15c70d0693645b46a50f666ec9a81e1438e3ac4c41531abedaa514202",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/pla",
+      "title": "Mimari kütle ve iç mekân sunumlarında PLA | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "362b859dd62e80dff115b231e75c2fdb94d197a8a14a51638974651f24d7f2de",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/petg",
+      "title": "Maket kapakları ve dayanıklı detaylarda PETG | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "56f2ae997561f7f984c145ffd3b6d036ee631ec5839639842ec437a952c0b45a",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Boyanacak maket bileşenlerinde ABS seçimi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "eabe7176273143d00c5b0617b32e929849102384a79eaf9d1da97f7e042330c1",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/asa",
+      "title": "Açıkta sergilenecek maketler için ASA değerlendirmesi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "878e48589c7d6596496b6317c9f2ac929e9ddbc97fd5fe441be99d2823ff56e0",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/tpu",
+      "title": "Maket taşımada esnek destek ve temas parçaları | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "8cd8a0ca6621234c49699529685d38b1964963cb75af2b3ab8b23f174771ba0f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Maket mekanizmalarında özel polimer ihtiyacı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "8f28bb10c6b858e0e799def1121cbb859afd03633c010300db57ae474fcf7ee3",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "Mimari modelin baskı için STL hazırlığı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "7caf0611ddc2e2bf720bec6a4acb961ead09c52dc06bb2a98f06b8464cc72e6c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Mimari maket teklifi için dosya paketi hazırlama | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "bdedb6d28ab1f37e78ab46e49b1102516135a4e6abe2d465d46a2d14beacfd4f",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/3d-tarama",
+      "title": "Objelerden ve mimari detaylardan maket referansı | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "d8cabdc3df60ccc0c76cff0f5ca398be5f1902a8b16e2095f331d3e3b14d6516",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Mevcut yapı veya maket taramasını sunum modeline dönüştürme | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ed71d2146bc21e2d8e13d80c54471e17433b83e4f815d93ff740552f433ec3c9",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Fiziksel maketi taramak mı dijitalden yeniden kurmak mı? | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "cbcbda40586be3c86913cab2fd7b1172341751082026f477e85610f9141ce757",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | parçayanımda",
+      "date": null,
+      "textHash": "64c4d108738186a1d6b6ce5016125c54b87d21b72a4421fd23fb86d3bac58f01",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/hizmetler",
+      "title": "Özel plastik parça için 3D baskı ve modelleme | parçayanımda",
+      "date": null,
+      "textHash": "1974d8ee273ea717d71aeb2234fb49512840bc770154c31ef449de49979ff0cb",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/cozumler",
+      "title": "Kapak, adaptör ve bağlantı parçası çözümleri | parçayanımda",
+      "date": null,
+      "textHash": "42d9781a11b4ae5022e0b6ba85659133bf1f6c2ac79a42a9168849b1b8e399be",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler",
+      "title": "Plastik parçalarda malzeme ve kullanım koşulları | parçayanımda",
+      "date": null,
+      "textHash": "4312b3fdc55026377d676680fd8ada4ac2a63cfc5015ff54103662499d41bd5b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/rehber",
+      "title": "Özel parça üretimi ve montaj uyumu rehberleri | parçayanımda",
+      "date": null,
+      "textHash": "f2e1c01f676e764124cf442974c915ba902befb486ee30f01eb5a362a1ec48a2",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/bolgeler",
+      "title": "İstanbul’dan projenize. | parçayanımda",
+      "date": null,
+      "textHash": "f8fbc258fde1efd736156c25f5526d8807e504bb4e7fb7ed70ff5e5c5fbc0c83",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/sektorler",
+      "title": "Sektörünüzün dilini konuşan üretim. | parçayanımda",
+      "date": null,
+      "textHash": "9e1b63edb8198efdf9157bbff78162ec4122aefd73b60f32bfc48f4b8ae61406",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | parçayanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/iletisim",
+      "title": "İletişim | parçayanımda",
+      "date": null,
+      "textHash": "74874f0dade49ccad4fcdfbc4333aec7bb33c0c837d1c79923a010b527626041",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/hakkimizda",
+      "title": "Yaklaşımımız | parçayanımda",
+      "date": null,
+      "textHash": "48f2e1ce827e929f4707dc973bd2ce9c3f1d54de58ef21838e17eac149b26a2c",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/araclar",
+      "title": "Mühendislik araçları | parçayanımda",
+      "date": null,
+      "textHash": "3bff025f1a8468c659049a0f301b62ca16088551a374dfb1838f855e801419c8",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul",
+      "title": "İstanbul’da kırık veya eksik plastik parça değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "3cfc759203942a513a9ca890997eebc1d39b81ab18bcbfdcf5992b17a61cdb1e",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-baski",
+      "title": "İstanbul özel plastik parça baskısı | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "369b016f1e957de92cfce6107b1dd40a5a4d5515dc677cd7b4892142f41f8199",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-tarama",
+      "title": "İstanbul yedek parça taraması | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "83edb9f6ee26231897c2a936d93ad698227f38ec25d72e39b1247de4e48a65f4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/3d-modelleme",
+      "title": "İstanbul özel parça modelleme | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "fbd1581bc4139c344c230edef8c53cd3da6d5ed8a9a636b086aeef8e42be00e1",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/bolgeler/istanbul/adalar",
+      "title": "Adalar Özel parça değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "32d0fd3032f77f29532ab7cb82d1018042c9a9e340ca8eb0f989f1d8e73ac8e4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/pla",
+      "title": "Yedek parçada ölçü kontrolü için PLA numune | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "5fcd31ca207f20a2742e37ccd2d09d0c7b94a80f15eecaeccb1b4f78a6619b0b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/petg",
+      "title": "Özel kapak ve yardımcı bağlantılarda PETG | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9e796aad1c327b4a27df0e681b8609d0d7106029d45c2d8873031df5a295a64",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "86e771e5d4193e66d0b0070d9ca144fad2808a49da51247b0bf631b599480c4b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/asa",
+      "title": "Dışarıda kullanılan plastik parçalarda ASA | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "819d171aeed2b6bbbca12713836773cfb23a889e695196d311e5e1db47e30f64",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/tpu",
+      "title": "Esnek kapak, ayak ve temas elemanlarında TPU | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "66921b70c80361c762a4d677c337e40dd78ad97563ea12b3a2bfd626f48ccebd",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/muhendislik-polimerleri",
+      "title": "Zorlayıcı kullanımda özel parça malzemesi nasıl seçilir? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "95cae51b084cbf50794dc29bfdfbca2877d8317b295fc8c9435e0b2900852f1e",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/rehber/stl-dosya-hazirlama",
+      "title": "İndirilen yedek parça STL dosyasını kontrol etme | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e9b2d7dca92c624a58975e29205a7e70f62fa30c4f4a5b8fb8238275e5228640",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "title": "Kırık veya kayıp parça için ilk talep nasıl hazırlanır? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "ce8fffa56357788e729ce2be7317863db090b2424f103013fc41681188174026",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/3d-tarama",
+      "title": "Yedek parça numunesinden dijital referans | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "64aa3b47b5f95463a78a1943c4716d4af084c28b46100df745c29e46cd118ab4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/rehber/tarama-verisinden-cad",
+      "title": "Aşınmış numuneden sağlam bağlantı geometrisi kurma | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "dd9a0f5ce083a30a1874d9850b21f0bb0f58c71d0ce1ac76e7231d54d7ab5699",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "title": "Kırık parçayı taramak eksik kısmı tamamlar mı? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "5ee46fc05c4138da4bedcb0db24205278371b1f7f953f0d3b8396b614f1b56d7",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/rehber/kirik-parca-yeniden-uretim",
+      "title": "Kırık plastik parça yeniden nasıl üretilir? | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "677125628e1dd52aac3ed28a512d056d45839454f73496f9d1ddb5b2c14283bc",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-10-11T00:27:55.365Z"
+}

@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Seo } from "@/components/site/Seo";
@@ -27,7 +28,7 @@ export default function Contact() {
         </p>
         <Link
           className="brand-button dark"
-          to={`/teklif-al${import.meta.env.DEV ? search : ""}`}
+          to={`/teklif-al${previewSearch(search)}`}
         >
           Teknik teklif talebi <ArrowUpRight size={18} />
         </Link>

@@ -1,3 +1,4 @@
+import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useContent } from "@/content/useContent";
@@ -44,7 +45,7 @@ export default function ContentHub() {
   const [kind, defaultTitle, defaultLead] = config[pathname] || config["/hizmetler"];
   const [title,lead] = hubCopy(b.slug, kind, [defaultTitle,defaultLead]);
   const { data = [], isLoading, isError } = useContent();
-  const query = import.meta.env.DEV ? search : "";
+  const query = previewSearch(search);
   const pages = data.filter((p) => p.kind === kind);
   return (
     <>

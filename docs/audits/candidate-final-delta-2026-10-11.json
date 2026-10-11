@@ -1,0 +1,442 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-11T00:47:54.478Z",
+  "kind": "real-public-API candidate render",
+  "published": false,
+  "cases": [
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "e5fad297063a3e17553decdf727fb0315621c2557c1d55bdc20c8c8fded18c02",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/3d-baski",
+      "title": "Ürün geliştirme için 3D baskı | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "89fe351288da9264202cea70e5e0143a020dbb6317ab017b7372cbb91b8bd197",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Ürün gövdesi prototipinde ABS ne zaman konuşulur? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e89ed72da4d6c854b30134a4e8c0c0ea17fa432f824fa26a4f2c5a08248e5788",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dsanayi",
+      "date": null,
+      "textHash": "5020257486726895fd4ec6cc9c3942a33490da70ff326434259aa7f195cae0e9",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/3d-baski",
+      "title": "Üretim hattı yardımcıları için 3D baskı | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9bab149b75c94948c25278b764d2fb49e97d207f35b4328babfc6ea2c205bde1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Atölye gövde ve aparatlarında ABS değerlendirmesi | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f9f53bb72ccba252dbbccd92d63401a92ad82ac07c85dba0fd45243382874470",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dsanayi",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | maketyanımda",
+      "date": null,
+      "textHash": "b8bbe980fc869ad1bf2474f48cfe73b58c0921ab1543ea9be1acc3373b8706c0",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/3d-baski",
+      "title": "Mimari maket parçaları için 3D baskı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9bb08059decf46d0f6c09e2c8802bbcadf77cd618983eb95058ebe888ffa704c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Boyanacak maket bileşenlerinde ABS seçimi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "eabe7176273143d00c5b0617b32e929849102384a79eaf9d1da97f7e042330c1",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | maketyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | parçayanımda",
+      "date": null,
+      "textHash": "abbdc64657124bff85d2bdb6eae3071e0af4e2cf5eb43cc339de85597e0c2ac4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/3d-baski",
+      "title": "Bulunamayan plastik parçalar için üretim değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "f31052813d321f6a54ad336ad7a47b37faf76abc059c32071b7b93741adde091",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "86e771e5d4193e66d0b0070d9ca144fad2808a49da51247b0bf631b599480c4b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | parçayanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "8518e797038d9232b121ed26067597ed55f8df8ee8111f26ee727c0d9210f5ba",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/3d-baski",
+      "title": "Ürün geliştirme için 3D baskı | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "89fe351288da9264202cea70e5e0143a020dbb6317ab017b7372cbb91b8bd197",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Ürün gövdesi prototipinde ABS ne zaman konuşulur? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e89ed72da4d6c854b30134a4e8c0c0ea17fa432f824fa26a4f2c5a08248e5788",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dsanayi",
+      "date": null,
+      "textHash": "253719fa59deed647695546d9105e1755fe6a714f1e85a6c88e1ab48b1e4e8a1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/3d-baski",
+      "title": "Üretim hattı yardımcıları için 3D baskı | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9bab149b75c94948c25278b764d2fb49e97d207f35b4328babfc6ea2c205bde1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Atölye gövde ve aparatlarında ABS değerlendirmesi | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f9f53bb72ccba252dbbccd92d63401a92ad82ac07c85dba0fd45243382874470",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dsanayi",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | maketyanımda",
+      "date": null,
+      "textHash": "06508d8fd653b1028e4a9d1436f85d1207e9d3f02d24a76f37c5ea6f68da9757",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/3d-baski",
+      "title": "Mimari maket parçaları için 3D baskı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9bb08059decf46d0f6c09e2c8802bbcadf77cd618983eb95058ebe888ffa704c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Boyanacak maket bileşenlerinde ABS seçimi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "eabe7176273143d00c5b0617b32e929849102384a79eaf9d1da97f7e042330c1",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | maketyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | parçayanımda",
+      "date": null,
+      "textHash": "e2d34469101184d178c5643c825c28cd9e4af39dbb974d14068781dcd648c750",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/3d-baski",
+      "title": "Bulunamayan plastik parçalar için üretim değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "f31052813d321f6a54ad336ad7a47b37faf76abc059c32071b7b93741adde091",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "86e771e5d4193e66d0b0070d9ca144fad2808a49da51247b0bf631b599480c4b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | parçayanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dyanımda",
+      "date": null,
+      "textHash": "c650d1f7768582a9ab9e486b4e8abcf97d17150252df7242cbff2391781e704d",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/3d-baski",
+      "title": "Ürün geliştirme için 3D baskı | 3dyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "89fe351288da9264202cea70e5e0143a020dbb6317ab017b7372cbb91b8bd197",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Ürün gövdesi prototipinde ABS ne zaman konuşulur? | 3dyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "e89ed72da4d6c854b30134a4e8c0c0ea17fa432f824fa26a4f2c5a08248e5788",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | 3dsanayi",
+      "date": null,
+      "textHash": "53a563f904a8b9580a204dd97b4c5c4d6b5395621c08f30d5cf26a28da40d0f1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/3d-baski",
+      "title": "Üretim hattı yardımcıları için 3D baskı | 3dsanayi",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9bab149b75c94948c25278b764d2fb49e97d207f35b4328babfc6ea2c205bde1",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Atölye gövde ve aparatlarında ABS değerlendirmesi | 3dsanayi",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "f9f53bb72ccba252dbbccd92d63401a92ad82ac07c85dba0fd45243382874470",
+      "status": "PASS"
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | 3dsanayi",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | maketyanımda",
+      "date": null,
+      "textHash": "f4c6eb6f5d373d9b9398d38fec3da2a867d9a65b8354ed6bd72800e12755339c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/3d-baski",
+      "title": "Mimari maket parçaları için 3D baskı | maketyanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "9bb08059decf46d0f6c09e2c8802bbcadf77cd618983eb95058ebe888ffa704c",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Boyanacak maket bileşenlerinde ABS seçimi | maketyanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "eabe7176273143d00c5b0617b32e929849102384a79eaf9d1da97f7e042330c1",
+      "status": "PASS"
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | maketyanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/",
+      "title": "3D Baskı, 3D Tarama ve 3D Modelleme | parçayanımda",
+      "date": null,
+      "textHash": "64c4d108738186a1d6b6ce5016125c54b87d21b72a4421fd23fb86d3bac58f01",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/3d-baski",
+      "title": "Bulunamayan plastik parçalar için üretim değerlendirmesi | parçayanımda",
+      "date": "2026-10-08T16:16:43.53484+00:00",
+      "textHash": "f31052813d321f6a54ad336ad7a47b37faf76abc059c32071b7b93741adde091",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/malzemeler/abs",
+      "title": "Gövde ve trim yenilemede ABS adayının değerlendirilmesi | parçayanımda",
+      "date": "2026-10-11T00:10:00.000Z",
+      "textHash": "86e771e5d4193e66d0b0070d9ca144fad2808a49da51247b0bf631b599480c4b",
+      "status": "PASS"
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "route": "/teklif-al",
+      "title": "3D Studio & Teklif Al | parçayanımda",
+      "date": null,
+      "textHash": "114211f314fde90b2589bc1297afbeb22723c40e94962acc409bcb1ad7795ff4",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-10-11T00:53:35.646Z"
+}

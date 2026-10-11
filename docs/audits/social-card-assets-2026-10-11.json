@@ -1,0 +1,42 @@
+[
+  {
+    "brand": "3dyanimda",
+    "file": "public/brand/social/3dyanimda-v1.png",
+    "width": 1200,
+    "height": 630,
+    "mime": "image/png",
+    "bytes": 41275,
+    "sha256": "2991e46e789a2054e67c6e282f47676807ffa462bbc04d5580ef30c62f79d7ee",
+    "provenance": "Original code-rendered brand typography and geometry; no customer testimonial, logo endorsement or stock photo."
+  },
+  {
+    "brand": "3dsanayi",
+    "file": "public/brand/social/3dsanayi-v1.png",
+    "width": 1200,
+    "height": 630,
+    "mime": "image/png",
+    "bytes": 40752,
+    "sha256": "8dfc1a4af66fcb848568efbdd5a2dc37ae92def2bf12adee8e38461b9eaee2e6",
+    "provenance": "Original code-rendered brand typography and geometry; no customer testimonial, logo endorsement or stock photo."
+  },
+  {
+    "brand": "maketyanimda",
+    "file": "public/brand/social/maketyanimda-v1.png",
+    "width": 1200,
+    "height": 630,
+    "mime": "image/png",
+    "bytes": 42590,
+    "sha256": "a3202b03122413e93c4f46c1b9fc49194cb724a5b32498bc05829f070d403b8b",
+    "provenance": "Original code-rendered brand typography and geometry; no customer testimonial, logo endorsement or stock photo."
+  },
+  {
+    "brand": "parcayanimda",
+    "file": "public/brand/social/parcayanimda-v1.png",
+    "width": 1200,
+    "height": 630,
+    "mime": "image/png",
+    "bytes": 43880,
+    "sha256": "26932abb9ca0d4d55ab8c27d394620343118e6ccd6955f7e43a32caf42ac9c47",
+    "provenance": "Original code-rendered brand typography and geometry; no customer testimonial, logo endorsement or stock photo."
+  }
+]
