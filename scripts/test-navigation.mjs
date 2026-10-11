@@ -3,7 +3,7 @@ import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
 const server=await createServer({server:{host:'127.0.0.1',port:8087}});await server.listen();
-const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE,headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--no-zygote','--single-process','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE,headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 const page=await browser.newPage();await page.emulateMedia({reducedMotion:'reduce'});let checks=0;const errors=[];page.on('pageerror',e=>errors.push(e.message));mkdirSync('/tmp/brand-menu-previews',{recursive:true});
 try{
 for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(const theme of ['industrial','editorial','studio'])for(const width of [320,390,768,1440]){
