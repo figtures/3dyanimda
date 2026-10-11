@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";

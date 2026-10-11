@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import {backendUrl} from "./backend-config";
 
 export const resolveMediaUrl = (source?: string | null, bucket = "site-images") => {
   const raw = typeof source === "string" ? source.trim() : "";
@@ -11,7 +11,8 @@ export const resolveMediaUrl = (source?: string | null, bucket = "site-images") 
     .replace(/^storage\/v1\/object\/public\//, "")
     .replace(new RegExp(`^${bucket}/`), "");
 
-  return supabase.storage.from(bucket).getPublicUrl(path).data.publicUrl;
+  if(!backendUrl)return "";
+  return `${backendUrl.replace(/\/$/,"")}/storage/v1/object/public/${encodeURIComponent(bucket)}/${path.split("/").map(encodeURIComponent).join("/")}`;
 };
 
 export const resolveMediaItemUrl = (item: { public_url?: string | null; storage_path?: string | null }, bucket = "site-images") =>

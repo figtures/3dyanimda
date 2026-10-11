@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/backend-config";
 import { useTenant } from "./TenantContext";
 import {publicRenderState} from '@/lib/public-render-state';
 let lastPublicTheme: {theme:Theme|null;config:ThemeConfig}|undefined;
@@ -192,11 +192,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     let cancelled = false;
     const run = async () => {
       setLoading(true);
+      const supabase=await getSupabase();
 
       // 1) Try new tenant_theme_config (palette + typography + layout)
       let cfgRow: any = null;
       if (tenant?.id) {
-        const { data } = await supabase
+        const { data } = await (await getSupabase())
           .from("tenant_theme_config")
           .select("palette_slug, typography_slug, layout_slug, custom_overrides")
           .eq("tenant_id", tenant.id)
@@ -238,7 +239,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
       // Legacy theme (backward compat, optional)
       if (tenant?.active_theme_slug) {
-        const { data } = await supabase.from("themes").select("*").eq("slug", tenant.active_theme_slug).maybeSingle();
+        const { data } = await (await getSupabase()).from("themes").select("*").eq("slug", tenant.active_theme_slug).maybeSingle();
         if (!cancelled) setTheme((data as unknown as Theme) ?? null);
       } else {
         setTheme(null);

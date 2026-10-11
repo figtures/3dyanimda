@@ -6,6 +6,7 @@ import {exportPublicNav} from '@/hooks/useNavItems';
 import {exportPublicFlags} from '@/contexts/FeatureContext';
 import {exportPublicTheme} from '@/contexts/ThemeContext';
 import {exportPublicSeo} from '@/hooks/useSeoOverride';
+import {exportPublicRedirects} from '@/hooks/useRedirects';
 import {getRequestHost} from '@/lib/tenant';
 import {
   QueryClient,
@@ -23,7 +24,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { FeatureProvider } from "@/contexts/FeatureContext";
 import { RequireFeature } from "@/components/site/RequireFeature";
 import "@/lib/tenant";
-import { RequirePermission } from "@/components/admin/RequirePermission";
+const RequirePermission=lazy(()=>import("@/components/admin/RequirePermission").then(m=>({default:m.RequirePermission})));
 
 // Keep each page's implementation out of unrelated routes' initial bundles.
 const Index = lazy(() => import("./pages/Index"));
@@ -380,7 +381,7 @@ const App = () => (
  if(!await preparePublicRoute(location.pathname))return null;
  const tenant=exportPublicTenant()||publicRenderState()?.tenant;if(!tenant)return null;
  const queries=dehydrate(queryClient,{shouldDehydrateMutation:()=>false,shouldDehydrateQuery:q=>q.state.status==='success'&&publicQueryForPath(q.queryKey,tenant.id,location.pathname)});
- const state={version:1 as const,host:getRequestHost(),path:location.pathname,search:location.search,tenant,settings:exportPublicSettings(tenant.id),nav:exportPublicNav(tenant.id),flags:exportPublicFlags(),queries,seo:exportPublicSeo(tenant.id,location.pathname),theme:exportPublicTheme()};
+ const state={version:1 as const,host:getRequestHost(),path:location.pathname,search:location.search,tenant,settings:exportPublicSettings(tenant.id),nav:exportPublicNav(tenant.id),flags:exportPublicFlags(),queries,seo:exportPublicSeo(tenant.id,location.pathname),theme:exportPublicTheme(),redirects:exportPublicRedirects(tenant.id)};
  setPublicRenderState(state);
  const {renderToString}=await import('react-dom/server.browser');
  return {html:renderToString(<App/>),state};

@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { getTenantIdentity } from "@/lib/tenant";
 import { useEffect, useState } from "react";
 import { Seo } from "@/components/site/Seo";

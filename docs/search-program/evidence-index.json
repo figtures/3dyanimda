@@ -18,8 +18,8 @@
     },
     {
       "path": ".github/workflows/search-quality.yml",
-      "sha256": "8342a03999d1d54cf6ebc3081c82a9598dfcf449ea9a141d9cbe544bacff19d5",
-      "bytes": 2055
+      "sha256": "283bb6f3b9132e7e1c46eceb5f8cbe99ba8f89b23ca19992fe3ddc38953017b6",
+      "bytes": 3133
     },
     {
       "path": "docs/audits/content-contract-audit-2026-10-11.json",
@@ -308,8 +308,8 @@
     },
     {
       "path": "scripts/export-sites.mjs",
-      "sha256": "d1ecb0ea4ac403e513bd0d4e7edfe791d0f88b90ae265fbd455357fd25cd3a87",
-      "bytes": 12197
+      "sha256": "4d85613eb5762a1169aea1142f860364671287bdc9c965c23ad6ec40834d91fb",
+      "bytes": 12831
     },
     {
       "path": "scripts/font-requirements.txt",
@@ -363,8 +363,8 @@
     },
     {
       "path": "scripts/quality/lighthouse-ci.mjs",
-      "sha256": "a49cec77e4235165969ee8f1d9b4642186a5bcdd21cf037b876f1f66a0d7f921",
-      "bytes": 13622
+      "sha256": "f4f3649d903d3ebc72b7fda39dcde233cbca8907b9b599eb2886ab5a6cd7bcb1",
+      "bytes": 13638
     },
     {
       "path": "scripts/quality/public-bootstrap.mjs",
@@ -443,8 +443,8 @@
     },
     {
       "path": "src/App.tsx",
-      "sha256": "238ce65264700d7e202df09614cee16f3dfef6e36a2c683facb6ae6e108e22c6",
-      "bytes": 15646
+      "sha256": "d59818963f5c454a85545214366369002e7df9549b208f53acf3fc01c07f9a48",
+      "bytes": 15798
     },
     {
       "path": "src/brands/brand.css",
@@ -523,28 +523,28 @@
     },
     {
       "path": "src/content/useContent.ts",
-      "sha256": "f74d1ac4bb9ad95572466acab871b33244f6785a7aa4671e27f79f1bf9e11ceb",
-      "bytes": 4508
+      "sha256": "916c590d17c5f6d5775e2f1e9d8f907c0bbede4439e4ffc7e97f288e54045c21",
+      "bytes": 4611
     },
     {
       "path": "src/contexts/FeatureContext.tsx",
-      "sha256": "8b767136d5a15c5965ef75c98a61fc1d8b174706d477f057ca8192d61abb1bef",
-      "bytes": 2686
+      "sha256": "e66b9109b1cba98ac5ec77398200b025138552e65a34d4a3796804e0ecb7b2af",
+      "bytes": 2735
     },
     {
       "path": "src/contexts/TenantContext.tsx",
-      "sha256": "e59359334b834ce49a10baba72e23a88247d0a73becaffa584d20aa359a8c167",
-      "bytes": 4138
+      "sha256": "1fe5b8e719dbdeb663f575a39e7eb78df570f10c84d17111636d4ca153554cca",
+      "bytes": 4173
     },
     {
       "path": "src/hooks/useNavItems.ts",
-      "sha256": "edc071fac8da0f5a221cca06eb8b86333194e49451a403232f4c315a4a342155",
-      "bytes": 1502
+      "sha256": "1e6314ad9967781d520b2036e9a8b839ee54420e7336e64a10f4941f80d7519d",
+      "bytes": 1539
     },
     {
       "path": "src/hooks/useSiteSettings.ts",
-      "sha256": "65b050a5b0462a0c34ce0745444805d8838dd74ccfa70e9cbfe67a5838e2be09",
-      "bytes": 3041
+      "sha256": "2c32ec41fa9a83447e544bce8afac11a6e6733999345dbf0776a15b1b9a760e6",
+      "bytes": 3076
     },
     {
       "path": "src/lib/first-paint.ts",
@@ -578,8 +578,8 @@
     },
     {
       "path": "src/lib/public-render-state.ts",
-      "sha256": "3ddfb118046b829148682cd69f7334b406a53907fec44bb858ffadae2473b5f4",
-      "bytes": 2426
+      "sha256": "1721b3b99bff83406498a88bb0a14d1067427c0c7800a105751f41baf4d06760",
+      "bytes": 2461
     },
     {
       "path": "src/lib/redirects.mjs",
@@ -654,7 +654,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T22:36:55.053Z",
+  "checksumsRefreshedAt": "2026-10-11T23:31:54.519Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

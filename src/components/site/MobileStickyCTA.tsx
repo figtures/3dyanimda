@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { Phone, MessageCircle, FileUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";

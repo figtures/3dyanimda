@@ -1,3 +1,5 @@
+import {schemaIntegrity} from "./quality/schema-integrity.mjs";
+import {validateVocabulary} from "./quality/schema-vocabulary.mjs";
 /** Build-time HTML export, using the public API and each registered canonical host.
  * Usage: npm run build && SITE_HOSTS=3dyanimda.com,... npm run export:sites
  * Never uses a service-role key. Throws instead of deploying empty tenant pages.
@@ -241,6 +243,11 @@ try {
       )
         throw new Error(`Canonical mismatch: ${url}`);
       if (failed.length) throw new Error(failed.join("\n"));
+      const schemaEvidence=await page.evaluate(()=>({text:document.querySelector("main")?.textContent||"",graphs:Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(s=>JSON.parse(s.textContent))}));
+      for(const graph of schemaEvidence.graphs){
+        const errors=[...schemaIntegrity(graph,{origin:base,visibleText:schemaEvidence.text}),...validateVocabulary(graph)];
+        if(errors.length)throw new Error(`Invalid JSON-LD at ${url}: ${errors.join("; ")}`);
+      }
       const file = path.join(dest, url.slice(1), "index.html");
       await mkdir(path.dirname(file), { recursive: true });
       await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});

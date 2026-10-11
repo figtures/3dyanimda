@@ -1,6 +1,6 @@
 import { useTenant } from "@/contexts/TenantContext";
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/backend-config";
 import {publicRenderState} from '@/lib/public-render-state';
 
 type SeoOverride = {
@@ -42,7 +42,7 @@ export function useSeoOverride(path: string): SeoOverride | null {
     }
     setData(null);
     (async () => {
-      const { data: row } = await (supabase as any)
+      const { data: row } = await ((await getSupabase()) as any)
         .from("seo_meta")
         .select("*")
         .eq("tenant_id", tenant!.id)

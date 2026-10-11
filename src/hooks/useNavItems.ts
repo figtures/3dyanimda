@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import {getSupabase} from "@/lib/backend-config";
 import { useTenant } from "@/contexts/TenantContext";
 import {publicRenderState} from '@/lib/public-render-state';
 const cache=new Map<string,NavItemRow[]>();
@@ -22,7 +22,7 @@ export function useNavItems(location?: string) {
     let active = true;
     setRows(cache.get(tenant?.id)||[]);
     if (tenant && !cache.has(tenant.id))
-      supabase
+      getSupabase().then(supabase=>supabase
         .from("nav_items")
         .select("id,location,label_tr,label_en,url,parent,badge,sort_order")
         .eq("tenant_id", tenant.id)
@@ -30,7 +30,7 @@ export function useNavItems(location?: string) {
         .order("sort_order")
         .then(({ data }) => {
           if (active) {cache.set(tenant!.id,data??[]);setRows(data ?? []);}
-        });
+        }));
     return () => {
       active = false;
     };

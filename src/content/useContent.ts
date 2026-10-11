@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useTenant } from "@/contexts/TenantContext";
-import { supabase, demoMode } from "@/lib/supabase";
+import { getSupabase, demoMode } from "@/lib/backend-config";
 import type { LandingPage } from "./types";
 import { localDraftPreviewAllowed } from "./local-preview";
 import {selectRelatedContent} from './related';
@@ -30,6 +30,7 @@ export function useContent(includeDrafts = false, full = false, options:{kinds?:
             (includeDrafts || localDraftPreview || p.status === "published") && (!options.kinds?.length||options.kinds.includes(p.kind)),
         );
       }
+      const supabase=await getSupabase();
       let query = supabase
         .from("landing_pages")
         .select(includeDrafts || full ? "*" : summaryColumns)
@@ -54,7 +55,7 @@ export function useContentPage(path: string) {
     queryKey:['landing-page',tenant?.id,path],enabled:!!tenant,
     queryFn:async():Promise<LandingPage|null>=>{
       if(demoMode){const result=await defaults.refetch();return result.data?.find(p=>p.path===path)||null;}
-      const {data,error}=await supabase.from('landing_pages').select('*').eq('tenant_id',tenant!.id).eq('path',path).eq('status','published').maybeSingle();
+      const {data,error}=await (await getSupabase()).from('landing_pages').select('*').eq('tenant_id',tenant!.id).eq('path',path).eq('status','published').maybeSingle();
       if(error)throw error;
       const {readEditorial}=await import("./editorial");
       return data?{...data,editorial:readEditorial(data.editorial)} as unknown as LandingPage:null;
@@ -70,6 +71,7 @@ export function useRelatedContent(page:LandingPage|null|undefined) {
   queryFn:async():Promise<LandingPage[]>=>{
    if(!page||!tenant)return [];
    if(demoMode){const result=await defaults.refetch();return selectRelatedContent(result.data||[],page);}
+   const supabase=await getSupabase();
    const base=()=>supabase.from('landing_pages').select(summaryColumns).eq('tenant_id',tenant.id).eq('status','published').order('path');
    const paths=page.editorial?.relatedPaths||[];
    const load=async(column:'kind'|'path',values:string[]):Promise<LandingPage[]>=>{

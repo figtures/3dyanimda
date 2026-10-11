@@ -6,7 +6,7 @@ import {
   ReactNode,
   useCallback,
 } from "react";
-import { supabase, demoMode, backendConfigured } from "@/lib/supabase";
+import { getSupabase, demoMode, backendConfigured } from "@/lib/backend-config";
 import { getRequestHost, setTenantId, setTenantIdentity } from "@/lib/tenant";
 import catalog from "@/brands/catalog.json";
 import {publicRenderState} from '@/lib/public-render-state';
@@ -65,10 +65,10 @@ export function TenantProvider({ children }: { children: ReactNode }) {
           };
       } else if (backendConfigured) {
         const { data: id, error: idError } =
-          await supabase.rpc("current_tenant_id");
+          await (await getSupabase()).rpc("current_tenant_id");
         if (idError) throw idError;
         if (id) {
-          const result = await supabase
+          const result = await (await getSupabase())
             .from("tenants")
             .select("*")
             .eq("id", id)

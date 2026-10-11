@@ -1,6 +1,6 @@
 import { useTenant } from "@/contexts/TenantContext";
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/backend-config";
 import { resolveMediaUrl } from "@/lib/media";
 import { getTenantId } from "@/lib/tenant";
 
@@ -13,7 +13,7 @@ const initial=publicRenderState();if(initial)cache.set(initial.tenant.id,initial
 const listeners = new Set<(id: string, value: Settings) => void>();
 const pending = new Map<string, Promise<Settings>>();
 async function load(id: string): Promise<Settings> {
-  const { data, error } = await supabase
+  const { data, error } = await (await getSupabase())
     .from("site_settings")
     .select("key, value")
     .eq("tenant_id", id);
@@ -66,7 +66,7 @@ export async function refreshSiteSettings() {
 export async function setSiteSetting(key: string, value: any) {
   const id = getTenantId();
   if (!id) throw new Error("Tenant not resolved");
-  const { error } = await supabase
+  const { error } = await (await getSupabase())
     .from("site_settings")
     .upsert(
       { tenant_id: id, key, value, updated_at: new Date().toISOString() },

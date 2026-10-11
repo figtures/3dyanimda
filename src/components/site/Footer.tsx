@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Youtube, Twitter } from "lucide-react";

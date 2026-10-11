@@ -2,28 +2,14 @@ import { previewSearch } from "@/lib/tenant";
 import { useState, useRef, lazy, Suspense } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
-import { z } from "zod";
 import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
-import { supabase, demoMode } from "@/lib/supabase";
+import { getSupabase, demoMode } from "@/lib/backend-config";
 import { Seo } from "@/components/site/Seo";
 import { trackGrowth } from "@/lib/growth-analytics";
 import type { StudioSpec } from "@/components/quote/QuoteStudio";
 const QuoteStudio = lazy(() => import("@/components/quote/QuoteStudio"));
-const schema = z.object({
-  full_name: z.string().trim().min(2).max(200),
-  email: z.string().email().max(254),
-  phone: z.string().max(40),
-  company: z.string().max(200),
-  quantity: z.coerce.number().int().min(1).max(1000),
-  part_description: z.string().trim().min(10).max(2400),
-  department: z.string().trim().max(100),
-  reference: z.string().trim().max(100),
-  target_date: z.string().max(10),
-  environment: z.string().trim().max(500),
-  material_pref: z.string().trim().max(100),
-  nda: z.string().optional(),
-});
+
 export default function QuoteRequest() {
   const brand = useBrand();
   const { tenant } = useTenant();
@@ -59,9 +45,12 @@ export default function QuoteRequest() {
       );
       return;
     }
-    const parsed = schema.safeParse(
-      Object.fromEntries(new FormData(event.currentTarget)),
-    );
+    const values = Object.fromEntries(new FormData(event.currentTarget));
+    if (busy) return;
+    setBusy(true);
+    try {
+    const {schema} = await import("@/components/quote/quote-schema");
+    const parsed = schema.safeParse(values);
     if (!parsed.success) {
       setError(
         "Lütfen ad, geçerli e-posta, adet ve en az 10 karakterlik proje açıklamasını kontrol edin.",
@@ -91,8 +80,7 @@ export default function QuoteRequest() {
     ]
       .filter(Boolean)
       .join("\n\n");
-    setBusy(true);
-    try {
+      const supabase=await getSupabase();
       let path: string | null = null;
       if (file) {
         const ext = file.name.split(".").pop()?.toLowerCase();

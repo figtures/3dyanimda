@@ -6,6 +6,7 @@ import json,hashlib,re
 root=Path('public/fonts');report=[]
 for family in ['inter','rethink-sans']:
  css=root/(family+'.css');text=css.read_text()
+ text='\n\n'.join(face for face in re.findall(r'@font-face\s*\{[^}]+\}',text) if '-tr-v2.woff2' in face or '-tr-v3.woff2' in face)+'\n'
  for old in root.glob(family+'-*-tr-v2.woff2'):
   font=TTFont(old);instantiateVariableFont(font,{'wght':(400,700)},inplace=True)
   target=old.with_name(old.name.replace('-v2','-v3'));font.save(target)

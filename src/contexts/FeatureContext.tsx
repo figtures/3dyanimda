@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode, useCallback } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/backend-config";
 import { useTenant } from "./TenantContext";
 
 import {publicRenderState} from '@/lib/public-render-state';
@@ -54,6 +54,7 @@ export function FeatureProvider({ children }: { children: ReactNode }) {
       return;
     }
     setLoading(true);
+    const supabase=await getSupabase();
     // Defaults: every known feature ON unless explicitly toggled off in tenant_features.
     const [{ data: master }, { data: tf }] = await Promise.all([
       supabase.from("features").select("key"),

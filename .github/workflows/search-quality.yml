@@ -51,6 +51,30 @@ jobs:
       - run: npm run audit:search-evidence
       - run: npm run build
 
+  live-schema-inventory:
+    name: Public API schema inventory across all brands
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      VITE_SUPABASE_URL: 'https://zdxjmhhjuomcpdtllnuq.supabase.co'
+      VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_cb-5Z_xQf-Z19whnlsrG-A_Id5ewC6H'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: node scripts/quality/run-live-schema.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: live-schema-${{ github.sha }}
+          path: artifacts/live-schema/
+          retention-days: 30
+
   navigation-regression:
     name: Navigation across brands, themes and viewports
     runs-on: ubuntu-24.04
@@ -67,3 +91,8 @@ jobs:
       - run: node scripts/test-navigation.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: navigation-${{ github.sha }}
+          path: /tmp/brand-menu-previews/
+          retention-days: 30

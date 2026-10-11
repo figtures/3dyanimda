@@ -6,6 +6,7 @@ export type PublicRenderState = {
  settings:Record<string,unknown>; nav:unknown[]; flags:Record<string,boolean>;
  queries:DehydratedState;
  seo?:Record<string,unknown>|null;
+ redirects?:Record<string,string>;
  theme?:{theme:import('@/contexts/ThemeContext').Theme|null;config:import('@/contexts/ThemeContext').ThemeConfig};
 };
 /** Route-scoped snapshots never accumulate other pages during a multi-page export. */

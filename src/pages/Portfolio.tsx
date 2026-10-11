@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { useEffect, useState } from "react";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";

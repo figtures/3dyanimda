@@ -112,8 +112,8 @@ try {
   }
   if(target.route==='/'||target.route==='/teklif-al'){
    await page.setViewport({width:390,height:844});
-   await page.click('.product-menu-toggle');await page.waitForSelector('[role=dialog]',{visible:true});
-   await page.keyboard.press('Escape');await page.waitForSelector('[role=dialog]',{hidden:true});
+   await page.click('.product-menu-toggle');await page.waitForSelector('dialog, [role=dialog]',{visible:true});
+   await page.keyboard.press('Escape');await page.waitForSelector('dialog, [role=dialog]',{hidden:true});
    if(target.route==='/teklif-al'){
     await page.type('input[name=full_name]','Browser verification');
     await page.click('.quote-service-choice button:nth-child(2)');
