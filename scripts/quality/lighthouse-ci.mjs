@@ -3,10 +3,11 @@
 import lighthouse from 'lighthouse';
 import desktopConfig from 'lighthouse/core/config/desktop-config.js';
 import {schemaIntegrity} from './schema-integrity.mjs';
+import {validateVocabulary} from './schema-vocabulary.mjs';
 import puppeteer from 'puppeteer-core';
 import {loadEnv,build} from 'vite';
 import {createServer as createHttpServer} from 'node:http';
-import {createServer as createHttpsServer} from 'node:https';
+import {createSecureServer as createHttpsServer} from 'node:http2';
 import {execFileSync} from 'node:child_process';
 import {mkdtemp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
@@ -31,7 +32,7 @@ if(canonicalLab){
 }
 const output=`artifacts/lighthouse-${brand}/summary.json`;
 const raw=`artifacts/lighthouse-${brand}/raw`;await mkdir(raw,{recursive:true});
-let report={kind:'candidate-artifact-lab',production:false,fieldData:false,originMode:canonicalLab?'isolated-canonical-host-with-local-test-certificate':'localhost-noindex',publicDnsOrTlsVerified:false,api:'actual public API; no cached fixtures during measurement',sourceCommit:process.env.GITHUB_SHA,workflowRun:process.env.GITHUB_RUN_ID,startedAt:new Date().toISOString(),runs:[],errors:[],limitations:['Real localhost HTTP server with gzip; CDN, public DNS, TLS and production availability are not measured.',canonicalLab?'Canonical hostname is mapped to loopback in Chrome. Local self-signed TLS is trusted only in this CI browser; public DNS/TLS, production availability and indexing are NOT verified.':'Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.','Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion.']};
+let report={kind:'candidate-artifact-lab',production:false,fieldData:false,transport:canonicalLab?'HTTP/2 with HTTP/1.1 fallback':'HTTP/1.1',originMode:canonicalLab?'isolated-canonical-host-with-local-test-certificate':'localhost-noindex',publicDnsOrTlsVerified:false,api:'actual public API; no cached fixtures during measurement',sourceCommit:process.env.GITHUB_SHA,workflowRun:process.env.GITHUB_RUN_ID,startedAt:new Date().toISOString(),runs:[],errors:[],limitations:['Real loopback HTTP/2 HTTPS server with gzip in canonical-host mode; CDN, public DNS, public TLS and production availability are not measured. Previous baseline used HTTP/1.1, so score changes include a transport-method change.',canonicalLab?'Canonical hostname is mapped to loopback in Chrome. Local self-signed TLS is trusted only in this CI browser; public DNS/TLS, production availability and indexing are NOT verified.':'Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.','Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion.']};
 const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,defaultViewport:null,ignoreDefaultArgs:['--enable-automation'],args:[...(canonicalLab?['--ignore-certificate-errors','--no-proxy-server','--host-resolver-rules=MAP '+brand+'.com 127.0.0.1']:[]),'--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const mime={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.woff2':'font/woff2','.glb':'model/gltf-binary'};
 const routes=(process.env.LAB_ROUTES||'/,/3d-baski,/teklif-al').split(',');
@@ -60,7 +61,7 @@ try {
    if(compressed)body=gzipSync(body);
    res.writeHead(200,{'content-type':type,'cache-control':cache,'content-length':body.length,...(compressed?{'content-encoding':'gzip','vary':'Accept-Encoding'}:{})});res.end(body);
   };
-  server=canonicalLab?createHttpsServer(tls,serve):createHttpServer(serve);
+  server=canonicalLab?createHttpsServer({...tls,allowHTTP1:true},serve):createHttpServer(serve);
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const origin=(canonicalLab?'https://'+brand+'.com':'http://127.0.0.1')+':'+server.address().port;
   const context=await browser.createBrowserContext();const page=await context.newPage();page.setDefaultTimeout(45000);
@@ -85,7 +86,7 @@ try {
   if(contract.h1!==1||contract.canonical!=='https://'+brand+'.com'+target.route||contract.og!==contract.canonical||contract.schemas.length!==1)throw Error('Rendered SEO contract failed: '+target.route);
   if(canonicalLab&&contract.robots?.includes('noindex'))throw Error('Public-host candidate unexpectedly noindex: '+target.route);
   if(!canonicalLab&&!contract.robots?.includes('noindex'))throw Error('Local preview lost noindex protection');
-  const schemaErrors=schemaIntegrity(contract.schemas[0],{origin:'https://'+brand+'.com',visibleText:contract.text});
+  const schemaErrors=[...schemaIntegrity(contract.schemas[0],{origin:'https://'+brand+'.com',visibleText:contract.text}),...validateVocabulary(contract.schemas[0])];
   if(schemaErrors.length)throw Error(JSON.stringify(schemaErrors));
   report.renderContracts||=[];report.renderContracts.push({...target,status:'PASS',h1:contract.h1,canonical:contract.canonical,schemaNodes:contract.schemas[0]['@graph'].length,robots:contract.robots});
   await inlineCriticalCss(page);

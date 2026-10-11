@@ -3,7 +3,7 @@ import {firstContentPaint} from "./lib/first-paint";
 const element=document.getElementById('root')!;
 async function boot() {
   const [{default:App,preparePublicRoute},{mountApp},{publicRenderState}]=await Promise.all([
-    import('./App'),import('./lib/mount-app'),import('./lib/public-render-state'),import('./lib/i18n'),
+    import('./App'),import('./lib/mount-app'),import('./lib/public-render-state'),
   ]);
   if(element.dataset.hydration==='react-ssg-v1'&&publicRenderState())await preparePublicRoute(location.pathname);
   mountApp(element,<App />,!!publicRenderState());

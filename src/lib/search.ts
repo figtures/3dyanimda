@@ -20,7 +20,7 @@ export function pageGraph(input: {
     isPartOf: { "@id": input.origin + "/#website" },
     publisher: { "@id": input.origin + "/#organization" },
     ...(input.modified ? { dateModified: input.modified } : {}),
-    ...(input.image ? { primaryImageOfPage: { "@type": "ImageObject", url: new URL(input.image, input.origin).href } } : {}),
+    ...(input.image ? { primaryImageOfPage: { "@type": "ImageObject", "@id":url+'#primaryimage', url: new URL(input.image, input.origin).href, contentUrl:new URL(input.image,input.origin).href } } : {}),
   };
 }
 

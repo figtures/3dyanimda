@@ -1,7 +1,6 @@
 import { useTenant } from "@/contexts/TenantContext";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
-import i18n from "@/lib/i18n";
 import {publicRenderState} from '@/lib/public-render-state';
 
 type SeoOverride = {
@@ -24,7 +23,7 @@ export function clearSeoOverrideCache() {
 
 /** Fetches admin-managed SEO meta for the given path. Returns null until loaded. */
 export function useSeoOverride(path: string): SeoOverride | null {
-  const lang = i18n.language?.startsWith("en") ? "en" : "tr";
+  const lang = "tr"; // These public routes and their visible content are Turkish.
   const { tenant } = useTenant();
   const cacheKey = `${tenant?.id}::${path}::${lang}`;
   const cached = cache.get(cacheKey);

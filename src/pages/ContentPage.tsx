@@ -1,3 +1,4 @@
+import {contentStructuredData,contentParent} from "@/content/structured-content";
 import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
@@ -30,30 +31,7 @@ export default function ContentPage() {
       </div>
     );
   if (!p) return import.meta.env.DEV ? <RegionPlanner key={pathname} /> : <NotFound />;
-  const parent =
-    p.kind === "service"
-      ? "/hizmetler"
-      : p.kind === "sector"
-        ? "/sektorler"
-        : p.kind === "solution"
-          ? "/cozumler"
-          : p.kind === "material"
-            ? "/malzemeler"
-            : p.kind === "location"
-              ? "/bolgeler"
-              : "/rehber";
-  const parentLabel =
-    p.kind === "service"
-      ? "Hizmetler"
-      : p.kind === "sector"
-        ? "Sektörler"
-        : p.kind === "solution"
-          ? "Çözümler"
-          : p.kind === "material"
-            ? "Malzemeler"
-            : p.kind === "location"
-              ? "Hizmet bölgeleri"
-              : "Bilgi merkezi";
+  const [parent,parentLabel] = contentParent(p.kind);
   const base = getTenantIdentity().origin;
   const technicalNote=sourceNote(p.path);
   const modified=contentModified(p.updated_at,p.path);
@@ -77,58 +55,7 @@ export default function ContentPage() {
         modified={modified}
         keywords={[p.title, b.focus, p.city, p.district, p.neighborhood].filter(Boolean).join(", ")}
         geo={p.city ? {region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ")} : undefined}
-        jsonLd={[
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Anasayfa",
-                item: base,
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: parentLabel,
-                item: base + parent,
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: p.title,
-                item: base + p.path,
-              },
-            ],
-          },
-          ...(p.kind === "guide" ? [{"@context":"https://schema.org","@type":"Article",headline:p.title,description:p.summary,mainEntityOfPage:base+p.path,author:{"@id":base+"/#organization"},publisher:{"@id":base+"/#organization"},...(modified?{dateModified:modified}:{}),...(p.image?{image:new URL(p.image,base).href}:{})}] : []),
-          ...(p.kind === "service"
-            ? [
-                {
-                  "@context": "https://schema.org",
-                  "@type": "Service",
-                  name: p.title,
-                  description: p.summary,
-                  provider: { "@id": base + "/#organization" },
-                  url: base + p.path,
-                },
-              ]
-            : []),
-          ...(p.faq.length
-            ? [
-                {
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  mainEntity: p.faq.map((f) => ({
-                    "@type": "Question",
-                    name: f.q,
-                    acceptedAnswer: { "@type": "Answer", text: f.a },
-                  })),
-                },
-              ]
-            : []),
-        ]}
+        jsonLd={contentStructuredData(p,base)}
       />
       <section className="content-hero wrap">
         <nav className="breadcrumbs" aria-label="Sayfa yolu">

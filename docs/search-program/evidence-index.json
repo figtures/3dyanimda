@@ -18,8 +18,8 @@
     },
     {
       "path": ".github/workflows/search-quality.yml",
-      "sha256": "627a7c88871a1c0587879e3b8489fc6566b1890c8e0429a0f68db4a4d036cf54",
-      "bytes": 1406
+      "sha256": "8342a03999d1d54cf6ebc3081c82a9598dfcf449ea9a141d9cbe544bacff19d5",
+      "bytes": 2055
     },
     {
       "path": "docs/audits/content-contract-audit-2026-10-11.json",
@@ -143,8 +143,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "22de89ad8d8e4acfa6ff9a9d082a4ee37a444f8f83378c3f31d9016a8c824dd3",
-      "bytes": 363
+      "sha256": "5d49b22a89b04104ee76906e2a454641aa331fc04021154fdd80cd5f942ea481",
+      "bytes": 592
     },
     {
       "path": "package.json",
@@ -283,7 +283,7 @@
     },
     {
       "path": "public/fonts/inter.css",
-      "sha256": "a73a9cd8d775f4c03c8a45ef17a35ab7109a3ea36c9ae6805c3e82bc09727cb9",
+      "sha256": "781b1dd6981d637a7d93f8dc125dd04ad6d3a53f1f25cb4f10e098af44beab31",
       "bytes": 762
     },
     {
@@ -298,7 +298,7 @@
     },
     {
       "path": "public/fonts/rethink-sans.css",
-      "sha256": "f30c60f3c40c16dbd7c0767c22722ca89e6a08bde9158db50a290701868a4230",
+      "sha256": "0578c0b8b2b9600d3af715184c0f106acdca5527f9a69a39d947733554b696ef",
       "bytes": 750
     },
     {
@@ -363,8 +363,8 @@
     },
     {
       "path": "scripts/quality/lighthouse-ci.mjs",
-      "sha256": "9c3d86b594856213307889412c4fadb8a59682c54be1a307eae0aa4b5d51c22f",
-      "bytes": 13299
+      "sha256": "a49cec77e4235165969ee8f1d9b4642186a5bcdd21cf037b876f1f66a0d7f921",
+      "bytes": 13622
     },
     {
       "path": "scripts/quality/public-bootstrap.mjs",
@@ -443,8 +443,8 @@
     },
     {
       "path": "src/App.tsx",
-      "sha256": "8ee67df7ce2c031eee90ac1a5663ec73bce90446cc1ef3f1ac9fb922a7143b13",
-      "bytes": 15754
+      "sha256": "238ce65264700d7e202df09614cee16f3dfef6e36a2c683facb6ae6e108e22c6",
+      "bytes": 15646
     },
     {
       "path": "src/brands/brand.css",
@@ -523,8 +523,8 @@
     },
     {
       "path": "src/content/useContent.ts",
-      "sha256": "49a11817ad547dcc91fbdad6e762a95def17501eb69ffdfb2991df47c418205a",
-      "bytes": 4439
+      "sha256": "f74d1ac4bb9ad95572466acab871b33244f6785a7aa4671e27f79f1bf9e11ceb",
+      "bytes": 4508
     },
     {
       "path": "src/contexts/FeatureContext.tsx",
@@ -598,8 +598,8 @@
     },
     {
       "path": "src/lib/schema-graph.ts",
-      "sha256": "daa81167c156e464bad0e96ad667531653e5b0398a76c077e296dfa48957de6d",
-      "bytes": 2851
+      "sha256": "1b642219b619538e1fcb97780131fcde2345699fd3668c1960e87dd09726569d",
+      "bytes": 3796
     },
     {
       "path": "src/lib/search-indexability.test.ts",
@@ -613,8 +613,8 @@
     },
     {
       "path": "src/lib/search.ts",
-      "sha256": "351712a6772f5696ad87b653db2838e5b7b6aba1c459fb9df84f9562e85a443d",
-      "bytes": 1599
+      "sha256": "739938882145d9cf3eecc9843a24bbe622e948e17a5aca09c11823f51575e08b",
+      "bytes": 1677
     },
     {
       "path": "src/lib/social-meta.test.ts",
@@ -628,8 +628,8 @@
     },
     {
       "path": "src/main.tsx",
-      "sha256": "1ea167a46f43654a21a8beece06f8d63697449f943e796910de255bdaee4c81a",
-      "bytes": 1002
+      "sha256": "431c86dea1948d35bbe0265f0625c5a224b688d957fc69db2e59f3a11011573e",
+      "bytes": 981
     },
     {
       "path": "src/pages/ContentHub.tsx",
@@ -638,8 +638,8 @@
     },
     {
       "path": "src/pages/ContentPage.tsx",
-      "sha256": "5f892c11cc94ca633debf8bc70f696a4d9b5e6296dea1da6f3023cb859c5cc04",
-      "bytes": 11480
+      "sha256": "4b9cd9835ea9c5e3176c7f7fc5d720b6b75dadd5252b56ff103d6c4a4a97483e",
+      "bytes": 9171
     },
     {
       "path": "src/pages/Index.tsx",

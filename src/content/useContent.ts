@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { useTenant } from "@/contexts/TenantContext";
 import { supabase, demoMode } from "@/lib/supabase";
 import type { LandingPage } from "./types";
-import { readEditorial } from "./editorial";
 import { localDraftPreviewAllowed } from "./local-preview";
 import {selectRelatedContent} from './related';
 const summaryColumns:string='id,tenant_id,path,title,summary,kind,image,status,city,district,neighborhood,service,updated_at,editorial->answer';
@@ -40,6 +39,7 @@ export function useContent(includeDrafts = false, full = false, options:{kinds?:
       if(options.kinds?.length)query=query.in('kind',options.kinds);
       const { data, error } = await query;
       if (error) throw error;
+      const {readEditorial}=await import("./editorial");
       return (data as unknown as (LandingPage & {answer?:string})[]).map(p => ({...p, editorial:readEditorial(p.editorial || (p.answer ? {answer:p.answer} : undefined))}));
     },
     staleTime: 60000,
@@ -56,6 +56,7 @@ export function useContentPage(path: string) {
       if(demoMode){const result=await defaults.refetch();return result.data?.find(p=>p.path===path)||null;}
       const {data,error}=await supabase.from('landing_pages').select('*').eq('tenant_id',tenant!.id).eq('path',path).eq('status','published').maybeSingle();
       if(error)throw error;
+      const {readEditorial}=await import("./editorial");
       return data?{...data,editorial:readEditorial(data.editorial)} as unknown as LandingPage:null;
     },staleTime:60000,
   });

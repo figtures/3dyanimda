@@ -1,0 +1,37 @@
+{
+  "kind": "Axis instancing, unchanged glyph coverage",
+  "weightRange": [
+    400,
+    700
+  ],
+  "fonts": [
+    {
+      "source": "public/fonts/inter-latin-wght-normal-tr-v2.woff2",
+      "target": "public/fonts/inter-latin-wght-normal-tr-v3.woff2",
+      "beforeBytes": 37384,
+      "afterBytes": 27056,
+      "sha256": "6799700dc4cb95bd62782cc8aef1c17b2bc9dfcaeb39ad34a38b18c4053dfb9c"
+    },
+    {
+      "source": "public/fonts/inter-latin-ext-wght-normal-tr-v2.woff2",
+      "target": "public/fonts/inter-latin-ext-wght-normal-tr-v3.woff2",
+      "beforeBytes": 3800,
+      "afterBytes": 2804,
+      "sha256": "d7b77a71e8caf9b33a98c0a499c833fa64162760569aefd2754b9d558dd6b7de"
+    },
+    {
+      "source": "public/fonts/rethink-sans-latin-ext-wght-normal-tr-v2.woff2",
+      "target": "public/fonts/rethink-sans-latin-ext-wght-normal-tr-v3.woff2",
+      "beforeBytes": 3124,
+      "afterBytes": 2424,
+      "sha256": "351173b850baf168a475f72e65d24c983b0f746670f4bb7b9e8062fd016918fa"
+    },
+    {
+      "source": "public/fonts/rethink-sans-latin-wght-normal-tr-v2.woff2",
+      "target": "public/fonts/rethink-sans-latin-wght-normal-tr-v3.woff2",
+      "beforeBytes": 32940,
+      "afterBytes": 24328,
+      "sha256": "25bf7658f67859ec0fb60e4ea3bf58b1a30a1e270df4186dab9a5c7e5b3ad997"
+    }
+  ]
+}

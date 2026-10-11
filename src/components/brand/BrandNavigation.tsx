@@ -1,9 +1,7 @@
 import { previewSearch } from "@/lib/tenant";
-import {useEffect,useState} from 'react';
+import {useEffect,useState,useRef,useId} from 'react';
 import {Link,NavLink,useLocation} from 'react-router-dom';
 import {ArrowUpRight,Box,ChevronDown,Layers3,Menu,ScanLine,Printer,ArrowRight} from 'lucide-react';
-import {Popover,PopoverContent,PopoverTrigger} from '@/components/ui/popover';
-import {Sheet,SheetContent,SheetTitle,SheetDescription,SheetTrigger} from '@/components/ui/sheet';
 import {useBrand} from '@/brands/config';
 import {useNavItems} from '@/hooks/useNavItems';
 import {resolveMediaUrl} from '@/lib/media';
@@ -14,6 +12,9 @@ const groups=[{title:'Üretimi planlayın',items:[['/cozumler','Uygulama alanlar
 export default function BrandNavigation(){
  const brand=useBrand();const location=useLocation();const theme=getSiteTheme(brand.slug,location.search);
  const [expanded,setExpanded]=useState(false);const [mobile,setMobile]=useState(false);
+ const dialog=useRef<HTMLDialogElement>(null),explore=useRef<HTMLDivElement>(null),exploreButton=useRef<HTMLButtonElement>(null);const id=useId();
+ useEffect(()=>{const el=dialog.current;if(!el)return;if(mobile&&!el.open)el.showModal();else if(!mobile&&el.open)el.close();const old=document.body.style.overflow;if(mobile)document.body.style.overflow='hidden';return()=>{document.body.style.overflow=old;};},[mobile]);
+ useEffect(()=>{if(!expanded)return;const key=(event:KeyboardEvent)=>{if(event.key==='Escape'){setExpanded(false);exploreButton.current?.focus();}};const outside=(event:PointerEvent)=>{if(!explore.current?.contains(event.target as Node))setExpanded(false);};document.addEventListener('keydown',key);document.addEventListener('pointerdown',outside);return()=>{document.removeEventListener('keydown',key);document.removeEventListener('pointerdown',outside);};},[expanded]);
  const extra=useNavItems('header_extra').filter(i=>i.url.startsWith('/')&&!i.url.startsWith('//'));
  const wordmark=resolveMediaUrl(brand.settings.logo_wordmark?.url);
  const link=(path:string)=>path+previewSearch(location.search);
@@ -25,19 +26,19 @@ export default function BrandNavigation(){
   <div className="product-header-inner">{logo}
   <nav aria-label="Ana menü" className="product-desktop-nav">
    {services.map(service=><NavLink key={service.path} to={link(service.path)}>{service.label}</NavLink>)}
-   <Popover open={expanded} onOpenChange={setExpanded}><PopoverTrigger asChild><button type="button" className="product-explore" aria-label="Keşfet menüsü">Keşfet<ChevronDown size={15} className={expanded?'is-rotated':''}/></button></PopoverTrigger><PopoverContent align="end" sideOffset={20} className="brand-navigation-panel" data-navigation-theme={theme}>
+   <div ref={explore}><button ref={exploreButton} type="button" className="product-explore" aria-label="Keşfet menüsü" aria-expanded={expanded} aria-controls={id+"-explore"} onClick={()=>setExpanded(!expanded)}>Keşfet<ChevronDown size={15} className={expanded?'is-rotated':''}/></button>{expanded&&<div id={id+"-explore"} className="brand-navigation-panel native-navigation-panel" data-navigation-theme={theme}>
     <div className="navigation-panel-head"><span>{brand.name}</span><span>{brand.focus}</span></div>
     <nav aria-label="Keşfet" className="navigation-directory">{directory(()=>setExpanded(false))}</nav>
     <Link className="navigation-lab" to={link('/araclar')} onClick={()=>setExpanded(false)}><span><strong>3D Lab</strong><small>STL önizleme · Kesit analizi · Tarama görüntüleme</small></span><ArrowUpRight size={23}/></Link>
-   </PopoverContent></Popover>
+   </div>}</div>
   </nav>
   <div className="product-header-actions"><Link to={link('/araclar')} className="product-lab-link">3D Lab<span>Ücretsiz</span></Link><Link to={link('/teklif-al')} className="product-quote">Teklif al<ArrowUpRight size={17}/></Link>
-  <Sheet open={mobile} onOpenChange={setMobile}><SheetTrigger asChild><button className="product-menu-toggle" aria-label="Menüyü aç" type="button"><Menu size={23}/></button></SheetTrigger><SheetContent side="right" className="brand-navigation-drawer" data-navigation-theme={theme}>
-   <SheetTitle>{brand.name}</SheetTitle><SheetDescription>Hizmetler, mühendislik araçları ve iletişim.</SheetDescription>
+  <button className="product-menu-toggle" aria-label="Menüyü aç" type="button" aria-haspopup="dialog" aria-expanded={mobile} aria-controls={id+"-mobile"} onClick={()=>setMobile(true)}><Menu size={23}/></button><dialog ref={dialog} id={id+"-mobile"} aria-labelledby={id+"-title"} aria-describedby={id+"-description"} className="brand-navigation-drawer native-navigation-drawer" data-navigation-theme={theme} onCancel={()=>setMobile(false)} onClose={()=>setMobile(false)} onClick={event=>{if(event.target===event.currentTarget){const r=event.currentTarget.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)setMobile(false);}}}>{mobile&&<>
+   <h2 id={id+"-title"}>{brand.name}</h2><p id={id+"-description"}>Hizmetler, mühendislik araçları ve iletişim.</p><button type="button" className="native-navigation-close" aria-label="Menüyü kapat" onClick={()=>setMobile(false)}>×</button>
    <nav aria-label="Mobil ana menü" className="navigation-mobile-body"><div className="mobile-service-links">{services.map(service=><NavLink key={service.path} to={link(service.path)} onClick={()=>setMobile(false)}><service.icon size={23}/><span><strong>{service.label}</strong><small>{service.caption}</small></span><ArrowUpRight size={18}/></NavLink>)}</div>
    <div className="navigation-mobile-directory">{directory(()=>setMobile(false))}</div>
    <Link className="navigation-lab" to={link('/araclar')} onClick={()=>setMobile(false)}><span><strong>3D Lab</strong><small>Dosyanızı tarayıcıda inceleyin.</small></span><ArrowUpRight size={23}/></Link></nav>
    <Link className="mobile-quote" to={link('/teklif-al')} onClick={()=>setMobile(false)}>Projeniz için teklif alın<ArrowRight size={19}/></Link>
-  </SheetContent></Sheet></div></div>
+  </>}</dialog></div></div>
  </header>;
 }

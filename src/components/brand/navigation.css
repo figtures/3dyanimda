@@ -4,3 +4,10 @@
 .brand-navigation-panel[data-navigation-theme=editorial]{background:#f8f5ee}
 .brand-navigation-drawer[data-navigation-theme]{background:#fafaf7;color:#172a22;padding:28px 24px 20px}
 @media(prefers-reduced-motion:reduce){.brand-navigation-panel[data-navigation-theme],.brand-navigation-drawer[data-navigation-theme]{animation:none!important}}
+
+/* Browser-native modal focus/inert behavior avoids loading a positioning library at startup. */
+.native-navigation-panel{position:fixed;top:100px;right:max(24px,calc((100vw - 1472px)/2));}
+.native-navigation-drawer{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #dde3db;max-width:min(440px,94vw);}
+.native-navigation-drawer:not([open]){display:none;}
+.native-navigation-drawer::backdrop{background:rgb(0 0 0 / .65);}
+.native-navigation-close{position:absolute;right:15px;top:15px;width:40px;height:40px;font-size:27px;line-height:1;border-radius:8px;}

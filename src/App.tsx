@@ -16,7 +16,6 @@ import {
 import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense,useSyncExternalStore } from "react";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrandLayout as Layout } from "@/components/brand/BrandLayout";
 
 import { TenantProvider } from "@/contexts/TenantContext";
@@ -364,7 +363,6 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <RenderReadiness />
-      <TooltipProvider>
         <RouteNotifications />
         <TenantProvider>
           <ThemeProvider>
@@ -373,7 +371,6 @@ const App = () => (
             </FeatureProvider>
           </ThemeProvider>
         </TenantProvider>
-      </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
 );
