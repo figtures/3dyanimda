@@ -1,3 +1,7 @@
+# Mobil ve SEO güncellemesi — 12 Ekim 2026
+
+[En güncel mobil/masaüstü ve SEO ölçümleri](MOBILE-SEO-2026-10-12.md): 240 gerçek Lighthouse koşusu, 80 HTML koruma kontrolü ve işlev doğrulamaları. Yayın adayı, izole canonical-host yapılandırmasında test edildi; özel önizleme noindex korumasını sürdürüyor.
+
 # Güncel devam kontrolü
 
 [11 Ekim durum özeti](PROGRESS-2026-10-11.md) ve [240 koşuluk Lighthouse sonuçları](LIGHTHOUSE-RESULTS-2026-10-11.md). 141 test geçti; kalan üretim ve bağımsız inceleme eksikleri açıkça listelenmiştir. Tüm protokoller tamamlandı anlamına gelmez.

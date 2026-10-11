@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "compliance-discovery-not-release-certificate",
-  "reviewedAt": "2026-10-11",
+  "reviewedAt": "2026-10-12",
   "baselineCommit": "dda4d28a0141a2036b933ee608bed83e0ce94674",
   "reviewer": "Codex (AI, owner-delegated)",
   "humanReviewPerformed": false,
@@ -213,21 +213,22 @@
           "requirement": "Render mode and >=10 critical URL or 80% traffic coverage",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "docs/audits/lighthouse-ci-final-2026-10-11.json"
+            "docs/audits/mobile-seo-2026-10-12.json",
+            "docs/search-program/RFC-SEARCH-004.md"
           ],
-          "localReview": "Candidate Chrome lab covers 10 actual routes per brand, 40 brand-route pairs. Production traffic coverage remains unknown.",
-          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          "localReview": "40 brand-route pairs, 80 route/device hydration checks and 240 Lighthouse runs cover the selected candidate templates. Production traffic coverage and GSC evidence remain unverified.",
+          "localTestReport": "docs/audits/mobile-seo-2026-10-12.json"
         },
         {
           "id": "SEO-04-02",
           "requirement": "Initial HTML contains title, description, canonical, H1, content, navigation and JSON-LD",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "docs/audits/lighthouse-ci-final-2026-10-11.json",
-            "scripts/quality/lighthouse-ci.mjs"
+            "docs/audits/mobile-seo-2026-10-12.json",
+            "docs/search-program/RFC-SEARCH-004.md"
           ],
-          "localReview": "Candidate rendered H1, canonical/OG and single schema graph checked for all 40 brand-route pairs. This is not GSC crawled HTML.",
-          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          "localReview": "Real React SSR markup and guarded public state preserve the original H1 across all 80 candidate route/device checks. Initial metadata/schema checks pass on the isolated canonical host; this is not deployed-domain crawled HTML.",
+          "localTestReport": "docs/audits/mobile-seo-2026-10-12.json"
         },
         {
           "id": "SEO-04-03",
@@ -403,11 +404,11 @@
           "requirement": "Repeated mobile and desktop Lighthouse on key templates",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "docs/audits/lighthouse-ci-final-2026-10-11.json",
-            ".github/workflows/lighthouse.yml"
+            "docs/audits/mobile-seo-2026-10-12.json",
+            "docs/search-program/RFC-SEARCH-004.md"
           ],
-          "localReview": "240 real candidate Lighthouse runs: four brands, ten routes, two verified device configurations, three repetitions. Not a production-domain or field-data certificate.",
-          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          "localReview": "240 real repeated Lighthouse runs completed on the isolated canonical-host candidate. See dated medians/minima; no private-preview score is substituted for a public-domain result.",
+          "localTestReport": "docs/audits/mobile-seo-2026-10-12.json"
         },
         {
           "id": "SEO-07-03",
@@ -424,22 +425,22 @@
           "requirement": "LCP image priority, responsive sizing and visual CLS review",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "docs/audits/service-image-encoding-2026-10-11.json",
-            "docs/audits/lighthouse-ci-final-2026-10-11.json"
+            "docs/audits/mobile-seo-2026-10-12.json",
+            "docs/search-program/RFC-SEARCH-004.md"
           ],
-          "localReview": "Responsive service images, contrast and content-ready reveal fixes measured. Remaining score/metric failures are retained in raw reports.",
-          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          "localReview": "Responsive hero preload ordering, versioned font subsets, optional font display and non-destructive hydration measured. All remaining numeric threshold failures are retained in the report.",
+          "localTestReport": "docs/audits/mobile-seo-2026-10-12.json"
         },
         {
           "id": "SEO-07-06",
           "requirement": "CI regressions, before/after release evidence and weekly/monthly review",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "docs/audits/lighthouse-ci-final-2026-10-11.json",
-            ".github/workflows/search-quality.yml"
+            "docs/audits/mobile-seo-2026-10-12.json",
+            "docs/search-program/RFC-SEARCH-004.md"
           ],
-          "localReview": "Source-matched GitHub lab and quality CI completed; approved route budgets and recurring operating reviews remain open.",
-          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          "localReview": "Hosted quality CI and measured hydration/interaction checks complete for the recorded source. Approved performance budgets, public-domain measurements and recurring operating history remain open.",
+          "localTestReport": "docs/audits/mobile-seo-2026-10-12.json"
         }
       ],
       "existingOrPreparedEvidence": [
@@ -447,8 +448,8 @@
         "A blocked attempt records zero runs rather than invented scores."
       ],
       "blockers": [
-        "240 candidate lab runs completed with non-100 scores explicitly retained. Production matching and 28-day CrUX/INP evidence remain open.",
-        "Approved route performance budgets and recurring reviews remain open."
+        "Current canonical-host candidate lab completed. Public DNS/TLS/CDN and production matching are not verified.",
+        "Non-100 scores and threshold misses are listed explicitly; 28-day CrUX/INP, approved route budgets and recurring reviews remain open."
       ]
     },
     {
@@ -1255,5 +1256,6 @@
   "implementationReviewScope": "Notion connector access resolved: 2 roots and all 20 protocol pages retrieved; current gate criteria reconciled. 131 local tests and TypeScript passed. Prior hosted CI success scoped to commit 2640f0b. Business-domain release, external measurements and independent approvals remain unverified.",
   "implementationReviewedOn": "2026-10-11",
   "latestSourceReconciliation": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "latestMeasuredCommit": "e37c93a8cf5de2de09695552e3cdb92082caefff"
+  "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
+  "latestLighthouseReport": "docs/audits/mobile-seo-2026-10-12.json"
 }
