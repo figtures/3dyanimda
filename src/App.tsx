@@ -1,5 +1,5 @@
 import {preloadable as lazy} from '@/lib/preloadable';
-import {publicRenderState,setPublicRenderState} from '@/lib/public-render-state';
+import {publicRenderState,setPublicRenderState,publicQueryForPath} from '@/lib/public-render-state';
 import {exportPublicTenant} from '@/contexts/TenantContext';
 import {exportPublicSettings} from '@/hooks/useSiteSettings';
 import {exportPublicNav} from '@/hooks/useNavItems';
@@ -13,9 +13,7 @@ import {
 } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Suspense } from "react";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
+import { Suspense,useSyncExternalStore } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrandLayout as Layout } from "@/components/brand/BrandLayout";
 
@@ -119,11 +117,13 @@ const wrap = (node: React.ReactNode) => (
 const queryClient = new QueryClient();
 const initialState=publicRenderState();
 if(initialState)hydrate(queryClient,{...initialState.queries,queries:initialState.queries.queries.map(q=>({...q,state:{...q.state,dataUpdatedAt:Date.now()}}))});
-export async function preparePublicRoute(path:string){
- const component=path==='/'?Index:path==='/teklif-al'?QuoteRequest:path==='/iletisim'?Contact:path==='/hakkimizda'?BrandAbout:['/sektorler','/hizmetler','/cozumler','/malzemeler','/rehber','/bolgeler'].includes(path)?ContentHub:/^\/(3d-baski|3d-tarama|3d-modelleme|cozumler\/|sektorler\/|malzemeler\/|rehber\/|bolgeler\/)/.test(path)?ContentPage:null;
- await component?.preload();
- return !!component;
+function publicRouteComponent(path:string){
+ return path==='/'?Index:path==='/teklif-al'?QuoteRequest:path==='/iletisim'?Contact:path==='/hakkimizda'?BrandAbout:['/sektorler','/hizmetler','/cozumler','/malzemeler','/rehber','/bolgeler'].includes(path)?ContentHub:(/^\/(3d-baski|3d-tarama|3d-modelleme)$/.test(path)||/^\/(cozumler|sektorler|malzemeler|rehber|bolgeler)\//.test(path))?ContentPage:null;
 }
+export async function preparePublicRoute(path:string){
+ const component=publicRouteComponent(path);await component?.preload();return !!component;
+}
+const NotificationOverlays=lazy(()=>import('./components/site/NotificationOverlays'));
 
 const router = createBrowserRouter([
   {
@@ -348,6 +348,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+const subscribeRoute=(changed:()=>void)=>router.subscribe(changed);
+const notificationRoute=()=>!publicRouteComponent(router.state.location.pathname);
+function RouteNotifications(){
+ const needed=useSyncExternalStore(subscribeRoute,notificationRoute,notificationRoute);
+ return needed?<Suspense fallback={null}><NotificationOverlays/></Suspense>:null;
+}
 const RenderReadiness = () => (
   <span hidden data-pending-queries={useIsFetching()} />
 );
@@ -357,8 +363,7 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <RenderReadiness />
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
+        <RouteNotifications />
         <TenantProvider>
           <ThemeProvider>
             <FeatureProvider>
@@ -375,7 +380,7 @@ const App = () => (
 (window as any).__renderPublicPage=async()=>{
  if(!await preparePublicRoute(location.pathname))return null;
  const tenant=exportPublicTenant()||publicRenderState()?.tenant;if(!tenant)return null;
- const queries=dehydrate(queryClient,{shouldDehydrateMutation:()=>false,shouldDehydrateQuery:q=>q.state.status==='success'&&['landing-page','landing-pages'].includes(String(q.queryKey[0]))&&q.queryKey[1]===tenant.id});
+ const queries=dehydrate(queryClient,{shouldDehydrateMutation:()=>false,shouldDehydrateQuery:q=>q.state.status==='success'&&publicQueryForPath(q.queryKey,tenant.id,location.pathname)});
  const state={version:1 as const,host:getRequestHost(),path:location.pathname,search:location.search,tenant,settings:exportPublicSettings(tenant.id),nav:exportPublicNav(tenant.id),flags:exportPublicFlags(),queries};
  setPublicRenderState(state);
  const {renderToString}=await import('react-dom/server.browser');

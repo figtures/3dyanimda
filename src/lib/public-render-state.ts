@@ -6,6 +6,15 @@ export type PublicRenderState = {
  settings:Record<string,unknown>; nav:unknown[]; flags:Record<string,boolean>;
  queries:DehydratedState;
 };
+/** Route-scoped snapshots never accumulate other pages during a multi-page export. */
+export function publicQueryForPath(key:readonly unknown[],tenantId:string,path:string){
+ if(!Array.isArray(key)||key[1]!==tenantId)return false;
+ if(key[0]==='landing-page')return key[2]===path;
+ if(key[0]!=='landing-pages')return false;
+ if(key[2]==='related')return key[3]===path;
+ const kinds:Record<string,string[]>={'/':['solution','guide'],'/hizmetler':['service'],'/sektorler':['sector'],'/cozumler':['solution'],'/malzemeler':['material'],'/rehber':['guide'],'/bolgeler':['location']};
+ return key[2]===false&&key[3]===false&&key[4]===false&&!!kinds[path]&&JSON.stringify(key[5])===JSON.stringify(kinds[path]);
+}
 /** Only explicit public query families may cross the HTML boundary. */
 export function validPublicRenderState(value:unknown,host:string,path:string):value is PublicRenderState {
  const s=value as PublicRenderState;
@@ -13,7 +22,7 @@ export function validPublicRenderState(value:unknown,host:string,path:string):va
   &&s.tenant?.status==='active'&&typeof s.tenant.id==='string'&&['3dyanimda','3dsanayi','maketyanimda','parcayanimda'].includes(s.tenant.slug)
   &&(s.tenant.custom_domain||s.tenant.domain)===host
   &&Array.isArray(s.nav)&&!!s.settings&&!!s.flags&&Array.isArray(s.queries?.queries)&&s.queries.mutations?.length===0
-  &&s.queries.queries.every(q=>['landing-page','landing-pages'].includes(String(q.queryKey?.[0]))&&q.queryKey[1]===s.tenant.id&&q.state.status==='success'&&q.queryKey[2]!==true);
+  &&s.queries.queries.every(q=>!!q&&publicQueryForPath(q.queryKey,s.tenant.id,path)&&q.state?.status==='success');
 }
 let state:PublicRenderState|null=null;
 const node=document.getElementById('public-render-state');

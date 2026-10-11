@@ -1,4 +1,5 @@
 import "./index.css";
+import {firstContentPaint} from "./lib/first-paint";
 const element=document.getElementById('root')!;
 async function boot() {
   const [{default:App,preparePublicRoute},{mountApp},{publicRenderState}]=await Promise.all([
@@ -12,6 +13,6 @@ async function boot() {
 if(element.dataset.prerendered==='true'){
   const hero=element.querySelector<HTMLImageElement>('.immersive-image');
   const visibleImage=hero?.decode().catch(()=>{}) || Promise.resolve();
-  void visibleImage.then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>void boot())));
+  void Promise.all([visibleImage,firstContentPaint()]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>void boot())));
 }
 else void boot();

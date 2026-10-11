@@ -44,6 +44,8 @@ export async function serializedPrerender(page) {
   const html=document.documentElement.cloneNode(true);
   if(rendered){
    const root=html.querySelector('#root');root.innerHTML=rendered.html;root.setAttribute('data-hydration','react-ssg-v1');
+   const bootstrap=html.querySelector('#public-bootstrap');
+   if(bootstrap){const snapshot=JSON.parse(bootstrap.textContent);snapshot.entries=snapshot.entries.filter(entry=>!['landing_pages','tenants','current_tenant_id','site_settings'].includes(new URL(JSON.parse(entry.key)[1],'https://snapshot.invalid').pathname.split('/').at(-1)));bootstrap.textContent=JSON.stringify(snapshot).replace(/</g,'\\u003c');}
    const script=document.createElement('script');script.id='public-render-state';script.type='application/json';script.textContent=JSON.stringify(rendered.state).replace(/</g,'\\u003c');html.querySelector('head').appendChild(script);
   }
   html.querySelectorAll('link[rel="modulepreload"]').forEach(link=>link.remove());
