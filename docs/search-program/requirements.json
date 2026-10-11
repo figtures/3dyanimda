@@ -423,11 +423,11 @@
           "requirement": "Repeated mobile and desktop Lighthouse on key templates",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "docs/audits/mobile-seo-2026-10-12.json",
-            "docs/search-program/RFC-SEARCH-004.md"
+            "docs/audits/mobile-seo-2026-10-12-round2.json",
+            "docs/search-program/RFC-SEARCH-005.md"
           ],
-          "localReview": "240 real repeated Lighthouse runs completed on the isolated canonical-host candidate. See dated medians/minima; no private-preview score is substituted for a public-domain result.",
-          "localTestReport": "docs/audits/mobile-seo-2026-10-12.json"
+          "localReview": "240 accepted real Lighthouse runs: four brands × ten routes × two devices × three repeats. Mobile performance medians are 100 on 37/40 pages, 98–99 on three; desktop medians and every SEO/accessibility/best-practices score are 100. HTTP/2 lab, not live production or field data; original HTTP/1.1 scores are not directly comparable. Explicit harness-only recheck provenance is retained.",
+          "localTestReport": "docs/audits/mobile-seo-2026-10-12-round2.json"
         },
         {
           "id": "SEO-07-03",
@@ -1278,5 +1278,6 @@
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "latestLighthouseReport": "docs/audits/mobile-seo-2026-10-12.json",
   "additionalBestPracticeReview": "docs/search-program/BEST-PRACTICES-2026-10-12.md",
-  "latestPublicDomainEvidence": "docs/audits/public-domains-2026-10-12.json"
+  "latestPublicDomainEvidence": "docs/audits/public-domains-2026-10-12.json",
+  "latestMobileEvidence": "docs/audits/mobile-seo-2026-10-12-round2.json"
 }

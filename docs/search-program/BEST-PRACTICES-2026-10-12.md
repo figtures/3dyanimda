@@ -4,7 +4,7 @@ This extends the 20 Notion protocols; it does not replace their 123 controls or 
 
 | Area | Implemented or inspected | Remaining evidence |
 | --- | --- | --- |
-| Public availability | Independent CI DNS, HTTPS, robots, sitemap, llms and random-404 probes for all four canonical domains | The latest public probe reports ENOTFOUND; domain registration/delegation/records and public deployment must be corrected before a production crawl |
+| Public availability | Independent CI DNS, HTTPS, robots, sitemap, llms and random-404 probes for all four canonical domains | The latest public probe reports ENOTFOUND; domain registration/delegation/records and public deployment must be investigated and public resolution restored before a production crawl |
 | Mobile startup | Ready HTML is retained; route-scoped hydration includes theme, feature, navigation, metadata and redirect snapshots; duplicate startup requests removed | Final Lighthouse matrix and field data are separate; lab TBT is not INP |
 | JavaScript | Public navigation uses native dialog and lightweight disclosure; backend SDK, form validation, editorial validation and translation initialization load only where needed | Keep admin authorization, translation-dependent routes, keyboard behavior and quote interaction tests passing |
 | Fonts and layout | Latin/Turkish glyph coverage preserved; public font axes reduced to used 400–700 range; two primary Latin faces preloaded; below-fold region cards use content-visibility | Check production response/cache headers and all editorial scripts; unsupported glyphs use the system fallback |

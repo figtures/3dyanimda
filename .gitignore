@@ -35,3 +35,4 @@ docs/previews/themes/*.png
 # Disposable verification output
 .cloudflare/
 artifacts/
+__pycache__/

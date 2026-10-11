@@ -27,3 +27,7 @@ Source-transfer and audit-runner errors in preliminary CI attempts were correcte
 Previous private Sites source: 23b1fe171ab67eabf9cd6324c67ad382e2d0353f. Previous validated application source in GitHub: b24be0e57ba9fe86f01098ae14c28f6f976a9f29. Revert the relevant source change with a new commit and rebuild; no destructive database operation or schema migration occurred. No rollback drill was performed.
 
 The public-domain probe reports ENOTFOUND for all four canonical domains from GitHub's external runner. Domain registration/delegation/records, public TLS/deployment, production HTML crawl, search-console evidence, real-user metrics, content/claim-source review and measured GEO observations remain open. Those gates retain BLOCKED/NO-GO status.
+
+## Focused interaction recheck
+
+In the first full matrix, the 3dsanayi mobile quote interaction asserted immediately after a click and failed its state check. The harness now waits up to five seconds for the requested React selection to be committed, then checks the typed value and native form validity. It still fails if the selection never appears. No application behavior, measurement settings or performance threshold changed. The first four pages retain their original 12 measurements; the quote page and remaining five pages are measured in the focused follow-up, with all source/run provenance retained. Preliminary failed quote samples are not promoted to accepted evidence.

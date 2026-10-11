@@ -244,6 +244,7 @@ try {
         throw new Error(`Canonical mismatch: ${url}`);
       if (failed.length) throw new Error(failed.join("\n"));
       const schemaEvidence=await page.evaluate(()=>({text:document.querySelector("main")?.textContent||"",graphs:Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(s=>JSON.parse(s.textContent))}));
+      if(schemaEvidence.graphs.length!==1)throw new Error(`Expected one JSON-LD graph at ${url}`);
       for(const graph of schemaEvidence.graphs){
         const errors=[...schemaIntegrity(graph,{origin:base,visibleText:schemaEvidence.text}),...validateVocabulary(graph)];
         if(errors.length)throw new Error(`Invalid JSON-LD at ${url}: ${errors.join("; ")}`);

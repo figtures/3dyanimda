@@ -1,6 +1,10 @@
+# İkinci tur: mobil performans ve dinamik JSON-LD — 12 Ekim 2026
+
+[Son 240 ölçüm ve kalan işler](MOBILE-SEO-2026-10-12-ROUND2.md): mobilde 37/40 sayfa medyan 100, üç sayfa 98–99; masaüstü medyanları ve tüm SEO/erişilebilirlik/iyi uygulamalar ölçümleri 100. Canlı API içeriğinde 796 JSON-LD kaydı doğrulandı. Dört alan adı DNS denetiminde ENOTFOUND; genel program kabulü hâlâ BLOCKED/NO-GO. [Ek iyi uygulamalar](BEST-PRACTICES-2026-10-12.md).
+
 # Mobil ve SEO güncellemesi — 12 Ekim 2026
 
-[En güncel mobil/masaüstü ve SEO ölçümleri](MOBILE-SEO-2026-10-12.md): 240 gerçek Lighthouse koşusu, 80 HTML koruma kontrolü ve işlev doğrulamaları. Yayın adayı, izole canonical-host yapılandırmasında test edildi; özel önizleme noindex korumasını sürdürüyor.
+[İlk tur mobil/masaüstü ve SEO ölçümleri](MOBILE-SEO-2026-10-12.md): 240 gerçek Lighthouse koşusu, 80 HTML koruma kontrolü ve işlev doğrulamaları. Yayın adayı, izole canonical-host yapılandırmasında test edildi; özel önizleme noindex korumasını sürdürüyor.
 
 # Güncel devam kontrolü
 

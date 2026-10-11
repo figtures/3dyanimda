@@ -98,8 +98,8 @@
     },
     {
       "path": "docs/search-program/README.md",
-      "sha256": "65088e1d962e6c415caf7b98c17850cc62a911d1069213bd3c348fc6eb12d292",
-      "bytes": 8480
+      "sha256": "d41fab8decd764ad1260bd046ab3346437f5044f27392d38b6da7d1feaa39096",
+      "bytes": 8951
     },
     {
       "path": "docs/search-program/RFC-SEARCH-001.md",
@@ -133,8 +133,8 @@
     },
     {
       "path": "docs/search-program/requirements.json",
-      "sha256": "a80b625a936dd53ccb6327790df75df288efe9349b3514f062e54795aeae6a61",
-      "bytes": 56096
+      "sha256": "b540cd70c2f49542c734a777665d907a44a43606abbde28a9d596d03462cd13a",
+      "bytes": 56397
     },
     {
       "path": "docs/search-program/url-inventory.json",
@@ -308,8 +308,8 @@
     },
     {
       "path": "scripts/export-sites.mjs",
-      "sha256": "4d85613eb5762a1169aea1142f860364671287bdc9c965c23ad6ec40834d91fb",
-      "bytes": 12831
+      "sha256": "82b9df064fd056359e4597511e9008f5d702a0f02812bafc1e985cd921935e39",
+      "bytes": 12930
     },
     {
       "path": "scripts/font-requirements.txt",
@@ -650,12 +650,262 @@
       "path": "src/pages/admin/AdminContent.tsx",
       "sha256": "216587a31188b9f2f2c10f1491fded196be41b6246fb2c120e572270cb0eb3a4",
       "bytes": 12042
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "01b8bfe67c8a0c6fac53cb6f4ea243d87800bca953e82fdd2ceb6a7e0bfbe3bc",
+      "bytes": 470
+    },
+    {
+      "path": "src/components/brand/BrandLayout.tsx",
+      "sha256": "4b8f68bead796555f8e9adbb73084d94f2422976140ac95d3450b5ece51f737d",
+      "bytes": 5312
+    },
+    {
+      "path": "src/components/brand/BrandNavigation.tsx",
+      "sha256": "4d9595dd1cb35c0b17534488a900d581bace939c20969e006072529ef015d3b8",
+      "bytes": 6788
+    },
+    {
+      "path": "src/components/brand/GrowthAnalytics.tsx",
+      "sha256": "a33105011d72a77d6d25dbff69afc8ce0aa509db6a2a01b0351cbaafff1b496f",
+      "bytes": 1904
+    },
+    {
+      "path": "src/components/brand/navigation.css",
+      "sha256": "8475c32e860256597967afdac10d10b2ff2548d2dded9bf5727a9726ed2bc273",
+      "bytes": 7092
+    },
+    {
+      "path": "src/components/sections/AutoFocus.tsx",
+      "sha256": "4bff98128314956acdf7eff150a9a96ff8022c34eb3076527c9a372494b35b08",
+      "bytes": 4260
+    },
+    {
+      "path": "src/components/sections/Capabilities.tsx",
+      "sha256": "dbbf2f056d6afbc91999f978e4131b739a65bb18815c8bedf295579b4721a486",
+      "bytes": 2570
+    },
+    {
+      "path": "src/components/sections/Hero.tsx",
+      "sha256": "740e4ce8a5b66f5b65cf3555699e70262072be599be33d110c52af322641d806",
+      "bytes": 7486
+    },
+    {
+      "path": "src/components/sections/Process.tsx",
+      "sha256": "59b78aa8d9c9c4706ba0d95755a1d04e7b50f3db42b27c70b8d956649be4f55a",
+      "bytes": 2991
+    },
+    {
+      "path": "src/components/sections/Services.tsx",
+      "sha256": "9498443eafd04dc077ae3d557f78f11a9d86fabe10f0a63147118d678db6a3a2",
+      "bytes": 4597
+    },
+    {
+      "path": "src/components/sections/Testimonials.tsx",
+      "sha256": "d27e4a0b8811926631dccaee0935bb11d3ea25b00990aaa0af4ca87dd5f99017",
+      "bytes": 8425
+    },
+    {
+      "path": "src/components/site/AnnouncementBar.tsx",
+      "sha256": "5eafd59b28d6ae0b3b7311547c03d940275f005b2095d726f31dcd80f8cbb22c",
+      "bytes": 2791
+    },
+    {
+      "path": "src/components/site/FAQ.tsx",
+      "sha256": "15adf4e096706460192b12e7a8030fe8192182f3e00f505a4e729549e11b1a0d",
+      "bytes": 2093
+    },
+    {
+      "path": "src/components/site/Footer.tsx",
+      "sha256": "bd1e1cc353f910bd6a849ca3a941cb3d5666bec2367c414ec016df6df9e774ef",
+      "bytes": 9465
+    },
+    {
+      "path": "src/components/site/Header.tsx",
+      "sha256": "371f2c56421d2fdfe9dca1207a27ba21741d8306ba1c8001638fa4d6a1899bf0",
+      "bytes": 16170
+    },
+    {
+      "path": "src/components/site/MobileStickyCTA.tsx",
+      "sha256": "446c48e3f16ffcf1dc91d9db773c8fa71fcacf55eef36e36e61cb5f29a6cec77",
+      "bytes": 2133
+    },
+    {
+      "path": "src/components/site/NewsletterSignup.tsx",
+      "sha256": "58439a3046e95253b10c3fafd424bfc13e07304d4b512eb45f59816dd4de482b",
+      "bytes": 3615
+    },
+    {
+      "path": "src/contexts/ThemeContext.tsx",
+      "sha256": "b7afeaeebd68d3d7236a666db7d4ef1016b13c7f7df1afa1828036fa446fffa7",
+      "bytes": 9962
+    },
+    {
+      "path": "src/hooks/useRedirects.ts",
+      "sha256": "c5905191faf510447f216c9c6515372657c775ebcf22f9cd188a076cb37ca675",
+      "bytes": 1783
+    },
+    {
+      "path": "src/hooks/useSeoOverride.ts",
+      "sha256": "a8a95a4713d7b5205dc910107d6b8ca7c43fc8a36cfc34bcd0401707577284e9",
+      "bytes": 2516
+    },
+    {
+      "path": "src/lib/media.ts",
+      "sha256": "89f25e6d83210073110c562d5a0574d76cdfe4fc68ee3bf5ce78f19ea00523e7",
+      "bytes": 865
+    },
+    {
+      "path": "src/lib/structured-data.ts",
+      "sha256": "b50fef3a979da847a6eb310a42bb0b8dff1f80857d03b67101b268fe8dfc6ac7",
+      "bytes": 2735
+    },
+    {
+      "path": "src/pages/Blog.tsx",
+      "sha256": "4f077ed022875a1bd1aec22a8db64b1e81aa9fc84dbdf775ff8ab5dd5e8dc3e2",
+      "bytes": 5165
+    },
+    {
+      "path": "src/pages/BlogPost.tsx",
+      "sha256": "83b60ecc5ba948b1e17d8679e3c7935bcbb8f9ea2df18e3af34959072c2201c8",
+      "bytes": 4627
+    },
+    {
+      "path": "src/pages/Portfolio.tsx",
+      "sha256": "04750900a2f7bfab49fb5a05020a00b4244dbef520e100cc52ad67726be467e9",
+      "bytes": 4813
+    },
+    {
+      "path": "src/pages/QuoteRequest.tsx",
+      "sha256": "04338d05148a31cb6d8521eaaa489cd272374238f94bab409a4a27346ec50838",
+      "bytes": 12099
+    },
+    {
+      "path": "src/pages/career/CareerHub.tsx",
+      "sha256": "d1124fe0cf77f6ac1759a4aa0fd487c569a06ec61ffe76823c1253b3d1e5cf3a",
+      "bytes": 17861
+    },
+    {
+      "path": "docs/audits/live-schema-2026-10-12.json",
+      "sha256": "c6ca0a9fd187ed718f3bfe27bf0af1d7c3a271a0b18881782be4f0f5d0ef4d8c",
+      "bytes": 344663
+    },
+    {
+      "path": "docs/audits/mobile-seo-2026-10-12-round2.json",
+      "sha256": "bb53b71439e7dbe5ed65fa7ede5557977a04c40743229c98f9468810aef4a4e0",
+      "bytes": 521409
+    },
+    {
+      "path": "docs/audits/public-domains-2026-10-12.json",
+      "sha256": "5d5ff2ba8f9562bc56b9ee9d44a06cb553b2df7ded22f67aa64d8ad7ad654f05",
+      "bytes": 3576
+    },
+    {
+      "path": "docs/audits/public-fonts-v3-2026-10-12.json",
+      "sha256": "15203674e6072503a38c7de4ce0817ea0da0b2d6513a16e751910fea31c48585",
+      "bytes": 1304
+    },
+    {
+      "path": "docs/search-program/BEST-PRACTICES-2026-10-12.md",
+      "sha256": "628de47db91fdfdb5131012761c45ba9acc4c2a07d2b36ba4e5f5a24c5399727",
+      "bytes": 5071
+    },
+    {
+      "path": "docs/search-program/MOBILE-SEO-2026-10-12-ROUND2.md",
+      "sha256": "d56dd199380139e83de8904a6fb0a742f93bcbff0596a303e16ce9684fd9f30d",
+      "bytes": 7124
+    },
+    {
+      "path": "docs/search-program/RFC-SEARCH-005.md",
+      "sha256": "2e874bf458d532e906628f8eda5ec644d6a1a52596037a724e3a908f98c71d54",
+      "bytes": 4975
+    },
+    {
+      "path": "public/fonts/inter-latin-ext-wght-normal-tr-v3.woff2",
+      "sha256": "d7b77a71e8caf9b33a98c0a499c833fa64162760569aefd2754b9d558dd6b7de",
+      "bytes": 2804
+    },
+    {
+      "path": "public/fonts/inter-latin-wght-normal-tr-v3.woff2",
+      "sha256": "6799700dc4cb95bd62782cc8aef1c17b2bc9dfcaeb39ad34a38b18c4053dfb9c",
+      "bytes": 27056
+    },
+    {
+      "path": "public/fonts/rethink-sans-latin-ext-wght-normal-tr-v3.woff2",
+      "sha256": "351173b850baf168a475f72e65d24c983b0f746670f4bb7b9e8062fd016918fa",
+      "bytes": 2424
+    },
+    {
+      "path": "public/fonts/rethink-sans-latin-wght-normal-tr-v3.woff2",
+      "sha256": "25bf7658f67859ec0fb60e4ea3bf58b1a30a1e270df4186dab9a5c7e5b3ad997",
+      "bytes": 24328
+    },
+    {
+      "path": "scripts/quality/live-schema-inventory.ts",
+      "sha256": "e96faa2742bf275b19ac24357e6199b80c32b5246f563e480a1ea6ac86e2e12e",
+      "bytes": 3549
+    },
+    {
+      "path": "scripts/quality/production-readonly.mjs",
+      "sha256": "fe351a24acc57e4aa63943a1d44e53c6627c6eff1252cd0f15091daec768ca11",
+      "bytes": 2049
+    },
+    {
+      "path": "scripts/quality/run-live-schema.mjs",
+      "sha256": "11b9918689b82fd83f039f35705e8161c1d8245abb45f3b18dae0e02de2160b2",
+      "bytes": 391
+    },
+    {
+      "path": "scripts/quality/schema-vocabulary.json",
+      "sha256": "7cafa4591ba39ca484a08b09e67fea63e24ed14f1dce39810f36d78b27ce367a",
+      "bytes": 69343
+    },
+    {
+      "path": "scripts/quality/schema-vocabulary.mjs",
+      "sha256": "a01e4ba1d57850b4888e0cf38b15f1c026d8032956a9a9806b040652b9d1e0b3",
+      "bytes": 931
+    },
+    {
+      "path": "scripts/quality/summarize-mobile.py",
+      "sha256": "56746aaedd2da27747e97b60a61cbc9070bcd3abd6d4ea2be17cb2c2c397e566",
+      "bytes": 8906
+    },
+    {
+      "path": "scripts/subset-public-fonts-v3.py",
+      "sha256": "ede0942d643b0cbaec10a433a79543080a18fad87467a949b907130353cc2fb9",
+      "bytes": 1470
+    },
+    {
+      "path": "src/components/quote/quote-schema.ts",
+      "sha256": "cd331af38d346bf7323fa5dcc7402ee9f2e3050ee07a8b6b76aa1b782bdadf19",
+      "bytes": 554
+    },
+    {
+      "path": "src/content/structured-content.test.ts",
+      "sha256": "ab9e6ff1ab0e6361344d75951cc203cbb1e9512d2f56825905e88db13de83689",
+      "bytes": 2724
+    },
+    {
+      "path": "src/content/structured-content.ts",
+      "sha256": "965449e7fca1c0ca4d7b7f2770cce79fb93ef80e9e9eb129ca7a2566e1bb6eac",
+      "bytes": 2928
+    },
+    {
+      "path": "src/lib/backend-config.ts",
+      "sha256": "5d31f7055a9229fbeaa5d13558a92f4d7db099cd5136759af3ce8c493706d21d",
+      "bytes": 432
+    },
+    {
+      "path": "src/lib/media.test.ts",
+      "sha256": "5be611b05d485d5a2d42daa80c2a9c8af11fe847c33f4f34f787c7a5a786e1f5",
+      "bytes": 809
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T23:43:16.844Z",
-  "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
+  "checksumsRefreshedAt": "2026-10-11T23:47:52.398334+00:00",
+  "checksumScope": "Current file identity only; no program release approval or promotion of historical evidence.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
   "latestLighthouseReport": "docs/audits/mobile-seo-2026-10-12.json"
