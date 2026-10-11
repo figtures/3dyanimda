@@ -1,8 +1,8 @@
-# Son devam kontrolü
+# Güncel devam kontrolü
 
-[11 Ekim durum özeti](PROGRESS-2026-10-11.md): 18 kontrol için kapsamı sınırlı güncel yerel test kanıtı, şema türü düzeltmesi ve kanıt bütünlüğü kontrolü. Tüm protokoller tamamlandı anlamına gelmez. `npm run audit:search-evidence` kanıt dosyalarındaki değişimi denetler; `npm run audit:protocols -- --release` engelli program için `2` döndürür.
+[11 Ekim durum özeti](PROGRESS-2026-10-11.md) ve [240 koşuluk Lighthouse sonuçları](LIGHTHOUSE-RESULTS-2026-10-11.md). 141 test geçti; kalan üretim ve bağımsız inceleme eksikleri açıkça listelenmiştir. Tüm protokoller tamamlandı anlamına gelmez.
 
-> **11 Ekim güncellemesi:** Kod düzeltmeleri, çalışan Lighthouse ölçümleri ve açık kalan işler [güncel uygulama kaydında](IMPLEMENTATION-2026-10-11.md). Aşağıdaki 10 Ekim metni önceki keşif durumudur; buradaki "0 Lighthouse" ifadesi güncel durumu anlatmaz.
+Aşağıdaki 10 Ekim bölümü tarihsel keşif kaydıdır; sıfır Lighthouse ve eksik uygulama ifadeleri güncel durumu anlatmaz.
 
 # SEO / GEO protokol karşılaştırması — 10 Ekim 2026
 

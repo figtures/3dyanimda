@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "compliance-discovery-not-release-certificate",
-  "reviewedAt": "2026-10-10T23:44:58.667577Z",
+  "reviewedAt": "2026-10-11",
   "baselineCommit": "dda4d28a0141a2036b933ee608bed83e0ce94674",
   "reviewer": "Codex (AI, owner-delegated)",
   "humanReviewPerformed": false,
@@ -211,12 +211,23 @@
         {
           "id": "SEO-04-01",
           "requirement": "Render mode and >=10 critical URL or 80% traffic coverage",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          ],
+          "localReview": "Candidate Chrome lab covers 10 actual routes per brand, 40 brand-route pairs. Production traffic coverage remains unknown.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "SEO-04-02",
           "requirement": "Initial HTML contains title, description, canonical, H1, content, navigation and JSON-LD",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "docs/audits/lighthouse-ci-final-2026-10-11.json",
+            "scripts/quality/lighthouse-ci.mjs"
+          ],
+          "localReview": "Candidate rendered H1, canonical/OG and single schema graph checked for all 40 brand-route pairs. This is not GSC crawled HTML.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "SEO-04-03",
@@ -244,8 +255,8 @@
         "Quote metadata timing and actual API error handling have existing tests."
       ],
       "blockers": [
-        "No GSC crawled-HTML comparison or production bot/CDN evidence.",
-        "New export after discovery change has not been generated."
+        "Candidate render lab completed; production GSC crawled-HTML comparison and authentic bot/CDN evidence remain absent.",
+        "Client navigation and social-crawler coverage are not equivalent to the candidate cold-load checks."
       ]
     },
     {
@@ -261,10 +272,11 @@
           "requirement": "Zero duplicate indexable titles and descriptions",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "src/content/metadata.test.ts"
+            "src/content/metadata.test.ts",
+            "docs/audits/content-contract-audit-2026-10-11.json"
           ],
-          "localReview": "All 796 authored route titles are unique per brand; live descriptions and final rendered duplicates were not rerun.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "All 796 effective authored titles and descriptions are unique per brand after fixing summary truncation. Live full-inventory parity remains open.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "SEO-05-02",
@@ -297,7 +309,7 @@
         "Site language is Turkish; other locales are not invented."
       ],
       "blockers": [
-        "Full duplicate-title/description and pixel-width evidence missing.",
+        "796 authored titles/descriptions are unique; full production crawl and top-template pixel-width review remain open.",
         "Risk-specific independent review and locale scope sign-off missing."
       ]
     },
@@ -328,7 +340,13 @@
         {
           "id": "SEO-06-03",
           "requirement": "Visible DOM, FAQ and schema agree",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/quality/schema-integrity.mjs",
+            "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          ],
+          "localReview": "Candidate graph references and visible FAQ text checked; production parity and external vocabulary certification remain open.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "SEO-06-04",
@@ -363,8 +381,8 @@
         "Unknown rating/price/hour fields are not fabricated."
       ],
       "blockers": [
-        "External vocabulary/Rich Results evidence, comprehensive field contracts and deployed DOM/FAQ parity remain open.",
-        "Single graph composition is implemented; legal-entity confirmation and independent approval remain open."
+        "Field mapping and structural graph validator implemented; external vocabulary/Rich Results evidence and full production DOM parity remain open.",
+        "Legal-entity confirmation and independent approval remain open."
       ]
     },
     {
@@ -383,7 +401,13 @@
         {
           "id": "SEO-07-02",
           "requirement": "Repeated mobile and desktop Lighthouse on key templates",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "docs/audits/lighthouse-ci-final-2026-10-11.json",
+            ".github/workflows/lighthouse.yml"
+          ],
+          "localReview": "240 real candidate Lighthouse runs: four brands, ten routes, two verified device configurations, three repetitions. Not a production-domain or field-data certificate.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "SEO-07-03",
@@ -398,17 +422,24 @@
         {
           "id": "SEO-07-05",
           "requirement": "LCP image priority, responsive sizing and visual CLS review",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "docs/audits/service-image-encoding-2026-10-11.json",
+            "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          ],
+          "localReview": "Responsive service images, contrast and content-ready reveal fixes measured. Remaining score/metric failures are retained in raw reports.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "SEO-07-06",
           "requirement": "CI regressions, before/after release evidence and weekly/monthly review",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
+            "docs/audits/lighthouse-ci-final-2026-10-11.json",
             ".github/workflows/search-quality.yml"
           ],
-          "localReview": "Hosted quality CI succeeded for commit 2640f0bd247a5034e4fd19ed0b9ec376fda475ba, run 38106737139. Current change needs its own run; performance budgets, before/after measurement and operating reviews remain open.",
-          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
+          "localReview": "Source-matched GitHub lab and quality CI completed; approved route budgets and recurring operating reviews remain open.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         }
       ],
       "existingOrPreparedEvidence": [
@@ -416,8 +447,8 @@
         "A blocked attempt records zero runs rather than invented scores."
       ],
       "blockers": [
-        "Historical lab reports are retained; no new matching-artifact browser run or 28-day CrUX evidence.",
-        "Basic hosted quality CI passed; route-specific approved performance budgets and recurring reviews remain open."
+        "240 candidate lab runs completed with non-100 scores explicitly retained. Production matching and 28-day CrUX/INP evidence remain open.",
+        "Approved route performance budgets and recurring reviews remain open."
       ]
     },
     {
@@ -741,12 +772,25 @@
         {
           "id": "GEO-04-01",
           "requirement": "Versioned answer-unit IDs, owner intent and direct self-contained answer",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/answer-unit.ts",
+            "src/content/answer-unit.test.ts",
+            "docs/search-program/ANSWER-UNIT-CONTRACT.md"
+          ],
+          "localReview": "Optional versioned answer-unit contract implemented and negatively tested. Existing 796 records do not yet contain approved answer units.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "GEO-04-02",
           "requirement": "Claim/source locator mapping with risk and validity",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/answer-unit.ts",
+            "src/content/answer-unit.test.ts"
+          ],
+          "localReview": "Typed claim/source locator, license, risk, validity, ID/reference checks implemented. Real sources and human reviews have not been supplied for all records.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "GEO-04-03",
@@ -754,10 +798,11 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "src/content/editorial.ts",
-            "src/content/editorial.test.ts"
+            "src/content/quality.ts",
+            "docs/audits/content-contract-audit-2026-10-11.json"
           ],
-          "localReview": "120-word direct-answer cap and existing table limits pass; all 796 effective editorial records remain valid. Full chunk/procedure/answer-unit contract and human readability review remain open.",
-          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
+          "localReview": "120-word direct answer and 500-word general chunk limits, existing tables, 796-record audit pass. Full human readability and source review remain open.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         },
         {
           "id": "GEO-04-04",
@@ -778,15 +823,20 @@
         {
           "id": "GEO-04-06",
           "requirement": "Negative fixtures, conflict correction and subject-expert review",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/answer-unit.test.ts"
+          ],
+          "localReview": "Negative fixtures reject malformed/expired/unmapped/conflicting answer units. Independent subject-expert review remains absent.",
+          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
         }
       ],
       "existingOrPreparedEvidence": [
         "796 authored landing pages and original-content checks exist."
       ],
       "blockers": [
-        "Full answer-unit/source-license/claim-level support contract absent.",
-        "Prior targeted AI semantic review is not a complete independent fact-check of 796 pages."
+        "Optional answer-unit/source-license/claim-support contract implemented; all 796 existing records still require real population and review.",
+        "Automated validation is not an independent fact-check or legal/source-license approval."
       ]
     },
     {
@@ -1204,5 +1254,6 @@
   "implementationReviewedAt": "2026-10-11T02:47:03.272391+00:00",
   "implementationReviewScope": "Notion connector access resolved: 2 roots and all 20 protocol pages retrieved; current gate criteria reconciled. 131 local tests and TypeScript passed. Prior hosted CI success scoped to commit 2640f0b. Business-domain release, external measurements and independent approvals remain unverified.",
   "implementationReviewedOn": "2026-10-11",
-  "latestSourceReconciliation": "docs/audits/notion-reconciliation-2026-10-11.json"
+  "latestSourceReconciliation": "docs/audits/notion-reconciliation-2026-10-11.json",
+  "latestMeasuredCommit": "e37c93a8cf5de2de09695552e3cdb92082caefff"
 }

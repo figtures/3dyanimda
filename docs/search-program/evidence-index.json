@@ -6,20 +6,40 @@
   "producer": "Codex (AI)",
   "humanReviewPerformed": false,
   "productionPublished": false,
-  "lighthouseCompletedRuns": 0,
+  "lighthouseCompletedRuns": 240,
   "geoCompletedRuns": 0,
   "signatureStatus": "No independent release sign-off",
   "retentionStatus": "Versioned in project repository; automated retention/deletion and customer access validation not configured",
   "files": [
+    {
+      "path": ".github/workflows/lighthouse.yml",
+      "sha256": "159c1855d6b29b20630b57ad253eddf7ac8f367f731dd85e3721f46cb36071c9",
+      "bytes": 1871
+    },
     {
       "path": ".github/workflows/search-quality.yml",
       "sha256": "0bb6ddcf2254106508709c00a95cc295e34d89a113a15fc4b1a851566f23cef3",
       "bytes": 868
     },
     {
+      "path": "docs/audits/content-contract-audit-2026-10-11.json",
+      "sha256": "5e0067bf8abd682a4538c50c8a392f03aa0e9888e665a0dc51b828d19f095e23",
+      "bytes": 523
+    },
+    {
       "path": "docs/audits/lighthouse-attempt-2026-10-10.json",
       "sha256": "c4307d88f5f25dfb22893023be88c9fedcbaa474082fb5e01fb65fa1c0df0edc",
       "bytes": 551
+    },
+    {
+      "path": "docs/audits/lighthouse-before-readiness-fix-2026-10-11.json",
+      "sha256": "2c9b0ab3a77ba6c013e4c756cfb9eb42584872d26a892543ffd8a799e1eb35fa",
+      "bytes": 299154
+    },
+    {
+      "path": "docs/audits/lighthouse-ci-final-2026-10-11.json",
+      "sha256": "96e3b1a4595a9184ff69a402892c8e01beccbd94e9d4f94a745bc78974623352",
+      "bytes": 295146
     },
     {
       "path": "docs/audits/notion-protocol-tests-2026-10-10.json",
@@ -42,14 +62,29 @@
       "bytes": 1742
     },
     {
+      "path": "docs/audits/service-image-encoding-2026-10-11.json",
+      "sha256": "e102e12059fcca4f8a4ed4323a2976f6db34b52389f76c5229c3a7b3cd631777",
+      "bytes": 7238
+    },
+    {
+      "path": "docs/search-program/ANSWER-UNIT-CONTRACT.md",
+      "sha256": "a7943cb3f0c5f6288b656243d15bdab612a3293074448175211749a9e9770056",
+      "bytes": 2264
+    },
+    {
+      "path": "docs/search-program/LIGHTHOUSE-RESULTS-2026-10-11.md",
+      "sha256": "72b689d99990d2a8002ccd42f34edb033d9c4ce329313a2cfdc586ae498dd57e",
+      "bytes": 6215
+    },
+    {
       "path": "docs/search-program/PROGRESS-2026-10-11.md",
-      "sha256": "e96b4213fa394453c625ae0914163222d1f4ddaa67d939c3826c7fe88523e504",
-      "bytes": 3581
+      "sha256": "80f79ff0be634e406c3d0a0c779db976acc3229cea8524e9d396492edc2a3034",
+      "bytes": 3019
     },
     {
       "path": "docs/search-program/README.md",
-      "sha256": "2a6abdb930cac66c33d8b890553bef551e7de418a05d79b9bf44a47f9a9a0744",
-      "bytes": 8404
+      "sha256": "87516cdd9dae333b7d9198d43569d354a82d35a1af6ce30433e723f4cf3c7c66",
+      "bytes": 8149
     },
     {
       "path": "docs/search-program/RFC-SEARCH-001.md",
@@ -60,6 +95,11 @@
       "path": "docs/search-program/RFC-SEARCH-002.md",
       "sha256": "00bc76224f84e24f29cac55fa3c0aa22d817f994dcae4ce13822584a1aa9b717",
       "bytes": 2808
+    },
+    {
+      "path": "docs/search-program/RFC-SEARCH-003.md",
+      "sha256": "df940b78f9458c2af4beda15777d99618d3e1506620ae64f5217981c4bac7ba0",
+      "bytes": 3829
     },
     {
       "path": "docs/search-program/SCHEMA-CONTRACT.md",
@@ -73,8 +113,8 @@
     },
     {
       "path": "docs/search-program/requirements.json",
-      "sha256": "2b38a3279461cd12be4f72dd89ead65c4bc325d98db0c5f329f0b05332522941",
-      "bytes": 49807
+      "sha256": "92765ed2c27fe95c77e8c48506f2ae283cfa1bf25d6e810cd8bf48814dde57d0",
+      "bytes": 53260
     },
     {
       "path": "docs/search-program/url-inventory.json",
@@ -87,9 +127,139 @@
       "bytes": 6405
     },
     {
+      "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
+      "sha256": "ba20ff73299c9d8d500adfcef93a1974a054e7a1c52eb62eacb691d4898389e1",
+      "bytes": 23620
+    },
+    {
+      "path": "public/brand/optimized/service-3dsanayi-model-640.avif",
+      "sha256": "9f6f95485fecdd467ebebdd0f04d646ee56235849c0539bde8cc24dbc1d60e7b",
+      "bytes": 11952
+    },
+    {
+      "path": "public/brand/optimized/service-3dsanayi-print-1024.avif",
+      "sha256": "ff5e28adb799c889d0a43eae77717a24fac248f72353c6a60665c03d3b7fa122",
+      "bytes": 35489
+    },
+    {
+      "path": "public/brand/optimized/service-3dsanayi-print-640.avif",
+      "sha256": "af55c24fcefa4faec7356a3a837e2519c6177a01ae868e8eed652239f3254890",
+      "bytes": 16952
+    },
+    {
+      "path": "public/brand/optimized/service-3dsanayi-scan-1024.avif",
+      "sha256": "aa7c212346bac07c17b67f6a619ecfc2c7d3c072a5c20b3423cbddf4ff3fa0e2",
+      "bytes": 107480
+    },
+    {
+      "path": "public/brand/optimized/service-3dsanayi-scan-640.avif",
+      "sha256": "100179251bbc4c9906240be479615904e1b4daa3802f115f7ecf3c851889e562",
+      "bytes": 47291
+    },
+    {
+      "path": "public/brand/optimized/service-3dyanimda-model-1024.avif",
+      "sha256": "790d06b0abcfa2765f6db5cd3fab61e047214a1a6d851633438d6867f3f2b22d",
+      "bytes": 16740
+    },
+    {
+      "path": "public/brand/optimized/service-3dyanimda-model-640.avif",
+      "sha256": "7c56e48c1ee984d8d12772189433967dcc7f0223b6c805c923dabea08619accf",
+      "bytes": 8998
+    },
+    {
+      "path": "public/brand/optimized/service-3dyanimda-print-1024.avif",
+      "sha256": "60bdccc4bdd3597e2b48e51d8ed99be472d91bbae7789bf433889b25bdb9ae78",
+      "bytes": 19340
+    },
+    {
+      "path": "public/brand/optimized/service-3dyanimda-print-640.avif",
+      "sha256": "286b625e95df9aa5d3cd858430e5d1412f0a0a374c71099bf33d43bf1606eca4",
+      "bytes": 9777
+    },
+    {
+      "path": "public/brand/optimized/service-3dyanimda-scan-1024.avif",
+      "sha256": "2b3b2c01c148ad7c5cb7200e4a8a75c00e4ef6718030cdb0b326688ac443ecce",
+      "bytes": 50961
+    },
+    {
+      "path": "public/brand/optimized/service-3dyanimda-scan-640.avif",
+      "sha256": "56b01925a2e4e987fde2c80575162f6e80aca0f018f814b86fddc3067d8e9b8c",
+      "bytes": 22393
+    },
+    {
+      "path": "public/brand/optimized/service-maketyanimda-model-1024.avif",
+      "sha256": "0d99ec9a7101bfd5dbeb987fc93419ca18f9d5949707fc1ebbef308c2caedf9b",
+      "bytes": 73959
+    },
+    {
+      "path": "public/brand/optimized/service-maketyanimda-model-640.avif",
+      "sha256": "ca83e60809350566a0904a61778c85bbf03c0e30460e40a2450786387a2b50b9",
+      "bytes": 34760
+    },
+    {
+      "path": "public/brand/optimized/service-maketyanimda-print-1024.avif",
+      "sha256": "c28f5e1f329605b8575a9b1362b287e7ff8770cf10de2b12589d0df0ee97f02d",
+      "bytes": 58769
+    },
+    {
+      "path": "public/brand/optimized/service-maketyanimda-print-640.avif",
+      "sha256": "6536127dea7119bf062f8716b2c1954a3a0cab7e1b06c4b54127a432f8f2de85",
+      "bytes": 28913
+    },
+    {
+      "path": "public/brand/optimized/service-maketyanimda-scan-1024.avif",
+      "sha256": "53a5cd8fa17272799edd75450e7b1374451fef8d18e31449dadcfc9a7167d0bb",
+      "bytes": 75250
+    },
+    {
+      "path": "public/brand/optimized/service-maketyanimda-scan-640.avif",
+      "sha256": "a70cab1736cdd0f33940fd9d8e754d7598c32b7538617bc97a29b5eb9a6b5d8a",
+      "bytes": 34571
+    },
+    {
+      "path": "public/brand/optimized/service-parcayanimda-model-1024.avif",
+      "sha256": "53747fb2acbde754a226a7bac948517c9357ce74ded882f9b50bcd392d0b5a3d",
+      "bytes": 25417
+    },
+    {
+      "path": "public/brand/optimized/service-parcayanimda-model-640.avif",
+      "sha256": "5b28b132700dddc2981864282fe8a82e8a3d24f61d77b71b0320db18846337bc",
+      "bytes": 13107
+    },
+    {
+      "path": "public/brand/optimized/service-parcayanimda-print-1024.avif",
+      "sha256": "61fc30381b7c9fecbcc7e028fb04d5567bfb8945f7fe4d192ae7b5c8bff3deb2",
+      "bytes": 31189
+    },
+    {
+      "path": "public/brand/optimized/service-parcayanimda-print-640.avif",
+      "sha256": "9ac47e7f024d07aa31b4471957c36d01a9e6559e747eb9a4b829f4553a95265e",
+      "bytes": 12548
+    },
+    {
+      "path": "public/brand/optimized/service-parcayanimda-scan-1024.avif",
+      "sha256": "5cb5071ec2e56013bb205d3263a851651476be0973ffccf001c2d7e3c1d97b9b",
+      "bytes": 36083
+    },
+    {
+      "path": "public/brand/optimized/service-parcayanimda-scan-640.avif",
+      "sha256": "94ec9abe14c9472c4dc92f1bb636a3a17cc8350afd20291cf8914f7a61f63f80",
+      "bytes": 16102
+    },
+    {
       "path": "scripts/cloudflare/config.test.mjs",
       "sha256": "d80162cb082d76dcbfdad9afb93f8cc5fd5444f4eed60018d8988517ed5a7ab6",
       "bytes": 2500
+    },
+    {
+      "path": "scripts/export-sites.mjs",
+      "sha256": "d1ecb0ea4ac403e513bd0d4e7edfe791d0f88b90ae265fbd455357fd25cd3a87",
+      "bytes": 12197
+    },
+    {
+      "path": "scripts/optimize-service-assets.mjs",
+      "sha256": "987379d25b9ee3794e1043e2c39fa75c167c42f06b69482edad994d302223714",
+      "bytes": 1138
     },
     {
       "path": "scripts/quality/check-protocols.mjs",
@@ -100,6 +270,16 @@
       "path": "scripts/quality/check-protocols.test.mjs",
       "sha256": "7acdec534bd1c30086370b1deb0bf358bd576f645a3b95cd7a4a1081205e5c62",
       "bytes": 1845
+    },
+    {
+      "path": "scripts/quality/critical-css.mjs",
+      "sha256": "f284208efb501f5e7f21dd32343b1ec3721e695519b93e958867ada5f78ed046",
+      "bytes": 3177
+    },
+    {
+      "path": "scripts/quality/critical-css.test.mjs",
+      "sha256": "f956c87153309622c33ecfe31fa9b3479fe46dbf475e94c671cea35073884730",
+      "bytes": 2194
     },
     {
       "path": "scripts/quality/evidence-index.mjs",
@@ -117,9 +297,34 @@
       "bytes": 1577
     },
     {
+      "path": "scripts/quality/lighthouse-candidate.mjs",
+      "sha256": "c8633eccb524a6f8c2edcd0bc6e387491fbec0dae85adbf5474accab5cc66fd0",
+      "bytes": 7868
+    },
+    {
+      "path": "scripts/quality/lighthouse-ci.mjs",
+      "sha256": "3b2d2b2228317a404d083899f4c43e53b10929e222bcf3a4bd7880274302a579",
+      "bytes": 9554
+    },
+    {
+      "path": "scripts/quality/public-bootstrap.mjs",
+      "sha256": "40dfeb35e78a90ef26ad917bfecc99e39641baadfc090531da247f3bead0796e",
+      "bytes": 1894
+    },
+    {
       "path": "scripts/quality/run-lighthouse.mjs",
       "sha256": "ff3703012eba03325698b4aac8a504ec79be21c5773ee2b64a79be67b4288e46",
       "bytes": 5062
+    },
+    {
+      "path": "scripts/quality/schema-integrity.mjs",
+      "sha256": "d7fdb188dabbccf0d714bb778103cab26f3a2f73a5c330207719201331fc9265",
+      "bytes": 1772
+    },
+    {
+      "path": "scripts/quality/schema-integrity.test.mjs",
+      "sha256": "6fbebdaae3a4bea571cf6790915f7a41445b042e4d40d347f76982db1de9dc4d",
+      "bytes": 1294
     },
     {
       "path": "scripts/quality/semantic-date.test.mjs",
@@ -167,6 +372,26 @@
       "bytes": 2463
     },
     {
+      "path": "src/brands/brand.css",
+      "sha256": "3bc4c71e3904d130dbef68965a2739d94e66856782906528c451f943f00b070d",
+      "bytes": 26675
+    },
+    {
+      "path": "src/brands/modern.css",
+      "sha256": "3ae91687849e72685ca2d9f81c9b1afd69fbcba4cd26c17f6ebcc3f86bff71a4",
+      "bytes": 21318
+    },
+    {
+      "path": "src/content/answer-unit.test.ts",
+      "sha256": "8605e6bf17c5690945c3a9269d1a61764e3babe55733585d65b3e8294c7ed0db",
+      "bytes": 3605
+    },
+    {
+      "path": "src/content/answer-unit.ts",
+      "sha256": "1460bc219428a8a7e0b69dd4bdce7945d71dff11f474413058e12b123eb39855",
+      "bytes": 4945
+    },
+    {
       "path": "src/content/editorial.test.ts",
       "sha256": "fa2186b27da33a2872314d538f1e705d35aa28e17ed401b92d34a2f52959f6be",
       "bytes": 1445
@@ -187,9 +412,49 @@
       "bytes": 1624
     },
     {
+      "path": "src/content/metadata.ts",
+      "sha256": "484125efab0b218dcbb423214c7ba02b1d8106ce3d8d57ea0c71e257b66b9152",
+      "bytes": 566
+    },
+    {
+      "path": "src/content/quality.ts",
+      "sha256": "dccb1524bbc7619d22e2f460aa9ea2c67d7cb4b65037952c38a46ed7484e07d7",
+      "bytes": 3208
+    },
+    {
+      "path": "src/content/related.test.ts",
+      "sha256": "5fabbe1ee022af4ed4ac093a3dcc4ac1fe180c6099f642fbbf268c7b3d0e3690",
+      "bytes": 1062
+    },
+    {
+      "path": "src/content/related.ts",
+      "sha256": "b46a49ac64f60428b5b804c06a3baad8d87325d53a460e97050b7eacb78105c4",
+      "bytes": 497
+    },
+    {
+      "path": "src/content/responsive-image.ts",
+      "sha256": "3ec981985b3919cb140dad3a0d388080c3cf257a3b3ed7594736ad0512f4cdac",
+      "bytes": 309
+    },
+    {
+      "path": "src/content/useContent.ts",
+      "sha256": "49a11817ad547dcc91fbdad6e762a95def17501eb69ffdfb2991df47c418205a",
+      "bytes": 4439
+    },
+    {
       "path": "src/lib/growth-analytics.test.ts",
       "sha256": "b78a1ec34110881363acefdd2dae2a92ff10a5f483eb72385bf876a63043ab26",
       "bytes": 4245
+    },
+    {
+      "path": "src/lib/mount-app.test.tsx",
+      "sha256": "bf001ed86e41d2b47fcdca5a761a24ce17a53b46ec3dff22e3717836d0c79d4c",
+      "bytes": 1237
+    },
+    {
+      "path": "src/lib/mount-app.tsx",
+      "sha256": "2bf1dd545d9d37fd5f73a9c85e54972dd58b373821a4234e995be1c837b7cfc6",
+      "bytes": 1327
     },
     {
       "path": "src/lib/redirects.mjs",
@@ -225,10 +490,32 @@
       "path": "src/lib/structured-data.test.ts",
       "sha256": "dc6bac34485b6136cd28ca1367d25f138b7adc401c32f2638fc1eac051f68e1e",
       "bytes": 1208
+    },
+    {
+      "path": "src/pages/ContentHub.tsx",
+      "sha256": "abfa5059558dec8f35ed2dc5e560c115c9c0c8e69e356116946fd53ff0892d1e",
+      "bytes": 4826
+    },
+    {
+      "path": "src/pages/ContentPage.tsx",
+      "sha256": "5f892c11cc94ca633debf8bc70f696a4d9b5e6296dea1da6f3023cb859c5cc04",
+      "bytes": 11480
+    },
+    {
+      "path": "src/pages/Index.tsx",
+      "sha256": "fe6acc767897a10c10fd9b2eb83c6e3660a847bdec7c8b695073221f31ca47f6",
+      "bytes": 9231
+    },
+    {
+      "path": "src/pages/admin/AdminContent.tsx",
+      "sha256": "216587a31188b9f2f2c10f1491fded196be41b6246fb2c120e572270cb0eb3a4",
+      "bytes": 12042
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T03:55:18.385Z",
-  "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged."
+  "checksumsRefreshedAt": "2026-10-11T04:17:53.663Z",
+  "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
+  "latestMeasuredCommit": "e37c93a8cf5de2de09695552e3cdb92082caefff",
+  "lighthouseScope": "GitHub Chrome candidate lab only; no production or field certification"
 }
