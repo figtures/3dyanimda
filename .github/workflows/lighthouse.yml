@@ -1,0 +1,49 @@
+name: Lighthouse candidate laboratory
+
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/quality/lighthouse-ci.mjs', '.github/workflows/lighthouse.yml', 'src/**', 'public/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        brand: [3dyanimda, 3dsanayi, maketyanimda, parcayanimda]
+    env:
+      # Anonymous browser configuration only; no management or service-role secret.
+      VITE_SUPABASE_URL: 'https://zdxjmhhjuomcpdtllnuq.supabase.co'
+      VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_cb-5Z_xQf-Z19whnlsrG-A_Id5ewC6H'
+      LAB_BRAND: ${{ matrix.brand }}
+      LAB_REPEATS: '1'
+      LAB_ROUTES: '/,/3d-baski,/teklif-al'
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: google-chrome --version
+      - run: node scripts/quality/lighthouse-ci.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: lighthouse-${{ matrix.brand }}-${{ github.sha }}
+          path: artifacts/lighthouse-${{ matrix.brand }}/
+          retention-days: 30
+          if-no-files-found: error
