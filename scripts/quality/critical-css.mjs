@@ -18,6 +18,7 @@ export async function inlineCriticalCss(page) {
    const text=select(sheet.cssRules);const style=document.createElement('style');style.setAttribute('data-static-critical','');style.textContent=text;link.before(style);total+=text.length;
    const fallback=document.createElement('noscript');fallback.textContent=`<link rel="stylesheet" href="${link.getAttribute('href').replaceAll('&','&amp;').replaceAll('"','&quot;')}">`;link.after(fallback);
    link.rel='preload';link.as='style';link.setAttribute('fetchpriority','low');link.setAttribute('onload',"this.onload=null;this.rel='stylesheet'");
+   link.setAttribute('data-deferred-stylesheet','');
   }
   // Dynamic-import preload hints from the rendering session would otherwise
   // pull the whole application into the next document's initial request burst.
@@ -31,5 +32,18 @@ export async function inlineCriticalCss(page) {
    document.head.prepend(hint);
   }
   return total;
+ });
+}
+
+/** Capture a detached clone: cached preload onload may already have restored the
+ * live link to stylesheet while export awaits API snapshot collection. */
+export async function serializedPrerender(page) {
+ return page.evaluate(()=>{
+  const html=document.documentElement.cloneNode(true);
+  html.querySelectorAll('link[data-deferred-stylesheet]').forEach(link=>{
+   link.setAttribute('rel','preload');link.setAttribute('as','style');
+   link.setAttribute('onload',"this.onload=null;this.rel='stylesheet'");
+  });
+  return '<!doctype html>\n'+html.outerHTML;
  });
 }

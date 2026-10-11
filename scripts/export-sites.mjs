@@ -12,7 +12,7 @@ import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
 import { createPublicApiRelay } from "./public-api-relay.mjs";
-import {inlineCriticalCss} from './quality/critical-css.mjs';
+import {inlineCriticalCss,serializedPrerender} from './quality/critical-css.mjs';
 import {capturePublicBootstrap} from './quality/public-bootstrap.mjs';
 const env = { ...loadEnv("production", process.cwd(), ""), ...process.env };
 const hosts = (env.SITE_HOSTS || "").split(",").filter(Boolean);
@@ -246,7 +246,7 @@ try {
       await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});
       await inlineCriticalCss(page);
       await bootstrap.embed();
-      await writeFile(file, await page.content());
+      await writeFile(file, await serializedPrerender(page));
       if (!utilityRoutes.has(url)) {
         const documentData=await page.evaluate(() => ({
           title:document.title,

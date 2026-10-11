@@ -1,6 +1,8 @@
 /** Diagnostic lab of candidate artifacts served with real HTTP gzip.
  * API responses come from the actual public Supabase API. Never a production score. */
 import lighthouse from 'lighthouse';
+import desktopConfig from 'lighthouse/core/config/desktop-config.js';
+import {schemaIntegrity} from './schema-integrity.mjs';
 import puppeteer from 'puppeteer-core';
 import {loadEnv,build} from 'vite';
 import {createServer} from 'node:http';
@@ -8,7 +10,7 @@ import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
-import {inlineCriticalCss} from './critical-css.mjs';
+import {inlineCriticalCss,serializedPrerender} from './critical-css.mjs';
 import {capturePublicBootstrap} from './public-bootstrap.mjs';
 const env={...loadEnv('production',process.cwd(),''),...process.env};
 if(process.env.GITHUB_ACTIONS!=='true')throw new Error('Run this browser lab in GitHub Actions, not the managed workspace.');
@@ -19,7 +21,7 @@ if(![1,3].includes(repeats))throw new Error('Expected 1 diagnostic run or 3 fina
 const output=`artifacts/lighthouse-${brand}/summary.json`;
 const raw=`artifacts/lighthouse-${brand}/raw`;await mkdir(raw,{recursive:true});
 let report={kind:'candidate-artifact-lab',production:false,fieldData:false,api:'actual public API; no cached fixtures during measurement',sourceCommit:process.env.GITHUB_SHA,workflowRun:process.env.GITHUB_RUN_ID,startedAt:new Date().toISOString(),runs:[],errors:[],limitations:['Real localhost HTTP server with gzip; CDN, public DNS, TLS and production availability are not measured.','Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.','Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion.']};
-const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,defaultViewport:null,ignoreDefaultArgs:['--enable-automation'],args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const mime={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.woff2':'font/woff2','.glb':'model/gltf-binary'};
 const routes=(process.env.LAB_ROUTES||'/,/3d-baski,/teklif-al').split(',');
 const targets=routes.flatMap(route=>['mobile','desktop'].map(device=>({brand,route,device})));
@@ -65,18 +67,23 @@ try {
   await page.goto(origin+target.route,{waitUntil:'networkidle0'});
   await page.waitForFunction(()=>document.querySelector('h1')&&!document.querySelector('h1').textContent.includes('hazır değil')&&document.querySelector('[data-pending-queries]')?.getAttribute('data-pending-queries')==='0');
   await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});
+  const contract=await page.evaluate(()=>({h1:document.querySelectorAll('h1').length,canonical:document.querySelector('link[rel=canonical]')?.href,og:document.querySelector('meta[property="og:url"]')?.content,schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)),text:document.querySelector('main')?.textContent||''}));
+  if(contract.h1!==1||contract.canonical!=='https://'+brand+'.com'+target.route||contract.og!==contract.canonical||contract.schemas.length!==1)throw Error('Rendered SEO contract failed: '+target.route);
+  const schemaErrors=schemaIntegrity(contract.schemas[0],{origin:'https://'+brand+'.com',visibleText:contract.text});
+  if(schemaErrors.length)throw Error(JSON.stringify(schemaErrors));
+  report.renderContracts||=[];report.renderContracts.push({...target,status:'PASS',h1:contract.h1,canonical:contract.canonical,schemaNodes:contract.schemas[0]['@graph'].length});
   await inlineCriticalCss(page);
   await bootstrap.embed();
-  rendered=await page.content();
+  rendered=await serializedPrerender(page);
   for(let repeat=1;repeat<=repeats;repeat++){
    if(completed.some(r=>r.repeat===repeat))continue;
-   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],...(target.device==='desktop'?{preset:'desktop'}:{})},undefined,page);
-   const lhr=result.lhr;if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
+   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);
+   const lhr=result.lhr;if(lhr.configSettings.formFactor!==target.device)throw Error('Lighthouse device mismatch');if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
    const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
    const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
    const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));
    await writeFile(file.replace('.json.gz','.html'),Array.isArray(result.report)?result.report.find(r=>r.startsWith('<!doctype')||r.startsWith('<!DOCTYPE'))||result.report[0]:result.report);
-   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
+   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
    await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('LIGHTHOUSE_RUN '+JSON.stringify(report.runs.at(-1)));
   }
   await context.close();

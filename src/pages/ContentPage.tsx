@@ -10,6 +10,7 @@ import { getTenantIdentity } from "@/lib/tenant";
 import places from "@/content/places.json";
 import {contentMetaTitle,contentMetaDescription} from '@/content/metadata';
 import {sourceNote,contentModified} from '@/content/source-notes';
+import {serviceImageSources} from '@/content/responsive-image';
 export default function ContentPage() {
   const { pathname, search } = useLocation();
   const b = useBrand();
@@ -162,14 +163,17 @@ export default function ContentPage() {
           )}
           {p.image && (
             <figure>
+              <picture>
+              {serviceImageSources(p.image)&&<source type="image/avif" srcSet={serviceImageSources(p.image)} sizes="(max-width: 760px) calc(100vw - 40px), 680px"/>}
               <img
                 src={p.image}
                 alt={p.title + " temsili uygulama görseli"}
-                width="1000"
-                height="660"
+                width="1536"
+                height="1024"
                 loading="lazy"
                 decoding="async"
               />
+              </picture>
               <figcaption>Uygulama alanını anlatan temsili görsel.</figcaption>
             </figure>
           )}

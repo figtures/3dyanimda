@@ -47,7 +47,7 @@ export default function AdminContent() {
           "Bölümler title/body, sorular q/a metinleri içeren diziler olmalı.",
         );
       const p = { ...draft, sections: parsedSections, faq: parsedFaq, editorial: editorialSchema.parse(JSON.parse(editorial)), status };
-      const issues = publicationIssues(p, pages);
+      const issues = publicationIssues({...p,brand:tenant.slug}, pages);
       if (status === "published" && issues.length)
         throw new Error(issues.join(" "));
       const { brand, id, updated_at, ...payload } = p;

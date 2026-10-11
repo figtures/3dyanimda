@@ -1,5 +1,5 @@
 /** Capture public responses from the anonymous export, never credentials or writes. */
-const allowed=new Set(['current_tenant_id','tenants','site_settings','seo_meta','landing_pages','features','tenant_features','tenant_theme_config','url_redirects','navigation_items','legal_documents']);
+const allowed=new Set(['current_tenant_id','tenants','site_settings','seo_meta','landing_pages','features','tenant_features','tenant_theme_config','url_redirects','navigation_items','nav_items','translations','legal_documents']);
 export function capturePublicBootstrap(page,apiOrigin,host) {
  let entries=new Map();const pending=new Set();
  page.on('response',response=>{

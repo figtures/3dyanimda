@@ -1,6 +1,7 @@
 /** Diagnostic lab of candidate artifacts served with real HTTP gzip.
  * API responses come from the actual public Supabase API. Never a production score. */
 import lighthouse from 'lighthouse';
+import desktopConfig from 'lighthouse/core/config/desktop-config.js';
 import puppeteer from 'puppeteer-core';
 import {loadEnv,build} from 'vite';
 import {createServer} from 'node:http';
@@ -8,7 +9,7 @@ import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
-import {inlineCriticalCss} from './critical-css.mjs';
+import {inlineCriticalCss,serializedPrerender} from './critical-css.mjs';
 import {capturePublicBootstrap} from './public-bootstrap.mjs';
 const env={...loadEnv('production',process.cwd(),''),...process.env};
 const output='docs/audits/lighthouse-candidate-2026-10-11.json';
@@ -66,11 +67,11 @@ try {
   await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});
   await inlineCriticalCss(page);
   await bootstrap.embed();
-  rendered=await page.content();
+  rendered=await serializedPrerender(page);
   for(let repeat=1;repeat<=(process.env.LAB_SMOKE?1:3);repeat++){
    if(completed.some(r=>r.repeat===repeat))continue;
-   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],...(target.device==='desktop'?{preset:'desktop'}:{})},undefined,page);
-   const lhr=result.lhr;if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
+   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);
+   const lhr=result.lhr;if(lhr.configSettings.formFactor!==target.device)throw Error('Lighthouse device mismatch');if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
    const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
    const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
    const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));

@@ -1,5 +1,7 @@
 import { z } from "zod";
+import { answerUnitSchema } from './answer-unit';
 export const editorialSchema = z.object({
+  answerUnit:answerUnitSchema.optional(),
   answer: z.string().max(1600).refine(value=>value.trim().split(/\s+/u).filter(Boolean).length<=120,"Doğrudan cevap en fazla 120 kelime olmalı; ayrıntıları ayrı bölümlere taşıyın.").default(""),
   takeaways: z.array(z.string().max(500)).max(8).default([]),
   comparison: z.object({title:z.string().max(250),columns:z.array(z.string().max(150)).min(2).max(5),rows:z.array(z.array(z.string().max(600))).max(20)}).refine(v => v.rows.every(row => row.length === v.columns.length), "Tablodaki satır ve sütun sayıları eşleşmeli.").optional(),

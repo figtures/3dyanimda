@@ -1,0 +1,197 @@
+{
+  "kind": "Responsive encodings of existing illustrative assets; original fallback retained",
+  "images": [
+    {
+      "source": "public/brand/services/3dsanayi-model.webp",
+      "file": "public/brand/optimized/service-3dsanayi-model-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 11952,
+      "sha256": "9f6f95485fecdd467ebebdd0f04d646ee56235849c0539bde8cc24dbc1d60e7b"
+    },
+    {
+      "source": "public/brand/services/3dsanayi-model.webp",
+      "file": "public/brand/optimized/service-3dsanayi-model-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 23620,
+      "sha256": "ba20ff73299c9d8d500adfcef93a1974a054e7a1c52eb62eacb691d4898389e1"
+    },
+    {
+      "source": "public/brand/services/3dsanayi-print.webp",
+      "file": "public/brand/optimized/service-3dsanayi-print-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 16952,
+      "sha256": "af55c24fcefa4faec7356a3a837e2519c6177a01ae868e8eed652239f3254890"
+    },
+    {
+      "source": "public/brand/services/3dsanayi-print.webp",
+      "file": "public/brand/optimized/service-3dsanayi-print-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 35489,
+      "sha256": "ff5e28adb799c889d0a43eae77717a24fac248f72353c6a60665c03d3b7fa122"
+    },
+    {
+      "source": "public/brand/services/3dsanayi-scan.webp",
+      "file": "public/brand/optimized/service-3dsanayi-scan-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 47291,
+      "sha256": "100179251bbc4c9906240be479615904e1b4daa3802f115f7ecf3c851889e562"
+    },
+    {
+      "source": "public/brand/services/3dsanayi-scan.webp",
+      "file": "public/brand/optimized/service-3dsanayi-scan-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 107480,
+      "sha256": "aa7c212346bac07c17b67f6a619ecfc2c7d3c072a5c20b3423cbddf4ff3fa0e2"
+    },
+    {
+      "source": "public/brand/services/3dyanimda-model.webp",
+      "file": "public/brand/optimized/service-3dyanimda-model-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 8998,
+      "sha256": "7c56e48c1ee984d8d12772189433967dcc7f0223b6c805c923dabea08619accf"
+    },
+    {
+      "source": "public/brand/services/3dyanimda-model.webp",
+      "file": "public/brand/optimized/service-3dyanimda-model-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 16740,
+      "sha256": "790d06b0abcfa2765f6db5cd3fab61e047214a1a6d851633438d6867f3f2b22d"
+    },
+    {
+      "source": "public/brand/services/3dyanimda-print.webp",
+      "file": "public/brand/optimized/service-3dyanimda-print-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 9777,
+      "sha256": "286b625e95df9aa5d3cd858430e5d1412f0a0a374c71099bf33d43bf1606eca4"
+    },
+    {
+      "source": "public/brand/services/3dyanimda-print.webp",
+      "file": "public/brand/optimized/service-3dyanimda-print-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 19340,
+      "sha256": "60bdccc4bdd3597e2b48e51d8ed99be472d91bbae7789bf433889b25bdb9ae78"
+    },
+    {
+      "source": "public/brand/services/3dyanimda-scan.webp",
+      "file": "public/brand/optimized/service-3dyanimda-scan-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 22393,
+      "sha256": "56b01925a2e4e987fde2c80575162f6e80aca0f018f814b86fddc3067d8e9b8c"
+    },
+    {
+      "source": "public/brand/services/3dyanimda-scan.webp",
+      "file": "public/brand/optimized/service-3dyanimda-scan-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 50961,
+      "sha256": "2b3b2c01c148ad7c5cb7200e4a8a75c00e4ef6718030cdb0b326688ac443ecce"
+    },
+    {
+      "source": "public/brand/services/maketyanimda-model.webp",
+      "file": "public/brand/optimized/service-maketyanimda-model-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 34760,
+      "sha256": "ca83e60809350566a0904a61778c85bbf03c0e30460e40a2450786387a2b50b9"
+    },
+    {
+      "source": "public/brand/services/maketyanimda-model.webp",
+      "file": "public/brand/optimized/service-maketyanimda-model-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 73959,
+      "sha256": "0d99ec9a7101bfd5dbeb987fc93419ca18f9d5949707fc1ebbef308c2caedf9b"
+    },
+    {
+      "source": "public/brand/services/maketyanimda-print.webp",
+      "file": "public/brand/optimized/service-maketyanimda-print-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 28913,
+      "sha256": "6536127dea7119bf062f8716b2c1954a3a0cab7e1b06c4b54127a432f8f2de85"
+    },
+    {
+      "source": "public/brand/services/maketyanimda-print.webp",
+      "file": "public/brand/optimized/service-maketyanimda-print-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 58769,
+      "sha256": "c28f5e1f329605b8575a9b1362b287e7ff8770cf10de2b12589d0df0ee97f02d"
+    },
+    {
+      "source": "public/brand/services/maketyanimda-scan.webp",
+      "file": "public/brand/optimized/service-maketyanimda-scan-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 34571,
+      "sha256": "a70cab1736cdd0f33940fd9d8e754d7598c32b7538617bc97a29b5eb9a6b5d8a"
+    },
+    {
+      "source": "public/brand/services/maketyanimda-scan.webp",
+      "file": "public/brand/optimized/service-maketyanimda-scan-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 75250,
+      "sha256": "53a5cd8fa17272799edd75450e7b1374451fef8d18e31449dadcfc9a7167d0bb"
+    },
+    {
+      "source": "public/brand/services/parcayanimda-model.webp",
+      "file": "public/brand/optimized/service-parcayanimda-model-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 13107,
+      "sha256": "5b28b132700dddc2981864282fe8a82e8a3d24f61d77b71b0320db18846337bc"
+    },
+    {
+      "source": "public/brand/services/parcayanimda-model.webp",
+      "file": "public/brand/optimized/service-parcayanimda-model-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 25417,
+      "sha256": "53747fb2acbde754a226a7bac948517c9357ce74ded882f9b50bcd392d0b5a3d"
+    },
+    {
+      "source": "public/brand/services/parcayanimda-print.webp",
+      "file": "public/brand/optimized/service-parcayanimda-print-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 12548,
+      "sha256": "9ac47e7f024d07aa31b4471957c36d01a9e6559e747eb9a4b829f4553a95265e"
+    },
+    {
+      "source": "public/brand/services/parcayanimda-print.webp",
+      "file": "public/brand/optimized/service-parcayanimda-print-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 31189,
+      "sha256": "61fc30381b7c9fecbcc7e028fb04d5567bfb8945f7fe4d192ae7b5c8bff3deb2"
+    },
+    {
+      "source": "public/brand/services/parcayanimda-scan.webp",
+      "file": "public/brand/optimized/service-parcayanimda-scan-640.avif",
+      "width": 640,
+      "height": 427,
+      "bytes": 16102,
+      "sha256": "94ec9abe14c9472c4dc92f1bb636a3a17cc8350afd20291cf8914f7a61f63f80"
+    },
+    {
+      "source": "public/brand/services/parcayanimda-scan.webp",
+      "file": "public/brand/optimized/service-parcayanimda-scan-1024.avif",
+      "width": 1024,
+      "height": 683,
+      "bytes": 36083,
+      "sha256": "5cb5071ec2e56013bb205d3263a851651476be0973ffccf001c2d7e3c1d97b9b"
+    }
+  ]
+}

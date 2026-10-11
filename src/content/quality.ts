@@ -41,6 +41,16 @@ export function publicationIssues(
     issues.push("Başlık ve açıklamayı tamamlayın.");
   if (page.sections.length < 2)
     issues.push("En az iki yararlı içerik bölümü ekleyin.");
+  if (page.sections.some(section=>section.body.trim().split(/\s+/u).length>500) || page.faq.some(f=>f.a.trim().split(/\s+/u).length>500))
+    issues.push("500 kelimeyi aşan içerik birimlerini anlamlı alt bölümlere ayırın.");
+  const unit=page.editorial?.answerUnit;
+  if(unit){
+    if(unit.directAnswer!==page.editorial?.answer)issues.push("Cevap birimi ile görünür doğrudan cevap aynı olmalı.");
+    if(new URL(unit.ownerUrl).pathname!==page.path)issues.push("Cevap biriminin sahibi bu sayfanın URL'si olmalı.");
+    if(page.brand&&new URL(unit.ownerUrl).hostname!==page.brand+'.com')issues.push("Cevap birimi başka bir markaya ait olamaz.");
+    if(!['approved','published'].includes(unit.status))issues.push("Cevap biriminin incelemesi tamamlanmadı.");
+    if(unit.claims.some(claim=>claim.validThrough&&Date.parse(claim.validThrough)<=Date.now()))issues.push("Cevap biriminde süresi geçmiş iddia var.");
+  }
   if (page.kind === "location") {
     if (page.local_context.trim().length < 200)
       issues.push("Bölgeye özgü, doğrulanmış yerel bilgiyi ekleyin.");
