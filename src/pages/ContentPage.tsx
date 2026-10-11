@@ -1,7 +1,7 @@
 import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
-import { useContent, useContentPage } from "@/content/useContent";
+import { useContentPage, useRelatedContent } from "@/content/useContent";
 import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import RegionPlanner from "./RegionPlanner";
@@ -14,12 +14,12 @@ import {serviceImageSources} from '@/content/responsive-image';
 export default function ContentPage() {
   const { pathname, search } = useLocation();
   const b = useBrand();
-  const { data: pages = [] } = useContent();
   const {data:p,isLoading,isError}=useContentPage(pathname.replace(/\/$/,''));
+  const {data:related=[]}=useRelatedContent(p);
   const query = previewSearch(search);
   if (isLoading)
     return (
-      <div className="brand-inner" role="status">
+      <div className="brand-inner" role="status" data-content-loading>
         İçerik yükleniyor…
       </div>
     );
@@ -57,10 +57,6 @@ export default function ContentPage() {
   const base = getTenantIdentity().origin;
   const technicalNote=sourceNote(p.path);
   const modified=contentModified(p.updated_at,p.path);
-  const related = pages
-    .filter((v) => v.path !== p.path && (p.editorial?.relatedPaths?.includes(v.path) || v.kind === p.kind))
-    .sort((a, c) => Number(p.editorial?.relatedPaths?.includes(c.path)) - Number(p.editorial?.relatedPaths?.includes(a.path)))
-    .slice(0, 4);
   const quoteParams = new URLSearchParams(query);
   quoteParams.set("application", p.title);
   if (p.kind === "service") quoteParams.set("service", p.path.slice(1));

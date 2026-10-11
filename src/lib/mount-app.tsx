@@ -12,15 +12,16 @@ export function mountApp(element: HTMLElement, app: ReactNode) {
   const interactive=document.createElement('div');
   interactive.id='root';interactive.hidden=true;element.after(interactive);
   let frame=0;
+  const canReveal=()=>Boolean(interactive.querySelector('.brand-site main h1') && interactive.querySelector('[data-pending-queries="0"]') && !interactive.querySelector('[data-content-loading]'));
   const ready=()=>{
-    if (!interactive.querySelector('.brand-site main h1') || !interactive.querySelector('[data-pending-queries="0"]')) return;
+    if (!canReveal()) return;
     cancelAnimationFrame(frame);
     frame=requestAnimationFrame(()=>{
-      if (!interactive.querySelector('[data-pending-queries="0"]')) return;
+      if (!canReveal()) return;
       observer.disconnect();element.remove();interactive.hidden=false;
     });
   };
   const observer=new MutationObserver(ready);
-  observer.observe(interactive,{childList:true,subtree:true,attributes:true,attributeFilter:['data-pending-queries']});
+  observer.observe(interactive,{childList:true,subtree:true,attributes:true,attributeFilter:['data-pending-queries','data-content-loading']});
   createRoot(interactive).render(app);
 }

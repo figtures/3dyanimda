@@ -44,7 +44,7 @@ export default function ContentHub() {
   const b = useBrand();
   const [kind, defaultTitle, defaultLead] = config[pathname] || config["/hizmetler"];
   const [title,lead] = hubCopy(b.slug, kind, [defaultTitle,defaultLead]);
-  const { data = [], isLoading, isError } = useContent();
+  const { data = [], isLoading, isError } = useContent(false,false,{kinds:[kind]});
   const query = previewSearch(search);
   const pages = data.filter((p) => p.kind === kind);
   return (
@@ -59,7 +59,7 @@ export default function ContentHub() {
         <p className="section-lead">{lead}</p>
       </section>
       <section className="wrap hub-content">
-        {isLoading && <p role="status">İçerikler yükleniyor…</p>}
+        {isLoading && <p role="status" data-content-loading>İçerikler yükleniyor…</p>}
         {isError && (
           <p role="alert">İçerikler yüklenemedi. Lütfen tekrar deneyin.</p>
         )}

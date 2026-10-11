@@ -54,7 +54,7 @@ export default function Index() {
   const { search } = useLocation();
   const q = previewSearch(search);
   const link = (s: string) => s + q;
-  const { data: pages = [] } = useContent();
+  const { data: pages = [] } = useContent(false,false,{kinds:['solution','guide']});
   const img =
     b.image ||
     `/brand/industrial/${b.heroAsset}.webp`;
