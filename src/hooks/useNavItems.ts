@@ -21,7 +21,7 @@ export function useNavItems(location?: string) {
   useEffect(() => {
     let active = true;
     setRows(cache.get(tenant?.id)||[]);
-    if (tenant)
+    if (tenant && !cache.has(tenant.id))
       supabase
         .from("nav_items")
         .select("id,location,label_tr,label_en,url,parent,badge,sort_order")

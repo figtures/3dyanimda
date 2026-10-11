@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".github/workflows/lighthouse.yml",
-      "sha256": "4aee2b3745926772c26ff6e51afc9328900ab4976d15dd570711b4f5173e0bb5",
-      "bytes": 2079
+      "sha256": "9e2089a3323a6a6d608999475294495c3cf5fee6c1892052291d2f3638d30d42",
+      "bytes": 2450
     },
     {
       "path": ".github/workflows/search-quality.yml",
@@ -143,8 +143,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "5f71f7bab4ec8aefd7917c240c55518bf90aa6246742a8298a90bca46a005c24",
-      "bytes": 829
+      "sha256": "22de89ad8d8e4acfa6ff9a9d082a4ee37a444f8f83378c3f31d9016a8c824dd3",
+      "bytes": 363
     },
     {
       "path": "package.json",
@@ -283,8 +283,8 @@
     },
     {
       "path": "public/fonts/inter.css",
-      "sha256": "de431c63556488af8468b4981e8cac723b2dfc7bf8e8a8b35c6658377aa327d0",
-      "bytes": 1552
+      "sha256": "a73a9cd8d775f4c03c8a45ef17a35ab7109a3ea36c9ae6805c3e82bc09727cb9",
+      "bytes": 762
     },
     {
       "path": "public/fonts/rethink-sans-latin-ext-wght-normal-tr-v2.woff2",
@@ -298,8 +298,8 @@
     },
     {
       "path": "public/fonts/rethink-sans.css",
-      "sha256": "aa09d0627d891813818f854130f9e0389829637311ee35fcdb8733e22fe4f6b3",
-      "bytes": 1582
+      "sha256": "f30c60f3c40c16dbd7c0767c22722ca89e6a08bde9158db50a290701868a4230",
+      "bytes": 750
     },
     {
       "path": "scripts/cloudflare/config.test.mjs",
@@ -443,8 +443,8 @@
     },
     {
       "path": "src/App.tsx",
-      "sha256": "119dce54c55bf0bb8221dba5114f35b7512acffb581c4fca9f69304648213acf",
-      "bytes": 15564
+      "sha256": "8ee67df7ce2c031eee90ac1a5663ec73bce90446cc1ef3f1ac9fb922a7143b13",
+      "bytes": 15754
     },
     {
       "path": "src/brands/brand.css",
@@ -453,8 +453,8 @@
     },
     {
       "path": "src/brands/modern.css",
-      "sha256": "3ae91687849e72685ca2d9f81c9b1afd69fbcba4cd26c17f6ebcc3f86bff71a4",
-      "bytes": 21318
+      "sha256": "007e637bcabdc83af70ad5f9fcbaaec2c94275d6974a36d378e16dad5da6dca4",
+      "bytes": 21548
     },
     {
       "path": "src/components/site/NotificationOverlays.tsx",
@@ -528,8 +528,8 @@
     },
     {
       "path": "src/contexts/FeatureContext.tsx",
-      "sha256": "524e58f372de3c88365bea130bfd6430713a1da7991b0e9c45d09302bce8314f",
-      "bytes": 2657
+      "sha256": "8b767136d5a15c5965ef75c98a61fc1d8b174706d477f057ca8192d61abb1bef",
+      "bytes": 2686
     },
     {
       "path": "src/contexts/TenantContext.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "src/hooks/useNavItems.ts",
-      "sha256": "610ac14058c1c1101e14002693a567dacceba1968f1dbaedb3b4fb1dabec6fa6",
-      "bytes": 1477
+      "sha256": "edc071fac8da0f5a221cca06eb8b86333194e49451a403232f4c315a4a342155",
+      "bytes": 1502
     },
     {
       "path": "src/hooks/useSiteSettings.ts",
@@ -578,8 +578,8 @@
     },
     {
       "path": "src/lib/public-render-state.ts",
-      "sha256": "a5f974f3c66b715f098b0dac61a48a21fe9117bc49cd83bc5387a200ff305294",
-      "bytes": 2276
+      "sha256": "3ddfb118046b829148682cd69f7334b406a53907fec44bb858ffadae2473b5f4",
+      "bytes": 2426
     },
     {
       "path": "src/lib/redirects.mjs",
@@ -633,8 +633,8 @@
     },
     {
       "path": "src/pages/ContentHub.tsx",
-      "sha256": "abfa5059558dec8f35ed2dc5e560c115c9c0c8e69e356116946fd53ff0892d1e",
-      "bytes": 4826
+      "sha256": "9fc6e2f0f1d3782e55375e6d3b749102ebcd7047c5683410c0479fef923a84d2",
+      "bytes": 4882
     },
     {
       "path": "src/pages/ContentPage.tsx",

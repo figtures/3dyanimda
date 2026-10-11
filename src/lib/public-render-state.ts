@@ -5,6 +5,8 @@ export type PublicRenderState = {
  version:1; host:string; path:string; search?:string; tenant:Tenant;
  settings:Record<string,unknown>; nav:unknown[]; flags:Record<string,boolean>;
  queries:DehydratedState;
+ seo?:Record<string,unknown>|null;
+ theme?:{theme:import('@/contexts/ThemeContext').Theme|null;config:import('@/contexts/ThemeContext').ThemeConfig};
 };
 /** Route-scoped snapshots never accumulate other pages during a multi-page export. */
 export function publicQueryForPath(key:readonly unknown[],tenantId:string,path:string){

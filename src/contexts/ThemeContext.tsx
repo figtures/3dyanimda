@@ -1,6 +1,9 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { supabase } from "@/lib/supabase";
 import { useTenant } from "./TenantContext";
+import {publicRenderState} from '@/lib/public-render-state';
+let lastPublicTheme: {theme:Theme|null;config:ThemeConfig}|undefined;
+export const exportPublicTheme=()=>lastPublicTheme;
 
 export type ThemeTokens = {
   background?: string;
@@ -178,12 +181,14 @@ const applyTheme = (theme: Theme | null) => {
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const { tenant } = useTenant();
-  const [theme, setTheme] = useState<Theme | null>(null);
-  const [config, setConfig] = useState<ThemeConfig>({ palette: null, typography: null, layout: null, overrides: {} });
-  const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState<Theme | null>(()=>publicRenderState()?.theme?.theme||null);
+  const [config, setConfig] = useState<ThemeConfig>(()=>publicRenderState()?.theme?.config||{ palette: null, typography: null, layout: null, overrides: {} });
+  const [loading, setLoading] = useState(!publicRenderState()?.theme);
   const [tick, setTick] = useState(0);
+  if(!loading)lastPublicTheme={theme,config};
 
   useEffect(() => {
+    if(tick===0&&publicRenderState()?.theme)return;
     let cancelled = false;
     const run = async () => {
       setLoading(true);

@@ -63,7 +63,7 @@ export default function ContentHub() {
         {isError && (
           <p role="alert">İçerikler yüklenemedi. Lütfen tekrar deneyin.</p>
         )}
-        <div className="editorial-grid">
+        <div className={kind === "location" ? "editorial-grid region-cards" : "editorial-grid"}>
           {pages.map((p) => (
             <Link className="editorial-card" key={p.path} to={p.path + query}>
               {p.image && (

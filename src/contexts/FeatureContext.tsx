@@ -67,7 +67,7 @@ export function FeatureProvider({ children }: { children: ReactNode }) {
     setLoading(false);
   }, [tenant?.id]);
 
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { if(!publicRenderState())void load(); }, [load]);
 
   const isEnabled = useCallback(
     (key: string) => {

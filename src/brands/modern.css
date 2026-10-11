@@ -1204,3 +1204,6 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Offscreen directory cards remain searchable and accessible without eagerly laying out the entire directory. */
+.region-cards > .editorial-card:nth-child(n + 7) { content-visibility: auto; contain-intrinsic-size: auto 290px; }

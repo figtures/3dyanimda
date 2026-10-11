@@ -2,6 +2,7 @@ import { useTenant } from "@/contexts/TenantContext";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import i18n from "@/lib/i18n";
+import {publicRenderState} from '@/lib/public-render-state';
 
 type SeoOverride = {
   title?: string;
@@ -13,6 +14,9 @@ type SeoOverride = {
 
 const TTL_MS = 60_000; // 1 minute — admin edits become visible quickly without re-loading on every nav
 const cache = new Map<string, { at: number; data: SeoOverride | null }>();
+const initial=publicRenderState();
+if(initial&&'seo' in initial)cache.set(`${initial.tenant.id}::${initial.path}::tr`,{at:Date.now(),data:initial.seo as SeoOverride|null});
+export const exportPublicSeo=(id:string,path:string)=>cache.get(`${id}::${path}::tr`)?.data||null;
 
 export function clearSeoOverrideCache() {
   cache.clear();
@@ -31,13 +35,13 @@ export function useSeoOverride(path: string): SeoOverride | null {
 
   useEffect(() => {
     let mounted = true;
-    setData(null);
     if (!tenant) return;
     const c = cache.get(cacheKey);
     if (c && Date.now() - c.at < TTL_MS) {
       setData(c.data);
       return;
     }
+    setData(null);
     (async () => {
       const { data: row } = await (supabase as any)
         .from("seo_meta")

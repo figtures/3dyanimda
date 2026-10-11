@@ -4,6 +4,8 @@ import {exportPublicTenant} from '@/contexts/TenantContext';
 import {exportPublicSettings} from '@/hooks/useSiteSettings';
 import {exportPublicNav} from '@/hooks/useNavItems';
 import {exportPublicFlags} from '@/contexts/FeatureContext';
+import {exportPublicTheme} from '@/contexts/ThemeContext';
+import {exportPublicSeo} from '@/hooks/useSeoOverride';
 import {getRequestHost} from '@/lib/tenant';
 import {
   QueryClient,
@@ -381,7 +383,7 @@ const App = () => (
  if(!await preparePublicRoute(location.pathname))return null;
  const tenant=exportPublicTenant()||publicRenderState()?.tenant;if(!tenant)return null;
  const queries=dehydrate(queryClient,{shouldDehydrateMutation:()=>false,shouldDehydrateQuery:q=>q.state.status==='success'&&publicQueryForPath(q.queryKey,tenant.id,location.pathname)});
- const state={version:1 as const,host:getRequestHost(),path:location.pathname,search:location.search,tenant,settings:exportPublicSettings(tenant.id),nav:exportPublicNav(tenant.id),flags:exportPublicFlags(),queries};
+ const state={version:1 as const,host:getRequestHost(),path:location.pathname,search:location.search,tenant,settings:exportPublicSettings(tenant.id),nav:exportPublicNav(tenant.id),flags:exportPublicFlags(),queries,seo:exportPublicSeo(tenant.id,location.pathname),theme:exportPublicTheme()};
  setPublicRenderState(state);
  const {renderToString}=await import('react-dom/server.browser');
  return {html:renderToString(<App/>),state};
