@@ -29,6 +29,7 @@ jobs:
       LAB_BRAND: ${{ matrix.brand }}
       LAB_DEVICE: ${{ matrix.device }}
       LAB_REPEATS: '1'
+      LAB_ORIGIN_MODE: canonical
       LAB_ROUTES: '/,/3d-tarama,/teklif-al'
       CHROME_PATH: /usr/bin/google-chrome
     steps:

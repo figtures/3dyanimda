@@ -29,7 +29,8 @@ export async function inlineCriticalCss(page) {
    const source=hero.parentElement?.querySelector('source[type="image/avif"]');
    if(source){hint.type='image/avif';hint.setAttribute('imagesrcset',source.getAttribute('srcset'));hint.setAttribute('imagesizes',source.getAttribute('sizes')||'100vw');hint.href=source.getAttribute('srcset').split(',')[0].trim().split(/\s+/)[0];}
    else hint.href=hero.getAttribute('src');
-   document.head.prepend(hint);
+   const viewport=document.querySelector('meta[name=viewport]');
+   if(viewport)viewport.after(hint);else document.head.append(hint);
   }
   return total;
  });
@@ -45,6 +46,7 @@ export async function serializedPrerender(page) {
    const root=html.querySelector('#root');root.innerHTML=rendered.html;root.setAttribute('data-hydration','react-ssg-v1');
    const script=document.createElement('script');script.id='public-render-state';script.type='application/json';script.textContent=JSON.stringify(rendered.state).replace(/</g,'\\u003c');html.querySelector('head').appendChild(script);
   }
+  html.querySelectorAll('link[rel="modulepreload"]').forEach(link=>link.remove());
   html.querySelectorAll('link[data-deferred-stylesheet]').forEach(link=>{
    link.setAttribute('rel','preload');link.setAttribute('as','style');
    link.setAttribute('onload',"this.onload=null;this.rel='stylesheet'");

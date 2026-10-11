@@ -5,7 +5,7 @@ import { useTenant } from "@/contexts/TenantContext";
 import { businessGraph, containsLegacyIdentity } from "@/lib/structured-data";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import catalog from "@/brands/catalog.json";
-import { canonicalPath, indexRobots, pageGraph } from "@/lib/search";
+import { canonicalPath, indexRobots, pageGraph, pageNoindex } from "@/lib/search";
 import { socialImage } from "@/lib/social-meta";
 import { composeSchemaGraph } from "@/lib/schema-graph";
 interface SeoProps {
@@ -50,13 +50,7 @@ export const Seo = ({
     ? effectiveTitle
     : `${effectiveTitle} | ${name}`;
   const desc = override?.description || description;
-  const noIndex = Boolean(
-    noindex ||
-      override?.noindex ||
-      import.meta.env.DEV ||
-      !domain ||
-      window.location.hostname !== domain,
-  );
+  const noIndex = pageNoindex({requested:noindex,override:override?.noindex,development:import.meta.env.DEV,domain,hostname:window.location.hostname});
   const share = socialImage(base, tenant?.slug, override?.og_image_url);
   const og = share.url;
   const brand = catalog.find((b) => b.slug === tenant?.slug);

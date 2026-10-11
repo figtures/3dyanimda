@@ -23,3 +23,8 @@ export function pageGraph(input: {
     ...(input.image ? { primaryImageOfPage: { "@type": "ImageObject", url: new URL(input.image, input.origin).href } } : {}),
   };
 }
+
+/** Private/staging hosts and explicitly excluded pages never inherit public indexing. */
+export function pageNoindex({requested=false,override=false,development=false,domain,hostname}:{requested?:boolean;override?:boolean;development?:boolean;domain?:string|null;hostname:string}) {
+ return Boolean(requested||override||development||!domain||hostname!==domain);
+}

@@ -5,7 +5,11 @@ import desktopConfig from 'lighthouse/core/config/desktop-config.js';
 import {schemaIntegrity} from './schema-integrity.mjs';
 import puppeteer from 'puppeteer-core';
 import {loadEnv,build} from 'vite';
-import {createServer} from 'node:http';
+import {createServer as createHttpServer} from 'node:http';
+import {createServer as createHttpsServer} from 'node:https';
+import {execFileSync} from 'node:child_process';
+import {mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
 import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
@@ -18,10 +22,17 @@ const brand=process.env.LAB_BRAND;
 if(!['3dyanimda','3dsanayi','maketyanimda','parcayanimda'].includes(brand))throw new Error('Invalid lab brand');
 const repeats=Number(process.env.LAB_REPEATS||3);
 if(![1,3].includes(repeats))throw new Error('Expected 1 diagnostic run or 3 final repetitions');
+const canonicalLab=process.env.LAB_ORIGIN_MODE==='canonical';
+let certDir,tls;
+if(canonicalLab){
+ certDir=await mkdtemp(path.join(tmpdir(),'brand-lab-'));
+ execFileSync('openssl',['req','-x509','-newkey','rsa:2048','-nodes','-keyout',path.join(certDir,'key.pem'),'-out',path.join(certDir,'cert.pem'),'-days','1','-subj','/CN='+brand+'.com','-addext','subjectAltName=DNS:'+brand+'.com'],{stdio:'ignore'});
+ tls={key:await readFile(path.join(certDir,'key.pem')),cert:await readFile(path.join(certDir,'cert.pem'))};
+}
 const output=`artifacts/lighthouse-${brand}/summary.json`;
 const raw=`artifacts/lighthouse-${brand}/raw`;await mkdir(raw,{recursive:true});
-let report={kind:'candidate-artifact-lab',production:false,fieldData:false,api:'actual public API; no cached fixtures during measurement',sourceCommit:process.env.GITHUB_SHA,workflowRun:process.env.GITHUB_RUN_ID,startedAt:new Date().toISOString(),runs:[],errors:[],limitations:['Real localhost HTTP server with gzip; CDN, public DNS, TLS and production availability are not measured.','Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.','Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion.']};
-const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,defaultViewport:null,ignoreDefaultArgs:['--enable-automation'],args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+let report={kind:'candidate-artifact-lab',production:false,fieldData:false,originMode:canonicalLab?'isolated-canonical-host-with-local-test-certificate':'localhost-noindex',publicDnsOrTlsVerified:false,api:'actual public API; no cached fixtures during measurement',sourceCommit:process.env.GITHUB_SHA,workflowRun:process.env.GITHUB_RUN_ID,startedAt:new Date().toISOString(),runs:[],errors:[],limitations:['Real localhost HTTP server with gzip; CDN, public DNS, TLS and production availability are not measured.',canonicalLab?'Canonical hostname is mapped to loopback in Chrome. Local self-signed TLS is trusted only in this CI browser; public DNS/TLS, production availability and indexing are NOT verified.':'Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.','Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion.']};
+const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,defaultViewport:null,ignoreDefaultArgs:['--enable-automation'],args:[...(canonicalLab?['--ignore-certificate-errors','--no-proxy-server','--host-resolver-rules=MAP '+brand+'.com 127.0.0.1']:[]),'--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const mime={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.woff2':'font/woff2','.glb':'model/gltf-binary'};
 const routes=(process.env.LAB_ROUTES||'/,/3d-baski,/teklif-al').split(',');
 const devices=process.env.LAB_DEVICE?[process.env.LAB_DEVICE]:['mobile','desktop'];
@@ -37,7 +48,7 @@ try {
    await build({logLevel:'error',envDir:false,define:Object.fromEntries(Object.entries({VITE_SUPABASE_URL:env.VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY:env.VITE_SUPABASE_PUBLISHABLE_KEY,VITE_PRIVATE_PREVIEW_HOST:'',VITE_SITE_THEME:'industrial',VITE_TENANT_HOST:target.brand+'.com'}).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:root,emptyOutDir:true}});built.set(target.brand,root);
   }
   const shell=await readFile(path.join(root,'index.html'));let rendered;
-  server=createServer(async(req,res)=>{
+  const serve=async(req,res)=>{
    const pathname=new URL(req.url,'http://localhost').pathname;
    const file=path.resolve(root,'.'+decodeURIComponent(pathname));
    if(!file.startsWith(root+path.sep)&&file!==root){res.writeHead(400);return res.end();}
@@ -48,9 +59,10 @@ try {
    const compressed=/(text|javascript|svg)/.test(type)&&req.headers['accept-encoding']?.includes('gzip');
    if(compressed)body=gzipSync(body);
    res.writeHead(200,{'content-type':type,'cache-control':cache,'content-length':body.length,...(compressed?{'content-encoding':'gzip','vary':'Accept-Encoding'}:{})});res.end(body);
-  });
+  };
+  server=canonicalLab?createHttpsServer(tls,serve):createHttpServer(serve);
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  const origin='http://127.0.0.1:'+server.address().port;
+  const origin=(canonicalLab?'https://'+brand+'.com':'http://127.0.0.1')+':'+server.address().port;
   const context=await browser.createBrowserContext();const page=await context.newPage();page.setDefaultTimeout(45000);
   const bootstrap=capturePublicBootstrap(page,env.VITE_SUPABASE_URL,target.brand+'.com');
   await page.setRequestInterception(true);
@@ -69,11 +81,13 @@ try {
   await page.goto(origin+target.route,{waitUntil:'networkidle0'});
   await page.waitForFunction(()=>document.querySelector('h1')&&!document.querySelector('h1').textContent.includes('hazır değil')&&document.querySelector('[data-pending-queries]')?.getAttribute('data-pending-queries')==='0');
   await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});
-  const contract=await page.evaluate(()=>({h1:document.querySelectorAll('h1').length,canonical:document.querySelector('link[rel=canonical]')?.href,og:document.querySelector('meta[property="og:url"]')?.content,schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)),text:document.querySelector('main')?.textContent||''}));
+  const contract=await page.evaluate(()=>({h1:document.querySelectorAll('h1').length,canonical:document.querySelector('link[rel=canonical]')?.href,og:document.querySelector('meta[property="og:url"]')?.content,robots:document.querySelector('meta[name=robots]')?.content,schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)),text:document.querySelector('main')?.textContent||''}));
   if(contract.h1!==1||contract.canonical!=='https://'+brand+'.com'+target.route||contract.og!==contract.canonical||contract.schemas.length!==1)throw Error('Rendered SEO contract failed: '+target.route);
+  if(canonicalLab&&contract.robots?.includes('noindex'))throw Error('Public-host candidate unexpectedly noindex: '+target.route);
+  if(!canonicalLab&&!contract.robots?.includes('noindex'))throw Error('Local preview lost noindex protection');
   const schemaErrors=schemaIntegrity(contract.schemas[0],{origin:'https://'+brand+'.com',visibleText:contract.text});
   if(schemaErrors.length)throw Error(JSON.stringify(schemaErrors));
-  report.renderContracts||=[];report.renderContracts.push({...target,status:'PASS',h1:contract.h1,canonical:contract.canonical,schemaNodes:contract.schemas[0]['@graph'].length});
+  report.renderContracts||=[];report.renderContracts.push({...target,status:'PASS',h1:contract.h1,canonical:contract.canonical,schemaNodes:contract.schemas[0]['@graph'].length,robots:contract.robots});
   await inlineCriticalCss(page);
   await bootstrap.embed();
   rendered=await serializedPrerender(page);
@@ -82,6 +96,18 @@ try {
   const hydration=await page.evaluate(()=>({mode:document.querySelector('#root')?.getAttribute('data-hydration'),error:document.querySelector('[data-hydration-error]')!==null,preserved:window.__initialHeading===document.querySelector('main h1')}));
   if(hydration.mode==='react-ssg-v1'&&(hydration.error||!hydration.preserved))throw Error('Hydration DOM preservation failed: '+JSON.stringify(hydration));
   report.hydrationChecks||=[];report.hydrationChecks.push({...target,...hydration});
+  if(target.route==='/'||target.route==='/teklif-al'){
+   await page.setViewport({width:390,height:844});
+   await page.click('.product-menu-toggle');await page.waitForSelector('[role=dialog]',{visible:true});
+   await page.keyboard.press('Escape');await page.waitForSelector('[role=dialog]',{hidden:true});
+   if(target.route==='/teklif-al'){
+    await page.type('input[name=full_name]','Browser verification');
+    await page.click('.quote-service-choice button:nth-child(2)');
+    const state=await page.evaluate(()=>({pressed:document.querySelector('.quote-service-choice button:nth-child(2)')?.getAttribute('aria-pressed'),name:document.querySelector('input[name=full_name]')?.value,valid:document.querySelector('form')?.checkValidity()}));
+    if(state.pressed!=='true'||state.name!=='Browser verification'||state.valid!==false)throw Error('Interactive quote state/validation regression');
+   }
+   report.interactionChecks||=[];report.interactionChecks.push({...target,mobileMenu:'PASS',quote:target.route==='/teklif-al'?'PASS_WITHOUT_SUBMISSION':'NOT_APPLICABLE'});
+  }
   for(let repeat=1;repeat<=repeats;repeat++){
    if(completed.some(r=>r.repeat===repeat))continue;
    const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);
@@ -97,4 +123,4 @@ try {
   await new Promise(resolve=>server.close(resolve));server=undefined;
  }
 }catch(error){report.errors.push(error.stack);process.exitCode=2;}
-finally{report.status=report.errors.length?'ERROR':report.runs.length===targets.length*repeats?'MEASURED':'INCOMPLETE';report.expectedRuns=targets.length*repeats;report.finishedAt=new Date().toISOString();await writeFile(output,JSON.stringify(report,null,2)+'\n');await browser.close();if(server)await new Promise(resolve=>server.close(resolve));console.log('LIGHTHOUSE_SUMMARY '+JSON.stringify(report));}
+finally{report.status=report.errors.length?'ERROR':report.runs.length===targets.length*repeats?'MEASURED':'INCOMPLETE';report.expectedRuns=targets.length*repeats;report.finishedAt=new Date().toISOString();await writeFile(output,JSON.stringify(report,null,2)+'\n');await browser.close();if(certDir)await rm(certDir,{recursive:true,force:true});if(server)await new Promise(resolve=>server.close(resolve));console.log('LIGHTHOUSE_SUMMARY '+JSON.stringify(report));}

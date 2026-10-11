@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".github/workflows/lighthouse.yml",
-      "sha256": "24ff4b0012329035660ef4c6b7b3ccf9c135d11608a7b70251f55b6e898d1838",
-      "bytes": 1750
+      "sha256": "f9da08517715731d7bdac009e0d4ce2a4817c134e3ad1693a4e402b1b7537409",
+      "bytes": 1783
     },
     {
       "path": ".github/workflows/search-quality.yml",
@@ -273,8 +273,8 @@
     },
     {
       "path": "scripts/quality/critical-css.mjs",
-      "sha256": "9654163afb1cd81098481b2904376c817e34adc6027239836c6b0d8e63eb2ec7",
-      "bytes": 3613
+      "sha256": "e9db2685326bd328a8bcdd2277bc103aa62e054646ef5f7e36ee9c6fc4699754",
+      "bytes": 3798
     },
     {
       "path": "scripts/quality/critical-css.test.mjs",
@@ -303,8 +303,8 @@
     },
     {
       "path": "scripts/quality/lighthouse-ci.mjs",
-      "sha256": "98ef494049932f7d4475e460c8f79855b36e6d16d954431a1c669da11e4aefd9",
-      "bytes": 10278
+      "sha256": "dbb80c00ec3ae26a047b4c90a991c802e5979496153ac0afb1f4109b0968cc4f",
+      "bytes": 13017
     },
     {
       "path": "scripts/quality/public-bootstrap.mjs",
@@ -514,7 +514,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T22:21:14.268Z",
+  "checksumsRefreshedAt": "2026-10-11T22:26:38.909Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "e37c93a8cf5de2de09695552e3cdb92082caefff",
   "lighthouseScope": "GitHub Chrome candidate lab only; no production or field certification"
