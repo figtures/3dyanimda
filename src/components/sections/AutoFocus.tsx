@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useTranslation, Trans } from "react-i18next";

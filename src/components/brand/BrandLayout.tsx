@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { ArrowUpRight, Box, MapPin } from "lucide-react";
 import { brands, useBrand } from "@/brands/config";
-import { demoMode } from "@/lib/supabase";
+import { demoMode } from "@/lib/backend-config";
 import { isPrivatePreview, previewSearch } from '@/lib/tenant';
 import { useRedirects } from "@/hooks/useRedirects";
 import "@/brands/brand.css";

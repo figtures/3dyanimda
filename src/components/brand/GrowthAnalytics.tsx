@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
-import { demoMode } from "@/lib/supabase";
+import { demoMode } from "@/lib/backend-config";
 import { CONSENT_EVENT, analyticsHostAllowed, initializeAnalytics, suspendAnalytics, trackGrowth } from "@/lib/growth-analytics";
 
 export default function GrowthAnalytics() {

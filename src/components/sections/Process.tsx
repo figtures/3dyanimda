@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { ScanLine, Cog, Boxes, PackageCheck } from "lucide-react";
 import { useTranslation } from "react-i18next";
 

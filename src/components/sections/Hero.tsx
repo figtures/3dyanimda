@@ -1,3 +1,4 @@
+import "@/lib/i18n";
 import { Link } from "react-router-dom";
 import { ArrowRight, Layers, Scan, Printer } from "lucide-react";
 import heroImg from "@/assets/hero-engine-part.jpg";
