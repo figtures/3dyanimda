@@ -3,6 +3,10 @@ import {answerUnitSchema,answerUnitIssues} from './answer-unit';
 import {editorialSchema} from './editorial';
 const fixture=()=>({contractVersion:'1.0.0',answerUnitId:'au:3dyanimda:tr:service:001',ownerUrl:'https://3dyanimda.com/3d-baski',locale:'tr-TR',intentId:'service-printing',question:'Numune neden incelenir?',directAnswer:'Üretimden önce numune değerlendirilir.',claims:[{claimId:'c1',text:'Numune değerlendirilir.',type:'fact',risk:'low',validFrom:'2026-10-01T00:00:00Z',validThrough:null}],sources:[{sourceId:'s1',url:'https://example.com/process',tier:'primary',publisher:'Fixture publisher',publishedAt:null,accessedAt:'2026-10-01T00:00:00Z',license:'Fixture only',locator:'Sample review'}],claimSourceMap:[{claimId:'c1',sourceIds:['s1']}],evidenceLevel:'supported',author:{id:'fixture-author',name:'Test author',kind:'ai',approvedAt:null},reviewer:null,riskClass:'low',schemaRefs:[],relationships:[],status:'draft',lastReviewedAt:null});
 describe('versioned answer-unit contract',()=>{
+ it('returns validation errors for malformed URLs without crashing a public reader',()=>{
+  expect(answerUnitSchema.safeParse({...fixture(),ownerUrl:'not a URL'}).success).toBe(false);
+  expect(editorialSchema.safeParse({sources:[{title:'Invalid',url:'not a URL'}]}).success).toBe(false);
+ });
  it('preserves valid draft metadata through the CMS editorial schema without inventing approval',()=>{
   const result=editorialSchema.parse({answer:fixture().directAnswer,answerUnit:fixture()});
   expect(result.answerUnit?.status).toBe('draft');expect(result.answerUnit?.lastReviewedAt).toBeNull();

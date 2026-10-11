@@ -1,0 +1,15 @@
+{
+  "kind": "effective-authored-content-contract-audit",
+  "testedOn": "2026-10-11",
+  "records": 796,
+  "beforeDuplicateDescriptionGroups": 1,
+  "beforeAffectedRoutes": 13,
+  "afterDuplicateDescriptionGroups": 0,
+  "maximumSummaryCharacters": 225,
+  "maximumSectionWords": 54,
+  "maximumFaqAnswerWords": 40,
+  "recordsWithAnswerUnit": 0,
+  "answerUnitMigrationStatus": "UNREVIEWED: no author, reviewer, approval date or claim support invented",
+  "actualDatabaseMutation": false,
+  "liveRenderedMetadataVerified": false
+}

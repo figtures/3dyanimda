@@ -4,8 +4,10 @@ export const ANSWER_UNIT_CONTRACT_VERSION = '1.0.0';
 const text = z.string().trim().min(1);
 const date = z.string().datetime({offset:true});
 const url = z.string().url().refine(value=>{
+  try {
   const parsed=new URL(value);
   return parsed.protocol==='https:'&&!parsed.username&&!parsed.password;
+  } catch {return false;}
 },'Kaynak HTTPS kullanmalı; kullanıcı adı veya şifre içermemeli.');
 const risk = z.enum(['low','medium','high','regulated']);
 const person = z.object({id:text,name:text,kind:z.enum(['human','ai']),approvedAt:date.nullable()}).strict();
@@ -14,7 +16,7 @@ const person = z.object({id:text,name:text,kind:z.enum(['human','ai']),approvedA
 export const answerUnitSchema = z.object({
   contractVersion:z.literal(ANSWER_UNIT_CONTRACT_VERSION),
   answerUnitId:text.regex(/^au:[a-z0-9:-]+$/),
-  ownerUrl:url.refine(value=>{const u=new URL(value);return !u.search&&!u.hash&&!/^\/(admin|studio|api|auth)(\/|$)/.test(u.pathname);}),
+  ownerUrl:url.refine(value=>{try{const u=new URL(value);return !u.search&&!u.hash&&!/^\/(admin|studio|api|auth)(\/|$)/.test(u.pathname);}catch{return false;}}),
   locale:z.literal('tr-TR'),
   intentId:text,
   question:text,
@@ -47,7 +49,7 @@ export const answerUnitSchema = z.object({
   }
   if(['approved','published'].includes(unit.status)){
     if(!unit.reviewer||!unit.reviewer.approvedAt||!unit.lastReviewedAt)fail('Onay durumu gerçek inceleme kaydı gerektirir.');
-    if(['high','regulated'].includes(unit.riskClass)&&(!unit.reviewer||unit.reviewer.kind!=='human'||unit.reviewer.id===unit.author.id))fail('Yüksek riskli içerikte bağımsız insan incelemesi gerekli.');
+    if((['high','regulated'].includes(unit.riskClass)||unit.claims.some(claim=>['high','regulated'].includes(claim.risk)))&&(!unit.reviewer||unit.reviewer.kind!=='human'||unit.reviewer.id===unit.author.id))fail('Yüksek riskli içerikte bağımsız insan incelemesi gerekli.');
     if(unit.evidenceLevel==='unknown')fail('Kanıtı bilinmeyen birim onaylanamaz.');
   }
 });

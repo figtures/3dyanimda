@@ -234,6 +234,7 @@ export default function AdminContent() {
           <label className="block">Kısa yanıt, karşılaştırma ve ilişkili içerikler (JSON)
             <Textarea className="min-h-60 font-mono" value={editorial} onChange={e => setEditorial(e.target.value)} />
             <span className="text-sm text-muted-foreground">answer: kısa yanıt · takeaways: özet maddeleri · comparison: tablo · relatedPaths: ilgili sayfalar · sources: kaynaklar</span>
+            <p className="text-sm text-muted-foreground">Kısa yanıt en fazla 120 kelime olmalı. Eklenen cevap birimi kaydı (answerUnit), görünür yanıtla eşleşmeli; kaynakları ve gerçek inceleme kaydı tamamlanmadan yayımlanamaz.</p>
           </label>
           <div className="flex gap-3">
             <Button

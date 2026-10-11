@@ -27,3 +27,18 @@ Implementation: `src/lib/schema-graph.ts`, exported `SCHEMA_CONTRACT_VERSION = 1
 Graph order is WebSite, Organization, page, other registered nodes, BreadcrumbList, with stable ID ties. Recursive object keys and IDs use locale-independent string comparison. Meaningful arrays preserve source order. Byte-equality fixtures cover reversed document/property order and complementary identity merging; FAQ order has a separate regression. Comprehensive source-field maps, dangling references and external vocabulary/DOM validation remain open.
 
 The optional discovery directory limits labels to 120 Unicode code points, 80 links and 50 KiB. Its displayed update date is the latest supplied content date among included pages, omitted when unknown; it is not a review-date claim. The editorial input guard caps direct answers at 120 whitespace-separated words, excludes private related paths and credentials in HTTPS source URLs. Existing stricter table limits remain unchanged. These guards do not implement the entire GEO-04 answer-unit/claim-source contract.
+
+## Field ownership and rendered checks
+
+| Public source | Visible field | Structured field | Missing/invalid behavior |
+| --- | --- | --- | --- |
+| Tenant name and canonical domain | Brand navigation/footer | Organization/WebSite name, URL and scoped IDs | No unrelated brand identity substitution |
+| verified_business_identity.email / telephone | Contact information | Organization contactPoint | Omit unknown values |
+| verified_business_identity.address / geo / hours | Verified workshop facts | ProfessionalService address/geo/hours | No synthetic branch or guessed coordinates/hours |
+| landing_pages.title / summary | H1 and introductory paragraph | WebPage name/description; Service name/description; Article headline/description | Preserve full authored summary in metadata |
+| landing_pages.faq[].q / a | Visible FAQ content | Question / acceptedAnswer | Render audit rejects missing or invisible FAQ text |
+| updated_at plus meaningful dated source-note revision | Dated content label | WebPage/Article dateModified | No build-clock freshness |
+| Route hierarchy | Breadcrumb navigation | BreadcrumbList positions and items | Ordered sequence required |
+| Canonical host and route | Page URL and share target | WebPage @id and internal references | Render audit checks canonical/OG parity and dangling local fragment references |
+
+The CI candidate-render check uses `scripts/quality/schema-integrity.mjs` and verifies one H1, canonical/OG parity, one graph, unique root IDs, resolved internal fragment references, visible FAQ text and valid dates. This checks sampled candidate HTML and is not Schema.org vocabulary certification, a Google Rich Results approval or a production crawl. The full source contract and human truth verification remain separate from these structural checks.

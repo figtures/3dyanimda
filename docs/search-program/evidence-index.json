@@ -63,8 +63,8 @@
     },
     {
       "path": "docs/search-program/SCHEMA-CONTRACT.md",
-      "sha256": "a44037295b3fd13fc9db5cf665d6b4c138a93039d8d2ff4b0a9616e4bedefdf6",
-      "bytes": 3796
+      "sha256": "ec9cec9f5fcd4972f567bb256cecb98f81dcf08b21200cca1d1bedde0a894e8d",
+      "bytes": 5593
     },
     {
       "path": "docs/search-program/prompt-set-v1.json",
@@ -173,8 +173,8 @@
     },
     {
       "path": "src/content/editorial.ts",
-      "sha256": "6c1753c44b7b6f4346b9e3f3306b8b1606bb1e7bd2ac0e98c26332a8bd3af27e",
-      "bytes": 1445
+      "sha256": "4030ef372c37bc3d9a93b89f1361fc1a3a741068d09a1b601003c47d7f93549d",
+      "bytes": 1470
     },
     {
       "path": "src/content/local-preview.test.ts",
@@ -183,8 +183,8 @@
     },
     {
       "path": "src/content/metadata.test.ts",
-      "sha256": "880cfec7239b7c7b734114657c5dc0b9925c028b7bde15cfc09fdce6692529e3",
-      "bytes": 1075
+      "sha256": "5ac5045c3e364831fb09e384849c679ef702f350230ed10a2da5cb60ffd75bf0",
+      "bytes": 1624
     },
     {
       "path": "src/lib/growth-analytics.test.ts",
@@ -229,6 +229,6 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T03:48:39.617Z",
+  "checksumsRefreshedAt": "2026-10-11T03:55:18.385Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged."
 }

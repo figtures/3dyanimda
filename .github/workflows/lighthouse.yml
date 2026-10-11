@@ -21,13 +21,15 @@ jobs:
       fail-fast: false
       matrix:
         brand: [3dyanimda, 3dsanayi, maketyanimda, parcayanimda]
+        device: [mobile, desktop]
     env:
       # Anonymous browser configuration only; no management or service-role secret.
       VITE_SUPABASE_URL: 'https://zdxjmhhjuomcpdtllnuq.supabase.co'
       VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_cb-5Z_xQf-Z19whnlsrG-A_Id5ewC6H'
       LAB_BRAND: ${{ matrix.brand }}
-      LAB_REPEATS: '1'
-      LAB_ROUTES: '/,/3d-baski,/teklif-al'
+      LAB_DEVICE: ${{ matrix.device }}
+      LAB_REPEATS: '3'
+      LAB_ROUTES: '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler'
       CHROME_PATH: /usr/bin/google-chrome
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -46,7 +48,7 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: lighthouse-${{ matrix.brand }}-${{ github.sha }}
+          name: lighthouse-${{ matrix.brand }}-${{ matrix.device }}-${{ github.sha }}
           path: artifacts/lighthouse-${{ matrix.brand }}/
           retention-days: 30
           if-no-files-found: error

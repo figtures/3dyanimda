@@ -24,7 +24,9 @@ let report={kind:'candidate-artifact-lab',production:false,fieldData:false,api:'
 const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,defaultViewport:null,ignoreDefaultArgs:['--enable-automation'],args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const mime={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.woff2':'font/woff2','.glb':'model/gltf-binary'};
 const routes=(process.env.LAB_ROUTES||'/,/3d-baski,/teklif-al').split(',');
-const targets=routes.flatMap(route=>['mobile','desktop'].map(device=>({brand,route,device})));
+const devices=process.env.LAB_DEVICE?[process.env.LAB_DEVICE]:['mobile','desktop'];
+if(devices.some(device=>!['mobile','desktop'].includes(device)))throw new Error('Invalid lab device');
+const targets=routes.flatMap(route=>devices.map(device=>({brand,route,device})));
 const built=new Map();let server;
 try {
  for(const target of targets) {
