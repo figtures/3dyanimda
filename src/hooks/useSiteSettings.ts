@@ -4,9 +4,12 @@ import { supabase } from "@/lib/supabase";
 import { resolveMediaUrl } from "@/lib/media";
 import { getTenantId } from "@/lib/tenant";
 
+import {publicRenderState} from '@/lib/public-render-state';
+export const exportPublicSettings=(id:string)=>cache.get(id)||{};
 type Settings = Record<string, any>;
 
 const cache = new Map<string, Settings>();
+const initial=publicRenderState();if(initial)cache.set(initial.tenant.id,initial.settings);
 const listeners = new Set<(id: string, value: Settings) => void>();
 const pending = new Map<string, Promise<Settings>>();
 async function load(id: string): Promise<Settings> {

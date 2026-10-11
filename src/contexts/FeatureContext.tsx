@@ -2,6 +2,9 @@ import { createContext, useContext, useEffect, useState, ReactNode, useCallback 
 import { supabase } from "@/lib/supabase";
 import { useTenant } from "./TenantContext";
 
+import {publicRenderState} from '@/lib/public-render-state';
+let currentFlags:Record<string,boolean>={};
+export const exportPublicFlags=()=>currentFlags;
 type Ctx = {
   flags: Record<string, boolean>;
   loading: boolean;
@@ -41,8 +44,8 @@ export function Feature({
 
 export function FeatureProvider({ children }: { children: ReactNode }) {
   const { tenant } = useTenant();
-  const [flags, setFlags] = useState<Record<string, boolean>>({});
-  const [loading, setLoading] = useState(true);
+  const [flags, setFlags] = useState<Record<string, boolean>>(()=>publicRenderState()?.flags||{});
+  const [loading, setLoading] = useState(!publicRenderState());
 
   const load = useCallback(async () => {
     if (!tenant?.id) {
@@ -59,6 +62,7 @@ export function FeatureProvider({ children }: { children: ReactNode }) {
     const map: Record<string, boolean> = {};
     (master ?? []).forEach((f: any) => { map[f.key] = true; });
     (tf ?? []).forEach((row: any) => { map[row.feature_key] = !!row.enabled; });
+    currentFlags=map;
     setFlags(map);
     setLoading(false);
   }, [tenant?.id]);

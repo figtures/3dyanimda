@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".github/workflows/lighthouse.yml",
-      "sha256": "159c1855d6b29b20630b57ad253eddf7ac8f367f731dd85e3721f46cb36071c9",
-      "bytes": 1871
+      "sha256": "24ff4b0012329035660ef4c6b7b3ccf9c135d11608a7b70251f55b6e898d1838",
+      "bytes": 1750
     },
     {
       "path": ".github/workflows/search-quality.yml",
@@ -273,8 +273,8 @@
     },
     {
       "path": "scripts/quality/critical-css.mjs",
-      "sha256": "f284208efb501f5e7f21dd32343b1ec3721e695519b93e958867ada5f78ed046",
-      "bytes": 3177
+      "sha256": "9654163afb1cd81098481b2904376c817e34adc6027239836c6b0d8e63eb2ec7",
+      "bytes": 3613
     },
     {
       "path": "scripts/quality/critical-css.test.mjs",
@@ -303,8 +303,8 @@
     },
     {
       "path": "scripts/quality/lighthouse-ci.mjs",
-      "sha256": "3b2d2b2228317a404d083899f4c43e53b10929e222bcf3a4bd7880274302a579",
-      "bytes": 9554
+      "sha256": "98ef494049932f7d4475e460c8f79855b36e6d16d954431a1c669da11e4aefd9",
+      "bytes": 10278
     },
     {
       "path": "scripts/quality/public-bootstrap.mjs",
@@ -448,13 +448,13 @@
     },
     {
       "path": "src/lib/mount-app.test.tsx",
-      "sha256": "bf001ed86e41d2b47fcdca5a761a24ce17a53b46ec3dff22e3717836d0c79d4c",
-      "bytes": 1237
+      "sha256": "63063468b0bee87eab6f8d2707016433d277effb0c539e5ab78665f6fd89116f",
+      "bytes": 1715
     },
     {
       "path": "src/lib/mount-app.tsx",
-      "sha256": "2bf1dd545d9d37fd5f73a9c85e54972dd58b373821a4234e995be1c837b7cfc6",
-      "bytes": 1327
+      "sha256": "3a0b92c390caf74eb4ff172ee12b53ba3dc6a7978e19c615c0652bd7dcf931af",
+      "bytes": 1581
     },
     {
       "path": "src/lib/redirects.mjs",
@@ -514,7 +514,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T04:17:53.663Z",
+  "checksumsRefreshedAt": "2026-10-11T22:21:14.268Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "e37c93a8cf5de2de09695552e3cdb92082caefff",
   "lighthouseScope": "GitHub Chrome candidate lab only; no production or field certification"

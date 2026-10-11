@@ -77,6 +77,11 @@ try {
   await inlineCriticalCss(page);
   await bootstrap.embed();
   rendered=await serializedPrerender(page);
+  await page.evaluateOnNewDocument(()=>{document.addEventListener('DOMContentLoaded',()=>{window.__initialHeading=document.querySelector('main h1');},{once:true});});
+  await page.goto(origin+target.route,{waitUntil:'networkidle0'});
+  const hydration=await page.evaluate(()=>({mode:document.querySelector('#root')?.getAttribute('data-hydration'),error:document.querySelector('[data-hydration-error]')!==null,preserved:window.__initialHeading===document.querySelector('main h1')}));
+  if(hydration.mode==='react-ssg-v1'&&(hydration.error||!hydration.preserved))throw Error('Hydration DOM preservation failed: '+JSON.stringify(hydration));
+  report.hydrationChecks||=[];report.hydrationChecks.push({...target,...hydration});
   for(let repeat=1;repeat<=repeats;repeat++){
    if(completed.some(r=>r.repeat===repeat))continue;
    const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);

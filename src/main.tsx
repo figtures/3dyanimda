@@ -1,10 +1,11 @@
 import "./index.css";
 const element=document.getElementById('root')!;
 async function boot() {
-  const [{default:App},{mountApp}]=await Promise.all([
-    import('./App'),import('./lib/mount-app'),import('./lib/i18n'),
+  const [{default:App,preparePublicRoute},{mountApp},{publicRenderState}]=await Promise.all([
+    import('./App'),import('./lib/mount-app'),import('./lib/public-render-state'),import('./lib/i18n'),
   ]);
-  mountApp(element,<App />);
+  if(element.dataset.hydration==='react-ssg-v1'&&publicRenderState())await preparePublicRoute(location.pathname);
+  mountApp(element,<App />,!!publicRenderState());
 }
 // Paint the exported document before fetching the interactive application.
 // Plain SPA entries (including the private demo) boot immediately.

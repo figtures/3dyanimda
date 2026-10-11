@@ -38,8 +38,13 @@ export async function inlineCriticalCss(page) {
 /** Capture a detached clone: cached preload onload may already have restored the
  * live link to stylesheet while export awaits API snapshot collection. */
 export async function serializedPrerender(page) {
- return page.evaluate(()=>{
+ return page.evaluate(async()=>{
+  const rendered=await window.__renderPublicPage?.();
   const html=document.documentElement.cloneNode(true);
+  if(rendered){
+   const root=html.querySelector('#root');root.innerHTML=rendered.html;root.setAttribute('data-hydration','react-ssg-v1');
+   const script=document.createElement('script');script.id='public-render-state';script.type='application/json';script.textContent=JSON.stringify(rendered.state).replace(/</g,'\\u003c');html.querySelector('head').appendChild(script);
+  }
   html.querySelectorAll('link[data-deferred-stylesheet]').forEach(link=>{
    link.setAttribute('rel','preload');link.setAttribute('as','style');
    link.setAttribute('onload',"this.onload=null;this.rel='stylesheet'");

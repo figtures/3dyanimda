@@ -9,6 +9,9 @@ import {
 import { supabase, demoMode, backendConfigured } from "@/lib/supabase";
 import { getRequestHost, setTenantId, setTenantIdentity } from "@/lib/tenant";
 import catalog from "@/brands/catalog.json";
+import {publicRenderState} from '@/lib/public-render-state';
+let lastPublicTenant:Tenant|null=null;
+export const exportPublicTenant=()=>lastPublicTenant;
 export type Tenant = {
   id: string;
   slug: string;
@@ -33,11 +36,12 @@ const TenantCtx = createContext<Ctx>({
 });
 export const useTenant = () => useContext(TenantCtx);
 export function TenantProvider({ children }: { children: ReactNode }) {
-  const [tenant, setTenant] = useState<Tenant | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [tenant, setTenant] = useState<Tenant | null>(()=>publicRenderState()?.tenant||null);
+  const [loading, setLoading] = useState(!publicRenderState());
+  if(tenant){setTenantIdentity({name:tenant.name,domain:tenant.custom_domain||tenant.domain});setTenantId(tenant.id);}
   const [error, setError] = useState("");
   const load = useCallback(async () => {
-    setLoading(true);
+    if(!publicRenderState())setLoading(true);
     setError("");
     setTenantId(null);
     try {
@@ -86,6 +90,7 @@ export function TenantProvider({ children }: { children: ReactNode }) {
         domain: resolved.custom_domain || resolved.domain,
       });
       setTenantId(resolved.id);
+      lastPublicTenant=resolved;
       setTenant(resolved);
     } catch (reason) {
       setTenant(null);
@@ -99,7 +104,7 @@ export function TenantProvider({ children }: { children: ReactNode }) {
     }
   }, []);
   useEffect(() => {
-    void load();
+    if(!publicRenderState())void load();
   }, [load]);
   if (loading)
     return (

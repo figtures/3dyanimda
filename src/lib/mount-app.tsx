@@ -1,9 +1,13 @@
-import { createRoot } from 'react-dom/client';
+import { createRoot,hydrateRoot } from 'react-dom/client';
 import type { ReactNode } from 'react';
 
 /** Preserve the readable exported page while its interactive replacement loads.
  * Forms use the normal mount path so an in-progress native input is never lost. */
-export function mountApp(element: HTMLElement, app: ReactNode) {
+export function mountApp(element: HTMLElement, app: ReactNode, stateReady=false) {
+  if(element.dataset.hydration==='react-ssg-v1'&&stateReady){
+    hydrateRoot(element,app,{onRecoverableError:error=>{console.error('Public hydration failed',error);element.dataset.hydrationError='true';}});
+    return;
+  }
   if (element.dataset.prerendered !== 'true' || !element.querySelector('main h1') || element.querySelector('form')) {
     createRoot(element).render(app);
     return;
