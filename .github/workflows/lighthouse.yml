@@ -1,4 +1,5 @@
 name: Lighthouse candidate laboratory
+# Full four-brand matrix after the validated lazy-startup and schema changes.
 
 on:
   push:

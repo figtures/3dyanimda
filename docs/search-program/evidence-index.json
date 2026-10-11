@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".github/workflows/lighthouse.yml",
-      "sha256": "9e2089a3323a6a6d608999475294495c3cf5fee6c1892052291d2f3638d30d42",
-      "bytes": 2450
+      "sha256": "a98d201baa5126d5f273acc3050c44807873eecd3b34739bf39591463cf67dfc",
+      "bytes": 2528
     },
     {
       "path": ".github/workflows/search-quality.yml",
@@ -133,8 +133,8 @@
     },
     {
       "path": "docs/search-program/requirements.json",
-      "sha256": "5fd439bb9511a0b17a8e1667de5ac12157d8553e4bb73ddf8d5ba63c7af3c6ad",
-      "bytes": 53626
+      "sha256": "a80b625a936dd53ccb6327790df75df288efe9349b3514f062e54795aeae6a61",
+      "bytes": 56096
     },
     {
       "path": "docs/search-program/url-inventory.json",
@@ -654,7 +654,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T23:35:17.454Z",
+  "checksumsRefreshedAt": "2026-10-11T23:37:47.667Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
