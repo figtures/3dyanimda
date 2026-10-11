@@ -363,8 +363,8 @@
         "Unknown rating/price/hour fields are not fabricated."
       ],
       "blockers": [
-        "External validator records and versioned comprehensive schema contracts missing.",
-        "Multi-block compatible graph is valid, but requested single-generator consolidation remains unimplemented."
+        "External vocabulary/Rich Results evidence, comprehensive field contracts and deployed DOM/FAQ parity remain open.",
+        "Single graph composition is implemented; legal-entity confirmation and independent approval remain open."
       ]
     },
     {
@@ -403,11 +403,12 @@
         {
           "id": "SEO-07-06",
           "requirement": "CI regressions, before/after release evidence and weekly/monthly review",
-          "verification": "IMPLEMENTED_PENDING_CI_RUN",
+          "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             ".github/workflows/search-quality.yml"
           ],
-          "localReview": "Push/PR CI definition added for typecheck, application/local search tests, evidence drift and build. Hosted execution and performance/weekly review are not certified."
+          "localReview": "Hosted quality CI succeeded for commit 2640f0bd247a5034e4fd19ed0b9ec376fda475ba, run 38106737139. Current change needs its own run; performance budgets, before/after measurement and operating reviews remain open.",
+          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
         }
       ],
       "existingOrPreparedEvidence": [
@@ -415,8 +416,8 @@
         "A blocked attempt records zero runs rather than invented scores."
       ],
       "blockers": [
-        "Approved exported artifacts unavailable locally; live artifact could not be verified from this environment.",
-        "No Lighthouse results, CrUX/GSC field data, CI trend or accepted budget."
+        "Historical lab reports are retained; no new matching-artifact browser run or 28-day CrUX evidence.",
+        "Basic hosted quality CI passed; route-specific approved performance budgets and recurring reviews remain open."
       ]
     },
     {
@@ -467,8 +468,8 @@
         "Seo.tsx emits OG fields and conditional image/card metadata."
       ],
       "blockers": [
-        "og:image is optional; pages without it emit the small summary card.",
-        "No branded universal social image fallback or platform debugger evidence."
+        "Four-brand raster fallbacks and large-card metadata are implemented and locally tested; live MIME/bytes/reachability remain open.",
+        "At least ten actual platform previews, cache checks and independent approval remain open."
       ]
     },
     {
@@ -752,10 +753,11 @@
           "requirement": "Chunk, procedure, FAQ and table readability limits",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
-            "src/lib/search.test.ts"
+            "src/content/editorial.ts",
+            "src/content/editorial.test.ts"
           ],
-          "localReview": "Malformed comparison-table rows and unsafe source URLs are rejected; all published answer-unit readability limits remain pending.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "120-word direct-answer cap and existing table limits pass; all 796 effective editorial records remain valid. Full chunk/procedure/answer-unit contract and human readability review remain open.",
+          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
         },
         {
           "id": "GEO-04-04",
@@ -765,7 +767,13 @@
         {
           "id": "GEO-04-05",
           "requirement": "Rights/attribution, accessibility, PII and Unicode validation",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/editorial.ts",
+            "src/content/editorial.test.ts"
+          ],
+          "localReview": "Credential-bearing source links and private/double-slash related paths rejected. This is not full rights, accessibility, Unicode or PII review.",
+          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
         },
         {
           "id": "GEO-04-06",
@@ -842,10 +850,11 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "src/lib/schema-graph.ts",
+            "src/lib/schema-graph.test.ts",
             "docs/search-program/SCHEMA-CONTRACT.md"
           ],
-          "localReview": "Versioned mapping, field-source documentation and stable-ID regression coverage added; deployed DOM parity remains pending.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "Separate semantic versions and canonical byte serialization with ordered graph and preserved FAQ arrays pass. Complete field-level source mapping, dangling-reference validation and deployed DOM parity remain open.",
+          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
         },
         {
           "id": "GEO-06-02",
@@ -868,10 +877,11 @@
           "requirement": "Optional llms directory is bounded, deterministic and indexable-only",
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
+            "scripts/search/llms-directory.mjs",
             "scripts/search/llms-directory.test.mjs"
           ],
-          "localReview": "Optional directory is deterministic, category-balanced and bounded to 80 links/50KiB; unpublished/noncanonical entries rejected without shrinking sitemap. Deployment remains unverified.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "Directory remains bounded to 80 links/50 KiB, with 120-code-point labels and real included-content date. Invalid/noncanonical entries are excluded. Business-domain headers, live links and last-known-good drill remain open.",
+          "localTestReport": "docs/audits/notion-reconciliation-2026-10-11.json"
         },
         {
           "id": "GEO-06-05",
@@ -949,7 +959,7 @@
       ],
       "blockers": [
         "Human/independent credentials, source scoring, scheduled monitoring and correction drill missing.",
-        "Semantic date-change guard not implemented; no automatic freshness date change performed."
+        "Semantic date guard passes local tests; end-to-end production UI/schema/sitemap parity is not verified."
       ]
     },
     {
@@ -1186,11 +1196,13 @@
     "interpretation": "Observed from this execution environment only. Origin outage is not established; approved live artifacts could not be verified."
   },
   "limitations": [
-    "No production publication in this change.",
-    "No Lighthouse score or real GEO output was obtained.",
-    "Historical 8 October audit is not a fresh production test.",
-    "Governance records below are engineering preparations, not human signatures."
+    "Owner-private Sites preview updates do not publish the four business domains.",
+    "Historical Lighthouse reports exist; no new browser/Lighthouse or real GEO measurements in this continuation.",
+    "Current local tests do not refresh historical production evidence.",
+    "AI engineering review is not an independent human signature."
   ],
   "implementationReviewedAt": "2026-10-11T02:47:03.272391+00:00",
-  "implementationReviewScope": "Current source and local regression tests only. Notion installation confirmed on 11 October; its read tools were not exposed in this active execution session, so current Notion text has not been retrieved. Gate statuses and release decision remain unchanged."
+  "implementationReviewScope": "Notion connector access resolved: 2 roots and all 20 protocol pages retrieved; current gate criteria reconciled. 131 local tests and TypeScript passed. Prior hosted CI success scoped to commit 2640f0b. Business-domain release, external measurements and independent approvals remain unverified.",
+  "implementationReviewedOn": "2026-10-11",
+  "latestSourceReconciliation": "docs/audits/notion-reconciliation-2026-10-11.json"
 }

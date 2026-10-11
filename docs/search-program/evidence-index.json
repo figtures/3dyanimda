@@ -27,6 +27,11 @@
       "bytes": 1999
     },
     {
+      "path": "docs/audits/notion-reconciliation-2026-10-11.json",
+      "sha256": "8ad95088ba32ce31999bce7f2db2266008e5b99bbfd324791387d0ad2152383b",
+      "bytes": 16831
+    },
+    {
       "path": "docs/audits/search-discovery-hardening-2026-10-11.json",
       "sha256": "f0d7e6d48205af0de20608f2ed0bd82dae671d785370749bbc7f9d38b60d0243",
       "bytes": 1871
@@ -38,8 +43,8 @@
     },
     {
       "path": "docs/search-program/PROGRESS-2026-10-11.md",
-      "sha256": "14c2fa9a5d77b6693a7dcd651d195612e8485fa6d99105bcd603a5c2f364de47",
-      "bytes": 3700
+      "sha256": "e96b4213fa394453c625ae0914163222d1f4ddaa67d939c3826c7fe88523e504",
+      "bytes": 3581
     },
     {
       "path": "docs/search-program/README.md",
@@ -52,9 +57,14 @@
       "bytes": 4656
     },
     {
+      "path": "docs/search-program/RFC-SEARCH-002.md",
+      "sha256": "00bc76224f84e24f29cac55fa3c0aa22d817f994dcae4ce13822584a1aa9b717",
+      "bytes": 2808
+    },
+    {
       "path": "docs/search-program/SCHEMA-CONTRACT.md",
-      "sha256": "68d7d7a9c374033f7e29f80deaa889160169cad5ffcddeabb4bd6cd3588054a7",
-      "bytes": 2489
+      "sha256": "a44037295b3fd13fc9db5cf665d6b4c138a93039d8d2ff4b0a9616e4bedefdf6",
+      "bytes": 3796
     },
     {
       "path": "docs/search-program/prompt-set-v1.json",
@@ -63,8 +73,8 @@
     },
     {
       "path": "docs/search-program/requirements.json",
-      "sha256": "65e2d2ff587032cefdde302f7586475228d7c0e73954c1a516c289c568d4246b",
-      "bytes": 48584
+      "sha256": "2b38a3279461cd12be4f72dd89ead65c4bc325d98db0c5f329f0b05332522941",
+      "bytes": 49807
     },
     {
       "path": "docs/search-program/url-inventory.json",
@@ -133,13 +143,13 @@
     },
     {
       "path": "scripts/search/llms-directory.mjs",
-      "sha256": "ca86ee06cc48e42e0e5359fb891e6c7f4332a257dfdeb27c274c121b40a6cbf0",
-      "bytes": 2014
+      "sha256": "ffef344e83a0006dce0ab575392b86e821382a96a4f326806504e44c3abd93ee",
+      "bytes": 2541
     },
     {
       "path": "scripts/search/llms-directory.test.mjs",
-      "sha256": "b891f72e2688fa543a10fbabe7d0fb5cb81ef1daf302e4ad72d07f9438cb0837",
-      "bytes": 2236
+      "sha256": "ec601fb4ff2ea0dc9861d0143c5696ce71b069da3490e6912ac41a9b31e849cf",
+      "bytes": 3203
     },
     {
       "path": "scripts/search/redirects.test.mjs",
@@ -155,6 +165,16 @@
       "path": "scripts/search/sitemap.test.mjs",
       "sha256": "c4bb90c20554c383ba35577b34e36ef7c8801d080e9261504a09442c6f1ef258",
       "bytes": 2463
+    },
+    {
+      "path": "src/content/editorial.test.ts",
+      "sha256": "fa2186b27da33a2872314d538f1e705d35aa28e17ed401b92d34a2f52959f6be",
+      "bytes": 1445
+    },
+    {
+      "path": "src/content/editorial.ts",
+      "sha256": "a5a21d37775e4fe604518880dd2cecd3fed43daf77135436d4a80b1fa1816148",
+      "bytes": 1353
     },
     {
       "path": "src/content/local-preview.test.ts",
@@ -183,13 +203,13 @@
     },
     {
       "path": "src/lib/schema-graph.test.ts",
-      "sha256": "6c78e94eb0032cff2e4019f95ad518c5104bf85ad9e97feeb472d41d940828cb",
-      "bytes": 1658
+      "sha256": "f776206900feaed5fa89f9e8be85b33ea871036edca63de82e5dce5809f8c4e6",
+      "bytes": 2874
     },
     {
       "path": "src/lib/schema-graph.ts",
-      "sha256": "682b0ded7628223864020b53d883512c71d8790c8d3c8faf5c4d36fcaf56fdef",
-      "bytes": 2308
+      "sha256": "daa81167c156e464bad0e96ad667531653e5b0398a76c077e296dfa48957de6d",
+      "bytes": 2851
     },
     {
       "path": "src/lib/search.test.ts",
@@ -208,7 +228,7 @@
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
-  "latestLocalVerification": "docs/audits/search-discovery-hardening-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T02:55:14.007Z",
+  "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
+  "checksumsRefreshedAt": "2026-10-11T03:30:46.381Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged."
 }

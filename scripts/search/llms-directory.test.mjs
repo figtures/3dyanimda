@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { discoveryFiles } from './discovery.mjs';
-import { LLMS_MAX_BYTES, LLMS_MAX_LINKS } from './llms-directory.mjs';
+import { LLMS_MAX_BYTES, LLMS_MAX_LINKS, LLMS_MAX_LABEL_CHARACTERS } from './llms-directory.mjs';
 const origin = 'https://3dyanimda.com';
 const page = path => ({path, title:'İstanbul’da 3D üretim', description:'Ölçü, kapsam ve kullanım koşulları değerlendirilir.'});
 test('213-page inventory produces a bounded, deterministic, category-balanced directory without shrinking sitemap', () => {
@@ -27,4 +27,18 @@ test('untrusted multiline labels cannot inject links and Turkish characters surv
 });
 test('oversized URL records fail publication instead of silently exceeding the byte budget', () => {
  assert.throws(()=>discoveryFiles({origin,brand:'x',pages:[page('/'+ 'a'.repeat(60000))]}),/2048/);
+});
+test('labels obey the 120-character Notion contract without breaking Unicode',()=>{
+ const title='ğİ🟠'.repeat(70);
+ const text=discoveryFiles({origin,brand:'x',pages:[{...page('/'),title}]})['llms.txt'];
+ const label=text.match(/^- \[([^\]]+)\]/m)[1];
+ assert.equal(Array.from(label).length,LLMS_MAX_LABEL_CHARACTERS);
+ assert.equal(label,Array.from(title).slice(0,120).join(''));
+});
+test('directory date comes from included source content, never the build clock',()=>{
+ const input={origin,brand:'x',pages:[{...page('/'),lastmod:'2026-10-01T10:00:00Z'}, {...page('/rehber/a'),lastmod:'2026-10-02T10:00:00Z'}]};
+ const text=discoveryFiles(input)['llms.txt'];
+ assert.match(text,/son içerik güncellemesi: 2026-10-02/);
+ assert.equal(discoveryFiles({...input,pages:[...input.pages].reverse()})['llms.txt'],text);
+ assert.doesNotMatch(discoveryFiles({origin,brand:'x',pages:[page('/')]})['llms.txt'],/son içerik güncellemesi:/);
 });

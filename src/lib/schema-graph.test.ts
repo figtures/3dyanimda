@@ -21,4 +21,17 @@ describe('one structured dataset',()=>{
     expect(new Set(graph['@graph'].map(n=>n['@id'])).size).toBe(3);
     expect(composeSchemaGraph([...docs].reverse(),origin,origin+'/rehber')).toEqual(graph);
   });
+  it('serializes equivalent merged facts identically despite input/property order',()=>{
+    const a={'@type':'Organization',name:'3dyanımda',address:{addressCountry:'TR',addressLocality:'Ataşehir'}};
+    const b={email:'info@3dyanimda.com','@type':'Organization'};
+    const reordered={address:{addressLocality:'Ataşehir',addressCountry:'TR'},name:'3dyanımda','@type':'Organization'};
+    expect(JSON.stringify(composeSchemaGraph([a,b],origin,origin+'/'))).toBe(JSON.stringify(composeSchemaGraph([b,reordered],origin,origin+'/')));
+  });
+  it('uses the contract graph order while preserving FAQ answer order',()=>{
+    const questions=[{name:'Önce',acceptedAnswer:{text:'Bir'}},{name:'Sonra',acceptedAnswer:{text:'İki'}}];
+    const docs=[{'@type':'BreadcrumbList',itemListElement:[]},{'@type':'FAQPage',mainEntity:questions},pageGraph({origin,path:'/',title:'Üretim',description:'Açıklama'}),businessGraph({name:'3dyanımda',origin})];
+    const graph=composeSchemaGraph(docs,origin,origin+'/')['@graph'];
+    expect(graph.map(n=>n['@type'])).toEqual(['WebSite','Organization','WebPage','FAQPage','BreadcrumbList']);
+    expect(graph.find(n=>n['@type']==='FAQPage')?.mainEntity).toEqual(questions);
+  });
 });

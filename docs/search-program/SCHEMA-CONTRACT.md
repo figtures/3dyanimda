@@ -19,3 +19,11 @@ Implementation: `src/lib/schema-graph.ts`, exported `SCHEMA_CONTRACT_VERSION = 1
 - Replaced truthy property lookup with an own-property check. Invalid names inherited from JavaScript objects (`constructor`, `toString`, `__proto__`) can no longer pass as registered schema types.
 - Added negative regression cases alongside existing conflict and order-independence coverage.
 - Local tests passed as recorded in `../audits/search-local-verification-2026-10-11.json`. This record is not independent approval of RFC-SEARCH-001 or a production validation certificate.
+
+## Fresh Notion reconciliation — 2026-10-11
+
+`DATA_CONTRACT_VERSION = '1.0.0'` identifies the current input contract and `SCHEMA_TEMPLATE_VERSION = '1.0.1'` identifies this output-ordering patch. Numeric `SCHEMA_CONTRACT_VERSION = 1` remains for compatibility. These are application metadata, not invented Schema.org properties.
+
+Graph order is WebSite, Organization, page, other registered nodes, BreadcrumbList, with stable ID ties. Recursive object keys and IDs use locale-independent string comparison. Meaningful arrays preserve source order. Byte-equality fixtures cover reversed document/property order and complementary identity merging; FAQ order has a separate regression. Comprehensive source-field maps, dangling references and external vocabulary/DOM validation remain open.
+
+The optional discovery directory limits labels to 120 Unicode code points, 80 links and 50 KiB. Its displayed update date is the latest supplied content date among included pages, omitted when unknown; it is not a review-date claim. The editorial input guard caps direct answers at 120 whitespace-separated words, excludes private related paths and credentials in HTTPS source URLs. Existing stricter table limits remain unchanged. These guards do not implement the entire GEO-04 answer-unit/claim-source contract.
