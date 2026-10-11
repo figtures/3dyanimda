@@ -30,7 +30,8 @@ jobs:
       LAB_DEVICE: ${{ matrix.device }}
       LAB_REPEATS: '3'
       LAB_ORIGIN_MODE: canonical
-      LAB_ROUTES: '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler'
+      # Explicit focused recheck preserves the full default matrix for normal changes.
+      LAB_ROUTES: ${{ contains(github.event.head_commit.message, '[quote-recheck]') && '/teklif-al' || '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' }}
       CHROME_PATH: /usr/bin/google-chrome
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262

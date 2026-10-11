@@ -12,6 +12,10 @@ Self-hosted fonts use optional display and expanded Latin/Turkish subsets includ
 
 The responsive hero preload follows the viewport meta, preventing speculative desktop-image selection on mobile. Module preloads created by the export-only React server renderer are removed from the serialized document; this export dependency is not a visitor requirement.
 
+Hydration waits for an actual first-contentful-paint signal instead of assuming two animation frames guarantee a paint. Input and background tabs boot immediately; an unsupported/missing signal has a bounded fallback. This applies to all visitors, with no Lighthouse or automation detection. Non-core notification overlays are split out of core marketing pages while remaining available on admin, studio, career and other routes that use them.
+
+Public snapshots are scoped to the current route's queries so repeated exports cannot grow the payload with other articles. Equivalent cached API responses are removed from the second bootstrap representation.
+
 ## Verification design
 
 A short three-route diagnostic precedes the full four-brand, ten-route, two-device, three-repeat matrix. The real browser must preserve the original H1 node without hydration recovery, open/close the mobile menu, update quote-service selection and preserve a typed form value. No real form submission or email is part of the test.
@@ -23,3 +27,7 @@ The canonical-host lab maps the selected brand's hostname to a loopback-only HTT
 GitHub baseline: bdf3f9f26931eb354e4ebbcacafa5e90b579ef68. Previous owner-private Sites source: edf316b02771f1232a00901e2486182a78dd3e1b. Revert with a new source commit and rebuild; no database migration or destructive data change is involved. This is a rollback plan, not an executed recovery drill.
 
 Full Notion program gates remain blocked until their independent production, evidence and review requirements are satisfied. Final observed scores belong in the dated measurement report, not this proposed-change record.
+
+## Measurement correction
+
+Visual inspection found that the quote interaction check typed into a field below the fold before Lighthouse. Router scroll restoration could retain that position. Interaction checks now run after measurement; every sample explicitly resets scroll/session restoration and asserts a zero final scroll offset. The affected quote samples are replaced by a focused four-brand/two-device/three-repeat recheck. Other-route measurements are retained. Application source is unchanged by this measurement-only correction; both run IDs and per-sample provenance are recorded.

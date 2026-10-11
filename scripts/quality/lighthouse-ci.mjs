@@ -96,6 +96,19 @@ try {
   const hydration=await page.evaluate(()=>({mode:document.querySelector('#root')?.getAttribute('data-hydration'),error:document.querySelector('[data-hydration-error]')!==null,preserved:window.__initialHeading===document.querySelector('main h1')}));
   if(hydration.mode==='react-ssg-v1'&&(hydration.error||!hydration.preserved))throw Error('Hydration DOM preservation failed: '+JSON.stringify(hydration));
   report.hydrationChecks||=[];report.hydrationChecks.push({...target,...hydration});
+  for(let repeat=1;repeat<=repeats;repeat++){
+   if(completed.some(r=>r.repeat===repeat))continue;
+   await page.evaluate(()=>{window.scrollTo({top:0,left:0,behavior:'instant'});sessionStorage.removeItem('react-router-scroll-positions');});
+   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);
+   const scrollY=await page.evaluate(()=>window.scrollY);if(scrollY!==0)throw Error('Measurement did not start/end at page top: '+scrollY);
+   const lhr=result.lhr;if(lhr.configSettings.formFactor!==target.device)throw Error('Lighthouse device mismatch');if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
+   const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
+   const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
+   const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));
+   await writeFile(file.replace('.json.gz','.html'),Array.isArray(result.report)?result.report.find(r=>r.startsWith('<!doctype')||r.startsWith('<!DOCTYPE'))||result.report[0]:result.report);
+   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
+   await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('LIGHTHOUSE_RUN '+JSON.stringify(report.runs.at(-1)));
+  }
   if(target.route==='/'||target.route==='/teklif-al'){
    await page.setViewport({width:390,height:844});
    await page.click('.product-menu-toggle');await page.waitForSelector('[role=dialog]',{visible:true});
@@ -107,17 +120,6 @@ try {
     if(state.pressed!=='true'||state.name!=='Browser verification'||state.valid!==false)throw Error('Interactive quote state/validation regression');
    }
    report.interactionChecks||=[];report.interactionChecks.push({...target,mobileMenu:'PASS',quote:target.route==='/teklif-al'?'PASS_WITHOUT_SUBMISSION':'NOT_APPLICABLE'});
-  }
-  for(let repeat=1;repeat<=repeats;repeat++){
-   if(completed.some(r=>r.repeat===repeat))continue;
-   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);
-   const lhr=result.lhr;if(lhr.configSettings.formFactor!==target.device)throw Error('Lighthouse device mismatch');if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
-   const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
-   const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
-   const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));
-   await writeFile(file.replace('.json.gz','.html'),Array.isArray(result.report)?result.report.find(r=>r.startsWith('<!doctype')||r.startsWith('<!DOCTYPE'))||result.report[0]:result.report);
-   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
-   await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('LIGHTHOUSE_RUN '+JSON.stringify(report.runs.at(-1)));
   }
   await context.close();
   await new Promise(resolve=>server.close(resolve));server=undefined;
