@@ -1,7 +1,7 @@
 /** Shared redirect validation for admin, browser navigation and export. */
 export function compileRedirects(rows, destinations) {
   const map=new Map();
-  const valid=p=>typeof p==='string' && /^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/.test(p) && !/^\/(admin|studio|api)(\/|$)/.test(p);
+  const valid=p=>typeof p==='string' && /^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/.test(p) && !/^\/(admin|studio|api|auth)(\/|$)/.test(p);
   for(const row of rows){
     if(row.active===false)continue;
     const {from_path:from,to_path:to}=row;

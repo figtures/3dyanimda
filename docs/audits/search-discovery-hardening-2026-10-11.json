@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-discovery-regression-not-live-crawl",
+  "testedOn": "2026-10-11",
+  "sourceBaseline": "7502ced5174d05eb19b45b362e4cea1ebbcadf3e",
+  "scope": "Baseline plus this commit; current file hashes are in evidence-index.json.",
+  "checks": [
+    {
+      "command": "npm test -- --reporter=dot",
+      "exitCode": 0,
+      "passed": 82
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:search:local",
+      "exitCode": 0,
+      "passed": 42
+    }
+  ],
+  "inventory": {
+    "brands": 4,
+    "declaredUrls": 852,
+    "urlsPerBrand": 213,
+    "landingRecordsPerBrand": 199,
+    "xmlWellFormed": true,
+    "generatedSitemapParity": true,
+    "liveStatusesChecked": false
+  },
+  "newRegressions": [
+    "UTF-8 bytes include XML header/footer and multibyte rows",
+    "count splitting preserves every entry once",
+    "oversized sitemap/index limits rejected",
+    "empty index rejected",
+    "page loc length is less than 2048 characters",
+    "credential/query/private image URLs omitted from discovery and public manifest",
+    "auth roots/callbacks rejected by shared redirect compiler"
+  ],
+  "ci": {
+    "file": ".github/workflows/search-quality.yml",
+    "configured": true,
+    "executionVerified": false,
+    "publishes": false,
+    "usesProductionCredentials": false
+  },
+  "notion": {
+    "installationConfirmed": true,
+    "currentReadCompleted": false,
+    "blocker": "Installed plugin tools absent from active tool registry; no repeated installation requested."
+  },
+  "programStatus": "BLOCKED",
+  "productionChecked": false,
+  "newLighthouseRuns": 0,
+  "geoModelRuns": 0,
+  "humanApproval": false,
+  "officialReferences": [
+    "https://www.sitemaps.org/protocol.html",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+  ]
+}

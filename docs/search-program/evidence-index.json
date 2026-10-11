@@ -12,6 +12,11 @@
   "retentionStatus": "Versioned in project repository; automated retention/deletion and customer access validation not configured",
   "files": [
     {
+      "path": ".github/workflows/search-quality.yml",
+      "sha256": "0bb6ddcf2254106508709c00a95cc295e34d89a113a15fc4b1a851566f23cef3",
+      "bytes": 868
+    },
+    {
       "path": "docs/audits/lighthouse-attempt-2026-10-10.json",
       "sha256": "c4307d88f5f25dfb22893023be88c9fedcbaa474082fb5e01fb65fa1c0df0edc",
       "bytes": 551
@@ -22,14 +27,19 @@
       "bytes": 1999
     },
     {
+      "path": "docs/audits/search-discovery-hardening-2026-10-11.json",
+      "sha256": "f0d7e6d48205af0de20608f2ed0bd82dae671d785370749bbc7f9d38b60d0243",
+      "bytes": 1871
+    },
+    {
       "path": "docs/audits/search-local-verification-2026-10-11.json",
       "sha256": "f6e56968f62718d33270aa30da97015b1bfae51382f1d09d53afe44e4906413c",
       "bytes": 1742
     },
     {
       "path": "docs/search-program/PROGRESS-2026-10-11.md",
-      "sha256": "f1e4a40a4d9a93488e5a5c87a42f9d91cf62318c482a30f59eaad7a7ae987f2a",
-      "bytes": 2419
+      "sha256": "14c2fa9a5d77b6693a7dcd651d195612e8485fa6d99105bcd603a5c2f364de47",
+      "bytes": 3700
     },
     {
       "path": "docs/search-program/README.md",
@@ -53,8 +63,8 @@
     },
     {
       "path": "docs/search-program/requirements.json",
-      "sha256": "b54f91a0636b2e226721faebc71879dfc9e4580158fa0eacdd8cf28c6e216714",
-      "bytes": 47585
+      "sha256": "65e2d2ff587032cefdde302f7586475228d7c0e73954c1a516c289c568d4246b",
+      "bytes": 48584
     },
     {
       "path": "docs/search-program/url-inventory.json",
@@ -63,8 +73,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "d6d71a88b092f809e6b5bd2201f61bba51128a764528ac112fb81c9bb805d334",
-      "bytes": 6054
+      "sha256": "b9c01227d8cd3fa481f77988ec0a5499265a97010edd239aada0295497b47b8a",
+      "bytes": 6363
     },
     {
       "path": "scripts/cloudflare/config.test.mjs",
@@ -108,13 +118,18 @@
     },
     {
       "path": "scripts/search/discovery.mjs",
-      "sha256": "ff7abd1f25a083d0be209677703b20aa98074819f28cff162567bd6ca3ee8ec1",
-      "bytes": 4201
+      "sha256": "24d5522c3a7b66082e10bad6cc4979bf8695eac0ba6e3e3cb03992133b031654",
+      "bytes": 4519
     },
     {
       "path": "scripts/search/discovery.test.mjs",
       "sha256": "fea19e95cbdd7ba280a8a69bc798dd0cccf6cf6fadf4fdecfdfed8045d9ccfaf",
       "bytes": 2779
+    },
+    {
+      "path": "scripts/search/inventory.test.mjs",
+      "sha256": "6fd69cb7e8ab88a49b40d2539b652e5cd97b236c8a692328fa7d35002eba9b2b",
+      "bytes": 2242
     },
     {
       "path": "scripts/search/llms-directory.mjs",
@@ -123,13 +138,23 @@
     },
     {
       "path": "scripts/search/llms-directory.test.mjs",
-      "sha256": "35d82a621b078d7ee7be221dfee82837c271e4a5370702720233766c506086e6",
-      "bytes": 2238
+      "sha256": "b891f72e2688fa543a10fbabe7d0fb5cb81ef1daf302e4ad72d07f9438cb0837",
+      "bytes": 2236
     },
     {
       "path": "scripts/search/redirects.test.mjs",
       "sha256": "9cc123e04beb381c6628e3ad07dfcd892a49157ae083413cf2461fdbb7dbe514",
       "bytes": 2521
+    },
+    {
+      "path": "scripts/search/sitemap.mjs",
+      "sha256": "21b5379fdca72553fb5eb5953ace8bc9231e51e7ace41981f4ab777ebc51caf3",
+      "bytes": 1516
+    },
+    {
+      "path": "scripts/search/sitemap.test.mjs",
+      "sha256": "c4bb90c20554c383ba35577b34e36ef7c8801d080e9261504a09442c6f1ef258",
+      "bytes": 2463
     },
     {
       "path": "src/content/local-preview.test.ts",
@@ -145,6 +170,16 @@
       "path": "src/lib/growth-analytics.test.ts",
       "sha256": "b78a1ec34110881363acefdd2dae2a92ff10a5f483eb72385bf876a63043ab26",
       "bytes": 4245
+    },
+    {
+      "path": "src/lib/redirects.mjs",
+      "sha256": "6f0c0d51fe2f4a0b36c132dfc821cc2e65743d08e2f06e587086514bb5e25996",
+      "bytes": 970
+    },
+    {
+      "path": "src/lib/redirects.test.ts",
+      "sha256": "c3190b7850ad0aeaa83e3ad76b23d21837431ea091e990fe02613e94e30ae6a2",
+      "bytes": 962
     },
     {
       "path": "src/lib/schema-graph.test.ts",
@@ -173,7 +208,7 @@
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
-  "latestLocalVerification": "docs/audits/search-local-verification-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T02:47:43.410Z",
+  "latestLocalVerification": "docs/audits/search-discovery-hardening-2026-10-11.json",
+  "checksumsRefreshedAt": "2026-10-11T02:55:14.007Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged."
 }

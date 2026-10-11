@@ -1,4 +1,5 @@
 import { llmsDirectory } from './llms-directory.mjs';
+import {chunkSitemapEntries,validateSitemapIndex,SITEMAP_MAX_URL_LENGTH} from './sitemap.mjs';
 export const escapeXml = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
 const privatePath = /^\/(admin|studio|api|auth)(\/|$)/;
 export function canonicalOrigin(value) {
@@ -15,11 +16,15 @@ export function discoveryFiles({origin,brand,pages,indexNowKey}) {
   const seen=new Set();
   const records=pages.map(p=>{
     const path=publicPath(p.path);
+    if((origin+path).length>=SITEMAP_MAX_URL_LENGTH)throw new Error('Sitemap URL must be shorter than 2048 characters: '+path.slice(0,80));
     if(p.noindex || p.indexable===false || (p.status!==undefined && p.status!==200) || (p.canonical!==undefined && p.canonical!==origin+path)) throw new Error('Discovery requires an indexable 200 self-canonical page: '+path);
     if(seen.has(path))throw new Error('Duplicate canonical path: '+path);seen.add(path);
     const lastmod=p.lastmod ? new Date(p.lastmod) : null;
     if(lastmod && (!Number.isFinite(+lastmod) || +lastmod>Date.now()+300000))throw new Error('Invalid content modification date: '+path);
-    return {...p,path,url:origin+path,lastmod:lastmod?.toISOString() || null};
+    const images=[...new Set((p.images||[]).filter(value=>{
+      try{const u=new URL(value);return u.origin===origin&&!u.username&&!u.password&&!u.search&&!u.hash&&!privatePath.test(u.pathname)&&u.href.length<SITEMAP_MAX_URL_LENGTH&&!/[\u0000-\u0020]/.test(value);}catch{return false;}
+    }))].slice(0,20);
+    return {...p,path,url:origin+path,images,lastmod:lastmod?.toISOString() || null};
   }).sort((a,b)=>a.path.localeCompare(b.path));
   const groups=new Map();
   for(const p of records){
@@ -28,11 +33,11 @@ export function discoveryFiles({origin,brand,pages,indexNowKey}) {
     const rows=groups.get(group)||[];rows.push(p);groups.set(group,rows);
   }
   const files={};const maps=[];
-  for(const [group,rows] of groups)for(let i=0;i<rows.length;i+=45000){
-    const file=`sitemaps/${group}-${i/45000+1}.xml`;maps.push(file);
-    files[file]='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'+rows.slice(i,i+45000).map(p=>`<url><loc>${escapeXml(p.url)}</loc>${p.lastmod?`<lastmod>${escapeXml(p.lastmod)}</lastmod>`:''}${(p.images||[]).filter(u=>{try{return new URL(u).origin===origin;}catch{return false;}}).slice(0,20).map(u=>`<image:image><image:loc>${escapeXml(u)}</image:loc></image:image>`).join('')}</url>`).join('\n')+'\n</urlset>\n';
+  for(const [group,rows] of groups){
+    const entries=rows.map(p=>`<url><loc>${escapeXml(p.url)}</loc>${p.lastmod?`<lastmod>${escapeXml(p.lastmod)}</lastmod>`:''}${p.images.map(u=>`<image:image><image:loc>${escapeXml(u)}</image:loc></image:image>`).join('')}</url>`);
+    chunkSitemapEntries(entries).forEach((xml,index)=>{const file=`sitemaps/${group}-${index+1}.xml`;maps.push(file);files[file]=xml;});
   }
-  files['sitemap.xml']='<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+maps.map(p=>`<sitemap><loc>${origin}/${p}</loc></sitemap>`).join('\n')+'\n</sitemapindex>\n';
+  files['sitemap.xml']=validateSitemapIndex('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+maps.map(p=>`<sitemap><loc>${origin}/${p}</loc></sitemap>`).join('\n')+'\n</sitemapindex>\n',maps.length);
   // No separate bot group: the same crawl permissions apply to search/AI crawlers.
   files['robots.txt']=`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /studio\nDisallow: /api/\nDisallow: /auth/\nSitemap: ${origin}/sitemap.xml\n`;
   files['llms.txt']=llmsDirectory({brand,records});

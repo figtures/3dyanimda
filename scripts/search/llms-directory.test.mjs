@@ -26,5 +26,5 @@ test('untrusted multiline labels cannot inject links and Turkish characters surv
  assert.match(directory,/ğ Ğ ş Ş ı İ ö Ö ü Ü ç Ç/);
 });
 test('oversized URL records fail publication instead of silently exceeding the byte budget', () => {
- assert.throws(()=>discoveryFiles({origin,brand:'x',pages:[page('/'+ 'a'.repeat(60000))]}),/50 KiB/);
+ assert.throws(()=>discoveryFiles({origin,brand:'x',pages:[page('/'+ 'a'.repeat(60000))]}),/2048/);
 });

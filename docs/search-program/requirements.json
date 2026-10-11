@@ -171,7 +171,14 @@
         {
           "id": "SEO-03-04",
           "requirement": "Sitemap size limits and at least 10 live samples",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/search/sitemap.mjs",
+            "scripts/search/sitemap.test.mjs",
+            "scripts/search/inventory.test.mjs"
+          ],
+          "localReview": "Count and UTF-8 byte limits, URL length, empty-index rejection and exact 852-URL four-brand declared inventory passed local tests. At least 10 live samples remain unverified.",
+          "localTestReport": "docs/audits/search-discovery-hardening-2026-10-11.json"
         },
         {
           "id": "SEO-03-05",
@@ -396,7 +403,11 @@
         {
           "id": "SEO-07-06",
           "requirement": "CI regressions, before/after release evidence and weekly/monthly review",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "IMPLEMENTED_PENDING_CI_RUN",
+          "localEvidence": [
+            ".github/workflows/search-quality.yml"
+          ],
+          "localReview": "Push/PR CI definition added for typecheck, application/local search tests, evidence drift and build. Hosted execution and performance/weekly review are not certified."
         }
       ],
       "existingOrPreparedEvidence": [
@@ -532,9 +543,10 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "scripts/search/redirects.test.mjs",
-            "scripts/search/discovery.test.mjs"
+            "scripts/search/discovery.test.mjs",
+            "src/lib/redirects.test.ts"
           ],
-          "localReview": "Single-hop redirects, query preservation, cycles and cross-brand rejection pass; production registry and response checks remain pending.",
+          "localReview": "Single-hop redirects, query preservation, cycles and cross-brand rejection pass; production registry and response checks remain pending. Authentication roots and callback paths are now rejected in the shared redirect compiler.",
           "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
@@ -1180,5 +1192,5 @@
     "Governance records below are engineering preparations, not human signatures."
   ],
   "implementationReviewedAt": "2026-10-11T02:47:03.272391+00:00",
-  "implementationReviewScope": "Current source and local regression tests only. Notion pages were not freshly retrieved in this session. Gate statuses and release decision remain unchanged."
+  "implementationReviewScope": "Current source and local regression tests only. Notion installation confirmed on 11 October; its read tools were not exposed in this active execution session, so current Notion text has not been retrieved. Gate statuses and release decision remain unchanged."
 }
