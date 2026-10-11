@@ -1,0 +1,158 @@
+{
+  "kind": "public-domain-read-only-probe",
+  "checkedAt": "2026-10-11T23:35:43.030Z",
+  "sourceCommit": "618bdb969d6810832fcb086375f71eb7a5d2fd9b",
+  "workflowRun": "38184860400",
+  "authentication": false,
+  "writes": false,
+  "brands": [
+    {
+      "hostname": "3dyanimda.com",
+      "dns": [],
+      "requests": [
+        {
+          "path": "/",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/3d-baski",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/robots.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/sitemap.xml",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/llms.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/__audit_missing_page_20261012",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        }
+      ],
+      "dnsError": "ENOTFOUND"
+    },
+    {
+      "hostname": "3dsanayi.com",
+      "dns": [],
+      "requests": [
+        {
+          "path": "/",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/3d-baski",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/robots.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/sitemap.xml",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/llms.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/__audit_missing_page_20261012",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        }
+      ],
+      "dnsError": "ENOTFOUND"
+    },
+    {
+      "hostname": "maketyanimda.com",
+      "dns": [],
+      "requests": [
+        {
+          "path": "/",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/3d-baski",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/robots.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/sitemap.xml",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/llms.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/__audit_missing_page_20261012",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        }
+      ],
+      "dnsError": "ENOTFOUND"
+    },
+    {
+      "hostname": "parcayanimda.com",
+      "dns": [],
+      "requests": [
+        {
+          "path": "/",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/3d-baski",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/robots.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/sitemap.xml",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/llms.txt",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        },
+        {
+          "path": "/__audit_missing_page_20261012",
+          "error": "ENOTFOUND",
+          "tlsVerified": false
+        }
+      ],
+      "dnsError": "ENOTFOUND"
+    }
+  ]
+}

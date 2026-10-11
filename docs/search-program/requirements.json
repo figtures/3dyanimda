@@ -328,10 +328,13 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "src/lib/schema-graph.ts",
-            "docs/search-program/SCHEMA-CONTRACT.md"
+            "docs/search-program/SCHEMA-CONTRACT.md",
+            "src/content/structured-content.ts",
+            "scripts/quality/schema-vocabulary.mjs",
+            "docs/audits/live-schema-2026-10-12.json"
           ],
-          "localReview": "Version 1 type-to-ID map is exported and frozen; typed generators and field sources are documented.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "Template 1.1.0: 796 effective authored records and 796 published API records validate against the extracted official Schema.org type/property-domain vocabulary. Stable references, negative fixtures and duplicate metadata checks pass. This is not a production HTML crawl, complete property-range validation, supported rich-result approval or factual/human certification.",
+          "localTestReport": "docs/audits/live-schema-2026-10-12.json"
         },
         {
           "id": "SEO-06-02",
@@ -344,10 +347,13 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "scripts/quality/schema-integrity.mjs",
-            "docs/audits/lighthouse-ci-final-2026-10-11.json"
+            "docs/audits/lighthouse-ci-final-2026-10-11.json",
+            "src/content/structured-content.ts",
+            "scripts/quality/schema-vocabulary.mjs",
+            "docs/audits/live-schema-2026-10-12.json"
           ],
-          "localReview": "Candidate graph references and visible FAQ text checked; production parity and external vocabulary certification remain open.",
-          "localTestReport": "docs/audits/lighthouse-ci-final-2026-10-11.json"
+          "localReview": "Template 1.1.0: 796 effective authored records and 796 published API records validate against the extracted official Schema.org type/property-domain vocabulary. Stable references, negative fixtures and duplicate metadata checks pass. This is not a production HTML crawl, complete property-range validation, supported rich-result approval or factual/human certification.",
+          "localTestReport": "docs/audits/live-schema-2026-10-12.json"
         },
         {
           "id": "SEO-06-04",
@@ -355,15 +361,25 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "src/lib/schema-graph.test.ts",
-            "scripts/quality/identity-graph.test.mjs"
+            "scripts/quality/identity-graph.test.mjs",
+            "src/content/structured-content.ts",
+            "scripts/quality/schema-vocabulary.mjs",
+            "docs/audits/live-schema-2026-10-12.json"
           ],
-          "localReview": "Stable IDs, complementary merge and conflicting facts pass local fixtures; production graph crawl remains pending.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "Template 1.1.0: 796 effective authored records and 796 published API records validate against the extracted official Schema.org type/property-domain vocabulary. Stable references, negative fixtures and duplicate metadata checks pass. This is not a production HTML crawl, complete property-range validation, supported rich-result approval or factual/human certification.",
+          "localTestReport": "docs/audits/live-schema-2026-10-12.json"
         },
         {
           "id": "SEO-06-05",
           "requirement": "Rich Results evidence only for supported feature types; vocabulary validation separately",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/structured-content.ts",
+            "scripts/quality/schema-vocabulary.mjs",
+            "docs/audits/live-schema-2026-10-12.json"
+          ],
+          "localTestReport": "docs/audits/live-schema-2026-10-12.json",
+          "localReview": "Template 1.1.0: 796 effective authored records and 796 published API records validate against the extracted official Schema.org type/property-domain vocabulary. Stable references, negative fixtures and duplicate metadata checks pass. This is not a production HTML crawl, complete property-range validation, supported rich-result approval or factual/human certification."
         },
         {
           "id": "SEO-06-06",
@@ -371,10 +387,13 @@
           "verification": "LOCAL_TESTED_PARTIAL",
           "localEvidence": [
             "src/lib/schema-graph.test.ts",
-            "docs/search-program/SCHEMA-CONTRACT.md"
+            "docs/search-program/SCHEMA-CONTRACT.md",
+            "src/content/structured-content.ts",
+            "scripts/quality/schema-vocabulary.mjs",
+            "docs/audits/live-schema-2026-10-12.json"
           ],
-          "localReview": "Invalid and inherited type names plus conflicting properties fail; change record added. Independent RFC approval remains pending.",
-          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
+          "localReview": "Template 1.1.0: 796 effective authored records and 796 published API records validate against the extracted official Schema.org type/property-domain vocabulary. Stable references, negative fixtures and duplicate metadata checks pass. This is not a production HTML crawl, complete property-range validation, supported rich-result approval or factual/human certification.",
+          "localTestReport": "docs/audits/live-schema-2026-10-12.json"
         }
       ],
       "existingOrPreparedEvidence": [
@@ -382,8 +401,8 @@
         "Unknown rating/price/hour fields are not fabricated."
       ],
       "blockers": [
-        "Field mapping and structural graph validator implemented; external vocabulary/Rich Results evidence and full production DOM parity remain open.",
-        "Legal-entity confirmation and independent approval remain open."
+        "Actual production DOM parity and supported Google rich-result evidence remain open; four canonical domains currently return ENOTFOUND in the external CI probe.",
+        "Verified business facts, legal entity, claim-source review and independent approval remain open."
       ]
     },
     {
@@ -1257,5 +1276,7 @@
   "implementationReviewedOn": "2026-10-11",
   "latestSourceReconciliation": "docs/audits/notion-reconciliation-2026-10-11.json",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
-  "latestLighthouseReport": "docs/audits/mobile-seo-2026-10-12.json"
+  "latestLighthouseReport": "docs/audits/mobile-seo-2026-10-12.json",
+  "additionalBestPracticeReview": "docs/search-program/BEST-PRACTICES-2026-10-12.md",
+  "latestPublicDomainEvidence": "docs/audits/public-domains-2026-10-12.json"
 }
