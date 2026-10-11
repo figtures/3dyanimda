@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-regression-evidence-not-release-certificate",
+  "testedAt": "2026-10-11T02:47:03.272391+00:00",
+  "sourceBaseline": "28f12bef2a29771cfd121e32e4dc8606713426b5",
+  "scope": "Baseline plus changes in the commit containing this report; hashes recorded by evidence-index.json. No fresh Notion read or production browser crawl.",
+  "runs": [
+    {
+      "command": "npm test -- --reporter=dot",
+      "exitCode": 0,
+      "passed": 80
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "node --test scripts/quality/check-protocols.test.mjs scripts/quality/evidence-index.test.mjs scripts/quality/identity-graph.test.mjs scripts/quality/semantic-date.test.mjs scripts/search/*.test.mjs scripts/cloudflare/*.test.mjs supabase/functions/send-quote-email/emailjs.test.mjs",
+      "exitCode": 0,
+      "passed": 37
+    }
+  ],
+  "browserCheck": {
+    "status": "BLOCKED_ENVIRONMENT",
+    "test": "scripts/quality/critical-css.test.mjs",
+    "reason": "Chromium executable unavailable; managed control-browser capability absent. Initial broad test selection returned 33 pass and one environment failure; browser test was not rerun or counted as pass."
+  },
+  "controlsWithPartialLocalEvidence": [
+    "SEO-02-03",
+    "SEO-02-06",
+    "SEO-03-02",
+    "SEO-03-03",
+    "SEO-05-01",
+    "SEO-06-01",
+    "SEO-06-04",
+    "SEO-06-06",
+    "SEO-08-01",
+    "SEO-09-02",
+    "SEO-10-03",
+    "GEO-01-04",
+    "GEO-02-04",
+    "GEO-04-03",
+    "GEO-06-01",
+    "GEO-06-02",
+    "GEO-06-04",
+    "GEO-07-04"
+  ],
+  "programStatus": "BLOCKED",
+  "decision": "NO-GO",
+  "productionChecked": false,
+  "newLighthouseRuns": 0,
+  "geoModelRuns": 0,
+  "humanApproval": false
+}

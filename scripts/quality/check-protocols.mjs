@@ -20,9 +20,14 @@ export function validateProtocolInventory(data) {
  if(data.programStatus!=='BLOCKED'||data.decision!=='NO-GO') errors.push('Discovery inventory cannot approve release');
  return {valid:errors.length===0,errors,gates:ids.size,groupedControls:controls.size,releaseReady:false};
 }
+export function parseProtocolArguments(args) {
+ const files=args.filter(arg=>!arg.startsWith('--'));
+ if(args.some(arg=>arg.startsWith('--')&&arg!=='--release')||files.length>1) throw new Error('Usage: check-protocols.mjs [inventory.json] [--release]');
+ return {file:files[0]||'docs/search-program/requirements.json',release:args.includes('--release')};
+}
 if(process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href){
- const file=process.argv[2]||'docs/search-program/requirements.json';
+ const {file,release}=parseProtocolArguments(process.argv.slice(2));
  const data=JSON.parse(await readFile(file,'utf8'));
  const result=validateProtocolInventory(data); console.log(JSON.stringify(result,null,2));
- process.exitCode=result.valid?(process.argv.includes('--release')?2:0):1;
+ process.exitCode=result.valid?(release?2:0):1;
 }

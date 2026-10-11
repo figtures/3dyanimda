@@ -12,9 +12,109 @@
   "retentionStatus": "Versioned in project repository; automated retention/deletion and customer access validation not configured",
   "files": [
     {
+      "path": "docs/audits/lighthouse-attempt-2026-10-10.json",
+      "sha256": "c4307d88f5f25dfb22893023be88c9fedcbaa474082fb5e01fb65fa1c0df0edc",
+      "bytes": 551
+    },
+    {
+      "path": "docs/audits/notion-protocol-tests-2026-10-10.json",
+      "sha256": "bef1bb668d74b20eb37f3367a95de503d6a2f70999b5437e39c0541804271210",
+      "bytes": 1999
+    },
+    {
+      "path": "docs/audits/search-local-verification-2026-10-11.json",
+      "sha256": "f6e56968f62718d33270aa30da97015b1bfae51382f1d09d53afe44e4906413c",
+      "bytes": 1742
+    },
+    {
+      "path": "docs/search-program/PROGRESS-2026-10-11.md",
+      "sha256": "f1e4a40a4d9a93488e5a5c87a42f9d91cf62318c482a30f59eaad7a7ae987f2a",
+      "bytes": 2419
+    },
+    {
+      "path": "docs/search-program/README.md",
+      "sha256": "2a6abdb930cac66c33d8b890553bef551e7de418a05d79b9bf44a47f9a9a0744",
+      "bytes": 8404
+    },
+    {
+      "path": "docs/search-program/RFC-SEARCH-001.md",
+      "sha256": "c87cd0124975cc739000775da8f570a636162336c35281c28c7fd4591385649c",
+      "bytes": 4656
+    },
+    {
+      "path": "docs/search-program/SCHEMA-CONTRACT.md",
+      "sha256": "68d7d7a9c374033f7e29f80deaa889160169cad5ffcddeabb4bd6cd3588054a7",
+      "bytes": 2489
+    },
+    {
+      "path": "docs/search-program/prompt-set-v1.json",
+      "sha256": "6bbf1226973659803f9fcc45d87d508eb2b29b50c4bd83f7d534838f968e9cd9",
+      "bytes": 71722
+    },
+    {
+      "path": "docs/search-program/requirements.json",
+      "sha256": "b54f91a0636b2e226721faebc71879dfc9e4580158fa0eacdd8cf28c6e216714",
+      "bytes": 47585
+    },
+    {
+      "path": "docs/search-program/url-inventory.json",
+      "sha256": "56641c285251cd658d7797e45a2f1c63bf858712de01524f49f9ffe4141f136b",
+      "bytes": 395808
+    },
+    {
+      "path": "package.json",
+      "sha256": "d6d71a88b092f809e6b5bd2201f61bba51128a764528ac112fb81c9bb805d334",
+      "bytes": 6054
+    },
+    {
+      "path": "scripts/cloudflare/config.test.mjs",
+      "sha256": "d80162cb082d76dcbfdad9afb93f8cc5fd5444f4eed60018d8988517ed5a7ab6",
+      "bytes": 2500
+    },
+    {
+      "path": "scripts/quality/check-protocols.mjs",
+      "sha256": "489503a0262751428d63b9b5b24fe7ff0315b7ac91d3a90a6333899c09d0be79",
+      "bytes": 2247
+    },
+    {
+      "path": "scripts/quality/check-protocols.test.mjs",
+      "sha256": "7acdec534bd1c30086370b1deb0bf358bd576f645a3b95cd7a4a1081205e5c62",
+      "bytes": 1845
+    },
+    {
+      "path": "scripts/quality/evidence-index.mjs",
+      "sha256": "70212559b4a23617c983dce7d6cd0a42411a6c7a1f44cf7179c11bc43f6f19c9",
+      "bytes": 2251
+    },
+    {
+      "path": "scripts/quality/evidence-index.test.mjs",
+      "sha256": "1727322431d8205b042b0ecc7db8fc643b39bad135a7f65e618150d086287e4f",
+      "bytes": 1082
+    },
+    {
+      "path": "scripts/quality/identity-graph.test.mjs",
+      "sha256": "332d7798ee880f1e988328e6ca1777cd7dfc8be18547ba64b2afebe8c09383e8",
+      "bytes": 1577
+    },
+    {
+      "path": "scripts/quality/run-lighthouse.mjs",
+      "sha256": "ff3703012eba03325698b4aac8a504ec79be21c5773ee2b64a79be67b4288e46",
+      "bytes": 5062
+    },
+    {
+      "path": "scripts/quality/semantic-date.test.mjs",
+      "sha256": "cba619dfc869a042d3d900ceba631edc71d54d0407a3452702705fa0a0ab1030",
+      "bytes": 1411
+    },
+    {
       "path": "scripts/search/discovery.mjs",
       "sha256": "ff7abd1f25a083d0be209677703b20aa98074819f28cff162567bd6ca3ee8ec1",
       "bytes": 4201
+    },
+    {
+      "path": "scripts/search/discovery.test.mjs",
+      "sha256": "fea19e95cbdd7ba280a8a69bc798dd0cccf6cf6fadf4fdecfdfed8045d9ccfaf",
+      "bytes": 2779
     },
     {
       "path": "scripts/search/llms-directory.mjs",
@@ -27,59 +127,53 @@
       "bytes": 2238
     },
     {
-      "path": "scripts/quality/run-lighthouse.mjs",
-      "sha256": "ff3703012eba03325698b4aac8a504ec79be21c5773ee2b64a79be67b4288e46",
-      "bytes": 5062
+      "path": "scripts/search/redirects.test.mjs",
+      "sha256": "9cc123e04beb381c6628e3ad07dfcd892a49157ae083413cf2461fdbb7dbe514",
+      "bytes": 2521
     },
     {
-      "path": "scripts/quality/check-protocols.mjs",
-      "sha256": "2894cd4c9412f41ff22f8fb7b2e1fdc50a21dcfebbdcca721e54b784a2f48228",
-      "bytes": 1918
+      "path": "src/content/local-preview.test.ts",
+      "sha256": "5bf4bae8ab1416eb251016728be405ca2bddb5a18c5d169e546021030299edba",
+      "bytes": 1230
     },
     {
-      "path": "scripts/quality/check-protocols.test.mjs",
-      "sha256": "e05d84228f177df9c5822985432c011a3ff74aa4cf4900993442515bd900bc2a",
-      "bytes": 1207
+      "path": "src/content/metadata.test.ts",
+      "sha256": "880cfec7239b7c7b734114657c5dc0b9925c028b7bde15cfc09fdce6692529e3",
+      "bytes": 1075
     },
     {
-      "path": "docs/search-program/requirements.json",
-      "sha256": "d80348de1c452bbe4d849b3cafc9cc986a96fa7096a8483d501f45ce371e3127",
-      "bytes": 40683
+      "path": "src/lib/growth-analytics.test.ts",
+      "sha256": "b78a1ec34110881363acefdd2dae2a92ff10a5f483eb72385bf876a63043ab26",
+      "bytes": 4245
     },
     {
-      "path": "docs/search-program/prompt-set-v1.json",
-      "sha256": "6bbf1226973659803f9fcc45d87d508eb2b29b50c4bd83f7d534838f968e9cd9",
-      "bytes": 71722
+      "path": "src/lib/schema-graph.test.ts",
+      "sha256": "6c78e94eb0032cff2e4019f95ad518c5104bf85ad9e97feeb472d41d940828cb",
+      "bytes": 1658
     },
     {
-      "path": "docs/search-program/url-inventory.json",
-      "sha256": "56641c285251cd658d7797e45a2f1c63bf858712de01524f49f9ffe4141f136b",
-      "bytes": 395808
+      "path": "src/lib/schema-graph.ts",
+      "sha256": "682b0ded7628223864020b53d883512c71d8790c8d3c8faf5c4d36fcaf56fdef",
+      "bytes": 2308
     },
     {
-      "path": "docs/search-program/README.md",
-      "sha256": "f13d3b7788cc750ec51a938cff351cb918340c57f9079e25d7385b333060f0a6",
-      "bytes": 7727
+      "path": "src/lib/search.test.ts",
+      "sha256": "1ebec78d9445ab32bf547bf0c576646cbeeb5ae47e696e34270925785f17eb32",
+      "bytes": 2595
     },
     {
-      "path": "docs/search-program/RFC-SEARCH-001.md",
-      "sha256": "c87cd0124975cc739000775da8f570a636162336c35281c28c7fd4591385649c",
-      "bytes": 4656
+      "path": "src/lib/social-meta.test.ts",
+      "sha256": "0e2021e0258b1432809bab4a2cf68e2e14b7eb30b5c296e2d476d6245d216645",
+      "bytes": 869
     },
     {
-      "path": "docs/audits/notion-protocol-tests-2026-10-10.json",
-      "sha256": "bef1bb668d74b20eb37f3367a95de503d6a2f70999b5437e39c0541804271210",
-      "bytes": 1999
-    },
-    {
-      "path": "docs/audits/lighthouse-attempt-2026-10-10.json",
-      "sha256": "c4307d88f5f25dfb22893023be88c9fedcbaa474082fb5e01fb65fa1c0df0edc",
-      "bytes": 551
-    },
-    {
-      "path": "package.json",
-      "sha256": "a7460f8abc5dd6a902930a75b3e4ee5d40dd09fd9424d4b9409a66d8c77d08dd",
-      "bytes": 5579
+      "path": "src/lib/structured-data.test.ts",
+      "sha256": "dc6bac34485b6136cd28ca1367d25f138b7adc401c32f2638fc1eac051f68e1e",
+      "bytes": 1208
     }
-  ]
+  ],
+  "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
+  "latestLocalVerification": "docs/audits/search-local-verification-2026-10-11.json",
+  "checksumsRefreshedAt": "2026-10-11T02:47:43.410Z",
+  "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged."
 }

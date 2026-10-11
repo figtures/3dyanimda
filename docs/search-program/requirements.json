@@ -95,7 +95,13 @@
         {
           "id": "SEO-02-03",
           "requirement": "HTTPS/apex/lowercase/ASCII/no-trailing-slash policy",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/search.test.ts",
+            "scripts/search/discovery.test.mjs"
+          ],
+          "localReview": "Canonical path normalization and single-hop host/index redirects passed local fixtures; production response matrix remains pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-02-04",
@@ -110,7 +116,12 @@
         {
           "id": "SEO-02-06",
           "requirement": "Query/facet/search controls and genuine locale variants",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/search.test.ts"
+          ],
+          "localReview": "Campaign/query removal and cross-brand canonical rejection passed; live facets and locale coverage remain pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         }
       ],
       "existingOrPreparedEvidence": [
@@ -138,12 +149,24 @@
         {
           "id": "SEO-03-02",
           "requirement": "Private/staging controls and negative draft tests",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/local-preview.test.ts",
+            "scripts/cloudflare/config.test.mjs"
+          ],
+          "localReview": "Draft preview boundaries and noindex on workers.dev passed; deployed private routes remain a separate check.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-03-03",
           "requirement": "Sitemap uses only 200 self-canonical indexable URLs and real lastmod",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/search/discovery.test.mjs",
+            "scripts/quality/semantic-date.test.mjs"
+          ],
+          "localReview": "Canonical discovery parity and semantic database date fixtures passed; live 200 status and deployed sitemap parity are unverified.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-03-04",
@@ -229,7 +252,12 @@
         {
           "id": "SEO-05-01",
           "requirement": "Zero duplicate indexable titles and descriptions",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/content/metadata.test.ts"
+          ],
+          "localReview": "All 796 authored route titles are unique per brand; live descriptions and final rendered duplicates were not rerun.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-05-02",
@@ -277,7 +305,13 @@
         {
           "id": "SEO-06-01",
           "requirement": "Versioned schema type map and typed generation",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/schema-graph.ts",
+            "docs/search-program/SCHEMA-CONTRACT.md"
+          ],
+          "localReview": "Version 1 type-to-ID map is exported and frozen; typed generators and field sources are documented.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-06-02",
@@ -292,7 +326,13 @@
         {
           "id": "SEO-06-04",
           "requirement": "Global stable IDs and no conflicting graph properties",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/schema-graph.test.ts",
+            "scripts/quality/identity-graph.test.mjs"
+          ],
+          "localReview": "Stable IDs, complementary merge and conflicting facts pass local fixtures; production graph crawl remains pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-06-05",
@@ -302,7 +342,13 @@
         {
           "id": "SEO-06-06",
           "requirement": "Negative fixtures, generator changelog and RFC",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/schema-graph.test.ts",
+            "docs/search-program/SCHEMA-CONTRACT.md"
+          ],
+          "localReview": "Invalid and inherited type names plus conflicting properties fail; change record added. Independent RFC approval remains pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         }
       ],
       "existingOrPreparedEvidence": [
@@ -373,7 +419,12 @@
         {
           "id": "SEO-08-01",
           "requirement": "Complete OG and large Twitter card on all shareable pages",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/social-meta.test.ts"
+          ],
+          "localReview": "Four-brand large raster image metadata and unsafe-image fallbacks pass; final initial HTML and real social previews remain pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-08-02",
@@ -425,7 +476,13 @@
         {
           "id": "SEO-09-02",
           "requirement": "Separate branded/non-branded metrics and conversion/consent context",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/search.test.ts",
+            "src/lib/growth-analytics.test.ts"
+          ],
+          "localReview": "Consent, brand separation and referral classification pass local fixtures; actual analytics dashboards and metrics remain pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-09-03",
@@ -472,7 +529,13 @@
         {
           "id": "SEO-10-03",
           "requirement": "One-hop permanent redirects with documented query policy",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/search/redirects.test.mjs",
+            "scripts/search/discovery.test.mjs"
+          ],
+          "localReview": "Single-hop redirects, query preservation, cycles and cross-brand rejection pass; production registry and response checks remain pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "SEO-10-04",
@@ -525,7 +588,13 @@
         {
           "id": "GEO-01-04",
           "requirement": "Evidence classification, retention, link access and checksums",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/quality/evidence-index.mjs",
+            "scripts/quality/evidence-index.test.mjs"
+          ],
+          "localReview": "Current tracked evidence hashes are validated and drift fails; access, retention and operational ownership remain pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-01-05",
@@ -572,7 +641,13 @@
         {
           "id": "GEO-02-04",
           "requirement": "Parent relationships without cycles or fake branches",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/structured-data.test.ts",
+            "scripts/quality/identity-graph.test.mjs"
+          ],
+          "localReview": "Unknown workshop address does not produce a branch; distinct identities cannot conceal conflicting facts. External entity lifecycle review remains pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-02-05",
@@ -663,7 +738,12 @@
         {
           "id": "GEO-04-03",
           "requirement": "Chunk, procedure, FAQ and table readability limits",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/search.test.ts"
+          ],
+          "localReview": "Malformed comparison-table rows and unsafe source URLs are rejected; all published answer-unit readability limits remain pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-04-04",
@@ -747,12 +827,24 @@
         {
           "id": "GEO-06-01",
           "requirement": "Versioned CMS-to-DOM-to-schema field contracts and stable graph IDs",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/schema-graph.ts",
+            "docs/search-program/SCHEMA-CONTRACT.md"
+          ],
+          "localReview": "Versioned mapping, field-source documentation and stable-ID regression coverage added; deployed DOM parity remains pending.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-06-02",
           "requirement": "Unknown facts omitted; normalized values and global conflict checks",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "src/lib/structured-data.test.ts",
+            "src/lib/schema-graph.test.ts"
+          ],
+          "localReview": "Unknown contact/coordinates/hours omitted and conflicting graph values rejected; all live brand data remains a separate check.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-06-03",
@@ -762,7 +854,12 @@
         {
           "id": "GEO-06-04",
           "requirement": "Optional llms directory is bounded, deterministic and indexable-only",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/search/llms-directory.test.mjs"
+          ],
+          "localReview": "Optional directory is deterministic, category-balanced and bounded to 80 links/50KiB; unpublished/noncanonical entries rejected without shrinking sitemap. Deployment remains unverified.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-06-05",
@@ -810,7 +907,13 @@
         {
           "id": "GEO-07-04",
           "requirement": "Semantic content/dateModified/UI/schema/sitemap integrity",
-          "verification": "NOT_FULLY_VERIFIED"
+          "verification": "LOCAL_TESTED_PARTIAL",
+          "localEvidence": [
+            "scripts/quality/semantic-date.test.mjs",
+            "src/content/metadata.test.ts"
+          ],
+          "localReview": "No-op/status/review changes preserve content date; meaningful content updates replace arbitrary caller dates. Live UI/schema/sitemap parity was not rerun.",
+          "localTestReport": "docs/audits/search-local-verification-2026-10-11.json"
         },
         {
           "id": "GEO-07-05",
@@ -1075,5 +1178,7 @@
     "No Lighthouse score or real GEO output was obtained.",
     "Historical 8 October audit is not a fresh production test.",
     "Governance records below are engineering preparations, not human signatures."
-  ]
+  ],
+  "implementationReviewedAt": "2026-10-11T02:47:03.272391+00:00",
+  "implementationReviewScope": "Current source and local regression tests only. Notion pages were not freshly retrieved in this session. Gate statuses and release decision remain unchanged."
 }

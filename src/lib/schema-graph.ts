@@ -1,5 +1,6 @@
 type Node = Record<string, unknown>;
-const ids: Record<string,string> = {Organization:'organization',WebSite:'website',ProfessionalService:'localbusiness',WebPage:'webpage',CollectionPage:'webpage',AboutPage:'webpage',ContactPage:'webpage',Article:'article',Service:'service',FAQPage:'faq',BreadcrumbList:'breadcrumb',ItemList:'itemlist',Blog:'blog',WebApplication:'application'};
+export const SCHEMA_CONTRACT_VERSION = 1;
+export const SCHEMA_TYPE_IDS: Readonly<Record<string,string>> = Object.freeze({Organization:'organization',WebSite:'website',ProfessionalService:'localbusiness',WebPage:'webpage',CollectionPage:'webpage',AboutPage:'webpage',ContactPage:'webpage',Article:'article',Service:'service',FAQPage:'faq',BreadcrumbList:'breadcrumb',ItemList:'itemlist',Blog:'blog',WebApplication:'application'});
 const stable = (value: unknown): string => JSON.stringify(value, (_key, val) => val && typeof val === 'object' && !Array.isArray(val) ? Object.fromEntries(Object.entries(val).sort(([a],[b])=>a.localeCompare(b))) : val);
 function merge(a: Node, b: Node, id: string): Node {
   const result = {...a};
@@ -21,9 +22,9 @@ export function composeSchemaGraph(documents: Node[], origin: string, pageUrl: s
     for (const source of nodes) {
       const {'@context':_context, ...node}=source;
       const type=String(node['@type']||'');
+      if (!Object.prototype.hasOwnProperty.call(SCHEMA_TYPE_IDS,type)) throw new Error('Unregistered schema node type: '+type);
       const root=['Organization','WebSite','ProfessionalService'].includes(type)?origin+'/':pageUrl;
-      const id=String(node['@id'] || root+'#'+(ids[type] || type.toLowerCase()));
-      if (!type || !ids[type]) throw new Error('Unregistered schema node type: '+type);
+      const id=String(node['@id'] || root+'#'+SCHEMA_TYPE_IDS[type]);
       node['@id']=id;
       graph.set(id,graph.has(id)?merge(graph.get(id)!,node,id):node);
     }

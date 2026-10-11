@@ -11,6 +11,9 @@ describe('one structured dataset',()=>{
   it('rejects conflicting facts and unregistered types',()=>{
     expect(()=>composeSchemaGraph([{'@type':'Organization',name:'A'},{'@type':'Organization',name:'B'}],origin,origin+'/')).toThrow(/Conflicting/);
     expect(()=>composeSchemaGraph([{'@type':'InventedType'}],origin,origin+'/')).toThrow(/Unregistered/);
+    for(const type of ['constructor','toString','__proto__','']) {
+      expect(()=>composeSchemaGraph([{'@type':type}],origin,origin+'/')).toThrow(/Unregistered/);
+    }
   });
   it('gives each route schema a stable distinct identifier',()=>{
     const docs=[pageGraph({origin,path:'/rehber',title:'Rehber',description:'Üretim rehberi',type:'CollectionPage'}),{'@type':'ItemList',itemListElement:[]},{'@type':'FAQPage',mainEntity:[]}];
