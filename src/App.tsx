@@ -11,17 +11,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrandLayout as Layout } from "@/components/brand/BrandLayout";
 
-import BrandAbout from "./pages/BrandAbout";
-import BrandLegal from "./pages/BrandLegal";
 import { TenantProvider } from "@/contexts/TenantContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { FeatureProvider } from "@/contexts/FeatureContext";
 import { RequireFeature } from "@/components/site/RequireFeature";
 import "@/lib/tenant";
-import Index from "./pages/Index";
 import { RequirePermission } from "@/components/admin/RequirePermission";
 
-// Code-split: ana sayfa hariç tüm route'lar lazy
+// Keep each page's implementation out of unrelated routes' initial bundles.
+const Index = lazy(() => import("./pages/Index"));
+const BrandAbout = lazy(() => import("./pages/BrandAbout"));
+const BrandLegal = lazy(() => import("./pages/BrandLegal"));
 const Engineering = lazy(() => import("./pages/Engineering"));
 const LegacyLocation = lazy(() => import("./pages/LegacyLocation"));
 const ContentPage = lazy(() => import("./pages/ContentPage"));
@@ -114,7 +114,7 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: "/", element: <Index /> },
+      { path: "/", element: wrap(<Index />) },
       ...[
         "/araclar",
         "/araclar/stl-onizle",
@@ -139,7 +139,7 @@ const router = createBrowserRouter([
         "/rehber/:slug",
         "/bolgeler/*",
       ].map((path) => ({ path, element: wrap(<ContentPage />) })),
-      { path: "/hakkimizda", element: <BrandAbout /> },
+      { path: "/hakkimizda", element: wrap(<BrandAbout />) },
       { path: "/teklif-al", element: wrap(<QuoteRequest />) },
       {
         path: "/portfoy",
