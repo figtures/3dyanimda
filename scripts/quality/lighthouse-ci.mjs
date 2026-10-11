@@ -117,8 +117,9 @@ try {
    if(target.route==='/teklif-al'){
     await page.type('input[name=full_name]','Browser verification');
     await page.click('.quote-service-choice button:nth-child(2)');
+    await page.waitForFunction(()=>document.querySelector('.quote-service-choice button:nth-child(2)')?.getAttribute('aria-pressed')==='true',{timeout:5000});
     const state=await page.evaluate(()=>({pressed:document.querySelector('.quote-service-choice button:nth-child(2)')?.getAttribute('aria-pressed'),name:document.querySelector('input[name=full_name]')?.value,valid:document.querySelector('form')?.checkValidity()}));
-    if(state.pressed!=='true'||state.name!=='Browser verification'||state.valid!==false)throw Error('Interactive quote state/validation regression');
+    if(state.pressed!=='true'||state.name!=='Browser verification'||state.valid!==false)throw Error('Interactive quote state/validation regression: '+JSON.stringify(state));
    }
    report.interactionChecks||=[];report.interactionChecks.push({...target,mobileMenu:'PASS',quote:target.route==='/teklif-al'?'PASS_WITHOUT_SUBMISSION':'NOT_APPLICABLE'});
   }

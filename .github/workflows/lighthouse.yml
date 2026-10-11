@@ -21,8 +21,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        brand: ${{ fromJSON(contains(github.event.head_commit.message, '[perf-probe]') && '["3dyanimda"]' || '["3dyanimda","3dsanayi","maketyanimda","parcayanimda"]') }}
-        device: ${{ fromJSON(contains(github.event.head_commit.message, '[perf-probe]') && '["mobile"]' || '["mobile","desktop"]') }}
+        brand: ${{ fromJSON(contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') && '["3dsanayi"]' || contains(github.event.head_commit.message, '[perf-probe]') && '["3dyanimda"]' || '["3dyanimda","3dsanayi","maketyanimda","parcayanimda"]') }}
+        device: ${{ fromJSON((contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') || contains(github.event.head_commit.message, '[perf-probe]')) && '["mobile"]' || '["mobile","desktop"]') }}
     env:
       # Anonymous browser configuration only; no management or service-role secret.
       VITE_SUPABASE_URL: 'https://zdxjmhhjuomcpdtllnuq.supabase.co'
@@ -32,7 +32,7 @@ jobs:
       LAB_REPEATS: ${{ contains(github.event.head_commit.message, '[perf-probe]') && '1' || '3' }}
       LAB_ORIGIN_MODE: canonical
       # Explicit focused recheck preserves the full default matrix for normal changes.
-      LAB_ROUTES: ${{ contains(github.event.head_commit.message, '[perf-probe]') && '/,/bolgeler,/teklif-al' || contains(github.event.head_commit.message, '[quote-recheck]') && '/teklif-al' || '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' }}
+      LAB_ROUTES: ${{ contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') && '/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' || contains(github.event.head_commit.message, '[perf-probe]') && '/,/bolgeler,/teklif-al' || contains(github.event.head_commit.message, '[quote-recheck]') && '/teklif-al' || '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' }}
       CHROME_PATH: /usr/bin/google-chrome
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
