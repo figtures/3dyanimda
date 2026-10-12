@@ -3,10 +3,11 @@ import { mkdir, writeFile, rm } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { loadBrandConfig } from './config.mjs';
+import {prepareRelease} from './prepare.mjs';
 const [action,brand]=process.argv.slice(2);
-if(!['build','check','export','deploy'].includes(action)) throw new Error('Usage: node scripts/cloudflare/brand.mjs build|check|export|deploy <brand>');
+if(!['build','check','export','verify','deploy'].includes(action)) throw new Error('Usage: node scripts/cloudflare/brand.mjs build|check|export|verify|deploy <brand>');
 const config=loadBrandConfig(brand);
-const release=['export','deploy'].includes(action);
+const release=['export','verify','deploy'].includes(action);
 const workspace=path.resolve('.cloudflare',brand);
 const assets=path.join(workspace,'assets');
 const configFile=path.join(workspace,'wrangler.json');
@@ -17,7 +18,7 @@ const run=(file,args,env=process.env)=>{
  const result=spawnSync(process.execPath,[file,...args],{stdio:'inherit',env});
  if(result.status!==0) throw new Error('Command failed: '+path.basename(file));
 };
-if(release) run('scripts/quality/release-preflight.mjs',[]);
+if(release) { await prepareRelease(); run('scripts/quality/release-preflight.mjs',[]); }
 await mkdir(workspace,{recursive:true});
 await build({envDir:false,define:Object.fromEntries(Object.entries(publicEnv).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:assets,emptyOutDir:true}});
 let directory=assets;
@@ -47,7 +48,8 @@ if(release) {
  run('scripts/quality/audit-search-contracts.mjs',[directory]);
 }
 if(action==='build' || action==='export') console.log(`Built ${brand}; config: .cloudflare/${brand}/wrangler.json (not deployed)`);
-else run('node_modules/wrangler/bin/wrangler.js',['deploy','--config',configFile,...(action==='check'?['--dry-run','--outdir',path.join(workspace,'dry-run')]:[])],{...process.env,...config.credentials,CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV:'false',WRANGLER_SEND_METRICS:'false'});
+else run('node_modules/wrangler/bin/wrangler.js',['deploy','--config',configFile,...(['check','verify'].includes(action)?['--dry-run','--outdir',path.join(workspace,'dry-run')]:[])],{...process.env,...config.credentials,CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV:'false',WRANGLER_SEND_METRICS:'false'});
+if(action==='verify')console.log('CLOUDFLARE_RELEASE_VERIFIED '+JSON.stringify({brand,domain:config.domain,mode:'production-export-and-wrangler-dry-run',uploaded:false,config:configFile}));
 if(action==='deploy' && config.indexNowKey) {
  run('scripts/search/submit-indexnow.mjs',[directory,'--submit'],{...process.env,INDEXNOW_KEY:config.indexNowKey,...(previousManifest?{PREVIOUS_SEARCH_MANIFEST:previousManifest}:{}),INDEXNOW_RECEIPT_PATH:path.join(workspace,'indexnow-receipt.json')});
 }

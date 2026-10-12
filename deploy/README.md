@@ -4,9 +4,12 @@ Each brand has its own **local ignored** `deploy/<brand>/.env`. Hidden filenames
 not a security boundary: real environment files must never be committed, even to a
 private repository. Only `.env.example` templates are versioned.
 
-Requires Node >=22.12, `npm ci`, Python audit dependencies (Pillow, NumPy, SciPy),
-and Playwright Chromium for the approved HTML export. `npx playwright install chromium`
-installs the exporter browser. `CHROMIUM_EXECUTABLE` may specify an existing browser.
+Requires Node >=22.12, Python >=3.11 with venv support, and `npm ci`.
+Release commands automatically create an isolated Python environment, install the
+pinned audit dependencies, install Chromium and its Linux libraries, and smoke-test
+both runtimes. Linux runners need permission to install system packages.
+`CHROMIUM_EXECUTABLE` may select an already provisioned browser.
+`npm run cloudflare:prepare` runs preparation separately; it does not approve content.
 
 | Brand | Local file | Build / Wrangler validation / deploy |
 | --- | --- | --- |
@@ -39,25 +42,27 @@ under `.cloudflare/<brand>/`. A brand mismatch from Supabase fails closed.
   Does not deploy, run editorial approval, or claim SEO readiness.
 - `check:<brand>`: builds, then runs **Wrangler deploy --dry-run**. No upload or DNS
   change. Confirms packaging/configuration, not account access or production readiness.
-- `deploy:<brand>`: runs the global content release gate, builds the selected brand,
+- `verify:<brand>`: prepares dependencies, runs the source/evidence-bound release
+  gate, exports and audits all approved HTML, then runs Wrangler **--dry-run**.
+  Does not upload or change DNS; no Cloudflare credentials are required.
+- `deploy:<brand>`: prepares dependencies, runs the global content release gate, builds the selected brand,
   exports approved HTML/sitemap/robots from its public Supabase API, audits the
   actual HTML/content/identity/discovery files and Worker config, then deploys
   that brand's Worker. Failed checks stop before Cloudflare upload.
 
-The automatic originality audit passes for all 796 authored content routes and
-four home asset records. On 8 October 2026, the owner delegated final approval to
-Codex. The source-bound `content/release-review.json` certificate records an actual
-AI review with `humanReviewPerformed: false`, and release preflight passes. Fresh
-Supabase readback confirms 796 published records, zero drafts, 796 matching reviews,
-and 28 registered assets (16 images and 12 models). See
-`docs/audits/publication-applied-2026-10-08.json` for the committed database evidence.
-All four approved exports pass: 852 index-eligible and 24 noindex utility HTML
-pages. Four Wrangler packaging dry-runs pass against those artifacts. All four
-real deploy commands stop before upload because `CLOUDFLARE_API_TOKEN` is absent.
-Cloudflare account access is still unavailable. Canonical domains registered in
-Supabase do not establish Cloudflare ownership or DNS activation. See
-`docs/audits/IMPLEMENTATION-STATUS.md` for scope and limitations. The release checks
-remain active; no approval bypass was added.
+The 12 October 2026 source-bound AI review includes the latest brand assets and
+performance changes. The fresh originality audit covers 796 authored content
+records and four home asset records. Release preflight verifies the source snapshot
+and every review evidence checksum; changed sources or evidence fail closed.
+This is delegated AI review, not independent human sign-off.
+See `docs/audits/release-delta-review-2026-10-12.json` for scope and limitations.
+
+The `Cloudflare release packaging` GitHub Actions workflow independently runs
+`verify:<brand>` for all four brands from a clean Linux checkout. Each successful
+job validates 213 indexable pages and six noindex utility pages plus the actual
+Wrangler bundle. Reports are retained as workflow artifacts. A dry-run does not
+prove Cloudflare account authorization, custom-domain activation or live SEO.
+Release checks remain active; no approval bypass was added.
 
 The Worker serves exported HTML, true 404s and the admin/studio SPA shell. workers.dev
 responses are noindex and their robots.txt disallows crawling. Preview artifacts
@@ -78,9 +83,10 @@ Create four Worker projects connected to figtures/3dyanimda, each with root `/`:
    does not configure a Vite build. Store CLOUDFLARE_API_TOKEN as a build secret when
    external CI needs it; Cloudflare's own build deployment may provide credentials.
 3. Build command: `npm run typecheck`. Deploy command: `npm run deploy:<brand>`.
-   The deploy pipeline includes the brand build and HTML export. Ensure audit Python
-   dependencies and Playwright are installed in your build image; otherwise use a
-   controlled CI runner with those prerequisites instead of bypassing checks.
+   The deploy pipeline installs audit/browser dependencies, then builds and exports
+   approved HTML. `.node-version` selects Node 22. If the build environment prevents
+   system package installation, provision Chromium and set CHROMIUM_EXECUTABLE,
+   or deploy from a controlled Linux runner with the same release checks.
 4. Disable automatic non-production branch deploys until a separate staging setup
    has been configured. The supplied pipeline targets the named brand Worker.
 

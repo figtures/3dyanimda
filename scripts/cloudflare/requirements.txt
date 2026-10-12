@@ -1,0 +1,4 @@
+# Versions used by the release audit; isolated from the host Python installation.
+Pillow==12.3.0
+numpy==2.3.5
+scipy==1.17.0

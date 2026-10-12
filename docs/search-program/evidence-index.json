@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "aba5d211fc98d63dc57dc97f000b3e5539038b2b42983106844cecdfb16c6446",
-      "bytes": 6465
+      "sha256": "ab0289e2a8572e29bc56d934e45d94eb94a0b86ab8ef312d7ea8ef473a464e9c",
+      "bytes": 6897
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -920,11 +920,56 @@
       "path": "assets/brand-sources/provenance.json",
       "sha256": "c16d52970d731a1edbf907c95e003a0d1e7109fb04233a5b8b5d641aa6dc0328",
       "bytes": 617
+    },
+    {
+      "path": ".github/workflows/cloudflare-release.yml",
+      "sha256": "c8a008db9f1bc554e0e69e5138e5fd2dbae2f51c47fe583d444803d1f048bb38",
+      "bytes": 1964
+    },
+    {
+      "path": "scripts/cloudflare/prepare.mjs",
+      "sha256": "e7db9cf8823b9e10367cf4df0a9a270d6c84f02cbf688ea15ac4f91f311e9492",
+      "bytes": 2989
+    },
+    {
+      "path": "scripts/cloudflare/requirements.txt",
+      "sha256": "ca91d2a2ab7f54bfa4133b038ce8e234979d2048c1d5a8d1959a19da9ce2f9e7",
+      "bytes": 124
+    },
+    {
+      "path": "scripts/quality/release-certificate.mjs",
+      "sha256": "68fbc3846f0519ac20a46e172f60e52979e9594e006e92ef84256becdaa08942",
+      "bytes": 2006
+    },
+    {
+      "path": "scripts/quality/release-certificate.test.mjs",
+      "sha256": "c467e31be7ea5927d3da2a1cc2bc89a42a17517aee2fe9f5b90102616431f823",
+      "bytes": 2424
+    },
+    {
+      "path": "scripts/quality/release-preflight.mjs",
+      "sha256": "b1ead265c6d85629a589ac7f76659fb041a6f11c60783ecc73521ae204f4205b",
+      "bytes": 827
+    },
+    {
+      "path": "docs/audits/release-source-snapshot-2026-10-12.json",
+      "sha256": "6ac886af3c1730dfaa06200b53da477c83a692646c5840bf79bbb194664196b5",
+      "bytes": 89824
+    },
+    {
+      "path": "docs/audits/release-delta-review-2026-10-12.json",
+      "sha256": "bb4e269d34917bea75b0ad46af285ea393ea0169451ecded898a3fc9a260e636",
+      "bytes": 2336
+    },
+    {
+      "path": "docs/audits/release-originality-2026-10-12.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c",
+      "bytes": 306
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-12T00:26:26.625Z",
+  "checksumsRefreshedAt": "2026-10-12T01:05:34.125Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

@@ -1,4 +1,4 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import {JSDOM} from 'jsdom';
@@ -35,4 +35,4 @@ try {
  snippetWidths=await page.evaluate(rows=>{const context=document.createElement('canvas').getContext('2d');return rows.map(row=>{context.font='20px Arial';const titlePixels=Math.round(context.measureText(row.title).width);context.font='14px Arial';const descriptionPixels=Math.round(context.measureText(row.description).width);return {...row,titlePixels,descriptionPixels,advisoryOverflow:titlePixels>580||descriptionPixels>920};});},widthSamples);
 } finally {await browser.close();}
 const result={status:'PASS',kind:'artifact-only SEO contract',origin,testedAt:new Date().toISOString(),pages:manifest.pages.length,uniqueTitles:titles.size,uniqueDescriptions:descriptions.size,orphans:orphans.length,maxClickDepth:Math.max(...depth.values()),socialRasterSize:[1200,630],schema:'one graph with distinct stable IDs; visible/graph/manifest modification-date parity',warnings,snippetWidthMethod:"All titles: 20px Arial; descriptions: 14px Arial. Advisory single-line reference widths 580/920px; not a prediction or guarantee of Google snippets.",snippetWidths,productionChecked:false};
-const output='docs/audits/search-contracts-'+new URL(origin).hostname+'-2026-10-11.json';await writeFile(output,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({...result,snippetWidths:undefined,advisorySnippetOverflows:snippetWidths.filter(x=>x.advisoryOverflow).length,warnings:warnings.length,output}));
+await mkdir('artifacts/release',{recursive:true});const output='artifacts/release/search-contracts-'+new URL(origin).hostname+'.json';await writeFile(output,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({...result,snippetWidths:undefined,advisorySnippetOverflows:snippetWidths.filter(x=>x.advisoryOverflow).length,warnings:warnings.length,output}));

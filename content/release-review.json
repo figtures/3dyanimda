@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-11T00:55:52.862026+00:00",
+  "reviewedAt": "2026-10-12T01:02:36.117Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "32eab1ae1a0749edafc7d139a75b17d8e0f0f215bee3a34bdc9860542917b096",
-  "sourceFileCount": 389,
+  "sourceHash": "0ef38de6d9afdf3a2b78376e4d46ebf787f26c6a7bef11e4799a95fdc8d38b3a",
+  "sourceFileCount": 525,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -34,7 +34,9 @@
     "currentRuntimeCases": 192,
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
-    "deltaReview": "docs/audits/final-delta-review-2026-10-11.json"
+    "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
+    "latestDeltaReview": "docs/audits/release-delta-review-2026-10-12.json",
+    "latestBrandAssetFiles": 80
   },
   "evidence": [
     {
@@ -108,6 +110,34 @@
     {
       "file": "content/authoring/source-register.json",
       "sha256": "ba607c34b4216ed4dd1448c7048e24096b1197d64c719681f94993699881c886"
+    },
+    {
+      "file": "docs/audits/mobile-seo-2026-10-12-round2.json",
+      "sha256": "bb53b71439e7dbe5ed65fa7ede5557977a04c40743229c98f9468810aef4a4e0"
+    },
+    {
+      "file": "docs/audits/brand-refresh-validation-2026-10-12.json",
+      "sha256": "a6f6b5093de35cbd885a2316bfa89ab609c887185037b68d484e0728b5c64c0a"
+    },
+    {
+      "file": "docs/audits/brand-assets-2026-10-12.json",
+      "sha256": "ba9a7f8dfd1770ce3c8e620e21cd2c0493f7156c32801a1985195ee130b41716"
+    },
+    {
+      "file": "assets/brand-sources/provenance.json",
+      "sha256": "c16d52970d731a1edbf907c95e003a0d1e7109fb04233a5b8b5d641aa6dc0328"
+    },
+    {
+      "file": "docs/audits/release-originality-2026-10-12.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "docs/audits/release-delta-review-2026-10-12.json",
+      "sha256": "bb4e269d34917bea75b0ad46af285ea393ea0169451ecded898a3fc9a260e636"
+    },
+    {
+      "file": "docs/audits/release-source-snapshot-2026-10-12.json",
+      "sha256": "6ac886af3c1730dfaa06200b53da477c83a692646c5840bf79bbb194664196b5"
     }
   ],
   "limitations": [
@@ -115,7 +145,8 @@
     "Full inventory automated checks and prior rendered evidence were reconciled; targeted semantic full-text review covers 28 routes and 185 flagged technical/safety sentences, as itemized in the content report.",
     "Asset originality is assessed within the brand-network inventory and documented generation records; no web-wide uniqueness or legal exclusivity guarantee.",
     "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception.",
-    "The 11 October review carries forward unchanged original content/assets and adds 375 targeted rendered cases plus isolated bootstrap tests; it does not relabel historical 5136 cases as a fresh full crawl."
+    "The 11 October review carries forward unchanged original content/assets and adds 375 targeted rendered cases plus isolated bootstrap tests; it does not relabel historical 5136 cases as a fresh full crawl.",
+    "12 October bounded delta review reconciles 240 earlier mobile/desktop lab runs, 48 latest branding/navigation cases, 796 API schema records and inspected brand assets; these are not relabeled as fresh full-route human review."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

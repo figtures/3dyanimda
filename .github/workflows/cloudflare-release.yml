@@ -1,0 +1,56 @@
+name: Cloudflare release packaging
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cloudflare-release.yml'
+      - 'scripts/cloudflare/**'
+      - 'scripts/quality/release-*.mjs'
+      - 'scripts/quality/audit-approved-html.mjs'
+      - 'scripts/quality/audit-search-contracts.mjs'
+      - 'scripts/export-sites.mjs'
+      - 'content/release-review.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-release-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: Approved export and dry-run (${{ matrix.brand }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        brand: [3dyanimda, 3dsanayi, maketyanimda, parcayanimda]
+    env:
+      SITE_DOMAIN: '${{ matrix.brand }}.com'
+      WORKER_NAME: '${{ matrix.brand }}'
+      WORKER_CUSTOM_DOMAIN: 'true'
+      VITE_SITE_THEME: 'industrial'
+      VITE_SUPABASE_URL: 'https://zdxjmhhjuomcpdtllnuq.supabase.co'
+      VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_cb-5Z_xQf-Z19whnlsrG-A_Id5ewC6H'
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run verify:${{ matrix.brand }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: cloudflare-release-${{ matrix.brand }}-${{ github.sha }}
+          path: |
+            .cloudflare/${{ matrix.brand }}/wrangler.json
+            .cloudflare/${{ matrix.brand }}/dry-run/
+            .cloudflare/${{ matrix.brand }}/release/${{ matrix.brand }}.com/search-manifest.json
+            artifacts/release/
+          include-hidden-files: true
+          retention-days: 30

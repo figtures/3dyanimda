@@ -1,31 +1,11 @@
-/** Fail closed before business-domain HTML export. This does not approve drafts. */
-import { spawnSync } from 'node:child_process';
-import { readFileSync, readdirSync } from 'node:fs';
-import { createHash } from 'node:crypto';
-import path from 'node:path';
-const audit = spawnSync('python', ['scripts/quality/audit-content.py'], { stdio: 'inherit' });
-if (audit.status !== 0) throw new Error('Release blocked: network originality audit did not pass.');
-// Bind the evidence-bearing final review to source, public assets and authoring records.
-const files = [];
-function walk(dir) {
-  for (const entry of readdirSync(dir, {withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))) {
-    const file=path.posix.join(dir,entry.name);
-    if(entry.isDirectory()) walk(file);
-    else if(entry.isFile() && file!=='content/release-review.json') files.push(file);
-    else if(!entry.isFile()) throw new Error(`Unsupported release entry: ${file}`);
-  }
-}
-for (const dir of ['src','public','content']) walk(dir);
-const hash=createHash('sha256');
-for(const file of files.sort()) hash.update(file+'\0').update(readFileSync(file)).update('\0');
-const sourceHash=hash.digest('hex');
+/** Fail closed before business-domain HTML export. Never issues an approval. */
+import {spawnSync} from 'node:child_process';
+import {readFileSync} from 'node:fs';
+import {sourceSnapshot,verifyCertificate} from './release-certificate.mjs';
+const snapshot=sourceSnapshot();
 let review;
-try { review=JSON.parse(readFileSync('content/release-review.json','utf8')); }
-catch { throw new Error('Release blocked: rendered-page, visual, factual and SEO review has not been recorded.'); }
-if(review.policy!=='global-originality-v1' || review.sourceHash!==sourceHash || review.result!=='pass')
- throw new Error('Release blocked: missing or stale final review.');
-for(const check of ['allBrandsAllThemesAllRoutes','renderedText','imageProvenance','visualSimilarity','modelGeometry','localEvidence','seoGeoParity'])
- if(review.checks?.[check]!==true) throw new Error(`Release blocked: ${check} review incomplete.`);
-if(!review.reviewer || !review.reviewedAt || !Array.isArray(review.evidence) || review.evidence.length===0)
- throw new Error('Release blocked: review evidence is required.');
-console.log('Release preflight passed for source snapshot '+sourceHash);
+try{review=JSON.parse(readFileSync('content/release-review.json','utf8'));}catch{throw Error('Release blocked: final review has not been recorded.');}
+verifyCertificate(review,snapshot);
+const audit=spawnSync(process.env.RELEASE_PYTHON||'python',['scripts/quality/audit-content.py','--all','--output','artifacts/release/global-originality.json'],{stdio:'inherit'});
+if(audit.status!==0)throw Error('Release blocked: network originality audit did not pass.');
+console.log('Release preflight passed for source snapshot '+snapshot.sourceHash);
