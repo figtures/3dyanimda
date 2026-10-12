@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "02cc8f0400d37d2ff25792b948ccae56f438afd057f1022b50e12e1b3a767428",
-      "bytes": 6405
+      "sha256": "aba5d211fc98d63dc57dc97f000b3e5539038b2b42983106844cecdfb16c6446",
+      "bytes": 6465
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -900,11 +900,31 @@
       "path": "src/lib/media.test.ts",
       "sha256": "5be611b05d485d5a2d42daa80c2a9c8af11fe847c33f4f34f787c7a5a786e1f5",
       "bytes": 809
+    },
+    {
+      "path": "docs/search-program/BRAND-ASSETS-2026-10-12.md",
+      "sha256": "1b6d094204f8b774f1e3fcdf3770995bc58d9d082bbb85463552abbc4c5df2be",
+      "bytes": 6080
+    },
+    {
+      "path": "docs/audits/brand-assets-2026-10-12.json",
+      "sha256": "ba9a7f8dfd1770ce3c8e620e21cd2c0493f7156c32801a1985195ee130b41716",
+      "bytes": 23300
+    },
+    {
+      "path": "docs/audits/brand-refresh-validation-2026-10-12.json",
+      "sha256": "a6f6b5093de35cbd885a2316bfa89ab609c887185037b68d484e0728b5c64c0a",
+      "bytes": 13837
+    },
+    {
+      "path": "assets/brand-sources/provenance.json",
+      "sha256": "c16d52970d731a1edbf907c95e003a0d1e7109fb04233a5b8b5d641aa6dc0328",
+      "bytes": 617
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-12T00:22:16.181Z",
+  "checksumsRefreshedAt": "2026-10-12T00:26:26.625Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

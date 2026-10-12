@@ -1,0 +1,499 @@
+{
+  "sourceCommit": "82bf78868ddf5f3f0a9d1bc2b793fe83f6dbece7",
+  "lighthouse": {
+    "kind": "candidate-artifact-lab",
+    "production": false,
+    "fieldData": false,
+    "transport": "HTTP/2 with HTTP/1.1 fallback",
+    "originMode": "isolated-canonical-host-with-local-test-certificate",
+    "publicDnsOrTlsVerified": false,
+    "api": "actual public API; no cached fixtures during measurement",
+    "sourceCommit": "82bf78868ddf5f3f0a9d1bc2b793fe83f6dbece7",
+    "workflowRun": "38187820070",
+    "startedAt": "2026-10-12T00:23:58.029Z",
+    "runs": [
+      {
+        "brand": "3dyanimda",
+        "route": "/",
+        "device": "mobile",
+        "repeat": 1,
+        "version": "13.5.0",
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "fetchTime": "2026-10-12T00:24:16.998Z",
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "largest-contentful-paint": 1507.3047000000001,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 99.50000000000011
+        },
+        "issues": [
+          {
+            "id": "total-blocking-time",
+            "title": "Total Blocking Time",
+            "score": 0.98,
+            "displayValue": "100 ms"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Max Potential First Input Delay",
+            "score": 0.98,
+            "displayValue": "90 ms"
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "score": 0.99,
+            "displayValue": "2.1 s"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree",
+            "score": 0
+          }
+        ],
+        "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-1.json.gz",
+        "sha256": "6fd9e64a5f1e58464726655e0126897d596949c0da4d9d269630f54ce2995754"
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/bolgeler",
+        "device": "mobile",
+        "repeat": 1,
+        "version": "13.5.0",
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "fetchTime": "2026-10-12T00:24:29.805Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "largest-contentful-paint": 1654.7048,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 60
+        },
+        "issues": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "score": 0.99,
+            "displayValue": "1.2 s"
+          },
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "score": 0.99,
+            "displayValue": "1.7 s"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Max Potential First Input Delay",
+            "score": 0.98,
+            "displayValue": "90 ms"
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "score": 0.98,
+            "displayValue": "2.5 s"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree",
+            "score": 0
+          }
+        ],
+        "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-mobile-1.json.gz",
+        "sha256": "8537333aa3bcbe778ab71fbfebfa5f24da8542583fb8f2ab378f5dfe99944f7d"
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/teklif-al",
+        "device": "mobile",
+        "repeat": 1,
+        "version": "13.5.0",
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "fetchTime": "2026-10-12T00:24:42.849Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "largest-contentful-paint": 1656.5481,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 54
+        },
+        "issues": [
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "score": 0.99,
+            "displayValue": "1.7 s"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Max Potential First Input Delay",
+            "score": 0.98,
+            "displayValue": "90 ms"
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "score": 0.95,
+            "displayValue": "3.1 s"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree",
+            "score": 0
+          }
+        ],
+        "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-mobile-1.json.gz",
+        "sha256": "11f3f565d67879474fd9e6e85f64e964014fd0041a47ac5e7c36fbce4fd3c50f"
+      }
+    ],
+    "errors": [],
+    "limitations": [
+      "Real loopback HTTP/2 HTTPS server with gzip in canonical-host mode; CDN, public DNS, public TLS and production availability are not measured. Previous baseline used HTTP/1.1, so score changes include a transport-method change.",
+      "Canonical hostname is mapped to loopback in Chrome. Local self-signed TLS is trusted only in this CI browser; public DNS/TLS, production availability and indexing are NOT verified.",
+      "Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion."
+    ],
+    "renderContracts": [
+      {
+        "brand": "3dyanimda",
+        "route": "/",
+        "device": "mobile",
+        "status": "PASS",
+        "h1": 1,
+        "canonical": "https://3dyanimda.com/",
+        "schemaNodes": 4,
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/bolgeler",
+        "device": "mobile",
+        "status": "PASS",
+        "h1": 1,
+        "canonical": "https://3dyanimda.com/bolgeler",
+        "schemaNodes": 5,
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/teklif-al",
+        "device": "mobile",
+        "status": "PASS",
+        "h1": 1,
+        "canonical": "https://3dyanimda.com/teklif-al",
+        "schemaNodes": 4,
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+      }
+    ],
+    "hydrationChecks": [
+      {
+        "brand": "3dyanimda",
+        "route": "/",
+        "device": "mobile",
+        "mode": "react-ssg-v1",
+        "error": false,
+        "preserved": true
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/bolgeler",
+        "device": "mobile",
+        "mode": "react-ssg-v1",
+        "error": false,
+        "preserved": true
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/teklif-al",
+        "device": "mobile",
+        "mode": "react-ssg-v1",
+        "error": false,
+        "preserved": true
+      }
+    ],
+    "interactionChecks": [
+      {
+        "brand": "3dyanimda",
+        "route": "/",
+        "device": "mobile",
+        "mobileMenu": "PASS",
+        "quote": "NOT_APPLICABLE"
+      },
+      {
+        "brand": "3dyanimda",
+        "route": "/teklif-al",
+        "device": "mobile",
+        "mobileMenu": "PASS",
+        "quote": "PASS_WITHOUT_SUBMISSION"
+      }
+    ],
+    "status": "MEASURED",
+    "expectedRuns": 3,
+    "finishedAt": "2026-10-12T00:24:49.396Z"
+  },
+  "publicDomains": {
+    "kind": "public-domain-read-only-probe",
+    "checkedAt": "2026-10-12T00:23:37.527Z",
+    "sourceCommit": "82bf78868ddf5f3f0a9d1bc2b793fe83f6dbece7",
+    "workflowRun": "38187820071",
+    "authentication": false,
+    "writes": false,
+    "brands": [
+      {
+        "hostname": "3dyanimda.com",
+        "dns": [],
+        "requests": [
+          {
+            "path": "/",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/3d-baski",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/robots.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/sitemap.xml",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/llms.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/__audit_missing_page_20261012",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          }
+        ],
+        "dnsError": "ENOTFOUND"
+      },
+      {
+        "hostname": "3dsanayi.com",
+        "dns": [],
+        "requests": [
+          {
+            "path": "/",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/3d-baski",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/robots.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/sitemap.xml",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/llms.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/__audit_missing_page_20261012",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          }
+        ],
+        "dnsError": "ENOTFOUND"
+      },
+      {
+        "hostname": "maketyanimda.com",
+        "dns": [],
+        "requests": [
+          {
+            "path": "/",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/3d-baski",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/robots.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/sitemap.xml",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/llms.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/__audit_missing_page_20261012",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          }
+        ],
+        "dnsError": "ENOTFOUND"
+      },
+      {
+        "hostname": "parcayanimda.com",
+        "dns": [],
+        "requests": [
+          {
+            "path": "/",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/3d-baski",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/robots.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/sitemap.xml",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/llms.txt",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          },
+          {
+            "path": "/__audit_missing_page_20261012",
+            "error": "ENOTFOUND",
+            "tlsVerified": false
+          }
+        ],
+        "dnsError": "ENOTFOUND"
+      }
+    ]
+  },
+  "schema": {
+    "status": "PASS",
+    "sourceCommit": "82bf78868ddf5f3f0a9d1bc2b793fe83f6dbece7",
+    "workflowRun": "38187820071",
+    "productionHtmlVerified": false,
+    "brands": [
+      {
+        "brand": "3dyanimda",
+        "publishedRecords": 199
+      },
+      {
+        "brand": "3dsanayi",
+        "publishedRecords": 199
+      },
+      {
+        "brand": "maketyanimda",
+        "publishedRecords": 199
+      },
+      {
+        "brand": "parcayanimda",
+        "publishedRecords": 199
+      }
+    ],
+    "errors": []
+  },
+  "navigation": {
+    "workflowRun": 38187820071,
+    "cases": 48,
+    "status": "PASS",
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "themes": [
+      "industrial",
+      "editorial",
+      "studio"
+    ],
+    "brandAssetsVerified": true
+  },
+  "local": {
+    "typecheck": "PASS",
+    "vitest": 126,
+    "nodeContracts": 46,
+    "assetFiles": 80
+  },
+  "releaseReady": false
+}

@@ -38,3 +38,13 @@ Restore the previous source version and restore only the ten managed settings pe
 - https://developers.google.com/search/docs/appearance/structured-data/organization
 - https://supabase.com/docs/guides/storage/buckets/fundamentals
 - https://supabase.com/docs/guides/storage/security/access-control
+
+### Completed CI evidence
+
+Source `82bf78868ddf5f3f0a9d1bc2b793fe83f6dbece7`:
+
+- https://github.com/figtures/3dyanimda/actions/runs/38187820071 — all four jobs pass; 48 navigation/branding cases and 796 public API schema records pass. The DNS evidence job successfully records `ENOTFOUND` for all four domains; job success is not a domain-health pass.
+- https://github.com/figtures/3dyanimda/actions/runs/38187820070 — three focused mobile Lighthouse runs on 3dyanimda: home performance 99, regions 100, quote 100; SEO/accessibility/best practices 100 for all three; CLS 0; LCP 1.51–1.66 seconds. These are single-run candidate-lab diagnostics, not public production measurements or a fresh full-site 240-run audit.
+- Browser screenshots were inspected for all four mobile headers; logos are legible and navigation controls fit. All 80 generated files match their recorded SHA-256 hashes; PNG dimensions were read from the actual files.
+
+Detailed current evidence: `docs/audits/brand-refresh-validation-2026-10-12.json`. Initialization SQL: `supabase/seeds/brand-assets.sql` (idempotent; preserves existing settings).
