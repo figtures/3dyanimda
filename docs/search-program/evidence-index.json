@@ -923,13 +923,13 @@
     },
     {
       "path": ".github/workflows/cloudflare-release.yml",
-      "sha256": "b412d17b73b00c5f76a8d9fcafe9acb53edf4509bc1644f3c129c0c2f96752de",
-      "bytes": 2079
+      "sha256": "f7864a98b76c5e3a6458195b9a6267a3e54590ff6bb29a84ffcc4c063c2bada6",
+      "bytes": 2592
     },
     {
       "path": "scripts/cloudflare/prepare.mjs",
-      "sha256": "e7db9cf8823b9e10367cf4df0a9a270d6c84f02cbf688ea15ac4f91f311e9492",
-      "bytes": 2989
+      "sha256": "f5342120f6dcd094dc8a93f275ead0a69d1863249f6857e77972caceb84de9a9",
+      "bytes": 3330
     },
     {
       "path": "scripts/cloudflare/requirements.txt",
@@ -1009,7 +1009,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-12T01:33:10.781Z",
+  "checksumsRefreshedAt": "2026-10-12T02:17:08.026Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
