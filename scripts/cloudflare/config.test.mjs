@@ -15,13 +15,16 @@ test('management credentials and unexpected VITE keys cannot enter public settin
 });
 const env={SITE_DOMAIN:'3dyanimda.com',RELEASE_MODE:'approved',ASSETS:{fetch:async request=>{
  const p=new URL(request.url).pathname;
- return ['/app.html','/404.html','/','/robots.txt'].includes(p)?new Response(p):new Response('missing',{status:404});
+ // Model Cloudflare's HTML asset redirects instead of treating .html aliases
+ // as direct 200 responses (the old mock hid the production redirect defect).
+ if(['/app.html','/404.html'].includes(p))return new Response(null,{status:307,headers:{Location:p.replace('.html','')}});
+ return ['/app','/404','/','/robots.txt'].includes(p)?new Response(p):new Response('missing',{status:404});
 }}};
 test('unknown public routes return true 404, admin routes get shell with noindex',async()=>{
  const missing=await worker.fetch(new Request('https://3dyanimda.com/not-approved'),env);
- assert.equal(missing.status,404);assert.equal(await missing.text(),'/404.html');
+ assert.equal(missing.status,404);assert.equal(await missing.text(),'/404');assert.equal(missing.headers.get('Location'),null);
  const admin=await worker.fetch(new Request('https://3dyanimda.com/admin/settings'),env);
- assert.equal(admin.status,200);assert.equal(await admin.text(),'/app.html');assert.equal(admin.headers.get('Cache-Control'),'no-store');assert.match(admin.headers.get('X-Robots-Tag'),/noindex/);
+ assert.equal(admin.status,200);assert.equal(await admin.text(),'/app');assert.equal(admin.headers.get('Location'),null);assert.equal(admin.headers.get('Cache-Control'),'no-store');assert.match(admin.headers.get('X-Robots-Tag'),/noindex/);
 });
 test('workers.dev cannot be indexed even with approved artifacts',async()=>{
  const r=await worker.fetch(new Request('https://brand.workers.dev/robots.txt'),env);

@@ -91,7 +91,7 @@ for(const brand of selected){
  const {dom:notFound}=await capture(path.join(directory,'404.html'),origin+'/__missing_public_page');
  try{assert.equal(notFound.window.document.querySelector('h1')?.textContent,'Sayfa bulunamadı.');assert.match(notFound.window.document.querySelector('meta[name="robots"]')?.getAttribute('content'),/noindex/);}finally{notFound.window.close();}
  const htmlFiles=await collectHTML(directory);assert.equal(htmlFiles.length,219);assert.deepEqual(new Set(htmlFiles.map(file=>file==='index.html'?'/':'/'+file.replace(/\/index\.html$/,''))),new Set([...manifestPaths,...utilityRoutes]));
- const worker=await readJSON(path.join('.cloudflare',brand,'wrangler.json'));assert.equal(worker.vars.RELEASE_MODE,'approved');assert.equal(worker.vars.SITE_DOMAIN,domain);assert.equal(worker.vars.BRAND_SLUG,brand);assert.equal(worker.assets.directory,directory);assert.equal(worker.assets.run_worker_first,true);assert.equal(worker.assets.not_found_handling,'none');
+ const worker=await readJSON(path.join('.cloudflare',brand,'wrangler.json'));assert.equal(worker.vars.RELEASE_MODE,'approved');assert.equal(worker.vars.SITE_DOMAIN,domain);assert.equal(worker.vars.BRAND_SLUG,brand);assert.equal(worker.assets.directory,directory);assert.equal(worker.assets.run_worker_first,true);assert.equal(worker.assets.not_found_handling,'none');assert.equal(worker.assets.html_handling,'drop-trailing-slash');
  await access(path.join(directory,'app.html'));
  let redirectsPresent=true;try{await access(path.join(directory,'_redirects'));}catch{redirectsPresent=false;}assert.equal(redirectsPresent,false);
  const redirects=await readJSON(path.join(directory,'redirect-manifest.json'));assert.equal(redirects.origin,origin);

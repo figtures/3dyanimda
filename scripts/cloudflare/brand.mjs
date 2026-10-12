@@ -37,7 +37,7 @@ if(release) {
 }
 const wrangler={name:config.name,main:path.resolve('deploy/worker.mjs'),compatibility_date:'2026-10-03',
  workers_dev:true,preview_urls:false,
- assets:{directory,binding:'ASSETS',run_worker_first:true,not_found_handling:'none'},
+ assets:{directory,binding:'ASSETS',run_worker_first:true,not_found_handling:'none',html_handling:'drop-trailing-slash'},
  vars:{SITE_DOMAIN:config.domain,BRAND_SLUG:brand,RELEASE_MODE:release?'approved':'preview'},
  ...(config.customDomain && release?{routes:[{pattern:config.domain,custom_domain:true}]}:{})};
 await writeFile(configFile,JSON.stringify(wrangler,null,2)+'\n');

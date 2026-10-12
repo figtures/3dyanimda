@@ -78,6 +78,13 @@ The Worker serves exported HTML, true 404s and the admin/studio SPA shell. worke
 responses are noindex and their robots.txt disallows crawling. Preview artifacts
 are always noindex. No fake demo URL is assigned by these scripts.
 
+The asset service uses `html_handling: drop-trailing-slash` to match canonical
+URLs. The Worker retrieves the admin shell and 404 body via `/app` and `/404`,
+because fetching their `.html` aliases would return Cloudflare redirects.
+CI exercises the real local Wrangler HTTPS asset service for every manifest URL,
+admin/studio routes, missing pages, preview robots and canonical/legacy redirects.
+The loopback test certificate exception never applies to public-domain checks.
+
 Set `WORKER_CUSTOM_DOMAIN=true` only when ready to attach SITE_DOMAIN in Cloudflare.
 This adds that custom-domain route at deployment; false creates no domain route.
 The zone must belong to the Cloudflare account. Register www aliases and redirect
