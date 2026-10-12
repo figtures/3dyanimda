@@ -1,0 +1,177 @@
+{
+  "kind": "cloudflare-deployment-preparation",
+  "testedAt": "2026-10-12T01:33:09.839Z",
+  "sourceCommit": "df7791e51c2b63136f0cf58c51bb76ce24bef90e",
+  "releaseSourceHash": "2cb62d626c0fcda76fd9d90c2a6b89cb322077f60576b53605bf95ba13a2235e",
+  "result": "packaging_pass_with_open_operational_and_security_items",
+  "productionReadyAttestation": false,
+  "cloudflareUploaded": false,
+  "fixes": [
+    "Pinned Python audit dependencies and Chromium/system-library installation are automatic for release commands.",
+    "Source-bound AI review and evidence hashes updated without disabling publication guards.",
+    "GitHub source aligned byte-for-byte with all 525 reviewed source files.",
+    "Approved-HTML FAQ validation accepts and verifies page-scoped unique question IDs while retaining exact authored text checks.",
+    "Three engineering tool routes now have distinct, accurate meta descriptions."
+  ],
+  "workflow": {
+    "packaging": "https://github.com/figtures/3dyanimda/actions/runs/38191801030",
+    "quality": "https://github.com/figtures/3dyanimda/actions/runs/38191800784",
+    "lighthouse": "https://github.com/figtures/3dyanimda/actions/runs/38191800772"
+  },
+  "brands": [
+    {
+      "brand": "3dsanayi",
+      "domain": "3dsanayi.com",
+      "jobId": 114625931646,
+      "result": "pass",
+      "routeHtmlFiles": 219,
+      "indexablePages": 213,
+      "noindexUtilityPages": 6,
+      "uploaded": false,
+      "seo": {
+        "status": "PASS",
+        "kind": "artifact-only SEO contract",
+        "origin": "https://3dsanayi.com",
+        "testedAt": "2026-10-12T01:31:32.019Z",
+        "pages": 213,
+        "uniqueTitles": 213,
+        "uniqueDescriptions": 213,
+        "orphans": 0,
+        "maxClickDepth": 2,
+        "socialRasterSize": [
+          1200,
+          630
+        ],
+        "schema": "one graph with distinct stable IDs; visible/graph/manifest modification-date parity",
+        "warnings": 8,
+        "snippetWidthMethod": "All titles: 20px Arial; descriptions: 14px Arial. Advisory single-line reference widths 580/920px; not a prediction or guarantee of Google snippets.",
+        "productionChecked": false,
+        "advisorySnippetOverflows": 148,
+        "output": "artifacts/release/search-contracts-3dsanayi.com.json"
+      }
+    },
+    {
+      "brand": "maketyanimda",
+      "domain": "maketyanimda.com",
+      "jobId": 114625931697,
+      "result": "pass",
+      "routeHtmlFiles": 219,
+      "indexablePages": 213,
+      "noindexUtilityPages": 6,
+      "uploaded": false,
+      "seo": {
+        "status": "PASS",
+        "kind": "artifact-only SEO contract",
+        "origin": "https://maketyanimda.com",
+        "testedAt": "2026-10-12T01:30:48.526Z",
+        "pages": 213,
+        "uniqueTitles": 213,
+        "uniqueDescriptions": 213,
+        "orphans": 0,
+        "maxClickDepth": 2,
+        "socialRasterSize": [
+          1200,
+          630
+        ],
+        "schema": "one graph with distinct stable IDs; visible/graph/manifest modification-date parity",
+        "warnings": 172,
+        "snippetWidthMethod": "All titles: 20px Arial; descriptions: 14px Arial. Advisory single-line reference widths 580/920px; not a prediction or guarantee of Google snippets.",
+        "productionChecked": false,
+        "advisorySnippetOverflows": 191,
+        "output": "artifacts/release/search-contracts-maketyanimda.com.json"
+      }
+    },
+    {
+      "brand": "parcayanimda",
+      "domain": "parcayanimda.com",
+      "jobId": 114625931714,
+      "result": "pass",
+      "routeHtmlFiles": 219,
+      "indexablePages": 213,
+      "noindexUtilityPages": 6,
+      "uploaded": false,
+      "seo": {
+        "status": "PASS",
+        "kind": "artifact-only SEO contract",
+        "origin": "https://parcayanimda.com",
+        "testedAt": "2026-10-12T01:31:38.086Z",
+        "pages": 213,
+        "uniqueTitles": 213,
+        "uniqueDescriptions": 213,
+        "orphans": 0,
+        "maxClickDepth": 2,
+        "socialRasterSize": [
+          1200,
+          630
+        ],
+        "schema": "one graph with distinct stable IDs; visible/graph/manifest modification-date parity",
+        "warnings": 25,
+        "snippetWidthMethod": "All titles: 20px Arial; descriptions: 14px Arial. Advisory single-line reference widths 580/920px; not a prediction or guarantee of Google snippets.",
+        "productionChecked": false,
+        "advisorySnippetOverflows": 144,
+        "output": "artifacts/release/search-contracts-parcayanimda.com.json"
+      }
+    },
+    {
+      "brand": "3dyanimda",
+      "domain": "3dyanimda.com",
+      "jobId": 114625931782,
+      "result": "pass",
+      "routeHtmlFiles": 219,
+      "indexablePages": 213,
+      "noindexUtilityPages": 6,
+      "uploaded": false,
+      "seo": {
+        "status": "PASS",
+        "kind": "artifact-only SEO contract",
+        "origin": "https://3dyanimda.com",
+        "testedAt": "2026-10-12T01:30:44.708Z",
+        "pages": 213,
+        "uniqueTitles": 213,
+        "uniqueDescriptions": 213,
+        "orphans": 0,
+        "maxClickDepth": 2,
+        "socialRasterSize": [
+          1200,
+          630
+        ],
+        "schema": "one graph with distinct stable IDs; visible/graph/manifest modification-date parity",
+        "warnings": 104,
+        "snippetWidthMethod": "All titles: 20px Arial; descriptions: 14px Arial. Advisory single-line reference widths 580/920px; not a prediction or guarantee of Google snippets.",
+        "productionChecked": false,
+        "advisorySnippetOverflows": 184,
+        "output": "artifacts/release/search-contracts-3dyanimda.com.json"
+      }
+    }
+  ],
+  "totals": {
+    "routeHtmlFiles": 876,
+    "indexablePages": 852,
+    "noindexUtilityPages": 24,
+    "wranglerDryRunsPassed": 4
+  },
+  "validation": {
+    "applicationTests": 126,
+    "nodeContractTests": 53,
+    "navigationCases": 48,
+    "publicApiAuthoredRecords": 796,
+    "lighthouseRuns": 240,
+    "lighthouseReport": "docs/audits/cloudflare-final-lighthouse-2026-10-12.json"
+  },
+  "openItems": [
+    "Authenticated Cloudflare upload and custom-domain activation have not been performed; account credentials are unavailable in this session.",
+    "Live HTTP/TLS, indexing, analytics receipt and real AI citation behavior are not established by these artifact checks.",
+    "Dependency audit remains open: 27 warnings, including two critical development-tool entries. See dependency-audit-2026-10-12.json.",
+    "Six legal utility routes per brand intentionally retain noindex unpublished-document states; packaging success is not legal/business readiness.",
+    "Advisory snippet-length/width findings remain in each SEO report; they are not indexing failures or guarantees of displayed Google snippets."
+  ],
+  "environment": {
+    "verified": "GitHub Actions ubuntu-24.04, fresh npm ci and automated release dependency setup",
+    "cloudflareBuildImageVerified": false
+  },
+  "commands": {
+    "build": "npm run typecheck",
+    "deploy": "npm run deploy:<brand>",
+    "verifyWithoutUpload": "npm run verify:<brand>"
+  }
+}
