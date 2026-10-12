@@ -4,6 +4,7 @@
 
 3dyanimda, 3dsanayi, maketyanimda ve parcayanimda için ortak React arayüzü, markaya özel içerik ve tek Supabase veritabanı. ATAVIER bu çalışmanın dışında.
 
+
 Kaynak: `figtures/3d-yaninda-website`, main snapshot `524bac7c98d6e791a406c312e6c03b2a40285b7d`. Özgün firmanın `.env` dosyası alınmadı; kaynak repoya veya veritabanına yazılmadı. Bu çalışma bağımsız bir Git kopyasıdır; upstream geçmişi içermez.
 
 Proje reposu: [figtures/3dyanimda](https://github.com/figtures/3dyanimda).
