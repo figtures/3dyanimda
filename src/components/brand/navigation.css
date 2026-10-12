@@ -11,3 +11,6 @@
 .native-navigation-drawer:not([open]){display:none;}
 .native-navigation-drawer::backdrop{background:rgb(0 0 0 / .65);}
 .native-navigation-close{position:absolute;right:15px;top:15px;width:40px;height:40px;font-size:27px;line-height:1;border-radius:8px;}
+
+/* Reserve a stable logo box and allow the 320px navigation to fit. */
+.product-wordmark{min-width:0;flex-shrink:1}.product-wordmark img{width:200px;height:40px;max-width:100%;max-height:40px;object-position:left center}.product-header-actions{flex-shrink:0}.footer-brand-image{width:240px;height:60px;max-width:100%;object-fit:contain;object-position:left center}@media(max-width:440px){.product-wordmark{flex:1}.product-wordmark img{width:160px;height:36px}.product-header-inner{gap:12px}}

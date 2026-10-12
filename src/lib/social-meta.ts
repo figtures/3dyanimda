@@ -1,7 +1,8 @@
+import {brandAsset,publicAssetUrl} from './brand-assets';
 import catalog from '@/brands/catalog.json';
 
 /** Only public raster assets can be used as share cards; reject credential/query URLs. */
-export function socialImage(origin: string, slug: string | undefined, candidate?: string) {
+export function socialImage(origin: string, slug: string | undefined, candidate?: string, settings:Record<string,unknown>={}) {
   const brand = catalog.find(item => item.slug === slug) || catalog[0];
   if (candidate) {
     try {
@@ -11,5 +12,6 @@ export function socialImage(origin: string, slug: string | undefined, candidate?
       }
     } catch { /* Use the controlled, versioned fallback. */ }
   }
-  return { url: new URL(`/brand/social/${brand.slug}-v1.png`, origin).href, alt: `${brand.name} — ${brand.focus}`, width: 1200, height: 630 };
+  const asset=brandAsset(brand.slug,'og_image',settings);
+  return {url:new URL(asset.url,origin).href,alt:asset.alt||`${brand.name} — ${brand.focus}`,width:asset.width,height:asset.height};
 }

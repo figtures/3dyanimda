@@ -63,9 +63,10 @@ export async function refreshSiteSettings() {
   cache.set(id, value);
   listeners.forEach((fn) => fn(id, value));
 }
-export async function setSiteSetting(key: string, value: any) {
+export async function setSiteSetting(key: string, value: any, expectedTenantId?: string) {
   const id = getTenantId();
   if (!id) throw new Error("Tenant not resolved");
+  if (expectedTenantId && expectedTenantId !== id) throw new Error("Marka değişti. Lütfen tekrar deneyin.");
   const { error } = await (await getSupabase())
     .from("site_settings")
     .upsert(

@@ -1,3 +1,4 @@
+import {brandAsset} from '@/lib/brand-assets';
 import { Helmet } from "react-helmet-async";
 import { useLayoutEffect } from 'react';
 import { useSeoOverride } from "@/hooks/useSeoOverride";
@@ -51,11 +52,13 @@ export const Seo = ({
     : `${effectiveTitle} | ${name}`;
   const desc = override?.description || description;
   const noIndex = pageNoindex({requested:noindex,override:override?.noindex,development:import.meta.env.DEV,domain,hostname:window.location.hostname});
-  const share = socialImage(base, tenant?.slug, override?.og_image_url);
+  const share = socialImage(base, tenant?.slug, override?.og_image_url,settings);
+  const favicon=brandAsset(tenant?.slug,'favicon',settings);
+  const appleIcon=brandAsset(tenant?.slug,'apple_touch_icon',settings);
   const og = share.url;
   const brand = catalog.find((b) => b.slug === tenant?.slug);
   const identity = businessGraph({ name, origin: base, description: brand?.description,
-    logo: verified.logo, email: verified.email, telephone: verified.telephone,
+    logo: brandAsset(tenant?.slug,'organization_logo',settings).url, email: verified.email, telephone: verified.telephone,
     sameAs: verified.sameAs, openingHoursSpecification: verified.openingHoursSpecification,
     address: verified.address,
     geo: verified.geo,
@@ -82,6 +85,8 @@ export const Seo = ({
       <title>{fullTitle}</title>
       <meta name="description" content={desc} />
       <link rel="canonical" href={url} />
+      <link rel="icon" type={favicon.mime||'image/png'} href={favicon.url} />
+      <link rel="apple-touch-icon" href={appleIcon.url} />
       <meta
         name="robots"
         content={

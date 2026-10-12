@@ -143,8 +143,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "5d49b22a89b04104ee76906e2a454641aa331fc04021154fdd80cd5f942ea481",
-      "bytes": 592
+      "sha256": "736a7249aea69dbb88b801dfa570577e2e3060bf8a6d5801f9c886b6d72f7dae",
+      "bytes": 530
     },
     {
       "path": "package.json",
@@ -438,8 +438,8 @@
     },
     {
       "path": "scripts/test-navigation.mjs",
-      "sha256": "ac40a395143b14cb4437bfb6d94d7c6c96af06963f3d631102daa47e512d0964",
-      "bytes": 3043
+      "sha256": "994eb8f307a6fc1e96d0ed6d7ddd1c2cefc42f936e115b81672dc53b10230e39",
+      "bytes": 4003
     },
     {
       "path": "src/App.tsx",
@@ -463,8 +463,8 @@
     },
     {
       "path": "src/components/site/Seo.tsx",
-      "sha256": "46b619e85a0507dbc616cb8f86011ad6f57ac815cfa6fce96289edf45c2b0f50",
-      "bytes": 5568
+      "sha256": "66e53cbe40b74fdade61d1f94557591ac149852ace7b3ab4e3980c51bd6b11f4",
+      "bytes": 5938
     },
     {
       "path": "src/content/answer-unit.test.ts",
@@ -543,8 +543,8 @@
     },
     {
       "path": "src/hooks/useSiteSettings.ts",
-      "sha256": "2c32ec41fa9a83447e544bce8afac11a6e6733999345dbf0776a15b1b9a760e6",
-      "bytes": 3076
+      "sha256": "042907c7deac93a57c86fc5584117be3568072934db09e26d3317e5dea3085df",
+      "bytes": 3215
     },
     {
       "path": "src/lib/first-paint.ts",
@@ -618,8 +618,8 @@
     },
     {
       "path": "src/lib/social-meta.test.ts",
-      "sha256": "0e2021e0258b1432809bab4a2cf68e2e14b7eb30b5c296e2d476d6245d216645",
-      "bytes": 869
+      "sha256": "c5fd55869477f313660d33f485e2ed571a7e12eba9da8697d454f25652232d9a",
+      "bytes": 877
     },
     {
       "path": "src/lib/structured-data.test.ts",
@@ -658,13 +658,13 @@
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
-      "sha256": "4b8f68bead796555f8e9adbb73084d94f2422976140ac95d3450b5ece51f737d",
-      "bytes": 5312
+      "sha256": "a1cce4a848ba571ae2b45c2f4901e0e5371e96c525ad5d9834ec6d0ed66f71eb",
+      "bytes": 5491
     },
     {
       "path": "src/components/brand/BrandNavigation.tsx",
-      "sha256": "4d9595dd1cb35c0b17534488a900d581bace939c20969e006072529ef015d3b8",
-      "bytes": 6788
+      "sha256": "b6d913292acf77e9d7dddd500000bc63abec495ba17cb327d5a49192fbb8b7b7",
+      "bytes": 6833
     },
     {
       "path": "src/components/brand/GrowthAnalytics.tsx",
@@ -673,8 +673,8 @@
     },
     {
       "path": "src/components/brand/navigation.css",
-      "sha256": "8475c32e860256597967afdac10d10b2ff2548d2dded9bf5727a9726ed2bc273",
-      "bytes": 7092
+      "sha256": "7fdb5d461e320ef1a351aa53877c7b94fc0588b40dc86eb7eaedf4e5bafc9297",
+      "bytes": 7585
     },
     {
       "path": "src/components/sections/AutoFocus.tsx",
@@ -843,8 +843,8 @@
     },
     {
       "path": "scripts/quality/live-schema-inventory.ts",
-      "sha256": "e96faa2742bf275b19ac24357e6199b80c32b5246f563e480a1ea6ac86e2e12e",
-      "bytes": 3549
+      "sha256": "fdc00df66d709ba02830a637abbbe93bfa379b8364b2763176f6cd3f49fdc061",
+      "bytes": 3771
     },
     {
       "path": "scripts/quality/production-readonly.mjs",
@@ -904,8 +904,8 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-11T23:47:52.398334+00:00",
-  "checksumScope": "Current file identity only; no program release approval or promotion of historical evidence.",
+  "checksumsRefreshedAt": "2026-10-12T00:22:16.181Z",
+  "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
   "latestLighthouseReport": "docs/audits/mobile-seo-2026-10-12.json"

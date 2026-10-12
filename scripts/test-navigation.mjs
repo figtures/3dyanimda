@@ -9,6 +9,17 @@ try{
 for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(const theme of ['industrial','editorial','studio'])for(const width of [320,390,768,1440]){
  await page.setViewportSize({width,height:900});await page.goto(`http://127.0.0.1:8087/3d-baski?tenant=${brand}&theme=${theme}`);await page.locator('.product-header').waitFor();
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,`${brand}/${theme}/${width} overflow`);
+ const prefix='/brand/identity/'+brand+'/';
+ const headerLogo=page.locator('.product-wordmark img');
+ assert.equal(await headerLogo.getAttribute('src'),prefix+(theme==='industrial'?'logo_wordmark_light.svg':'logo_wordmark.svg'));
+ await headerLogo.evaluate(img=>img.decode());
+ assert.equal(await page.locator('.footer-brand-image').getAttribute('src'),prefix+'logo_wordmark_light.svg');
+ await page.waitForFunction(p=>document.querySelector('link[rel="icon"]')?.getAttribute('href')===p+'icon-96.png',prefix);
+ assert.equal(await page.locator('link[rel="apple-touch-icon"]').getAttribute('href'),prefix+'icon-180.png');
+ assert.ok((await page.locator('meta[property="og:image"]').getAttribute('content')).endsWith(prefix+'og-image.png'));
+ assert.equal(await page.locator('meta[property="og:image:width"]').getAttribute('content'),'1200');
+ if(width===390&&theme==='industrial')await page.screenshot({path:`/tmp/brand-menu-previews/branding-${brand}.png`});
+
  if(width<1100){await page.getByRole('button',{name:'Menüyü aç'}).click();await page.getByRole('dialog').waitFor();assert.equal(await page.getByRole('navigation',{name:'Mobil ana menü'}).isVisible(),true);await page.getByRole('dialog').getByRole('link',{name:'3D Tarama',exact:false}).first().focus();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});await page.getByRole('button',{name:'Menüyü aç'}).click();await page.getByRole('dialog').getByRole('link',{name:'3D Tarama',exact:false}).first().click();await page.waitForURL(/3d-tarama/);await page.getByRole('dialog').waitFor({state:'hidden'});await page.locator(`img[src="/brand/services/${brand}-scan.webp"]`).waitFor();}
  else{await page.getByRole('button',{name:'Keşfet menüsü'}).click();await page.getByRole('navigation',{name:'Keşfet',exact:true}).waitFor();assert.equal(await page.locator('.brand-navigation-panel').evaluate(el=>el.getBoundingClientRect().right<=innerWidth),true);await page.keyboard.press('Escape');await page.locator('.brand-navigation-panel').waitFor({state:'hidden'});}
  if(brand==='3dyanimda'&&(width===390||width===1440)){await page.goto(`http://127.0.0.1:8087/3d-baski?tenant=${brand}&theme=${theme}`);await page.locator('.product-header').waitFor();await page.getByRole('button',{name:width<1100?'Menüyü aç':'Keşfet menüsü'}).click();await page.locator(width<1100?'.brand-navigation-drawer':'.brand-navigation-panel').evaluate(async el=>{await Promise.all(el.getAnimations({subtree:true}).map(a=>a.finished.catch(()=>{})))});await page.screenshot({path:`/tmp/brand-menu-previews/${theme}-${width}.png`});}

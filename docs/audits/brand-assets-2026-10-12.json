@@ -1,0 +1,730 @@
+{
+  "3dyanimda": {
+    "logo_wordmark": {
+      "url": "/brand/identity/3dyanimda/logo_wordmark.svg",
+      "width": 508.78794178794175,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 28478,
+      "sha256": "0c4fd27fe2a611f3f2f8f9c330f8b442cd3149b86e4cc8196343b08f9a0ba1ad"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/3dyanimda/logo_wordmark_light.svg",
+      "width": 508.78794178794175,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 28478,
+      "sha256": "50485aadd09873ecb2316e299800813a421cab405618554857ef7316b0b47ce4"
+    },
+    "logo_wordmark_png": {
+      "url": "/brand/identity/3dyanimda/logo_wordmark.png",
+      "width": 1200,
+      "height": 236,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 26916,
+      "sha256": "6700dc44c701366c5003672082f4d87b0965f91f4a5dc7f60975e92f9e4dc1e7"
+    },
+    "logo_icon": {
+      "url": "/brand/identity/3dyanimda/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 15477,
+      "sha256": "6a92a159525ab4d14eb4aa481c439a45a7826640751ac0be0b994f0f9da129e4"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/3dyanimda/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 15477,
+      "sha256": "4615aab020f24a3749305895f0bae01079c5b44baa4afc5e15a1d118eac1591d"
+    },
+    "logo_icon_png": {
+      "url": "/brand/identity/3dyanimda/logo_icon.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 12888,
+      "sha256": "d681ab5987544f1d4d458bcf694e4297a82554d8e284ca9c72d23aa737ae0d2e"
+    },
+    "logo_text": {
+      "url": "/brand/identity/3dyanimda/logo_text.svg",
+      "width": 391,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 13017,
+      "sha256": "a8f90e0125a9bea886d57ff7927b8b1b724cb589dc1c32378c5b5afe9f8c0144"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/3dyanimda/logo_text_light.svg",
+      "width": 391,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 13017,
+      "sha256": "eb522124c523d3051dcc056480294d6d68a0880af2b1e5333bad1c605f919336"
+    },
+    "logo_text_png": {
+      "url": "/brand/identity/3dyanimda/logo_text.png",
+      "width": 1200,
+      "height": 227,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 24957,
+      "sha256": "086d08ea2e2df6bfab8c101a885fe571e93ad579e1a24e693060d58aab8c8460"
+    },
+    "favicon_svg": {
+      "url": "/brand/identity/3dyanimda/favicon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda",
+      "bytes": 15533,
+      "sha256": "7c09140fbe47589e259ffdc0cd1090dc4ff7f4ef4f6c7be90fa338758faf2a9a"
+    },
+    "icon_16": {
+      "url": "/brand/identity/3dyanimda/icon-16.png",
+      "width": 16,
+      "height": 16,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 462,
+      "sha256": "e9b5d1ff72dd09d85357d8dd801da0308472a80a7d23028f5e0068cc0f6f8bcc"
+    },
+    "icon_32": {
+      "url": "/brand/identity/3dyanimda/icon-32.png",
+      "width": 32,
+      "height": 32,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 863,
+      "sha256": "6df9ba56103ddc397c44271cd3ec10810935bc7f1d0c839b18b94d30be6fed6d"
+    },
+    "icon_48": {
+      "url": "/brand/identity/3dyanimda/icon-48.png",
+      "width": 48,
+      "height": 48,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 1263,
+      "sha256": "972a3d9fdc1407702e58d5128d133a9a078a33a4500f7fa2d6aeaa5ce6e07f02"
+    },
+    "favicon": {
+      "url": "/brand/identity/3dyanimda/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 2492,
+      "sha256": "809029a8daf32e1cbeeac65a36b78de57a95ff367cd90c2fb60af9f26fd97207"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/3dyanimda/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 4663,
+      "sha256": "021ff4b37eb64b6b1b3e804492e0468a89b79eb9914e6905fe9c0080379435f0"
+    },
+    "icon_192": {
+      "url": "/brand/identity/3dyanimda/icon-192.png",
+      "width": 192,
+      "height": 192,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 5057,
+      "sha256": "03e95afdfc3ca48f2147edffb3a1f5178f6595f444bf9e56234585ebb79d104e"
+    },
+    "icon_512": {
+      "url": "/brand/identity/3dyanimda/icon-512.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 15883,
+      "sha256": "0bc93e7f4b1c640634119b94122e55b1922f5ea08643e2ea3728470955ff3a54"
+    },
+    "favicon_ico": {
+      "url": "/brand/identity/3dyanimda/favicon.ico",
+      "width": 48,
+      "height": 48,
+      "mime": "image/x-icon",
+      "alt": "3dyanımda",
+      "bytes": 2642,
+      "sha256": "67cf26268e757d6f0019d5687d7e191d8cb3d945dea4626f36fbe845f689d0f7"
+    },
+    "og_image": {
+      "url": "/brand/identity/3dyanimda/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 44868,
+      "sha256": "482146379149b6be701fcb42d4404ee3b7bcd29dd011e03b513389a6f44d107b"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/3dyanimda/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dyanımda",
+      "bytes": 15883,
+      "sha256": "0bc93e7f4b1c640634119b94122e55b1922f5ea08643e2ea3728470955ff3a54"
+    }
+  },
+  "3dsanayi": {
+    "logo_wordmark": {
+      "url": "/brand/identity/3dsanayi/logo_wordmark.svg",
+      "width": 608.0615634591081,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 17809,
+      "sha256": "f543b7649f02215c6bc3567abed9440aa2bf3f194d99b5a4653c8674098f2203"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/3dsanayi/logo_wordmark_light.svg",
+      "width": 608.0615634591081,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 17809,
+      "sha256": "79583856c49c7f3a0cf1f57aed732dab899a623f2f56d66b69ac82b80cbc2680"
+    },
+    "logo_wordmark_png": {
+      "url": "/brand/identity/3dsanayi/logo_wordmark.png",
+      "width": 1200,
+      "height": 197,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 14661,
+      "sha256": "30763279bcb9ad0b1c94ee6719da2542ee2ba8548ffc493f003d5d231819972c"
+    },
+    "logo_icon": {
+      "url": "/brand/identity/3dsanayi/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 10699,
+      "sha256": "950b41e345d7ea3bffca6fb268e441e1de8decf264750fdbab669140ed2dcc11"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/3dsanayi/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 10699,
+      "sha256": "22853a6af4385f816d09c62cee45a97f229695145b11c4236caad6401ae1248a"
+    },
+    "logo_icon_png": {
+      "url": "/brand/identity/3dsanayi/logo_icon.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 6814,
+      "sha256": "b71104813c0535e00a2a0ae2b208f24ba41cb91f6ba636472ad26acbeba967d8"
+    },
+    "logo_text": {
+      "url": "/brand/identity/3dsanayi/logo_text.svg",
+      "width": 1004,
+      "height": 191,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 7131,
+      "sha256": "1e990f5aded61f09b6e3658b55eedfc5d3fbe757e087ae36194857c6bb5b6ffb"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/3dsanayi/logo_text_light.svg",
+      "width": 1004,
+      "height": 191,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 7131,
+      "sha256": "b8946c5a7f67e16f984d114b62eafb12f93e7964494b904d76f9aca856d66536"
+    },
+    "logo_text_png": {
+      "url": "/brand/identity/3dsanayi/logo_text.png",
+      "width": 1200,
+      "height": 228,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 14029,
+      "sha256": "8ccfc05d57f0f188816693e65ef380fffe696393a8636041df4da56ad325538d"
+    },
+    "favicon_svg": {
+      "url": "/brand/identity/3dsanayi/favicon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi",
+      "bytes": 10755,
+      "sha256": "633110e5e48fc3abd0a8c8186ff4d6229d90e33591fa388f37d8398c67cc9e1f"
+    },
+    "icon_16": {
+      "url": "/brand/identity/3dsanayi/icon-16.png",
+      "width": 16,
+      "height": 16,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 341,
+      "sha256": "b648e7381f0c7695116e492f5901a983bf326de430c08a01159516001dd3f357"
+    },
+    "icon_32": {
+      "url": "/brand/identity/3dsanayi/icon-32.png",
+      "width": 32,
+      "height": 32,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 628,
+      "sha256": "c15fc5cb861490864d8ed0df73406c7ec7ecfb9017f97c8cd94e4104a514cff5"
+    },
+    "icon_48": {
+      "url": "/brand/identity/3dsanayi/icon-48.png",
+      "width": 48,
+      "height": 48,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 937,
+      "sha256": "320350ace95f02f27987d87e0f96943b155c3fd17feb056a9176b407ab94e604"
+    },
+    "favicon": {
+      "url": "/brand/identity/3dsanayi/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 1726,
+      "sha256": "c0ea0de21843679f40580f0794060bedf5bdda0164a330d41da72ec63b78d5ed"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/3dsanayi/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 3261,
+      "sha256": "07602ad4643272701d159a1d6a2a9c07f212df301876efbf92848cd32e8ce8f3"
+    },
+    "icon_192": {
+      "url": "/brand/identity/3dsanayi/icon-192.png",
+      "width": 192,
+      "height": 192,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 3482,
+      "sha256": "4a3f2419284c8a1fc8b2512319616edea507fd59e082f0312a533167c6322f95"
+    },
+    "icon_512": {
+      "url": "/brand/identity/3dsanayi/icon-512.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 11098,
+      "sha256": "29fd47af7744573365c50cb52302ed32e1cd1333cb36be02e3ca25f508516f66"
+    },
+    "favicon_ico": {
+      "url": "/brand/identity/3dsanayi/favicon.ico",
+      "width": 48,
+      "height": 48,
+      "mime": "image/x-icon",
+      "alt": "3dsanayi",
+      "bytes": 1960,
+      "sha256": "b5688ad3fa1a56cdbef575951780a360b7085405d5009fbbecaf882d6ff95a77"
+    },
+    "og_image": {
+      "url": "/brand/identity/3dsanayi/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 36625,
+      "sha256": "38d67dc9de0fdb7a5203a15590c28c564fce5e9bda947e2435618307f72fdfe6"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/3dsanayi/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dsanayi",
+      "bytes": 11098,
+      "sha256": "29fd47af7744573365c50cb52302ed32e1cd1333cb36be02e3ca25f508516f66"
+    }
+  },
+  "maketyanimda": {
+    "logo_wordmark": {
+      "url": "/brand/identity/maketyanimda/logo_wordmark.svg",
+      "width": 691.9786324786324,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 14212,
+      "sha256": "1b5c7e6f6d103844e48ebd751139b638d1d483622a4e466e34ff0bf56c4a2fe8"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/maketyanimda/logo_wordmark_light.svg",
+      "width": 691.9786324786324,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 14212,
+      "sha256": "91d3defd4f6c06d33597d2a6f02a10fa51fbe810407c409f7fb40590003b0d07"
+    },
+    "logo_wordmark_png": {
+      "url": "/brand/identity/maketyanimda/logo_wordmark.png",
+      "width": 1200,
+      "height": 173,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 20493,
+      "sha256": "7f6bfae5188cc24bfbb4213af395e4c9524f75da5af86a18a450f5a5f1fe427f"
+    },
+    "logo_icon": {
+      "url": "/brand/identity/maketyanimda/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 6911,
+      "sha256": "a872df0aa61797e151c23ad356cf250a01909ebf3203262859723570fa8ca37a"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/maketyanimda/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 6911,
+      "sha256": "1d7aafd76db12b09386b2525f5968f1377e8c327632825e58e5965f097421da6"
+    },
+    "logo_icon_png": {
+      "url": "/brand/identity/maketyanimda/logo_icon.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 9942,
+      "sha256": "f5ab46505c69e893ed204f3d98992e7c93d4f20b0c605546de29c3b3738c2416"
+    },
+    "logo_text": {
+      "url": "/brand/identity/maketyanimda/logo_text.svg",
+      "width": 538,
+      "height": 72,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 7319,
+      "sha256": "71da0b7eefe4c69a13b5b1dffd72dc94709e58c222439c48fe843474f8630e0b"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/maketyanimda/logo_text_light.svg",
+      "width": 538,
+      "height": 72,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 7319,
+      "sha256": "c14cd91d831829f689eb462d95a3ce9bf14f76162198931f3946be876c9e4f89"
+    },
+    "logo_text_png": {
+      "url": "/brand/identity/maketyanimda/logo_text.png",
+      "width": 1200,
+      "height": 161,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 19059,
+      "sha256": "3c5e0b319de6d125d67061b57548c081e93f71898ef0fa9947e8f83e10536376"
+    },
+    "favicon_svg": {
+      "url": "/brand/identity/maketyanimda/favicon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda",
+      "bytes": 6967,
+      "sha256": "6036154e0d030c6039c1db01ce65d90c9ed4a46f1d46d4cc7cd28c00c36d67d5"
+    },
+    "icon_16": {
+      "url": "/brand/identity/maketyanimda/icon-16.png",
+      "width": 16,
+      "height": 16,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 417,
+      "sha256": "e4dd2d6f3cfe4dac4dcc95781f6d344a3b42ece97583d2c8cd377aeaaca3bae4"
+    },
+    "icon_32": {
+      "url": "/brand/identity/maketyanimda/icon-32.png",
+      "width": 32,
+      "height": 32,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 705,
+      "sha256": "aefb4a50c1807a2ddddbfde6164996d3a787fd45f1397e937b5851442a6f5a3c"
+    },
+    "icon_48": {
+      "url": "/brand/identity/maketyanimda/icon-48.png",
+      "width": 48,
+      "height": 48,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 1007,
+      "sha256": "643e6c41bf7cb517d93f9456412eb97e5c127eb975fde6363cc0add5674d4d16"
+    },
+    "favicon": {
+      "url": "/brand/identity/maketyanimda/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 1964,
+      "sha256": "ee0f61622a4367a9fc4bde3886db126fab3a58ea4bf531c95ec665fc2c65a8d2"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/maketyanimda/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 3809,
+      "sha256": "a282175b6603922f1dc0f8d85c4627c8308637e1c9f255295169d6faf8a0f361"
+    },
+    "icon_192": {
+      "url": "/brand/identity/maketyanimda/icon-192.png",
+      "width": 192,
+      "height": 192,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 4059,
+      "sha256": "8d87685bb4a1b0ee2c1d0e5e968e8592a6f2352bdeb79c0dc74d622e66a0bbda"
+    },
+    "icon_512": {
+      "url": "/brand/identity/maketyanimda/icon-512.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 13288,
+      "sha256": "ceb9b5a0bff56336b7033496c65767b97a661c2c69fcbc2a25c0cde2d8106e69"
+    },
+    "favicon_ico": {
+      "url": "/brand/identity/maketyanimda/favicon.ico",
+      "width": 48,
+      "height": 48,
+      "mime": "image/x-icon",
+      "alt": "maketyanımda",
+      "bytes": 2183,
+      "sha256": "1c011fc5d4ab2e302501239dc575e0d536f45e2731e1e69e898306f71550b505"
+    },
+    "og_image": {
+      "url": "/brand/identity/maketyanimda/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 42071,
+      "sha256": "8f1482b3653d5f779645fbc6753b2d04ae4ebe5633ff3bba54ce283bc699e683"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/maketyanimda/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "maketyanımda",
+      "bytes": 13288,
+      "sha256": "ceb9b5a0bff56336b7033496c65767b97a661c2c69fcbc2a25c0cde2d8106e69"
+    }
+  },
+  "parcayanimda": {
+    "logo_wordmark": {
+      "url": "/brand/identity/parcayanimda/logo_wordmark.svg",
+      "width": 530.7422037422037,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 26927,
+      "sha256": "2474bf427e01e1692601e1716e026b27e3d98bf354b3e91dce6317a82cfe10b4"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/parcayanimda/logo_wordmark_light.svg",
+      "width": 530.7422037422037,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 26927,
+      "sha256": "34b8d1d5f6d3909f8653d88a5477678f8f67bf65305a3364099194fa82567776"
+    },
+    "logo_wordmark_png": {
+      "url": "/brand/identity/parcayanimda/logo_wordmark.png",
+      "width": 1200,
+      "height": 226,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 41215,
+      "sha256": "90fb98db38d2fc4fa9a5be363eea404f32fcbdb712a0ce04545f5386a6f9f0ca"
+    },
+    "logo_icon": {
+      "url": "/brand/identity/parcayanimda/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 10421,
+      "sha256": "d52b07d741d109e0c7112669d6df489f5e82c05f5dcc4d8f7307c5c83443c52c"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/parcayanimda/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 10421,
+      "sha256": "4ee337c573fef01d8a2a7a903da403425aa55d2eeb06c82001ac9f8df0a5cfd1"
+    },
+    "logo_icon_png": {
+      "url": "/brand/identity/parcayanimda/logo_icon.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 10674,
+      "sha256": "fb168d48f0f54d5ae24a1ce5a7c79e5ffbfb6e3d00af2bf38b85fa8d41f38e71"
+    },
+    "logo_text": {
+      "url": "/brand/identity/parcayanimda/logo_text.svg",
+      "width": 463,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 16524,
+      "sha256": "1a8daa7a56d2f7d178b385df124e475fc96af834fd923727badbb44ab27793d8"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/parcayanimda/logo_text_light.svg",
+      "width": 463,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 16524,
+      "sha256": "0d71bb8970323c0276fc5e58302a042cbf1950a1aa06473af9447484941b510a"
+    },
+    "logo_text_png": {
+      "url": "/brand/identity/parcayanimda/logo_text.png",
+      "width": 1200,
+      "height": 192,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 23795,
+      "sha256": "f65ca0e2d80b2efe7c00ebe905c81538ca44960161fe593323c6cf771f6ed398"
+    },
+    "favicon_svg": {
+      "url": "/brand/identity/parcayanimda/favicon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda",
+      "bytes": 10477,
+      "sha256": "eb49684e88d5c7faceb430bfbbfc1af858f339074037df920ed5af4446bf527f"
+    },
+    "icon_16": {
+      "url": "/brand/identity/parcayanimda/icon-16.png",
+      "width": 16,
+      "height": 16,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 372,
+      "sha256": "113644b4715794fb4245345d77f1336c9cc9636bd34a45c25a993ee8ac624534"
+    },
+    "icon_32": {
+      "url": "/brand/identity/parcayanimda/icon-32.png",
+      "width": 32,
+      "height": 32,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 741,
+      "sha256": "058008c855da71c8fd5cb7a02f51ebb72a346e647cb443af05fa5d2d8d2f1501"
+    },
+    "icon_48": {
+      "url": "/brand/identity/parcayanimda/icon-48.png",
+      "width": 48,
+      "height": 48,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 1032,
+      "sha256": "70f90895dae552d645d393c53392fa8f810154aa1b00ed20c2266e4eb22ff042"
+    },
+    "favicon": {
+      "url": "/brand/identity/parcayanimda/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 2006,
+      "sha256": "8a5cfd04d389ed118b2292415eb5ea4cba8e402767d8fc3cb15ac3ec75ceaf59"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/parcayanimda/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 4069,
+      "sha256": "84bc737d750eb112bc1bc424696981800b63d8c76e4efbd52da0d95f87ba88ae"
+    },
+    "icon_192": {
+      "url": "/brand/identity/parcayanimda/icon-192.png",
+      "width": 192,
+      "height": 192,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 4377,
+      "sha256": "40dc88ddf899a8626d9ace391aea023b0a0af6ea5b74bb712d539da5b01890a6"
+    },
+    "icon_512": {
+      "url": "/brand/identity/parcayanimda/icon-512.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 14299,
+      "sha256": "5fb3e4fc436e2cb96d603c46ea006327551cb9499d57d525cb4b853570e07d89"
+    },
+    "favicon_ico": {
+      "url": "/brand/identity/parcayanimda/favicon.ico",
+      "width": 48,
+      "height": 48,
+      "mime": "image/x-icon",
+      "alt": "parçayanımda",
+      "bytes": 2199,
+      "sha256": "8c3f6103ac6970b91ad484ecb4414f93b5387a310e05c02197af5c2ba4fc4ca7"
+    },
+    "og_image": {
+      "url": "/brand/identity/parcayanimda/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 45550,
+      "sha256": "218962b28d83a5ca042f6ee751791153c30a3ab898492a1435271712dbe24c54"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/parcayanimda/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "parçayanımda",
+      "bytes": 14299,
+      "sha256": "5fb3e4fc436e2cb96d603c46ea006327551cb9499d57d525cb4b853570e07d89"
+    }
+  }
+}

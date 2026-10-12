@@ -7,6 +7,7 @@ import {useNavItems} from '@/hooks/useNavItems';
 import {resolveMediaUrl} from '@/lib/media';
 import {getSiteTheme} from '@/themes/config';
 import './navigation.css';
+import {brandAsset} from '@/lib/brand-assets';
 const services=[{path:'/3d-baski',label:'3D Baskı',caption:'Dijital modelden fiziksel parçaya',icon:Printer},{path:'/3d-tarama',label:'3D Tarama',caption:'Mevcut objeden yüzey verisine',icon:ScanLine},{path:'/3d-modelleme',label:'3D Modelleme',caption:'Fikir ve ölçüden CAD tasarımına',icon:Layers3}];
 const groups=[{title:'Üretimi planlayın',items:[['/cozumler','Uygulama alanları'],['/sektorler','Sektörler'],['/malzemeler','Malzeme seçenekleri']]},{title:'Bilgiye ulaşın',items:[['/rehber','Teknik rehberler'],['/bolgeler','Hizmet bölgeleri'],['/hizmetler','Tüm hizmetler']]},{title:'Bizi tanıyın',items:[['/hakkimizda','Hakkımızda'],['/iletisim','İletişim'],['/admin/login','Yönetim girişi']]}];
 export default function BrandNavigation(){
@@ -16,11 +17,11 @@ export default function BrandNavigation(){
  useEffect(()=>{const el=dialog.current;if(!el)return;if(mobile&&!el.open)el.showModal();else if(!mobile&&el.open)el.close();const old=document.body.style.overflow;if(mobile)document.body.style.overflow='hidden';return()=>{document.body.style.overflow=old;};},[mobile]);
  useEffect(()=>{if(!expanded)return;const key=(event:KeyboardEvent)=>{if(event.key==='Escape'){setExpanded(false);exploreButton.current?.focus();}};const outside=(event:PointerEvent)=>{if(!explore.current?.contains(event.target as Node))setExpanded(false);};document.addEventListener('keydown',key);document.addEventListener('pointerdown',outside);return()=>{document.removeEventListener('keydown',key);document.removeEventListener('pointerdown',outside);};},[expanded]);
  const extra=useNavItems('header_extra').filter(i=>i.url.startsWith('/')&&!i.url.startsWith('//'));
- const wordmark=resolveMediaUrl(brand.settings.logo_wordmark?.url);
+ const wordmark=brandAsset(brand.slug,theme==='industrial'?'logo_wordmark_light':'logo_wordmark',brand.settings);
  const link=(path:string)=>path+previewSearch(location.search);
  useEffect(()=>{setExpanded(false);setMobile(false)},[location.pathname,location.search]);
  useEffect(()=>{const mq=window.matchMedia('(min-width: 1100px)');const close=()=>{setMobile(false);setExpanded(false)};mq.addEventListener('change',close);return()=>mq.removeEventListener('change',close)},[]);
- const logo=<Link to={link('/')} className="product-wordmark" aria-label={brand.name+' anasayfa'}>{wordmark?<img src={wordmark} alt={brand.name}/>:<><Box size={27} strokeWidth={1.5}/><span>{brand.name}</span></>}</Link>;
+ const logo=<Link to={link('/')} className="product-wordmark" aria-label={brand.name+' anasayfa'}><img src={wordmark.url} width="200" height="40" alt={brand.name}/></Link>;
  const directory=(close:()=>void)=><>{groups.map(group=><section className="navigation-group" key={group.title}><h3>{group.title}</h3>{group.items.map(([path,label])=><NavLink key={path} to={link(path)} onClick={close}>{label}<ArrowUpRight size={14}/></NavLink>)}</section>)}{extra.length>0&&<section className="navigation-group"><h3>Diğer bağlantılar</h3>{extra.map(item=><NavLink key={item.id} to={link(item.url)} onClick={close}>{item.label_tr}<ArrowUpRight size={14}/></NavLink>)}</section>}</>;
  return <header className="product-header" data-navigation-theme={theme}>
   <div className="product-header-inner">{logo}

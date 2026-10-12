@@ -1,0 +1,290 @@
+{
+  "3dyanimda": {
+    "logo_icon": {
+      "url": "/brand/identity/3dyanimda/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/3dyanimda/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda"
+    },
+    "logo_wordmark": {
+      "url": "/brand/identity/3dyanimda/logo_wordmark.svg",
+      "width": 508.78794178794175,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/3dyanimda/logo_wordmark_light.svg",
+      "width": 508.78794178794175,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda"
+    },
+    "logo_text": {
+      "url": "/brand/identity/3dyanimda/logo_text.svg",
+      "width": 391,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/3dyanimda/logo_text_light.svg",
+      "width": 391,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "3dyanımda"
+    },
+    "favicon": {
+      "url": "/brand/identity/3dyanimda/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "3dyanımda"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/3dyanimda/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "3dyanımda"
+    },
+    "og_image": {
+      "url": "/brand/identity/3dyanimda/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "3dyanımda"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/3dyanimda/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dyanımda"
+    }
+  },
+  "3dsanayi": {
+    "logo_icon": {
+      "url": "/brand/identity/3dsanayi/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/3dsanayi/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi"
+    },
+    "logo_wordmark": {
+      "url": "/brand/identity/3dsanayi/logo_wordmark.svg",
+      "width": 608.0615634591081,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/3dsanayi/logo_wordmark_light.svg",
+      "width": 608.0615634591081,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi"
+    },
+    "logo_text": {
+      "url": "/brand/identity/3dsanayi/logo_text.svg",
+      "width": 1004,
+      "height": 191,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/3dsanayi/logo_text_light.svg",
+      "width": 1004,
+      "height": 191,
+      "mime": "image/svg+xml",
+      "alt": "3dsanayi"
+    },
+    "favicon": {
+      "url": "/brand/identity/3dsanayi/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "3dsanayi"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/3dsanayi/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "3dsanayi"
+    },
+    "og_image": {
+      "url": "/brand/identity/3dsanayi/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "3dsanayi"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/3dsanayi/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "3dsanayi"
+    }
+  },
+  "maketyanimda": {
+    "logo_icon": {
+      "url": "/brand/identity/maketyanimda/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/maketyanimda/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda"
+    },
+    "logo_wordmark": {
+      "url": "/brand/identity/maketyanimda/logo_wordmark.svg",
+      "width": 691.9786324786324,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/maketyanimda/logo_wordmark_light.svg",
+      "width": 691.9786324786324,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda"
+    },
+    "logo_text": {
+      "url": "/brand/identity/maketyanimda/logo_text.svg",
+      "width": 538,
+      "height": 72,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/maketyanimda/logo_text_light.svg",
+      "width": 538,
+      "height": 72,
+      "mime": "image/svg+xml",
+      "alt": "maketyanımda"
+    },
+    "favicon": {
+      "url": "/brand/identity/maketyanimda/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "maketyanımda"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/maketyanimda/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "maketyanımda"
+    },
+    "og_image": {
+      "url": "/brand/identity/maketyanimda/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "maketyanımda"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/maketyanimda/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "maketyanımda"
+    }
+  },
+  "parcayanimda": {
+    "logo_icon": {
+      "url": "/brand/identity/parcayanimda/logo_icon.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda"
+    },
+    "logo_icon_light": {
+      "url": "/brand/identity/parcayanimda/logo_icon_light.svg",
+      "width": 512,
+      "height": 512,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda"
+    },
+    "logo_wordmark": {
+      "url": "/brand/identity/parcayanimda/logo_wordmark.svg",
+      "width": 530.7422037422037,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda"
+    },
+    "logo_wordmark_light": {
+      "url": "/brand/identity/parcayanimda/logo_wordmark_light.svg",
+      "width": 530.7422037422037,
+      "height": 100,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda"
+    },
+    "logo_text": {
+      "url": "/brand/identity/parcayanimda/logo_text.svg",
+      "width": 463,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda"
+    },
+    "logo_text_light": {
+      "url": "/brand/identity/parcayanimda/logo_text_light.svg",
+      "width": 463,
+      "height": 74,
+      "mime": "image/svg+xml",
+      "alt": "parçayanımda"
+    },
+    "favicon": {
+      "url": "/brand/identity/parcayanimda/icon-96.png",
+      "width": 96,
+      "height": 96,
+      "mime": "image/png",
+      "alt": "parçayanımda"
+    },
+    "apple_touch_icon": {
+      "url": "/brand/identity/parcayanimda/icon-180.png",
+      "width": 180,
+      "height": 180,
+      "mime": "image/png",
+      "alt": "parçayanımda"
+    },
+    "og_image": {
+      "url": "/brand/identity/parcayanimda/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/png",
+      "alt": "parçayanımda"
+    },
+    "organization_logo": {
+      "url": "/brand/identity/parcayanimda/organization-logo.png",
+      "width": 512,
+      "height": 512,
+      "mime": "image/png",
+      "alt": "parçayanımda"
+    }
+  }
+}

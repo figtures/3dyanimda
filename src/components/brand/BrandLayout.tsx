@@ -1,3 +1,4 @@
+import {brandAsset} from '@/lib/brand-assets';
 import BrandNavigation from "./BrandNavigation";
 import {
   Link,
@@ -124,8 +125,7 @@ export function BrandLayout() {
         </div>
         <div className="footer-top">
           <Link className="brand-logo" to={link("/")}>
-            <Box />
-            {brand.name}
+            <img src={brandAsset(brand.slug,'logo_wordmark_light',brand.settings).url} width="240" height="60" alt={brand.name} className="footer-brand-image" loading="lazy" />
           </Link>
           <p>
             3D baskı, 3D tarama ve 3D modelleme.

@@ -40,7 +40,7 @@ try {
     await page.waitForFunction(()=>document.querySelector('[data-pending-queries]')?.getAttribute('data-pending-queries')==='0');
     const data=await page.evaluate(()=>({h1:[...document.querySelectorAll('h1')].map(e=>e.textContent),title:document.title,canonical:document.querySelector('link[rel=canonical]')?.href,robots:document.querySelector('meta[name=robots]')?.content,theme:document.querySelector('.brand-site')?.getAttribute('data-theme'),image:document.querySelector('meta[property="og:image"]')?.content,schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(e=>JSON.parse(e.textContent)),date:document.querySelector('[data-content-modified]')?.getAttribute('datetime'),text:document.querySelector('main')?.textContent||''}));
     assert.equal(data.h1.length,1,brand+route);assert.equal(data.canonical,origin+route);assert.equal(data.theme,theme);assert.doesNotMatch(data.robots,/noindex/);assert.equal(data.schemas.length,1);
-    assert.equal(data.image,origin+'/brand/social/'+brand+'-v1.png');
+    assert.equal(data.image,origin+'/brand/identity/'+brand+'/og-image.png');
     const nodes=data.schemas[0]['@graph'];assert.equal(nodes.filter(n=>n['@type']==='Organization').length,1);assert.equal(new Set(nodes.map(n=>n['@id'])).size,nodes.length);
     const content=records.get(brand+route);if(content){assert.equal(data.h1[0],content.title);assert.ok(data.text.includes(content.summary));const node=nodes.find(n=>n['@type']==='FAQPage');assert.deepEqual(node.mainEntity.map(n=>[n.name,n.acceptedAnswer.text]),content.faq.map(f=>[f.q,f.a]));assert.equal(nodes.find(n=>n['@id']===origin+route+'#webpage').dateModified,data.date);}
     if(notes[route])assert.ok(data.text.includes(notes[route].text));

@@ -1,0 +1,11 @@
+{
+  "conversation": "SVG logo tasarımı",
+  "retrieved": "2026-10-12",
+  "3dsanayi": {
+    "status": "latest concept; final selection not confirmed",
+    "source": "3dsanayi için siyah beyaz 3S logosu.png",
+    "source_sha256": "0556125bcf9e83f43235476a948a29528b7a72fa5cbf4a06ccf241595c34c2d4",
+    "adaptation": "Monochrome contour trace, threshold 100/255, 0.65px simplification; horizontal lockup assembled from original symbol and outlined lettering."
+  },
+  "others": "Original user SVG path groups preserved; symbol, lettering and lockup variants extracted; white variants recolored for dark backgrounds."
+}

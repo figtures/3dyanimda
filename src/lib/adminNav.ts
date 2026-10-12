@@ -67,7 +67,7 @@ export const ADMIN_NAV: AdminNavGroup[] = [
   ]},
   { key: "appearance", label: "Görünüm", items: [
     { to: "/admin/theme", label: "Tema", description: "Renk, font, layout", icon: Palette, perm: "settings.theme" },
-    { to: "/admin/settings", label: "Logo & Ayarlar", description: "Marka ve genel ayarlar", icon: Settings, perm: "settings.edit" },
+    { to: "/admin/settings", label: "Marka görselleri", description: "Logo, favicon ve paylaşım görselleri", icon: Settings, perm: "settings.edit" },
     { to: "/admin/translations", label: "Çeviriler", description: "TR / EN site metinleri", icon: Languages, perm: "translations.edit", feature: "admin.translations" },
     { to: "/admin/email-templates", label: "E-posta Şablonları", description: "Otomatik e-postalar", icon: Mail, perm: "email_templates.edit", feature: "admin.email_templates" },
   ]},
