@@ -5,6 +5,7 @@ import {readFile,writeFile,readdir,access,mkdir} from 'node:fs/promises';
 import path from 'node:path';
 import {JSDOM} from 'jsdom';
 import {mergeIdentityNodes} from './identity-graph.mjs';
+import {assertFAQParity} from './faq-parity.mjs';
 const allBrands=['3dyanimda','3dsanayi','maketyanimda','parcayanimda'];
 const selected=process.argv.slice(2).length?process.argv.slice(2):allBrands;
 assert.ok(selected.every(brand=>allBrands.includes(brand)));
@@ -69,7 +70,7 @@ for(const brand of selected){
     const article=document.querySelector('.content-article');assert.ok(article,brand+item.path+' authored content');
     const visible=normalize(article.textContent);
     for(const text of [record.local_context,record.logistics,record.editorial?.answer,...(record.sections||[]).flatMap(section=>[section.title,section.body])].filter(Boolean))for(const paragraph of text.split(/\n+/).filter(Boolean))assert.ok(visible.includes(normalize(paragraph)),brand+item.path+' authored visible text');
-    if(record.faq?.length){for(const entry of record.faq)for(const value of [entry.q,entry.a])assert.ok(visible.includes(normalize(value)),brand+item.path+' visible FAQ');const faq=schemas.find(s=>s['@type']==='FAQPage');assert.deepEqual(faq?.mainEntity,record.faq.map(entry=>({'@type':'Question',name:entry.q,acceptedAnswer:{'@type':'Answer',text:entry.a}})));}
+    if(record.faq?.length){for(const entry of record.faq)for(const value of [entry.q,entry.a])assert.ok(visible.includes(normalize(value)),brand+item.path+' visible FAQ');const faq=schemas.find(s=>s['@type']==='FAQPage');assertFAQParity(faq?.mainEntity,record.faq,origin+item.path);}
    }
    if(item.path==='/iletisim'){
     const visible=normalize(document.querySelector('.contact-details')?.textContent||'');

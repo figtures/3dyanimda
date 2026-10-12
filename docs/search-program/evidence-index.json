@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "ab0289e2a8572e29bc56d934e45d94eb94a0b86ab8ef312d7ea8ef473a464e9c",
-      "bytes": 6897
+      "sha256": "b81a562bb616ce7cd5c90c5f8a9761997373063a09e5eea37593bf9195ebfc70",
+      "bytes": 6933
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -965,11 +965,26 @@
       "path": "docs/audits/release-originality-2026-10-12.json",
       "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c",
       "bytes": 306
+    },
+    {
+      "path": "scripts/quality/faq-parity.mjs",
+      "sha256": "413498fc108df6360264ed5e4cce14fbc13255691a57ec7fb8badad14f168283",
+      "bytes": 846
+    },
+    {
+      "path": "scripts/quality/faq-parity.test.mjs",
+      "sha256": "35f721c4fcee5643d49c3195a1622950d5a45ddaeb218762134e01e17aaf7c56",
+      "bytes": 1350
+    },
+    {
+      "path": "docs/audits/cloudflare-candidate-lighthouse-2026-10-12.json",
+      "sha256": "b912e88b479dfd2df33db6230459fb0abe4af463d692ef1352e72545f2ac5513",
+      "bytes": 158197
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-12T01:07:55.112Z",
+  "checksumsRefreshedAt": "2026-10-12T01:15:37.659Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

@@ -51,7 +51,7 @@
     "assets:social": "node scripts/create-social-cards.mjs",
     "assets:hero": "node scripts/optimize-hero-assets.mjs",
     "audit:search-evidence": "node scripts/quality/evidence-index.mjs",
-    "test:search:local": "node --test scripts/quality/check-protocols.test.mjs scripts/quality/evidence-index.test.mjs scripts/quality/identity-graph.test.mjs scripts/quality/schema-integrity.test.mjs scripts/quality/semantic-date.test.mjs scripts/search/*.test.mjs scripts/cloudflare/*.test.mjs supabase/functions/send-quote-email/emailjs.test.mjs scripts/quality/release-certificate.test.mjs",
+    "test:search:local": "node --test scripts/quality/check-protocols.test.mjs scripts/quality/evidence-index.test.mjs scripts/quality/identity-graph.test.mjs scripts/quality/schema-integrity.test.mjs scripts/quality/semantic-date.test.mjs scripts/search/*.test.mjs scripts/cloudflare/*.test.mjs supabase/functions/send-quote-email/emailjs.test.mjs scripts/quality/release-certificate.test.mjs scripts/quality/faq-parity.test.mjs",
     "assets:brand": "node scripts/create-brand-assets.mjs",
     "cloudflare:prepare": "node scripts/cloudflare/prepare.mjs",
     "verify:3dyanimda": "node scripts/cloudflare/brand.mjs verify 3dyanimda",

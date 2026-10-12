@@ -1,0 +1,5188 @@
+{
+  "kind": "candidate-artifact-lab",
+  "production": false,
+  "fieldData": false,
+  "publicDnsOrTlsVerified": false,
+  "sourceCommit": "2eeb56c09bfc05a8e083ee977e0dc1fce4bad128",
+  "workflowRun": 38190706900,
+  "workflowURL": "https://github.com/figtures/3dyanimda/actions/runs/38190706900",
+  "completedRuns": 240,
+  "routeRepeats": 3,
+  "aggregate": [
+    {
+      "brand": "3dyanimda",
+      "device": "mobile",
+      "runs": 30,
+      "performance": [
+        98,
+        100
+      ],
+      "routeMedians": [
+        99,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "3dyanimda",
+      "device": "desktop",
+      "runs": 30,
+      "performance": [
+        100,
+        100
+      ],
+      "routeMedians": [
+        100,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "3dsanayi",
+      "device": "mobile",
+      "runs": 30,
+      "performance": [
+        99,
+        100
+      ],
+      "routeMedians": [
+        99,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "3dsanayi",
+      "device": "desktop",
+      "runs": 30,
+      "performance": [
+        100,
+        100
+      ],
+      "routeMedians": [
+        100,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "maketyanimda",
+      "device": "mobile",
+      "runs": 30,
+      "performance": [
+        99,
+        100
+      ],
+      "routeMedians": [
+        99,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "maketyanimda",
+      "device": "desktop",
+      "runs": 30,
+      "performance": [
+        100,
+        100
+      ],
+      "routeMedians": [
+        100,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "parcayanimda",
+      "device": "mobile",
+      "runs": 30,
+      "performance": [
+        95,
+        100
+      ],
+      "routeMedians": [
+        100,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    },
+    {
+      "brand": "parcayanimda",
+      "device": "desktop",
+      "runs": 30,
+      "performance": [
+        100,
+        100
+      ],
+      "routeMedians": [
+        100,
+        100
+      ],
+      "seo": 100,
+      "accessibility": 100,
+      "bestPractices": 100
+    }
+  ],
+  "runs": [
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:08:59.731Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1658.2026,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 84.5
+      },
+      "sha256": "c8150f53b13a269381d5a1a85bbdf7fcf13bba85c084179eac64dfc82580724f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-home-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:08.700Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.1678000000002,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 107.50000000000011
+      },
+      "sha256": "f0a67cf7abf9535a4a48e3078bce1ee7b3227203f7972e55e6da2a209a586919",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-home-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:16.683Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.069,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 63
+      },
+      "sha256": "dad01b0bc1c288ca329b30f26a79e4685ae384541b93907c020eb79dc9c130b3",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-home-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:27.854Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1507.2341000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 108
+      },
+      "sha256": "5f59e3f50ded7b9f41b98f3e90fad2842de888790c4e397c446e7703e2b44cd7",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-baski-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:35.670Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1581.8857,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 113.5
+      },
+      "sha256": "2bb14c585c2bdaefaa5fad05371719798e6dfaf7e224e4518af04b6f8abdedc0",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-baski-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:43.103Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.8254,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 111
+      },
+      "sha256": "2c126b6dd259fc5b06fab5a044df3d5f00a6c3bca9a9fc51f2cbe21e38995e2f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-baski-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:54.405Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.4374,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 106.49999999999989
+      },
+      "sha256": "f702c6dc2c751800b3de861a3f343936d2484d8c6717b79d4226289861480987",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-tarama-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:01.429Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.3966,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 81.5
+      },
+      "sha256": "1bf3ea114a7fb303cbf5b0a2f4e312c66871ac9af999430bd80410104e1387f3",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-tarama-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:08.362Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.6922,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 54
+      },
+      "sha256": "45d60d2b5e5acb323e3194982d8dcc3e26dde4b100baa623028b54163edd1e9d",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-tarama-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:18.392Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1656.5919,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 48.999999999999886
+      },
+      "sha256": "8a89f6e96d4b338a4bc3d3f71290c393f917e0ab0bc23ead5e53cb871692e970",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-modelleme-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:25.301Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1508.3265999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 38
+      },
+      "sha256": "932593dd1466368757793ded511b3a35090853250cd3eb90ac4baa9bef23bece",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-modelleme-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:32.233Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.8652,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 69.00000000000023
+      },
+      "sha256": "cfd81899fa71c257686fda50df4417ff1754067d852c0063108cda0394da496f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-modelleme-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:42.247Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1584.2657,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 64
+      },
+      "sha256": "12104e9ba7c276d7fef9c2ec28c207b930d61e87ce173dc3bcb1d5342cc3db7f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-teklif-al-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:49.353Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.9128,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 50.5
+      },
+      "sha256": "d6b2ff4943c908cb541659c9101990bf5148e90a0f0de98c299aa59304cd336e",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-teklif-al-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:56.477Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1656.2455,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 91.5
+      },
+      "sha256": "1716f6592b2ac97c0580a3f18f6ab15470cf77853f4662a536017d0890db7027",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-teklif-al-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:06.498Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.6898,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 62
+      },
+      "sha256": "1fbc029af4b3cc728566b0f310cff8bf3b7c6869d2338da277292355a7f2c698",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-iletisim-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:12.992Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.3115,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 107
+      },
+      "sha256": "88b38a33b301fe0ee9a68c2b9abf7154851eae73aff32125cf72cba9900fbefe",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-iletisim-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:19.507Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.8076999999998,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 12
+      },
+      "sha256": "c82ed293bcd305b58d9f9ac2a96d4e550caf7e550061e806c71b05b01f75bcd4",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-iletisim-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:28.687Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.3694,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 74
+      },
+      "sha256": "e2b30642b0672bc7ce89f6e1d390fc2b4b1728b3969dfae182fb51a68f5cb2a8",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-cozumler-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:35.250Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.8182000000002,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 98
+      },
+      "sha256": "93b04204889f3b21d120980f709708fabdb7bbe9e586719da3021c6ce15da792",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-cozumler-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:41.929Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.1334000000002,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 61
+      },
+      "sha256": "72b76ebb77737813ba76c7bf2305273e70011a60d9b320a28e2943e19cd67e27",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-cozumler-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:51.598Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1356.0309,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 86
+      },
+      "sha256": "1bd6be37959aaa5ac1b264dc242cd0b0858c8f0d0baa6bc31936fc00d5b86a8f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-malzemeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:58.196Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.3576,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 83
+      },
+      "sha256": "9c4f2f704309801cf092f68a80c86427facdea5a2982924fbe0338efe0e52eba",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-malzemeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:04.847Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.4791,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 45.5
+      },
+      "sha256": "eeab1a6b4b76beeeb616830a78d1f827ee31eba45ee1c737f2b28fcc03bd0713",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-malzemeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:14.582Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.4804,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 98
+      },
+      "sha256": "6f7012fffa723cbc6d8bb7cb9d3e9b0cb7edf71f3696d41c417df8fcf95eff1b",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-rehber-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:21.288Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.4502,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 92.00000000000023
+      },
+      "sha256": "754079b9be76d35f20069c5f5c5e47e320a1618030422dfc96720cf54048076f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-rehber-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:28.100Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.2459,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 68.5
+      },
+      "sha256": "57100afb0254ab7732e4151261332da1957365163034b4e1afe16732141faabe",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-rehber-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:37.925Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1658.2621,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 66
+      },
+      "sha256": "2e20d77f189f1014775b56cd9f0f219de925caf2474575922e59ec6b2e24c9f3",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-bolgeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:46.209Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1656.0900000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 114
+      },
+      "sha256": "47b74c4b7fd2945b82c6f3d79fdb58bc6e71fa29be70b716591947112266e115",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-bolgeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:54.497Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1656.6880999999998,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 34.5
+      },
+      "sha256": "a4870ecaeecbf74fc2c71de64c71624e3c88e931c3f41168b44ab021bf910a9f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-bolgeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:08:49.092Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.0565000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 252.0000000000001
+      },
+      "sha256": "472dbc32282d72baec61cec636fd9a6d324d6323117e29eaa398e0acebd54ddb",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-home-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:08:57.234Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1653.3582000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 5
+      },
+      "sha256": "967efa9a95d0ebae938a838661cb0c1aeaf4d4cbf437121a1b0b108a08eb42ef",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-home-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:03.791Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1653.9314,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 51.5
+      },
+      "sha256": "8403930c09d417316e1e835d47a8d491e00e74b46ff6621c7ca2e2d922f7e90f",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-home-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:13.596Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.1518999999998,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 38.5
+      },
+      "sha256": "c0a786578e4542a8bd075561a64f51f4482c246f286682254bfdd71c6968cd9a",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-baski-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:19.829Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.0697,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 3.5
+      },
+      "sha256": "60a2765adf416b818fb2f3c36927f01aba268f0862b94e79e4509adabcc92037",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-baski-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:26.017Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1653.3205,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 39
+      },
+      "sha256": "11efddf74300dbb7b2591a50cd3374ec609d55fb85fd697c90b5034be1ad6877",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-baski-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:35.837Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1502.6743000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 29.5
+      },
+      "sha256": "70be2c13ba814c12d187f3a1ca9103e212d30f7b066d093f1d2e5b7110c12074",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-tarama-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:42.005Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1654.2060999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 18
+      },
+      "sha256": "76a7e259232d95e4dfba913d9249ae278960653be09d2e658f18159727a60ce6",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-tarama-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:48.119Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.1521,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 7
+      },
+      "sha256": "5e357acfe059aad00604dd6a06090bc0091c1601392a5284b8edf47e6f2fb1b0",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-tarama-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:57.319Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1502.887,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 8.5
+      },
+      "sha256": "d8b62b9c92bdb5446be03abc426a8aaebfec753cf91f2f1970f12da337446b56",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-modelleme-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:03.379Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1502.0178,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 10.5
+      },
+      "sha256": "f63d914eef3dedc21bace413cd51d1064df5cad3323a2dd961a93e0c79034cf3",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-modelleme-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:09.459Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1502.7206,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 4
+      },
+      "sha256": "0bbc34b1df3f7601f060a7e6d540a6f6d8083edc4ca00252d58ca21d59db6059",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-modelleme-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:18.383Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1653.7423,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "8b3d4422f8dbcd9621eaf35f03ddccdb83ab2d1fc155d253e5b2fb9c9790086a",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-teklif-al-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:24.716Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1579.0629,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 44
+      },
+      "sha256": "8e115ce5bd3cee8368a8383846fd5b636f3815e68935ecf0670892818c24239c",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-teklif-al-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:31.094Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1652.8679,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "98d47474d82eab815019aad4e6924c36edbb36bb9dfdc9286bd8b338c92f5256",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-teklif-al-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:40.552Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1352.7305999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 1
+      },
+      "sha256": "401177e3246d21d343d4f22d9a4952394d5b26484cda65fe040bacce71853026",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-iletisim-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:46.513Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.0194999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2.5
+      },
+      "sha256": "a1c88bb67a758fef0fbd3c439b20d6c17c0d12e554f8e45fc6ba249ac881b969",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-iletisim-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:52.372Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.8478,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 6
+      },
+      "sha256": "af70a88807f271bac8788713627967877429886ca94cce8f23f157fe12f34145",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-iletisim-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:01.194Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.1005,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 12
+      },
+      "sha256": "ac4ad84f910120f81649dd7dae96d5e22c2a2ac5b6afd0bb695519fcc651f712",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-cozumler-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:07.158Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.3186,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2
+      },
+      "sha256": "7f27411d69408df018d81229a62916ae076e1851043d88c59573f442b0c1c79b",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-cozumler-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:13.158Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1352.6046999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 9
+      },
+      "sha256": "15189320fd2343bee0cc50567f37620c3c75e0dcdbfa2e1e324fd35af163b973",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-cozumler-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:22.127Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.3243,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "e4f24cadf784a0293d788bdab0e666f5b452f9b7232c5f53f9608991df94218c",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-malzemeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:27.979Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1352.3689,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 3
+      },
+      "sha256": "49be5511dc0c5faa71879d1accbaac820f391f6d3527d454b49ff033f33a07b9",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-malzemeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:33.880Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.8061,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 11
+      },
+      "sha256": "bdd7ec8c8a2167ead582c53af9aee98afafc679ac7194109b531fbb34aab25ff",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-malzemeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:42.754Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.3223,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 51.5
+      },
+      "sha256": "f0531d9f947d99a998efaadd7b5126d7781cd2d987c77d1e53e019027f004b25",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-rehber-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:48.768Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.4143,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 46.5
+      },
+      "sha256": "05c37664f73e380115acd42ed496a3bc779d3248d364042cdf1e558617295440",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-rehber-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:54.820Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.9077,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 8.5
+      },
+      "sha256": "a38a3ce625550c08b2fc5419a8389a9218d6aee571c0a7810a70870cd135897e",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-rehber-mobile-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:04.856Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.2687,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "0dba4bcc5616aed372db75deba2a0038e1f06f775476951ddaec961447f42afe",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-bolgeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:11.534Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1502.1255999999998,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 6
+      },
+      "sha256": "4f1a6d57b593daec429c8d532d52407f7d35c971e5627238cc41d68e1490cbdc",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-bolgeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:18.382Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.1856,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 3.5
+      },
+      "sha256": "ec5c29b3fdc2ec303abb720bfe6a25127c788d050e7e964a07d95b863fe9c3b3",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-bolgeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:07.303Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 407.1201,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "5d5c5f3514fa778b3f790fe7a5572c36afa0dc187b0aad4db146d0f9f19eafa6",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:16.731Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 406.9089,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "d8e231404d69d8f6ef461430672bd4409bc5453b363f033bbc43bc014522a3cb",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:25.347Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 386.5752,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "75d861ee5fa430b266403894bc681cda35d4db3fe38e586a8ebf585e20bc7618",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:37.159Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.5007,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "47b1f067c8d027de60a0529620bf127d9e45782ef453e4efeb54377590c42b7b",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:44.971Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 386.7566,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "bc0e098534fc9c8e789f98e32e58513dfea7ac48146f418ffcf424e10239c81e",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:52.684Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.953,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "64c8538cdca695b8b3152a71c3cc98486f51495290a2118b5417dcbecc03748b",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:04.432Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.2946,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "593475cc44e277ae2e87023ed78cf8e5494a1a5a68eb3b15d21e9fc488fbf80f",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-tarama-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:11.883Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.2597,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "57781b4f0a8c63a83aadeff90df41ce3f3755f50e79a798063a7d8a4be88cc69",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-tarama-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:19.155Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 367.0505,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "2cd968014f88b899cf5b269d0e591a8e02c2aaa6538c011b21aa43ca08ba6dce",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-tarama-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:29.446Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.8971,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "c8ff2ce347607a8a105455e998b5838229cb886f99e1d9d312d3cdc5fea95222",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-modelleme-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:36.575Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 369.7049,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "5add3373957a87a2870150e83f76d4dbaeb3f34c0d41579af6cdaef7f98720a6",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-modelleme-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:43.689Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.2024,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "db95113c657c826d0f5af14b820c743b597b6dcb99fd8ac709609f3b2b65125f",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-modelleme-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:53.816Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 373.0138,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "c502d246fce3b95ce7a3a96f898c2aa1b489c6f2d9c87104bc94cf9244c9f906",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:01.161Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 376.2693,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "90dec0f01968c956a69fb3cf6d199e48ad7f37e2d2e66183a5f13f56636cb0a8",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:08.503Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 383.6898,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "bb15fec68625cca54c0598ae3b4630d81f8e0ee5db4062b6f5768d99ba4bdbc1",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:18.954Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 323.5462,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "0c003ea51d4223c722d939c4cdc776543a66082f6567657b982e3215e7e45284",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-iletisim-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:25.580Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 327.03819999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "332c7608c13a0410f4f323146ccde5148879271896c33577e89d9782ef66e7b2",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-iletisim-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:32.131Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.9051,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "701211790c974bcf21de20e78fa80c3772bc15ce7a16296b981be28d0403fee0",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-iletisim-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:41.630Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 326.1042,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "c82a11b60273e2d47c33aa1edbf7138e63a91db99bfac69c1f9db0df04abdda0",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-cozumler-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:48.317Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.0656,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "1a0d38bbcac8f86f7c675a376c994e4bbc6fa4394ff05887e4845e825a809a17",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-cozumler-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:54.990Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.2224,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "531a2ae921a361be32b34560c99602e05379ca00fb620b6f0f962d36d6be6b31",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-cozumler-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:04.741Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.3496,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "fafbd68b9427c69090e2738ebd13db5ab355ba388c4289b77c7995c6996fe2ca",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-malzemeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:11.508Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.70029999999997,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "d36f3da73a4ff280b81b18cb6749ef8f00667b49c6c71b29ba89b1faf5aba05f",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-malzemeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:18.206Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.7259,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "e789f7822990b7e45fae8e76a5d19f7d41d5a2c1168bf735f97d4d14fec3b6f6",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-malzemeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:27.943Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.47,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "fe74e216e61936a8185c677213104ae4544e868dbd03576ba07c9c12bf6ab876",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-rehber-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:34.922Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 362.82349999999997,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "89aa4eac61827f250e3100fa5e4fea87f7a350434e5e75ffa4183e3d03145709",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-rehber-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:41.747Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.1574,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "fd1a4490100133110b3b4093269aecc3ddb9af5e88085f9b8f991c4fd4d49bf2",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-rehber-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:51.829Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 405.3023,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "6ad95bf6a20751746a8c42743ec2aeda0c059a8ab22a2cc300510980f1394f76",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:01.687Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 408.055,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "77fd0a1a19d8078dacfc4dc9676afe3227a178062843a5a939205438d757b985",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:11.688Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 408.08140000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "0f7c1019861e45ef0b07c3c4684c6cc230f8515d1e6bc6f8ea2f8ade826379af",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:08.090Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1507.7579,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 129.5000000000001
+      },
+      "sha256": "c8d4e44f39edf728bf722830211a6144c66333a2707e7dd5e0f098021fd3fa25",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:17.185Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.8634,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 98
+      },
+      "sha256": "bfd21871e7d4173f0b7320848de7a451ae28b6d044544b9fdc6cce14f105ed81",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:24.995Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1507.3826,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 110.5
+      },
+      "sha256": "7dc84c59da8a28ca3795d85d6661c31787c1641def14707f003d87dd6567f677",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:36.820Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1507.3353,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 117.99999999999977
+      },
+      "sha256": "f04fcfea6c408f2a133e533fd0c6b5fea128444289e788f410f98c2c9db45da3",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:44.197Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.6911,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 34.5
+      },
+      "sha256": "ac569a0c1208980edb44b47a7d0b80dda93b756175fb13594475b9da67448b65",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:51.350Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1654.7296000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 88.5
+      },
+      "sha256": "8f8515ca40e6fd4e225f730678254800ecc093b7123e38e2f45c8ac4d7ab0ce2",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:02.816Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1430.0005,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 45
+      },
+      "sha256": "c63167377a0153867f82b0f40826afdf2355d1bf0ca494297a6a30e47fa387f3",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-tarama-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:09.788Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.517,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 150.49999999999977
+      },
+      "sha256": "b1bd7a8d44ed54d22e5b7e5343353bcfd0a4965f710a974856790aca2ef96a4f",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-tarama-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:16.946Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1579.5747999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 107.5
+      },
+      "sha256": "1ea2856d1f97ea25c20938e9914f151e7f81ee38f41bafa1e050a0b1a60b28d6",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-tarama-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:28.026Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1506.063,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 74
+      },
+      "sha256": "73f3c04578139801406b646e765acecba215a8933c40412da0f21c6d244868d8",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-modelleme-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:34.972Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.7251999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 112
+      },
+      "sha256": "ef250d483f221af4deeaa70fd12b025fa4545f2fac8fbabf27a86fb50f09da28",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-modelleme-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:41.810Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.1952,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 41.5
+      },
+      "sha256": "b11b1b659595bdc0551605f5cfbaaa8b1b967346bc0561fe11ab2fb650c176e8",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-modelleme-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:52.775Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1656.1028000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 96
+      },
+      "sha256": "f4fba0b2ee4546aaa2adcb8229cee7cb5c5ba33fef1bee01c6e81bbfe1142b68",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:59.986Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1580.5796,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 118
+      },
+      "sha256": "1db772b5cf351419c8e959edf4cdb85d108e4c696bdb30d5c4c2306bc7702d8b",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:07.304Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1660.6692,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 45
+      },
+      "sha256": "6b621fe347345fca1048e5ccfadd77bf5a06dd4b7c6ba42712378bc243094280",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-teklif-al-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:18.738Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.1336999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 62
+      },
+      "sha256": "b22cacfd572ce43bbc584269bc6aa358facaf1c6ae1a2c25025325a8f68db0ba",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-iletisim-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:25.098Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.7035,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 34
+      },
+      "sha256": "eaaa0c85dbd7259a5e42f12453829da46408acbc366a2dceb8a695fd4e3c7109",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-iletisim-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:31.483Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1356.2628,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 22.5
+      },
+      "sha256": "e9dc758db0bacff156ca242707223de29f58159eeb4083afc6371cf747b86634",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-iletisim-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:41.956Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.673,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 83
+      },
+      "sha256": "06f8c0791415e53480ddf8e763b8f34703f689adf10c3160c8d24943d6f57a86",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-cozumler-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:48.489Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.4063,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 61
+      },
+      "sha256": "cbde3e57d8c5b254baaa8b9b9691ba8dfcc45df2d04d5b7a7e869c7eb2a9049c",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-cozumler-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:54.993Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.8369,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 100
+      },
+      "sha256": "96d3b8afaf96113618637b2eb48de63322f6ebd8d4e5d1e3cdf42d121ee29a34",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-cozumler-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:05.594Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.8808,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 88.5
+      },
+      "sha256": "9dacb45e94687a635805234a8f1b2217093fefd5b47d0894321ef197d7e280d4",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-malzemeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:12.128Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1355.6706,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 46
+      },
+      "sha256": "646ff387953022802abb4b969040310a57a10234b3bd04d68e8aa36db6a85c4d",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-malzemeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:18.873Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1358.5434,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 61
+      },
+      "sha256": "cf9a4099a7950b1ff94421a63abde45fa3a22dfe29ae7e88f45e69073f3c28f3",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-malzemeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:29.548Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1654.249,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 65.5
+      },
+      "sha256": "1303fb9a959fb3629a95645fca243494d83045c0e309c9d5fccba310499627d7",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-rehber-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:36.295Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1506.3200000000002,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 50.5
+      },
+      "sha256": "bc3cc087ae62f009770de908304c1638128f562372c5935519ebc5b449c254be",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-rehber-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:42.983Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.4763,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 79.00000000000023
+      },
+      "sha256": "ccad771aaf9012c3a06cc8a35e0b9f30d3586cbaa40a5fc1bb5fd52fc8ee35de",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-rehber-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:53.799Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.4915,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 53
+      },
+      "sha256": "1a4a4560c53fc5c612714cdc4600564ed258fb42b9021bd2d99f8d1523a69f24",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:02.076Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1657.1437,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 47
+      },
+      "sha256": "2f6d8223527ba08c68d79621b2df5ab903763cc3f6164701692470a8b4114aa9",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dyanimda",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:10.337Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1653.9544,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 34.5
+      },
+      "sha256": "6f69bfd62fd02863a4466bae07cc2f09dc8c1dd3ecc7b8573c86a80dc7ddfd4a",
+      "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-bolgeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:08:54.466Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 403.45140000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "4118ae0b2270de474172ef862580c1810c1d65c644a8b318d4e2920f5e6b0c14",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-home-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:02.900Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 406.238,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "321ee12155c5c4b371fd11c33e8c4ac2bdb3a959e0d5fefe5ac26afc637180d4",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-home-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:10.541Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 404.502,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "064e904e2b4ce85eb3f6d1c2bd67435becad7672ac75dd9e38cec09ecf6528e4",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-home-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:21.457Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.78139999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "f68debc34acfc94c0623a7ecb31005d23ed76a49c1ce8870876be571347cbcb1",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-baski-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:28.562Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.4126,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "f3303a02c4f600d0cd54998026ba8de7bb43bba512d89635413b630c7056cf88",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-baski-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:35.582Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.9942,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "4444aad299a26f9c3b9c4eb51ff555759563189bb3dedd7aef4052a199e628b2",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-baski-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:45.673Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.73310000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "a180a793cecf140689318294b25797cca486ecdf2659d796c5a249f84575ba6a",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-tarama-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:52.730Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.223,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "4af47cef96e54d10387260825a1e0e1148a0a20d7583b6b8cc5f3ec02f359499",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-tarama-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:59.730Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.4575,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "00fe923a0cca0ad5eaf7d7c57d11d9515be524934c76c247d96b2141e8b344d8",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-tarama-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:09.525Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.88980000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "d11a25ad832cdb05b97c102367b6f600007dec33e8ed0d8b270a7b84a89b4f73",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-modelleme-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:16.233Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.3326,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "7795cd70c091e806030b81d280eec627ff3701b4898d54462bd1476119c24ea0",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-modelleme-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:22.921Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 344.2092,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "eea19bc9e75efd4e757b3cfb67717f9a6c4a2bd225eeffc856facdff2df11b40",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-modelleme-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:32.678Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 371.57,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "710f07d1bfeaa7a020250b51d53fb402b1a06147c84790340be13a94f8734c24",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-teklif-al-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:39.585Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 373.0455,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "3cdd6a94b60a3b4e725aa23bafb9bd3f480c7cd9512506958c2ec3dc4766fe09",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-teklif-al-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:46.682Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 374.04740000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "cc49448d016347d56334a8e3ffb1c6f8d745a64b6e455eaa77d210226dc4f52d",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-teklif-al-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:56.370Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 322.8941,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "9bc7baf7c6546c3a70763e09e52492b751d1a05a58c65479fa83971ee39ba424",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-iletisim-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:02.646Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 323.46029999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "ef81ac9f9b58295926941b2e5264468f94907607d02bd4a1d45ab5ed8252500d",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-iletisim-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:08.875Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.2591,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "2057f3fce679221b5b64867f579e8275cf897b2a719b4d5644cb5a934b4a3830",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-iletisim-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:17.749Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.6495,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "6143041d320aae2ab76e51e49fd91e912bc24e645db8e220380badf80ec1637f",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-cozumler-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:24.396Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 329.4545,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "931462c57d5c1adab12d6b26c3dbae1d21411c01c712e90fef57d7521dd2ec1e",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-cozumler-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:30.835Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.81460000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "08dfc28c43353dd2a59267645ab1787224c45a63f1706a9c681aba2c022de4f8",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-cozumler-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:39.823Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.02340000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "cb644ef2807818c33d030ce4a260a55b02c6dc0c0559dd6f6040cab956c293bd",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-malzemeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:46.180Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.1599,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "eaa140081346308e5dd55e5bbdaadd30be5b0d61e7f535065f983f80a2c60a16",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-malzemeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:52.567Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.3288,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "b783bf7ab767a841f2ecb78f5233e8d7d77d981459611379d3187c64a824a572",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-malzemeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:01.967Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.57550000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "7735c32f7e314c45310e0a812f0c7277d760ca4eccaeb91447e52e33f3e9385f",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-rehber-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:08.523Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 326.28790000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "8013e71e3e72033dc305f3c0d8bd7593bdd6ac9b478ea4fbbb6b42bac5b7c47e",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-rehber-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:14.968Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.4451,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "a1900c527f405d01ebad919f48f31e4ebf54de976f15b60b66c0c3750764fb91",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-rehber-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:24.535Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 323.6391,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "ab756d29b6bee8a909f4a66a0f4084810ba4ef9e71d70228eca79cec0fa91137",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-bolgeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:33.222Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.2303,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "5e6cf9f6aa9c37315bb73f2b216f7b79c00dae1caa4aa0198cb845c08cb2b368",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-bolgeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:41.900Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 346.6346,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "04ea4b203990ec3b3bb6aa7c48c81104f71e8dff88f785820c324ffe127b7d66",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-bolgeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:08.011Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 405.2307,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 36.5
+      },
+      "sha256": "8a35fd45f83a14e01eba3644e03a4cfef860932406c668a662461f54e11112f7",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-home-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:17.951Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 407.0405,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "bbfe486f02f2fc88fdd68e167e45525ab5cfb4da6492c5ff1d6cb2ea1fbcef27",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-home-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:26.861Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 411.11519999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "b0aa82a9ca13532018be3ef4c1ceca54c1db55d95359d69b1fe56dece7ab451f",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-home-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:40.631Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.13779999999997,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "504b892c3272b0442cc58b0ebcce9a95976e9edeb8252c5c00fe7f63b1201062",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-baski-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:48.283Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.6588,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "1960cecde1ec23f35c91bf6a858b9e674223d77a2c9ec149432dac390b3a1cf5",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-baski-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:56.012Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.8509,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "dfa8b5fa3f8c2bf6970167f3072704cd2812ce16b5fcd2d7af222fbe381e1b79",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-baski-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:08.619Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 368.9122,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "1bb17ec7b582959db173691becade464436efc636b5558bac50cd76dd7f665c4",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-tarama-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:16.187Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 367.5281,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "2a85d016760d17ea2916de229046c8c0955edf5073bbcad68eddfbbe9f161e0f",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-tarama-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:23.793Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.6451,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "cfbe1655ec5ebbfeeeb2b33eb3b9f02670689808166a75363f68953431e0a4dc",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-tarama-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:36.230Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.8355,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "2af148f178ed2bb3b5171234ceb0218010e1cb7026a6d06fa3585034a62d7f01",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-modelleme-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:43.533Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.19190000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "45d0358274305927598b8b923db8428cb0261a6ef940173d08dd806cf4349937",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-modelleme-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:50.756Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.96659999999997,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "3691d3e2ea52f7c744f7f303996c845197c40123a42481b3853fbe4b11ebc73d",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-3d-modelleme-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:02.655Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 378.7188,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "a90c84aff30ff5fe4ef35699d458282bd8a75b0eb8f1aa571553ce97111173f3",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-teklif-al-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:10.165Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 375.873,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "98cbdc4cc49930c0b806e45d6086c2f6c8034c26c99993a6e90a7b3c61d61747",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-teklif-al-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:18.029Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 376.97929999999997,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "64b6259f14d75a39c30f286f748c65e0799ed731946d908d0609069935e1afaf",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-teklif-al-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:30.105Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 327.2477,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "dd2a50b972514d61798ca430122ea98bab726c8180035407162b75b7bfe1f31f",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-iletisim-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:36.742Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.56,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "a0291a7df66c5986845ffe0381bb105e08e3bba765b92963dfb3d8dbd7d7f498",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-iletisim-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:43.386Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 326.4395,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "15479e6bf5761e11e1a905d047f1d982f4691a5b88fadcebe30d88abd9d00d99",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-iletisim-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:54.101Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.5647,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "7cd388509a845ba8f30cabae886788f2db3ed9beb13b0bac34b3fb99b4c28123",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-cozumler-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:00.979Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 328.4922,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "172cc1e1f88040aa22f3f2b728dd7c004445dfa41cbff1b07e204e260ecb625b",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-cozumler-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:07.723Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 326.5248,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "d08f3bc6c17ddb3fd8802ae18050722d3eb83dc0d254ec8d8f8b1b48c0c9c05f",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-cozumler-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:17.533Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 326.8962,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "350b9aff14022ec869c9459f7a58e3febdbc02b08441f27ce79603741271068e",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-malzemeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:24.352Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.6619,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "fe2506c4f4ece31f22f45fa1326cff2d35316d9fc072263b3095b2d93529a1f0",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-malzemeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:31.052Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.5541,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "15850b804532a15e7561fe8b0a8a591a14e42c455bc884d280d89da003f1df46",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-malzemeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:40.926Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.4083,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "2f9fea215a483c810041a224039207930d6878dee8e0bcdca4fb38cfbaa0c886",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-rehber-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:47.844Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 368.44960000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "4391c89407929449cb687f8a7b98a87aa63a4e18e503580c0ff1cbc47ce4be9f",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-rehber-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:54.782Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.0819,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "e38cf65cce90ad8940dad5c68cb607ad73276438c2a786a099601e45144a9599",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-rehber-desktop-3.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:05.903Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.7291,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "d77a47f8bd3870dcb6a69ac2ab4050e9f0c3fbfa0665294efc5f0f8715009c7b",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-bolgeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:15.965Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 363.3793,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "9e9c89cae667052ffb42dc368f54e92d648f19a74c5a01671139bb43bcded95c",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-bolgeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "parcayanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:26.107Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 367.1728,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "d74cf8cecbde3d7c4706d223160ea09e58f1dfa872372f85620e64d906ae102c",
+      "raw": "artifacts/lighthouse-parcayanimda/raw/parcayanimda-bolgeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:07.122Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1659.6506,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 58.499999999999886
+      },
+      "sha256": "a4b8715a29f7080ef20dc9189792afb44d0b8ac79ae68018b7e35da583695372",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-home-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:16.116Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1661.1139,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 50.5
+      },
+      "sha256": "0321b17bf213d1a5786b04895ea4f99a24bcdc757071830bab71f8b7e0b31cc4",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-home-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:23.996Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1658.3265000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 106
+      },
+      "sha256": "b2c40c1ae4cf2b37769a92f2e8be86795ab0c36a6f6b91596fc5fa327f20fdbb",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-home-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:36.231Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1505.6127000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 19.5
+      },
+      "sha256": "0c5fa7ff9a271548ab2899d0ac7fd373ff4ff976d66d825ead527c727c348950",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-baski-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:43.390Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.2748000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 45.5
+      },
+      "sha256": "79fcc96e6f8f506abd8a453e3a16f8ab256a7cf4237e7e3525b9d33af6ed7006",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-baski-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-baski",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:50.591Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.1136999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 57.999999999999886
+      },
+      "sha256": "5abd1ef6ea53f71bc8540d5c9cb3a2d375124230dbf9ff4a05d121bf55ea45e4",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-baski-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:01.788Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1506.0496,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 89.5
+      },
+      "sha256": "8d7e3d4d5dbb44cfd181ae1de724d665d0e520e91081cb5bb7ca71b881c11113",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-tarama-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:09.065Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.4858,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 28
+      },
+      "sha256": "30570044b052b63cf434e93ee066dfd32400ad10b0288f5150242be21d6489b7",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-tarama-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-tarama",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:16.089Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.9515000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 32
+      },
+      "sha256": "8c6ad968fae8daefee12301242d5b340b7adfa04453be02072e80f93ae372d77",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-tarama-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:25.989Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1506.3839,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 98
+      },
+      "sha256": "413004eb23b108f45851fbb4f0d1570f7ca6924f2fb667f40b2440fea750dcc3",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-modelleme-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:32.811Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1504.5906,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 94
+      },
+      "sha256": "98fa3a2acddc316898a17f282a0b864347f177dcf6761c75565f5a8fe6b4a49f",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-modelleme-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/3d-modelleme",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:39.670Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.6094,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 28
+      },
+      "sha256": "8e716f00cdaa16b4a5d1817e615ed4a947397a68bc9e9a2bd9fac3c96b755fba",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-3d-modelleme-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:49.399Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1581.6698999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 54
+      },
+      "sha256": "6b28947e7fe0724f773bdf428ab472becd6d9dc69cbf792573d66ecf9ba851bd",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-teklif-al-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:56.473Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1657.9277,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 34.5
+      },
+      "sha256": "66a8ae12f09be4e2cf068312e7ad5f543e5ea52a7453441457cf393f95f4949f",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-teklif-al-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/teklif-al",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:03.508Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1656.5337,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 40.5
+      },
+      "sha256": "2e849d0ac2fd36e7dbf0a615e9e2229d21b345ab557e4d2c7ff9185840cd4911",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-teklif-al-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:14.772Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.5282,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 22.5
+      },
+      "sha256": "2af338f7c00d13ddfc2603be7b57511947149563b9091f9db1c37e967019ae85",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-iletisim-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:21.213Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1352.3251,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 19.5
+      },
+      "sha256": "da926491125393b0777428d833062211b1148e2d61f5ea4d1f65aeb302797e26",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-iletisim-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/iletisim",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:27.606Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1351.9573,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 10.5
+      },
+      "sha256": "ae0be6f9a85ecd5c5d5c9e48c685347484401f36f587ddebf466327c9fdaac57",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-iletisim-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:38.035Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.6201,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 57
+      },
+      "sha256": "8d82fddd40e3ca16dab29e8f04cb1de19e14c31a298420adcd33c0fe863b0e12",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-cozumler-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:44.553Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1356.6201999999998,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 52
+      },
+      "sha256": "4594d258bf7b8f6817d885fa3ec3ca8e2dc1d138cd20f6b17c50ebfaeb4b1fd0",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-cozumler-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/cozumler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:50.870Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1353.0883,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 67
+      },
+      "sha256": "0dd9d0341838ebad10f49b4ef9705e8609f333cd5875cb66edc168fb6b33a0e6",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-cozumler-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:00.301Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1354.3171,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 40
+      },
+      "sha256": "c49541898c80627459c3ef02d47d77d13fcff89e98013032a3614ed2ea74e216",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-malzemeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:06.679Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1356.5308,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 53
+      },
+      "sha256": "f7e49037558b4d5ea3f1dd7c7c5391573e5298220a5a518631387f709ce60d9a",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-malzemeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/malzemeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:13.148Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1356.8318,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 47.5
+      },
+      "sha256": "aebb33784ba013f41d12051fc8d7038658555f10cbb8c69b90b577df0fb6766a",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-malzemeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:22.730Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1655.9602,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 68
+      },
+      "sha256": "12631348fcce68800bbbd520cc7b27623e274aea2a84f4227c63d3eec3641c17",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-rehber-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:29.326Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.1008000000002,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 39.5
+      },
+      "sha256": "b5998f858b086bcd8726fcb36e8e62d348cf0a8ed6f3c27c81e40eee48b3dbc6",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-rehber-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/rehber",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:35.893Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.6159,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 62.99999999999977
+      },
+      "sha256": "650c683abaca37f8f750954f5462d336b802890c314d0a6f78a0a5b719aef371",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-rehber-mobile-3.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:45.567Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1503.8902,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 47
+      },
+      "sha256": "a4c5270e12c1adac0a9ca7c23697dd3f7735c4bc53e2e77f9021726c6f053cfa",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-bolgeler-mobile-1.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:53.438Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1506.4385,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 22
+      },
+      "sha256": "620b0c5b0cd0b10751e18ed6cabd4fd2e6993e81a332e5a2532b90c69c86ae2c",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-bolgeler-mobile-2.json.gz"
+    },
+    {
+      "brand": "3dsanayi",
+      "route": "/bolgeler",
+      "device": "mobile",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:01.283Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1507.2209,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 22.5
+      },
+      "sha256": "15634fa60f1c661186f52a5bc271d2e4479476d7230159fd288d4a70227d6549",
+      "raw": "artifacts/lighthouse-3dsanayi/raw/3dsanayi-bolgeler-mobile-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:08:57.987Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 406.89570000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "158445afca379fe6ee4dccec5e1449ae829c6270a150cf8fc5ec2e28a12757d0",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-home-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:07.358Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 406.9366,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "9446dfd78ffc7eed1b8f73feddf329873c6b1d76acbd09b94c2ae466a74ebff6",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-home-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:15.470Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 406.3835,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "3e3baab5c352603e818415d8c25c01f1cee2898b867cc0bf3635bf343af0207d",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-home-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:28.909Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.2978,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "b6fa0f251e330f974efc24b1a4cc8daed1e8052bb9f58e5a0e7e0003fdba0eb2",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-baski-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:36.229Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.9184,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "a65ed527a840842ad1ad566d364321ccd1b0167496a2430188f13bddb9da81ca",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-baski-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-baski",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:43.628Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.3999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "29586366a85c06e4e4f7066ae130f993e8fd305e30c5b903f3e67aa70a402278",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-baski-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:09:55.210Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.7697,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "aec439f7bc9a1b1fcede6e7fa3e7bc9ab5f84cf7962ce8c458bc7bbe17cb4bac",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-tarama-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:02.524Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.82849999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "80c5892516e142e227e06921b664e70ff9dad41a978e1effa78a526b871074b6",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-tarama-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-tarama",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:09.824Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 368.2059,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "f6a5425493314df385a00a4ef129191c7891677c4b9a440d39b9e824f6025014",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-tarama-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:22.152Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 369.09450000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "80992950bcba98a04721bc763e5071ade5fcda4784e2a3694ec1c48ae8bc5883",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-modelleme-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:29.403Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.70849999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "579b56efeee36393984c417fe4cd2524e2141fa8c4644f5e2ca8205881735136",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-modelleme-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/3d-modelleme",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:36.746Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 364.56219999999996,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "270e2335d8d9ff3d12d197e5a298b9e9d838f6bb85289f18b028bca0a1dd331f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-3d-modelleme-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:48.628Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 377.62080000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "e46041e7271b8cbab725bad047cfaec51147a52921d4b320b906ef6e24774fb5",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-teklif-al-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:10:56.641Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.0498,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "9bb78797e3eafbb511897cb7c9e314ba3e773597f937418a956f7dd976004109",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-teklif-al-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/teklif-al",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:04.480Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 378.8297,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "6553c25a8343568daff4fe012efdd885974019776d02eb4bb42bed2d33d194ff",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-teklif-al-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:15.467Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.5335,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "0ca4f7e4a77916bc0d982fea224de8dbd06ca0b512ba7445ad56f53e3b583ebd",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-iletisim-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:22.122Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 324.8822,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "01437d83d4839c39cea1ba242f241c5b0c1c81e5e91122e2864d96562a109494",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-iletisim-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/iletisim",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:28.705Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 327.2138,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "f0e02ebe9050e726a3883606efec1819a92975ef23952e813eab39f17da4bc8c",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-iletisim-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:38.383Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.983,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "4fd1a20d4eb1eacbfba4bda91e2ac43d539cdabada0b5ed4481db2c6e20a09e5",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-cozumler-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:45.102Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 326.8788,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "b40cb8cdfc8dabb35ceacf01fe521d22725671e88a2e5d37f12963489f982f19",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-cozumler-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/cozumler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:11:51.904Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.21770000000004,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "1727e86fa6e4b420945a81a573cd5555ed009d8182e46dbfd43f4720f8f49e79",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-cozumler-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:02.793Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 331.0307,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "5a3dff971f5c26769078dcb4eaf725649b0a6e9825dd5724ae90b19bdc491270",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-malzemeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:09.648Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.02660000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "6713b0f3bb641506a353135359456830185dec21519c478ec0dc1f3c52010615",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-malzemeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/malzemeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:16.516Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 325.5335,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "c87a1c307bf17d4e5ba7321c37d5b36e4d125e7b72173c92895c0974b40364e6",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-malzemeler-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:27.348Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 366.1702,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "f250859317d335505f9badd1b1eaa671342db6fa1a9479e65100b4033cb8ee36",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-rehber-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:34.384Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 367.1778,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "ff1762257efb0d7eed85e751256655be42835460033de2f2608ed6e8334b5137",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-rehber-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/rehber",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:41.423Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.5858,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "c716b615a176637165e0c04a4ae53b814b8d77b8b07bcf1f82eba79b78720b7f",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-rehber-desktop-3.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 1,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:12:51.534Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 403.7269,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "da5a536a1d522e11924b760b66039e4c657853b6c7b08d94b37348a8e7f46f27",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-bolgeler-desktop-1.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 2,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:01.602Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 386.6454,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "fad9ebbdd65fae633231d95eb85b12df6577fdcc70ce8ccf25627bb650be8829",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-bolgeler-desktop-2.json.gz"
+    },
+    {
+      "brand": "maketyanimda",
+      "route": "/bolgeler",
+      "device": "desktop",
+      "repeat": 3,
+      "version": "13.5.0",
+      "fetchTime": "2026-10-12T01:13:11.666Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 365.0589,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "sha256": "abab6aab487ee4f0a7ae066a7567b34e5e679f4a59cb9209f88ee30a91bb2a80",
+      "raw": "artifacts/lighthouse-maketyanimda/raw/maketyanimda-bolgeler-desktop-3.json.gz"
+    }
+  ],
+  "limitations": [
+    "Measurements use an isolated canonical hostname and local test certificate with the actual public API.",
+    "Mobile performance contains run-to-run variation; route medians and individual run ranges are both retained.",
+    "No public Cloudflare deployment, real DNS/TLS or field Core Web Vitals are claimed."
+  ]
+}
