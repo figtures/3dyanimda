@@ -6,8 +6,10 @@ private repository. Only `.env.example` templates are versioned.
 
 Requires Node >=22.12, Python >=3.11 with venv support, and `npm ci`.
 Release commands automatically create an isolated Python environment, install the
-pinned audit dependencies, install Chromium and its Linux libraries, and smoke-test
-both runtimes. Linux runners need permission to install system packages.
+pinned audit dependencies, download Chromium into a project-local cache, and smoke-test
+both runtimes. Deployment never invokes `sudo`, `su`, or a system package installer.
+The runner image must provide Chromium's Linux shared libraries; the smoke test
+stops publication if any are missing. Browser downloads do not require root.
 `CHROMIUM_EXECUTABLE` may select an already provisioned browser.
 `npm run cloudflare:prepare` runs preparation separately; it does not approve content.
 
@@ -84,9 +86,10 @@ Create four Worker projects connected to figtures/3dyanimda, each with root `/`:
    external CI needs it; Cloudflare's own build deployment may provide credentials.
 3. Build command: `npm run typecheck`. Deploy command: `npm run deploy:<brand>`.
    The deploy pipeline installs audit/browser dependencies, then builds and exports
-   approved HTML. `.node-version` selects Node 22. If the build environment prevents
-   system package installation, provision Chromium and set CHROMIUM_EXECUTABLE,
-   or deploy from a controlled Linux runner with the same release checks.
+   approved HTML. `.node-version` selects Node 22. No root password or extra env
+   variable is needed for browser downloads. If the Chromium smoke test identifies
+   missing shared libraries, use a runner image with those libraries or a provisioned
+   browser via CHROMIUM_EXECUTABLE. Do not disable the smoke test or release checks.
 4. Disable automatic non-production branch deploys until a separate staging setup
    has been configured. The supplied pipeline targets the named brand Worker.
 

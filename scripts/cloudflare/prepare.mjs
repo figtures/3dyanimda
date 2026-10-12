@@ -27,10 +27,13 @@ export async function prepareRelease(){
  if(!process.env.CHROMIUM_EXECUTABLE)process.env.PLAYWRIGHT_BROWSERS_PATH=path.resolve('.cloudflare/browsers');
  const {chromium}=await import('@playwright/test');
  if(!process.env.CHROMIUM_EXECUTABLE){
-  // Browser binaries and their Linux shared libraries are installed together.
-  run(process.execPath,['node_modules/playwright/cli.js','install',...(process.platform==='linux'?['--with-deps']:[]),'chromium']);
+  // Workers Builds cannot elevate to root. Download into the project cache only;
+  // system-library provisioning belongs to the runner, never the deploy command.
+  run(process.execPath,['node_modules/playwright/cli.js','install','chromium']);
  }
- const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage']});
+ let browser;
+ try{browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage']});}
+ catch(cause){throw new Error('Chromium could not start. Browser installation uses no root privileges. If the error below lists missing Linux libraries, provision those in the runner image or use CHROMIUM_EXECUTABLE with a provisioned browser. Release checks have not been skipped.',{cause});}
  try{const page=await browser.newPage();await page.setContent('<h1>Release dependency check</h1>');if(await page.locator('h1').textContent()!=='Release dependency check')throw Error('Chromium smoke check failed');}finally{await browser.close();}
  mkdirSync('.cloudflare',{recursive:true});
  console.log('Release dependencies ready: Python audit, Chromium and browser libraries.');
