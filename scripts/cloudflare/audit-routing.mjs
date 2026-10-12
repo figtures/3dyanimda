@@ -6,6 +6,7 @@ import {createServer} from 'node:net';
 import https from 'node:https';
 import path from 'node:path';
 import {JSDOM} from 'jsdom';
+import worker from '../../deploy/worker.mjs';
 if(process.env.SITES_MANAGED_LINUX_CONTAINER==='1')throw Error('Run the asset integration test in GitHub Actions.');
 const configFile=path.resolve(process.argv[2]);
 const config=JSON.parse(await readFile(configFile,'utf8'));
@@ -45,7 +46,12 @@ try{
  for(const route of ['/3d-baski/','/3d-baski/index.html']){const r=await request(route);assert.equal(r.status,308);assert.equal(r.headers.location,'https://'+config.vars.SITE_DOMAIN+'/3d-baski');}
  const alias=await request('/hizmetler/3d-baski?utm_source=test');assert.equal(alias.status,301);assert.equal(alias.headers.location,'https://'+config.vars.SITE_DOMAIN+'/3d-baski?utm_source=test');
  checks.push({check:'canonical and legacy redirects terminate in one hop',status:'pass'});
- const preview=await request('/robots.txt','preview.workers.dev');assert.match(preview.body,/Disallow: \//);assert.match(preview.headers['x-robots-tag'],/noindex/);
+ // A foreign Host through Wrangler's dev proxy is not a production workers.dev
+ // request. Check our preview response directly, without conflating dev-proxy
+ // headers with Worker headers. ASSETS must not be consulted for this route.
+ const preview=await worker.fetch(new Request('https://preview.workers.dev/robots.txt'),{...config.vars,ASSETS:{fetch(){throw Error('Preview robots must not read ASSETS');}}});
+ assert.equal(preview.status,200);assert.match(await preview.text(),/Disallow: \//);assert.match(preview.headers.get('x-robots-tag'),/noindex/);
+ checks.push({check:'preview robots disallow crawling with noindex',method:'direct Worker unit check; not a live workers.dev probe',status:'pass'});
  const report={result:'pass',testedAt:new Date().toISOString(),origin:manifest.origin,runtime:'Wrangler local HTTPS asset service',productionChecked:false,checks};
  await mkdir('artifacts/release',{recursive:true});await writeFile('artifacts/release/routing-'+config.vars.BRAND_SLUG+'.json',JSON.stringify(report,null,2)+'\n');
  console.log('WORKER_ASSET_ROUTING_VERIFIED '+JSON.stringify(report));

@@ -82,7 +82,8 @@ The asset service uses `html_handling: drop-trailing-slash` to match canonical
 URLs. The Worker retrieves the admin shell and 404 body via `/app` and `/404`,
 because fetching their `.html` aliases would return Cloudflare redirects.
 CI exercises the real local Wrangler HTTPS asset service for every manifest URL,
-admin/studio routes, missing pages, preview robots and canonical/legacy redirects.
+admin/studio routes, missing pages and canonical/legacy redirects. Preview robots
+headers are checked directly against the Worker, separately from the dev proxy.
 The loopback test certificate exception never applies to public-domain checks.
 
 Set `WORKER_CUSTOM_DOMAIN=true` only when ready to attach SITE_DOMAIN in Cloudflare.
