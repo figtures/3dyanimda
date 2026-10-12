@@ -4,13 +4,13 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-12T01:02:36.117Z",
+  "reviewedAt": "2026-10-12T01:23:43.437Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "0ef38de6d9afdf3a2b78376e4d46ebf787f26c6a7bef11e4799a95fdc8d38b3a",
+  "sourceHash": "2cb62d626c0fcda76fd9d90c2a6b89cb322077f60576b53605bf95ba13a2235e",
   "sourceFileCount": 525,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -35,8 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/release-delta-review-2026-10-12.json",
-    "latestBrandAssetFiles": 80
+    "latestDeltaReview": "docs/audits/release-tool-metadata-review-2026-10-12.json",
+    "latestBrandAssetFiles": 80,
+    "latestSourceSnapshot": "docs/audits/release-source-snapshot-2026-10-12-tools.json"
   },
   "evidence": [
     {
@@ -138,6 +139,14 @@
     {
       "file": "docs/audits/release-source-snapshot-2026-10-12.json",
       "sha256": "6ac886af3c1730dfaa06200b53da477c83a692646c5840bf79bbb194664196b5"
+    },
+    {
+      "file": "docs/audits/release-tool-metadata-review-2026-10-12.json",
+      "sha256": "7107270417ce2570906587f0a3e6f737e86f09caf519e843422d846ccd477eef"
+    },
+    {
+      "file": "docs/audits/release-source-snapshot-2026-10-12-tools.json",
+      "sha256": "e8376639e525659d6a7566096ae0b05ec5286c95a09961a0766a3b8f47f398b7"
     }
   ],
   "limitations": [

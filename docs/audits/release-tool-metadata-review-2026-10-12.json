@@ -1,0 +1,25 @@
+{
+  "reviewedAt": "2026-10-12T01:23:43.437Z",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "result": "pass",
+  "priorSourceHash": "0ef38de6d9afdf3a2b78376e4d46ebf787f26c6a7bef11e4799a95fdc8d38b3a",
+  "sourceHash": "2cb62d626c0fcda76fd9d90c2a6b89cb322077f60576b53605bf95ba13a2235e",
+  "scope": "Only Engineering.tsx meta descriptions changed; previously reviewed visible content, imagery, geometry and business identity are unchanged.",
+  "reviewedChange": "Each tool route now uses its existing visible purpose text plus an accurate browser-local processing explanation. The hub retains its broader description. Four descriptions are distinct; the SEO uniqueness assertion remains mandatory.",
+  "routes": [
+    "/araclar",
+    "/araclar/stl-onizle",
+    "/araclar/kesit-analizi",
+    "/araclar/tarama-goruntuleyici"
+  ],
+  "evidence": {
+    "priorFullHtmlRun": "https://github.com/figtures/3dyanimda/actions/runs/38191223300",
+    "priorFullHtmlResult": "All four approved HTML audits passed (876 route HTML files). SEO uniqueness gate then correctly rejected duplicate tool descriptions. No Wrangler success is claimed for that attempt.",
+    "latestLighthouse": "docs/audits/cloudflare-candidate-lighthouse-2026-10-12.json"
+  },
+  "limitations": [
+    "Fresh export and uniqueness validation must still pass on the new source snapshot.",
+    "No authenticated Cloudflare upload or live-domain SEO claim."
+  ]
+}

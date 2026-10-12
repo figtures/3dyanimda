@@ -980,11 +980,21 @@
       "path": "docs/audits/cloudflare-candidate-lighthouse-2026-10-12.json",
       "sha256": "b912e88b479dfd2df33db6230459fb0abe4af463d692ef1352e72545f2ac5513",
       "bytes": 158197
+    },
+    {
+      "path": "docs/audits/release-tool-metadata-review-2026-10-12.json",
+      "sha256": "7107270417ce2570906587f0a3e6f737e86f09caf519e843422d846ccd477eef",
+      "bytes": 1449
+    },
+    {
+      "path": "docs/audits/release-source-snapshot-2026-10-12-tools.json",
+      "sha256": "e8376639e525659d6a7566096ae0b05ec5286c95a09961a0766a3b8f47f398b7",
+      "bytes": 89824
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-12T01:15:37.659Z",
+  "checksumsRefreshedAt": "2026-10-12T01:23:43.540Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

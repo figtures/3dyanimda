@@ -124,7 +124,9 @@ export default function Engineering() {
     <>
       <Seo
         title={title}
-        description="Ücretsiz STL önizleme, hareketli kesit ve PLY tarama görüntüleme. Modelinizi tarayıcınızda inceleyin; dosyanız sunucuya gönderilmez."
+        description={active
+          ? `${active[2]} Ücretsiz araçla dosyanızı tarayıcınızda inceleyin; modeliniz sunucuya gönderilmez.`
+          : "Ücretsiz STL önizleme, hareketli kesit ve PLY tarama görüntüleme. Modelinizi tarayıcınızda inceleyin; dosyanız sunucuya gönderilmez."}
         path={pathname}
         jsonLd={{
           "@context": "https://schema.org",
