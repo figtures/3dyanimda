@@ -7,9 +7,14 @@ private repository. Only `.env.example` templates are versioned.
 Requires Node >=22.12, Python >=3.11 with venv support, and `npm ci`.
 Release commands automatically create an isolated Python environment, install the
 pinned audit dependencies, download Chromium into a project-local cache, and smoke-test
-both runtimes. Deployment never invokes `sudo`, `su`, or a system package installer.
-The runner image must provide Chromium's Linux shared libraries; the smoke test
-stops publication if any are missing. Browser downloads do not require root.
+both runtimes. Deployment never invokes `sudo` or `su`.
+On Ubuntu 24.04 x64/arm64, missing Chromium shared libraries are downloaded from
+Ubuntu's signed repositories using an isolated APT configuration and unpacked into
+`.cloudflare/browser-libraries/`. APT runs in download-only mode; `dpkg-deb` extracts
+files without installing system packages or running maintainer scripts. The system
+loader/glibc remain in use. A generated browser wrapper limits the library/font
+environment to Chromium and is shared by the smoke test and HTML exporter.
+Other operating systems require pre-provisioned browser libraries.
 `CHROMIUM_EXECUTABLE` may select an already provisioned browser.
 `npm run cloudflare:prepare` runs preparation separately; it does not approve content.
 
@@ -60,7 +65,10 @@ This is delegated AI review, not independent human sign-off.
 See `docs/audits/release-delta-review-2026-10-12.json` for scope and limitations.
 
 The `Cloudflare release packaging` GitHub Actions workflow independently runs
-`verify:<brand>` for all four brands from a clean Linux checkout. Each successful
+`verify:<brand>` for all four brands in minimal Ubuntu containers without ATK and
+without root privileges or privilege escalation. It also checks the system package
+database stays unchanged. These containers reproduce the observed failures, but
+are not Cloudflare's proprietary build image. Each successful
 job validates 213 indexable pages and six noindex utility pages plus the actual
 Wrangler bundle. Reports are retained as workflow artifacts. A dry-run does not
 prove Cloudflare account authorization, custom-domain activation or live SEO.
@@ -87,9 +95,10 @@ Create four Worker projects connected to figtures/3dyanimda, each with root `/`:
 3. Build command: `npm run typecheck`. Deploy command: `npm run deploy:<brand>`.
    The deploy pipeline installs audit/browser dependencies, then builds and exports
    approved HTML. `.node-version` selects Node 22. No root password or extra env
-   variable is needed for browser downloads. If the Chromium smoke test identifies
-   missing shared libraries, use a runner image with those libraries or a provisioned
-   browser via CHROMIUM_EXECUTABLE. Do not disable the smoke test or release checks.
+   variable is needed for browser downloads or Ubuntu 24.04 user-space libraries.
+   The runner needs `apt-get`, `dpkg-deb`, `ldd` and the Ubuntu archive keyring.
+   Repository signatures and package hashes remain mandatory. Do not disable the
+   Chromium smoke test or release checks.
 4. Disable automatic non-production branch deploys until a separate staging setup
    has been configured. The supplied pipeline targets the named brand Worker.
 

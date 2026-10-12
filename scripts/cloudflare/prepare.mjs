@@ -4,6 +4,7 @@ import {existsSync,readFileSync,mkdirSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {prepareBrowserLibraries} from './browser-libraries.mjs';
 
 export async function prepareRelease(){
  if(process.env.SITES_MANAGED_LINUX_CONTAINER==='1')throw Error('Release browser preparation must run in Cloudflare Builds, GitHub Actions or a local development machine, not the managed Sites workspace.');
@@ -27,13 +28,14 @@ export async function prepareRelease(){
  if(!process.env.CHROMIUM_EXECUTABLE)process.env.PLAYWRIGHT_BROWSERS_PATH=path.resolve('.cloudflare/browsers');
  const {chromium}=await import('@playwright/test');
  if(!process.env.CHROMIUM_EXECUTABLE){
-  // Workers Builds cannot elevate to root. Download into the project cache only;
-  // system-library provisioning belongs to the runner, never the deploy command.
-  run(process.execPath,['node_modules/playwright/cli.js','install','chromium']);
+  // Use the same full Chromium executable for dependency inspection, smoke
+  // testing and export; avoid downloading a second headless-shell binary.
+  run(process.execPath,['node_modules/playwright/cli.js','install','--no-shell','chromium']);
  }
+ process.env.CHROMIUM_EXECUTABLE=prepareBrowserLibraries(process.env.CHROMIUM_EXECUTABLE||chromium.executablePath());
  let browser;
  try{browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage']});}
- catch(cause){throw new Error('Chromium could not start. Browser installation uses no root privileges. If the error below lists missing Linux libraries, provision those in the runner image or use CHROMIUM_EXECUTABLE with a provisioned browser. Release checks have not been skipped.',{cause});}
+ catch(cause){throw new Error('Chromium failed its smoke test after user-space dependency preparation. Release checks have not been skipped; see the browser error below.',{cause});}
  try{const page=await browser.newPage();await page.setContent('<h1>Release dependency check</h1>');if(await page.locator('h1').textContent()!=='Release dependency check')throw Error('Chromium smoke check failed');}finally{await browser.close();}
  mkdirSync('.cloudflare',{recursive:true});
  console.log('Release dependencies ready: Python audit, Chromium and browser libraries.');
