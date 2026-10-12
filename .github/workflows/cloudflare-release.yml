@@ -9,7 +9,13 @@ on:
       - 'scripts/quality/audit-approved-html.mjs'
       - 'scripts/quality/audit-search-contracts.mjs'
       - 'scripts/export-sites.mjs'
-      - 'content/release-review.json'
+      - 'src/**'
+      - 'public/**'
+      - 'content/**'
+      - 'deploy/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.node-version'
   workflow_dispatch:
 permissions:
   contents: read
