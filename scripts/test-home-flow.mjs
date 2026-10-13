@@ -29,9 +29,16 @@ try{
   for(const c of controls){const a=luminance(c.background),b=luminance(c.color);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,`${theme} action contrast: ${JSON.stringify(c)}`);}
   if(theme==='industrial')assert.equal(controls[0].background,'rgb(237, 243, 250)');
   // Load the gallery once; its lazy canvas must still work after reordering.
-  if(width===1440){await page.locator('#ornekler').scrollIntoViewIfNeeded();await page.locator('#ornekler canvas').first().waitFor({timeout:30000});}
+  if(width===1440||(brand==='3dyanimda'&&width===390)){await page.locator('#ornekler').scrollIntoViewIfNeeded();await page.locator('#ornekler canvas').first().waitFor({timeout:30000});}
   if(brand==='3dyanimda'&&[390,1440].includes(width)){
-   await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`${out}/${theme}-${width}.png`,fullPage:true});
+   await page.evaluate(async()=>{
+    if(document.activeElement instanceof HTMLElement)document.activeElement.blur();
+    scrollTo({top:0,behavior:'instant'});
+    await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);
+   });
+   await page.waitForFunction(()=>scrollY===0);
+   assert.equal(await page.locator('.home-flow').count(),1);
+   await page.screenshot({path:`${out}/${theme}-${width}.png`,fullPage:true,animations:'disabled'});
   }
   cases.push({brand,theme,width,status:'PASS',controls});console.log(`HOME_FLOW_PASS ${brand}/${theme}/${width}`);
  }
