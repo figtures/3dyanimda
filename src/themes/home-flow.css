@@ -100,7 +100,7 @@
 .brand-site.theme-industrial .home-flow .selector-marker { border-color: #999; }
 .brand-site.theme-industrial .home-flow .model-selector [aria-pressed=true] .selector-marker { background: #ff642d; border-color: #ff642d; }
 .brand-site.theme-industrial .home-flow .process-icon { color: #b93208; }
-.brand-site.theme-industrial .home-flow .studio-band .brand-button.white { background: #ff642d; border-color: #ff642d; color: #17191c; }
+.brand-site.theme-industrial .home-flow .studio-band .brand-button.white { background: var(--brand-accent); border-color: var(--brand-accent); color: var(--accent-ink); }
 .brand-site.theme-editorial .home-flow .service-scene { border-radius: 160px 160px 4px 4px; }
 .brand-site.theme-studio .home-flow .service-scene { border-radius: 24px; }
 @media (prefers-reduced-motion: no-preference) {

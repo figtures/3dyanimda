@@ -45,7 +45,7 @@ try{
   const controls=await page.locator('.product-quote,.home-services ~ .showcase-section .brand-button,.immersive-hero .brand-button').evaluateAll(nodes=>nodes.map(n=>{const s=getComputedStyle(n);return {background:s.backgroundColor,color:s.color};}));
   function luminance(rgb){return rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(x=>{x/=255;return x<=.04045?x/12.92:((x+.055)/1.055)**2.4;}).reduce((sum,x,i)=>sum+x*[.2126,.7152,.0722][i],0);}
   for(const c of controls){const a=luminance(c.background),b=luminance(c.color);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,`${theme} action contrast: ${JSON.stringify(c)}`);}
-  if(theme==='industrial')assert.equal(controls[0].background,'rgb(255, 100, 45)');
+  if(theme==='industrial')for(const c of controls)assert.equal(c.color,'rgb(255, 255, 255)','Industrial primary action text must stay white');
   // Load the gallery once; its lazy canvas must still work after reordering.
   if(width===1440||(brand==='3dyanimda'&&width===390)){await page.locator('#ornekler').scrollIntoViewIfNeeded();await page.locator('#ornekler [data-model-status="ready"]').first().waitFor({timeout:30000});}
   if(brand==='3dyanimda'&&[390,1440].includes(width)){

@@ -1,0 +1,34 @@
+{
+  "result": "pass",
+  "reviewedAt": "2026-10-13T13:00:33.271Z",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "kind": "bounded CSS foreground and contrast review",
+  "previousSourceHash": "e757c71f9569751589423aa251c27c1a3399c8f29c09fd559933d0c185ff0caa",
+  "sourceHash": "63b4a5b86c9c1ce9ef7a01b6b6495ac1511641507fe06b6307b54ae92e8150e3",
+  "changes": [
+    "White foreground on industrial orange primary actions, including header and mobile drawer",
+    "Orange button background adjusted to #c94312; navigation hover #bd390c",
+    "Existing browser contract now requires white industrial action text"
+  ],
+  "validation": {
+    "productionBuild": "pass",
+    "cssParsed": "pass",
+    "normalContrast": 4.8892948748565,
+    "navigationHoverContrast": 5.593551411746314,
+    "navigationRulesChecked": 3,
+    "scriptSyntax": "pass",
+    "diffWhitespace": "pass"
+  },
+  "unchanged": [
+    "Layout",
+    "Content",
+    "Images and model geometry",
+    "Routing and SEO schema logic",
+    "Other themes"
+  ],
+  "carryForward": "Prior evidence retained for unchanged source; no new browser, Lighthouse, production or full-route results claimed.",
+  "limitations": [
+    "Local browser QA unavailable in this environment; existing browser contract will run in GitHub CI."
+  ]
+}

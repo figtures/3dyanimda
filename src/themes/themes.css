@@ -30,19 +30,19 @@
   --muted: #565b63;
   --line: #dedfdf;
   --dark: #141619;
-  --primary: 16 100% 59%;
-  --accent-blue: 16 100% 59%;
-  --primary-foreground: 220 9% 10%;
+  --primary: 16.07 83.56% 42.94%;
+  --accent-blue: 16.07 83.56% 42.94%;
+  --primary-foreground: 0 0% 100%;
   --background: 0 0% 100%;
-  --brand-accent: #ff642d;
-  --accent-ink: #17191c;
+  --brand-accent: #c94312;
+  --accent-ink: #fff;
   --highlight: #ff642d;
   --ring: 16 100% 59%;
 }
 .theme-industrial :is(.product-header, .brand-header, .immersive-hero, .studio-band, .brand-footer) .brand-button {
-  background: #ff642d;
-  border-color: #ff642d;
-  color: #17191c;
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+  color: var(--accent-ink);
 }
 .brand-site.theme-editorial {
   --paper: #f9f7f2;
