@@ -1,0 +1,70 @@
+{
+  "result": "pass",
+  "reviewedAt": "2026-10-13T09:17:32.195Z",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "kind": "bounded visual and interaction delta",
+  "previousSourceHash": "0c010ef484dc4f977d54552090a30eb4f9397a54bcecbc3342317f4e3f1dfc37",
+  "sourceHash": "e757c71f9569751589423aa251c27c1a3399c8f29c09fd559933d0c185ff0caa",
+  "sourceFileCount": 526,
+  "sourceCommit": "b34813b27eaeecbc8caa0dc1aa71520887a96da9",
+  "workflow": "https://github.com/figtures/3dyanimda/actions/runs/38374513197",
+  "changes": [
+    "Charcoal/white/orange industrial palette with 5.97:1 primary-button text contrast",
+    "Remove added chapter navigation; relocate original hero service descriptions and editorial service flows into the service explorer",
+    "Large service-specific existing images, keyboard-operable service choices and retained hidden panels",
+    "Native details retain every solution, process and guide summary in rendered HTML",
+    "Group lab and quote content; alternate visual and explanatory sections"
+  ],
+  "validation": {
+    "homeCases": 48,
+    "navigationCases": 48,
+    "brands": 4,
+    "themes": 3,
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "typescript": "pass",
+    "unitTests": 126,
+    "nodeContracts": 53,
+    "allOriginalIndexJsxTextRetained": true,
+    "authoredStringLiteralsRetained": true,
+    "servicePhotosDecoded": true,
+    "serviceDescriptionsReachableByKeyboard": true,
+    "allDisclosureParagraphsReachable": true,
+    "buttonContrastAA": true,
+    "horizontalOverflow": false,
+    "browserErrors": 0,
+    "publicApiSchemaInventory": "pass"
+  },
+  "visualReview": {
+    "desktop": [
+      "industrial",
+      "editorial",
+      "studio"
+    ],
+    "mobile": [
+      "industrial services",
+      "industrial gallery",
+      "industrial solutions",
+      "industrial process"
+    ],
+    "note": "Offscreen WebGL intentionally pauses. Mobile gallery section shows the actual rendered model; the harness now also waits for ready state and captures desktop gallery while in view."
+  },
+  "unchanged": {
+    "authoredContentJson": true,
+    "publicAssets": true,
+    "modelGeometry": true,
+    "seoSchemaLogic": true,
+    "canonicalRoutes": true
+  },
+  "carryForward": "Prior reviewed content, assets, provenance, geometry and full-route evidence remain valid for unchanged data and routing. This adds bounded visual/interaction evidence and is not a new full-route or human review.",
+  "limitations": [
+    "Development fixtures used for visual layout tests; live public API schema inventory checked separately.",
+    "No production deployment, rankings or GEO outcome claim.",
+    "No current Lighthouse score asserted by this review."
+  ]
+}

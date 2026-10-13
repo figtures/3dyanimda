@@ -47,7 +47,7 @@ try{
   for(const c of controls){const a=luminance(c.background),b=luminance(c.color);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,`${theme} action contrast: ${JSON.stringify(c)}`);}
   if(theme==='industrial')assert.equal(controls[0].background,'rgb(255, 100, 45)');
   // Load the gallery once; its lazy canvas must still work after reordering.
-  if(width===1440||(brand==='3dyanimda'&&width===390)){await page.locator('#ornekler').scrollIntoViewIfNeeded();await page.locator('#ornekler canvas').first().waitFor({timeout:30000});}
+  if(width===1440||(brand==='3dyanimda'&&width===390)){await page.locator('#ornekler').scrollIntoViewIfNeeded();await page.locator('#ornekler [data-model-status="ready"]').first().waitFor({timeout:30000});}
   if(brand==='3dyanimda'&&[390,1440].includes(width)){
    await page.evaluate(async()=>{
     if(document.activeElement instanceof HTMLElement)document.activeElement.blur();
@@ -57,6 +57,8 @@ try{
    await page.waitForFunction(()=>scrollY===0);
    assert.equal(await page.locator('.home-flow').count(),1);
    await page.screenshot({path:`${out}/${theme}-${width}.png`,fullPage:width>390,animations:'disabled'});
+   // Capture the WebGL gallery while in view: offscreen rendering intentionally pauses.
+   if(width===1440)await page.locator('.showcase-section').screenshot({path:`${out}/${theme}-${width}-showcase-section.png`,style:'.product-header{visibility:hidden !important}',animations:'disabled'});
    // Keep mobile captures below Chromium's tall GPU surface limit.
    if(width===390)for(const selector of ['.home-services','.showcase-section','.applications-section','.process-light','.studio-band','.engineering-teaser','.knowledge-section','.local-band','.brand-footer']){
     await page.locator(selector).screenshot({style:'.product-header{visibility:hidden !important}',path:`${out}/${theme}-${width}-${selector.slice(1)}.png`,animations:'disabled'});
