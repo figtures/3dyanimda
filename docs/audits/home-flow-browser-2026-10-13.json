@@ -1,0 +1,838 @@
+{
+  "cases": [
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "industrial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "editorial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dyanimda",
+      "theme": "studio",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "industrial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "editorial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "3dsanayi",
+      "theme": "studio",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "industrial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "editorial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "maketyanimda",
+      "theme": "studio",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "industrial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(237, 243, 250)",
+          "color": "rgb(23, 53, 84)"
+        },
+        {
+          "background": "rgb(33, 69, 113)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "editorial",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(38, 37, 34)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(191, 69, 30)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "width": 320,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "width": 390,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "width": 768,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "brand": "parcayanimda",
+      "theme": "studio",
+      "width": 1440,
+      "status": "PASS",
+      "controls": [
+        {
+          "background": "rgb(25, 55, 44)",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "background": "rgb(36, 86, 214)",
+          "color": "rgb(255, 255, 255)"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "production": false
+}

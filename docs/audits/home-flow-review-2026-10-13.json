@@ -1,0 +1,68 @@
+{
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-13T08:49:57.532Z",
+  "result": "pass",
+  "kind": "bounded presentation delta",
+  "previousSourceHash": "2cb62d626c0fcda76fd9d90c2a6b89cb322077f60576b53605bf95ba13a2235e",
+  "sourceHash": "0c010ef484dc4f977d54552090a30eb4f9397a54bcecbc3342317f4e3f1dfc37",
+  "sourceFiles": 526,
+  "changedSource": [
+    "src/pages/Index.tsx",
+    "src/themes/ModelShowcase.tsx",
+    "src/themes/themes.css",
+    "src/themes/home-flow.css",
+    "src/components/brand/navigation.css"
+  ],
+  "scope": {
+    "brands": 4,
+    "themes": 3,
+    "viewportWidths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "homeBrowserCases": 48,
+    "existingNavigationCases": 48,
+    "unitTests": 126,
+    "nodeContracts": 53,
+    "publicApiSchemaInventory": "PASS; all four brands"
+  },
+  "contentPreservation": {
+    "originalJsxTextSegmentsRetained": 32,
+    "originalStringLiteralsRetained": true,
+    "contentJsonChanged": false,
+    "assetsChanged": false,
+    "modelsChanged": false,
+    "seoLogicChanged": false,
+    "contentHiddenOrTruncated": false
+  },
+  "visualReview": {
+    "desktop": "Industrial, editorial and studio full-page screenshots inspected",
+    "mobile": "390px screenshots inspected across all themes; 320px/390px/768px geometry and visibility verified automatically",
+    "captureLimitation": "Chromium long mobile screenshots repeat pixels beyond the GPU surface limit; the harness now saves viewport and section captures. Unchanged footer is also covered by the existing navigation tests."
+  },
+  "checks": [
+    "One H1",
+    "All five chapter links navigate to visible targets",
+    "No horizontal overflow at four widths",
+    "All service, solution, process and guide summaries remain visible",
+    "Three service cards, four process steps and three guide cards retained",
+    "Button text contrast at least 4.5:1",
+    "Gallery lazy canvas loads after reorder",
+    "No browser page errors"
+  ],
+  "evidence": {
+    "workflow": "https://github.com/figtures/3dyanimda/actions/runs/38371473268",
+    "candidateCommit": "d03784e694895890488e89ef5e24210003920dfe",
+    "browserReport": "docs/audits/home-flow-browser-2026-10-13.json",
+    "artifactId": 11799730310
+  },
+  "carryForward": "Unchanged authored content, model geometry, image provenance, service routes and SEO/schema code retain prior reviewed evidence. These 96 browser cases are not a fresh full-route crawl.",
+  "limitations": [
+    "Browser layout checks use authored development fixtures; public API schema inventory is separate.",
+    "AI visual review, not human sign-off.",
+    "No new production Lighthouse score, live deployment, ranking or GEO outcome is asserted."
+  ]
+}

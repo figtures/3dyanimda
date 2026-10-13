@@ -38,7 +38,11 @@ try{
    });
    await page.waitForFunction(()=>scrollY===0);
    assert.equal(await page.locator('.home-flow').count(),1);
-   await page.screenshot({path:`${out}/${theme}-${width}.png`,fullPage:true,animations:'disabled'});
+   await page.screenshot({path:`${out}/${theme}-${width}.png`,fullPage:width>390,animations:'disabled'});
+   // Keep mobile captures below Chromium's tall GPU surface limit.
+   if(width===390)for(const selector of ['.home-services','.showcase-section','.applications-section','.process-light','.studio-band','.engineering-teaser','.knowledge-section','.local-band','.brand-footer']){
+    await page.locator(selector).screenshot({path:`${out}/${theme}-${width}-${selector.slice(1)}.png`,animations:'disabled'});
+   }
   }
   cases.push({brand,theme,width,status:'PASS',controls});console.log(`HOME_FLOW_PASS ${brand}/${theme}/${width}`);
  }
