@@ -2,7 +2,9 @@ import { previewSearch } from "@/lib/tenant";
 import "@/engineering/engineering.css";
 import "@/themes/home-flow.css";
 import ModelShowcase from "@/themes/ModelShowcase";
-import HomeHero from "@/themes/HomeHero";
+import HomeHero, { services as heroServices } from "@/themes/HomeHero";
+import { useState } from "react";
+import ServiceVisual from "@/themes/ServiceVisual";
 import { Link, useLocation } from "react-router-dom";
 import {
   ArrowUpRight,
@@ -11,6 +13,11 @@ import {
   ScanLine,
   PenTool,
   Upload,
+  Plus,
+  CheckCheck,
+  Send,
+  PackageCheck,
+  Settings2,
 } from "lucide-react";
 import { useBrand } from "@/brands/config";
 import { useContent } from "@/content/useContent";
@@ -52,6 +59,7 @@ const services = [
 ] as const;
 export default function Index() {
   const b = useBrand();
+  const [activeService, setActiveService] = useState(0);
   const { search } = useLocation();
   const q = previewSearch(search);
   const link = (s: string) => s + q;
@@ -68,17 +76,6 @@ export default function Index() {
       />
       <div className="home-flow">
       <HomeHero />
-      <nav className="home-chapters wrap" aria-label="Ana sayfa bölümleri">
-        {[
-          ["hizmetler", "Hizmetler"],
-          ["ornekler", "3D örnekler"],
-          ["uygulamalar", "Çözümler"],
-          ["surec", "Süreç"],
-          ["bilgi-merkezi", "Rehberler"],
-        ].map(([id, label], i) => (
-          <a key={id} href={`#${id}`}><span aria-hidden="true">0{i + 1}</span>{label}<ArrowRight size={15} aria-hidden="true" /></a>
-        ))}
-      </nav>
       <section className="wrap home-services" id="hizmetler" aria-labelledby="services-title">
         <div className="section-heading">
           <p className="brand-eyebrow">NEYE İHTİYACINIZ VAR?</p>
@@ -95,19 +92,35 @@ export default function Index() {
             tarama ve modellemeyle başlayalım.
           </p>
         </div>
-        <div className="editorial-grid">
-          {services.map(([s, n, , desc, Icon], i) => (
-            <Link className="service-card" to={link("/" + s)} key={s}>
-              <div className="service-card-index" aria-hidden="true"><Icon size={34} strokeWidth={1.3} /><span>0{i + 1}</span><span>{["ÜRETİM", "SAYISALLAŞTIRMA", "TASARIM"][i]}</span></div>
-              <div className="service-card-copy">
+        <div className="service-explorer">
+          <figure className="service-scene">
+            {services.map(([slug, name], i) => (
+              <picture key={slug} hidden={activeService !== i}>
+                <source type="image/avif" srcSet={`/brand/optimized/service-${b.slug}-${["print", "scan", "model"][i]}-640.avif 640w, /brand/optimized/service-${b.slug}-${["print", "scan", "model"][i]}-1024.avif 1024w`} sizes="(max-width: 760px) 100vw, 55vw" />
+                <img src={`/brand/services/${b.slug}-${["print", "scan", "model"][i]}.webp`} width="1024" height="683" loading="lazy" decoding="async" alt={`${name} — temsili uygulama`} />
+              </picture>
+            ))}
+            <figcaption><span>{heroServices[activeService].label} · 0{activeService + 1} / 03</span><span>Temsili uygulama görseli</span></figcaption>
+          </figure>
+          <div className="service-decisions">
+            {services.map(([slug, name, tagline, desc, Icon], i) => (
+              <article className="service-decision" key={slug} data-active={activeService === i}>
                 <h3>
-                  {n}
-                  <ArrowUpRight size={22} />
+                  <button type="button" id={`service-choice-${i}`} aria-expanded={activeService === i} aria-controls={`service-copy-${i}`} onClick={() => setActiveService(i)}>
+                    <Icon size={25} strokeWidth={1.4} aria-hidden="true" /><span>{name}</span><Plus size={20} aria-hidden="true" />
+                  </button>
                 </h3>
-                <p>{serviceIntroductions[b.slug]?.[i] || desc}</p>
-              </div>
-            </Link>
-          ))}
+                <div className="service-decision-copy" id={`service-copy-${i}`} role="region" aria-labelledby={`service-choice-${i}`} hidden={activeService !== i}>
+                  <p className="service-tagline">{tagline}</p>
+                  <p>{serviceIntroductions[b.slug]?.[i] || desc}</p>
+                  <p>{heroServices[i].description}</p>
+                  <details className="service-method"><summary>Hizmet akışı <Plus size={16} aria-hidden="true" /></summary><ServiceVisual service={i} /></details>
+                  <Link className="text-link" to={link("/" + slug)}>{name} hizmetini incele <ArrowUpRight size={18} /></Link>
+                </div>
+              </article>
+            ))}
+            <p className="service-route-note">İhtiyacınıza göre tek bir hizmetle başlayabilir veya tasarımdan üretime tüm süreci birlikte planlayabilirsiniz.</p>
+          </div>
         </div>
       </section>
       <ModelShowcase />
@@ -122,17 +135,16 @@ export default function Index() {
           <h2 id="applications-title">{b.featureTitle}</h2>
           <p>{b.featureLead}</p>
         </div>
-        <div className="application-list">
-          {pages
-            .filter((p) => p.kind === "solution")
-            .map((p, i) => (
-              <Link key={p.path} to={link(p.path)}>
-                <span>0{i + 1}</span>
-                <h3>{p.title}</h3>
-                <p>{p.summary}</p>
-                <ArrowUpRight size={23} />
-              </Link>
+        <div className="applications-stage">
+          <div className="applications-art" aria-hidden="true"><ServiceVisual service={2} /></div>
+          <div className="application-list">
+            {pages.filter((p) => p.kind === "solution").map((p, i) => (
+              <details key={p.path} name="home-solutions" open={i === 0}>
+                <summary><span>0{i + 1}</span><h3>{p.title}</h3><Plus size={20} aria-hidden="true" /></summary>
+                <div className="application-copy"><p>{p.summary}</p><Link className="text-link" to={link(p.path)}>Çözümü incele <ArrowUpRight size={17} /></Link></div>
+              </details>
             ))}
+          </div>
         </div>
       </section>
       <section className="process-light" id="surec" aria-labelledby="process-title">
@@ -162,11 +174,14 @@ export default function Index() {
                 "Onaylanan revizyon üzerinden üretim ve teslimat planını yürütelim.",
               ],
             ].map(([t, d], i) => (
-              <article key={t}>
-                <span>0{i + 1}</span>
-                <h3>{t}</h3>
+              <details key={t} name="home-process" open={i === 0}>
+                <summary>
+                  <span className="process-icon" aria-hidden="true">{[<Send size={28} />, <Settings2 size={28} />, <CheckCheck size={28} />, <PackageCheck size={28} />][i]}</span>
+                  <span className="process-number">0{i + 1}</span>
+                  <h3>{t}</h3><Plus size={18} aria-hidden="true" />
+                </summary>
                 <p>{d}</p>
-              </article>
+              </details>
             ))}
           </div>
         </div>
@@ -201,8 +216,7 @@ export default function Index() {
             </span>
           </Link>
         </div>
-      </section>
-      <section className="wrap engineering-teaser">
+        <div className="wrap">      <aside className="engineering-teaser">
         <div>
           <p className="brand-eyebrow">ÜCRETSİZ MÜHENDİSLİK ARAÇLARI</p>
           <h2>Modelin içine bakın.</h2>
@@ -214,6 +228,8 @@ export default function Index() {
         <Link className="brand-button" to={link("/araclar")}>
           3D Lab’ı aç <ArrowUpRight size={18} />
         </Link>
+      </aside>
+        </div>
       </section>
       <section className="wrap knowledge-section" id="bilgi-merkezi" aria-labelledby="knowledge-title">
         <div className="section-heading">
@@ -227,13 +243,13 @@ export default function Index() {
             .filter((p) => p.kind === "guide")
             .sort((a,c) => Number(!!c.editorial?.answer)-Number(!!a.editorial?.answer))
             .slice(0, 3)
-            .map((p) => (
-              <Link className="editorial-card" to={link(p.path)} key={p.path}>
+            .map((p, i) => (
+              <article className="editorial-card" key={p.path}>
+                <span className="guide-number" aria-hidden="true">0{i + 1}</span>
                 <span className="brand-eyebrow">ÜRETİM REHBERİ</span>
-                <h3>{p.title}</h3>
-                <p>{p.summary}</p>
-                <ArrowUpRight size={20} />
-              </Link>
+                <h3><Link to={link(p.path)}>{p.title} <ArrowUpRight size={20} /></Link></h3>
+                <details><summary>Rehberin özeti <Plus size={16} aria-hidden="true" /></summary><p>{p.summary}</p></details>
+              </article>
             ))}
         </div>
       </section>
