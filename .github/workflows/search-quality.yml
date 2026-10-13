@@ -88,6 +88,9 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: node scripts/test-home-flow.mjs
+        env:
+          CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
       - run: node scripts/test-navigation.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome

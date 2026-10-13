@@ -1,5 +1,6 @@
 import { previewSearch } from "@/lib/tenant";
 import "@/engineering/engineering.css";
+import "@/themes/home-flow.css";
 import ModelShowcase from "@/themes/ModelShowcase";
 import HomeHero from "@/themes/HomeHero";
 import { Link, useLocation } from "react-router-dom";
@@ -65,28 +66,26 @@ export default function Index() {
         description={b.description}
         image={img}
       />
+      <div className="home-flow">
       <HomeHero />
-      <ModelShowcase />
-      <section className="wrap engineering-teaser">
-        <div>
-          <p className="brand-eyebrow">ÜCRETSİZ MÜHENDİSLİK ARAÇLARI</p>
-          <h2>Modelin içine bakın.</h2>
-          <p>
-            STL önizleme, hareketli kesit ve PLY tarama görüntüleme.
-            Tarayıcınızda, dosyanız size özel.
-          </p>
-        </div>
-        <Link className="brand-button" to={link("/araclar")}>
-          3D Lab’ı aç <ArrowUpRight size={18} />
-        </Link>
-      </section>
-      <section className="wrap home-services" id="hizmetler">
+      <nav className="home-chapters wrap" aria-label="Ana sayfa bölümleri">
+        {[
+          ["hizmetler", "Hizmetler"],
+          ["ornekler", "3D örnekler"],
+          ["uygulamalar", "Çözümler"],
+          ["surec", "Süreç"],
+          ["bilgi-merkezi", "Rehberler"],
+        ].map(([id, label], i) => (
+          <a key={id} href={`#${id}`}><span aria-hidden="true">0{i + 1}</span>{label}<ArrowRight size={15} aria-hidden="true" /></a>
+        ))}
+      </nav>
+      <section className="wrap home-services" id="hizmetler" aria-labelledby="services-title">
         <div className="section-heading">
           <p className="brand-eyebrow">NEYE İHTİYACINIZ VAR?</p>
           <span>Üç hizmet. Birbirini tamamlayan bir süreç.</span>
         </div>
         <div className="split-heading">
-          <h2>
+          <h2 id="services-title">
             Elinizde bir fikir de olabilir,
             <br />
             yenilenmesi gereken bir parça da.
@@ -97,9 +96,9 @@ export default function Index() {
           </p>
         </div>
         <div className="editorial-grid">
-          {services.map(([s, n, , desc], i) => (
+          {services.map(([s, n, , desc, Icon], i) => (
             <Link className="service-card" to={link("/" + s)} key={s}>
-              <div className="service-card-index" aria-hidden="true"><span>0{i + 1}</span><span>{["ÜRETİM", "SAYISALLAŞTIRMA", "TASARIM"][i]}</span></div>
+              <div className="service-card-index" aria-hidden="true"><Icon size={34} strokeWidth={1.3} /><span>0{i + 1}</span><span>{["ÜRETİM", "SAYISALLAŞTIRMA", "TASARIM"][i]}</span></div>
               <div className="service-card-copy">
                 <h3>
                   {n}
@@ -109,6 +108,67 @@ export default function Index() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+      <ModelShowcase />
+      <section className="wrap applications-section" id="uygulamalar" aria-labelledby="applications-title">
+        <div className="section-heading">
+          <p className="brand-eyebrow">{b.focus}</p>
+          <Link className="text-link" to={link("/cozumler")}>
+            Tüm çözümler <ArrowRight size={17} />
+          </Link>
+        </div>
+        <div className="split-heading">
+          <h2 id="applications-title">{b.featureTitle}</h2>
+          <p>{b.featureLead}</p>
+        </div>
+        <div className="application-list">
+          {pages
+            .filter((p) => p.kind === "solution")
+            .map((p, i) => (
+              <Link key={p.path} to={link(p.path)}>
+                <span>0{i + 1}</span>
+                <h3>{p.title}</h3>
+                <p>{p.summary}</p>
+                <ArrowUpRight size={23} />
+              </Link>
+            ))}
+        </div>
+      </section>
+      <section className="process-light" id="surec" aria-labelledby="process-title">
+        <div className="wrap">
+          <p className="brand-eyebrow">NASIL ÇALIŞIYORUZ?</p>
+          <h2 id="process-title">
+            İlk fikirden teslimata,
+            <br />
+            her adım belli.
+          </h2>
+          <div className="process-four">
+            {[
+              [
+                "İhtiyacınızı paylaşın",
+                "Dosya, numune veya fotoğrafla başlayın. Kullanım alanını ve adedi belirtin.",
+              ],
+              [
+                "Teklifi netleştirelim",
+                "Modelleme, malzeme, üretim ve teslimat kapsamını birlikte belirleyelim.",
+              ],
+              [
+                "Numuneyi değerlendirin",
+                "Gereken projelerde ilk parçayı görün; formu ve montajı kontrol edin.",
+              ],
+              [
+                "Üretime geçelim",
+                "Onaylanan revizyon üzerinden üretim ve teslimat planını yürütelim.",
+              ],
+            ].map(([t, d], i) => (
+              <article key={t}>
+                <span>0{i + 1}</span>
+                <h3>{t}</h3>
+                <p>{d}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
       <section className="studio-band">
@@ -142,69 +202,22 @@ export default function Index() {
           </Link>
         </div>
       </section>
-      <section className="wrap applications-section">
-        <div className="section-heading">
-          <p className="brand-eyebrow">{b.focus}</p>
-          <Link className="text-link" to={link("/cozumler")}>
-            Tüm çözümler <ArrowRight size={17} />
-          </Link>
+      <section className="wrap engineering-teaser">
+        <div>
+          <p className="brand-eyebrow">ÜCRETSİZ MÜHENDİSLİK ARAÇLARI</p>
+          <h2>Modelin içine bakın.</h2>
+          <p>
+            STL önizleme, hareketli kesit ve PLY tarama görüntüleme.
+            Tarayıcınızda, dosyanız size özel.
+          </p>
         </div>
-        <div className="split-heading">
-          <h2>{b.featureTitle}</h2>
-          <p>{b.featureLead}</p>
-        </div>
-        <div className="application-list">
-          {pages
-            .filter((p) => p.kind === "solution")
-            .map((p, i) => (
-              <Link key={p.path} to={link(p.path)}>
-                <span>0{i + 1}</span>
-                <h3>{p.title}</h3>
-                <p>{p.summary}</p>
-                <ArrowUpRight size={23} />
-              </Link>
-            ))}
-        </div>
+        <Link className="brand-button" to={link("/araclar")}>
+          3D Lab’ı aç <ArrowUpRight size={18} />
+        </Link>
       </section>
-      <section className="process-light">
-        <div className="wrap">
-          <p className="brand-eyebrow">NASIL ÇALIŞIYORUZ?</p>
-          <h2>
-            İlk fikirden teslimata,
-            <br />
-            her adım belli.
-          </h2>
-          <div className="process-four">
-            {[
-              [
-                "İhtiyacınızı paylaşın",
-                "Dosya, numune veya fotoğrafla başlayın. Kullanım alanını ve adedi belirtin.",
-              ],
-              [
-                "Teklifi netleştirelim",
-                "Modelleme, malzeme, üretim ve teslimat kapsamını birlikte belirleyelim.",
-              ],
-              [
-                "Numuneyi değerlendirin",
-                "Gereken projelerde ilk parçayı görün; formu ve montajı kontrol edin.",
-              ],
-              [
-                "Üretime geçelim",
-                "Onaylanan revizyon üzerinden üretim ve teslimat planını yürütelim.",
-              ],
-            ].map(([t, d], i) => (
-              <article key={t}>
-                <span>0{i + 1}</span>
-                <h3>{t}</h3>
-                <p>{d}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="wrap knowledge-section">
+      <section className="wrap knowledge-section" id="bilgi-merkezi" aria-labelledby="knowledge-title">
         <div className="section-heading">
-          <p className="brand-eyebrow">BİLGİ MERKEZİ</p>
+          <h2 id="knowledge-title" className="brand-eyebrow">BİLGİ MERKEZİ</h2>
           <Link className="text-link" to={link("/rehber")}>
             Tüm rehberler <ArrowRight size={16} />
           </Link>
@@ -237,6 +250,7 @@ export default function Index() {
           Hizmet bölgelerimiz <ArrowUpRight size={17} />
         </Link>
       </section>
+      </div>
     </>
   );
 }

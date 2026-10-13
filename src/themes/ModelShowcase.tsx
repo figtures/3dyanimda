@@ -15,7 +15,7 @@ export default function ModelShowcase() {
   const model = models[index],
     q = previewSearch(search);
   return (
-    <section className="showcase-section wrap" aria-labelledby="showcase-title">
+    <section className="showcase-section wrap" id="ornekler" aria-labelledby="showcase-title">
       <div className="showcase-heading">
         <div>
           <p className="brand-eyebrow">FİKİRDEN FİZİKSEL PARÇAYA</p>

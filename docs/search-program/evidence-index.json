@@ -13,13 +13,13 @@
   "files": [
     {
       "path": ".github/workflows/lighthouse.yml",
-      "sha256": "36080fe2c37484088fbba3264b98435527dee41ea1ec04a8286f83206ccb2e6b",
-      "bytes": 2833
+      "sha256": "fc3847de57049c9fb9092ee76695d5bb75788ee2e276fe9faed53516e9f20c08",
+      "bytes": 2993
     },
     {
       "path": ".github/workflows/search-quality.yml",
-      "sha256": "283bb6f3b9132e7e1c46eceb5f8cbe99ba8f89b23ca19992fe3ddc38953017b6",
-      "bytes": 3133
+      "sha256": "6c943788b89531c63cbd2a99c4f8b59e7c0a5db55e18f07539ea0ffae29b00cb",
+      "bytes": 3245
     },
     {
       "path": "docs/audits/content-contract-audit-2026-10-11.json",
@@ -643,8 +643,8 @@
     },
     {
       "path": "src/pages/Index.tsx",
-      "sha256": "fe6acc767897a10c10fd9b2eb83c6e3660a847bdec7c8b695073221f31ca47f6",
-      "bytes": 9231
+      "sha256": "bf136a6a95c062ab21cbe016a95d158073e9f928d9993890bf0ac52a27c2b20e",
+      "bytes": 10099
     },
     {
       "path": "src/pages/admin/AdminContent.tsx",
@@ -673,8 +673,8 @@
     },
     {
       "path": "src/components/brand/navigation.css",
-      "sha256": "7fdb5d461e320ef1a351aa53877c7b94fc0588b40dc86eb7eaedf4e5bafc9297",
-      "bytes": 7585
+      "sha256": "a71f86b1579d291c8c2d4caaeb0b9e3b16dd8ce38c12ef6427d69684aa156b86",
+      "bytes": 8211
     },
     {
       "path": "src/components/sections/AutoFocus.tsx",
@@ -1009,7 +1009,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-12T03:06:29.845Z",
+  "checksumsRefreshedAt": "2026-10-13T08:50:29.057Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
