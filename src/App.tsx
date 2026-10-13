@@ -50,6 +50,7 @@ const JobApplication = lazy(() => import("./pages/career/JobApplication"));
 const MachineOperation = lazy(() => import("./pages/career/MachineOperation"));
 
 // Admin
+const AdminResetPassword = lazy(() => import("./pages/admin/AdminResetPassword"));
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
 const AdminBlogList = lazy(() => import("./pages/admin/AdminBlogList"));
@@ -261,6 +262,7 @@ const router = createBrowserRouter([
   },
   // Admin: kendi layout'u, site Layout'unun dışında
   { path: "/admin/login", element: wrap(<AdminLogin />) },
+  { path: "/admin/reset-password", element: wrap(<AdminResetPassword />) },
   {
     path: "/admin",
     element: wrap(<AdminLayout />),

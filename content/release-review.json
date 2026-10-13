@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-13T13:26:29.325Z",
+  "reviewedAt": "2026-10-13T14:09:23.275Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "04957bed05287c34562aafadeb9779ed9b162b657c876e841193f0bb40d1b527",
-  "sourceFileCount": 528,
+  "sourceHash": "96291ddfe2521371e78fa438f9714cdb5597c2b56856e30f0ec17cd9d75adb29",
+  "sourceFileCount": 530,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/quote-catalog-review-2026-10-13.json",
+    "latestDeltaReview": "docs/audits/password-recovery-review-2026-10-13.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/quote-catalog-source-2026-10-13.json",
+    "latestSourceSnapshot": "docs/audits/password-recovery-review-2026-10-13.json",
     "latestHomeFlowBrowserCases": 48
   },
   "evidence": [
@@ -192,6 +192,10 @@
     {
       "file": "supabase/seeds/quote-materials.sql",
       "sha256": "0cf6b0a68a77e1d5aa540358be97b688d3367e4c9908c14c053f4d78010d4da2"
+    },
+    {
+      "file": "docs/audits/password-recovery-review-2026-10-13.json",
+      "sha256": "08927a47c757dc83825872fc442c6dc7b03f8d808838d420f43c9fa079357da7"
     }
   ],
   "limitations": [

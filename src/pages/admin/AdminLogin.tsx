@@ -49,6 +49,7 @@ export default function AdminLogin() {
           {error && <p role="alert" className="text-sm text-destructive">{error}</p>}
           <Button type="submit" disabled={busy || loading || !backendConfigured} className="w-full h-12">{busy || loading?<><Loader2 className="h-4 w-4 animate-spin"/> Kontrol ediliyor…</>:<>Yönetim paneline gir <ArrowUpRight size={17}/></>}</Button>
         </form>}
+        <Link to="/admin/reset-password" className="admin-login-back">Şifremi unuttum / şifre belirle</Link>
         <Link to="/" className="admin-login-back">Siteye geri dön <ArrowUpRight size={15}/></Link>
       </div>
     </section>

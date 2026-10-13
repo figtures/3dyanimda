@@ -1,0 +1,20 @@
+import {render,screen,fireEvent,waitFor,cleanup,act} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {HelmetProvider} from 'react-helmet-async';
+import {afterEach,beforeEach,describe,it,expect,vi} from 'vitest';
+const auth=vi.hoisted(()=>({session:null as any,callback:null as any,updateUser:vi.fn(),resetPasswordForEmail:vi.fn(),signOut:vi.fn(),unsubscribe:vi.fn()}));
+vi.mock('@/lib/supabase',()=>({backendConfigured:true,supabase:{auth:{getSession:async()=>({data:{session:auth.session}}),onAuthStateChange:(cb:any)=>{auth.callback=cb;return {data:{subscription:{unsubscribe:auth.unsubscribe}}}},updateUser:auth.updateUser,resetPasswordForEmail:auth.resetPasswordForEmail,signOut:auth.signOut}}}));
+vi.mock('@/contexts/TenantContext',()=>({useTenant:()=>({tenant:{name:'3dyanımda'}})}));
+import AdminResetPassword from './AdminResetPassword';
+const show=()=>render(<HelmetProvider><MemoryRouter><AdminResetPassword/></MemoryRouter></HelmetProvider>);
+beforeEach(()=>{vi.clearAllMocks();auth.session=null;auth.updateUser.mockResolvedValue({error:null});auth.resetPasswordForEmail.mockResolvedValue({error:null});auth.signOut.mockResolvedValue({error:null});});
+afterEach(cleanup);
+const fill=async(password='unique-test-password',repeat=password)=>{fireEvent.change(await screen.findByLabelText('Yeni şifre'),{target:{value:password}});fireEvent.change(screen.getByLabelText('Yeni şifre tekrar'),{target:{value:repeat}});fireEvent.submit(screen.getByLabelText('Yeni şifre').closest('form')!);};
+describe('password recovery',()=>{
+ it('offers only email recovery to an unauthenticated visitor and uses same-origin redirect',async()=>{show();fireEvent.change(await screen.findByLabelText('E-posta adresi'),{target:{value:'owner@example.com'}});fireEvent.submit(screen.getByLabelText('E-posta adresi').closest('form')!);await waitFor(()=>expect(auth.resetPasswordForEmail).toHaveBeenCalledWith('owner@example.com',{redirectTo:new URL('/admin/reset-password',window.location.origin).href}));expect(screen.queryByLabelText('Yeni şifre')).not.toBeInTheDocument();expect(await screen.findByRole('status')).toHaveTextContent('Bu adrese bağlı bir hesap varsa');});
+ it('handles the recovery auth event without redirecting to the admin dashboard',async()=>{show();await screen.findByLabelText('E-posta adresi');act(()=>auth.callback('PASSWORD_RECOVERY',{user:{email:'owner@example.com'}}));expect(await screen.findByLabelText('Yeni şifre')).toBeInTheDocument();});
+ it('rejects mismatched passwords before calling the API',async()=>{auth.session={user:{email:'owner@example.com'}};show();await fill('long-test-password','different-password');expect(screen.getByRole('alert')).toHaveTextContent('eşleşmiyor');expect(auth.updateUser).not.toHaveBeenCalled();});
+ it('saves the password and revokes existing refresh sessions',async()=>{auth.session={user:{email:'owner@example.com'}};show();await fill();await waitFor(()=>expect(auth.updateUser).toHaveBeenCalledWith({password:'unique-test-password'}));expect(await screen.findByText('Şifren kaydedildi.')).toBeInTheDocument();expect(auth.signOut).toHaveBeenCalledWith({scope:'global'});expect(screen.queryByLabelText('Yeni şifre')).not.toBeInTheDocument();});
+ it('does not report a failed update as successful',async()=>{auth.session={user:{email:'owner@example.com'}};auth.updateUser.mockResolvedValue({error:{message:'expired'}});show();await fill();expect(await screen.findByRole('alert')).toHaveTextContent('Şifre güncellenemedi');expect(auth.signOut).not.toHaveBeenCalled();});
+ it('reports email delivery errors without a success message',async()=>{auth.resetPasswordForEmail.mockRejectedValue(new Error('network'));show();fireEvent.change(await screen.findByLabelText('E-posta adresi'),{target:{value:'owner@example.com'}});fireEvent.submit(screen.getByLabelText('E-posta adresi').closest('form')!);expect(await screen.findByRole('alert')).toHaveTextContent('E-posta gönderilemedi');expect(screen.queryByText(/Bu adrese bağlı bir hesap varsa/)).not.toBeInTheDocument();});
+});
