@@ -16,6 +16,7 @@ import {
   type QuoteMaterial,
   type PricingConfig,
 } from "@/lib/quote-engine";
+import "./quote-options.css";
 import type { StlMetrics } from "./StlViewer";
 const Viewer = lazy(() => import("./StlViewer"));
 export type StudioSpec = {
@@ -25,10 +26,12 @@ export type StudioSpec = {
   campaignName: string | null;
   discount: number;
 };
-const demoMaterials: QuoteMaterial[] = [
+type CatalogMaterial = QuoteMaterial & { technology: string; description?: string; colors?: string };
+const demoMaterials: CatalogMaterial[] = [
   {
     id: "demo-pla",
     name: "PLA",
+    technology: "FDM",
     density: 1.24,
     pricePerGram: 6,
     setupFee: 35,
@@ -37,6 +40,7 @@ const demoMaterials: QuoteMaterial[] = [
   {
     id: "demo-petg",
     name: "PETG",
+    technology: "FDM",
     density: 1.27,
     pricePerGram: 8,
     setupFee: 35,
@@ -68,10 +72,16 @@ export default function QuoteStudio({
   service: string;
 }) {
   const { tenant } = useTenant();
-  const [materials, setMaterials] = useState<QuoteMaterial[]>([]);
+  const [materials, setMaterials] = useState<CatalogMaterial[]>([]);
   const [pricing, setPricing] = useState<PricingConfig | null>(null);
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
   const [materialId, setMaterialId] = useState("");
+  const [technology, setTechnology] = useState("");
+  const [customMaterial, setCustomMaterial] = useState("");
+  const [purpose, setPurpose] = useState("Birlikte belirleyelim");
+  const [colorPreference, setColorPreference] = useState("Birlikte belirleyelim");
+  const [finishes, setFinishes] = useState<string[]>([]);
+  const [catalogStatus, setCatalogStatus] = useState<"loading" | "ready" | "error">("loading");
   const [quality, setQuality] = useState(1);
   const [infill, setInfill] = useState(20);
   const [quantity, setQuantity] = useState(1);
@@ -84,10 +94,13 @@ export default function QuoteStudio({
     setPricing(null);
     setCampaigns([]);
     setMaterialId("");
+    setTechnology("");
+    setCustomMaterial("");
+    setCatalogStatus("loading");
     if (demoMode) {
       setMaterials(demoMaterials);
       setPricing(demoPricing);
-      setMaterialId(demoMaterials[0].id);
+      setCatalogStatus("ready");
       return;
     }
     if (!tenant) return;
@@ -109,24 +122,26 @@ export default function QuoteStudio({
         .eq("active", true)
         .order("sort_order"),
     ]).then(([m, s, c]) => {
-      if (!active || m.error || s.error) return;
-      const values = (m.data || [])
-        .filter((m) => m.technology === "FDM")
-        .map((m) => ({
+      if (!active) return;
+      setCatalogStatus(m.error ? "error" : "ready");
+      const values = (m.error ? [] : m.data || []).map((m) => ({
           id: m.id,
           name: m.name,
+          technology: m.technology.trim().toUpperCase(),
+          description: m.description || "",
+          colors: m.color || "",
           density: Number(m.density_g_cm3),
           pricePerGram: Number(m.price_per_gram),
           setupFee: Number(m.setup_fee),
           minPrice: Number(m.min_price),
         }));
       setMaterials(values);
-      setMaterialId(values[0]?.id || "");
+
       const map = Object.fromEntries(
         (s.data || []).map((v) => [v.key, Number(v.value)]),
       );
       if (
-        [
+        !s.error && [
           "margin_percent",
           "vat_percent",
           "labor_per_hour",
@@ -140,7 +155,7 @@ export default function QuoteStudio({
           minOrder: map.min_order_price,
         });
       if (!c.error) setCampaigns(c.data || []);
-    });
+    }).catch(() => { if (active) setCatalogStatus("error"); });
     return () => {
       active = false;
     };
@@ -149,9 +164,14 @@ export default function QuoteStudio({
     setMetrics(null);
   }, [file]);
   const material = materials.find((m) => m.id === materialId);
+  const technologies = [...new Set(materials.map((m) => m.technology))];
+  const selectedTechnology = material?.technology || technology;
+  const materialName = materialId === "custom" ? customMaterial.trim() || "Diğer malzeme (belirlenecek)" : material?.name || "Malzeme önerisi istiyorum";
+  const requestedColor = colorPreference === "Özel renk" ? `Özel renk: ${color}` : colorPreference;
+  const isFdm = selectedTechnology === "FDM";
   const price = useMemo(
     () =>
-      service === "3D Baskı" && metrics && material && pricing
+      service === "3D Baskı" && metrics && material && pricing && isFdm && material.pricePerGram > 0 && finishes.length === 0 && colorPreference !== "Çok renkli"
         ? computeEstimate(
             metrics.volumeCm3,
             material,
@@ -161,7 +181,7 @@ export default function QuoteStudio({
             pricing,
           )
         : null,
-    [service, metrics, material, pricing, quality, infill, quantity],
+    [service, metrics, material, pricing, quality, infill, quantity, isFdm, finishes.length, colorPreference],
   );
   const campaign = price
     ? campaigns.find(
@@ -184,7 +204,7 @@ export default function QuoteStudio({
     onSpec({
       material:
         service === "3D Baskı"
-          ? material?.name || "Belirlenecek"
+          ? materialName
           : "Belirlenecek",
       quantity,
       campaignName: campaign?.name || null,
@@ -193,7 +213,14 @@ export default function QuoteStudio({
         `Hizmet: ${service}`,
         `Adet: ${quantity}`,
         service === "3D Baskı"
-          ? `Malzeme: ${material?.name || "Belirlenecek"} · Kalite: ${qualities[quality].name} · Doluluk: %${infill} · Renk: ${color}`
+          ? [
+              `Teknoloji: ${selectedTechnology || "Teknik ekip önersin"}`,
+              `Malzeme: ${materialName}`,
+              `Kullanım amacı: ${purpose}`,
+              `Renk: ${requestedColor}`,
+              `Son işlem: ${finishes.length ? finishes.join(", ") : "Standart / birlikte belirlenecek"}`,
+              isFdm ? `Kalite: ${qualities[quality].name} · Doluluk: %${infill}` : "Baskı parametreleri teknik değerlendirmede belirlenecek.",
+            ].join(" · ")
           : "Tarama / modelleme kapsamı teknik inceleme ile belirlenecek.",
         metrics
           ? `STL (mm varsayımı): ${metrics.bboxCm.x.toFixed(2)} × ${metrics.bboxCm.y.toFixed(2)} × ${metrics.bboxCm.z.toFixed(2)} cm; hacim ${metrics.volumeCm3.toFixed(2)} cm³`
@@ -210,7 +237,12 @@ export default function QuoteStudio({
     });
   }, [
     service,
-    material,
+    materialName,
+    selectedTechnology,
+    purpose,
+    requestedColor,
+    finishes,
+    isFdm,
     quantity,
     quality,
     infill,
@@ -317,50 +349,63 @@ export default function QuoteStudio({
         )}
       </div>
       <div className="studio-options">
-        <p className="brand-eyebrow">ONLINE HESAPLAMA</p>
+        <p className="brand-eyebrow">PROJENİZE ÖZEL</p>
         <h2>Üretim seçenekleri</h2>
         {service === "3D Baskı" && (
           <>
+            <p className="studio-hint">Malzemeden emin değilseniz seçimi bize bırakın. Seçenekler talep tercihleridir; stok ve üretim uygunluğu teklif aşamasında teyit edilir.</p>
             <label>
-              Malzeme
-              <select
-                value={materialId}
-                onChange={(e) => setMaterialId(e.target.value)}
-              >
-                {!materials.length && (
-                  <option value="">Teknik değerlendirmede belirlenecek</option>
-                )}
-                {materials.map((m) => (
-                  <option key={m.id} value={m.id}>
-                    {m.name}
-                  </option>
-                ))}
+              Üretim teknolojisi
+              <select value={technology} onChange={(e) => { setTechnology(e.target.value); setMaterialId(""); setCustomMaterial(""); }}>
+                <option value="">Teknik ekip önersin / tüm seçenekler</option>
+                {technologies.map((t) => <option key={t} value={t}>{t === "FDM" ? "FDM · filament baskı" : ["SLA", "DLP"].includes(t) ? `${t} · reçine baskı` : ["SLS", "MJF"].includes(t) ? `${t} · toz baskı` : t}</option>)}
               </select>
             </label>
             <label>
-              Baskı kalitesi
-              <select
-                value={quality}
-                onChange={(e) => setQuality(Number(e.target.value))}
-              >
-                {qualities.map((q, i) => (
-                  <option key={q.id} value={i}>
-                    {q.name}
-                  </option>
+              Malzeme tercihi
+              <select value={materialId} onChange={(e) => setMaterialId(e.target.value)} aria-describedby="material-help">
+                <option value="">Malzeme önerisi istiyorum</option>
+                {technologies.filter((t) => !technology || technology === t).map((t) => (
+                  <optgroup key={t} label={t}>
+                    {materials.filter((m) => m.technology === t).map((m) => <option key={m.id} value={m.id}>{m.name}</option>)}
+                  </optgroup>
                 ))}
+                <option value="custom">Diğer malzeme / özel talep</option>
+              </select>
+            </label>
+            <p id="material-help" className="studio-hint" role="status">
+              {catalogStatus === "loading" ? "Malzeme seçenekleri yükleniyor…" : catalogStatus === "error" ? "Katalog şu an yüklenemedi. Özel malzeme talebinizi yine iletebilirsiniz." : material?.description || "Malzeme adı veya kullanım amacınız üzerinden birlikte seçim yapabiliriz."}
+              {material?.colors && ` Renk bilgisi: ${material.colors}.`}
+            </p>
+            {materialId === "custom" && <label>İstediğiniz malzeme<input maxLength={100} value={customMaterial} onChange={(e) => setCustomMaterial(e.target.value)} placeholder="Örn. özel bir filament veya ürün kodu" /></label>}
+            <label>
+              Kullanım amacı
+              <select value={purpose} onChange={(e) => setPurpose(e.target.value)}>
+                {["Birlikte belirleyelim", "Görsel prototip / sunum", "Fonksiyonel prototip", "Yedek parça", "Maket / minyatür", "Fikstür / üretim yardımcısı", "Dekoratif ürün", "Küçük seri üretim"].map((v) => <option key={v}>{v}</option>)}
               </select>
             </label>
             <label>
-              Doluluk: %{infill}
-              <input
-                type="range"
-                min={5}
-                max={100}
-                step={5}
-                value={infill}
-                onChange={(e) => setInfill(Number(e.target.value))}
-              />
+              Renk tercihi
+              <select value={colorPreference} onChange={(e) => {
+                const v = e.target.value; setColorPreference(v);
+                const swatches: Record<string, string> = { Siyah: "#242424", Beyaz: "#eeeeee", Gri: "#888888", Kırmızı: "#c93434", Mavi: "#2359e8", Yeşil: "#338151", Turuncu: "#ed692b" };
+                if (swatches[v]) setColor(swatches[v]);
+              }}>
+                {["Birlikte belirleyelim", "Siyah", "Beyaz", "Gri", "Kırmızı", "Mavi", "Yeşil", "Turuncu", "Şeffaf / yarı saydam", "Çok renkli", "Özel renk"].map((v) => <option key={v}>{v}</option>)}
+              </select>
             </label>
+            <details className="studio-detail-options">
+              <summary>Son işlem ve baskı detayları{finishes.length ? ` · ${finishes.length} tercih` : ""}</summary>
+              <fieldset className="studio-finishes">
+                <legend>Son işlem tercihi</legend>
+                {["Zımpara", "Astar / boya", "Yüzey parlatma", "Dişli insert", "Montaj", "Yapıştırma"].map((v) => <label key={v}><input type="checkbox" checked={finishes.includes(v)} onChange={(e) => setFinishes((current) => e.target.checked ? [...current, v] : current.filter((f) => f !== v))} />{v}</label>)}
+              </fieldset>
+              {isFdm ? <>
+                <label>Baskı kalitesi<select value={quality} onChange={(e) => setQuality(Number(e.target.value))}>{qualities.map((q, i) => <option key={q.id} value={i}>{q.name}</option>)}</select></label>
+                <label>Doluluk: %{infill}<input type="range" min={5} max={100} step={5} value={infill} onChange={(e) => setInfill(Number(e.target.value))} /></label>
+                <p className="studio-hint">Katman ve doluluk tercihi, parçanın geometrisine göre değerlendirilir.</p>
+              </> : <p className="studio-hint">Katman ve doluluk seçenekleri FDM seçtiğinizde açılır. Diğer teknolojilerde parametreleri teknik ekip belirler.</p>}
+            </details>
           </>
         )}
         <div className="studio-option-pair">
@@ -381,9 +426,9 @@ export default function QuoteStudio({
               }
             />
           </label>
-          {service === "3D Baskı" && (
+          {service === "3D Baskı" && colorPreference === "Özel renk" && (
             <label>
-              Tercih edilen renk
+              Özel renk referansı
               <input
                 type="color"
                 value={color}
@@ -409,9 +454,9 @@ export default function QuoteStudio({
             <p>
               {service !== "3D Baskı"
                 ? "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır."
-                : !pricing || !materials.length
-                  ? "Fiyatlar tanımlandığında STL dosyanız için ön hesaplama açılır. Şimdi teknik talep gönderebilirsiniz."
-                  : "Hesaplama için geçerli bir STL modeli yükleyin."}
+                : !material || !isFdm || !pricing || material.pricePerGram <= 0 || material.density <= 0 || finishes.length > 0 || colorPreference === "Çok renkli"
+                  ? "Bu tercihler için dosya ve üretim kapsamını inceleyip size özel teklif hazırlayacağız."
+                  : "Ön hesaplama için geçerli bir STL modeli yükleyin."}
             </p>
           )}
         </div>

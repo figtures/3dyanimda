@@ -20,6 +20,9 @@ describe("source quote engine", () => {
       ((49.6 * 6 + 5.2 * 150) * 10 * 0.85 + 35) * 1.3 * 1.2,
     );
   });
+  it("does not estimate a material without a configured price", () => {
+    expect(computeEstimate(100, { ...m, pricePerGram: 0 }, 1, 20, 1, p)).toBeNull();
+  });
   it("rejects invalid geometry, settings and quantities", () => {
     for (const volume of [NaN, Infinity, 0, -1])
       expect(computeEstimate(volume, m, 1, 20, 1, p)).toBeNull();

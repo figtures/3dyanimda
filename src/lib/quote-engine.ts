@@ -42,6 +42,7 @@ export function computeEstimate(
     inputs.some((v) => !Number.isFinite(v) || v < 0) ||
     volumeCm3 <= 0 ||
     material.density <= 0 ||
+    material.pricePerGram <= 0 ||
     qualityMul <= 0 ||
     infill < 5 ||
     infill > 100 ||

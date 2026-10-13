@@ -150,13 +150,14 @@ const AdminPricing = () => {
           </Button>
         </div>
 
+        <p className="text-sm text-muted-foreground mb-4">Aktif malzemeler teklif formunda teknolojiye göre listelenir. Fiyat veya yoğunluk 0 ise malzeme yalnızca teknik teklif talebi olarak sunulur. Otomatik ön hesaplama yalnızca fiyatlandırması tamamlanmış FDM seçeneklerinde kullanılır. Aktif olması stok garantisi anlamına gelmez.</p>
         <div className="space-y-3">
           {materials.map((m, i) => (
             <div key={m.id ?? `new-${i}`} className="border border-border rounded-md p-4 bg-background">
               <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
                 <div className="col-span-2 md:col-span-2">
                   <Label className="text-xs">Ad</Label>
-                  <Input value={m.name} onChange={e => updateMat(i, { name: e.target.value })} />
+                  <Input maxLength={100} value={m.name} onChange={e => updateMat(i, { name: e.target.value })} />
                 </div>
                 <div>
                   <Label className="text-xs">Teknoloji</Label>

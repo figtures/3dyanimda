@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-13T13:00:33.271Z",
+  "reviewedAt": "2026-10-13T13:26:29.325Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "63b4a5b86c9c1ce9ef7a01b6b6495ac1511641507fe06b6307b54ae92e8150e3",
-  "sourceFileCount": 526,
+  "sourceHash": "04957bed05287c34562aafadeb9779ed9b162b657c876e841193f0bb40d1b527",
+  "sourceFileCount": 528,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/white-action-review-2026-10-13.json",
+    "latestDeltaReview": "docs/audits/quote-catalog-review-2026-10-13.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/white-action-source-2026-10-13.json",
+    "latestSourceSnapshot": "docs/audits/quote-catalog-source-2026-10-13.json",
     "latestHomeFlowBrowserCases": 48
   },
   "evidence": [
@@ -180,6 +180,18 @@
     {
       "file": "docs/audits/white-action-source-2026-10-13.json",
       "sha256": "bc2cfab6140f3c0452dd0e86ce45ef240ff4854853fda4ca1042484bd3e1f4b5"
+    },
+    {
+      "file": "docs/audits/quote-catalog-review-2026-10-13.json",
+      "sha256": "abb6090070b2669a76905c241384e27965e086e8007391ab269f8e676edb1867"
+    },
+    {
+      "file": "docs/audits/quote-catalog-source-2026-10-13.json",
+      "sha256": "0604edb7333ca9c8a38d836ed3ebea7e042cddcaaeede5916e5415759fc3037c"
+    },
+    {
+      "file": "supabase/seeds/quote-materials.sql",
+      "sha256": "0cf6b0a68a77e1d5aa540358be97b688d3367e4c9908c14c053f4d78010d4da2"
     }
   ],
   "limitations": [

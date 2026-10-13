@@ -1,0 +1,36 @@
+{
+  "sourceHash": "04957bed05287c34562aafadeb9779ed9b162b657c876e841193f0bb40d1b527",
+  "sourceFileCount": 528,
+  "changedFiles": [
+    {
+      "path": "src/components/quote/QuoteStudio.test.tsx",
+      "sha256": "5d61185844431ee486aca7ec624c3725771bd1233bf08320f8b67cb1cda12437",
+      "bytes": 6198
+    },
+    {
+      "path": "src/components/quote/QuoteStudio.tsx",
+      "sha256": "bd73bac3dd3330ee2232cfde51d4beef9d36cb0738be72b3ba61427a1da66dd5",
+      "bytes": 17932
+    },
+    {
+      "path": "src/components/quote/quote-options.css",
+      "sha256": "f47aa79a053f63dd171c86c556dfcbd5e0fd229985b7ea21fd2710051348a623",
+      "bytes": 1188
+    },
+    {
+      "path": "src/lib/quote-engine.test.ts",
+      "sha256": "c0e577571c56892b406f9350a8e0f40f1dfef1abb224a5ec2456e1aa36a29731",
+      "bytes": 1291
+    },
+    {
+      "path": "src/lib/quote-engine.ts",
+      "sha256": "c37c125a7ac6d3fbf548afe4960bdd37211c6a079d1e4a4bc1c52a873d714605",
+      "bytes": 2125
+    },
+    {
+      "path": "src/pages/admin/AdminPricing.tsx",
+      "sha256": "971f2bb0402cfbe221b4755be39b05c4db53d7efd611adf09a03bf99d7ce8ad9",
+      "bytes": 9792
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "result": "pass",
+  "reviewedAt": "2026-10-13T13:26:29.325Z",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "kind": "bounded quote catalogue and request specification review",
+  "previousSourceHash": "63b4a5b86c9c1ce9ef7a01b6b6495ac1511641507fe06b6307b54ae92e8150e3",
+  "sourceHash": "04957bed05287c34562aafadeb9779ed9b162b657c876e841193f0bb40d1b527",
+  "changes": [
+    "20 editable request materials per brand across FDM/SLA/SLS/MJF",
+    "Technology filtering, material guidance, custom material, purpose, color and finishing requests",
+    "All selections serialized through existing quote description and material preference fields",
+    "No FDM formula used for non-FDM, unpriced, finishing or multicolor requests"
+  ],
+  "validation": {
+    "typescript": "pass",
+    "productionBuild": "pass",
+    "targetedTests": 9,
+    "publicApi": [
+      {
+        "brand": "3dyanimda",
+        "count": 20,
+        "tenantId": "10000000-0000-4000-8000-000000000001",
+        "technologies": [
+          "FDM",
+          "MJF",
+          "SLA",
+          "SLS"
+        ]
+      },
+      {
+        "brand": "3dsanayi",
+        "count": 20,
+        "tenantId": "10000000-0000-4000-8000-000000000002",
+        "technologies": [
+          "FDM",
+          "MJF",
+          "SLA",
+          "SLS"
+        ]
+      },
+      {
+        "brand": "maketyanimda",
+        "count": 20,
+        "tenantId": "10000000-0000-4000-8000-000000000003",
+        "technologies": [
+          "FDM",
+          "MJF",
+          "SLA",
+          "SLS"
+        ]
+      },
+      {
+        "brand": "parcayanimda",
+        "count": 20,
+        "tenantId": "10000000-0000-4000-8000-000000000004",
+        "technologies": [
+          "FDM",
+          "MJF",
+          "SLA",
+          "SLS"
+        ]
+      }
+    ],
+    "formTests": [
+      "Technology/material compatibility",
+      "Specification includes preferences",
+      "Estimate eligibility",
+      "Catalogue unaffected by pricing failure",
+      "Custom request fallback",
+      "Non-print service isolation"
+    ],
+    "liveTestLeadSubmitted": false,
+    "customerEmailSent": false,
+    "browserVisualReview": "not performed; browser infrastructure unavailable"
+  },
+  "database": {
+    "project": "zdxjmhhjuomcpdtllnuq",
+    "seed": "supabase/seeds/quote-materials.sql",
+    "inserted": 80,
+    "existingRecordsChanged": 0,
+    "schemaChanged": false,
+    "permissionsChanged": false,
+    "pricing": "Request-only: zero density and prices until actual products and business rates are configured"
+  },
+  "copyReview": "All added material descriptions reviewed as request guidance. No stock, guaranteed properties, owned machinery, certifications or prices asserted. No external assets added.",
+  "sources": [
+    "https://help.prusa3d.com/filament-material-guide",
+    "https://formlabs.com/global/products/materials/"
+  ],
+  "carryForward": "Previously reviewed pages, assets, SEO/routing and geometry unchanged. Bounded source and database checks do not relabel previous browser/Lighthouse reports as current.",
+  "limitations": [
+    "Local visual browser checks not performed",
+    "Cloudflare production deployment not performed",
+    "No live customer quote or email delivery test"
+  ]
+}
