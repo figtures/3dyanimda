@@ -4,13 +4,13 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-13T08:49:57.532Z",
+  "reviewedAt": "2026-10-13T09:17:32.195Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "0c010ef484dc4f977d54552090a30eb4f9397a54bcecbc3342317f4e3f1dfc37",
+  "sourceHash": "e757c71f9569751589423aa251c27c1a3399c8f29c09fd559933d0c185ff0caa",
   "sourceFileCount": 526,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/home-flow-review-2026-10-13.json",
+    "latestDeltaReview": "docs/audits/visual-home-review-2026-10-13.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/home-flow-source-2026-10-13.json",
+    "latestSourceSnapshot": "docs/audits/visual-home-source-2026-10-13.json",
     "latestHomeFlowBrowserCases": 48
   },
   "evidence": [
@@ -160,6 +160,18 @@
     {
       "file": "docs/audits/home-flow-source-2026-10-13.json",
       "sha256": "d4be61a9bc7856963ca5ebd537991e250a2554a56e6ca4af28a9ddb62f95fcff"
+    },
+    {
+      "file": "docs/audits/visual-home-browser-2026-10-13.json",
+      "sha256": "ca58bbdd9ac2b5d633cdb3d61f67115f1238f90c6d5b8a75942b538f138e3f5f"
+    },
+    {
+      "file": "docs/audits/visual-home-review-2026-10-13.json",
+      "sha256": "a494772e2c996c7e8838095261c6b9f23f6fc39d7741421cd1a4c4eeb6b16910"
+    },
+    {
+      "file": "docs/audits/visual-home-source-2026-10-13.json",
+      "sha256": "3d0a89c4ab28d82abdf274c08031ad117bc885304f6578816e638a0d59a73ca2"
     }
   ],
   "limitations": [
@@ -169,7 +181,8 @@
     "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception.",
     "The 11 October review carries forward unchanged original content/assets and adds 375 targeted rendered cases plus isolated bootstrap tests; it does not relabel historical 5136 cases as a fresh full crawl.",
     "12 October bounded delta review reconciles 240 earlier mobile/desktop lab runs, 48 latest branding/navigation cases, 796 API schema records and inspected brand assets; these are not relabeled as fresh full-route human review.",
-    "13 October presentation delta retains all original homepage text and carries forward unchanged content/assets/SEO evidence; 48 home layout and 48 navigation cases cover four brands, three themes and four widths. No fresh full-route or human review is implied."
+    "13 October presentation delta retains all original homepage text and carries forward unchanged content/assets/SEO evidence; 48 home layout and 48 navigation cases cover four brands, three themes and four widths. No fresh full-route or human review is implied.",
+    "13 October visual revision replaces the rejected text-heavy layout. Original content is retained in keyboard-operable service panels and native details; current bounded review is documented in visual-home-review-2026-10-13.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

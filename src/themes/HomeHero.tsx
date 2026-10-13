@@ -153,19 +153,6 @@ export default function HomeHero() {
             <span className="visual-note">Temsili uygulama görseli</span>
           </div>
         </section>
-        <div className="wrap service-strip">
-          {services.map((s, i) => (
-            <Link to={link(s.path)} key={s.path}>
-              <span className="strip-num">0{i + 1}</span>
-              <s.icon size={24} />
-              <div>
-                <strong>{s.name}</strong>
-                <span>{s.description}</span>
-              </div>
-              <ArrowUpRight size={20} />
-            </Link>
-          ))}
-        </div>
       </>
     );
   if (theme === "editorial")
@@ -187,27 +174,6 @@ export default function HomeHero() {
             Projenizi başlatın <ArrowUpRight size={20} />
           </Link>
         </div>
-        <div className="transformation">
-          {[2, 1, 0].map((index, i) => (
-            <Link to={link(services[index].path)} key={index}>
-              <div className="transformation-label">
-                <span>
-                  0{i + 1} / {services[index].name}
-                </span>
-                <ArrowUpRight size={18} />
-              </div>
-              <ServiceVisual service={index} />
-              <h2>
-                {services[index].label}
-                <span>.</span>
-              </h2>
-            </Link>
-          ))}
-        </div>
-        <p className="visual-note">
-          İhtiyacınıza göre tek bir hizmetle başlayabilir veya tasarımdan
-          üretime tüm süreci birlikte planlayabilirsiniz.
-        </p>
       </section>
     );
   return (

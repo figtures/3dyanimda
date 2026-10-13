@@ -1,0 +1,31 @@
+{
+  "sourceHash": "e757c71f9569751589423aa251c27c1a3399c8f29c09fd559933d0c185ff0caa",
+  "sourceFileCount": 526,
+  "changedFiles": [
+    {
+      "path": "src/components/brand/navigation.css",
+      "sha256": "165ca69cf018e0c4b5f9193efbea762689669224c73253134ae0c3e48a679028",
+      "bytes": 8211
+    },
+    {
+      "path": "src/pages/Index.tsx",
+      "sha256": "a406564eb3d95c9acc5cc557864bc4a255ffba0f2c2ad7754c3a776c60322cbe",
+      "bytes": 12415
+    },
+    {
+      "path": "src/themes/HomeHero.tsx",
+      "sha256": "4880cdbac4b18e07a8b3b86d140c6fa10c6ec11efdfc4e3f481b7886ed241028",
+      "bytes": 8240
+    },
+    {
+      "path": "src/themes/home-flow.css",
+      "sha256": "16682e398465ea341da3cca43b875f208028ab0051b07428cf9b59de9b6eeeec",
+      "bytes": 14650
+    },
+    {
+      "path": "src/themes/themes.css",
+      "sha256": "636454d026ff52894181810b14d44ad300bd75bae1ec1a6e2a4b11f6681b2f87",
+      "bytes": 36890
+    }
+  ]
+}

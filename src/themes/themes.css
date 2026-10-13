@@ -23,26 +23,26 @@
   overflow: visible;
 }
 .brand-site.theme-industrial {
-  --paper: #f3f5f7;
+  --paper: #ffffff;
   --surface: #ffffff;
-  --soft: #e7ecf2;
-  --text: #172b43;
-  --muted: #526174;
-  --line: #cdd6e0;
-  --dark: #10243c;
-  --primary: 215 56% 30%;
-  --accent-blue: 215 56% 30%;
-  --background: 210 20% 96%;
-  --brand-accent: #214571;
-  --accent-ink: #ffffff;
-  --highlight: #b9cfe9;
-  --ring: 215 56% 30%;
+  --soft: #f2f2f0;
+  --text: #17191c;
+  --muted: #565b63;
+  --line: #dedfdf;
+  --dark: #141619;
+  --primary: 16 100% 59%;
+  --accent-blue: 16 100% 59%;
+  --primary-foreground: 220 9% 10%;
+  --background: 0 0% 100%;
+  --brand-accent: #ff642d;
+  --accent-ink: #17191c;
+  --highlight: #ff642d;
+  --ring: 16 100% 59%;
 }
-/* Light primary actions stay legible on the industrial dark header and hero. */
 .theme-industrial :is(.product-header, .brand-header, .immersive-hero, .studio-band, .brand-footer) .brand-button {
-  background: #edf3fa;
-  border-color: #edf3fa;
-  color: #173554;
+  background: #ff642d;
+  border-color: #ff642d;
+  color: #17191c;
 }
 .brand-site.theme-editorial {
   --paper: #f9f7f2;
@@ -1323,7 +1323,7 @@
   background: radial-gradient(ellipse at 50% 40%, #fffdfa, #eee8dc);
 }
 .theme-industrial .showcase-stage {
-  background: radial-gradient(ellipse at 50% 40%, #f8fafc, #dde5ef);
+  background: radial-gradient(ellipse at 50% 40%, #ffffff, #e9e9e5);
 }
 .showcase-stage-top,
 .showcase-stage-bottom {
