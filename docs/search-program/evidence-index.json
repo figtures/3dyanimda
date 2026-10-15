@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "b81a562bb616ce7cd5c90c5f8a9761997373063a09e5eea37593bf9195ebfc70",
-      "bytes": 6933
+      "sha256": "78b653aafb100c5d475dd7b767461431777cf00c231961fc46132fadb7814576",
+      "bytes": 6974
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -308,8 +308,8 @@
     },
     {
       "path": "scripts/export-sites.mjs",
-      "sha256": "82b9df064fd056359e4597511e9008f5d702a0f02812bafc1e985cd921935e39",
-      "bytes": 12930
+      "sha256": "4046c0b300feb5ea708f072811c10cac08d483053a5c18bd9264cb7159227486",
+      "bytes": 12515
     },
     {
       "path": "scripts/font-requirements.txt",
@@ -1009,7 +1009,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-15T21:23:46.324Z",
+  "checksumsRefreshedAt": "2026-10-15T23:15:30.243Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
