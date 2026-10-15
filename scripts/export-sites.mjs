@@ -16,6 +16,7 @@ import { chromium } from "@playwright/test";
 import { createPublicApiRelay } from "./public-api-relay.mjs";
 import {inlineCriticalCss,serializedPrerender} from './quality/critical-css.mjs';
 import {capturePublicBootstrap} from './quality/public-bootstrap.mjs';
+import {exportedDocumentData} from './quality/export-document.mjs';
 const env = { ...loadEnv("production", process.cwd(), ""), ...process.env };
 const hosts = (env.SITE_HOSTS || "").split(",").filter(Boolean);
 if (
@@ -254,17 +255,11 @@ try {
       await page.evaluate(()=>{document.getElementById('root').dataset.prerendered='true';});
       await inlineCriticalCss(page);
       await bootstrap.embed();
-      await writeFile(file, await serializedPrerender(page));
+      const exportedHTML = await serializedPrerender(page);
+      await writeFile(file, exportedHTML);
       if (!utilityRoutes.has(url)) {
-        const documentData=await page.evaluate(() => ({
-          title:document.title,
-          description:document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
-          text:document.querySelector('main')?.textContent || '',
-          images:Array.from(document.querySelectorAll('main img')).map(i => i.src),
-          structuredData:Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(s => s.textContent),
-        }));
+        const {documentData, semanticDate} = exportedDocumentData(exportedHTML, base + url);
         const {text,...data}=documentData;
-        const semanticDate=await page.evaluate(()=>document.querySelector('[data-content-modified]')?.getAttribute('datetime')||null);
         published.push({path:url,lastmod:semanticDate||lastmod,...data,hash:createHash('sha256').update(JSON.stringify(documentData)).digest('hex')});
       }
     }
