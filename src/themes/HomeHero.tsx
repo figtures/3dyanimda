@@ -115,7 +115,7 @@ export default function HomeHero() {
       : theme === "studio" && brand.slug === "3dyanimda"
         ? "Üretime buradan başlayın."
         : brand.title);
-  if (theme === "industrial")
+  if (theme === "industrial" || theme === "industrialtwo")
     return (
       <>
         <section className="immersive-hero">

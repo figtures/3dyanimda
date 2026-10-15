@@ -14,6 +14,7 @@ import { useRedirects } from "@/hooks/useRedirects";
 import "@/brands/brand.css";
 import "@/brands/modern.css";
 import "@/themes/themes.css";
+import "@/themes/industrialtwo.css";
 import { getSiteTheme, themeNames } from "@/themes/config";
 import GrowthAnalytics from "./GrowthAnalytics";
 import { CookieConsent } from "@/components/site/CookieConsent";

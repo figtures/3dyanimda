@@ -7,7 +7,7 @@ const browser = await chromium.launch({headless:true,...(process.env.CHROMIUM_EX
 try {
   const page = await browser.newPage();
   mkdirSync("docs/previews/themes",{recursive:true});
-  for (const theme of ["industrial","editorial","studio"]) for(const width of [390,1440]) {
+  for (const theme of ["industrial", "industrialtwo", "editorial", "studio"]) for(const width of [390,1440]) {
     await page.setViewportSize({width,height:1000});
     await page.goto(`http://127.0.0.1:8083/?tenant=3dyanimda&theme=${theme}`);
     await page.locator(".application-list a").first().waitFor();

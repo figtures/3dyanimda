@@ -1,7 +1,5 @@
 # Dört marka · Ortak 3D üretim platformu
 
-6 Ekim 2026: Kaynak altyapı üzerine SEO, AI arama keşfi ve teklif dönüşümü geliştirmeleri eklendi. [Uygulama, doğrulama ve canlıya geçiş durumu](docs/SEARCH-GROWTH-2026-10.md). Kamuya açık domain yayını ve indeksleme bildirimi henüz yapılmadı; mevcut içerik yayın kontrolleri korunuyor.
-
 3dyanimda, 3dsanayi, maketyanimda ve parcayanimda için ortak React arayüzü, markaya özel içerik ve tek Supabase veritabanı. ATAVIER bu çalışmanın dışında.
 
 
@@ -31,7 +29,7 @@ Supabase değişkenleri boşken yalnızca geliştirme ortamında salt okunur tas
 
 ## Uygulanan değişiklikler
 
-- Env ile seçilen üç ortak tema (`industrial`, `editorial`, `studio`); tüm markalarda belirgin 3D baskı, 3D tarama ve 3D modelleme erişimi.
+- Env ile seçilen dört ortak tema (`industrial`, `industrialtwo`, `editorial`, `studio`); tüm markalarda belirgin 3D baskı, 3D tarama ve 3D modelleme erişimi.
 - Ortak anasayfa, hizmetler, yaklaşım, iletişim ve proje talep ekranları; mobil menü; markaya özel içerikler.
 - Admin ve süper admin Studio modülleri korundu. Teklif ekranındaki müşteri 3D Studio’su ve kaynak fiyat motoru tekrar bağlandı; aktif FDM fiyatları ve kampanyalar tenant verisinden okunur.
 - Her marka için 181 detay kayıt: 18 yayına hazır içerik ve 163 taslak yerel sayfa. Yönetim panelindeki İçerik & Bölgeler bölümünden düzenlenir. PostgreSQL yayın kontrolü, yetersiz yerel bilgiyi ve yer adı değiştirilmiş kopyaları engeller. Ayrıntılar: [İçerik ve SEO](docs/CONTENT-SEO.md).
@@ -71,6 +69,8 @@ Fiyatlandırma paneli korunur; kaynak firmaya ait örnek malzeme fiyatları yeni
 
 ## Three interface themes
 
-Set `VITE_SITE_THEME=industrial`, `editorial` or `studio` in `.env.local`.
+Set `VITE_SITE_THEME=industrial`, `industrialtwo`, `editorial` or `studio` in `.env.local`.
 Per-brand overrides are available; see [theme setup and previews](docs/THEMES.md).
 Restart development / rebuild production after changing env values.
+
+`industrial` retains the current orange/charcoal design. `industrialtwo` preserves the original green Industrial palette with the current shared home flow. Select it in the private preview theme picker, or set `VITE_SITE_THEME=industrialtwo` for a brand build. Existing environment defaults are unchanged.

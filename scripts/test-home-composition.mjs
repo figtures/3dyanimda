@@ -21,7 +21,7 @@ const page = await browser.newPage();
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 try {
-  for (const theme of ["industrial", "editorial", "studio"])
+  for (const theme of ["industrial", "industrialtwo", "editorial", "studio"])
     for (const tenant of [
       "3dyanimda",
       "3dsanayi",

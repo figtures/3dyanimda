@@ -1,0 +1,28 @@
+{
+  "result": "pass",
+  "kind": "bounded restored-theme source review",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-15T21:23:46.199Z",
+  "previousSourceHash": "96291ddfe2521371e78fa438f9714cdb5597c2b56856e30f0ec17cd9d75adb29",
+  "sourceHash": "9e145e813c6b5ea01952597328eb523008404e2c5b3a931f669a57ecd211bca4",
+  "restoredFrom": "75bf87f9e13ee1764d208c2a7b64ed49a3e7e241",
+  "changes": [
+    "Register industrialtwo independently; keep existing deployment defaults",
+    "Restore original green Industrial CSS with 32 scoped rules; keep current shared homepage composition",
+    "Use immersive hero and light logo for both industrial variants",
+    "Accept the theme in Cloudflare config and include it in future audit matrices"
+  ],
+  "validation": {
+    "typescript": "pass",
+    "existingThemeTests": 3,
+    "existingCloudflareTests": 4,
+    "productionBuild": "pass",
+    "allFourBrandConfigsAcceptIndustrialtwo": true,
+    "existingThreeThemeStylesByteUnchanged": true,
+    "newRulesScopedToIndustrialtwo": true,
+    "freshBrowserQA": false,
+    "freshLighthouse": false
+  },
+  "carryForward": "Existing content, metadata, route inventory, image provenance and model geometry are unchanged. Historical evidence remains historical and covers the original three themes. The new fourth theme has a bounded source/config/build review only; no new all-route browser or visual-similarity run is claimed."
+}

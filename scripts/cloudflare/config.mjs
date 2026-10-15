@@ -14,7 +14,7 @@ export function loadBrandConfig(brand, environment=process.env, read=readFileSyn
   if(!/^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$/.test(domain)) throw new Error('SITE_DOMAIN must be a bare lowercase domain.');
   const name=values.WORKER_NAME;
   if(!/^[a-z0-9][a-z0-9-]{0,62}$/.test(name)) throw new Error('WORKER_NAME is required (lowercase letters, numbers, hyphens).');
-  if(!['industrial','editorial','studio'].includes(values.VITE_SITE_THEME)) throw new Error('Invalid VITE_SITE_THEME.');
+  if(!['industrial','industrialtwo','editorial','studio'].includes(values.VITE_SITE_THEME)) throw new Error('Invalid VITE_SITE_THEME.');
   const url=new URL(values.VITE_SUPABASE_URL);
   if(url.protocol!=='https:' || url.username || url.password || url.pathname!=='/') throw new Error('Use an HTTPS Supabase project origin.');
   const key=values.VITE_SUPABASE_PUBLISHABLE_KEY;

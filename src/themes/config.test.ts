@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { resolveTheme } from "./config";
 describe("public theme precedence", () => {
   it("uses the global theme for all brands without overrides", () => {
-    for (const value of ["industrial", "editorial", "studio"])
+    for (const value of ["industrial", "industrialtwo", "editorial", "studio"])
       expect(resolveTheme(value, "")).toBe(value);
   });
   it("prioritizes the per-brand override and validated development preview", () => {

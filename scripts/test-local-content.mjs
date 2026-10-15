@@ -5,7 +5,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 // This is a completeness/rendering check, not a publication or originality certificate.
 // It never changes statuses, contacts Supabase, or invokes a production export.
 const brands = ['3dyanimda', '3dsanayi', 'maketyanimda', 'parcayanimda'];
-const themes = ['industrial', 'editorial', 'studio'];
+const themes = ["industrial", "industrialtwo", "editorial", "studio"];
 const widths = [1440, 390];
 const staticOnly = process.argv.includes('--static');
 const mergedOnly = process.argv.includes('--merged');

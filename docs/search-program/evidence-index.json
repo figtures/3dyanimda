@@ -438,8 +438,8 @@
     },
     {
       "path": "scripts/test-navigation.mjs",
-      "sha256": "994eb8f307a6fc1e96d0ed6d7ddd1c2cefc42f936e115b81672dc53b10230e39",
-      "bytes": 4003
+      "sha256": "259eeb94f7463f56bbb0a2a333cdbdff03c7059724ccefa20f49aa14542340b6",
+      "bytes": 4049
     },
     {
       "path": "src/App.tsx",
@@ -658,13 +658,13 @@
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
-      "sha256": "a1cce4a848ba571ae2b45c2f4901e0e5371e96c525ad5d9834ec6d0ed66f71eb",
-      "bytes": 5491
+      "sha256": "252efd0f63d50f3002de1fef3f74da8ebcac4ca9f22b8e47750b26c5f050d2be",
+      "bytes": 5528
     },
     {
       "path": "src/components/brand/BrandNavigation.tsx",
-      "sha256": "b6d913292acf77e9d7dddd500000bc63abec495ba17cb327d5a49192fbb8b7b7",
-      "bytes": 6833
+      "sha256": "9a7c5f536d0ce64281c013fed63c778e19c9615b1caec4c31c60ed3b664d1c44",
+      "bytes": 6860
     },
     {
       "path": "src/components/brand/GrowthAnalytics.tsx",
@@ -1009,7 +1009,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-13T14:09:23.542Z",
+  "checksumsRefreshedAt": "2026-10-15T21:23:46.324Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

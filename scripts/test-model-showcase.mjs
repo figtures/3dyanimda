@@ -28,7 +28,7 @@ try {
     "maketyanimda",
     "parcayanimda",
   ]) {
-    for (const theme of ["industrial", "editorial", "studio"]) {
+    for (const theme of ["industrial", "industrialtwo", "editorial", "studio"]) {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`http://127.0.0.1:8084/?tenant=${brand}&theme=${theme}`);
       await page.locator(".showcase-shell").scrollIntoViewIfNeeded();

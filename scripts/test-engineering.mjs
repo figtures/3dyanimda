@@ -29,7 +29,7 @@ try {
     "maketyanimda",
     "parcayanimda",
   ])
-    for (const theme of ["industrial", "editorial", "studio"]) {
+    for (const theme of ["industrial", "industrialtwo", "editorial", "studio"]) {
       const q = `?tenant=${tenant}&theme=${theme}`;
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto("http://127.0.0.1:8085/araclar/kesit-analizi" + q);

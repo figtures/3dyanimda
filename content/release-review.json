@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-13T14:09:23.275Z",
+  "reviewedAt": "2026-10-15T21:23:46.199Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "96291ddfe2521371e78fa438f9714cdb5597c2b56856e30f0ec17cd9d75adb29",
-  "sourceFileCount": 530,
+  "sourceHash": "9e145e813c6b5ea01952597328eb523008404e2c5b3a931f669a57ecd211bca4",
+  "sourceFileCount": 531,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,10 +35,12 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/password-recovery-review-2026-10-13.json",
+    "latestDeltaReview": "docs/audits/industrialtwo-review-2026-10-16.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/password-recovery-review-2026-10-13.json",
-    "latestHomeFlowBrowserCases": 48
+    "latestSourceSnapshot": "docs/audits/industrialtwo-review-2026-10-16.json",
+    "latestHomeFlowBrowserCases": 48,
+    "availableThemes": 4,
+    "themeCoverageNote": "Three themes in historical runtime evidence; industrialtwo added with bounded source review, fresh browser QA pending."
   },
   "evidence": [
     {
@@ -196,6 +198,10 @@
     {
       "file": "docs/audits/password-recovery-review-2026-10-13.json",
       "sha256": "08927a47c757dc83825872fc442c6dc7b03f8d808838d420f43c9fa079357da7"
+    },
+    {
+      "file": "docs/audits/industrialtwo-review-2026-10-16.json",
+      "sha256": "ba6684e0ad1a5936f63ca2d95784b2d29efd4833a713296556a1e6ea365737f2"
     }
   ],
   "limitations": [

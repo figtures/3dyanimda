@@ -17,7 +17,7 @@ export default function BrandNavigation(){
  useEffect(()=>{const el=dialog.current;if(!el)return;if(mobile&&!el.open)el.showModal();else if(!mobile&&el.open)el.close();const old=document.body.style.overflow;if(mobile)document.body.style.overflow='hidden';return()=>{document.body.style.overflow=old;};},[mobile]);
  useEffect(()=>{if(!expanded)return;const key=(event:KeyboardEvent)=>{if(event.key==='Escape'){setExpanded(false);exploreButton.current?.focus();}};const outside=(event:PointerEvent)=>{if(!explore.current?.contains(event.target as Node))setExpanded(false);};document.addEventListener('keydown',key);document.addEventListener('pointerdown',outside);return()=>{document.removeEventListener('keydown',key);document.removeEventListener('pointerdown',outside);};},[expanded]);
  const extra=useNavItems('header_extra').filter(i=>i.url.startsWith('/')&&!i.url.startsWith('//'));
- const wordmark=brandAsset(brand.slug,theme==='industrial'?'logo_wordmark_light':'logo_wordmark',brand.settings);
+ const wordmark=brandAsset(brand.slug,(theme==='industrial'||theme==='industrialtwo')?'logo_wordmark_light':'logo_wordmark',brand.settings);
  const link=(path:string)=>path+previewSearch(location.search);
  useEffect(()=>{setExpanded(false);setMobile(false)},[location.pathname,location.search]);
  useEffect(()=>{const mq=window.matchMedia('(min-width: 1100px)');const close=()=>{setMobile(false);setExpanded(false)};mq.addEventListener('change',close);return()=>mq.removeEventListener('change',close)},[]);

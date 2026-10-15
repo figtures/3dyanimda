@@ -11,7 +11,7 @@ const contact = JSON.parse(await readFile('content/authoring/confirmed-business-
 const merged = new Map();
 for (const f of ['pages.json','editorial-pages.json','search-pages.json'])
   for (const p of JSON.parse(await readFile('src/content/'+f,'utf8'))) merged.set(p.brand+p.path,p);
-const themes = ['industrial','editorial','studio'];
+const themes = ["industrial", "industrialtwo", "editorial", "studio"];
 const routes = ['/','/iletisim','/yasal','/kvkk-aydinlatma-metni','/gizlilik-politikasi','/cerez-politikasi','/kullanim-kosullari','/basvuru-acik-riza-metni'];
 const widths = [1440,390];
 const dir = await mkdtemp(join(tmpdir(),'final-runtime-'));

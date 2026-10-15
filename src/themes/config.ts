@@ -1,5 +1,5 @@
 import { isPrivatePreview, previewSearch } from '@/lib/tenant';
-export const themeNames = ["industrial", "editorial", "studio"] as const;
+export const themeNames = ["industrial", "industrialtwo", "editorial", "studio"] as const;
 export type SiteTheme = (typeof themeNames)[number];
 export function isSiteTheme(value: unknown): value is SiteTheme {
   return themeNames.includes(value as SiteTheme);

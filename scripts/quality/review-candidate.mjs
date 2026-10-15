@@ -17,7 +17,7 @@ const captureDir='.cloudflare/candidate-captures';await mkdir(captureDir,{recurs
 const browser=await chromium.launch({executablePath:env.CHROMIUM_EXECUTABLE||'/tmp/chromium',args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader'],headless:true});
 const mime={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.woff2':'font/woff2','.glb':'model/gltf-binary'};
 try {
- for(const theme of ['industrial','editorial','studio']) {
+ for(const theme of ["industrial", "industrialtwo", "editorial", "studio"]) {
   const root=path.resolve('.cloudflare/candidate-'+theme);
   await build({logLevel:'error',envDir:false,define:Object.fromEntries(Object.entries({VITE_SUPABASE_URL:env.VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY:env.VITE_SUPABASE_PUBLISHABLE_KEY,VITE_SITE_THEME:theme}).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:root,emptyOutDir:true}});
   const shell=await readFile(path.join(root,'index.html'));

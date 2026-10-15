@@ -10,7 +10,7 @@ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTA
 const page=await browser.newPage();await page.emulateMedia({reducedMotion:'reduce'});
 const errors=[],cases=[];page.on('pageerror',e=>errors.push(e.message));
 try{
- for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(const theme of ['industrial','editorial','studio'])for(const width of [320,390,768,1440]){
+ for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(const theme of ["industrial", "industrialtwo", "editorial", "studio"])for(const width of [320,390,768,1440]){
   await page.setViewportSize({width,height:900});await page.goto(`http://127.0.0.1:8091/?tenant=${brand}&theme=${theme}`,{waitUntil:'networkidle'});await page.locator('.home-flow').waitFor();
   assert.equal(await page.locator('h1').count(),1);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,`${brand}/${theme}/${width} horizontal overflow`);

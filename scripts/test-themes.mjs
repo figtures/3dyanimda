@@ -26,7 +26,7 @@ const page = await browser.newPage();
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 const brands = ["3dyanimda", "3dsanayi", "maketyanimda", "parcayanimda"];
-const themes = ["industrial", "editorial", "studio"];
+const themes = ["industrial", "industrialtwo", "editorial", "studio"];
 const pages = JSON.parse(readFileSync("src/content/pages.json", "utf8")).filter(
   (p) => p.brand === "3dyanimda" && p.status === "published",
 );
@@ -78,7 +78,7 @@ try {
           );
         }
         if (brand === "3dyanimda" && [390, 1440].includes(width)) {
-          if (theme !== "industrial")
+          if (theme !== "industrial" && theme !== "industrialtwo")
             await page.locator(".service-visual svg").first().waitFor();
           await page.screenshot({
             path: `docs/previews/themes/${theme}-${width}.png`,

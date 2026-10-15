@@ -18,7 +18,7 @@ const guides={
 mkdirSync('/tmp/brand-search-previews',{recursive:true});
 let checked=0;
 try {
-  for(const [brand,slug] of Object.entries(guides)) for(const theme of ['industrial','editorial','studio']) for(const width of [390,1440]) {
+  for(const [brand,slug] of Object.entries(guides)) for(const theme of ["industrial", "industrialtwo", "editorial", "studio"]) for(const width of [390,1440]) {
     await page.setViewportSize({width,height:960});
     await page.goto(`http://127.0.0.1:8088/rehber/${slug}?tenant=${brand}&theme=${theme}`);
     await page.locator('.answer-card').waitFor();

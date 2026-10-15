@@ -1,0 +1,138 @@
+/* Original green Industrial palette and scoped rules, restored from 99f98a3^.
+   Shared current home flow and responsive components remain in use. */
+
+.brand-site.theme-industrialtwo {
+  --paper: #f4f4eb;
+  --surface: #fffffa;
+  --soft: #e5e9df;
+  --text: #142f37;
+  --muted: #51676b;
+  --line: #cdd7ce;
+  --dark: #082c39;
+  --primary: 195 58% 17%;
+  --accent-blue: 195 58% 17%;
+  --background: 60 29% 94%;
+  --brand-accent: #d6ed91;
+  --accent-ink: #163333;
+  --highlight: #d6ed91;
+}
+.theme-industrialtwo .brand-header {
+  background: var(--dark);
+  color: #f7f8ed;
+  border-color: #ffffff25;
+}
+.theme-industrialtwo
+  .brand-header
+  :is(
+    .brand-logo svg,
+    .brand-nav,
+    .brand-nav a:hover,
+    .brand-nav a.active,
+    .menu-toggle
+  ) {
+  color: #f7f8ed;
+}
+.theme-industrialtwo .service-strip {
+  border-bottom: 1px solid var(--line);
+}
+.theme-industrialtwo .service-strip > a {
+  padding-block: 30px;
+}
+.theme-industrialtwo .home-services .editorial-grid {
+  gap: 0;
+}
+.theme-industrialtwo .home-services .service-card {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.theme-industrialtwo .home-services .service-card + .service-card {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+  margin-left: 24px;
+}
+.theme-industrialtwo .service-card-image {
+  height: 260px;
+}
+.theme-industrialtwo .service-card-copy {
+  padding-inline: 0;
+}
+.theme-industrialtwo .content-hero {
+  background: var(--dark);
+  color: #fff;
+  width: 100%;
+  padding-inline: max(4.5%, calc((100% - 1320px) / 2));
+}
+.brand-site.theme-industrialtwo
+  .content-hero
+  :is(.breadcrumbs, .brand-eyebrow, .section-lead) {
+  color: #c8d9db;
+}
+.theme-industrialtwo .brand-inner > h1 {
+  border-left: 5px solid #9bad65;
+  padding-left: 25px;
+}
+@media (max-width: 960px) {
+  .theme-industrialtwo .menu-toggle {
+    color: #fff;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .service-strip {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .service-strip > a {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 20px 0;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .service-strip div > span {
+    display: block;
+    font-size: 11px;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .service-strip > a > svg:last-child {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .home-services .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .home-services .service-card + .service-card {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 700px) {
+  .theme-industrialtwo .service-card-image {
+    height: 240px;
+  }
+}
+.theme-industrialtwo .showcase-stage {
+  background: radial-gradient(ellipse at 50% 40%, #f7fcf8, #dee8e1);
+}
+.theme-industrialtwo .service-strip a div span,
+.theme-industrialtwo .strip-num,
+.theme-industrialtwo .application-list > a > span { color: #526570; }
+.theme-industrialtwo .studio-empty p,
+.theme-industrialtwo .quote-studio .text-slate-500 { color:#475b6d; }
+.product-header[data-navigation-theme=industrialtwo]{background:rgba(15,27,26,.97);color:#f4f6ef;border-color:#ffffff16}
+.product-header[data-navigation-theme=industrialtwo] .product-quote{background:#d6f28f;color:#1a2918}
+.product-header[data-navigation-theme=industrialtwo] .product-lab-link span{color:#c7d4c0}
+.product-header[data-navigation-theme=industrialtwo] .product-menu-toggle{border-color:#ffffff30}
+.brand-navigation-panel[data-navigation-theme=industrialtwo] .navigation-lab,.brand-navigation-drawer[data-navigation-theme=industrialtwo] .navigation-lab{background:#e7eddf}
+
+/* Keep CTA contrast consistent across desktop hover and the mobile menu. */
+.product-header[data-navigation-theme=industrialtwo] .product-quote:hover { background:#c6e27f; color:#1a2918; }
+.brand-navigation-drawer[data-navigation-theme=industrialtwo] .mobile-quote { background:#d6ed91; color:#163333; }
+.brand-site.theme-industrialtwo { --ring:195 58% 17%; }

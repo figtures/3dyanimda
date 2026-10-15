@@ -7,7 +7,7 @@ const merged=new Map();
 for(const file of ['pages.json','editorial-pages.json','search-pages.json'])for(const p of JSON.parse(readFileSync('src/content/'+file,'utf8')))merged.set(p.brand+p.path,p);
 const records=[...merged.values()].filter(p=>p.status==='published');
 const brands=['3dyanimda','3dsanayi','maketyanimda','parcayanimda'];
-const themes=['industrial','editorial','studio'];
+const themes=["industrial", "industrialtwo", "editorial", "studio"];
 const utilities=['/','/hizmetler','/sektorler','/cozumler','/malzemeler','/rehber','/bolgeler','/hakkimizda','/iletisim','/teklif-al','/araclar','/araclar/stl-onizle','/araclar/kesit-analizi','/araclar/tarama-goruntuleyici','/sss'];
 const server=await createServer({server:{host:'127.0.0.1',port:8091,strictPort:true}});await server.listen();
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE,headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--no-zygote','--single-process','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
