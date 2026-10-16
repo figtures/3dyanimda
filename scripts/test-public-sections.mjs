@@ -14,7 +14,7 @@ try {
   const q=`?tenant=${brand}&theme=${theme}`,visit=async path=>{await page.goto('http://127.0.0.1:8091'+path+q);await page.locator('main h1').waitFor();};
   const fits=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${brand}/${theme}/${width}: horizontal overflow`);
   await visit('/');await page.locator('.home-discovery').waitFor();
-  assert.equal(await page.locator('.sector-discovery nav a').count(),8);
+  await page.locator('.sector-discovery nav a').nth(7).waitFor();assert.equal(await page.locator('.sector-discovery nav a').count(),8);
   for(const path of ['/kariyer','/portfoy','/sss'])assert.ok(await page.locator(`.discover-paths a[href="${path+q}"]`).count());
   if(theme==='editorial') {
    await page.locator('.formation-canvas canvas').waitFor();

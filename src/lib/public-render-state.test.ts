@@ -15,3 +15,12 @@ it('excludes unrelated page/query data during consecutive exports',()=>{
  expect(publicQueryForPath(['landing-pages','tenant-1',false,false,false,['location']],'tenant-1','/bolgeler')).toBe(true);
  expect(publicQueryForPath(['landing-pages','tenant-1',false,false,false,['location']],'tenant-1','/')).toBe(false);
 });
+
+it('hydrates only the destination public CMS records and its required career options',()=>{
+ for(const path of ['/sss','/portfoy','/portfoy/example','/kariyer'])expect(publicQueryForPath(['public-page','tenant-1',path],'tenant-1',path)).toBe(true);
+ expect(publicQueryForPath(['public-page','tenant-1','/kariyer'],'tenant-1','/kariyer/is-basvurusu')).toBe(true);
+ expect(publicQueryForPath(['public-page','tenant-1','/admin/users'],'tenant-1','/admin/users')).toBe(false);
+ expect(publicQueryForPath(['public-page','tenant-2','/sss'],'tenant-1','/sss')).toBe(false);
+ expect(publicQueryForPath(['public-page','tenant-1','/portfoy/other'],'tenant-1','/portfoy/example')).toBe(false);
+ expect(publicQueryForPath(['landing-pages','tenant-1',false,false,false,['solution','guide','sector']],'tenant-1','/')).toBe(true);
+});
