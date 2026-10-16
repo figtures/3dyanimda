@@ -112,18 +112,18 @@ try {
   }
   if(target.route==='/'||target.route==='/teklif-al'){
    await page.setViewport({width:390,height:844});
-   await page.click('.product-menu-toggle');await page.waitForSelector('dialog, [role=dialog]',{visible:true});
+   await page.locator('.product-menu-toggle').click();await page.waitForSelector('dialog, [role=dialog]',{visible:true});
    await page.keyboard.press('Escape');await page.waitForSelector('dialog, [role=dialog]',{hidden:true});
    if(target.route==='/teklif-al'){
-    await page.click('.quote-steps button:nth-child(3)');
+    await page.locator('.quote-steps button:nth-child(3)').click();
     await page.waitForSelector('input[name=full_name]',{visible:true});
     await page.waitForFunction(()=>document.activeElement?.classList.contains('quote-step-title'));
-    await page.type('input[name=full_name]','Browser verification');
-    await page.click('.quote-steps button:first-child');
+    await page.locator('input[name=full_name]').fill('Browser verification');
+    await page.locator('.quote-steps button:first-child').click();
     await page.waitForSelector('.quote-service-choice button:nth-child(2)',{visible:true});
-    await page.click('.quote-service-choice button:nth-child(2)');
+    await page.locator('.quote-service-choice button:nth-child(2)').click();
     await page.waitForFunction(()=>document.querySelector('.quote-service-choice button:nth-child(2)')?.getAttribute('aria-pressed')==='true',{timeout:5000});
-    await page.click('.quote-steps button:nth-child(3)');
+    await page.locator('.quote-steps button:nth-child(3)').click();
     await page.waitForSelector('input[name=full_name]',{visible:true});
     const state=await page.evaluate(()=>({pressed:document.querySelector('.quote-service-choice button:nth-child(2)')?.getAttribute('aria-pressed'),name:document.querySelector('input[name=full_name]')?.value,valid:document.querySelector('form')?.checkValidity()}));
     if(state.pressed!=='true'||state.name!=='Browser verification'||state.valid!==false)throw Error('Interactive quote state/validation regression: '+JSON.stringify(state));
