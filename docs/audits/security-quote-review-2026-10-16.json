@@ -1,0 +1,59 @@
+{
+  "kind": "bounded security and quote-flow delta review",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-16T00:30:00Z",
+  "previousSourceHash": "9e145e813c6b5ea01952597328eb523008404e2c5b3a931f669a57ecd211bca4",
+  "sourceHash": "b3fc9149e9ed06009f465f1d8465b800e5ad5e432c1a6fda9406047ea753f308",
+  "changes": [
+    "public/deferred-styles.js",
+    "src/components/admin/RichTextEditor.test.tsx",
+    "src/components/admin/RichTextEditor.tsx",
+    "src/components/cms/blocks/BulletListBlock.tsx",
+    "src/components/cms/blocks/CardGridBlock.tsx",
+    "src/components/cms/blocks/HeroBlock.tsx",
+    "src/components/cms/blocks/ProcessStepsBlock.tsx",
+    "src/components/cms/blocks/RichTextBlock.tsx",
+    "src/components/cms/blocks/ServiceBodyBlock.tsx",
+    "src/components/cms/blocks/StatsBlock.tsx",
+    "src/components/quote/QuoteStudio.test.tsx",
+    "src/components/quote/QuoteStudio.tsx",
+    "src/components/quote/quote-flow.css",
+    "src/components/site/LegalLayout.tsx",
+    "src/index.css",
+    "src/lib/safe-html.test.ts",
+    "src/lib/safe-html.ts",
+    "src/pages/BlogPost.tsx",
+    "src/pages/QuoteRequest.tsx",
+    "src/pages/admin/AdminBlogEdit.tsx",
+    "src/pages/admin/AdminCampaigns.tsx",
+    "src/pages/admin/AdminPricing.tsx"
+  ],
+  "validation": {
+    "unitTests": 146,
+    "typescript": "pass",
+    "dependencyVulnerabilities": 0,
+    "databasePolicyHarness": "pass",
+    "productionBuild": "pass",
+    "originalityRecords": 800,
+    "ciCommit": "2b96ddabe6c8c7bfbcc4e87dd6ba3221a394db44",
+    "ciRun": "https://github.com/figtures/3dyanimda/actions/runs/38829172695",
+    "quoteBrowserCases": 32,
+    "homeBrowserCases": 64,
+    "navigationBrowserCases": 64,
+    "criticalCssWithCsp": "pass"
+  },
+  "liveConfiguration": {
+    "pricingAndCampaignMenus": "Enabled for all four business tenants",
+    "pricing": "No fabricated prices or campaign records created",
+    "storageAndSubmissionGuards": "Applied to Supabase"
+  },
+  "carryForward": "Authored landing content, route inventory, image assets and model geometry are unchanged. Historical full-route/provenance evidence remains historical. This review covers sanitization, shared quote UI, admin pricing setup and campaign display; no fresh full-route human review is claimed.",
+  "limitations": [
+    "Supabase native leaked-password protection remains unavailable on the current Free plan.",
+    "Storage MIME/size validation is not malware scanning.",
+    "Client-side estimates and discounts are non-binding; final commercial amounts require administrator verification.",
+    "Three measured 3dyanimda mobile quote samples scored performance 99/100/100 and accessibility/best-practices/SEO 100. The first Lighthouse workflow failed an obsolete single-page interaction test after measurement; that test was updated for steps. No all-page 100 score is claimed."
+  ]
+}
