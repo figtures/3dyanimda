@@ -387,7 +387,11 @@ registerRoutePreparation(async url=>{
  await Promise.all([...matched.map(match=>preloadElement(match.route.element)),prepareRouteData(url,matched.some(match=>match.route.path==="*"))]);
 });
 const subscribeRoute=(changed:()=>void)=>router.subscribe(changed);
-const notificationRoute=()=>!publicRouteComponent(router.state.location.pathname);
+const notificationRoute=()=>{
+ const path=router.state.location.pathname;
+ // Public application routes also need validation, upload and submission feedback.
+ return !publicRouteComponent(path)||path==='/kariyer/is-basvurusu'||path==='/kariyer/makine-isletim';
+};
 function RouteNotifications(){
  const needed=useSyncExternalStore(subscribeRoute,notificationRoute,notificationRoute);
  return needed?<Suspense fallback={null}><NotificationOverlays/></Suspense>:null;

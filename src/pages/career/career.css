@@ -76,7 +76,7 @@
 .brand-site .career-form-panel { min-width: 0; background: var(--surface); padding: clamp(24px,3.5vw,52px); border-radius: 24px; }
 .brand-site .career-form-heading { margin-bottom: 32px; }
 .brand-site .career-form-heading .career-eyebrow { margin-bottom: 12px; }
-.brand-site .career-form-heading h2 { font-size: clamp(26px,2.6vw,36px); margin-bottom: 12px; line-height: 1.25; }
+.brand-site .career-form-heading h2 { scroll-margin-top: 130px; font-size: clamp(26px,2.6vw,36px); margin-bottom: 12px; line-height: 1.25; }
 .brand-site .career-form-heading h2:focus { outline: none; }
 .brand-site .career-form-heading > p:last-child { font-size: 14px; line-height: 1.8; color: var(--muted); }
 .brand-site .career-step-fields { display: grid; gap: 24px; min-width: 0; border: 0; padding: 0; margin: 0; }

@@ -18,7 +18,7 @@ export function ApplicationFrame({ kind, query, title, intro, steps, submitting,
   const [step, setStep] = useState(0);
   const heading = useRef<HTMLHeadingElement>(null);
   const path = kind === 'job' ? '/kariyer/is-basvurusu' : '/kariyer/makine-isletim';
-  const move = (next: number) => { setStep(next); requestAnimationFrame(() => heading.current?.focus()); };
+  const move = (next: number) => { setStep(next); requestAnimationFrame(() => { heading.current?.focus({preventScroll: true}); heading.current?.scrollIntoView({block: 'start'}); }); };
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (submitting) return;
