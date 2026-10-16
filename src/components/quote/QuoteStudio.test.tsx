@@ -18,6 +18,25 @@ beforeEach(() => { vi.clearAllMocks(); api.pricingError = false; api.materialErr
 const props = () => ({file:null, onFile:vi.fn(), onSpec:vi.fn(), service:'3D Baskı'});
 const change = (label: string, value: string) => fireEvent.change(screen.getByLabelText(label), {target:{value}});
 describe('quote production preferences', () => {
+  it('shows a measured estimate in the file step using the first configured FDM material', async () => {
+    const p={...props(),file:new File(['solid test'],'test.stl')};
+    const view=render(<QuoteStudio {...p} stage="file"/>);
+    await waitFor(()=>expect(screen.getByLabelText('Malzeme tercihi')).toHaveValue('pla'));
+    fireEvent.click(await screen.findByRole('button',{name:'Modeli ölç'}));
+    await waitFor(()=>expect(view.container.querySelector('.studio-live-estimate strong')).toBeTruthy());
+    expect(p.onSpec.mock.lastCall?.[0].estimatedTotal).toBeGreaterThan(0);
+    expect(view.container.querySelector('.studio-live-estimate')).toHaveTextContent('PLA · 1 adet');
+  });
+  it('does not fabricate an estimate when live pricing settings are unavailable', async () => {
+    api.pricingError=true;
+    const p={...props(),file:new File(['solid test'],'test.stl')};
+    const view=render(<QuoteStudio {...p} stage="file"/>);
+    await waitFor(()=>expect(screen.getByLabelText('Malzeme tercihi')).toHaveValue('pla'));
+    fireEvent.click(await screen.findByRole('button',{name:'Modeli ölç'}));
+    await waitFor(()=>expect(view.container.querySelector('.studio-live-estimate')).toHaveTextContent('anlık fiyat henüz etkin değil'));
+    expect(view.container.querySelector('.studio-live-estimate strong')).toBeNull();
+    expect(p.onSpec.mock.lastCall?.[0].estimatedTotal).toBeNull();
+  });
   it('keeps one interactive model in its persistent pane through every step', async () => {
     const layout = (preview: React.ReactNode, options: React.ReactNode) => <div><aside data-testid="persistent-preview">{preview}</aside><main>{options}</main></div>;
     const p={...props(),file:new File(['solid test'],'persistent.stl')};

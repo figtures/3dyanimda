@@ -54,6 +54,7 @@ const AdminPricing = () => {
   const [previewQuantity, setPreviewQuantity] = useState(1);
   const [previewMaterial, setPreviewMaterial] = useState("");
   const [previewQuality, setPreviewQuality] = useState(1);
+  const [savedSettingKeys, setSavedSettingKeys] = useState<string[]>([]);
 
   const load = async () => {
     if (!tenant) return;
@@ -65,6 +66,7 @@ const AdminPricing = () => {
     if (m.error) toast.error(m.error.message);
     if (s.error) toast.error(s.error.message);
     setMaterials(m.data ?? []);
+    setSavedSettingKeys((s.data ?? []).map(row => row.key));
     setSettings(settingDefinitions.map(def => ({...def, value:Number(s.data?.find(row => row.key === def.key)?.value ?? (def.key === "infill_percent" ? 20 : 0))})));
     setLoading(false);
   };
@@ -127,6 +129,8 @@ const AdminPricing = () => {
   };
 
   const config = Object.fromEntries(settings.map(s => [s.key,s.value]));
+  const missingSettings = settingDefinitions.filter(s => s.key !== "infill_percent" && !savedSettingKeys.includes(s.key));
+  const readyMaterials = materials.filter(m => m.active && m.technology === "FDM" && m.density_g_cm3 > 0 && m.price_per_gram > 0);
   const chosen = materials.find(m => (m.id || m.name) === previewMaterial);
   const estimate = chosen?.technology === "FDM" ? computeEstimate(previewVolume,{id:chosen.id || "preview",name:chosen.name,density:chosen.density_g_cm3,pricePerGram:chosen.price_per_gram,setupFee:chosen.setup_fee,minPrice:chosen.min_price},qualities[previewQuality].multiplier,config.infill_percent,previewQuantity,{marginPct:config.margin_percent,vatPct:config.vat_percent,laborPerHour:config.labor_per_hour,minOrder:config.min_order_price}) : null;
   if (loading) return <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin" /></div>;
@@ -141,6 +145,13 @@ const AdminPricing = () => {
         </Button>
       </div>
 
+      <section className="bg-card border border-border rounded-lg p-6 space-y-3" aria-label="Anlık fiyat hazırlığı">
+        <h2 className="font-display text-lg">Anlık fiyat hazırlığı</h2>
+        <p className="text-sm">{readyMaterials.length} aktif FDM malzemesinin fiyat ve yoğunluk değerleri hazır.</p>
+        {missingSettings.length > 0 && <p className="text-sm text-destructive">Henüz kaydedilmemiş genel ayarlar: {missingSettings.map(s => s.label).join(", ")}. Aşağıdaki değerleri kontrol edip Tümünü Kaydet’e basın.</p>}
+        {!readyMaterials.length && <p className="text-sm text-destructive">En az bir aktif FDM malzemesinde yoğunluk ve gram fiyatı 0’dan büyük olmalı. Bu alanlar tamamlanmadan müşteriye anlık tutar gösterilmez.</p>}
+        <p className="text-xs text-muted-foreground">Fiyatlandırma marka bazındadır. Kapalı yüzeyli model yüklendiğinde ilk uygun FDM malzemesiyle ön tahmin gösterilir; müşteri seçimini değiştirebilir. Açık yüzey, son işlem ve diğer teknolojiler teknik teklif olarak değerlendirilir. Formdaki değişiklikler kaydedilene kadar canlı siteye yansımaz.</p>
+      </section>
       {/* Global Settings */}
       <section className="bg-card border border-border rounded-lg p-6">
         <h2 className="font-display text-lg mb-1">Genel Ayarlar</h2>
@@ -185,6 +196,7 @@ const AdminPricing = () => {
         <div className="space-y-3">
           {materials.map((m, i) => (
             <div key={m.id ?? `new-${i}`} className="border border-border rounded-md p-4 bg-background">
+              {m.active && m.technology === "FDM" && (m.density_g_cm3 <= 0 || m.price_per_gram <= 0) && <p className="text-xs text-destructive mb-3">Anlık fiyat eksik: {[m.density_g_cm3 <= 0 && "yoğunluk",m.price_per_gram <= 0 && "gram fiyatı"].filter(Boolean).join(" ve ")} girin.</p>}
               <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
                 <div className="col-span-2 md:col-span-2">
                   <Label className="text-xs">Ad</Label>

@@ -1,0 +1,36 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "reviewedAt": "2026-10-16T10:23:36.566Z",
+  "scope": "First-step live estimate display, automatic initial configured FDM selection, precise unavailable reasons and admin pricing readiness indicators. No pricing formula or live selling prices changed.",
+  "sourceHash": "dd8c2aaff054540e459c9befb102a6838eee8373f09dc37f3a1d695b8c453acd",
+  "sourceFileCount": 564,
+  "checks": {
+    "typecheck": "pass",
+    "pricingTests": {
+      "files": 2,
+      "tests": 14,
+      "result": "pass"
+    },
+    "productionBuild": "pass"
+  },
+  "liveConfiguration": {
+    "brands": [
+      "3dyanimda",
+      "3dsanayi",
+      "maketyanimda",
+      "parcayanimda"
+    ],
+    "activeMaterialsPerBrand": 20,
+    "pricedMaterials": 0,
+    "pricingSettingRows": 0,
+    "checkedAt": "2026-10-16T10:21:00Z",
+    "mutated": false
+  },
+  "limitations": [
+    "Owner values for selling prices and general pricing settings remain required before live price estimates can be shown.",
+    "Open meshes cannot yield a reliable volume-based price. No geometry repair or fake volume assumption added.",
+    "New browser execution remains in CI; no new full-route or human review claimed."
+  ]
+}

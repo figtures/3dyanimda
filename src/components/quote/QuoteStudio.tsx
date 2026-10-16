@@ -109,6 +109,7 @@ export default function QuoteStudio({
     if (demoMode) {
       setMaterials(demoMaterials);
       setPricing(demoPricing);
+      setMaterialId(demoMaterials[0].id);
       setCatalogStatus("ready");
       return;
     }
@@ -145,6 +146,8 @@ export default function QuoteStudio({
           minPrice: Number(m.min_price),
         }));
       setMaterials(values);
+      const initialMaterial = values.find(m => m.technology === "FDM" && m.density > 0 && m.pricePerGram > 0 && [m.density,m.pricePerGram,m.setupFee,m.minPrice].every(v => Number.isFinite(v) && v >= 0));
+      if (initialMaterial) setMaterialId(initialMaterial.id);
 
       const map = Object.fromEntries(
         (s.data || []).map((v) => [v.key, Number(v.value)]),
@@ -280,6 +283,19 @@ export default function QuoteStudio({
     },
     [onFile],
   );
+  const estimateReason = service !== "3D Baskı"
+    ? "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır."
+    : catalogStatus === "loading" ? "Fiyat seçenekleri yükleniyor…"
+    : catalogStatus === "error" ? "Fiyat bilgisi şu anda alınamıyor. Dosyanızı teknik teklif için gönderebilirsiniz."
+    : metrics?.closed === false ? "Model açık yüzey içeriyor; güvenilir hacim hesaplanamadığı için fiyat teknik incelemeyle belirlenir."
+    : !pricing ? "Bu hizmet için anlık fiyat henüz etkin değil. Dosyanız üzerinden teklif hazırlayabiliriz."
+    : !material ? "Anlık ön tahmin için fiyatlandırması tanımlı bir FDM malzemesi seçin."
+    : !isFdm ? "Bu üretim teknolojisi için fiyat, dosya ve üretim kapsamı incelenerek hazırlanır."
+    : material.pricePerGram <= 0 || material.density <= 0 ? `${material.name} için anlık fiyat henüz tanımlı değil. Bu malzemeyle teknik teklif isteyebilir veya başka malzeme seçebilirsiniz.`
+    : finishes.length > 0 || colorPreference === "Çok renkli" ? "Seçtiğiniz son işlem veya çok renkli üretim için ayrıca teknik fiyatlandırma gerekir."
+    : !file ? "Modelinizi yükleyin; ölçüm tamamlandığında anlık ön tahmin burada görünür."
+    : !metrics ? "Modelin hacmi henüz ölçülemedi. Önizleme tamamlandığında fiyat güncellenir."
+    : "Bu model ve tercihler için otomatik hesaplama yapılamadı. Teknik teklif isteyebilirsiniz.";
   const preview = (
       <div className="studio-preview-content">
         <div
@@ -337,6 +353,10 @@ export default function QuoteStudio({
           </div>
         </div>
         <ModelInfoPanel file={file} metrics={metrics} />
+        {file && service === "3D Baskı" && <div className="studio-live-estimate" aria-live="polite">
+          <span className="studio-estimate-label">{demoMode ? "Demo ön tahmin" : "Anlık ön tahmin"}</span>
+          {price ? <><strong>{fmtTRY(price.total - discount)}</strong><p>{material?.name} · {quantity} adet · %{infill} doluluk · %{pricing?.vatPct} KDV dahil</p>{campaign && <p>{campaign.name} · {fmtTRY(discount)} indirim</p>}<small>Teknik incelemeyle kesinleşir; teslimat dahil değildir.</small></> : <p>{estimateReason}</p>}
+        </div>}
         {error && (
           <p role="alert" className="form-error">
             {error}
@@ -449,11 +469,7 @@ export default function QuoteStudio({
             </>
           ) : (
             <p>
-              {service !== "3D Baskı"
-                ? "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır."
-                : !material || !isFdm || !pricing || material.pricePerGram <= 0 || material.density <= 0 || finishes.length > 0 || colorPreference === "Çok renkli"
-                  ? "Bu tercihler için dosya ve üretim kapsamını inceleyip size özel teklif hazırlayacağız."
-                  : metrics?.closed === false ? "Model açık yüzey içeriyor; fiyat teknik incelemeyle belirlenir." : "Ön hesaplama için kapalı yüzeyli bir 3D model yükleyin."}
+              {estimateReason}
             </p>
           )}
         </div>

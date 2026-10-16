@@ -10,7 +10,7 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "45011ae1679048224fbe3421d5aaa407ae19f38a05cbce9f1dcf4529128f108f",
+  "sourceHash": "dd8c2aaff054540e459c9befb102a6838eee8373f09dc37f3a1d695b8c453acd",
   "sourceFileCount": 564,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/local-seo-model-panel-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/pricing-readiness-2026-10-16.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/local-seo-model-panel-2026-10-16.json",
+    "latestSourceSnapshot": "docs/audits/pricing-readiness-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
     "availableThemes": 4,
     "themeCoverageNote": "Four themes covered by current quote (32), homepage (64) and navigation (64) browser cases; historical all-route evidence retains its original dates.",
@@ -239,6 +239,10 @@
     {
       "file": "docs/audits/local-seo-model-panel-2026-10-16.json",
       "sha256": "810ca989420ccb66d8d75ab514642678e8083978d118b82e744874cd535b1868"
+    },
+    {
+      "file": "docs/audits/pricing-readiness-2026-10-16.json",
+      "sha256": "8822006034cc896c67521dcb7c47b3ca7252f839ebb615b00b6f70c8eca69511"
     }
   ],
   "limitations": [
@@ -255,7 +259,8 @@
     "16 October persistent quote workspace/control-spacing delta has source/type/unit/build review; fresh browser execution is tracked separately in CI.",
     "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed.",
     "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately.",
-    "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI."
+    "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI.",
+    "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

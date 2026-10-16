@@ -28,4 +28,9 @@
 .studio-technical-body p{margin:8px 0 0}
 .brand-site .studio-model-pending{font-size:12px;line-height:1.6;color:var(--muted,#526271);margin:0}
 .brand-site .studio-preview-content>.form-error{margin:0;padding:0 var(--model-gutter) 16px}
-@media(max-width:900px){.brand-site .studio-model-info{padding-block:12px 4px}.studio-file-identity{margin-bottom:10px}.brand-site .studio-model-info .studio-metrics>div{padding:8px 12px}.brand-site .quote-preview{max-height:calc(100dvh - 88px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}.brand-site .quote-preview .studio-preview-content .studio-canvas header{padding-block:10px}.brand-site .quote-preview .studio-preview-content .studio-file{padding-block:8px}}
+.brand-site .studio-live-estimate{margin:0 var(--model-gutter) 16px;padding:14px 16px;border:1px solid var(--line,#d5dce1);border-radius:12px;background:var(--soft,#f2f4f6);min-width:0}
+.studio-estimate-label{display:block;font-size:11px;font-weight:600;color:var(--muted,#526271)}
+.studio-live-estimate strong{display:block;font-size:clamp(23px,2.4vw,30px);line-height:1.25;margin:6px 0;font-variant-numeric:tabular-nums}
+.brand-site .studio-live-estimate p{font-size:12px;line-height:1.6;margin:6px 0 0}
+.studio-live-estimate small{display:block;font-size:11px;line-height:1.6;color:var(--muted,#526271);margin-top:6px}
+@media(max-width:900px){.brand-site .studio-model-info{padding-block:12px 4px}.studio-file-identity{margin-bottom:10px}.brand-site .studio-model-info .studio-metrics>div{padding:8px 12px}.brand-site .quote-preview{max-height:calc(100dvh - 88px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}.brand-site .quote-preview .studio-preview-content .studio-canvas header{padding-block:10px}.brand-site .quote-preview .studio-preview-content .studio-file{padding-block:8px}}
