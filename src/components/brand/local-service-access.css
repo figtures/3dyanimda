@@ -1,0 +1,12 @@
+.content-article .local-service-access{margin:0 0 2.5rem;padding:clamp(1rem,3vw,1.75rem);border:1px solid var(--line);border-radius:var(--surface-radius,16px);background:var(--surface);scroll-margin-top:7rem}
+.content-article .local-service-access>h2{margin-top:.5rem}
+.local-access-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin:1.5rem 0}
+.local-access-card{min-width:0}
+.local-access-card>svg{color:var(--brand-accent)}
+.content-article .local-access-card h3{font-size:1rem;line-height:1.4;margin:.75rem 0}
+.content-article .local-access-card p,.local-access-card address{font-size:.9rem;line-height:1.7;overflow-wrap:anywhere}
+.local-access-card address{font-style:normal;display:flex;gap:.5rem;align-items:flex-start}
+.local-access-card address svg{flex:none;margin-top:.3rem}
+.local-access-card a,.local-access-contact{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;text-underline-offset:4px}
+.local-access-contact{font-weight:600;flex-wrap:wrap}
+@media(max-width:600px){.local-access-grid{grid-template-columns:1fr}.local-access-card+.local-access-card{border-top:1px solid var(--line);padding-top:1.25rem}}

@@ -19,6 +19,7 @@ import {
 } from "@/lib/quote-engine";
 import "./quote-options.css";
 import type { StlMetrics } from "./StlViewer";
+import { ModelInfoPanel } from "./ModelInfoPanel";
 const Viewer = lazy(() => import("./StlViewer"));
 export type StudioSpec = {
   summary: string;
@@ -335,22 +336,7 @@ export default function QuoteStudio({
             )}
           </div>
         </div>
-        {file && <p className="studio-filename" title={file.name}>{file.name}</p>}
-        {metrics && (
-          <div className="studio-metrics">
-            <span>
-              {(metrics.bboxCm.x * 10).toFixed(1)} ×{" "}
-              {(metrics.bboxCm.y * 10).toFixed(1)} ×{" "}
-              {(metrics.bboxCm.z * 10).toFixed(1)} mm
-            </span>
-            <span>{metrics.closed === false ? "Açık yüzey" : `${metrics.volumeCm3.toFixed(2)} cm³`}</span>
-            <span>{metrics.format} · {metrics.parts} parça</span>
-            <span>{metrics.triangles.toLocaleString("tr-TR")} üçgen</span>
-          </div>
-        )}
-        <p className="text-xs text-slate-500 mt-3">
-          STL ve OBJ için mm varsayılır; 3MF, STEP ve IGES birimleri dosyadan okunur. Ölçüleri kontrol edin. Önizleme üretilebilirlik onayı değildir.
-        </p>
+        <ModelInfoPanel file={file} metrics={metrics} />
         {error && (
           <p role="alert" className="form-error">
             {error}

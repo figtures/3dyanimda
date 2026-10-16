@@ -2,7 +2,7 @@
   "policy": "global-originality-v1",
   "result": "prepared_not_approved",
   "records": 796,
-  "manifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
+  "manifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "hashMethod": "PostgreSQL JSONB md5 of all landing payload fields excluding id, status and updated_at; timestamps normalized in UTC",
   "routes": [
     {
@@ -1209,7 +1209,7 @@
       "brand": "3dyanimda",
       "tenant_id": "10000000-0000-4000-8000-000000000001",
       "path": "/3d-modelleme",
-      "payload_hash": "c929aba3ed7cf719dd44464513aa0248"
+      "payload_hash": "a322cc49973688e886e625840d203cf0"
     },
     {
       "brand": "3dyanimda",
@@ -1797,25 +1797,25 @@
       "brand": "3dyanimda",
       "tenant_id": "10000000-0000-4000-8000-000000000001",
       "path": "/bolgeler/istanbul/kadikoy",
-      "payload_hash": "ed3ed29872a56aac2d03cf34f8002f71"
+      "payload_hash": "c1940578eb30ab358a9f926ccbcd7aa4"
     },
     {
       "brand": "3dyanimda",
       "tenant_id": "10000000-0000-4000-8000-000000000001",
       "path": "/bolgeler/istanbul/kadikoy/3d-baski",
-      "payload_hash": "a5e429d91d04959307b0877fe020c454"
+      "payload_hash": "a2d833546a547bb96eeb6ba368c21a58"
     },
     {
       "brand": "3dyanimda",
       "tenant_id": "10000000-0000-4000-8000-000000000001",
       "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
-      "payload_hash": "b4168950ea20632621eef2aabd8bcb29"
+      "payload_hash": "cef59220a54e3c36dd9b635c0ea4fdd9"
     },
     {
       "brand": "3dyanimda",
       "tenant_id": "10000000-0000-4000-8000-000000000001",
       "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
-      "payload_hash": "5ce5330f77b6974a134b530710344111"
+      "payload_hash": "ab8e03b6d3590b54cc4251e5bbfc6bb6"
     },
     {
       "brand": "3dyanimda",
@@ -4781,5 +4781,16 @@
       "path": "/sektorler/savunma-havacilik",
       "payload_hash": "4e04c671d3cd611ee2424a44fed5e692"
     }
-  ]
+  ],
+  "latestDelta": {
+    "date": "2026-10-16",
+    "routes": [
+      "/3d-modelleme",
+      "/bolgeler/istanbul/kadikoy",
+      "/bolgeler/istanbul/kadikoy/3d-baski",
+      "/bolgeler/istanbul/kadikoy/3d-modelleme",
+      "/bolgeler/istanbul/kadikoy/3d-tarama"
+    ],
+    "review": "docs/audits/local-seo-model-panel-2026-10-16.json"
+  }
 }

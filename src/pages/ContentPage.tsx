@@ -12,6 +12,7 @@ import places from "@/content/places.json";
 import {contentMetaTitle,contentMetaDescription} from '@/content/metadata';
 import {sourceNote,contentModified} from '@/content/source-notes';
 import {serviceImageSources} from '@/content/responsive-image';
+import { LocalServiceAccess } from '@/components/brand/LocalServiceAccess';
 export default function ContentPage() {
   const { pathname, search } = useLocation();
   const b = useBrand();
@@ -76,6 +77,7 @@ export default function ContentPage() {
       </section>
       <div className="article-layout wrap">
         <article className="content-article">
+          {p.kind === "location" && <LocalServiceAccess profile={b.business} context={p.local_context} logistics={p.logistics} query={query} />}
           {p.editorial?.answer && (
             <section className="answer-card" aria-labelledby="quick-answer">
               <p className="brand-eyebrow">KISA YANIT</p>
@@ -100,7 +102,7 @@ export default function ContentPage() {
               <figcaption>Uygulama alanını anlatan temsili görsel.</figcaption>
             </figure>
           )}
-          {p.local_context && (
+          {p.kind !== "location" && p.local_context && (
             <section>
               <h2>Bölgenizde nasıl çalışıyoruz?</h2>
               <p>{p.local_context}</p>
@@ -124,7 +126,7 @@ export default function ContentPage() {
               </div>
             </section>
           )}
-          {p.logistics && (
+          {p.kind !== "location" && p.logistics && (
             <section>
               <h2>Numune ve teslimat planı</h2>
               <p>{p.logistics}</p>
@@ -161,6 +163,7 @@ export default function ContentPage() {
           </Link>
           <hr />
           <h3>Bu sayfada</h3>
+          {p.kind === "location" && <a href="#hizmet-ve-teslimat">Hizmete erişim ve teslimat</a>}
           {p.sections.map((s, i) => (
             <a key={i} href={"#bolum-" + i}>
               {s.title}

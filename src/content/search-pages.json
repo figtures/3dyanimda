@@ -184,7 +184,7 @@
   {
     "brand": "3dyanimda",
     "path": "/3d-modelleme",
-    "title": "Fikirden test edilebilir ürün modeline",
+    "title": "3D modelleme ve ürün tasarımı: fikirden test edilebilir modele",
     "summary": "Eskiz, ölçü ve kullanım senaryosunu birlikte ele alarak ilk ürün geometrisini geliştirin. Modelleme sürecinin çıktısını yalnızca görünüşe değil, prototiple sınanacak tasarım kararlarına bağlayın.",
     "sections": [
       {
@@ -267,7 +267,7 @@
         "/rehber/3d-baski-mi-cnc-mi"
       ]
     },
-    "updated_at": "2026-10-07"
+    "updated_at": "2026-10-16"
   },
   {
     "brand": "3dsanayi",

@@ -10,9 +10,9 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "34b92c880e5c9c317422eb815ee125ecf9ade23ea0d000bb52a98f79cc892e6e",
-  "sourceFileCount": 560,
-  "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
+  "sourceHash": "45011ae1679048224fbe3421d5aaa407ae19f38a05cbce9f1dcf4529128f108f",
+  "sourceFileCount": 564,
+  "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
     "allBrandsAllThemesAllRoutes": true,
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/model-formats-review-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/local-seo-model-panel-2026-10-16.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/model-formats-review-2026-10-16.json",
+    "latestSourceSnapshot": "docs/audits/local-seo-model-panel-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
     "availableThemes": 4,
     "themeCoverageNote": "Four themes covered by current quote (32), homepage (64) and navigation (64) browser cases; historical all-route evidence retains its original dates.",
@@ -90,7 +90,7 @@
     },
     {
       "file": "docs/audits/publication-content-manifest.json",
-      "sha256": "a689dba386e97afe0d4413cb223f36f709e14416546ba521cadb4af548e60dd7"
+      "sha256": "6c4651165ee06688d03b65cec58eb3c9b02f888270edc63c9ffed2d4cfc555e8"
     },
     {
       "file": "docs/audits/reviewed-assets-2026-10-08.json",
@@ -235,6 +235,10 @@
     {
       "file": "docs/audits/model-formats-review-2026-10-16.json",
       "sha256": "395ee38790ace91e7f88ef9146c446fdeda81eab9dc954be731a0326cfb04300"
+    },
+    {
+      "file": "docs/audits/local-seo-model-panel-2026-10-16.json",
+      "sha256": "810ca989420ccb66d8d75ab514642678e8083978d118b82e744874cd535b1868"
     }
   ],
   "limitations": [
@@ -250,7 +254,8 @@
     "16 October floating WhatsApp delta has source/configuration/type/build review; no new full-route browser run is claimed.",
     "16 October persistent quote workspace/control-spacing delta has source/type/unit/build review; fresh browser execution is tracked separately in CI.",
     "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed.",
-    "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately."
+    "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately.",
+    "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

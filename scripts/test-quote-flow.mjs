@@ -51,6 +51,21 @@ try {
   await page.getByRole('button',{name:'Tel kafes görünümü',exact:true}).click();
   assert.equal(await page.getByRole('button',{name:'Tel kafes görünümü',exact:true}).getAttribute('aria-pressed'),'true');
   await page.getByRole('button',{name:'Model görünümünü sıfırla',exact:true}).click();
+  const panel=page.locator('.studio-model-info');
+  await panel.waitFor();
+  const spacing=await panel.evaluate(el=>{
+    const style=getComputedStyle(el),rect=el.getBoundingClientRect();
+    const info=el.querySelector('.studio-file-identity').getBoundingClientRect();
+    const metrics=el.querySelector('.studio-metrics').getBoundingClientRect();
+    return {left:parseFloat(style.paddingLeft),right:parseFloat(style.paddingRight),aligned:Math.abs(info.left-metrics.left)<1,inside:metrics.left>=rect.left&&metrics.right<=rect.right+1};
+  });
+  assert.ok(spacing.left>=16&&spacing.right>=16&&Math.abs(spacing.left-spacing.right)<1,JSON.stringify(spacing));
+  assert.ok(spacing.aligned&&spacing.inside,`${brand}/${theme}/${width} model info gutters`);
+  await page.locator('.studio-technical-details summary').click();
+  assert.equal(await page.locator('.studio-technical-body').isVisible(),true);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,`${brand}/${theme}/${width} model detail overflow`);
+  await page.locator('.studio-technical-details summary').click();
+  if(brand==='3dyanimda') await page.locator('.quote-preview').screenshot({path:`/tmp/quote-flow-previews/model-panel-${theme}-${width}.png`});
   if(brand==='3dyanimda') await page.screenshot({path:`/tmp/quote-flow-previews/${theme}-${width}.png`,fullPage:true});
   console.log(`PASS quote ${brand}/${theme}/${width}: stable tab scroll, persistent model pane, steps, retained choices, service change, overflow`);
  }

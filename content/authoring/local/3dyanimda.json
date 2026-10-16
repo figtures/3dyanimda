@@ -5200,28 +5200,44 @@
   {
     "brand": "3dyanimda",
     "path": "/bolgeler/istanbul/kadikoy",
-    "title": "Kadıköy 3D ürün geliştirme: vücuda yakın taşınan ürünün hacmi",
-    "summary": "Boyunda veya göğüs üzerinde taşınan bir ürünün gövdesi, askı konumuyla birlikte değerlendirilmelidir. Prototip amacı görünüş, konum kararlılığı veya kullanıcı erişimi olarak seçilir.",
+    "title": "Kadıköy 3D baskı, tarama ve modelleme hizmetleri",
+    "summary": "Kadıköy’den ürün fikriniz, baskıya hazır dosyanız veya fiziksel örneğinizle başvurabilirsiniz. İhtiyacınıza uygun hizmeti seçin; Ataşehir atölyesiyle numune, randevu ve teslim planını netleştirin.",
     "sections": [
       {
-        "title": "Proje kararını tarif eden bilgiler",
-        "body": "Taşıma konumunu, askı bağlantılarını ve ürüne bakma yönünü gösterin. Gövdenin ağırlık temsilinin gerekli olup olmadığını belirtin."
+        "title": "Kadıköy’den talep nasıl başlatılır?",
+        "body": "Teklif formunda ihtiyacınızı seçin; dosyanız varsa yükleyin, yoksa ürünün fotoğrafını ve yaklaşık ölçülerini paylaşın. Numuneyi ne amaçla kullanacağınızı yazın. Fiziksel örnek gerekiyorsa atölyeye geliş ve geri dönüş yöntemini üretimden önce konuşalım."
       },
       {
-        "title": "İlk numuneyi kabul ederken",
-        "body": "Ürünün dönmesi, kıyafete temas eden çıkıntılar ve kumandaya ulaşma hareketi kaydedilir. Tek deneme uzun kullanım konforunu kanıtlamaz."
+        "title": "Örnek uygulama: askılı ürün gövdesi",
+        "body": "Boyunda veya göğüs üzerinde taşınan bir ürünün gövdesi, askı konumuyla birlikte değerlendirilmelidir. Prototip amacı görünüş, konum kararlılığı veya kullanıcı erişimi olarak seçilir."
+      },
+      {
+        "body": "Taşıma konumunu, askı bağlantılarını ve ürüne bakma yönünü gösterin. Gövdenin ağırlık temsilinin gerekli olup olmadığını belirtin.",
+        "title": "Proje kararını tarif eden bilgiler"
+      },
+      {
+        "body": "Ürünün dönmesi, kıyafete temas eden çıkıntılar ve kumandaya ulaşma hareketi kaydedilir. Tek deneme uzun kullanım konforunu kanıtlamaz.",
+        "title": "İlk numuneyi kabul ederken"
       }
     ],
     "kind": "location",
     "image": "",
     "faq": [
       {
-        "q": "Gerçek ağırlık gerekli mi?",
-        "a": "Denge kararı varsa temsil biçimi açıklanmalıdır; yalnızca görünüş için ayrı kapsam seçilebilir."
+        "q": "Kadıköy’de bir şubeniz var mı?",
+        "a": "Bu sayfa Kadıköy’den hizmet almak isteyenler içindir. Atölyemiz Örnek Mahallesi, Ataşehir’dedir; ziyaretten önce randevu alın. Güncel adres ve iletişim bilgileri iletişim sayfasında yer alır."
       },
       {
-        "q": "Farklı askı uzunluğu denenir mi?",
-        "a": "Ölçüler kodlanarak karşılaştırılabilir; sonuç seçilen kullanım düzenine bağlanır."
+        "q": "Teklif almak için atölyeye gelmem gerekir mi?",
+        "a": "İlk değerlendirme dosya, fotoğraf ve ölçülerle başlayabilir. Fiziksel referansa ihtiyaç duyulursa hangi parçanın gönderileceği ayrıca belirlenir."
+      },
+      {
+        "a": "Denge kararı varsa temsil biçimi açıklanmalıdır; yalnızca görünüş için ayrı kapsam seçilebilir.",
+        "q": "Gerçek ağırlık gerekli mi?"
+      },
+      {
+        "a": "Ölçüler kodlanarak karşılaştırılabilir; sonuç seçilen kullanım düzenine bağlanır.",
+        "q": "Farklı askı uzunluğu denenir mi?"
       }
     ],
     "status": "draft",
@@ -5233,9 +5249,19 @@
     "logistics": "Fotoğraflarda yalnızca ürün konumunu gösterecek kadraj kullanabilirsiniz. Kargo, kurye veya elden teslim ihtiyacı teklif kapsamında belirtilmelidir. Atölye ziyareti öncesinde randevu gerekir; diğer şehirlere kargo seçeneği de bulunur.",
     "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
     "reviewed_at": "2026-10-07T20:48:02+03:00",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-10-16",
     "editorial": {
-      "answer": "Askılı ürünün gövdesini taşıma noktalarıyla birlikte sınayın; dönme ve kullanıcı erişimini ağırlık temsilinin sınırlarıyla değerlendirin.",
+      "answer": "Hazır bir modelin üretimi için 3D baskı, fiziksel objenin dijitalleştirilmesi için tarama, eskizden veya ölçüden tasarım için modelleme talebi açın. Kadıköy adresiniz hizmet ve teslimat planına eklenir; çalışma noktası Ataşehir, Örnek Mahallesi’dir.",
+      "sources": [
+        {
+          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi",
+          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı"
+        },
+        {
+          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+        }
+      ],
       "takeaways": [
         "Çalışma odağı: Vücuda yakın taşınan ürünün hacmi",
         "İlk örneğin cevaplayacağı kararı yazın.",
@@ -5246,44 +5272,50 @@
         "/3d-tarama",
         "/3d-modelleme",
         "/bolgeler/istanbul"
-      ],
-      "sources": [
-        {
-          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı",
-          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi"
-        },
-        {
-          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü",
-          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/"
-        }
       ]
     }
   },
   {
     "brand": "3dyanimda",
     "path": "/bolgeler/istanbul/kadikoy/3d-baski",
-    "title": "Kadıköy 3D baskı: askı bağlantılı gövde için baskı",
-    "summary": "Taşınan ürün prototipinde askı deliklerinin konumu, gövdenin duruşunu etkileyebilir. Baskı seti hazırlanırken bağlantı alternatifleri açıkça ayrılmalıdır.",
+    "title": "Kadıköy 3D baskı: dosya değerlendirme ve teslimat",
+    "summary": "Kadıköy için 3D baskı talebinizi model dosyası, adet ve kullanım amacıyla iletin. Malzeme seçimini, baskı ölçülerini ve kargo, kurye veya randevuyla elden teslim tercihinizi teklif aşamasında birlikte belirleyelim.",
     "sections": [
       {
-        "title": "Baskı teklifine eklenecek referanslar",
-        "body": "Askı malzemesini, genişliğini ve gövdeye bağlanma yönünü paylaşın. İçeride temsili ağırlık kullanılacaksa konumunu yazın."
+        "title": "Baskı ve taşıma süresini ayrı planlayın",
+        "body": "Kadıköy’de teslim alacağınız mahalleyi ve açık adresi, ürünün gerekli olduğu günle birlikte belirtin. Baskı süresi geometri, malzeme ve adede bağlıdır; kurye veya kargo süresi buna eklenir. Aynı gün teslim gereksiniminiz varsa sipariş öncesinde uygunluk teyidi isteyin."
       },
       {
-        "title": "Fiziksel denemede kaydedilecek bulgular",
-        "body": "Asılı duruş, bağlantıya erişim ve kıyafete temas eden köşeler incelenir. Baskı deliğinin çalışması bağlantının güvenli kullanım ömrünü kanıtlamaz."
+        "title": "Örnek uygulama: askılı ürün gövdesi",
+        "body": "Taşınan ürün prototipinde askı deliklerinin konumu, gövdenin duruşunu etkileyebilir. Baskı seti hazırlanırken bağlantı alternatifleri açıkça ayrılmalıdır."
+      },
+      {
+        "body": "Askı malzemesini, genişliğini ve gövdeye bağlanma yönünü paylaşın. İçeride temsili ağırlık kullanılacaksa konumunu yazın.",
+        "title": "Baskı teklifine eklenecek referanslar"
+      },
+      {
+        "body": "Asılı duruş, bağlantıya erişim ve kıyafete temas eden köşeler incelenir. Baskı deliğinin çalışması bağlantının güvenli kullanım ömrünü kanıtlamaz.",
+        "title": "Fiziksel denemede kaydedilecek bulgular"
       }
     ],
     "kind": "location",
     "image": "",
     "faq": [
       {
-        "q": "Askı delikleri büyük seçilebilir mi?",
-        "a": "Takma kolaylığı ve boşlukta hareket birlikte değerlendirilmelidir."
+        "q": "Kadıköy adresime kurye ile gönderim yapılıyor mu?",
+        "a": "Kurye ve kargo seçenekleri vardır. Paket ölçüsü, teslim adresi ve alıcı bilgisi paylaşılınca yöntem, ücret ve zaman planı netleştirilir; ilçeye göre otomatik bir süre verilmez."
       },
       {
-        "q": "İçi boş numune anlamlı mı?",
-        "a": "Hacmi gösterebilir; denge veya salınım sonucunu gerçek ürüne doğrudan aktarmayın."
+        "q": "Baskıyı kendim teslim alabilir miyim?",
+        "a": "Üretimi tamamlanan parçayı Ataşehir’deki atölyeden randevuyla alabilirsiniz. Yola çıkmadan önce parçanın hazır olduğunu ve teslim saatini teyit edin."
+      },
+      {
+        "a": "Takma kolaylığı ve boşlukta hareket birlikte değerlendirilmelidir.",
+        "q": "Askı delikleri büyük seçilebilir mi?"
+      },
+      {
+        "a": "Hacmi gösterebilir; denge veya salınım sonucunu gerçek ürüne doğrudan aktarmayın.",
+        "q": "İçi boş numune anlamlı mı?"
       }
     ],
     "status": "draft",
@@ -5295,9 +5327,19 @@
     "logistics": "Paketleme sırasında ince bağlantı kulaklarına yük binmemesini sağlayacak düzeni görüşün. Baskı tesliminde kargo, kurye ve randevuyla elden alma seçenekleri vardır; şehir dışına kargo gönderilir. Paket boyutu ve hedef adres teslim planına eklenir.",
     "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
     "reviewed_at": "2026-10-07T20:48:02+03:00",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-10-16",
     "editorial": {
-      "answer": "Askı bağlantısı alternatiflerini eş koşullarda deneyin; boş gövdeden elde edilen duruşu gerçek ürün dengesine doğrudan aktarmayın.",
+      "answer": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS dosyanızı teklif alanında açarak dış ölçülerini kontrol edebilirsiniz. Önizleme bir üretim onayı değildir; malzeme, adet ve kullanım koşulları incelendikten sonra baskı kapsamı ve teslim takvimi belirlenir.",
+      "sources": [
+        {
+          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi",
+          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı"
+        },
+        {
+          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+        }
+      ],
       "takeaways": [
         "Çalışma odağı: Askı bağlantılı gövde için baskı",
         "Ölçü birimi, adet ve dosya kodunu belirtin.",
@@ -5307,44 +5349,50 @@
         "/3d-baski",
         "/bolgeler/istanbul",
         "/cozumler/urun-gelistirme-prototipleri"
-      ],
-      "sources": [
-        {
-          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı",
-          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi"
-        },
-        {
-          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü",
-          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/"
-        }
       ]
     }
   },
   {
     "brand": "3dyanimda",
     "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
-    "title": "Kadıköy 3D tarama: giyilebilir referansın temas bölgesini tarama",
-    "summary": "Mevcut bir aksesuarın dış biçimi yeni gövdeye referans olacaksa tarama, korunacak temas bölgelerini kapsamalıdır. Kişinin vücudunu taramak her projede gerekli değildir.",
+    "title": "Kadıköy 3D tarama: numune ve yerinde çalışma planı",
+    "summary": "Kadıköy’deki objenizin fotoğraflarını, boyutlarını ve tarama amacını paylaşın. Atölyeye gönderim veya yerinde tarama ihtiyacını; erişim, taşıma ve hedef dosya türüyle birlikte değerlendirelim.",
     "sections": [
       {
-        "title": "Taramadan önce nesne ve erişim bilgisi",
-        "body": "Aksesuarın takılı görünümünü, kıyafete bakan yüzünü ve askı yuvalarını gösterin. Esnek parçaların normal konumunu belirtin."
+        "title": "Yerinde tarama için hangi bilgiler gerekir?",
+        "body": "Kadıköy’de çalışılacak açık adresi, objenin yaklaşık boyutunu ve çevresinde erişilebilir alanı bildirin. Sökülemeyen, kırılgan veya taşınması zor parçaları fotoğraflarla gösterin. Erişim koşulları görülmeden ziyaret süresi ya da her yüzeyin taranabileceği varsayılmaz."
       },
       {
-        "title": "Veri tesliminin sınırını belirleme",
-        "body": "Sabit gövde ile şekil değiştiren askı ayrı veri olarak değerlendirilir. Tek konum yüzeyi hareket sırasında oluşan bütün temasları temsil etmez."
+        "title": "Örnek uygulama: askılı ürün gövdesi",
+        "body": "Mevcut bir aksesuarın dış biçimi yeni gövdeye referans olacaksa tarama, korunacak temas bölgelerini kapsamalıdır. Kişinin vücudunu taramak her projede gerekli değildir."
+      },
+      {
+        "body": "Aksesuarın takılı görünümünü, kıyafete bakan yüzünü ve askı yuvalarını gösterin. Esnek parçaların normal konumunu belirtin.",
+        "title": "Taramadan önce nesne ve erişim bilgisi"
+      },
+      {
+        "body": "Sabit gövde ile şekil değiştiren askı ayrı veri olarak değerlendirilir. Tek konum yüzeyi hareket sırasında oluşan bütün temasları temsil etmez.",
+        "title": "Veri tesliminin sınırını belirleme"
       }
     ],
     "kind": "location",
     "image": "",
     "faq": [
       {
-        "q": "Sadece gövde taranabilir mi?",
-        "a": "Askı arayüzü ölçüyle verilebiliyorsa sınırlı kapsam değerlendirilebilir."
+        "q": "Objeyi Ataşehir’e getirmeden taratabilir miyim?",
+        "a": "Yerinde tarama hizmeti vardır. Nesneye erişim, yüzey durumu ve çalışma koşulları önceden değerlendirilerek randevu planlanır."
       },
       {
-        "q": "Kıyafet kalınlığı önem taşır mı?",
-        "a": "Temas ve duruşu etkiliyorsa tasarım girdisi olarak belirtilmelidir."
+        "q": "Tarama çıktısı doğrudan düzenlenebilir CAD dosyası mı?",
+        "a": "Yüzey ağı ile düzenlenebilir CAD geometrisi farklı çıktılardır. Sonradan ölçü değiştirmek veya imalat çizimi hazırlamak istiyorsanız yeniden modelleme gereksinimini talebinizde açıklayın."
+      },
+      {
+        "a": "Askı arayüzü ölçüyle verilebiliyorsa sınırlı kapsam değerlendirilebilir.",
+        "q": "Sadece gövde taranabilir mi?"
+      },
+      {
+        "a": "Temas ve duruşu etkiliyorsa tasarım girdisi olarak belirtilmelidir.",
+        "q": "Kıyafet kalınlığı önem taşır mı?"
       }
     ],
     "status": "draft",
@@ -5356,9 +5404,19 @@
     "logistics": "Yerinde çalışmaya ihtiyaç varsa erişim alanı ve nesnenin ayrılabilirliğini açıklayın. Tarama hizmeti yerinde de sunulur; erişim ve çalışma şartları önceden görüşülür. Atölyeye gelmeden randevu alınır, fiziksel referansın geliş ve dönüş yöntemi kararlaştırılır.",
     "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
     "reviewed_at": "2026-10-07T20:48:02+03:00",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-10-16",
     "editorial": {
-      "answer": "Giyilebilir referansta sabit gövde ve esnek askıyı ayırın; gerekli temas bölgesini seçilen taşıma konumunda belgeleyin.",
+      "answer": "Taranacak objenin taşınabilirliği, yüzeyleri ve kullanım amacı yöntemi belirler. Yerinde tarama talebinde adres ve çalışma alanı bilgisi; atölye çalışmasında ise numunenin geliş ve geri dönüş planı gerekir.",
+      "sources": [
+        {
+          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi",
+          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı"
+        },
+        {
+          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+        }
+      ],
       "takeaways": [
         "Çalışma odağı: Giyilebilir referansın temas bölgesini tarama",
         "Nesnenin boyutunu ve erişim durumunu açıklayın.",
@@ -5368,44 +5426,50 @@
         "/3d-tarama",
         "/bolgeler/istanbul",
         "/cozumler/urun-gelistirme-prototipleri"
-      ],
-      "sources": [
-        {
-          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı",
-          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi"
-        },
-        {
-          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü",
-          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/"
-        }
       ]
     }
   },
   {
     "brand": "3dyanimda",
     "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
-    "title": "Kadıköy 3D modelleme: taşıma eksenine göre gövde modelleme",
-    "summary": "Vücuda yakın bir ürünün modeli, askı noktalarıyla gövdenin kullanıcıya dönük yüzünü ilişkilendirmelidir. Dış silüeti kesinleştirmeden taşıma yönünü seçin.",
+    "title": "Kadıköy 3D modelleme: eskizden üretim dosyasına",
+    "summary": "Kadıköy’den modelleme talebinizi eskiz, teknik resim veya ürün fotoğrafıyla başlatın. Sabit ölçüleri, değişecek ayrıntıları ve istediğiniz dosya formatını belirleyerek dijital onay ve prototip aşamalarını planlayın.",
     "sections": [
       {
-        "title": "Tasarım girdilerini netleştirme",
-        "body": "Askı veya bağlantı çizimini, görünen yüzeyi ve erişilecek kumandaları verin. İç bileşenlerin kütle konumu biliniyorsa paylaşın."
+        "title": "Dijital çalışma ile fiziksel örneği ayırın",
+        "body": "Çizim ve revizyon notları için atölyeye gelmeniz gerekmez. Ölçülmesi gereken bir ürün varsa Kadıköy’den gönderilecek referansı önce fotoğraflayın; Ataşehir atölyesine kargo, kurye veya randevuyla getirme seçeneğini görüşün. Numunenin dönüşünü dijital dosya tesliminden ayrı takip edin."
       },
       {
-        "title": "Model incelemesinde karar ölçütleri",
-        "body": "Askı açıklıkları, kabuk kenarları ve kullanıcı yaklaşımı birlikte kontrol edilir. Dijital modelin dengeli görünmesi gerçek ağırlık davranışını doğrulamaz."
+        "title": "Örnek uygulama: askılı ürün gövdesi",
+        "body": "Vücuda yakın bir ürünün modeli, askı noktalarıyla gövdenin kullanıcıya dönük yüzünü ilişkilendirmelidir. Dış silüeti kesinleştirmeden taşıma yönünü seçin."
+      },
+      {
+        "body": "Askı veya bağlantı çizimini, görünen yüzeyi ve erişilecek kumandaları verin. İç bileşenlerin kütle konumu biliniyorsa paylaşın.",
+        "title": "Tasarım girdilerini netleştirme"
+      },
+      {
+        "body": "Askı açıklıkları, kabuk kenarları ve kullanıcı yaklaşımı birlikte kontrol edilir. Dijital modelin dengeli görünmesi gerçek ağırlık davranışını doğrulamaz.",
+        "title": "Model incelemesinde karar ölçütleri"
       }
     ],
     "kind": "location",
     "image": "",
     "faq": [
       {
-        "q": "Gövdeyi inceltmek her zaman iyi mi?",
-        "a": "İç hacim, temas kenarı ve üretim koşullarıyla birlikte değerlendirilmelidir."
+        "q": "Yalnızca fotoğrafla modelleme fiyatı alabilir miyim?",
+        "a": "Fotoğraf, işin kapsamını anlatmaya yardımcı olur. Ölçülü üretim modeli için boyutlar ve bağlantı referansları gerekir; eksik ölçüm veya tarama ihtiyacı teklif sırasında belirtilir."
       },
       {
-        "q": "Askı sonradan seçilebilir mi?",
-        "a": "Bağlantı ölçüsü ve duruş etkisi değişeceğinden tasarım revizyonu gerekebilir."
+        "q": "Çizim onayı baskı siparişi anlamına gelir mi?",
+        "a": "Hayır. Dijital tasarım, revizyon kapsamı ve fiziksel üretim ayrı değerlendirilir. Model onaylandıktan sonra numune gerekiyorsa adet ve malzeme için baskı talebi oluşturulur."
+      },
+      {
+        "a": "İç hacim, temas kenarı ve üretim koşullarıyla birlikte değerlendirilmelidir.",
+        "q": "Gövdeyi inceltmek her zaman iyi mi?"
+      },
+      {
+        "a": "Bağlantı ölçüsü ve duruş etkisi değişeceğinden tasarım revizyonu gerekebilir.",
+        "q": "Askı sonradan seçilebilir mi?"
       }
     ],
     "status": "draft",
@@ -5417,9 +5481,19 @@
     "logistics": "Fiziksel referans getirilecekse kullanılan askı sürümünü belirtin. Dosya tesliminin yanında fiziksel örnek taşınacaksa kargo, kurye veya elden yöntem görüşülebilir. Ataşehir Örnek Mahallesi atölyesine ziyaret randevu gerektirir.",
     "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
     "reviewed_at": "2026-10-07T20:48:02+03:00",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-10-16",
     "editorial": {
-      "answer": "Taşıma eksenini ve kullanıcıya dönük yüzeyi birlikte modelleyin; askı seçiminin iç hacim ve duruş üzerindeki etkisini kontrol edin.",
+      "answer": "Modeliniz henüz yoksa temel ölçüler ve referans görsellerle tasarım kapsamını konuşabiliriz. CAD dosyası, baskı ağı ve fiziksel prototip farklı teslimlerdir; hangi çıktılara ihtiyaç duyduğunuzu baştan belirtin.",
+      "sources": [
+        {
+          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi",
+          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı"
+        },
+        {
+          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+        }
+      ],
       "takeaways": [
         "Çalışma odağı: Taşıma eksenine göre gövde modelleme",
         "Değişmeyecek ölçülerle yorumlanacak alanları ayırın.",
@@ -5429,16 +5503,6 @@
         "/3d-modelleme",
         "/bolgeler/istanbul",
         "/cozumler/urun-gelistirme-prototipleri"
-      ],
-      "sources": [
-        {
-          "title": "Ataşehir Kaymakamlığı — Tarihi ve Coğrafi Yapısı",
-          "url": "https://atasehir.gov.tr/tarihi-ve-cografi-yapisi"
-        },
-        {
-          "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü",
-          "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/"
-        }
       ]
     }
   },

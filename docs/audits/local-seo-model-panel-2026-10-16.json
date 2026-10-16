@@ -1,0 +1,74 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-16T10:16:56.858Z",
+  "sourceHash": "45011ae1679048224fbe3421d5aaa407ae19f38a05cbce9f1dcf4529128f108f",
+  "sourceFileCount": 564,
+  "scope": {
+    "editorialRoutes": [
+      {
+        "brand": "3dyanimda",
+        "path": "/3d-modelleme",
+        "title": "Fikirden test edilebilir ürün modeline",
+        "old_hash": "c929aba3ed7cf719dd44464513aa0248",
+        "new_hash": "a322cc49973688e886e625840d203cf0"
+      },
+      {
+        "brand": "3dyanimda",
+        "path": "/bolgeler/istanbul/kadikoy",
+        "title": "Kadıköy 3D ürün geliştirme: vücuda yakın taşınan ürünün hacmi",
+        "old_hash": "ed3ed29872a56aac2d03cf34f8002f71",
+        "new_hash": "c1940578eb30ab358a9f926ccbcd7aa4"
+      },
+      {
+        "brand": "3dyanimda",
+        "path": "/bolgeler/istanbul/kadikoy/3d-baski",
+        "title": "Kadıköy 3D baskı: askı bağlantılı gövde için baskı",
+        "old_hash": "a5e429d91d04959307b0877fe020c454",
+        "new_hash": "a2d833546a547bb96eeb6ba368c21a58"
+      },
+      {
+        "brand": "3dyanimda",
+        "path": "/bolgeler/istanbul/kadikoy/3d-modelleme",
+        "title": "Kadıköy 3D modelleme: taşıma eksenine göre gövde modelleme",
+        "old_hash": "b4168950ea20632621eef2aabd8bcb29",
+        "new_hash": "cef59220a54e3c36dd9b635c0ea4fdd9"
+      },
+      {
+        "brand": "3dyanimda",
+        "path": "/bolgeler/istanbul/kadikoy/3d-tarama",
+        "title": "Kadıköy 3D tarama: giyilebilir referansın temas bölgesini tarama",
+        "old_hash": "5ce5330f77b6974a134b530710344111",
+        "new_hash": "ab8e03b6d3590b54cc4251e5bbfc6bb6"
+      }
+    ],
+    "sharedLocalAccess": "All location pages use existing tenant-owned contact settings and retain authored local context/logistics.",
+    "sharedModelPanel": "All brands and themes; bounded presentation change only, parsers and pricing unchanged."
+  },
+  "checks": {
+    "typecheck": "pass",
+    "targetedVitest": {
+      "files": 3,
+      "tests": 30,
+      "result": "pass"
+    },
+    "productionBuild": "pass",
+    "originality": {
+      "records": 800,
+      "result": "pass",
+      "report": "artifacts/seo-local/originality.json"
+    },
+    "semanticReview": "Five edited articles reviewed in full. Existing technical examples retained and explicitly labeled examples, not local case-study claims. No new branch, same-day or fixed-price promise.",
+    "businessEvidence": "Existing owner-confirmed cargo/courier/appointment options; current CMS contact_info read on 2026-10-16. Address is rendered from tenant settings.",
+    "metadata": "Service keyword now appears before colon in H1 and search title; no live SEO overrides on edited routes.",
+    "assets": "No asset or geometry changes; previous evidence retained.",
+    "browser": "Pending remote CI; no new local browser review claimed."
+  },
+  "limitations": [
+    "No ranking, indexing or Lighthouse score guarantee.",
+    "Shared service-access information is intentionally reusable business information, not evidence of unique district operations.",
+    "Changes to live CMS and deployments must be verified separately."
+  ]
+}
