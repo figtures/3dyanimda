@@ -126,7 +126,7 @@ export default function JobApplication() {
         eyebrow="Kariyer · İş Başvurusu"
         title={<>Kadromuza <em className="text-accent-blue not-italic">katılın</em>.</>}
         lead="Deneyiminizi ve ilgi alanlarınızı paylaşın. Başvurularımızı ekibimizin ihtiyaçları doğrultusunda değerlendiriyoruz."
-        breadcrumbs={[{ label: "Anasayfa", to: "/" }, { label: "Kariyer", to: "/kariyer" }, { label: "İş Başvurusu" }]}
+        breadcrumbs={[{ label: "Anasayfa", to: "/"+query }, { label: "Kariyer", to: "/kariyer"+query }, { label: "İş Başvurusu" }]}
       />
 
       <section className="bg-background py-16 lg:py-24">

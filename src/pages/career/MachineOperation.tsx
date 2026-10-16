@@ -1,6 +1,6 @@
-import { getTenantId } from "@/lib/tenant";
+import { getTenantId, previewSearch } from "@/lib/tenant";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { z } from "zod";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
@@ -41,6 +41,7 @@ const MAX_MB = 15;
 const ALLOWED = [".pdf", ".jpg", ".jpeg", ".png", ".webp", ".heic"];
 
 export default function MachineOperation() {
+  const query=previewSearch(useLocation().search);
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [file, setFile] = useState<File | null>(null);
@@ -121,7 +122,7 @@ export default function MachineOperation() {
         eyebrow="Kariyer · Makine İşletim"
         title="Üretim kapasitenizi birlikte değerlendirelim."
         lead="Ekipmanınızı, kapasitenizi ve iş birliği beklentinizi paylaşın. İşletim, bakım, sorumluluklar ve ticari koşullar değerlendirme sonrasında karşılıklı belirlenir."
-        breadcrumbs={[{ label: "Anasayfa", to: "/" }, { label: "Kariyer", to: "/kariyer" }, { label: "Makine İşletim" }]}
+        breadcrumbs={[{ label: "Anasayfa", to: "/"+query }, { label: "Kariyer", to: "/kariyer"+query }, { label: "Makine İşletim" }]}
       />
 
       <section className="bg-background py-16">
@@ -210,9 +211,9 @@ export default function MachineOperation() {
                 <label className="flex gap-3 items-start cursor-pointer rounded-xl border border-border bg-muted/30 p-4 hover:bg-muted/50 transition-colors">
                   <Checkbox checked={form.kvkk_consent} onCheckedChange={(v) => update("kvkk_consent", !!v)} className="mt-0.5" />
                   <span className="text-[13px] text-foreground/85 leading-relaxed">
-                    <Link to="/basvuru-acik-riza-metni" target="_blank" className="text-accent-blue underline">Açık Rıza Metni</Link>'ni okudum;
+                    <Link to={"/basvuru-acik-riza-metni"+query} target="_blank" className="text-accent-blue underline">Açık Rıza Metni</Link>'ni okudum;
                     talebimin değerlendirilmesi için kişisel ve makine verilerimin işlenmesine onay veriyorum.
-                    <Link to="/kvkk-aydinlatma-metni" target="_blank" className="text-accent-blue underline ml-1">KVKK Aydınlatma Metni</Link>'ni de inceledim.
+                    <Link to={"/kvkk-aydinlatma-metni"+query} target="_blank" className="text-accent-blue underline ml-1">KVKK Aydınlatma Metni</Link>'ni de inceledim.
                   </span>
                 </label>
               </Section>
