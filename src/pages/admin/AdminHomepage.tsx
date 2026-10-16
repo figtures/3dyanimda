@@ -64,7 +64,7 @@ const AdminHomepage = () => {
   const [saving, setSaving] = useState<string | null>(null);
   const [picker, setPicker] = useState<{ section: Section } | null>(null);
 
-  useEffect(() => { refreshSiteSettings(); }, []);
+  useEffect(() => { refreshSiteSettings().catch(() => toast({ title: "Ayarlar yüklenemedi", variant: "destructive" })); }, []);
   useEffect(() => {
     const d: Record<string, any> = {};
     for (const s of SECTIONS) d[s.key] = settings[s.key] || {};

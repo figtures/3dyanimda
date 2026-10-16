@@ -10,8 +10,8 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "9b8f31b85308a8249db384dbcac5603e7a6f932b1024825124d008fb7d5051b2",
-  "sourceFileCount": 538,
+  "sourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
+  "sourceFileCount": 546,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,13 +35,21 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/persistent-quote-review-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/business-profile-review-2026-10-16.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/persistent-quote-review-2026-10-16.json",
+    "latestSourceSnapshot": "docs/audits/business-profile-review-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
     "availableThemes": 4,
     "themeCoverageNote": "Four themes covered by current quote (32), homepage (64) and navigation (64) browser cases; historical all-route evidence retains its original dates.",
-    "latestQuoteBrowserCases": 32
+    "latestQuoteBrowserCases": 32,
+    "latestBusinessProfileBrandThemeJSDOMCases": 16,
+    "latestBusinessProfileBrowserRegression": {
+      "home": 64,
+      "quote": 32,
+      "navigation": 64,
+      "runId": 38839001387
+    },
+    "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json"
   },
   "evidence": [
     {
@@ -219,6 +227,10 @@
     {
       "file": "docs/audits/persistent-quote-review-2026-10-16.json",
       "sha256": "5572551c6a63d5c80f30706d202434e16d1420db83032a35635df77c311b5932"
+    },
+    {
+      "file": "docs/audits/business-profile-review-2026-10-16.json",
+      "sha256": "785933302ea62febd08b0a4f2480e67ad4ac1e53503f236d2cb09b50a3867a98"
     }
   ],
   "limitations": [
@@ -232,7 +244,8 @@
     "13 October visual revision replaces the rejected text-heavy layout. Original content is retained in keyboard-operable service panels and native details; current bounded review is documented in visual-home-review-2026-10-13.json.",
     "16 October bounded security and quote-flow review: see security-quote-review-2026-10-16.json. Native leaked-password protection needs a supported Supabase plan.",
     "16 October floating WhatsApp delta has source/configuration/type/build review; no new full-route browser run is claimed.",
-    "16 October persistent quote workspace/control-spacing delta has source/type/unit/build review; fresh browser execution is tracked separately in CI."
+    "16 October persistent quote workspace/control-spacing delta has source/type/unit/build review; fresh browser execution is tracked separately in CI.",
+    "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

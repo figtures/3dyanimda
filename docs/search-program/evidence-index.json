@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "150e6bf46ac771131f20b0e2f481ef75a523eacf3318cab2aa9ac757d9177465",
-      "bytes": 7243
+      "sha256": "1bd69b3f5adc842123df33296e9484e05e53d8fc349d99c30ca289c609eada87",
+      "bytes": 7294
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -308,8 +308,8 @@
     },
     {
       "path": "scripts/export-sites.mjs",
-      "sha256": "4046c0b300feb5ea708f072811c10cac08d483053a5c18bd9264cb7159227486",
-      "bytes": 12515
+      "sha256": "1d5b4ffeec2c9e75d06739be4b26b04b99d6cbcabc0ff5290b5042fcb97c9e6e",
+      "bytes": 12847
     },
     {
       "path": "scripts/font-requirements.txt",
@@ -463,8 +463,8 @@
     },
     {
       "path": "src/components/site/Seo.tsx",
-      "sha256": "66e53cbe40b74fdade61d1f94557591ac149852ace7b3ab4e3980c51bd6b11f4",
-      "bytes": 5938
+      "sha256": "d60c838bff35810ce8122cc87ec36861dd435d5a92a03c6842852a5cb2831d82",
+      "bytes": 6092
     },
     {
       "path": "src/content/answer-unit.test.ts",
@@ -543,8 +543,8 @@
     },
     {
       "path": "src/hooks/useSiteSettings.ts",
-      "sha256": "042907c7deac93a57c86fc5584117be3568072934db09e26d3317e5dea3085df",
-      "bytes": 3215
+      "sha256": "0983b81f94cd4d60ceef562eb158bdfddba68dfee15775aebc1fd0d99eb343b5",
+      "bytes": 3826
     },
     {
       "path": "src/lib/first-paint.ts",
@@ -623,8 +623,8 @@
     },
     {
       "path": "src/lib/structured-data.test.ts",
-      "sha256": "dc6bac34485b6136cd28ca1367d25f138b7adc401c32f2638fc1eac051f68e1e",
-      "bytes": 1208
+      "sha256": "210245097840e4c78d3fec8a787d58a790d8fadfd0abfbb6cfa97fea42d4dce9",
+      "bytes": 1916
     },
     {
       "path": "src/main.tsx",
@@ -658,8 +658,8 @@
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
-      "sha256": "69b3690043c3d9187531b925811c3a94e9ded257dc6e449d2126060e0cb21192",
-      "bytes": 5644
+      "sha256": "7c28a3bfac660091bdf77cd8d6377c5acb8d071c33e22e25a563b541e79d3f81",
+      "bytes": 6320
     },
     {
       "path": "src/components/brand/BrandNavigation.tsx",
@@ -758,18 +758,18 @@
     },
     {
       "path": "src/lib/structured-data.ts",
-      "sha256": "b50fef3a979da847a6eb310a42bb0b8dff1f80857d03b67101b268fe8dfc6ac7",
-      "bytes": 2735
+      "sha256": "988bf7e7c1db0132d233ceaa794f944d2d6c5bff025d61e18a228cf6a7af0c08",
+      "bytes": 2842
     },
     {
       "path": "src/pages/Blog.tsx",
-      "sha256": "4f077ed022875a1bd1aec22a8db64b1e81aa9fc84dbdf775ff8ab5dd5e8dc3e2",
-      "bytes": 5165
+      "sha256": "889853c24862d4a48b5952a35fe51bee2a9d54f2dac74ffb310ae6be2fc3a38b",
+      "bytes": 5189
     },
     {
       "path": "src/pages/BlogPost.tsx",
-      "sha256": "a00df0832bf3032b72bd0f7302c7cfcf145fe32cc22aa2f55c7067fa729236ee",
-      "bytes": 4681
+      "sha256": "a94ed2b09cc5b11bedd9bc6b745e398c1f4703b9e654c5a00d2a96757d92af3c",
+      "bytes": 4647
     },
     {
       "path": "src/pages/Portfolio.tsx",
@@ -843,8 +843,8 @@
     },
     {
       "path": "scripts/quality/live-schema-inventory.ts",
-      "sha256": "fdc00df66d709ba02830a637abbbe93bfa379b8364b2763176f6cd3f49fdc061",
-      "bytes": 3771
+      "sha256": "f1cabacea86ee98349b8f169b5293d24037f6aa35280ff0a8c84dc33c4cd9923",
+      "bytes": 4116
     },
     {
       "path": "scripts/quality/production-readonly.mjs",
@@ -1005,11 +1005,71 @@
       "path": "docs/audits/dependency-audit-2026-10-12.json",
       "sha256": "5feefcc42d5d0f0d452b8d5f5ecd56e3195d1dce9810f869058d82bc74c9a334",
       "bytes": 39677
+    },
+    {
+      "path": "docs/audits/business-profile-review-2026-10-16.json",
+      "sha256": "785933302ea62febd08b0a4f2480e67ad4ac1e53503f236d2cb09b50a3867a98",
+      "bytes": 3948
+    },
+    {
+      "path": "src/lib/business-profile.ts",
+      "sha256": "b29258781e3e7bf4a4a865f245bcc4915019809e66473b21c47e996dccf5e6b3",
+      "bytes": 12801
+    },
+    {
+      "path": "src/lib/business-profile.test.ts",
+      "sha256": "ce8502d215b00297ff08b7446399d3483c983fa6c31ae44209b1fefff6ce774a",
+      "bytes": 8265
+    },
+    {
+      "path": "src/components/brand/BusinessProfile.test.tsx",
+      "sha256": "9ceb9b3217a6dcf75295886f2dd4f61db266c387e72bfe78842ee41bb272f2c4",
+      "bytes": 6330
+    },
+    {
+      "path": "src/components/brand/BusinessProfileLinks.tsx",
+      "sha256": "562c6beb303edbf7954a0af400e4809484723d0d3c46dcd0e87affa762cb6872",
+      "bytes": 1096
+    },
+    {
+      "path": "src/components/brand/business-profile.css",
+      "sha256": "dd8369971e7e76391243fe4965b9cc2d68c543a34650f1f331d3f31cc248106b",
+      "bytes": 2513
+    },
+    {
+      "path": "src/hooks/useSiteSettings.test.tsx",
+      "sha256": "b85638ac2e22c68dd9c746de03ce56a439c8c1b2a84ba8a8e2f926b8d165e29c",
+      "bytes": 3775
+    },
+    {
+      "path": "src/pages/Blog.business-profile.test.tsx",
+      "sha256": "1c0e52d6477965d155a67a3742dd90c9aa74543f0e790abfcd63f7fdfbd7c96a",
+      "bytes": 3152
+    },
+    {
+      "path": "src/pages/admin/AdminContactInfo.tsx",
+      "sha256": "994c9e796f2d74684027cf7209c74b82015dd7c763a89d33d09df781042dc4af",
+      "bytes": 16843
+    },
+    {
+      "path": "src/pages/admin/AdminContactInfo.test.tsx",
+      "sha256": "ee5c11971b2c0ebed650ed9179dc0ce56a7ec434c24039d29808eed3820e67eb",
+      "bytes": 10150
+    },
+    {
+      "path": "scripts/quality/exported-business-profile.mjs",
+      "sha256": "c1f91b20e7a806ee958319438a584e942e1fe8407bc87c4645edd07cf53e1ff2",
+      "bytes": 6640
+    },
+    {
+      "path": "scripts/quality/exported-business-profile.test.mjs",
+      "sha256": "90134e84e2aad861ae36480a67930330b575285dce409a741c3eac969d78eef1",
+      "bytes": 6486
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-16T02:18:29.977Z",
+  "checksumsRefreshedAt": "2026-10-16T02:26:11.802Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

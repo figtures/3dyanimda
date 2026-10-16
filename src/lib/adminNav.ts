@@ -52,7 +52,7 @@ export const ADMIN_NAV: AdminNavGroup[] = [
   { key: "site", label: "Site Yapısı", items: [
     { to: "/admin/navigation", label: "Navigasyon", description: "Üst menü ve alt menü", icon: MenuIcon, perm: "navigation.edit", feature: "admin.navigation" },
     { to: "/admin/announcements", label: "Duyuru Çubuğu", description: "Üst banner", icon: Megaphone, perm: "announcements.edit", feature: "admin.announcements" },
-    { to: "/admin/contact-info", label: "İletişim & Sosyal", description: "Telefon, adres, sosyal hesaplar", icon: Contact, perm: "contact_info.edit", feature: "admin.contact_info" },
+    { to: "/admin/contact-info", label: "İşletme Kimliği", description: "Google profili, iletişim, sosyal hesaplar ve hakkımızda", icon: Contact, perm: "settings.edit", feature: "admin.contact_info" },
     { to: "/admin/content", label: "İçerik & Bölgeler", description: "Hizmetler ve yerel sayfalar; yayın kalite kontrolü", icon: Search, perm: "seo.edit" },
     { to: "/admin/seo", label: "SEO / Meta", description: "Sayfa bazlı SEO ayarları", icon: Search, perm: "seo.edit", feature: "admin.seo" },
     { to: "/admin/redirects", label: "Yönlendirmeler", description: "URL redirect kuralları", icon: ArrowRightLeft, perm: "redirects.edit", feature: "admin.redirects" },

@@ -1,0 +1,52 @@
+.business-profile-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.business-profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 44px;
+  color: inherit;
+  font-size: .875rem;
+  text-decoration: none;
+}
+.business-profile-links a:hover { text-decoration: underline; text-underline-offset: .3em; }
+.business-profile-links svg { flex-shrink: 0; }
+.footer-business {
+  display: grid;
+  gap: .75rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgb(255 255 255 / .18);
+}
+.footer-business-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 2rem;
+  font-size: .875rem;
+}
+.footer-business-contact a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+.brand-footer .footer-top .business-description { white-space: pre-line; max-width: 38rem; }
+.brand-footer .footer-address { display: inline-flex; align-items: baseline; gap: .5rem; overflow-wrap: anywhere; }
+.footer-address svg { flex-shrink: 0; }
+.brand-site .contact-details address { font-style: normal; color: var(--muted); line-height: 1.8; white-space: pre-line; }
+.brand-site .contact-details p { white-space: pre-line; }
+.brand-site .contact-details a { overflow-wrap: anywhere; }
+.brand-site .contact-profile-section { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.contact-profile-section h2 { margin-bottom: 1rem; font-size: 1.2rem; }
+.brand-site .business-map { width: 100%; height: clamp(260px, 42vw, 440px); border: 1px solid var(--line); margin-top: 2rem; background: var(--soft); }
+.brand-site .about-profile { display: grid; gap: clamp(2rem, 5vw, 5rem); margin-top: 3rem; }
+.brand-site .about-profile.has-image { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+.brand-site .about-profile-copy { min-width: 0; }
+.brand-site .about-profile-copy p { color: var(--muted); line-height: 1.85; white-space: pre-line; overflow-wrap: anywhere; max-width: 72ch; margin: 0 0 1.25rem; }
+.brand-site .about-profile-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; background: var(--soft); }
+.brand-site .business-about-title { white-space: pre-line; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .brand-site .about-profile.has-image { grid-template-columns: minmax(0, 1fr); }
+  .footer-business-contact { flex-direction: column; gap: .25rem; }
+  .business-profile-links ul { gap: .25rem 1rem; }
+}

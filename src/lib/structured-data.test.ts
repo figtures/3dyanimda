@@ -16,4 +16,11 @@ describe('tenant structured data',()=>{
   expect(verified['@graph']).toHaveLength(3);
   expect(verified['@graph'][2]['@id']).toBe('https://3dsanayi.com/#localbusiness');
  });
+ it('publishes Google place links with query parameters but never map embeds as sameAs',()=>{
+  const graph=businessGraph({name:'3D Yanımda',origin:'https://3dyanimda.com',
+   address:{addressLocality:'Ataşehir',addressCountry:'TR'},hasMap:'https://www.google.com/maps?cid=123',
+   sameAs:['https://www.google.com/maps?cid=123','https://www.google.com/maps?cid=123','https://www.google.com/maps/embed?pb=123','https://instagram.com/3dyanimda','https://unknown.example/brand']});
+  expect(graph['@graph'][0]).toHaveProperty('sameAs',['https://www.google.com/maps?cid=123','https://instagram.com/3dyanimda']);
+  expect(graph['@graph'][2]).toHaveProperty('hasMap','https://www.google.com/maps?cid=123');
+ });
 });

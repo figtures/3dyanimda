@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from "react-router-dom";
-import { ArrowUpRight, Box, MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { brands, useBrand } from "@/brands/config";
 import { demoMode } from "@/lib/backend-config";
 import { isPrivatePreview, previewSearch } from '@/lib/tenant';
@@ -15,14 +15,15 @@ import "@/brands/brand.css";
 import "@/brands/modern.css";
 import "@/themes/themes.css";
 import "@/themes/industrialtwo.css";
+import "./business-profile.css";
+import { BusinessProfileLinks } from "./BusinessProfileLinks";
 import { getSiteTheme, themeNames } from "@/themes/config";
 import GrowthAnalytics from "./GrowthAnalytics";
 import { FloatingContactButtons } from "@/components/site/FloatingContactButtons";
 import { CookieConsent } from "@/components/site/CookieConsent";
 export function BrandLayout() {
   const brand = useBrand();
-  const address = brand.settings.verified_business_identity?.address;
-  const addressLabel = address ? [address.streetAddress, address.addressLocality, address.addressRegion].filter(Boolean).join(" · ") : "";
+  const business = brand.business;
   const location = useLocation();
   useRedirects();
   const theme = getSiteTheme(brand.slug, location.search);
@@ -129,20 +130,29 @@ export function BrandLayout() {
           <Link className="brand-logo" to={link("/")}>
             <img src={brandAsset(brand.slug,'logo_wordmark_light',brand.settings).url} width="240" height="60" alt={brand.name} className="footer-brand-image" loading="lazy" />
           </Link>
-          <p>
+          {business.description ? <p className="business-description">{business.description}</p> : !Object.prototype.hasOwnProperty.call(brand.settings.contact_info ?? {}, "business_description") && <p>
             3D baskı, 3D tarama ve 3D modelleme.
             <br />
             Teknik ihtiyaçlarınıza odaklanır.
-          </p>
+          </p>}
           <Link to={link("/teklif-al")} className="footer-link">
             Projenizi değerlendirelim <ArrowUpRight />
           </Link>
         </div>
+        {(business.email || business.phone || business.sameAs.length > 0) && (
+          <div className="footer-business">
+            {(business.email || business.phone) && <div className="footer-business-contact">
+              {business.email && <a href={`mailto:${business.email}`}>{business.email}</a>}
+              {business.phone && <a href={`tel:${business.phone}`}>{business.phoneDisplay}</a>}
+            </div>}
+            <BusinessProfileLinks profile={business} />
+          </div>
+        )}
         <div className="footer-bottom">
           <span>
             © {new Date().getFullYear()} {brand.name}
           </span>
-          {addressLabel && <span><MapPin size={14} /> {addressLabel}</span>}
+          {business.addressText && <span className="footer-address"><MapPin size={14} aria-hidden="true" /> {business.addressText}</span>}
           <Link to={link("/gizlilik-politikasi")}>Gizlilik</Link>
           <Link to={link("/iletisim")}>İletişim</Link>
           {import.meta.env.VITE_GA4_MEASUREMENT_ID && <button type="button" onClick={() => window.dispatchEvent(new Event("brand:privacy-settings"))}>Çerez tercihleri</button>}

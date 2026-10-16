@@ -5,7 +5,8 @@ import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Clock } from "lucide-react";
-import { breadcrumbSchema, orgSchema } from "@/lib/seo-schema";
+import { breadcrumbSchema } from "@/lib/seo-schema";
+import { useBrand } from "@/brands/config";
 import { supabase } from "@/lib/supabase";
 import { useTranslation } from "react-i18next";
 import { resolveMediaUrl } from "@/lib/media";
@@ -21,6 +22,7 @@ type DbPost = {
 };
 
 const Blog = () => {
+  const brand = useBrand();
   const [dbPosts, setDbPosts] = useState<DbPost[]>([]);
   const { i18n } = useTranslation();
   const isEn = i18n.language?.startsWith("en");
@@ -46,7 +48,6 @@ const Blog = () => {
         path="/blog"
         keywords="3d baskı blog, 3d yazıcı rehber, istanbul 3d baskı, oto yedek parça blog, malzeme seçimi"
         jsonLd={[
-          orgSchema(),
           breadcrumbSchema([
             { label: "Anasayfa", url: "/" },
             { label: "Blog", url: "/blog" },
@@ -54,7 +55,7 @@ const Blog = () => {
           {
             "@context": "https://schema.org",
             "@type": "Blog",
-            name: `${getTenantIdentity().name} Blog`,
+            name: `${brand.name} Blog`,
             url: `${getTenantIdentity().origin}/blog`,
             blogPost: dbPosts.map((p) => ({
               "@type": "BlogPosting",

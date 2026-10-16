@@ -203,6 +203,7 @@ try {
         failed.push(`Public API returned ${response.status()}: ${url.pathname}`);
     });
     const published = [];
+    let businessName = tenant.name;
     for (const [url, lastmod] of routes) {
       bootstrap.clear();
       if (!/^\/[a-z0-9/-]*$/.test(url) || url.includes(".."))
@@ -249,6 +250,9 @@ try {
       for(const graph of schemaEvidence.graphs){
         const errors=[...schemaIntegrity(graph,{origin:base,visibleText:schemaEvidence.text}),...validateVocabulary(graph)];
         if(errors.length)throw new Error(`Invalid JSON-LD at ${url}: ${errors.join("; ")}`);
+        // Discovery files use the same admin-managed identity rendered by Seo.
+        const organization = graph['@graph']?.find(node => node['@id'] === `${base}/#organization`);
+        if (typeof organization?.name === 'string' && organization.name.trim()) businessName = organization.name;
       }
       const file = path.join(dest, url.slice(1), "index.html");
       await mkdir(path.dirname(file), { recursive: true });
@@ -268,7 +272,7 @@ try {
     });
     await page.getByRole("heading", { name: "Sayfa bulunamadı." }).waitFor();
     await writeFile(path.join(dest, "404.html"), await page.content());
-    const discovery=discoveryFiles({origin:base,brand:tenant.name,pages:published,indexNowKey:env.INDEXNOW_KEY});
+    const discovery=discoveryFiles({origin:base,brand:businessName,pages:published,indexNowKey:env.INDEXNOW_KEY});
     for(const [file,body] of Object.entries(discovery)){
       await mkdir(path.dirname(path.join(dest,file)),{recursive:true});
       await writeFile(path.join(dest,file),body);

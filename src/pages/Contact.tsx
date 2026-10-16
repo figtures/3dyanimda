@@ -3,10 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Seo } from "@/components/site/Seo";
 import { useBrand } from "@/brands/config";
+import { BusinessProfileLinks } from "@/components/brand/BusinessProfileLinks";
 export default function Contact() {
   const b = useBrand();
   const { search } = useLocation();
-  const contact = b.settings.contact_info ?? {};
+  const business = b.business;
+  const { visitNote, deliveryNote, onsiteNote } = business;
   return (
     <>
       <Seo
@@ -33,46 +35,39 @@ export default function Contact() {
           Teknik teklif talebi <ArrowUpRight size={18} />
         </Link>
         <div className="contact-details">
-          <div>
+          {(business.addressText || visitNote) && <div>
             <h2>Atölye ziyareti ve randevu</h2>
-            <p>
-              Örnek Mahallesi, Ataşehir'deki atölyemize gelmeden önce randevu
-              alın. Ziyaret ve elden teslim planını teklif talebinizde
-              belirtebilirsiniz.
-            </p>
-            {contact.address_tr && <p>{contact.address_tr}</p>}
-          </div>
-          <div>
+            {visitNote && <p>{visitNote}</p>}
+            {business.addressText && <address>{business.addressText}</address>}
+          </div>}
+          {deliveryNote && <div>
             <h2>Teslimat seçenekleri</h2>
-            <p>
-              Kargo, kurye ve elden teslim seçeneklerimiz vardır. İstanbul
-              dışındaki şehirlere de kargo gönderimi yapıyoruz. Teslimat yöntemi
-              ve takvimi proje özelinde birlikte belirlenir.
-            </p>
-          </div>
-          <div>
+            <p>{deliveryNote}</p>
+          </div>}
+          {onsiteNote && <div>
             <h2>3D tarama ve yerinde hizmet</h2>
-            <p>
-              3D tarama hizmetimizi yerinde de sunuyoruz. Taranacak parçayı,
-              yaklaşık ölçülerini ve bulunduğu konumu paylaşın; uygun çalışma
-              koşullarını ve randevuyu birlikte değerlendirelim.
-            </p>
-          </div>
-          {contact.email && (
+            <p>{onsiteNote}</p>
+          </div>}
+          {business.email && (
             <div>
               <h2>E-posta</h2>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              <a href={`mailto:${business.email}`}>{business.email}</a>
             </div>
           )}
-          {contact.phone && (
+          {business.phone && (
             <div>
               <h2>Telefon</h2>
-              <a href={`tel:${contact.phone}`}>
-                {contact.phone_display || contact.phone}
+              <a href={`tel:${business.phone}`}>
+                {business.phoneDisplay}
               </a>
             </div>
           )}
         </div>
+        {business.sameAs.length > 0 && <section className="contact-profile-section" aria-label="İşletme profilleri">
+          <h2>{b.name} profilleri</h2>
+          <BusinessProfileLinks profile={business} />
+        </section>}
+        {business.mapEmbedUrl && <iframe className="business-map" title={`${b.name} konumu`} src={business.mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />}
       </section>
     </>
   );
