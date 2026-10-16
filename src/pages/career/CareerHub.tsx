@@ -177,7 +177,7 @@ export default function CareerHub() {
                 <details key={f.q} className="group py-5">
                   <summary className="flex items-start justify-between gap-6 cursor-pointer list-none">
                     <span className="font-display text-[16px] font-medium text-primary">{f.q}</span>
-                    <span className="font-mono text-accent-blue text-lg leading-none transition-transform group-open:rotate-45">+</span>
+                    <span data-disclosure-icon aria-hidden="true" className="font-mono text-accent-blue text-lg leading-none transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <p className="text-[14px] text-muted-foreground leading-relaxed mt-3">{f.a}</p>
                 </details>

@@ -28,9 +28,14 @@ export default function QuoteRequest() {
   const started = useRef(false);
   const [step, setStep] = useState(1);
   const stepHeading = useRef<HTMLHeadingElement>(null);
+  const workspace = useRef<HTMLDivElement>(null);
+  const [previewTarget, setPreviewTarget] = useState<HTMLDivElement | null>(null);
   function goToStep(next: number) {
+    // Keep the document height stable when a shorter step replaces a longer one.
+    // Focus remains accessible without moving the visitor's viewport.
+    if (workspace.current) workspace.current.style.minHeight = `${workspace.current.getBoundingClientRect().height}px`;
     setStep(next);
-    requestAnimationFrame(() => { stepHeading.current?.focus(); stepHeading.current?.scrollIntoView({block:"start", behavior:"smooth"}); });
+    requestAnimationFrame(() => stepHeading.current?.focus({ preventScroll: true }));
   }
   const [service, setService] = useState(() =>
     ["3D Baskı", "3D Tarama", "3D Modelleme"].includes(state?.studioService)
@@ -159,7 +164,8 @@ export default function QuoteRequest() {
             <nav className="quote-steps" aria-label="Teklif adımları">
               {["Dosya & hizmet", "Üretim tercihleri", "İletişim & gönderim"].map((label, index) => <button type="button" key={label} aria-current={step === index + 1 ? "step" : undefined} onClick={() => goToStep(index + 1)}><span>{index + 1}</span>{label}</button>)}
             </nav>
-            <div className="quote-workspace">
+            <div className="quote-workspace" ref={workspace}>
+            <aside className="quote-preview" aria-label="Dosya çalışma alanı"><div ref={setPreviewTarget} /></aside>
             <div className="quote-main">
             <h2 className="quote-step-title" ref={stepHeading} tabIndex={-1}>{step === 1 ? "Hizmetinizi seçin, dosyanızı ekleyin" : step === 2 ? "Parçanız nasıl üretilecek?" : "Talebinizi tamamlayın"}</h2>
             <div hidden={step !== 1}>
@@ -179,14 +185,15 @@ export default function QuoteRequest() {
               ))}
             </div>
             </div>
-            <div hidden={step === 3}>
+            <div>
             <Suspense fallback={<p>3D Studio yükleniyor…</p>}>
               <QuoteStudio
                 file={file}
                 onFile={setFile}
                 onSpec={setSpec}
                 service={service}
-                stage={step === 1 ? "file" : "options"}
+                stage={step === 1 ? "file" : step === 2 ? "options" : "contact"}
+                previewTarget={previewTarget}
               />
             </Suspense>
             </div>
@@ -314,13 +321,13 @@ export default function QuoteRequest() {
               </form>
               <button type="button" className="quote-back" onClick={() => goToStep(2)}>Üretim tercihlerine dön</button>
             </div>
-            </div>
             <aside className="quote-summary" aria-label="Talep özeti">
               <p className="brand-eyebrow">TALEBİNİZ</p><h2>Proje özeti</h2>
               <dl><div><dt>Hizmet</dt><dd>{service}</dd></div><div><dt>Dosya</dt><dd>{file?.name || "Dosya eklenmedi"}</dd></div><div><dt>Malzeme</dt><dd>{spec.material}</dd></div><div><dt>Adet</dt><dd>{spec.quantity}</dd></div></dl>
               <div className="quote-summary-price" aria-live="polite"><span>Tahmini üretim tutarı</span><strong>{spec.estimatedTotal != null ? fmtTRY(spec.estimatedTotal) : "Teknik teklif"}</strong><p>{spec.estimatedTotal != null ? "KDV dahil ön tahmin. Kesin tutar teknik inceleme sonrası teyit edilir." : "Uygun STL ve fiyatlandırılmış FDM malzemesi seçildiğinde hızlı ön hesaplama burada görünür."}</p>{spec.campaignName && <p>{spec.campaignName} · {fmtTRY(spec.discount)} tahmini indirim</p>}</div>
               <details><summary>Değerlendirme nasıl ilerler?</summary><p>Dosya, kullanım amacı ve kritik ölçüler incelenir. Malzeme, stok, üretilebilirlik, son işlem ve teslimat birlikte netleştirilir. Hedef tarih teslim taahhüdü değildir.</p><p>STL, OBJ, 3MF, STEP, IGES · en fazla 20 MB. STL ölçü birimi milimetre kabul edilir.</p></details>
             </aside>
+            </div>
             </div>
           </>
         )}

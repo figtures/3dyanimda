@@ -18,6 +18,28 @@ beforeEach(() => { vi.clearAllMocks(); api.pricingError = false; api.materialErr
 const props = () => ({file:null, onFile:vi.fn(), onSpec:vi.fn(), service:'3D Baskı'});
 const change = (label: string, value: string) => fireEvent.change(screen.getByLabelText(label), {target:{value}});
 describe('quote production preferences', () => {
+  it('keeps one interactive model in its persistent pane through every step', async () => {
+    const target = document.createElement('div'); document.body.append(target);
+    const p={...props(),file:new File(['solid test'],'persistent.stl')};
+    const view=render(<QuoteStudio {...p} stage="file" previewTarget={target}/>);
+    try {
+      const model=await screen.findByRole('button',{name:'Modeli ölç'});
+      for (const stage of ['options','contact','file'] as const) {
+        view.rerender(<QuoteStudio {...p} stage={stage} previewTarget={target}/>);
+        expect(target.contains(model)).toBe(true);
+        expect(model).toBeVisible();
+        fireEvent.click(model);
+        expect(p.onSpec.mock.lastCall?.[0].summary).toContain('100.00 cm³');
+        expect(screen.getByLabelText('3D dosyası')).toBeVisible();
+        expect(document.querySelector('.studio-options')?.hasAttribute('hidden')).toBe(stage !== 'options');
+      }
+      fireEvent.change(screen.getByLabelText('3D dosyası'),{target:{files:[]}});
+      expect(p.onFile).not.toHaveBeenCalled();
+      fireEvent.click(screen.getByRole('button',{name:'Dosyayı kaldır'}));
+      expect(p.onFile).toHaveBeenCalledWith(null);
+    } finally { view.unmount(); target.remove(); }
+  });
+
   it('preserves material and measured estimate when moving between file and options steps', async () => {
     const p={...props(),file:new File(['solid test'],'test.stl')};
     const view=render(<QuoteStudio {...p} stage="file"/>);

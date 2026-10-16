@@ -1,5 +1,5 @@
 /* Shared by every brand and theme; colors inherit the active identity. */
-.brand-site .quote-flow { max-width: 1280px; margin-inline:auto; padding-block:48px 72px; }
+.brand-site .quote-flow { overflow-anchor:none; max-width: 1280px; margin-inline:auto; padding-block:48px 72px; }
 .brand-site .quote-flow h1 { font-size:clamp(32px,4vw,48px); line-height:1.1; max-width:none; margin-block:12px 16px; }
 .brand-site .quote-flow > .section-lead { font-size:16px; max-width:700px; margin:0 0 28px; }
 .brand-site .quote-flow [hidden] { display:none !important; }
@@ -8,7 +8,7 @@
 .brand-site .quote-steps button span { display:grid; place-items:center; width:28px; height:28px; border-radius:50%; background:var(--line); color:var(--text); flex-shrink:0; }
 .brand-site .quote-steps button[aria-current] { border-color:var(--brand-accent,var(--text)); font-weight:700; }
 .brand-site .quote-steps button[aria-current] span { background:var(--brand-accent,var(--text)); color:#fff; }
-.brand-site .quote-workspace { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:28px; align-items:start; }
+.brand-site .quote-workspace { display:grid; grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr); gap:28px; align-items:start; align-content:start; }
 .brand-site .quote-main { min-width:0; padding:28px; border:1px solid var(--line); background:var(--card-bg,#fff); border-radius:16px; }
 .brand-site .quote-step-title { font-size:24px; line-height:1.3; margin:0 0 20px; scroll-margin-top:110px; }
 .brand-site .quote-studio-staged { display:block; margin:24px 0 0; }
@@ -26,7 +26,7 @@
 .brand-site .quote-flow .studio-file button { position:relative; min-height:44px; }
 .brand-site .quote-step-actions { display:flex; align-items:center; justify-content:flex-end; gap:16px; margin-top:24px; }
 .brand-site .quote-back { font-size:14px; text-decoration:underline; text-underline-offset:4px; min-height:44px; margin-top:12px; }
-.brand-site .quote-summary { position:sticky; top:105px; border:1px solid var(--line); border-radius:16px; padding:24px; min-width:0; }
+.brand-site .quote-summary { margin-top:28px; border:1px solid var(--line); border-radius:16px; padding:24px; min-width:0; }
 .brand-site .quote-summary h2 { font-size:22px; margin:8px 0 20px; }
 .brand-site .quote-summary dl { margin:0; }
 .brand-site .quote-summary dl > div { display:grid; grid-template-columns:65px minmax(0,1fr); gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:13px; }
@@ -59,3 +59,27 @@
 
 .brand-site .quote-campaign { grid-column:1/-1; padding:16px; border:1px solid var(--brand-accent,var(--line)); border-radius:8px; font-size:13px; }
 .brand-site .quote-campaign p { margin-top:6px; }
+
+/* The model is a single persistent instance, independent of the form step. */
+.brand-site .quote-preview { position:sticky; top:100px; min-width:0; align-self:start; z-index:10; background:var(--page-bg,#fff); border-radius:12px; }
+.studio-model-viewer { height:310px; }
+.brand-site .quote-preview .studio-model-viewer { height:clamp(180px,32dvh,330px); }
+.brand-site .quote-preview .studio-empty { min-height:180px; height:clamp(180px,32dvh,330px); }
+.brand-site .studio-filename { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; margin-top:10px; }
+.brand-site .quote-main .quote-summary { padding:20px 0 0; border:0; border-top:1px solid var(--line); border-radius:0; }
+.brand-site .quote-preview .studio-canvas header { gap:16px; }
+@media(max-width:900px) {
+ .brand-site .quote-workspace { display:block; }
+ .brand-site .quote-main { margin-top:20px; }
+ .brand-site .quote-preview { top:76px; box-shadow:0 8px 20px rgb(0 0 0 / .08); }
+ .brand-site .quote-preview .studio-model-viewer { height:170px; }
+ .brand-site .quote-preview .studio-empty { height:140px; min-height:140px; padding:12px; gap:6px; }
+ .brand-site .quote-preview .studio-empty > svg { width:32px; height:32px; }
+ .brand-site .quote-preview .studio-canvas header { padding:8px 12px; }
+ .brand-site .quote-preview .studio-file { padding:8px 12px; gap:8px; }
+ .brand-site .quote-preview .studio-file > label { padding:8px; }
+ .brand-site .quote-preview .studio-file small { display:none; }
+ .brand-site .quote-preview .studio-metrics { padding:6px 12px; gap:8px; }
+ .brand-site .quote-preview .studio-preview-content > .text-xs { display:none; }
+ .brand-site .quote-preview .studio-filename { margin:0; padding:4px 12px; }
+}

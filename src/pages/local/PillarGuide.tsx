@@ -159,7 +159,7 @@ export const PillarGuide = () => (
               <details key={q.q} className="rounded-xl border border-border bg-card p-5 group">
                 <summary className="cursor-pointer font-medium text-foreground list-none flex items-start justify-between gap-3">
                   <span>{q.q}</span>
-                  <span className="text-accent-blue group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                  <span data-disclosure-icon aria-hidden="true" className="text-accent-blue group-open:rotate-45 transition-transform text-xl leading-none">+</span>
                 </summary>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{q.a}</p>
               </details>

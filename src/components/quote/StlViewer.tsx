@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Minus, Plus, RotateCcw, Box } from "lucide-react";
 import * as THREE from "three";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -65,6 +66,18 @@ export const StlViewer = ({
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const controlsRef = useRef<OrbitControls | null>(null);
   const frameRef = useRef<number>(0);
+  const [wireframe, setWireframe] = useState(false);
+  function zoom(factor: number) {
+    const camera = cameraRef.current, controls = controlsRef.current;
+    if (!camera || !controls) return;
+    const offset = camera.position.clone().sub(controls.target);
+    offset.setLength(Math.min(controls.maxDistance, Math.max(controls.minDistance, offset.length() * factor)));
+    camera.position.copy(controls.target).add(offset);
+    controls.update();
+  }
+  useEffect(() => {
+    if (meshRef.current) (meshRef.current.material as THREE.MeshStandardMaterial).wireframe = wireframe;
+  }, [wireframe]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -197,6 +210,7 @@ export const StlViewer = ({
     if (!file) return;
 
     setLoading(true);
+    setWireframe(false);
     setError(null);
     let cancelled = false;
     const reader = new FileReader();
@@ -249,6 +263,7 @@ export const StlViewer = ({
         camera.position.set(dist * 0.7, -dist, dist * 0.55);
         controls.target.set(0, 0, size.z / 2);
         controls.update();
+        controls.saveState();
 
         // Metrics — STL units assumed mm
         const volMM3 = computeVolumeMM3(geometry);
@@ -302,7 +317,7 @@ export const StlViewer = ({
   }, [file]);
 
   return (
-    <div className={className}>
+    <div className={`studio-viewer ${className || ""}`}>
       <div ref={mountRef} className="w-full h-full relative">
         {loading && (
           <div className="absolute inset-0 grid place-items-center text-xs font-mono uppercase tracking-widest text-cream/70 bg-accent-blue-deep/40 backdrop-blur-sm">
@@ -315,6 +330,12 @@ export const StlViewer = ({
           </div>
         )}
       </div>
+      {file && !loading && !error && <div className="studio-viewer-tools" role="group" aria-label="Model görünümü">
+        <button type="button" onClick={() => zoom(0.8)} aria-label="Modeli yakınlaştır" title="Yakınlaştır"><Plus size={16}/></button>
+        <button type="button" onClick={() => zoom(1.25)} aria-label="Modeli uzaklaştır" title="Uzaklaştır"><Minus size={16}/></button>
+        <button type="button" onClick={() => controlsRef.current?.reset()} aria-label="Model görünümünü sıfırla" title="Görünümü sıfırla"><RotateCcw size={16}/></button>
+        <button type="button" onClick={() => setWireframe(v => !v)} aria-label="Tel kafes görünümü" aria-pressed={wireframe} title="Tel kafes"><Box size={16}/></button>
+      </div>}
     </div>
   );
 };
