@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import {
   useEffect,
   useMemo,
@@ -69,12 +70,14 @@ export default function QuoteStudio({
   onSpec,
   service,
   stage,
+  previewTarget,
 }: {
   file: File | null;
   onFile: (file: File | null) => void;
   onSpec: (spec: StudioSpec) => void;
   service: string;
-  stage?: "file" | "options";
+  stage?: "file" | "options" | "contact";
+  previewTarget?: HTMLElement | null;
 }) {
   const { tenant } = useTenant();
   const [materials, setMaterials] = useState<CatalogMaterial[]>([]);
@@ -263,7 +266,6 @@ export default function QuoteStudio({
   const load = useCallback(
     (f: File | null) => {
       setError("");
-      setMetrics(null);
       if (
         f &&
         (!/\.(stl|obj|3mf|step|stp|igs|iges)$/i.test(f.name) ||
@@ -272,13 +274,13 @@ export default function QuoteStudio({
         setError("STL, OBJ, 3MF, STEP veya IGES seçin. En fazla 20 MB.");
         return;
       }
+      setMetrics(null);
       onFile(f);
     },
     [onFile],
   );
-  return (
-    <div className={`quote-studio${stage ? " quote-studio-staged" : ""}`}>
-      <div hidden={stage === "options"}>
+  const preview = (
+      <div className="studio-preview-content">
         <div
           className="studio-canvas"
           onDragOver={(e) => e.preventDefault()}
@@ -299,7 +301,7 @@ export default function QuoteStudio({
                 file={file}
                 color={color}
                 onMetrics={setMetrics}
-                className="h-[310px]"
+                className="studio-model-viewer"
               />
             </Suspense>
           ) : (
@@ -321,7 +323,7 @@ export default function QuoteStudio({
                 type="file"
                 aria-label="3D dosyası"
                 accept=".stl,.obj,.3mf,.step,.stp,.igs,.iges"
-                onChange={(e) => load(e.target.files?.[0] || null)}
+                onChange={(e) => { const next = e.target.files?.[0]; if (next) load(next); e.target.value = ""; }}
               />
             </label>
             {file && (
@@ -335,6 +337,7 @@ export default function QuoteStudio({
             )}
           </div>
         </div>
+        {file && <p className="studio-filename" title={file.name}>{file.name}</p>}
         {metrics && (
           <div className="studio-metrics">
             <span>
@@ -356,7 +359,11 @@ export default function QuoteStudio({
           </p>
         )}
       </div>
-      <div className="studio-options" hidden={stage === "file"}>
+  );
+  return (
+    <div className={`quote-studio${stage ? " quote-studio-staged" : ""}`}>
+      {previewTarget ? createPortal(preview, previewTarget) : previewTarget === undefined ? preview : null}
+      <div className="studio-options" hidden={Boolean(stage && stage !== "options")}>
         {!stage && <h2>Üretim seçenekleri</h2>}
         {service === "3D Baskı" && (
           <>

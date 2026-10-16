@@ -421,3 +421,48 @@
 .tiptap pre { padding: 1rem; border-radius: .5rem; background: hsl(var(--muted)); white-space: pre-wrap; }
 .tiptap a { color: hsl(var(--accent-blue)); text-decoration: underline; }
 .tiptap img { max-width: 100%; height: auto; }
+
+/* Shared control spacing also reaches dialogs rendered outside the brand root. */
+select:not([multiple]):not([size]) {
+  appearance:none;
+  padding-right:3rem !important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat:no-repeat !important;
+  background-position:right 1rem center !important;
+  background-size:16px 16px !important;
+}
+details > summary { cursor:pointer; }
+details > summary:has(> svg:last-child, > [data-disclosure-icon]) { column-gap:20px; }
+details > summary > :is(svg:last-child,[data-disclosure-icon]) { flex-shrink:0; margin-inline-start:auto; }
+details > summary:not(:has(> svg, > [data-disclosure-icon])) {
+  position:relative;
+  list-style:none;
+  min-height:44px !important;
+  padding-block:12px;
+  padding-right:48px !important;
+}
+details > summary:not(:has(> svg, > [data-disclosure-icon]))::-webkit-details-marker { display:none; }
+details > summary:not(:has(> svg, > [data-disclosure-icon]))::after {
+  content:"";
+  position:absolute;
+  right:16px;
+  top:20px;
+  width:8px;
+  height:8px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);
+  transition:transform .15s;
+  pointer-events:none;
+}
+details[open] > summary:not(:has(> svg, > [data-disclosure-icon]))::after { transform:rotate(225deg); }
+details[open] > summary:not(:has(> svg, > [data-disclosure-icon])) { margin-bottom:12px; }
+@media(forced-colors:active) {
+  select:not([multiple]):not([size]) { appearance:auto; background-image:none !important; }
+}
+@media(prefers-reduced-motion:reduce) {
+  details > summary::after { transition:none; }
+}
+
+.brand-site :is(.brand-button,.text-link) { column-gap:16px; }
+.brand-site :is(.brand-button,.text-link) > svg { flex-shrink:0; }
