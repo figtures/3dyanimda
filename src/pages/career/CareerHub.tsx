@@ -1,37 +1,60 @@
-import { Link, useLocation } from "react-router-dom";
-import { ArrowUpRight, BriefcaseBusiness, Printer } from "lucide-react";
-import { Seo } from "@/components/site/Seo";
-import { PageHero } from "@/components/site/PageHero";
-import { useBrand } from "@/brands/config";
-import { usePublicPage } from "@/content/public-page-query";
-import { previewSearch } from "@/lib/tenant";
-import { useFeature } from "@/contexts/FeatureContext";
-import { safeHtml } from "@/lib/safe-html";
-import "@/components/brand/public-sections.css";
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowDown, ArrowUpRight, Plus } from 'lucide-react';
+import { Seo } from '@/components/site/Seo';
+import { useBrand } from '@/brands/config';
+import { usePublicPage } from '@/content/public-page-query';
+import { previewSearch } from '@/lib/tenant';
+import { useFeature } from '@/contexts/FeatureContext';
+import { safeHtml } from '@/lib/safe-html';
+import { careerStory, type CareerRole } from './career-content';
+import './career.css';
 
 export default function CareerHub() {
   const brand = useBrand();
-  const { search } = useLocation();
-  const query = previewSearch(search);
-  const { data } = usePublicPage("/kariyer");
-  const jobs = (data || []) as any[];
-  const machineOps = useFeature("career.machine_ops");
+  const query = previewSearch(useLocation().search);
+  const { data, isPending, isError, refetch } = usePublicPage('/kariyer');
+  const jobs = (data || []) as CareerRole[];
+  const machineOps = useFeature('career.machine_ops');
+  const story = careerStory(brand.slug);
   const apply = (position?: string) => {
     const params = new URLSearchParams(query);
-    if (position) params.set("position", position);
-    return "/kariyer/is-basvurusu" + (params.size ? "?" + params : "");
+    if (position) params.set('position', position);
+    return '/kariyer/is-basvurusu' + (params.size ? '?' + params : '');
   };
-  return <>
+  return <div className="career-page">
     <Seo title={`Kariyer ve Üretim İş Birliği | ${brand.name}`} description={`${brand.name} için açık pozisyonları inceleyin, genel başvurunuzu veya üretim iş birliği talebinizi iletin.`} path="/kariyer" />
-    <PageHero eyebrow="Kariyer ve iş birliği" title="Birlikte üretecek çok şey var." lead="Tasarım, üretim ve operasyon deneyiminizi bizimle paylaşın. Ekibe katılmak veya üretim kapasitenizle iş birliği yapmak için buradan başlayabilirsiniz." breadcrumbs={[{label:"Anasayfa",to:"/"+query},{label:"Kariyer"}]} />
-    <div className="wrap public-collection">
-      <div className="career-paths">
-        <article><BriefcaseBusiness size={32} strokeWidth={1.4}/><h2>Ekibe katılın.</h2><p>Deneyiminizi, ilgi alanlarınızı ve çalışmalarınızı paylaşın. Başvurunuzu mevcut veya ileride oluşabilecek ihtiyaçlar için değerlendirelim.</p><Link className="brand-button" to={apply()}>Genel başvuru <ArrowUpRight size={18}/></Link></article>
-        {machineOps && <article><Printer size={32} strokeWidth={1.4}/><h2>Üretimde iş birliği.</h2><p>3D yazıcınızın veya tarayıcınızın özelliklerini ve kapasitenizi iletin. Çalışma modeli, sorumluluklar ve ticari koşullar karşılıklı değerlendirmeyle belirlenir.</p><Link className="text-link" to={"/kariyer/makine-isletim"+query}>İş birliği talebi <ArrowUpRight size={18}/></Link></article>}
+    <section className="career-hero wrap" aria-labelledby="career-title">
+      <div className="career-hero-copy">
+        <p className="career-eyebrow">{brand.name} / Kariyer</p>
+        <h1 id="career-title">Ürettiğimiz gelecekte<br /><span>sizin de imzanız olsun.</span></h1>
+        <p className="career-intro">{story.intro}</p>
+        <a className="brand-button" href="#acik-pozisyonlar">Fırsatları keşfedin <ArrowDown size={18} aria-hidden="true" /></a>
+        <div className="career-areas" aria-label="Çalışma alanları">{story.areas.map(area => <span key={area}>{area}</span>)}</div>
       </div>
-      <section className="public-subsection" aria-labelledby="career-roles"><h2 id="career-roles">Açık pozisyonlar</h2>
-        {jobs.length ? <div className="career-roles">{jobs.map(job=><article key={job.id}><p className="collection-meta">{[job.department,job.location,job.employment_type].filter(Boolean).join(" · ")}</p><h3>{job.title_tr}</h3>{job.summary_tr&&<p>{job.summary_tr}</p>}{(job.description_tr||job.requirements_tr)&&<details><summary>Pozisyonun detayları</summary><div className="public-prose" dangerouslySetInnerHTML={{__html:safeHtml(job.description_tr)}}/>{job.requirements_tr&&<><h4>Aranan nitelikler</h4><div className="public-prose" dangerouslySetInnerHTML={{__html:safeHtml(job.requirements_tr)}}/></>}</details>}<Link className="text-link" to={apply(job.title_tr)}>Bu pozisyona başvur <ArrowUpRight size={17}/></Link></article>)}</div> : <div className="public-empty"><h3>Şu anda yayınlanmış açık pozisyon bulunmuyor.</h3><p>Yeni fırsatlar için genel başvuru formundan kendinizi tanıtabilirsiniz.</p><Link className="text-link" to={apply()}>Kendinizi tanıtın <ArrowUpRight size={17}/></Link></div>}
-      </section>
-    </div>
-  </>;
+      <figure className="career-hero-art">
+        <img src={story.image} width="1536" height="1024" alt="Dijital tasarımdan üretime uzanan süreci anlatan üç boyutlu konsept" fetchPriority="high" />
+        <figcaption><span>Fikir. Detay. Üretim.</span><small>Temsili tasarım</small></figcaption>
+      </figure>
+    </section>
+
+    <section className="career-opportunities wrap" id="acik-pozisyonlar" aria-labelledby="career-roles">
+      <div className="career-section-heading"><div><p className="career-eyebrow">Bir sonraki adımınız</p><h2 id="career-roles">Açık pozisyonlar{jobs.length > 0 && <span className="career-count">{jobs.length}</span>}</h2></div><p>Merakınıza ve deneyiminize uygun alanı bulun. Detayları inceleyin, kendinizi tanıtın.</p></div>
+      {isPending ? <p role="status" className="career-state">Pozisyonlar yükleniyor…</p>
+        : isError ? <div className="career-state" role="alert"><h3>Pozisyonlar şu anda yüklenemedi.</h3><p>Yeniden deneyebilir veya genel başvuruyla bize ulaşabilirsiniz.</p><button className="text-link" onClick={() => void refetch()}>Yeniden dene</button></div>
+        : jobs.length ? <div className="career-roles-list">{jobs.map((job, index) => <article className="career-role" key={job.id}>
+          <span className="career-role-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <div className="career-role-main"><p className="career-eyebrow">{job.department}</p><h3>{job.title_tr}</h3>{job.summary_tr && <p>{job.summary_tr}</p>}
+            <div className="career-role-meta">{[job.location, job.employment_type, job.level].filter(Boolean).map((item, i) => <span key={i}>{item}</span>)}</div>
+            {(job.description_tr || job.requirements_tr) && <details><summary>Pozisyonu tanıyın <Plus size={18} aria-hidden="true" /></summary><div className="career-role-detail">{job.description_tr && <div dangerouslySetInnerHTML={{__html: safeHtml(job.description_tr)}} />}{job.requirements_tr && <><h4>Bu rolde neler arıyoruz?</h4><div dangerouslySetInnerHTML={{__html: safeHtml(job.requirements_tr)}} /></>}</div></details>}
+          </div>
+          <Link className="career-apply" aria-label={`${job.title_tr} pozisyonuna başvur`} to={apply(job.title_tr)}>Başvur <ArrowUpRight size={20} aria-hidden="true" /></Link>
+        </article>)}</div>
+        : <div className="career-state"><h3>Şu anda yayınlanmış açık pozisyon bulunmuyor.</h3><p>Doğru fırsat henüz burada olmayabilir. Genel başvuruyla deneyiminizi ve ilgi alanlarınızı paylaşabilirsiniz.</p></div>}
+    </section>
+
+    <section className="career-invitations wrap" aria-label="Başvuru seçenekleri">
+      <article className="career-invitation"><p className="career-eyebrow">Yeteneğinize yer açalım</p><h2>Sizin alanınız<br />henüz listede değil mi?</h2><p>Kendinizi, ilgi alanlarınızı ve çalışmalarınızı anlatın. Bir sonraki ihtiyaçta nereden başlayacağımızı bilelim.</p><Link className="brand-button" to={apply()}>Genel başvuru <ArrowUpRight size={18} aria-hidden="true" /></Link></article>
+      {machineOps && <article className="career-invitation career-partnership"><p className="career-eyebrow">Üretimde iş birliği</p><h2>Makineniz var.<br />Birlikte ne üretebiliriz?</h2><p>Yazıcınızın veya tarayıcınızın kapasitesini paylaşın. Üretim kapsamını ve çalışma koşullarını birlikte değerlendirelim.</p><Link className="text-link" to={'/kariyer/makine-isletim' + query}>İş birliğini konuşalım <ArrowUpRight size={18} aria-hidden="true" /></Link></article>}
+    </section>
+  </div>;
 }

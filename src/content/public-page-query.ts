@@ -8,6 +8,10 @@ export function publicPageQuery(tenant:Tenant|null,path:string) {
     const {default:faqs}=await import('./brand-faq.json');
     return (faqs[tenant!.slug as keyof typeof faqs]||[]).map(([question_tr,answer_tr],i)=>({id:String(i),question_tr,answer_tr,category:'Üretim süreci'}));
   }
+  if(demoMode && path==='/kariyer') {
+    const {default:roles}=await import('./career-roles.json');
+    return (roles[tenant!.slug as keyof typeof roles]||[]).map(role=>({...role,id:tenant!.slug+'-'+role.slug}));
+  }
   if(demoMode)return path.startsWith('/blog/')||path.startsWith('/portfoy/')||isLegalPath(path)?null:[];
   const db=await getSupabase(),id=tenant!.id,now=new Date().toISOString();
   const result=path==='/blog'? await db.from('blog_posts').select('slug,title,excerpt,title_en,excerpt_en,cover_image_url,published_at').eq('tenant_id',id).eq('published',true).or(`published_at.is.null,published_at.lte.${now}`).order('published_at',{ascending:false})

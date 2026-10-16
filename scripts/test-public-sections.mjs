@@ -16,6 +16,19 @@ try {
   page.setDefaultTimeout(15000);page.setDefaultNavigationTimeout(20000);
   const q=`?tenant=${brand}&theme=${theme}`,visit=async path=>{console.log('VISIT',brand,theme,width,path);await page.goto('http://127.0.0.1:8091'+path+q,{waitUntil:'domcontentloaded'});await page.locator('main h1').waitFor();};
   const fits=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${brand}/${theme}/${width}: horizontal overflow`);
+  const aligned=async()=>{
+   const result=await page.evaluate(()=>{
+    const logo=document.querySelector('.product-wordmark').getBoundingClientRect();
+    const quote=document.querySelector('.product-quote').getBoundingClientRect();
+    const edges=[...document.querySelectorAll('main .wrap,main .brand-inner,main .container-page,.brand-footer')].filter(el=>el.getBoundingClientRect().width>0).map(el=>{
+     const rect=el.getBoundingClientRect(),style=getComputedStyle(el);
+     return {className:el.className,left:rect.left+parseFloat(style.paddingLeft),right:rect.right-parseFloat(style.paddingRight)};
+    });
+    return {left:logo.left,right:quote.right,edges};
+   });
+   assert.ok(result.edges.length,'page must expose a content container');
+   for(const edge of result.edges){assert.ok(Math.abs(edge.left-result.left)<2,JSON.stringify({brand,theme,width,side:'left',edge,result}));assert.ok(Math.abs(edge.right-result.right)<2,JSON.stringify({brand,theme,width,side:'right',edge,result}));}
+  };
   await visit('/');await page.locator('.home-discovery').waitFor();
   await page.locator('.sector-discovery nav a').nth(7).waitFor();assert.equal(await page.locator('.sector-discovery nav a').count(),8);
   for(const path of ['/kariyer','/portfoy','/sss'])assert.ok(await page.locator(`.discover-paths a[href="${path+q}"]`).count());
@@ -27,17 +40,39 @@ try {
    assert.equal(await page.getByRole('button',{name:'3D animasyonu oynat'}).getAttribute('aria-pressed'),'true');
    await page.screenshot({path:`${out}/${brand}-hero-${width}.png`});
   }
-  await fits();
+  await fits();await aligned();
   await visit('/sss');await page.locator('.public-faq-list details').first().waitFor();
   assert.equal(await page.locator('.public-faq-list details').count(),8);
   await page.locator('.public-faq-list summary').first().click();assert.ok(await page.locator('.public-faq-list details p').first().isVisible());
   await page.getByRole('searchbox').fill('ZZZ-no-matching-question');assert.equal(await page.locator('.public-faq-list details').count(),0);
-  await page.getByRole('searchbox').fill('');assert.equal(await page.locator('.public-faq-list details').count(),8);await fits();
+  await page.getByRole('searchbox').fill('');assert.equal(await page.locator('.public-faq-list details').count(),8);await fits();await aligned();
   if(brand==='3dyanimda'&&theme==='editorial')await page.screenshot({path:`${out}/faq-${width}.png`});
-  await visit('/kariyer');await page.getByText('Şu anda yayınlanmış açık pozisyon bulunmuyor.').waitFor();
-  await page.getByRole('link',{name:'Genel başvuru',exact:true}).click();await page.waitForURL('**/kariyer/is-basvurusu'+q);
-  await page.getByRole('combobox').filter({hasText:'Genel Başvuru'}).waitFor();await fits();
-  await visit('/portfoy');await page.getByText('Proje seçkimiz hazırlanıyor.').waitFor();assert.ok(await page.getByText('Temsili tasarım',{exact:true}).count());await fits();
+  await visit('/kariyer');await page.locator('.career-role').nth(2).waitFor();assert.equal(await page.locator('.career-role').count(),3);await fits();await aligned();
+  const position=await page.locator('.career-role h3').first().innerText();
+  await page.locator('.career-role summary').first().click();assert.ok(await page.locator('.career-role-detail').first().isVisible());
+  if(theme==='editorial')await page.screenshot({path:`${out}/${brand}-career-${width}.png`,fullPage:true});
+  await page.locator('.career-apply').first().click();await page.waitForURL('**/kariyer/is-basvurusu?**');
+  await page.waitForFunction(value=>document.querySelector('select[id]')?.value===value,position);
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();assert.ok(await page.getByRole('heading',{name:'Tanışalım',exact:true}).isVisible());
+  await page.getByLabel('Ad soyad *',{exact:true}).fill('Örnek Aday');await page.getByLabel('E-posta *',{exact:true}).fill('preview@example.test');
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();await page.getByRole('heading',{name:'Deneyiminiz',exact:true}).waitFor();
+  await page.getByLabel('Kendinizden bahsedin').fill('Tasarımdan üretime katkı sağlamak istiyorum.');
+  await page.getByRole('button',{name:'Geri',exact:true}).click();assert.equal(await page.getByLabel('Ad soyad *',{exact:true}).inputValue(),'Örnek Aday');
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();assert.equal(await page.getByLabel('Kendinizden bahsedin').inputValue(),'Tasarımdan üretime katkı sağlamak istiyorum.');
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();await page.getByRole('heading',{name:'Son bir kontrol',exact:true}).waitFor();
+  assert.equal(await page.locator('.career-review').getByText(position,{exact:true}).count(),1);
+  await page.getByRole('button',{name:'Başvuruyu gönder',exact:true}).click();assert.equal(await page.locator('.career-success').count(),0);
+  await page.locator('.career-consent input').check();await page.getByRole('button',{name:'Başvuruyu gönder',exact:true}).click();
+  await page.getByText('Tasarım önizlemesindesiniz. Başvurunuz gönderilmedi.').waitFor();await fits();await aligned();
+  if(theme==='editorial')await page.screenshot({path:`${out}/${brand}-application-${width}.png`,fullPage:true});
+  await visit('/kariyer/makine-isletim');await page.getByLabel('Ad soyad *',{exact:true}).fill('Örnek Üretici');await page.getByLabel('E-posta *',{exact:true}).fill('preview@example.test');
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();await page.getByRole('heading',{name:'Ekipmanınız',exact:true}).waitFor();
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();assert.ok(await page.getByRole('heading',{name:'Ekipmanınız',exact:true}).isVisible());
+  await page.getByLabel('Ekipman tipi *').selectOption('FDM (Filament)');await page.getByLabel('Marka *',{exact:true}).fill('Test');await page.getByLabel('Model *',{exact:true}).fill('Test Model');
+  await page.getByRole('button',{name:'Devam et',exact:true}).click();await page.getByRole('heading',{name:'İş birliği',exact:true}).waitFor();
+  await page.locator('.career-consent input').check();await page.getByRole('button',{name:'İş birliği talebini gönder',exact:true}).click();await page.getByText('Tasarım önizlemesindesiniz. Talebiniz gönderilmedi.').waitFor();await fits();await aligned();
+  for(const path of ['/3d-baski','/sektorler','/iletisim','/teklif-al','/araclar','/yasal']) {await visit(path);await fits();await aligned();}
+  await visit('/portfoy');await page.getByText('Proje seçkimiz hazırlanıyor.').waitFor();assert.ok(await page.getByText('Temsili tasarım',{exact:true}).count());await fits();await aligned();
   await visit('/portfoy/missing-project');await page.getByText('Bu proje yayında değil.').waitFor();
   assert.ok((await page.locator('meta[name="robots"]').getAttribute('content')).includes('noindex'));
   cases.push({brand,theme,width,result:'pass'});await writeFile(`${out}/report.json`,JSON.stringify({cases,errors,production:false},null,2)+'\n');console.log(`PUBLIC_SECTIONS_PASS ${brand}/${theme}/${width}`);await page.close();
