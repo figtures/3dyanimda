@@ -35,7 +35,7 @@ const AdminServicesCards = () => {
   const [saving, setSaving] = useState(false);
   const [picker, setPicker] = useState<string | null>(null);
 
-  useEffect(() => { refreshSiteSettings(); }, []);
+  useEffect(() => { refreshSiteSettings().catch(() => toast({ title: "Ayarlar yüklenemedi", variant: "destructive" })); }, []);
   useEffect(() => {
     const stored = settings["services_cards"];
     if (Array.isArray(stored) && stored.length) setCards(stored as ServiceCard[]);

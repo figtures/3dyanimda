@@ -9,6 +9,7 @@ import catalog from "@/brands/catalog.json";
 import { canonicalPath, indexRobots, pageGraph, pageNoindex } from "@/lib/search";
 import { socialImage } from "@/lib/social-meta";
 import { composeSchemaGraph } from "@/lib/schema-graph";
+import { resolveBusinessProfile } from "@/lib/business-profile";
 interface SeoProps {
   title: string;
   description: string;
@@ -38,10 +39,11 @@ export const Seo = ({
   const { tenant } = useTenant();
   const override = useSeoOverride(path);
   const settings = useSiteSettings();
-  const verified = settings.verified_business_identity || {};
-  const name = tenant?.name || "3D üretim";
   const domain = tenant?.custom_domain || tenant?.domain;
   const base = domain ? `https://${domain}` : window.location.origin;
+  const brand = catalog.find((b) => b.slug === tenant?.slug) ?? catalog[0];
+  const business = resolveBusinessProfile(settings, { name: tenant?.name || brand.name, origin: base });
+  const name = business.name;
   const url = base + canonicalPath(path);
   const effectiveTitle = (override?.title || title).replace(
     /3D Yanında/g,
@@ -56,12 +58,11 @@ export const Seo = ({
   const favicon=brandAsset(tenant?.slug,'favicon',settings);
   const appleIcon=brandAsset(tenant?.slug,'apple_touch_icon',settings);
   const og = share.url;
-  const brand = catalog.find((b) => b.slug === tenant?.slug);
-  const identity = businessGraph({ name, origin: base, description: brand?.description,
-    logo: brandAsset(tenant?.slug,'organization_logo',settings).url, email: verified.email, telephone: verified.telephone,
-    sameAs: verified.sameAs, openingHoursSpecification: verified.openingHoursSpecification,
-    address: verified.address,
-    geo: verified.geo,
+  const identity = businessGraph({ name, origin: base, description: business.description || undefined,
+    logo: brandAsset(tenant?.slug,'organization_logo',settings).url, email: business.email, telephone: business.phone,
+    sameAs: business.sameAs, hasMap: business.googleBusinessUrl, openingHoursSpecification: business.openingHoursSpecification,
+    address: business.address,
+    geo: business.geo,
   });
   // Legacy schemas with source-company identity are excluded, not published under the new brand.
   const schemas = (

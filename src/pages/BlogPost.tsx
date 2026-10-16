@@ -7,7 +7,7 @@ import { supabase } from "@/lib/supabase";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { Prose } from "@/components/site/Prose";
-import { articleSchema, breadcrumbSchema, orgSchema } from "@/lib/seo-schema";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { ArrowUpRight, Tag } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { resolveMediaUrl } from "@/lib/media";
@@ -37,7 +37,6 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
         type="article"
         keywords={(post.tags ?? []).join(", ")}
         jsonLd={[
-          orgSchema(),
           articleSchema({
             title,
             description: excerpt || title,

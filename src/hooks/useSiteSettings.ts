@@ -17,7 +17,8 @@ async function load(id: string): Promise<Settings> {
     .from("site_settings")
     .select("key, value")
     .eq("tenant_id", id);
-  if (error || !data) return {};
+  if (error) throw error;
+  if (!data) throw new Error("Site ayarları yüklenemedi.");
   return Object.fromEntries(data.map((row) => [row.key, row.value]));
 }
 export function useSiteSettings() {
@@ -43,10 +44,12 @@ export function useSiteSettings() {
           id,
           load(id).then((value) => {
             cache.set(id, value);
-            pending.delete(id);
             listeners.forEach((fn) => fn(id, value));
             return value;
-          }),
+          }).catch(() => {
+            // Background loading must not erase a known-good snapshot or reject unobserved.
+            return cache.get(id) ?? {};
+          }).finally(() => pending.delete(id)),
         );
     }
     return () => {
@@ -56,12 +59,18 @@ export function useSiteSettings() {
   }, [id]);
   return settings;
 }
-export async function refreshSiteSettings() {
-  const id = getTenantId();
-  if (!id) return;
+async function refreshForTenant(id: string): Promise<Settings> {
+  // Publish only a successful response. A failed refresh leaves the last good cache intact.
   const value = await load(id);
   cache.set(id, value);
   listeners.forEach((fn) => fn(id, value));
+  return value;
+}
+export async function refreshSiteSettings(expectedTenantId?: string): Promise<Settings> {
+  const id = getTenantId();
+  if (!id) throw new Error("Tenant not resolved");
+  if (expectedTenantId && expectedTenantId !== id) throw new Error("Marka değişti. Lütfen tekrar deneyin.");
+  return refreshForTenant(id);
 }
 export async function setSiteSetting(key: string, value: any, expectedTenantId?: string) {
   const id = getTenantId();
@@ -74,7 +83,7 @@ export async function setSiteSetting(key: string, value: any, expectedTenantId?:
       { onConflict: "tenant_id,key" },
     );
   if (error) throw error;
-  await refreshSiteSettings();
+  await refreshForTenant(id);
 }
 
 /** Pick a localized value from an object that may carry _tr/_en suffixes. Returns fallback when empty. */
