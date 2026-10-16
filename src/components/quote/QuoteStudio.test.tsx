@@ -11,7 +11,7 @@ vi.mock('@/lib/supabase', () => ({ demoMode: false, supabase: { from: (table: st
   const chain = { select: () => chain, eq: (key: string, value: unknown) => { api.filters(table,key,value); return chain; }, order: () => chain, then: (resolve: (value: unknown) => unknown, reject: (error: unknown) => unknown) => Promise.resolve(result()).then(resolve,reject) };
   return chain;
 } } }));
-vi.mock('./StlViewer', () => ({ default: ({onMetrics}: {onMetrics: (metrics: unknown) => void}) => <button onClick={() => onMetrics({volumeCm3: 100, bboxCm: {x:10,y:5,z:2}, triangles:12})}>Modeli ölç</button> }));
+vi.mock('./StlViewer', () => ({ default: ({onMetrics}: {onMetrics: (metrics: unknown) => void}) => <button onClick={() => onMetrics({volumeCm3: 100, bboxCm: {x:10,y:5,z:2}, triangles:12,parts:1,format:"STL",unitAssumed:true,closed:true})}>Modeli ölç</button> }));
 import QuoteStudio from './QuoteStudio';
 afterEach(cleanup);
 beforeEach(() => { vi.clearAllMocks(); api.pricingError = false; api.materialError = false; api.campaigns = []; });

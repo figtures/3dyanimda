@@ -180,7 +180,7 @@ export default function QuoteStudio({
   const isFdm = selectedTechnology === "FDM";
   const price = useMemo(
     () =>
-      service === "3D Baskı" && metrics && material && pricing && isFdm && material.pricePerGram > 0 && finishes.length === 0 && colorPreference !== "Çok renkli"
+      service === "3D Baskı" && metrics && metrics.closed !== false && material && pricing && isFdm && material.pricePerGram > 0 && finishes.length === 0 && colorPreference !== "Çok renkli"
         ? computeEstimate(
             metrics.volumeCm3,
             material,
@@ -233,7 +233,7 @@ export default function QuoteStudio({
             ].join(" · ")
           : "Tarama / modelleme kapsamı teknik inceleme ile belirlenecek.",
         metrics
-          ? `STL (mm varsayımı): ${metrics.bboxCm.x.toFixed(2)} × ${metrics.bboxCm.y.toFixed(2)} × ${metrics.bboxCm.z.toFixed(2)} cm; hacim ${metrics.volumeCm3.toFixed(2)} cm³`
+          ? `${metrics.format || "STL"}${metrics.unitAssumed ? " (mm varsayımı)" : ""}: ${metrics.bboxCm.x.toFixed(2)} × ${metrics.bboxCm.y.toFixed(2)} × ${metrics.bboxCm.z.toFixed(2)} cm; ${metrics.closed === false ? "açık yüzey — hacimle fiyatlandırılmaz" : `hacim ${metrics.volumeCm3.toFixed(2)} cm³`}`
           : "Otomatik ölçüm yok.",
         price
           ? `Müşteri tarafı ön tahmin (kesin teklif değildir): ${fmtTRY(price.total - discount)}`
@@ -293,13 +293,13 @@ export default function QuoteStudio({
             <strong>3D STUDIO</strong>
             <span>MODEL ÖNİZLEME</span>
           </header>
-          {file?.name.toLowerCase().endsWith(".stl") ? (
+          {file ? (
             <Suspense
               fallback={<div className="studio-empty">Studio açılıyor…</div>}
             >
               <Viewer
                 file={file}
-                color={color}
+                color={colorPreference === "Birlikte belirleyelim" || colorPreference === "Çok renkli" ? undefined : color}
                 onMetrics={setMetrics}
                 className="studio-model-viewer"
               />
@@ -307,11 +307,9 @@ export default function QuoteStudio({
           ) : (
             <div className="studio-empty">
               <Box size={65} strokeWidth={1} />
-              <strong>{file ? file.name : "Modelinizi buraya bırakın."}</strong>
+              <strong>Modelinizi buraya bırakın.</strong>
               <p>
-                {file
-                  ? "Bu format teknik incelemeye iletilir. Etkileşimli önizleme ve hacim hesabı STL dosyalarında kullanılabilir."
-                  : "Döndürün, yakınlaştırın ve boyutları inceleyin. Dosyanız yoksa talebinizi aşağıda anlatın."}
+                STL, OBJ, 3MF, STEP/STP ve IGES/IGS dosyalarını döndürün, yakınlaştırın ve boyutlarını inceleyin.
               </p>
             </div>
           )}
@@ -345,13 +343,13 @@ export default function QuoteStudio({
               {(metrics.bboxCm.y * 10).toFixed(1)} ×{" "}
               {(metrics.bboxCm.z * 10).toFixed(1)} mm
             </span>
-            <span>{metrics.volumeCm3.toFixed(2)} cm³</span>
+            <span>{metrics.closed === false ? "Açık yüzey" : `${metrics.volumeCm3.toFixed(2)} cm³`}</span>
+            <span>{metrics.format} · {metrics.parts} parça</span>
             <span>{metrics.triangles.toLocaleString("tr-TR")} üçgen</span>
           </div>
         )}
         <p className="text-xs text-slate-500 mt-3">
-          STL birimi milimetre kabul edilir. Ölçüleri kontrol edin. Önizleme,
-          üretilebilirlik veya kapalı yüzey doğrulaması değildir.
+          STL ve OBJ için mm varsayılır; 3MF, STEP ve IGES birimleri dosyadan okunur. Ölçüleri kontrol edin. Önizleme üretilebilirlik onayı değildir.
         </p>
         {error && (
           <p role="alert" className="form-error">
@@ -469,7 +467,7 @@ export default function QuoteStudio({
                 ? "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır."
                 : !material || !isFdm || !pricing || material.pricePerGram <= 0 || material.density <= 0 || finishes.length > 0 || colorPreference === "Çok renkli"
                   ? "Bu tercihler için dosya ve üretim kapsamını inceleyip size özel teklif hazırlayacağız."
-                  : "Ön hesaplama için geçerli bir STL modeli yükleyin."}
+                  : metrics?.closed === false ? "Model açık yüzey içeriyor; fiyat teknik incelemeyle belirlenir." : "Ön hesaplama için kapalı yüzeyli bir 3D model yükleyin."}
             </p>
           )}
         </div>

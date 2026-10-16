@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "1bd69b3f5adc842123df33296e9484e05e53d8fc349d99c30ca289c609eada87",
-      "bytes": 7294
+      "sha256": "1ea6cbeb320636a9abf8a4bd153e936ed980f9bd49ffc427c1c60e4d1db25b0c",
+      "bytes": 7381
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -303,8 +303,8 @@
     },
     {
       "path": "scripts/cloudflare/config.test.mjs",
-      "sha256": "15d30bb3ea427ae6f1ecf4800493ae3ac7713b7dbe859094e3e20333cf5c5816",
-      "bytes": 2860
+      "sha256": "032512574202b9f698c3b10713f4165b2950b9167530372044c9372443d6a67c",
+      "bytes": 3860
     },
     {
       "path": "scripts/export-sites.mjs",
@@ -778,8 +778,8 @@
     },
     {
       "path": "src/pages/QuoteRequest.tsx",
-      "sha256": "bab3190de463208c25e6b7aca2b1aa0066d00ccd0ddad6c9159ddc2a1a6b5745",
-      "bytes": 14788
+      "sha256": "306aba8d1175c2f15b0ef239964e73c7ee6e73c3f84c716d48111ae6645a5fc9",
+      "bytes": 14830
     },
     {
       "path": "src/pages/career/CareerHub.tsx",
@@ -1069,7 +1069,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-16T02:26:11.802Z",
+  "checksumsRefreshedAt": "2026-10-16T02:43:39.278Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

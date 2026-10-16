@@ -1,0 +1,39 @@
+{
+  "result": "pass",
+  "kind": "bounded multi-format quote preview and Cloudflare configuration source review",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-16",
+  "integratedUpstreamCommit": "4ea6fb54111a8c9c6b8c753a19789502a29b1e3c",
+  "previousSourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
+  "sourceHash": "3ff72e984a44aa5ca7506e3f0141e1f8d8bc70ea075d32227943c0ed7b8c086c",
+  "sourceFileCount": 558,
+  "changes": [
+    "Interactive STL, OBJ, 3MF, STEP/STP and IGES/IGS preview in the shared quote workspace",
+    "Bounded archive/XML parsing, per-file disposable worker, abort/timeout and lazy locally served CAD WASM",
+    "3MF build transforms, production-extension part references, units and base/vertex colors; CAD unit conversion",
+    "Open surfaces remain viewable without automatic volume-based pricing",
+    "Explicit wasm-unsafe-eval CSP permission without JavaScript unsafe-eval; dependency license notices",
+    "Per-brand public Cloudflare defaults when build variables are missing; safe origin normalization and cross-brand domain rejection",
+    "Preserves merged admin-managed business identity changes"
+  ],
+  "validation": {
+    "typescript": "pass",
+    "unitTests": 204,
+    "unitTestFiles": 34,
+    "productionBuild": "pass",
+    "releaseContracts": 66,
+    "dependencyAudit": {
+      "knownVulnerabilities": 0
+    },
+    "localBrowserQA": false,
+    "remoteBrowserRegression": "56 file-format/brand/viewport cases plus file replacement/corruption checks implemented; awaiting GitHub Actions execution"
+  },
+  "carryForward": "Historical editorial, asset, SEO and admin-business identity evidence retain their original scope and dates. No new full-route or human review is claimed.",
+  "limitations": [
+    "3MF texture images and external OBJ/MTL files are not loaded; geometry and supported base colors remain viewable.",
+    "Controls inspect the model; original CAD geometry is not edited.",
+    "20 MB input, 500000 triangles, 2000 parts, 45 second parsing limit. STL/OBJ units are assumed millimetres.",
+    "Business-domain rollout and real browser execution are verified separately."
+  ]
+}

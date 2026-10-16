@@ -1,6 +1,6 @@
 export const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com",
+  "script-src 'self' 'wasm-unsafe-eval' https://www.googletagmanager.com https://static.cloudflareinsights.com",
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",

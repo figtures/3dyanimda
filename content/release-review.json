@@ -10,8 +10,8 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
-  "sourceFileCount": 546,
+  "sourceHash": "3ff72e984a44aa5ca7506e3f0141e1f8d8bc70ea075d32227943c0ed7b8c086c",
+  "sourceFileCount": 558,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/business-profile-review-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/model-formats-review-2026-10-16.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/business-profile-review-2026-10-16.json",
+    "latestSourceSnapshot": "docs/audits/model-formats-review-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
     "availableThemes": 4,
     "themeCoverageNote": "Four themes covered by current quote (32), homepage (64) and navigation (64) browser cases; historical all-route evidence retains its original dates.",
@@ -231,6 +231,10 @@
     {
       "file": "docs/audits/business-profile-review-2026-10-16.json",
       "sha256": "785933302ea62febd08b0a4f2480e67ad4ac1e53503f236d2cb09b50a3867a98"
+    },
+    {
+      "file": "docs/audits/model-formats-review-2026-10-16.json",
+      "sha256": "205ad24c4918b06a6dbecf62ecdc24c3c6f4c27bebe175d61efbe6a8460e658a"
     }
   ],
   "limitations": [
@@ -245,7 +249,8 @@
     "16 October bounded security and quote-flow review: see security-quote-review-2026-10-16.json. Native leaked-password protection needs a supported Supabase plan.",
     "16 October floating WhatsApp delta has source/configuration/type/build review; no new full-route browser run is claimed.",
     "16 October persistent quote workspace/control-spacing delta has source/type/unit/build review; fresh browser execution is tracked separately in CI.",
-    "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed."
+    "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed.",
+    "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

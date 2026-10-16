@@ -1,66 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import { Minus, Plus, RotateCcw, Box } from "lucide-react";
 import * as THREE from "three";
-import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-export type StlMetrics = {
-  volumeCm3: number; // gerçek mesh hacmi (cm³)
-  bboxCm: { x: number; y: number; z: number };
-  surfaceCm2: number;
-  triangles: number;
-};
-
-type Props = {
-  file: File | null;
-  color?: string; // hex
-  onMetrics?: (m: StlMetrics) => void;
-  className?: string;
-};
-
-/** Mesh hacmi — signed tetrahedron toplamı. Birim: input mm ise mm³ döner. */
-function computeVolumeMM3(geometry: THREE.BufferGeometry): number {
-  const pos = geometry.attributes.position as THREE.BufferAttribute;
-  let vol = 0;
-  const a = new THREE.Vector3(),
-    b = new THREE.Vector3(),
-    c = new THREE.Vector3();
-  for (let i = 0; i < pos.count; i += 3) {
-    a.fromBufferAttribute(pos, i);
-    b.fromBufferAttribute(pos, i + 1);
-    c.fromBufferAttribute(pos, i + 2);
-    vol += a.dot(b.clone().cross(c)) / 6;
-  }
-  return Math.abs(vol);
-}
-
-function computeSurfaceMM2(geometry: THREE.BufferGeometry): number {
-  const pos = geometry.attributes.position as THREE.BufferAttribute;
-  let area = 0;
-  const a = new THREE.Vector3(),
-    b = new THREE.Vector3(),
-    c = new THREE.Vector3();
-  const ab = new THREE.Vector3(),
-    ac = new THREE.Vector3();
-  for (let i = 0; i < pos.count; i += 3) {
-    a.fromBufferAttribute(pos, i);
-    b.fromBufferAttribute(pos, i + 1);
-    c.fromBufferAttribute(pos, i + 2);
-    ab.subVectors(b, a);
-    ac.subVectors(c, a);
-    area += ab.cross(ac).length() / 2;
-  }
-  return area;
+export type { ModelMetrics as StlMetrics } from "@/lib/model-import/types";
+import type { ModelMetrics } from "@/lib/model-import/types";
+import { importModel } from "@/lib/model-import/client";
+type Props = { file:File | null; color?:string; onMetrics?:(m:ModelMetrics | null)=>void; className?:string };
+function disposeModel(group:THREE.Group) {
+  group.traverse((node) => {
+    if (!(node instanceof THREE.Mesh)) return;
+    node.geometry.dispose();
+    for (const material of Array.isArray(node.material) ? node.material : [node.material]) material.dispose();
+  });
 }
 
 export const StlViewer = ({
   file,
-  color = "#3b82f6",
+  color,
   onMetrics,
   className,
 }: Props) => {
   const mountRef = useRef<HTMLDivElement>(null);
-  const meshRef = useRef<THREE.Mesh | null>(null);
+  const modelRef = useRef<THREE.Group | null>(null);
+  const colorRef = useRef(color);
+  colorRef.current = color;
+  const [warnings, setWarnings] = useState<string[]>([]);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
@@ -76,7 +41,9 @@ export const StlViewer = ({
     controls.update();
   }
   useEffect(() => {
-    if (meshRef.current) (meshRef.current.material as THREE.MeshStandardMaterial).wireframe = wireframe;
+    modelRef.current?.traverse(node => {
+      if (node instanceof THREE.Mesh) (node.material as THREE.MeshStandardMaterial).wireframe = wireframe;
+    });
   }, [wireframe]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -186,151 +153,71 @@ export const StlViewer = ({
     };
   }, []);
 
-  // Update color
+  // Source colors are retained until a production color is explicitly selected.
   useEffect(() => {
-    const mesh = meshRef.current;
-    if (!mesh) return;
-    (mesh.material as THREE.MeshStandardMaterial).color.set(color);
+    modelRef.current?.traverse(node => {
+      if (!(node instanceof THREE.Mesh)) return;
+      const material=node.material as THREE.MeshStandardMaterial;
+      material.vertexColors=!color && !!node.geometry.getAttribute('color');
+      material.color.set(color || node.userData.sourceColor);
+      material.needsUpdate=true;
+    });
   }, [color]);
 
-  // Load file
   useEffect(() => {
-    const scene = sceneRef.current;
-    const camera = cameraRef.current;
-    const controls = controlsRef.current;
-    if (!scene || !camera || !controls) return;
-
-    // Remove existing
-    if (meshRef.current) {
-      scene.remove(meshRef.current);
-      meshRef.current.geometry.dispose();
-      (meshRef.current.material as THREE.Material).dispose();
-      meshRef.current = null;
-    }
-    if (!file) return;
-
-    setLoading(true);
-    setWireframe(false);
-    setError(null);
-    let cancelled = false;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      if (cancelled) return;
+    const scene=sceneRef.current, camera=cameraRef.current, controls=controlsRef.current;
+    if(!scene || !camera || !controls)return;
+    if(modelRef.current){scene.remove(modelRef.current);disposeModel(modelRef.current);modelRef.current=null;}
+    onMetrics?.(null);setWarnings([]);setWireframe(false);setError(null);
+    if(!file){setLoading(false);return;}
+    const abort=new AbortController();setLoading(true);
+    importModel(file,abort.signal).then(result=>{
+      if(abort.signal.aborted)return;
+      const group=new THREE.Group();
       try {
-        const buffer = e.target?.result as ArrayBuffer;
-        const loader = new STLLoader();
-        const geometry = loader.parse(buffer);
-        const positions = geometry.getAttribute("position");
-        if (
-          !positions ||
-          positions.count < 3 ||
-          positions.count % 3 !== 0 ||
-          !Array.from(positions.array).every(Number.isFinite)
-        ) {
-          geometry.dispose();
-          throw new Error("Invalid mesh");
+        for(const part of result.parts) {
+          const geometry=new THREE.BufferGeometry();
+          geometry.setAttribute('position',new THREE.BufferAttribute(part.positions,3));
+          if(part.colors)geometry.setAttribute('color',new THREE.BufferAttribute(part.colors,3));
+          geometry.computeVertexNormals();
+          const sourceColor=part.colors?'#ffffff':part.color?new THREE.Color(...part.color).getHexString():'#3b82f6';
+          const normalizedColor=typeof sourceColor==='string'&&!sourceColor.startsWith('#')?'#'+sourceColor:sourceColor;
+          const material=new THREE.MeshStandardMaterial({color:colorRef.current||normalizedColor,vertexColors:!colorRef.current&&!!part.colors,metalness:0.12,roughness:0.6,side:THREE.DoubleSide});
+          const mesh=new THREE.Mesh(geometry,material);mesh.name=part.name;mesh.userData.sourceColor=normalizedColor;
+          mesh.castShadow=true;mesh.receiveShadow=true;group.add(mesh);
         }
-        geometry.computeVertexNormals();
-        geometry.center();
-
-        const mat = new THREE.MeshStandardMaterial({
-          color: new THREE.Color(color),
-          metalness: 0.15,
-          roughness: 0.55,
-          flatShading: false,
-        });
-        const mesh = new THREE.Mesh(geometry, mat);
-        mesh.castShadow = true;
-        mesh.receiveShadow = true;
-
-        // Preserve file axes. Camera and ground use Z-up; never rotate the STL.
-
-        // Auto-fit
-        const box = new THREE.Box3().setFromObject(mesh);
-        const size = new THREE.Vector3();
-        box.getSize(size);
-        const center = new THREE.Vector3();
-        box.getCenter(center);
-        // Move so it sits on grid
-        mesh.position.sub(center);
-        mesh.position.z += size.z / 2;
-
-        scene.add(mesh);
-        meshRef.current = mesh;
-
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const dist = maxDim * 2.2 + 40;
-        camera.position.set(dist * 0.7, -dist, dist * 0.55);
-        controls.target.set(0, 0, size.z / 2);
-        controls.update();
-        controls.saveState();
-
-        // Metrics — STL units assumed mm
-        const volMM3 = computeVolumeMM3(geometry);
-        const surfMM2 = computeSurfaceMM2(geometry);
-        const metrics: StlMetrics = {
-          volumeCm3: volMM3 / 1000,
-          bboxCm: { x: size.x / 10, y: size.y / 10, z: size.z / 10 },
-          surfaceCm2: surfMM2 / 100,
-          triangles: geometry.attributes.position.count / 3,
-        };
-        // Keep dimensions in the original file axes.
-        const rawBox = new THREE.Box3().setFromBufferAttribute(
-          geometry.attributes.position as THREE.BufferAttribute,
-        );
-        const rawSize = new THREE.Vector3();
-        rawBox.getSize(rawSize);
-        metrics.bboxCm = {
-          x: rawSize.x / 10,
-          y: rawSize.y / 10,
-          z: rawSize.z / 10,
-        };
-
-        if (
-          !Number.isFinite(metrics.volumeCm3) ||
-          metrics.volumeCm3 <= 0 ||
-          !Object.values(metrics.bboxCm).every(
-            (v) => Number.isFinite(v) && v > 0,
-          )
-        )
-          throw new Error("Degenerate mesh");
-        onMetrics?.(metrics);
-      } catch (err) {
-        console.error(err);
-        setError(
-          "STL dosyası okunamadı. Dosyanın geçerli olduğundan emin olun.",
-        );
-      } finally {
-        setLoading(false);
-      }
-    };
-    reader.onerror = () => {
-      setError("Dosya okunamadı.");
-      setLoading(false);
-    };
-    reader.readAsArrayBuffer(file);
-    return () => {
-      cancelled = true;
-      if (reader.readyState === FileReader.LOADING) reader.abort();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [file]);
+        const box=new THREE.Box3().setFromObject(group),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());
+        group.position.set(-center.x,-center.y,-box.min.z);
+        scene.add(group);modelRef.current=group;
+        const maxDim=Math.max(size.x,size.y,size.z),dist=Math.max(maxDim*2.2,1);
+        camera.near=Math.max(dist/10000,0.001);camera.far=Math.max(dist*50,5000);camera.updateProjectionMatrix();
+        camera.position.set(dist*0.7,-dist,dist*0.55);
+        controls.minDistance=Math.max(maxDim*0.03,0.01);controls.maxDistance=Math.max(dist*10,100);
+        controls.target.set(0,0,size.z/2);controls.update();controls.saveState();
+        onMetrics?.(result.metrics);setWarnings(result.warnings);
+      } catch(error) {scene.remove(group);disposeModel(group);modelRef.current=null;throw error;}
+    }).catch(error=>{
+      if(!abort.signal.aborted){onMetrics?.(null);setError(error instanceof Error?error.message:'Model okunamadı.');}
+    }).finally(()=>{if(!abort.signal.aborted)setLoading(false);});
+    return ()=>abort.abort();
+  }, [file,onMetrics]);
 
   return (
-    <div className={`studio-viewer ${className || ""}`}>
+    <div className={`studio-viewer ${className || ""}`} data-model-state={loading ? "loading" : error ? "error" : modelRef.current ? "ready" : "empty"}>
       <div ref={mountRef} className="w-full h-full relative">
         {loading && (
           <div className="absolute inset-0 grid place-items-center text-xs font-mono uppercase tracking-widest text-cream/70 bg-accent-blue-deep/40 backdrop-blur-sm">
-            STL yükleniyor…
+            Model hazırlanıyor…
           </div>
         )}
         {error && (
-          <div className="absolute inset-0 grid place-items-center text-sm text-destructive p-6 text-center">
+          <div role="alert" className="absolute inset-0 grid place-items-center text-sm text-destructive p-6 text-center bg-white/95">
             {error}
           </div>
         )}
       </div>
-      {file && !loading && !error && <div className="studio-viewer-tools" role="group" aria-label="Model görünümü">
+      {warnings.length > 0 && <span className="studio-viewer-note" role="status">{warnings.join(" ")}</span>}
+      {file && modelRef.current && !loading && !error && <div className="studio-viewer-tools" role="group" aria-label="Model görünümü">
         <button type="button" onClick={() => zoom(0.8)} aria-label="Modeli yakınlaştır" title="Yakınlaştır"><Plus size={16}/></button>
         <button type="button" onClick={() => zoom(1.25)} aria-label="Modeli uzaklaştır" title="Uzaklaştır"><Minus size={16}/></button>
         <button type="button" onClick={() => controlsRef.current?.reset()} aria-label="Model görünümünü sıfırla" title="Görünümü sıfırla"><RotateCcw size={16}/></button>

@@ -9,7 +9,8 @@ test('CSP blocks inline script handlers, plugin content and framing', () => {
   assert.match(contentSecurityPolicy, /frame-ancestors 'none'/);
   assert.match(contentSecurityPolicy, /object-src 'none'/);
   const script = contentSecurityPolicy.split('; ').find(s => s.startsWith('script-src '));
-  assert.doesNotMatch(script, /unsafe-inline|unsafe-eval|\*/);
+  assert.match(script, /'wasm-unsafe-eval'/);
+  assert.doesNotMatch(script, /'unsafe-inline'|'unsafe-eval'|\*/);
 });
 test('public, admin, redirects and preview robots all get security headers', async () => {
   for (const url of ['https://3dyanimda.com/', 'https://3dyanimda.com/admin/reset-password', 'http://3dyanimda.com/', 'https://brand.workers.dev/robots.txt']) {
