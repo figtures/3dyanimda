@@ -9,9 +9,12 @@ const server=await createServer({server:{host:'127.0.0.1',port:8091}});await ser
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE,headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const cases=[],errors=[];let activePage;
 try {
- for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(const theme of ['industrial','industrialtwo','editorial','studio'])for(const width of [390,1440]) {
+ const brands=['3dyanimda','3dsanayi','maketyanimda','parcayanimda'].filter(brand=>!process.env.REVIEW_BRAND||process.env.REVIEW_BRAND===brand);
+ assert.ok(brands.length,'REVIEW_BRAND must name a registered brand');
+ for(const brand of brands)for(const theme of ['industrial','industrialtwo','editorial','studio'])for(const width of [390,1440]) {
   const page=await browser.newPage({viewport:{width,height:960},reducedMotion:'reduce'});activePage=page;page.on('pageerror',e=>errors.push(e.message));
-  const q=`?tenant=${brand}&theme=${theme}`,visit=async path=>{await page.goto('http://127.0.0.1:8091'+path+q);await page.locator('main h1').waitFor();};
+  page.setDefaultTimeout(15000);page.setDefaultNavigationTimeout(20000);
+  const q=`?tenant=${brand}&theme=${theme}`,visit=async path=>{console.log('VISIT',brand,theme,width,path);await page.goto('http://127.0.0.1:8091'+path+q,{waitUntil:'domcontentloaded'});await page.locator('main h1').waitFor();};
   const fits=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${brand}/${theme}/${width}: horizontal overflow`);
   await visit('/');await page.locator('.home-discovery').waitFor();
   await page.locator('.sector-discovery nav a').nth(7).waitFor();assert.equal(await page.locator('.sector-discovery nav a').count(),8);
@@ -37,7 +40,7 @@ try {
   await visit('/portfoy');await page.getByText('Proje seçkimiz hazırlanıyor.').waitFor();assert.ok(await page.getByText('Temsili tasarım',{exact:true}).count());await fits();
   await visit('/portfoy/missing-project');await page.getByText('Bu proje yayında değil.').waitFor();
   assert.ok((await page.locator('meta[name="robots"]').getAttribute('content')).includes('noindex'));
-  cases.push({brand,theme,width,result:'pass'});console.log(`PUBLIC_SECTIONS_PASS ${brand}/${theme}/${width}`);await page.close();
+  cases.push({brand,theme,width,result:'pass'});await writeFile(`${out}/report.json`,JSON.stringify({cases,errors,production:false},null,2)+'\n');console.log(`PUBLIC_SECTIONS_PASS ${brand}/${theme}/${width}`);await page.close();
  }
  assert.deepEqual(errors,[]);
 } catch(error) {if(activePage&&!activePage.isClosed()){await activePage.screenshot({path:`${out}/failure.png`});await writeFile(`${out}/failure.txt`,activePage.url()+'\n'+String(error)+'\n'+await activePage.locator('body').innerText());}throw error;}

@@ -10,8 +10,12 @@ permissions:
   contents: read
 jobs:
   browser-review:
+    strategy:
+      fail-fast: false
+      matrix:
+        brand: [3dyanimda, 3dsanayi, maketyanimda, parcayanimda]
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -25,9 +29,10 @@ jobs:
       - run: node scripts/test-public-sections.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
+          REVIEW_BRAND: ${{ matrix.brand }}
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: public-sections-${{ github.sha }}
+          name: public-sections-${{ matrix.brand }}-${{ github.sha }}
           path: /tmp/brand-menu-previews/public-sections/
           retention-days: 30
