@@ -1729,3 +1729,75 @@
 /* Readable secondary instructions on the warm industrial surfaces. */
 .theme-industrial .studio-empty p,
 .theme-industrial .quote-studio .text-slate-500 { color:#475b6d; }
+
+/* Editorial: readable type and open surfaces, without decorative rules. */
+.brand-site.theme-editorial :is(h1,h2,h3,h4,.brand-logo,.service-card-index > span:first-child) {
+  letter-spacing: 0;
+}
+.brand-site.theme-editorial :is(p,a,button,summary,small) { letter-spacing: normal; }
+.brand-site.theme-editorial :is(.brand-eyebrow,.theme-overline,.showcase-tag) { letter-spacing: .025em; }
+.brand-site.theme-editorial :is(.brand-header,.content-hero,.article-aside,.quote-aside,.service-card,.editorial-card,.service-card-index,.footer-directory,.footer-bottom) {
+  border: 0;
+  box-shadow: none;
+}
+.brand-site.theme-editorial :is(.article-aside,.quote-aside,.service-card,.editorial-card) { border-radius: 18px; }
+.brand-site.theme-editorial .content-hero { padding-bottom: 56px; }
+.brand-site.theme-editorial .content-article :is(h2,h3) { line-height: 1.35; }
+.brand-site.theme-editorial .home-flow { --home-space: clamp(72px,8vw,120px); }
+.brand-site.theme-editorial .home-flow :is(.split-heading h2,.showcase-heading h2,.process-light h2,.studio-band h2,.showcase-story h3,.knowledge-section h3,.application-list h3,.service-decision h3 button,.process-four h3) {
+  letter-spacing: 0;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.brand-site.theme-editorial .home-flow :is(.split-heading > p,.showcase-heading > p,.service-decision-copy p,.showcase-story p,.application-copy p,.process-four p,.knowledge-section details p) {
+  font-size: 16px;
+  line-height: 1.85;
+}
+.brand-site.theme-editorial .home-flow .section-heading { margin-bottom: 26px; }
+.brand-site.theme-editorial .home-flow .split-heading { gap: 48px; margin-bottom: 48px; }
+.brand-site.theme-editorial .home-flow .service-explorer { grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: clamp(32px,6vw,88px); }
+.brand-site.theme-editorial .home-flow .service-scene { border-radius: 24px; }
+.brand-site.theme-editorial .home-flow .service-scene img { height: clamp(380px,40vw,550px); }
+.brand-site.theme-editorial .home-flow .service-scene figcaption { border: 0; background: linear-gradient(transparent,#17191cdd); padding-top: 48px; }
+.brand-site.theme-editorial .home-flow .service-decision { border: 0; padding-inline: 18px; margin-block: 8px; border-radius: 16px; }
+.brand-site.theme-editorial .home-flow .service-decision[data-active=true] { background: var(--soft); }
+.brand-site.theme-editorial .home-flow .service-decision h3 button { font-size: clamp(23px,2.2vw,30px); padding-block: 21px; }
+.brand-site.theme-editorial .home-flow .service-decision-copy { padding-bottom: 28px; }
+.brand-site.theme-editorial .home-flow .service-decision-copy .text-link { border: 0; }
+.brand-site.theme-editorial .home-flow .showcase-section { background: #efebe4; }
+.brand-site.theme-editorial .home-flow .showcase-heading { margin-bottom: 48px; }
+.brand-site.theme-editorial .home-flow :is(.showcase-shell,.showcase-stage,.showcase-stage-top,.showcase-stage-bottom,.showcase-story) { border: 0; background: transparent; box-shadow: none; }
+.brand-site.theme-editorial .home-flow .showcase-story { padding: 28px 36px; }
+.brand-site.theme-editorial .home-flow .model-selector { gap: 16px; margin-top: 32px; }
+.brand-site.theme-editorial .home-flow .model-selector > button { border: 0; border-radius: 14px; padding: 18px; background: transparent; }
+.brand-site.theme-editorial .home-flow .model-selector > button[aria-pressed=true] { background: var(--surface); }
+.brand-site.theme-editorial .home-flow .selector-marker { display: none; }
+.brand-site.theme-editorial .home-flow .applications-art { border-radius: 24px; }
+.brand-site.theme-editorial .home-flow .application-list details { border: 0; padding: 6px 20px; border-radius: 16px; margin-bottom: 12px; }
+.brand-site.theme-editorial .home-flow .application-list details[open] { background: var(--soft); }
+.brand-site.theme-editorial .home-flow .process-light { border: 0; background: transparent; padding-block: 40px var(--home-space); }
+.brand-site.theme-editorial .home-flow .process-four { gap: 32px; margin-top: 44px; }
+.brand-site.theme-editorial .home-flow .process-four details { border: 0; padding-top: 0; }
+.brand-site.theme-editorial .home-flow .studio-band { padding-top: var(--home-space); padding-bottom: 52px; }
+.brand-site.theme-editorial .home-flow .studio-preview { border: 0; border-radius: 24px; background: #ffffff08; }
+.brand-site.theme-editorial .home-flow .studio-preview > div { border: 0; }
+.brand-site.theme-editorial .home-flow .engineering-teaser { border: 0; padding-top: 36px; margin-top: 44px; }
+.brand-site.theme-editorial .home-flow .knowledge-section .editorial-card { border: 0; padding: 12px 0; background: transparent; }
+.brand-site.theme-editorial .home-flow .knowledge-section .guide-number { font-size: 24px; letter-spacing: 0; color: var(--muted); }
+.brand-site.theme-editorial .home-flow .local-band { border: 0; padding-block: 12px var(--home-space); }
+@media (max-width:760px) {
+  .brand-site.theme-editorial .home-flow { --home-space: 68px; }
+  .brand-site.theme-editorial .home-flow .split-heading { gap: 20px; margin-bottom: 32px; }
+  .brand-site.theme-editorial .home-flow .service-explorer { grid-template-columns: 1fr; gap: 24px; }
+  .brand-site.theme-editorial .home-flow .service-scene img { height: 300px; }
+  .brand-site.theme-editorial .home-flow .service-decision { padding-inline: 16px; }
+  .brand-site.theme-editorial .home-flow .service-decision-copy { padding-left: 0; }
+  .brand-site.theme-editorial .home-flow .showcase-story { padding: 28px 0 8px; }
+  .brand-site.theme-editorial .home-flow .model-selector { gap: 8px; }
+  .brand-site.theme-editorial .home-flow .model-selector > button { padding: 12px 8px; }
+  .brand-site.theme-editorial .home-flow .application-list details { padding-inline: 14px; }
+  .brand-site.theme-editorial .home-flow .application-copy { padding: 0 0 22px; }
+  .brand-site.theme-editorial .home-flow .process-four { gap: 32px 22px; }
+  .brand-site.theme-editorial .home-flow .knowledge-section .editorial-card { padding: 24px 0; }
+  .brand-site.theme-editorial .home-flow .knowledge-section .guide-number { position: static; display: block; margin-bottom: 14px; }
+}

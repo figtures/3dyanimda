@@ -10,15 +10,22 @@ type Props = {
   label?: string;
   interactive?: boolean;
   fallback?: string;
+  animated?: boolean;
+  presentation?: boolean;
 };
 export default function PartScene({
   mode = "solid",
   model = "fixture",
   label = "Temsili 3D model",
   interactive = false,
+  animated = false,
+  presentation = false,
   fallback = "/brand/industrial/fixture.webp",
 }: Props) {
   const host = useRef<HTMLDivElement>(null);
+  const motion = useRef(animated);
+  const syncMotion = useRef<() => void>();
+  useEffect(() => { motion.current = animated; syncMotion.current?.(); }, [animated]);
   const actions = useRef<{
     reset: () => void;
     zoom: (factor: number) => void;
@@ -75,6 +82,34 @@ export default function PartScene({
       materials = new Set<THREE.Material>();
     let distance = 8;
     let visible = true;
+    let frame = 0;
+    let previousFrame = 0;
+    let loaded = false;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const animate = (time: number) => {
+      frame = 0;
+      if (disposed || !visible || !motion.current || document.hidden || reducedMotion.matches) return;
+      if (time - previousFrame >= 1000 / 30) {
+        const delta = Math.min((time - previousFrame) / 1000, 0.05);
+        previousFrame = time;
+        if (motion.current && loaded) {
+          pivot.rotation.y += delta * 0.18;
+          renderer.render(scene, camera);
+        }
+      }
+      frame = requestAnimationFrame(animate);
+    };
+    const syncAnimation = () => {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      if (presentation && loaded && motion.current && !disposed && visible && !document.hidden && !reducedMotion.matches) {
+        previousFrame = performance.now();
+        frame = requestAnimationFrame(animate);
+      }
+    };
+    syncMotion.current = syncAnimation;
+    document.addEventListener("visibilitychange", syncAnimation);
+    reducedMotion.addEventListener("change", syncAnimation);
     let observer: IntersectionObserver | undefined;
     const draw = () => {
       if (!disposed && visible) renderer.render(scene, camera);
@@ -206,7 +241,9 @@ export default function PartScene({
             });
           }
           pivot.add(root);
+          loaded = true;
           setStatus("ready");
+          syncAnimation();
           fit();
           draw();
         },
@@ -219,17 +256,22 @@ export default function PartScene({
     observer = new IntersectionObserver(
       (entries) => {
         visible = entries[0].isIntersecting;
+        syncAnimation();
         if (visible) {
           load();
           draw();
         }
       },
-      { rootMargin: "180px" },
+      { rootMargin: presentation ? "0px" : "180px" },
     );
     observer.observe(element);
     fit();
     return () => {
       disposed = true;
+      cancelAnimationFrame(frame);
+      syncMotion.current = undefined;
+      document.removeEventListener("visibilitychange", syncAnimation);
+      reducedMotion.removeEventListener("change", syncAnimation);
       actions.current = undefined;
       observer?.disconnect();
       resize.disconnect();
@@ -241,7 +283,7 @@ export default function PartScene({
       renderer.forceContextLoss();
       renderer.domElement.remove();
     };
-  }, [model, mode, interactive, attempt]);
+  }, [model, mode, interactive, attempt, presentation]);
   return (
     <div
       className={`model-view ${interactive ? "is-interactive" : ""}`}
@@ -261,7 +303,8 @@ export default function PartScene({
           }
         }}
       />
-      {status === "loading" && (
+      {status === "loading" && presentation && <img className="ev-poster" src={fallback} alt="" width="1536" height="1024" fetchPriority="high" />}
+      {status === "loading" && !presentation && (
         <div className="model-status" role="status">
           <span className="model-loader" />
           3D model hazırlanıyor

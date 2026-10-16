@@ -10,6 +10,7 @@ import { Plus, Trash2, Loader2, Save, X, Edit, Eye, EyeOff, ImagePlus } from "lu
 import { toast } from "sonner";
 import { MediaPicker } from "@/components/admin/MediaPicker";
 import { resolveMediaUrl } from "@/lib/media";
+import { getTenantId } from "@/lib/tenant";
 
 type Project = {
   id: string;
@@ -56,6 +57,7 @@ const AdminPortfolio = () => {
     const { data, error } = await supabase
       .from("portfolio_projects" as any)
       .select("*")
+      .eq("tenant_id", getTenantId()!)
       .order("sort_order", { ascending: true })
       .order("updated_at", { ascending: false });
     if (error) toast.error(error.message);
@@ -67,6 +69,8 @@ const AdminPortfolio = () => {
 
   const save = async () => {
     if (!editing) return;
+    const tenantId=getTenantId();
+    if (!tenantId) return toast.error("Marka bulunamadı. Sayfayı yeniden açın.");
     if (!editing.title_tr?.trim() || !editing.slug?.trim()) {
       toast.error("Başlık (TR) ve slug zorunlu");
       return;
@@ -90,8 +94,8 @@ const AdminPortfolio = () => {
       published_at: editing.published ? new Date().toISOString() : null,
     };
     const q = editing.id
-      ? supabase.from("portfolio_projects" as any).update(payload).eq("id", editing.id)
-      : supabase.from("portfolio_projects" as any).insert(payload);
+      ? supabase.from("portfolio_projects" as any).update(payload).eq("tenant_id", tenantId).eq("id", editing.id)
+      : supabase.from("portfolio_projects" as any).insert({...payload,tenant_id:tenantId});
     const { error } = await q;
     setSaving(false);
     if (error) return toast.error(error.message);

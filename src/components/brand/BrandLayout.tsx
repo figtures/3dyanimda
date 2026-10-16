@@ -18,6 +18,7 @@ import "@/brands/modern.css";
 import "@/themes/themes.css";
 import "@/themes/industrialtwo.css";
 import "./business-profile.css";
+import "./page-shell.css";
 import { BusinessProfileLinks } from "./BusinessProfileLinks";
 import { getSiteTheme, themeNames } from "@/themes/config";
 import GrowthAnalytics from "./GrowthAnalytics";
@@ -118,6 +119,9 @@ export function BrandLayout() {
               "Kurumsal",
               [
                 ["/hakkimizda", "Hakkımızda"],
+                ["/portfoy", "Portföy"],
+                ["/kariyer", "Kariyer ve iş birliği"],
+                ["/sss", "Sık sorulan sorular"],
                 ["/iletisim", "İletişim"],
                 ["/gizlilik-politikasi", "Gizlilik"],
                 ["/yasal", "Yasal bilgiler"],

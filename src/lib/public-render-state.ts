@@ -12,10 +12,15 @@ export type PublicRenderState = {
 /** Route-scoped snapshots never accumulate other pages during a multi-page export. */
 export function publicQueryForPath(key:readonly unknown[],tenantId:string,path:string){
  if(!Array.isArray(key)||key[1]!==tenantId)return false;
+ if(key[0]==='public-page') {
+  const sourcePath=['/kariyer/is-basvurusu','/kariyer/makine-isletim'].includes(path)?'/kariyer':path;
+  const allowed=['/blog','/sss','/portfoy','/kariyer','/yasal','/kvkk-aydinlatma-metni','/gizlilik-politikasi','/cerez-politikasi','/kullanim-kosullari','/basvuru-acik-riza-metni'].includes(sourcePath)||/^\/(blog|portfoy)\/[^/]+$/.test(sourcePath);
+  return key.length===3&&allowed&&key[2]===sourcePath;
+ }
  if(key[0]==='landing-page')return key[2]===path;
  if(key[0]!=='landing-pages')return false;
  if(key[2]==='related')return key[3]===path;
- const kinds:Record<string,string[]>={'/':['solution','guide'],'/hizmetler':['service'],'/sektorler':['sector'],'/cozumler':['solution'],'/malzemeler':['material'],'/rehber':['guide'],'/bolgeler':['location']};
+ const kinds:Record<string,string[]>={'/':['solution','guide','sector'],'/hizmetler':['service'],'/sektorler':['sector'],'/cozumler':['solution'],'/malzemeler':['material'],'/rehber':['guide'],'/bolgeler':['location']};
  return key[2]===false&&key[3]===false&&key[4]===false&&!!kinds[path]&&JSON.stringify(key[5])===JSON.stringify(kinds[path]);
 }
 /** Only explicit public query families may cross the HTML boundary. */
