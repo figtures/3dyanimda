@@ -116,7 +116,7 @@ const AdminContactInfo = () => {
           </div>
           <div className="flex items-center justify-between gap-3">
             <Label className="text-sm">Telefon butonu</Label>
-            <Switch checked={data.floating_phone !== false} onCheckedChange={(v) => setBool("floating_phone", v)} />
+            <Switch checked={data.floating_phone === true} onCheckedChange={(v) => setBool("floating_phone", v)} />
           </div>
         </div>
       </Card>

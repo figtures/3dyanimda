@@ -1,0 +1,12 @@
+.brand-site .floating-contact { position:fixed; right:max(20px,env(safe-area-inset-right)); bottom:calc(20px + env(safe-area-inset-bottom)); z-index:35; display:flex; flex-direction:column; gap:12px; }
+.brand-site .floating-contact > a { position:relative; display:grid; place-items:center; width:56px; height:56px; border-radius:50%; color:#fff; box-shadow:0 6px 24px #0003; border:2px solid #fff; transition:background .18s,transform .18s; }
+.brand-site .floating-whatsapp { background:#128c4a; }
+.brand-site .floating-whatsapp:hover { background:#0d713b; transform:translateY(-2px); }
+.brand-site .floating-phone { background:var(--dark,#172a22); }
+.brand-site .floating-contact > a:focus-visible { outline:3px solid var(--text,#172a22); outline-offset:4px; }
+.brand-site .floating-contact-label { position:absolute; right:calc(100% + 12px); top:50%; transform:translateY(-50%); padding:8px 12px; white-space:nowrap; border-radius:8px; background:#172a22; color:#fff; font-size:13px; line-height:1.4; opacity:0; visibility:hidden; pointer-events:none; }
+.brand-site .floating-contact > a:is(:hover,:focus-visible) .floating-contact-label { opacity:1; visibility:visible; }
+.brand-site:has([data-cookie-consent]) .floating-contact, .brand-site:has([role=dialog][data-state=open]) .floating-contact { visibility:hidden; }
+.brand-site .brand-footer { padding-bottom:max(96px,calc(80px + env(safe-area-inset-bottom))); }
+@media(max-width:600px) { .brand-site .floating-contact { right:max(16px,env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); } .brand-site .floating-contact > a { width:52px; height:52px; } }
+@media(prefers-reduced-motion:reduce) { .brand-site .floating-contact > a { transition:none; } .brand-site .floating-whatsapp:hover { transform:none; } }

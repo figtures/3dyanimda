@@ -17,6 +17,7 @@ import "@/themes/themes.css";
 import "@/themes/industrialtwo.css";
 import { getSiteTheme, themeNames } from "@/themes/config";
 import GrowthAnalytics from "./GrowthAnalytics";
+import { FloatingContactButtons } from "@/components/site/FloatingContactButtons";
 import { CookieConsent } from "@/components/site/CookieConsent";
 export function BrandLayout() {
   const brand = useBrand();
@@ -147,6 +148,7 @@ export function BrandLayout() {
           {import.meta.env.VITE_GA4_MEASUREMENT_ID && <button type="button" onClick={() => window.dispatchEvent(new Event("brand:privacy-settings"))}>Çerez tercihleri</button>}
         </div>
       </footer>
+      <FloatingContactButtons />
       <ScrollRestoration />
       {!preview && import.meta.env.VITE_GA4_MEASUREMENT_ID && <CookieConsent />}
     </div>

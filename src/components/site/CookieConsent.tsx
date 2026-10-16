@@ -74,7 +74,7 @@ export const CookieConsent = () => {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-5 pointer-events-none">
+    <div data-cookie-consent className="fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-5 pointer-events-none">
       <div className="mx-auto max-w-3xl pointer-events-auto rounded-2xl bg-card border border-border shadow-[0_30px_80px_-20px_hsl(222_60%_14%/0.35)] overflow-hidden">
         <div className="p-5 sm:p-6">
           <div className="flex items-start gap-4">
