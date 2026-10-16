@@ -29,7 +29,6 @@ export default function QuoteRequest() {
   const [step, setStep] = useState(1);
   const stepHeading = useRef<HTMLHeadingElement>(null);
   const workspace = useRef<HTMLDivElement>(null);
-  const [previewTarget, setPreviewTarget] = useState<HTMLDivElement | null>(null);
   function goToStep(next: number) {
     // Keep the document height stable when a shorter step replaces a longer one.
     // Focus remains accessible without moving the visitor's viewport.
@@ -164,8 +163,11 @@ export default function QuoteRequest() {
             <nav className="quote-steps" aria-label="Teklif adımları">
               {["Dosya & hizmet", "Üretim tercihleri", "İletişim & gönderim"].map((label, index) => <button type="button" key={label} aria-current={step === index + 1 ? "step" : undefined} onClick={() => goToStep(index + 1)}><span>{index + 1}</span>{label}</button>)}
             </nav>
-            <div className="quote-workspace" ref={workspace}>
-            <aside className="quote-preview" aria-label="Dosya çalışma alanı"><div ref={setPreviewTarget} /></aside>
+            <Suspense fallback={<p>3D Studio yükleniyor…</p>}>
+            <QuoteStudio file={file} onFile={setFile} onSpec={setSpec} service={service}
+              stage={step === 1 ? "file" : step === 2 ? "options" : "contact"}
+              renderWorkspace={(preview, options) => <div className="quote-workspace" ref={workspace}>
+            <aside className="quote-preview" aria-label="Dosya çalışma alanı">{preview}</aside>
             <div className="quote-main">
             <h2 className="quote-step-title" ref={stepHeading} tabIndex={-1}>{step === 1 ? "Hizmetinizi seçin, dosyanızı ekleyin" : step === 2 ? "Parçanız nasıl üretilecek?" : "Talebinizi tamamlayın"}</h2>
             <div hidden={step !== 1}>
@@ -185,18 +187,7 @@ export default function QuoteRequest() {
               ))}
             </div>
             </div>
-            <div>
-            <Suspense fallback={<p>3D Studio yükleniyor…</p>}>
-              <QuoteStudio
-                file={file}
-                onFile={setFile}
-                onSpec={setSpec}
-                service={service}
-                stage={step === 1 ? "file" : step === 2 ? "options" : "contact"}
-                previewTarget={previewTarget}
-              />
-            </Suspense>
-            </div>
+            <div className="quote-studio quote-studio-staged">{options}</div>
             {step < 3 && <div className="quote-step-actions">{step === 2 && <button type="button" className="quote-back" onClick={() => goToStep(1)}>Geri</button>}<button type="button" className="brand-button dark" onClick={() => goToStep(step + 1)}>{step === 1 ? (file ? "Üretim tercihlerini seç" : "Dosya olmadan devam et") : "İletişim bilgilerine geç"}<ArrowUpRight size={18}/></button></div>}
             <div hidden={step !== 3}>
               <form className="brand-form" onSubmit={submit} onFocus={() => { if (!started.current && !demoMode) { trackGrowth(brand.slug,"quote_start",{service}); started.current = true; } }}>
@@ -328,7 +319,8 @@ export default function QuoteRequest() {
               <details><summary>Değerlendirme nasıl ilerler?</summary><p>Dosya, kullanım amacı ve kritik ölçüler incelenir. Malzeme, stok, üretilebilirlik, son işlem ve teslimat birlikte netleştirilir. Hedef tarih teslim taahhüdü değildir.</p><p>STL, OBJ, 3MF, STEP, IGES · en fazla 20 MB. STL ölçü birimi milimetre kabul edilir.</p></details>
             </aside>
             </div>
-            </div>
+            </div>} />
+            </Suspense>
           </>
         )}
       </section>

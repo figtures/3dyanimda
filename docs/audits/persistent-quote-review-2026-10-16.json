@@ -5,19 +5,22 @@
   "humanReviewPerformed": false,
   "reviewedAt": "2026-10-16",
   "previousSourceHash": "18c20d39266b9b49df237fc536b620f7ac179508e1aabc2be7707b61869161b4",
-  "sourceHash": "c0fec0fb6f53150f0a14b0f487208a4a85c8a213e034b106a91c69f77835c9ac",
+  "sourceHash": "9b8f31b85308a8249db384dbcac5603e7a6f932b1024825124d008fb7d5051b2",
   "changes": [
     "Persistent single model instance in a sticky left pane (compact sticky top pane on mobile), including file replacement/removal at every step",
     "Preserve model state and measurements between steps; add accessible zoom/reset/wireframe controls",
     "Prevent focus scrolling and browser scroll anchoring during step changes, preserve workspace height",
-    "Reserve trailing icon space in native selects and disclosures, retain existing disclosure icons, improve Radix accordion/select/dialog spacing"
+    "Reserve trailing icon space in native selects and disclosures, retain existing disclosure icons, improve Radix accordion/select/dialog spacing",
+    "Render preview and form in the same React tree for static-export hydration; eliminate portal DOM mismatch detected by CI 38839360828."
   ],
   "validation": {
     "typescript": "pass",
     "unitTests": 147,
     "productionBuild": "pass",
     "localBrowserQA": false,
-    "remoteBrowserRegression": "Updated 32-case suite to check stable tab scroll, persistent uploaded model canvas, file controls, wireframe and retained form values; execution pending CI"
+    "remoteBrowserRegression": "Updated 32-case suite to check stable tab scroll, persistent uploaded model canvas, file controls, wireframe and retained form values; execution pending CI",
+    "homeBrowserCases": 64,
+    "homeBrowserWorkflow": "38839360832"
   },
   "carryForward": "Authored content, metadata, routes, models, assets, pricing formulas and tenant settings are unchanged. Historical full-route evidence keeps its original dates.",
   "limitations": [

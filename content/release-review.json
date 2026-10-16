@@ -10,7 +10,7 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "c0fec0fb6f53150f0a14b0f487208a4a85c8a213e034b106a91c69f77835c9ac",
+  "sourceHash": "9b8f31b85308a8249db384dbcac5603e7a6f932b1024825124d008fb7d5051b2",
   "sourceFileCount": 538,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -218,7 +218,7 @@
     },
     {
       "file": "docs/audits/persistent-quote-review-2026-10-16.json",
-      "sha256": "ae46022a0805dd0be156a77e989168a090c52019d81107eda9d444b329ccdc13"
+      "sha256": "5572551c6a63d5c80f30706d202434e16d1420db83032a35635df77c311b5932"
     }
   ],
   "limitations": [
