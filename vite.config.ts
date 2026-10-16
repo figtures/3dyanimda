@@ -15,6 +15,9 @@ export default defineConfig(() => ({
   },
   plugins: [occtCspPlugin(), react()],
   worker: { format: "es", plugins: () => [occtCspPlugin()] },
+  // Discover worker readers before the first upload: Vite's late dependency
+  // optimization otherwise reloads the page and discards the selected File.
+  optimizeDeps: { include: ["occt-import-js", "three", "fflate", "@xmldom/xmldom", "three/examples/jsm/loaders/STLLoader.js", "three/examples/jsm/loaders/OBJLoader.js"] },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
