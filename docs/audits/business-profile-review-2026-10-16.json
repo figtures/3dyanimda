@@ -1,0 +1,66 @@
+{
+  "result": "pass",
+  "kind": "bounded admin-managed business identity source and runtime contract review",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-16",
+  "implementationAuthorization": "Current owner request: 3. maddeyi tüm siteler için admin panelden de düzenlenebilir ve tasarımlarla uyumlu biçimde yapalım",
+  "baseCommit": "9dc226e7a75ddb20f89e98c522d027f23f907018",
+  "previousSourceHash": "18c20d39266b9b49df237fc536b620f7ac179508e1aabc2be7707b61869161b4",
+  "sourceHash": "19be14ad6e79a28859ad6223bcad3c2b4df77e5fee6e28b5a321c7d4a8cd7618",
+  "sourceFileCount": 546,
+  "changes": [
+    "Tenant-owned business/contact/profile/About fields with permissions, guarded writes and failed-read data preservation",
+    "Shared resolver drives effective brand name, footer, Contact, About and Organization/ProfessionalService schema in four themes",
+    "HTTPS social and Google profile validation, CSP-compatible map embeds, explicit empty-field suppression and structured address parity",
+    "Blog identity deduplication and resolved name in discovery files",
+    "Production HTML audit uses strictly tenant-bound exported settings and verifies schema/visible identity parity instead of historical fixed contacts"
+  ],
+  "validation": {
+    "typescript": "pass",
+    "vitest": {
+      "passed": 192,
+      "files": 33,
+      "command": "npm test -- --reporter=dot"
+    },
+    "searchContracts": {
+      "passed": 64,
+      "command": "npm run test:search:local",
+      "includesExportIdentityCases": 7
+    },
+    "productionBuild": "pass",
+    "brandThemeRendering": {
+      "cases": 16,
+      "environment": "JSDOM; not browser visual QA"
+    },
+    "publicApiSchema": {
+      "brands": 4,
+      "records": 796,
+      "errors": 0,
+      "command": "node scripts/quality/run-live-schema.mjs"
+    },
+    "originality": {
+      "records": 800,
+      "result": "pass",
+      "command": "python scripts/quality/audit-content.py --all --output /tmp/business-originality.json"
+    },
+    "ciBrowser": {
+      "result": "pass",
+      "commit": "37851c52d33f0841acbbcef11a48ed7d47498468",
+      "runId": 38839001387,
+      "jobId": 116774503643,
+      "homeCases": 64,
+      "quoteCases": 32,
+      "navigationCases": 64,
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/38839001387",
+      "scope": "Existing critical CSS/home/quote/navigation regression scenarios; later source delta only restores previously confirmed intercity cargo sentence. No direct visual inspection of new contact/admin screens."
+    }
+  },
+  "carryForward": "Authored content inventory, public image assets, model geometry, pricing logic and DB migrations are unchanged. Historical all-route/asset review remains dated as originally recorded; shared templates, metadata and export checks have this bounded delta review.",
+  "limitations": [
+    "AI review only; no new human approval or independent business fact verification.",
+    "No fresh full-route visual crawl or manual browser review of new contact/admin screens.",
+    "Google/social account ownership and indexing are not verified; no profiles or business records were invented or populated.",
+    "Deployment and current production HTML are verified separately; this report does not claim publication."
+  ]
+}

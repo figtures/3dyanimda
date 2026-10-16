@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {readFile,writeFile,readdir,access,mkdir} from 'node:fs/promises';
 import path from 'node:path';
 import {JSDOM} from 'jsdom';
-import {mergeIdentityNodes} from './identity-graph.mjs';
+import {assertExportedBusinessProfile} from './exported-business-profile.mjs';
 import {assertFAQParity} from './faq-parity.mjs';
 const allBrands=['3dyanimda','3dsanayi','maketyanimda','parcayanimda'];
 const selected=process.argv.slice(2).length?process.argv.slice(2):allBrands;
@@ -12,7 +12,6 @@ assert.ok(selected.every(brand=>allBrands.includes(brand)));
 const readJSON=async file=>JSON.parse(await readFile(file,'utf8'));
 const publication=await readJSON('docs/audits/publication-content-manifest.json');
 const certificate=await readJSON('content/release-review.json');
-const contact=await readJSON('content/authoring/confirmed-business-contact.json');
 const source=new Map();
 for(const file of ['pages.json','editorial-pages.json','search-pages.json'])for(const record of await readJSON('src/content/'+file))source.set(record.brand+record.path,record);
 const utilityRoutes=['/yasal','/kvkk-aydinlatma-metni','/gizlilik-politikasi','/cerez-politikasi','/kullanim-kosullari','/basvuru-acik-riza-metni'];
@@ -20,20 +19,6 @@ const results=[];
 const complementaryGraphs=[];
 const normalize=value=>value.replace(/\s+/g,' ').trim();
 const capture=async(file,url)=>{const bytes=await readFile(file);return {bytes,dom:new JSDOM(bytes.toString(),{url})};};
-const inspectIdentity=(document,origin,route)=>{
- const schemas=[...document.querySelectorAll('script[type="application/ld+json"]')].map(el=>JSON.parse(el.textContent));
- const nodes=mergeIdentityNodes(schemas,origin+route);
- const organizations=[...nodes.values()].filter(s=>s['@type']==='Organization');assert.equal(organizations.length,1);
- const organization=organizations[0];assert.equal(organization['@id'],origin+'/#organization');
- assert.equal(organization.url,origin);assert.equal(organization.email,contact.contact_info.email);assert.equal(organization.telephone,contact.contact_info.phone);
- const offices=[...nodes.values()].filter(s=>s['@type']==='ProfessionalService');assert.equal(offices.length,1);assert.equal(offices[0]['@id'],origin+'/#localbusiness');
- assert.equal(offices[0].url,origin);
- for(const [field,value] of Object.entries(contact.verified_business_identity.address))assert.equal(offices[0].address[field],value);
- const organizationBlocks=schemas.flatMap(s=>s['@graph']||[]).filter(s=>s['@type']==='Organization');
- if(organizationBlocks.length>1)complementaryGraphs.push({url:origin+route,organizationBlocks:organizationBlocks.length,distinctOrganizationIds:organizations.length,conflictingProperties:0,verifiedIdentityComplete:true});
- assert.ok(!JSON.stringify(schemas).includes('https://3dyaninda.com'),'No inherited source-brand schema');
- return schemas.flatMap(schema=>schema['@graph']||[schema]);
-};
 async function collectHTML(dir,prefix=''){
  const files=[];
  for(const item of await readdir(dir,{withFileTypes:true})){
@@ -48,6 +33,7 @@ for(const brand of selected){
  const directory=path.resolve('.cloudflare',brand,'release',domain);
  const manifest=await readJSON(path.join(directory,'search-manifest.json'));
  const expected=publication.routes.filter(item=>item.brand===brand);
+ const tenantIds=[...new Set(expected.map(item=>item.tenant_id))];assert.equal(tenantIds.length,1,'One approved tenant per brand');
  const manifestPaths=new Set(manifest.pages.map(item=>item.path));
  assert.equal(manifest.origin,origin);assert.equal(manifest.pages.length,213);assert.equal(manifestPaths.size,213);assert.equal(expected.length,199);
  for(const item of expected)assert.ok(manifestPaths.has(item.path),brand+': missing approved '+item.path);
@@ -61,7 +47,8 @@ for(const brand of selected){
    assert.equal(document.querySelector('link[rel="canonical"]')?.getAttribute('href'),origin+item.path);
    assert.equal(document.title,item.title);assert.ok(item.title.length>0);
    const robots=document.querySelector('meta[name="robots"]')?.getAttribute('content');assert.ok(robots);assert.doesNotMatch(robots,/noindex/);
-   const schemas=inspectIdentity(document,origin,item.path);
+   const schemas=assertExportedBusinessProfile(document,{origin,route:item.path,brand,tenantId:tenantIds[0]});
+   assert.equal(manifest.brand,schemas.find(node=>node['@type']==='Organization').name,'Discovery business name matches HTML');
    const pageData={title:document.title,description:document.querySelector('meta[name="description"]')?.getAttribute('content')||'',text:document.querySelector('main')?.textContent||'',images:[...document.querySelectorAll('main img')].map(img=>img.src),structuredData:[...document.querySelectorAll('script[type="application/ld+json"]')].map(el=>el.textContent)};
    assert.equal(createHash('sha256').update(JSON.stringify(pageData)).digest('hex'),item.hash,brand+item.path+' manifest/HTML parity');
    const record=source.get(brand+item.path);
@@ -71,10 +58,6 @@ for(const brand of selected){
     const visible=normalize(article.textContent);
     for(const text of [record.local_context,record.logistics,record.editorial?.answer,...(record.sections||[]).flatMap(section=>[section.title,section.body])].filter(Boolean))for(const paragraph of text.split(/\n+/).filter(Boolean))assert.ok(visible.includes(normalize(paragraph)),brand+item.path+' authored visible text');
     if(record.faq?.length){for(const entry of record.faq)for(const value of [entry.q,entry.a])assert.ok(visible.includes(normalize(value)),brand+item.path+' visible FAQ');const faq=schemas.find(s=>s['@type']==='FAQPage');assertFAQParity(faq?.mainEntity,record.faq,origin+item.path);}
-   }
-   if(item.path==='/iletisim'){
-    const visible=normalize(document.querySelector('.contact-details')?.textContent||'');
-    for(const field of [contact.contact_info.email,contact.contact_info.phone_display,contact.contact_info.address_tr,'randevu','yerinde','İstanbul dışındaki şehirlere'])assert.ok(visible.includes(field),brand+' contact: '+field);
    }
    hash.update(item.path+'\0').update(bytes).update('\0');
   }finally{dom.window.close();}
@@ -100,6 +83,6 @@ for(const brand of selected){
  console.log('PASS '+brand+': 199 approved landing + 14 other index pages + 6 noindex utilities; all HTML/manifest/sitemap/config assertions');
 }
 const complete=selected.length===allBrands.length;
-const report={result:complete?'pass':'partial_scope_pass',reviewType:'AI-assisted static verification of real public API HTML exports',testedAt:new Date().toISOString(),releaseSourceHash:certificate.sourceHash,publicationManifestHash:publication.manifestHash,brands:results,structuredDataSemantics:{source:'https://www.w3.org/TR/json-ld11/#embedding-json-ld-in-html-documents',rule:'JSON-LD blocks in one HTML document form one dataset. Same-ID fields are combined, with every overlapping property required to agree; verified identity must remain complete.',complementaryGraphs,regressionTests:4},totals:{approvedLandingRoutes:results.reduce((sum,row)=>sum+row.approvedLandingRoutes,0),indexEligibleHTML:results.reduce((sum,row)=>sum+row.indexEligibleHTML,0),noindexUtilityHTML:results.reduce((sum,row)=>sum+row.noindexUtilityHTML,0)},checks:['all approved landing routes present','one h1 and exact authored titles/content','canonical domain','index robots for discovery pages','owner-confirmed contact and one physical workshop schema','visible FAQ/structured-data parity','all manifest hashes match actual HTML','sitemap and search-manifest exact URL parity','six legal utilities reachable/noindex/excluded from discovery','404 noindex page','Worker approved mode and exact assets path','no Pages redirect file shadowing Worker routes'],limitations:['Verifies generated local artifacts, not deployed URLs.','No Cloudflare upload, DNS, TLS, Search Console indexing, GA4 receipt or transactional email is claimed.','Legal utility pages retain the honest unpublished-document state and are excluded from discovery.']};
+const report={result:complete?'pass':'partial_scope_pass',reviewType:'AI-assisted static verification of real public API HTML exports',testedAt:new Date().toISOString(),releaseSourceHash:certificate.sourceHash,publicationManifestHash:publication.manifestHash,brands:results,structuredDataSemantics:{source:'https://www.w3.org/TR/json-ld11/#embedding-json-ld-in-html-documents',rule:'JSON-LD blocks in one HTML document form one dataset. Same-ID fields are combined, with every overlapping property required to agree; resolved tenant identity must match the rendered fields, including intentional removals.',complementaryGraphs,regressionTests:4},totals:{approvedLandingRoutes:results.reduce((sum,row)=>sum+row.approvedLandingRoutes,0),indexEligibleHTML:results.reduce((sum,row)=>sum+row.indexEligibleHTML,0),noindexUtilityHTML:results.reduce((sum,row)=>sum+row.noindexUtilityHTML,0)},checks:['all approved landing routes present','one h1 and exact authored titles/content','canonical domain','index robots for discovery pages','tenant-owned contact/profile parity and optional single workshop schema','visible FAQ/structured-data parity','all manifest hashes match actual HTML','sitemap and search-manifest exact URL parity','six legal utilities reachable/noindex/excluded from discovery','404 noindex page','Worker approved mode and exact assets path','no Pages redirect file shadowing Worker routes'],limitations:['Verifies generated local artifacts, not deployed URLs.','No Cloudflare upload, DNS, TLS, Search Console indexing, GA4 receipt or transactional email is claimed.','Legal utility pages retain the honest unpublished-document state and are excluded from discovery.']};
 await mkdir('artifacts/release',{recursive:true});const output=complete?'artifacts/release/approved-html-export.json':`artifacts/release/approved-html-${selected[0]}.json`;
 await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('Report: '+output);

@@ -190,7 +190,7 @@ export function resolveBusinessProfile(settings: Record<string, unknown>, brand:
     aboutImageUrl: normalizePublicUrl(contact.about_image_url, brand.origin),
     aboutImageAlt: clean(contact.about_image_alt),
     visitNote: clean(value('visit_note', 'Atölye ziyareti ve elden teslim için önceden randevu alın. Ziyaret planını teklif talebinizde belirtebilirsiniz.')),
-    deliveryNote: clean(value('delivery_note', 'Kargo, kurye ve elden teslim seçenekleri için projenizi paylaşın. Teslimat yöntemi ve takvimini birlikte belirleyelim.')),
+    deliveryNote: clean(value('delivery_note', 'Kargo, kurye ve elden teslim seçenekleri için projenizi paylaşın. İstanbul dışındaki şehirlere de kargo gönderimi yapıyoruz. Teslimat yöntemi ve takvimini birlikte belirleyelim.')),
     onsiteNote: clean(value('onsite_note', 'Taranacak parçayı, yaklaşık ölçülerini ve bulunduğu konumu paylaşın; yerinde hizmet için çalışma koşullarını ve randevuyu birlikte değerlendirelim.')),
     geo,
     openingHoursSpecification: Array.isArray(verified.openingHoursSpecification) ? verified.openingHoursSpecification as Record<string, unknown>[] : undefined,
