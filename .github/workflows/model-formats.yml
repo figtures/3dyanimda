@@ -25,6 +25,8 @@ jobs:
       - run: npm run build
         env:
           VITE_PRIVATE_PREVIEW_HOST: '127.0.0.1'
+          VITE_SUPABASE_URL: 'https://zdxjmhhjuomcpdtllnuq.supabase.co'
+          VITE_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_cb-5Z_xQf-Z19whnlsrG-A_Id5ewC6H'
       - run: node scripts/test-model-formats.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome

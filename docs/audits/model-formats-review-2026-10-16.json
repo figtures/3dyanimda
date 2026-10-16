@@ -6,7 +6,7 @@
   "reviewedAt": "2026-10-16",
   "integratedUpstreamCommit": "4ea6fb54111a8c9c6b8c753a19789502a29b1e3c",
   "previousSourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
-  "sourceHash": "3ff72e984a44aa5ca7506e3f0141e1f8d8bc70ea075d32227943c0ed7b8c086c",
+  "sourceHash": "45c695581818730578e272552808cf15a8557555f61134dc15d4d209a4e51e9a",
   "sourceFileCount": 558,
   "changes": [
     "Interactive STL, OBJ, 3MF, STEP/STP and IGES/IGS preview in the shared quote workspace",
@@ -27,7 +27,8 @@
       "knownVulnerabilities": 0
     },
     "localBrowserQA": false,
-    "remoteBrowserRegression": "56 file-format/brand/viewport cases plus file replacement/corruption checks implemented; awaiting GitHub Actions execution"
+    "remoteBrowserRegression": "Initial CI 38842003700 found missing test-only backend configuration before any model opened; corrected. Re-execution pending.",
+    "packaging": "Normalized dependency license text to LF to match GitHub source bytes; fresh certificate verified locally."
   },
   "carryForward": "Historical editorial, asset, SEO and admin-business identity evidence retain their original scope and dates. No new full-route or human review is claimed.",
   "limitations": [
