@@ -33,7 +33,7 @@ try {
   assert.equal(await page.locator('.studio-viewer canvas').count(),0);
   for(const [name,buffer] of fixtures) {
    uploaded=true;await page.getByLabel('3D dosyası').setInputFiles({name,mimeType:'application/octet-stream',buffer});
-   await page.waitForFunction(()=>['ready','error'].includes(document.querySelector('[data-model-state]')?.getAttribute('data-model-state')),{},{timeout:50000});
+   await page.waitForFunction(name=>{const el=document.querySelector('[data-model-state]');return el?.getAttribute('data-model-state')==='error'||(el?.getAttribute('data-model-state')==='ready'&&el.getAttribute('data-model-file')===name);},name,{timeout:50000});
    assert.equal(await page.locator('[data-model-state]').getAttribute('data-model-state'),'ready',`${brand}/${width}/${name}: ${await page.locator('[role=alert]').allTextContents()}`);
    const metrics=await page.locator('.studio-metrics').innerText();
    assert.ok(metrics.includes(name.endsWith('.3mf')?'2.00 cm³':'1.00 cm³'),metrics);
@@ -51,7 +51,7 @@ try {
   // Rapid replacement cancels old parsing and cannot restore stale geometry.
   await page.getByLabel('3D dosyası').setInputFiles({name:'pending.step',mimeType:'application/octet-stream',buffer:step});
   await page.getByLabel('3D dosyası').setInputFiles({name:'latest.obj',mimeType:'text/plain',buffer:Buffer.from(obj)});
-  await page.locator('[data-model-state=ready]').waitFor();assert.ok((await page.locator('.studio-metrics').innerText()).includes('OBJ'));
+  await page.locator('[data-model-state=ready][data-model-file="latest.obj"]').waitFor();assert.ok((await page.locator('.studio-metrics').innerText()).includes('OBJ'));
   await page.getByLabel('3D dosyası').setInputFiles({name:'broken.3mf',mimeType:'application/octet-stream',buffer:Buffer.from('not a zip')});
   await page.locator('[data-model-state=error]').waitFor();assert.equal(await page.locator('.studio-metrics').count(),0);
   await page.getByRole('button',{name:'Dosyayı kaldır',exact:true}).click();assert.equal(await page.locator('.studio-viewer canvas').count(),0);uploaded=false;

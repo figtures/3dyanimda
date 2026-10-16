@@ -173,7 +173,7 @@ export const StlViewer = ({
     const abort=new AbortController();setLoading(true);
     importModel(file,abort.signal).then(result=>{
       if(abort.signal.aborted)return;
-      const group=new THREE.Group();
+      const group=new THREE.Group();group.userData.fileName=file.name;
       try {
         for(const part of result.parts) {
           const geometry=new THREE.BufferGeometry();
@@ -203,7 +203,7 @@ export const StlViewer = ({
   }, [file,onMetrics]);
 
   return (
-    <div className={`studio-viewer ${className || ""}`} data-model-state={loading ? "loading" : error ? "error" : modelRef.current ? "ready" : "empty"}>
+    <div className={`studio-viewer ${className || ""}`} data-model-file={modelRef.current?.userData.fileName} data-model-state={loading ? "loading" : error ? "error" : modelRef.current ? "ready" : "empty"}>
       <div ref={mountRef} className="w-full h-full relative">
         {loading && (
           <div className="absolute inset-0 grid place-items-center text-xs font-mono uppercase tracking-widest text-cream/70 bg-accent-blue-deep/40 backdrop-blur-sm">

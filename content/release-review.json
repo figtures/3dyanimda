@@ -10,7 +10,7 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "85ca080578e2ce427f8085034b6f27e9c49a67f6c44c95414ad791b480ac25c3",
+  "sourceHash": "34b92c880e5c9c317422eb815ee125ecf9ade23ea0d000bb52a98f79cc892e6e",
   "sourceFileCount": 560,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -234,7 +234,7 @@
     },
     {
       "file": "docs/audits/model-formats-review-2026-10-16.json",
-      "sha256": "0d334ad09a5c78f2ee1a845db95282668f6154387bd0a43454b9ce831999a84e"
+      "sha256": "395ee38790ace91e7f88ef9146c446fdeda81eab9dc954be731a0326cfb04300"
     }
   ],
   "limitations": [
