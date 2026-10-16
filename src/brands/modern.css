@@ -1207,3 +1207,5 @@
 
 /* Offscreen directory cards remain searchable and accessible without eagerly laying out the entire directory. */
 .region-cards > .editorial-card:nth-child(n + 7) { content-visibility: auto; contain-intrinsic-size: auto 290px; }
+
+.route-progress{position:fixed;inset:0 0 auto;height:3px;z-index:10000;pointer-events:none;background:linear-gradient(90deg,transparent,var(--accent,#ec5c27),transparent);background-size:200% 100%;animation:route-progress 1.2s linear infinite}@keyframes route-progress{to{background-position:-200% 0}}@media(prefers-reduced-motion:reduce){.route-progress{animation:none}}

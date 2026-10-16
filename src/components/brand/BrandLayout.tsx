@@ -1,3 +1,5 @@
+import {prefetchDestination} from "@/lib/route-preparation";
+import {useNavigation} from "react-router-dom";
 import {brandAsset} from '@/lib/brand-assets';
 import BrandNavigation from "./BrandNavigation";
 import {
@@ -22,6 +24,8 @@ import GrowthAnalytics from "./GrowthAnalytics";
 import { FloatingContactButtons } from "@/components/site/FloatingContactButtons";
 import { CookieConsent } from "@/components/site/CookieConsent";
 export function BrandLayout() {
+  const navigation=useNavigation();
+  const prefetchLink=(event:React.SyntheticEvent)=>{const target=event.target as Element;const link=target.closest<HTMLAnchorElement>("a[href]");if(link)prefetchDestination(link.href);};
   const brand = useBrand();
   const business = brand.business;
   const location = useLocation();
@@ -35,6 +39,9 @@ export function BrandLayout() {
     <div
       className={`brand-site theme-${theme}`}
       data-theme={theme}
+      onPointerOver={prefetchLink}
+      onFocus={prefetchLink}
+      onTouchStart={prefetchLink}
 
     >
       <a className="skip-link" href="#main">
@@ -80,7 +87,8 @@ export function BrandLayout() {
       )}
       <BrandNavigation />
       <GrowthAnalytics />
-      <main id="main">
+      {navigation.state !== "idle" && <div className="route-progress" role="progressbar" aria-label="Sayfa hazırlanıyor" />}
+      <main id="main" aria-busy={navigation.state !== "idle"}>
         <Outlet />
       </main>
       <footer className="brand-footer">

@@ -184,7 +184,7 @@ export default function QuoteStudio({
   const isFdm = selectedTechnology === "FDM";
   const price = useMemo(
     () =>
-      service === "3D Baskı" && metrics && metrics.closed !== false && material && pricing && isFdm && material.pricePerGram > 0 && finishes.length === 0 && colorPreference !== "Çok renkli"
+      service === "3D Baskı" && metrics && material && pricing && isFdm && material.pricePerGram > 0 && finishes.length === 0 && colorPreference !== "Çok renkli"
         ? computeEstimate(
             metrics.volumeCm3,
             material,
@@ -192,6 +192,7 @@ export default function QuoteStudio({
             infill,
             quantity,
             pricing,
+            { allowZeroVolume: metrics.closed === false },
           )
         : null,
     [service, metrics, material, pricing, quality, infill, quantity, isFdm, finishes.length, colorPreference],
@@ -237,7 +238,7 @@ export default function QuoteStudio({
             ].join(" · ")
           : "Tarama / modelleme kapsamı teknik inceleme ile belirlenecek.",
         metrics
-          ? `${metrics.format || "STL"}${metrics.unitAssumed ? " (mm varsayımı)" : ""}: ${metrics.bboxCm.x.toFixed(2)} × ${metrics.bboxCm.y.toFixed(2)} × ${metrics.bboxCm.z.toFixed(2)} cm; ${metrics.closed === false ? "açık yüzey — hacimle fiyatlandırılmaz" : `hacim ${metrics.volumeCm3.toFixed(2)} cm³`}`
+          ? `${metrics.format || "STL"}${metrics.unitAssumed ? " (mm varsayımı)" : ""}: ${metrics.bboxCm.x.toFixed(2)} × ${metrics.bboxCm.y.toFixed(2)} × ${metrics.bboxCm.z.toFixed(2)} cm; ${metrics.closed === false ? `açık yüzey — yaklaşık hacim ${metrics.volumeCm3.toFixed(2)} cm³` : `hacim ${metrics.volumeCm3.toFixed(2)} cm³`}`
           : "Otomatik ölçüm yok.",
         price
           ? `Müşteri tarafı ön tahmin (kesin teklif değildir): ${fmtTRY(price.total - discount)}`
@@ -287,7 +288,6 @@ export default function QuoteStudio({
     ? "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır."
     : catalogStatus === "loading" ? "Fiyat seçenekleri yükleniyor…"
     : catalogStatus === "error" ? "Fiyat bilgisi şu anda alınamıyor. Dosyanızı teknik teklif için gönderebilirsiniz."
-    : metrics?.closed === false ? "Model açık yüzey içeriyor; güvenilir hacim hesaplanamadığı için fiyat teknik incelemeyle belirlenir."
     : !pricing ? "Bu hizmet için anlık fiyat henüz etkin değil. Dosyanız üzerinden teklif hazırlayabiliriz."
     : !material ? "Anlık ön tahmin için fiyatlandırması tanımlı bir FDM malzemesi seçin."
     : !isFdm ? "Bu üretim teknolojisi için fiyat, dosya ve üretim kapsamı incelenerek hazırlanır."
@@ -355,7 +355,7 @@ export default function QuoteStudio({
         <ModelInfoPanel file={file} metrics={metrics} />
         {file && service === "3D Baskı" && <div className="studio-live-estimate" aria-live="polite">
           <span className="studio-estimate-label">{demoMode ? "Demo ön tahmin" : "Anlık ön tahmin"}</span>
-          {price ? <><strong>{fmtTRY(price.total - discount)}</strong><p>{material?.name} · {quantity} adet · %{infill} doluluk · %{pricing?.vatPct} KDV dahil</p>{campaign && <p>{campaign.name} · {fmtTRY(discount)} indirim</p>}<small>Teknik incelemeyle kesinleşir; teslimat dahil değildir.</small></> : <p>{estimateReason}</p>}
+          {price ? <><strong>{fmtTRY(price.total - discount)}</strong><p>{material?.name} · {quantity} adet · %{infill} doluluk · %{pricing?.vatPct} KDV dahil</p>{campaign && <p>{campaign.name} · {fmtTRY(discount)} indirim</p>}{metrics?.closed === false && <p className="studio-estimate-note">{metrics.volumeCm3 > 0 ? "Açık yüzey: merkezlenmiş geometri üzerinden yaklaşık hacim hesabı." : "Açık yüzey: hacim oluşmadığı için minimum hizmet tutarı gösteriliyor."} Geometri onarımından sonra tutar değişebilir.</p>}<small>Teknik incelemeyle kesinleşir; teslimat dahil değildir.</small></> : <p>{estimateReason}</p>}
         </div>}
         {error && (
           <p role="alert" className="form-error">

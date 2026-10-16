@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
+import { NumericInput } from "@/components/admin/NumericInput";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
@@ -96,7 +97,7 @@ const AdminPricing = () => {
       const { getTenantId } = await import("@/lib/tenant");
       const tid = getTenantId();
       if (!tid) throw new Error("Tenant bulunamadı");
-      if (materials.some(m => !m.name.trim() || [m.density_g_cm3,m.price_per_gram,m.setup_fee,m.min_price,m.sort_order].some(v => !Number.isFinite(v) || v < 0))) throw new Error("Malzeme adı ve sıfır veya pozitif sayısal değerler gerekli.");
+      if (materials.some(m => !m.name.trim() || !Number.isInteger(m.sort_order) || [m.density_g_cm3,m.price_per_gram,m.setup_fee,m.min_price,m.sort_order].some(v => !Number.isFinite(v) || v < 0))) throw new Error("Malzeme adı ve sıfır veya pozitif sayısal değerler gerekli.");
       if (settings.some(s => !Number.isFinite(s.value) || s.value < 0 || (s.key === "infill_percent" && (s.value < 5 || s.value > 100)))) throw new Error("Fiyat ayarlarını kontrol edin; doluluk 5–100 arasında olmalı.");
       // Upsert materials
       for (const m of materials) {
@@ -150,7 +151,7 @@ const AdminPricing = () => {
         <p className="text-sm">{readyMaterials.length} aktif FDM malzemesinin fiyat ve yoğunluk değerleri hazır.</p>
         {missingSettings.length > 0 && <p className="text-sm text-destructive">Henüz kaydedilmemiş genel ayarlar: {missingSettings.map(s => s.label).join(", ")}. Aşağıdaki değerleri kontrol edip Tümünü Kaydet’e basın.</p>}
         {!readyMaterials.length && <p className="text-sm text-destructive">En az bir aktif FDM malzemesinde yoğunluk ve gram fiyatı 0’dan büyük olmalı. Bu alanlar tamamlanmadan müşteriye anlık tutar gösterilmez.</p>}
-        <p className="text-xs text-muted-foreground">Fiyatlandırma marka bazındadır. Kapalı yüzeyli model yüklendiğinde ilk uygun FDM malzemesiyle ön tahmin gösterilir; müşteri seçimini değiştirebilir. Açık yüzey, son işlem ve diğer teknolojiler teknik teklif olarak değerlendirilir. Formdaki değişiklikler kaydedilene kadar canlı siteye yansımaz.</p>
+        <p className="text-xs text-muted-foreground">Fiyatlandırma marka bazındadır. Model yüklendiğinde ilk uygun FDM malzemesiyle ön tahmin gösterilir; müşteri seçimini değiştirebilir. Açık yüzeyli modellerde de yaklaşık hacim veya minimum hizmet tutarı üzerinden ön tahmin sunulur; son işlem ve diğer teknolojiler ayrıca değerlendirilir. Formdaki değişiklikler kaydedilene kadar canlı siteye yansımaz.</p>
       </section>
       {/* Global Settings */}
       <section className="bg-card border border-border rounded-lg p-6">
@@ -161,11 +162,7 @@ const AdminPricing = () => {
           {settings.map((s, i) => (
             <div key={s.key} className="space-y-1.5">
               <Label className="text-sm">{s.label}</Label>
-              <Input type="number" step="0.01" value={s.value}
-                onChange={e => {
-                  const v = parseFloat(e.target.value);
-                  setSettings(prev => prev.map((x, idx) => idx === i ? { ...x, value: isNaN(v) ? 0 : v } : x));
-                }} />
+              <NumericInput aria-label={s.label} value={s.value} onValueChange={value => setSettings(prev => prev.map((x, idx) => idx === i ? { ...x, value } : x))} />
               {s.description && <p className="text-[11px] text-muted-foreground">{s.description}</p>}
             </div>
           ))}
@@ -177,8 +174,8 @@ const AdminPricing = () => {
         <p className="text-sm text-muted-foreground">Kaydetmeden önce mevcut form değerleriyle hesaplayın. Müşteriye yansıması için Tümünü Kaydet’e basın. <Link className="underline" to="/admin/campaigns">Kampanyaları yönet</Link></p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <label className="text-sm">Malzeme<select className="w-full border rounded p-2 bg-background" value={previewMaterial} onChange={e=>setPreviewMaterial(e.target.value)}><option value="">FDM malzemesi seçin</option>{materials.filter(m=>m.technology === "FDM").map((m,i)=><option key={m.id || i} value={m.id || m.name}>{m.name || "İsimsiz"}</option>)}</select></label>
-          <label className="text-sm">Hacim (cm³)<Input type="number" min="0.01" step="0.01" value={previewVolume} onChange={e=>setPreviewVolume(Number(e.target.value))}/></label>
-          <label className="text-sm">Adet<Input type="number" min="1" max="1000" value={previewQuantity} onChange={e=>setPreviewQuantity(Number(e.target.value))}/></label>
+          <label className="text-sm">Hacim (cm³)<NumericInput value={previewVolume} onValueChange={setPreviewVolume}/></label>
+          <label className="text-sm">Adet<NumericInput value={previewQuantity} onValueChange={setPreviewQuantity}/></label>
           <label className="text-sm">Kalite<select className="w-full border rounded p-2 bg-background" value={previewQuality} onChange={e=>setPreviewQuality(Number(e.target.value))}>{qualities.map((q,i)=><option key={q.id} value={i}>{q.name}</option>)}</select></label>
         </div>
         <p role="status" className="text-xl font-semibold">{estimate ? `${fmtTRY(estimate.total)} · KDV dahil, kampanya öncesi` : "Hesaplama için malzeme, pozitif yoğunluk ve gram fiyatı girin."}</p>
@@ -215,23 +212,19 @@ const AdminPricing = () => {
                 </div>
                 <div>
                   <Label className="text-xs">Yoğunluk (g/cm³)</Label>
-                  <Input type="number" step="0.01" value={m.density_g_cm3}
-                    onChange={e => updateMat(i, { density_g_cm3: parseFloat(e.target.value) || 0 })} />
+                  <NumericInput aria-label={`${m.name || "Yeni malzeme"} — Yoğunluk`} value={m.density_g_cm3} onValueChange={value => updateMat(i, { density_g_cm3: value })} />
                 </div>
                 <div>
                   <Label className="text-xs">Fiyat (₺/g)</Label>
-                  <Input type="number" step="0.01" value={m.price_per_gram}
-                    onChange={e => updateMat(i, { price_per_gram: parseFloat(e.target.value) || 0 })} />
+                  <NumericInput aria-label={`${m.name || "Yeni malzeme"} — Gram fiyatı`} value={m.price_per_gram} onValueChange={value => updateMat(i, { price_per_gram: value })} />
                 </div>
                 <div>
                   <Label className="text-xs">Kurulum (₺)</Label>
-                  <Input type="number" step="1" value={m.setup_fee}
-                    onChange={e => updateMat(i, { setup_fee: parseFloat(e.target.value) || 0 })} />
+                  <NumericInput aria-label={`${m.name || "Yeni malzeme"} — Kurulum`} value={m.setup_fee} onValueChange={value => updateMat(i, { setup_fee: value })} />
                 </div>
                 <div>
                   <Label className="text-xs">Min Fiyat (₺)</Label>
-                  <Input type="number" step="1" value={m.min_price}
-                    onChange={e => updateMat(i, { min_price: parseFloat(e.target.value) || 0 })} />
+                  <NumericInput aria-label={`${m.name || "Yeni malzeme"} — Minimum fiyat`} value={m.min_price} onValueChange={value => updateMat(i, { min_price: value })} />
                 </div>
                 <div>
                   <Label className="text-xs">Renk</Label>
@@ -239,8 +232,7 @@ const AdminPricing = () => {
                 </div>
                 <div>
                   <Label className="text-xs">Sıra</Label>
-                  <Input type="number" value={m.sort_order}
-                    onChange={e => updateMat(i, { sort_order: parseInt(e.target.value) || 0 })} />
+                  <NumericInput aria-label={`${m.name || "Yeni malzeme"} — Sıra`} value={m.sort_order} onValueChange={value => updateMat(i, { sort_order: value })} />
                 </div>
                 <div className="col-span-2 md:col-span-3">
                   <Label className="text-xs">Açıklama</Label>

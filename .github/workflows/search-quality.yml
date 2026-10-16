@@ -99,6 +99,9 @@ jobs:
       - run: node scripts/test-quote-flow.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
+      - run: node scripts/test-route-runtime.mjs
+        env:
+          CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
       - run: node scripts/test-navigation.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome

@@ -26,6 +26,7 @@ export function computeEstimate(
   infill: number,
   quantity: number,
   pricing: PricingConfig,
+  options: { allowZeroVolume?: boolean } = {},
 ) {
   const inputs = [
     volumeCm3,
@@ -40,7 +41,7 @@ export function computeEstimate(
   ];
   if (
     inputs.some((v) => !Number.isFinite(v) || v < 0) ||
-    volumeCm3 <= 0 ||
+    (volumeCm3 === 0 && !options.allowZeroVolume) ||
     material.density <= 0 ||
     material.pricePerGram <= 0 ||
     qualityMul <= 0 ||

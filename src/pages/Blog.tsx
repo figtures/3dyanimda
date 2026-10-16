@@ -1,13 +1,12 @@
+import {usePublicPage} from "@/content/public-page-query";
 import "@/lib/i18n";
 import { getTenantIdentity } from "@/lib/tenant";
-import { useEffect, useState } from "react";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { breadcrumbSchema } from "@/lib/seo-schema";
 import { useBrand } from "@/brands/config";
-import { supabase } from "@/lib/supabase";
 import { useTranslation } from "react-i18next";
 import { resolveMediaUrl } from "@/lib/media";
 
@@ -23,22 +22,12 @@ type DbPost = {
 
 const Blog = () => {
   const brand = useBrand();
-  const [dbPosts, setDbPosts] = useState<DbPost[]>([]);
+  const {data}=usePublicPage("/blog");
+  const dbPosts=(data||[]) as DbPost[];
   const { i18n } = useTranslation();
   const isEn = i18n.language?.startsWith("en");
 
-  useEffect(() => {
-    const nowIso = new Date().toISOString();
-    supabase
-      .from("blog_posts")
-      .select(
-        "slug, title, excerpt, title_en, excerpt_en, cover_image_url, published_at",
-      )
-      .eq("published", true)
-      .or(`published_at.is.null,published_at.lte.${nowIso}`)
-      .order("published_at", { ascending: false })
-      .then(({ data }) => setDbPosts(data ?? []));
-  }, []);
+
 
   return (
     <>

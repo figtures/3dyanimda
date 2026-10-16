@@ -42,6 +42,13 @@ describe('multi-format geometry import',()=>{
    const result=await parseModel('surface.obj',text('v 0 0 0\nv 10 0 0\nv 0 10 0\nf 1 2 3'));
    expect(result.metrics.closed).toBe(false);expect(result.metrics.surfaceCm2).toBeCloseTo(.5);expect(result.metrics.bboxCm.z).toBe(0);
  });
+ it('uses the reference centred tetrahedron estimate for open meshes, independent of translation',async()=>{
+   const cube=await parseModel('cube.stl',text(stl));
+   const positions=cube.parts[0].positions.slice(0,-18);
+   const measure=(p:Float32Array)=>measureModel([{name:'open cube',positions:p}],'STL',true).metrics;
+   const a=measure(positions), b=measure(positions.map(v=>v+10000));
+   expect(a.closed).toBe(false);expect(a.volumeCm3).toBeCloseTo(5/6);expect(b.volumeCm3).toBeCloseTo(a.volumeCm3);
+ });
  it('rejects corrupt archives, cyclic components and external part references',()=>{
    expect(()=>parse3mf(text('not a zip'))).toThrow();
    expect(()=>parse3mf(buffer(threeMf({assembly:true,cycle:true})))).toThrow(/döngüsel/);

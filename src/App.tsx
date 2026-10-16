@@ -1,3 +1,6 @@
+import {dynamicPageQuery} from "@/content/dynamic-page-query";
+import {prepareContentDestination,registerRoutePreparation} from "@/lib/route-preparation";
+import {RouteErrorBoundary} from "@/components/site/RouteErrorBoundary";
 import {preloadable as lazy} from '@/lib/preloadable';
 import {publicRenderState,setPublicRenderState,publicQueryForPath} from '@/lib/public-render-state';
 import {exportPublicTenant} from '@/contexts/TenantContext';
@@ -15,8 +18,8 @@ import {
   useIsFetching,
 } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Suspense,useSyncExternalStore } from "react";
+import { createBrowserRouter, RouterProvider, matchRoutes, type RouteObject } from "react-router-dom";
+import { Suspense,useSyncExternalStore,isValidElement,Children } from "react";
 import { BrandLayout as Layout } from "@/components/brand/BrandLayout";
 
 import { TenantProvider } from "@/contexts/TenantContext";
@@ -128,7 +131,25 @@ export async function preparePublicRoute(path:string){
 }
 const NotificationOverlays=lazy(()=>import('./components/site/NotificationOverlays'));
 
-const router = createBrowserRouter([
+async function prepareRouteData(url:URL,dynamic=false){
+ const tenant=exportPublicTenant()||publicRenderState()?.tenant||null;
+ await prepareContentDestination(queryClient,tenant,url.pathname);
+ if(dynamic&&tenant)await queryClient.ensureQueryData(dynamicPageQuery(tenant,url.pathname,url.searchParams.get('preview')==='1'));
+}
+async function preloadElement(node:React.ReactNode):Promise<void> {
+ if(!isValidElement<{children?:React.ReactNode}>(node))return;
+ const component=node.type as {preload?:()=>Promise<unknown>};
+ await Promise.all([component.preload?.(),...Children.toArray(node.props.children).map(preloadElement)]);
+}
+function prepareRoutes(routes:RouteObject[]):RouteObject[] {
+ return routes.map(route=>({...route,errorElement:<RouteErrorBoundary/>,
+  loader:async({request})=>{
+   const url=new URL(request.url);
+   await Promise.all([preloadElement(route.element),prepareRouteData(url,route.path==="*")]);
+   return null;
+  }, ...(route.children?{children:prepareRoutes(route.children)}:{})} as RouteObject));
+}
+const routes = prepareRoutes([
   {
     element: <Layout />,
     children: [
@@ -352,6 +373,15 @@ const router = createBrowserRouter([
   },
 ]);
 
+const router=createBrowserRouter(routes);
+export async function prepareInitialRoute(){
+ if(router.state.initialized)return;
+ await new Promise<void>(resolve=>{const unsubscribe=router.subscribe(state=>{if(state.initialized){unsubscribe();resolve();}});});
+}
+registerRoutePreparation(async url=>{
+ const matched=matchRoutes(routes,url.pathname)||[];
+ await Promise.all([...matched.map(match=>preloadElement(match.route.element)),prepareRouteData(url,matched.some(match=>match.route.path==="*"))]);
+});
 const subscribeRoute=(changed:()=>void)=>router.subscribe(changed);
 const notificationRoute=()=>!publicRouteComponent(router.state.location.pathname);
 function RouteNotifications(){

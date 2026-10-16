@@ -18,8 +18,8 @@
     },
     {
       "path": ".github/workflows/search-quality.yml",
-      "sha256": "1ae353c130097eab0d3c6bb1616cb35f26decb91df9e50cb1e5c0948730b7d96",
-      "bytes": 3610
+      "sha256": "ffb684e50e9ffd33b7d93e49cf7334c68de84c4dcfd1c58c0db4d523744c84c0",
+      "bytes": 3726
     },
     {
       "path": "docs/audits/content-contract-audit-2026-10-11.json",
@@ -303,8 +303,8 @@
     },
     {
       "path": "scripts/cloudflare/config.test.mjs",
-      "sha256": "032512574202b9f698c3b10713f4165b2950b9167530372044c9372443d6a67c",
-      "bytes": 3860
+      "sha256": "104cad50b2ba49780fa259c57d49dd49b077c92684783fdbabff4b42a99a3c07",
+      "bytes": 4521
     },
     {
       "path": "scripts/export-sites.mjs",
@@ -443,8 +443,8 @@
     },
     {
       "path": "src/App.tsx",
-      "sha256": "116e8b66660735fd1f6ecb9a17d222b59fefe62c6a483623f8d21433eadbf1ba",
-      "bytes": 15957
+      "sha256": "ac7b8839222ceef3240de7a638733b51e9532da38847d73798d0a5fd3b3f5c93",
+      "bytes": 17763
     },
     {
       "path": "src/brands/brand.css",
@@ -453,8 +453,8 @@
     },
     {
       "path": "src/brands/modern.css",
-      "sha256": "007e637bcabdc83af70ad5f9fcbaaec2c94275d6974a36d378e16dad5da6dca4",
-      "bytes": 21548
+      "sha256": "a0abb364ad1810da7ec8ff6eacbb75dcb6469042ef1470a360ea04315148067c",
+      "bytes": 21921
     },
     {
       "path": "src/components/site/NotificationOverlays.tsx",
@@ -523,8 +523,8 @@
     },
     {
       "path": "src/content/useContent.ts",
-      "sha256": "916c590d17c5f6d5775e2f1e9d8f907c0bbede4439e4ffc7e97f288e54045c21",
-      "bytes": 4611
+      "sha256": "c88e4791212d0f74d39d4cfe4629df622731abf763ed9c8bd643266eac738beb",
+      "bytes": 658
     },
     {
       "path": "src/contexts/FeatureContext.tsx",
@@ -568,8 +568,8 @@
     },
     {
       "path": "src/lib/preloadable.tsx",
-      "sha256": "e9e96454fba43811140cdebdeaf64d56c443841d0f74d4409ad9ba8ad0ae4730",
-      "bytes": 573
+      "sha256": "a51349f35f8fe6957913694c9c325bfca97fe754056a096fb5ea404b076a01a7",
+      "bytes": 707
     },
     {
       "path": "src/lib/public-render-state.test.ts",
@@ -628,8 +628,8 @@
     },
     {
       "path": "src/main.tsx",
-      "sha256": "431c86dea1948d35bbe0265f0625c5a224b688d957fc69db2e59f3a11011573e",
-      "bytes": 981
+      "sha256": "91319db96c123fc19e441c8788a7bf60fefd32aec99ce617852e50e6518bf82e",
+      "bytes": 1115
     },
     {
       "path": "src/pages/ContentHub.tsx",
@@ -658,8 +658,8 @@
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
-      "sha256": "7c28a3bfac660091bdf77cd8d6377c5acb8d071c33e22e25a563b541e79d3f81",
-      "bytes": 6320
+      "sha256": "ab0ce1038da755e229ccf68c23be39e43415141fd2952a70c66b80f6504f5577",
+      "bytes": 6917
     },
     {
       "path": "src/components/brand/BrandNavigation.tsx",
@@ -763,18 +763,18 @@
     },
     {
       "path": "src/pages/Blog.tsx",
-      "sha256": "889853c24862d4a48b5952a35fe51bee2a9d54f2dac74ffb310ae6be2fc3a38b",
-      "bytes": 5189
+      "sha256": "ba650eec388ea7eb8a49d986adc409d90f854e24a9ccb329dcde08d99032e126",
+      "bytes": 4770
     },
     {
       "path": "src/pages/BlogPost.tsx",
-      "sha256": "a94ed2b09cc5b11bedd9bc6b745e398c1f4703b9e654c5a00d2a96757d92af3c",
-      "bytes": 4647
+      "sha256": "4216b7d458174b93b1b5fd288cd28be2af7457e52c3134ffe68a82bf3ca03fe0",
+      "bytes": 4304
     },
     {
       "path": "src/pages/Portfolio.tsx",
-      "sha256": "04750900a2f7bfab49fb5a05020a00b4244dbef520e100cc52ad67726be467e9",
-      "bytes": 4813
+      "sha256": "ab64acfe8bd9851986a1c019a37d3f90aa17c1f951a80eb1f44680dbd4ff5813",
+      "bytes": 4394
     },
     {
       "path": "src/pages/QuoteRequest.tsx",
@@ -1043,8 +1043,8 @@
     },
     {
       "path": "src/pages/Blog.business-profile.test.tsx",
-      "sha256": "1c0e52d6477965d155a67a3742dd90c9aa74543f0e790abfcd63f7fdfbd7c96a",
-      "bytes": 3152
+      "sha256": "983cdca43b3ca84f8dbb0fc1c77d44464ab71747b5948a9c77cb939d541f3f08",
+      "bytes": 3450
     },
     {
       "path": "src/pages/admin/AdminContactInfo.tsx",
@@ -1069,7 +1069,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-16T10:24:43.558Z",
+  "checksumsRefreshedAt": "2026-10-16T10:47:29.626Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

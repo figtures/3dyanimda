@@ -14,6 +14,8 @@ export default defineConfig(() => ({
     },
   },
   plugins: [occtCspPlugin(), react()],
+  // Neutral content-addressed chunks also avoid name-based browser filter rules.
+  build: { rollupOptions: { output: { chunkFileNames: "assets/[hash].js", entryFileNames: "assets/[hash].js" } } },
   worker: { format: "es", plugins: () => [occtCspPlugin()] },
   // Discover worker readers before the first upload: Vite's late dependency
   // optimization otherwise reloads the page and discards the selected File.

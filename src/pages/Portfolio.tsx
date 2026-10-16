@@ -1,8 +1,7 @@
+import {usePublicPage} from "@/content/public-page-query";
 import "@/lib/i18n";
-import { useEffect, useState } from "react";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
-import { supabase } from "@/lib/supabase";
 import { useTranslation } from "react-i18next";
 import autoImg from "@/assets/auto-parts-collection.jpg";
 import scanImg from "@/assets/service-scanning.jpg";
@@ -27,17 +26,10 @@ type DbProject = {
 const Portfolio = () => {
   const { i18n } = useTranslation();
   const isEn = i18n.language?.startsWith("en");
-  const [dbItems, setDbItems] = useState<DbProject[]>([]);
+  const {data}=usePublicPage("/portfoy");
+  const dbItems=(data||[]) as DbProject[];
 
-  useEffect(() => {
-    const nowIso = new Date().toISOString();
-    supabase.from("portfolio_projects" as any)
-      .select("id, slug, title_tr, title_en, excerpt_tr, excerpt_en, cover_image_url, industry")
-      .eq("published", true)
-      .or(`published_at.is.null,published_at.lte.${nowIso}`)
-      .order("sort_order", { ascending: true })
-      .then(({ data }) => setDbItems((data as any) ?? []));
-  }, []);
+
 
   return (
   <>

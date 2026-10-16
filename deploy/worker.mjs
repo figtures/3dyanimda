@@ -41,6 +41,9 @@ export default {
     result.headers.set('X-Content-Type-Options','nosniff');
     if(preview || privateRoute || ['/app','/app.html','/404','/404.html'].includes(url.pathname) || result.status===404) result.headers.set('X-Robots-Tag','noindex, nofollow');
     if(privateRoute) result.headers.set('Cache-Control','no-store');
+    else if(result.headers.get('Content-Type')?.includes('text/html')) result.headers.set('Cache-Control','no-cache');
+    // Failed hashed assets must not be cached through a deployment transition.
+    if(result.status>=400 && url.pathname.startsWith('/assets/')) result.headers.set('Cache-Control','no-store');
     return result;
   }
 };

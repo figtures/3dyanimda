@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-16",
+  "reviewedAt": "2026-10-16T10:47:29.497Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "dd8c2aaff054540e459c9befb102a6838eee8373f09dc37f3a1d695b8c453acd",
-  "sourceFileCount": 564,
+  "sourceHash": "6277f584a25c61cb50ce1fd48f242789dc9bfb37bdfb61418101fbb5e93b80dc",
+  "sourceFileCount": 574,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,9 +35,9 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/pricing-readiness-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
     "latestBrandAssetFiles": 80,
-    "latestSourceSnapshot": "docs/audits/pricing-readiness-2026-10-16.json",
+    "latestSourceSnapshot": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
     "availableThemes": 4,
     "themeCoverageNote": "Four themes covered by current quote (32), homepage (64) and navigation (64) browser cases; historical all-route evidence retains its original dates.",
@@ -243,6 +243,10 @@
     {
       "file": "docs/audits/pricing-readiness-2026-10-16.json",
       "sha256": "8822006034cc896c67521dcb7c47b3ca7252f839ebb615b00b6f70c8eca69511"
+    },
+    {
+      "file": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
+      "sha256": "02c36267aa49628ec329a5b88f2d9792faa521aecc75e2af831c46c93402588a"
     }
   ],
   "limitations": [

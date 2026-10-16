@@ -1,9 +1,8 @@
+import {usePublicPage} from "@/content/public-page-query";
 import { safeHtml } from "@/lib/safe-html";
 import "@/lib/i18n";
 import { getTenantIdentity } from "@/lib/tenant";
-import { useEffect, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
-import { supabase } from "@/lib/supabase";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { Prose } from "@/components/site/Prose";
@@ -91,15 +90,8 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [dbPost, setDbPost] = useState<DbPost | null | undefined>(undefined);
-
-  useEffect(() => {
-    if (!slug) return;
-    supabase.from("blog_posts")
-      .select("slug, title, excerpt, content, title_en, excerpt_en, content_en, cover_image_url, tags, published_at")
-      .eq("slug", slug).eq("published", true).maybeSingle()
-      .then(({ data }) => setDbPost(data as DbPost | null));
-  }, [slug]);
+  const {data}=usePublicPage(`/blog/${slug}`);
+  const dbPost=data as DbPost|null|undefined;
 
   if (dbPost === undefined) return <div className="min-h-screen" aria-hidden />;
   if (dbPost === null) return <Navigate to="/blog" replace />;

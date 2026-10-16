@@ -1,0 +1,40 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "reviewedAt": "2026-10-16T10:47:29.496Z",
+  "scope": "Atomic public route navigation, admin lazy-module recovery and numeric editing, reference-centred volume estimates for open surfaces. No selling rates, auth policies, business content or brand identity changed.",
+  "sourceHash": "6277f584a25c61cb50ce1fd48f242789dc9bfb37bdfb61418101fbb5e93b80dc",
+  "sourceFileCount": 574,
+  "reference": {
+    "repository": "figtures/3d-yaninda-website",
+    "files": [
+      "src/components/quote/StlViewer.tsx",
+      "src/pages/QuoteRequest.tsx"
+    ],
+    "findings": [
+      "Reference centres mesh before signed tetrahedron sum; there is no closed-surface gate.",
+      "Reference computes minimum/setup charges even with zero estimated volume.",
+      "Reference embeds fallback prices. Those have not been silently substituted for business rates."
+    ]
+  },
+  "checks": {
+    "unitTests": {
+      "files": 37,
+      "tests": 217,
+      "result": "pass"
+    },
+    "workerTests": {
+      "tests": 7,
+      "result": "pass"
+    },
+    "typecheck": "pass",
+    "productionBuild": "pass"
+  },
+  "limitations": [
+    "Browser transition, admin recovery and brand/theme regressions run in CI; this review does not claim their new results yet.",
+    "A successful source push is not evidence that every custom domain runs this revision.",
+    "Live material prices and general pricing settings must be saved by the owner; no guessed selling rates were written."
+  ],
+  "historicalEvidence": "Existing content, image provenance, all-route and brand reviews are carried forward only for unchanged content. New runtime evidence supplements them."
+}

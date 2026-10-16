@@ -1,11 +1,14 @@
+import {installAssetRecovery} from "./lib/asset-recovery";
+installAssetRecovery();
 import "./index.css";
 import {firstContentPaint} from "./lib/first-paint";
 const element=document.getElementById('root')!;
 async function boot() {
-  const [{default:App,preparePublicRoute},{mountApp},{publicRenderState}]=await Promise.all([
+  const [{default:App,preparePublicRoute,prepareInitialRoute},{mountApp},{publicRenderState}]=await Promise.all([
     import('./App'),import('./lib/mount-app'),import('./lib/public-render-state'),
   ]);
   if(element.dataset.hydration==='react-ssg-v1'&&publicRenderState())await preparePublicRoute(location.pathname);
+  await prepareInitialRoute();
   mountApp(element,<App />,!!publicRenderState());
 }
 // Paint the exported document before fetching the interactive application.

@@ -11,7 +11,11 @@ export function measureModel(parts: ModelPart[], format: string, unitAssumed: bo
     const edges = new Map<string, {count: number; direction: number}>();
     let signedVolume = 0;
     // A local origin avoids cancellation in files with large assembly coordinates.
-    const ox=p[0], oy=p[1], oz=p[2];
+    const partMin=[Infinity,Infinity,Infinity], partMax=[-Infinity,-Infinity,-Infinity];
+    for(let i=0;i<p.length;i++) {const k=i%3;partMin[k]=Math.min(partMin[k],p[i]);partMax[k]=Math.max(partMax[k],p[i]);}
+    // Match the reference viewer: measure around the bounding-box centre.
+    // For open surfaces this is a translation-invariant estimate, not a solid volume.
+    const [ox,oy,oz]=partMin.map((v,k)=>(v+partMax[k])/2);
     for (let i = 0; i < p.length; i += 9) {
       const keys: string[] = [];
       for (let j = 0; j < 3; j++) {

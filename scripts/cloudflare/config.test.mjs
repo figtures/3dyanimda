@@ -39,3 +39,8 @@ test('workers.dev cannot be indexed even with approved artifacts',async()=>{
  const home=await worker.fetch(new Request('https://brand.workers.dev/'),env);
  assert.match(home.headers.get('X-Robots-Tag'),/noindex/);
 });
+test('HTML revalidates and missing chunks are not cached across releases',async()=>{
+ const assets={...env,ASSETS:{fetch:async request=>new URL(request.url).pathname.startsWith('/assets/')?new Response('missing',{status:404}):new Response('<html></html>',{headers:{'Content-Type':'text/html','Cache-Control':'public, max-age=86400'}})}};
+ const html=await worker.fetch(new Request('https://3dyanimda.com/3d-baski'),assets);assert.equal(html.headers.get('Cache-Control'),'no-cache');
+ const js=await worker.fetch(new Request('https://3dyanimda.com/assets/old.js'),assets);assert.equal(js.status,404);assert.equal(js.headers.get('Cache-Control'),'no-store');
+});

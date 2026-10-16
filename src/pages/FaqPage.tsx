@@ -1,9 +1,8 @@
+import {usePublicPage} from "@/content/public-page-query";
 import {useBrand} from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { FAQ, faqJsonLd } from "@/components/site/FAQ";
-import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
 import i18n from "@/lib/i18n";
 
 const fallbackItems = [
@@ -14,27 +13,11 @@ const fallbackItems = [
 
 const FaqPage = () => {
   const brand=useBrand();
-  const [items, setItems] = useState(fallbackItems);
-  useEffect(() => {
-    let mounted = true;
-    (async () => {
-      const { data } = await supabase
-        .from("faq_items")
-        .select("question_tr, question_en, answer_tr, answer_en, sort_order, active")
-        .eq("active", true)
-        .order("sort_order", { ascending: true });
-      if (!mounted || !data || data.length === 0) return;
-      const lang = i18n.language?.startsWith("en") ? "en" : "tr";
-      const mapped = data
-        .map((r: any) => ({
-          q: (lang === "en" ? r.question_en : r.question_tr) || r.question_tr || r.question_en || "",
-          a: (lang === "en" ? r.answer_en : r.answer_tr) || r.answer_tr || r.answer_en || "",
-        }))
-        .filter((x) => x.q && x.a);
-      if (mapped.length > 0) setItems(mapped);
-    })();
-    return () => { mounted = false; };
-  }, []);
+  const {data}=usePublicPage("/sss");
+  const lang=i18n.language?.startsWith("en")?"en":"tr";
+  const mapped=((data||[]) as any[]).map(r=>({q:(lang==="en"?r.question_en:r.question_tr)||r.question_tr||r.question_en||"",a:(lang==="en"?r.answer_en:r.answer_tr)||r.answer_tr||r.answer_en||""})).filter(x=>x.q&&x.a);
+  const items=mapped.length?mapped:fallbackItems;
+
 
   return (
     <>

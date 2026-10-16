@@ -1,31 +1,10 @@
-import { useEffect, useState } from "react";
+import {usePublicPage} from "@/content/public-page-query";
 import { useLocation } from "react-router-dom";
-import { useTenant } from "@/contexts/TenantContext";
-import { supabase } from "@/lib/supabase";
 import { Seo } from "@/components/site/Seo";
 export default function BrandLegal() {
-  const { tenant } = useTenant();
   const { pathname } = useLocation();
-  const [doc, setDoc] = useState<{
-    title_tr: string;
-    content_tr: string;
-  } | null>(null);
-  useEffect(() => {
-    let active = true;
-    setDoc(null);
-    supabase
-      .from("legal_documents")
-      .select("title_tr,content_tr")
-      .eq("tenant_id", tenant!.id)
-      .eq("slug", pathname.slice(1))
-      .maybeSingle()
-      .then(({ data }) => {
-        if (active) setDoc(data);
-      });
-    return () => {
-      active = false;
-    };
-  }, [tenant?.id, pathname]);
+  const {data}=usePublicPage(pathname);
+  const doc=data as {title_tr:string;content_tr:string}|null|undefined;
   return (
     <>
       <Seo

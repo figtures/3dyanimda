@@ -20,6 +20,10 @@ describe("source quote engine", () => {
       ((49.6 * 6 + 5.2 * 150) * 10 * 0.85 + 35) * 1.3 * 1.2,
     );
   });
+  it("uses configured minimums for a zero-volume open surface only when explicitly allowed",()=>{
+    expect(computeEstimate(0,m,1,20,1,p,{allowZeroVolume:true})?.total).toBe(150);
+    expect(computeEstimate(-1,m,1,20,1,p,{allowZeroVolume:true})).toBeNull();
+  });
   it("does not estimate a material without a configured price", () => {
     expect(computeEstimate(100, { ...m, pricePerGram: 0 }, 1, 20, 1, p)).toBeNull();
   });
