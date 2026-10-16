@@ -1,4 +1,4 @@
-import { createPortal } from "react-dom";
+import type { ReactNode } from "react";
 import {
   useEffect,
   useMemo,
@@ -70,14 +70,14 @@ export default function QuoteStudio({
   onSpec,
   service,
   stage,
-  previewTarget,
+  renderWorkspace,
 }: {
   file: File | null;
   onFile: (file: File | null) => void;
   onSpec: (spec: StudioSpec) => void;
   service: string;
   stage?: "file" | "options" | "contact";
-  previewTarget?: HTMLElement | null;
+  renderWorkspace?: (preview: ReactNode, options: ReactNode) => ReactNode;
 }) {
   const { tenant } = useTenant();
   const [materials, setMaterials] = useState<CatalogMaterial[]>([]);
@@ -360,9 +360,7 @@ export default function QuoteStudio({
         )}
       </div>
   );
-  return (
-    <div className={`quote-studio${stage ? " quote-studio-staged" : ""}`}>
-      {previewTarget ? createPortal(preview, previewTarget) : previewTarget === undefined ? preview : null}
+  const options = (
       <div className="studio-options" hidden={Boolean(stage && stage !== "options")}>
         {!stage && <h2>Üretim seçenekleri</h2>}
         {service === "3D Baskı" && (
@@ -480,6 +478,8 @@ export default function QuoteStudio({
           kapsamıyla belirlenir. Renk ve malzeme uygunluğu teyit edilir.
         </p>
       </div>
-    </div>
+  );
+  return renderWorkspace ? renderWorkspace(preview, options) : (
+    <div className={`quote-studio${stage ? " quote-studio-staged" : ""}`}>{preview}{options}</div>
   );
 }

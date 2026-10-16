@@ -7,7 +7,7 @@
   "implementationAuthorization": "Current owner request: 3. maddeyi tüm siteler için admin panelden de düzenlenebilir ve tasarımlarla uyumlu biçimde yapalım",
   "baseCommit": "9dc226e7a75ddb20f89e98c522d027f23f907018",
   "previousSourceHash": "18c20d39266b9b49df237fc536b620f7ac179508e1aabc2be7707b61869161b4",
-  "sourceHash": "e0d66c0052729d2f4488b0014e8ec292b5c2b1a59aa0f819cca3a09998e1a857",
+  "sourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
   "sourceFileCount": 546,
   "changes": [
     "Tenant-owned business/contact/profile/About fields with permissions, guarded writes and failed-read data preservation",
@@ -63,6 +63,6 @@
     "Google/social account ownership and indexing are not verified; no profiles or business records were invented or populated.",
     "Deployment and current production HTML are verified separately; this report does not claim publication."
   ],
-  "integratedUpstreamCommit": "cf184fcc1bb4f17c84f853d56f11b554ed3f0d76",
-  "integrationReview": "Preserves concurrent quote interaction/control spacing changes and their existing bounded review. Application files merged without conflicts; review metadata combined. Full 193 unit tests, 64 search contracts, TypeScript and production build passed on the integrated source. Prior CI browser evidence retains its exact commit scope; integrated CI regression will run separately."
+  "integratedUpstreamCommit": "f4a66e2290c5b7b81b94381517fa1af682c4a9fa",
+  "integrationReview": "Preserves concurrent quote interaction/control spacing changes and their existing bounded review. Application files merged without conflicts; review metadata combined. Full 193 unit tests, 64 search contracts, TypeScript and production build passed on the integrated source. Prior CI browser evidence retains its exact commit scope; integrated CI regression will run separately. The subsequent upstream quote static-hydration fix is also preserved; the integrated 193 tests, TypeScript and production build passed again."
 }

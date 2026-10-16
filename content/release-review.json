@@ -10,7 +10,7 @@
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "e0d66c0052729d2f4488b0014e8ec292b5c2b1a59aa0f819cca3a09998e1a857",
+  "sourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
   "sourceFileCount": 546,
   "contentManifestHash": "2d37cca1cca933bf9c99663d1985a90ce9a93aadc578af05847a40fe70ef4257",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -226,11 +226,11 @@
     },
     {
       "file": "docs/audits/persistent-quote-review-2026-10-16.json",
-      "sha256": "ae46022a0805dd0be156a77e989168a090c52019d81107eda9d444b329ccdc13"
+      "sha256": "5572551c6a63d5c80f30706d202434e16d1420db83032a35635df77c311b5932"
     },
     {
       "file": "docs/audits/business-profile-review-2026-10-16.json",
-      "sha256": "e63431b53c28dd86e35c763bbda44ae660f3bc781311228f5533e1ee08f19b23"
+      "sha256": "785933302ea62febd08b0a4f2480e67ad4ac1e53503f236d2cb09b50a3867a98"
     }
   ],
   "limitations": [

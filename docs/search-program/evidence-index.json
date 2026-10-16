@@ -778,8 +778,8 @@
     },
     {
       "path": "src/pages/QuoteRequest.tsx",
-      "sha256": "31e3967fff44e2d25f5e431b542b92e215059bc7ff6b046bfb4b2e6e008cb231",
-      "bytes": 14937
+      "sha256": "bab3190de463208c25e6b7aca2b1aa0066d00ccd0ddad6c9159ddc2a1a6b5745",
+      "bytes": 14788
     },
     {
       "path": "src/pages/career/CareerHub.tsx",
@@ -1008,8 +1008,8 @@
     },
     {
       "path": "docs/audits/business-profile-review-2026-10-16.json",
-      "sha256": "e63431b53c28dd86e35c763bbda44ae660f3bc781311228f5533e1ee08f19b23",
-      "bytes": 3806
+      "sha256": "785933302ea62febd08b0a4f2480e67ad4ac1e53503f236d2cb09b50a3867a98",
+      "bytes": 3948
     },
     {
       "path": "src/lib/business-profile.ts",
@@ -1069,7 +1069,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-16T02:22:44.066Z",
+  "checksumsRefreshedAt": "2026-10-16T02:26:11.802Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

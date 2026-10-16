@@ -19,13 +19,14 @@ const props = () => ({file:null, onFile:vi.fn(), onSpec:vi.fn(), service:'3D Bas
 const change = (label: string, value: string) => fireEvent.change(screen.getByLabelText(label), {target:{value}});
 describe('quote production preferences', () => {
   it('keeps one interactive model in its persistent pane through every step', async () => {
-    const target = document.createElement('div'); document.body.append(target);
+    const layout = (preview: React.ReactNode, options: React.ReactNode) => <div><aside data-testid="persistent-preview">{preview}</aside><main>{options}</main></div>;
     const p={...props(),file:new File(['solid test'],'persistent.stl')};
-    const view=render(<QuoteStudio {...p} stage="file" previewTarget={target}/>);
+    const view=render(<QuoteStudio {...p} stage="file" renderWorkspace={layout}/>);
     try {
+      const target=screen.getByTestId('persistent-preview');
       const model=await screen.findByRole('button',{name:'Modeli ölç'});
       for (const stage of ['options','contact','file'] as const) {
-        view.rerender(<QuoteStudio {...p} stage={stage} previewTarget={target}/>);
+        view.rerender(<QuoteStudio {...p} stage={stage} renderWorkspace={layout}/>);
         expect(target.contains(model)).toBe(true);
         expect(model).toBeVisible();
         fireEvent.click(model);
@@ -37,7 +38,7 @@ describe('quote production preferences', () => {
       expect(p.onFile).not.toHaveBeenCalled();
       fireEvent.click(screen.getByRole('button',{name:'Dosyayı kaldır'}));
       expect(p.onFile).toHaveBeenCalledWith(null);
-    } finally { view.unmount(); target.remove(); }
+    } finally { view.unmount(); }
   });
 
   it('preserves material and measured estimate when moving between file and options steps', async () => {
