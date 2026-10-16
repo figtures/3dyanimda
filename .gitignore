@@ -36,3 +36,6 @@ docs/previews/themes/*.png
 .cloudflare/
 artifacts/
 __pycache__/
+
+# Supabase CLI local state
+supabase/.temp/

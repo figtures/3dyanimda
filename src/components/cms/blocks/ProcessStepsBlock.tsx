@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import type { ProcessStepsData } from "@/lib/cms/blocks";
 
 export function ProcessStepsBlock({ data }: { data: ProcessStepsData }) {
@@ -10,7 +11,7 @@ export function ProcessStepsBlock({ data }: { data: ProcessStepsData }) {
       <div className="container-page">
         {data.eyebrow && <p className="eyebrow">{data.eyebrow}</p>}
         {data.title_html && (
-          <h2 className="font-display text-3xl mt-3 text-foreground max-w-2xl" dangerouslySetInnerHTML={{ __html: data.title_html }} />
+          <h2 className="font-display text-3xl mt-3 text-foreground max-w-2xl" dangerouslySetInnerHTML={{ __html: safeHtml(data.title_html) }} />
         )}
         <ol className={`mt-10 grid gap-4 ${colCls}`}>
           {items.map((s, i) => (

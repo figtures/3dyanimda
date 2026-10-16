@@ -18,8 +18,8 @@
     },
     {
       "path": ".github/workflows/search-quality.yml",
-      "sha256": "6c943788b89531c63cbd2a99c4f8b59e7c0a5db55e18f07539ea0ffae29b00cb",
-      "bytes": 3245
+      "sha256": "1ae353c130097eab0d3c6bb1616cb35f26decb91df9e50cb1e5c0948730b7d96",
+      "bytes": 3610
     },
     {
       "path": "docs/audits/content-contract-audit-2026-10-11.json",
@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "78b653aafb100c5d475dd7b767461431777cf00c231961fc46132fadb7814576",
-      "bytes": 6974
+      "sha256": "150e6bf46ac771131f20b0e2f481ef75a523eacf3318cab2aa9ac757d9177465",
+      "bytes": 7243
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -333,13 +333,13 @@
     },
     {
       "path": "scripts/quality/critical-css.mjs",
-      "sha256": "b11e221469a2747e711d26a278bf245ee9512ec73df17408e5712214959b585c",
-      "bytes": 4209
+      "sha256": "317d820d257308e9e92dcf552c54ef3ad1ccc62d902b6e3b381e021ab4c58a1d",
+      "bytes": 4406
     },
     {
       "path": "scripts/quality/critical-css.test.mjs",
-      "sha256": "f956c87153309622c33ecfe31fa9b3479fe46dbf475e94c671cea35073884730",
-      "bytes": 2194
+      "sha256": "8677de2963e1b370a9b959f5cc29f5a3544e075619c1623b0b594b940311545f",
+      "bytes": 2718
     },
     {
       "path": "scripts/quality/evidence-index.mjs",
@@ -653,8 +653,8 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "01b8bfe67c8a0c6fac53cb6f4ea243d87800bca953e82fdd2ceb6a7e0bfbe3bc",
-      "bytes": 470
+      "sha256": "3cecc468b038afe7335a7ff87543321051634f817846b34612c68dd8112c8ccc",
+      "bytes": 514
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
@@ -768,8 +768,8 @@
     },
     {
       "path": "src/pages/BlogPost.tsx",
-      "sha256": "83b60ecc5ba948b1e17d8679e3c7935bcbb8f9ea2df18e3af34959072c2201c8",
-      "bytes": 4627
+      "sha256": "a00df0832bf3032b72bd0f7302c7cfcf145fe32cc22aa2f55c7067fa729236ee",
+      "bytes": 4681
     },
     {
       "path": "src/pages/Portfolio.tsx",
@@ -778,8 +778,8 @@
     },
     {
       "path": "src/pages/QuoteRequest.tsx",
-      "sha256": "04338d05148a31cb6d8521eaaa489cd272374238f94bab409a4a27346ec50838",
-      "bytes": 12099
+      "sha256": "61a3b849d06046faddada3c5f90743bef12e55c7463c8ff4745bf027e8c25f3e",
+      "bytes": 14398
     },
     {
       "path": "src/pages/career/CareerHub.tsx",
@@ -1009,7 +1009,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-15T23:15:30.243Z",
+  "checksumsRefreshedAt": "2026-10-16T00:21:15.241Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

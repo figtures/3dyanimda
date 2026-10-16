@@ -1,3 +1,5 @@
+import { useTenant } from "@/contexts/TenantContext";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
@@ -31,17 +33,19 @@ const blank = (): Campaign => ({
 
 const AdminCampaigns = () => {
   const [items, setItems] = useState<Campaign[]>([]);
+  const { tenant } = useTenant();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
   const load = async () => {
+    if (!tenant) return;
     setLoading(true);
-    const { data, error } = await supabase.from("discount_campaigns").select("*").order("sort_order");
+    const { data, error } = await supabase.from("discount_campaigns").select("*").eq("tenant_id", tenant.id).order("sort_order");
     if (error) toast.error(error.message);
     setItems((data as any) ?? []);
     setLoading(false);
   };
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(); }, [tenant?.id]);
 
   const upd = (i: number, patch: Partial<Campaign>) =>
     setItems(prev => prev.map((c, idx) => idx === i ? { ...c, ...patch } : c));
@@ -52,7 +56,7 @@ const AdminCampaigns = () => {
     const c = items[i];
     if (!confirm(`"${c.name || "Yeni kampanya"}" silinsin mi?`)) return;
     if (c.id) {
-      const { error } = await supabase.from("discount_campaigns").delete().eq("id", c.id);
+      const { error } = await supabase.from("discount_campaigns").delete().eq("tenant_id", tenant!.id).eq("id", c.id);
       if (error) return toast.error(error.message);
     }
     setItems(prev => prev.filter((_, idx) => idx !== i));
@@ -65,6 +69,7 @@ const AdminCampaigns = () => {
       const { getTenantId } = await import("@/lib/tenant");
       const tid = getTenantId();
       if (!tid) throw new Error("Tenant bulunamadı");
+      if (items.some(c => !c.name.trim() || !["percent","fixed"].includes(c.discount_type) || [c.discount_value,c.min_quote_amount,c.min_quantity,c.sort_order].some(v => !Number.isFinite(v) || v < 0) || !Number.isInteger(c.min_quantity) || c.min_quantity < 1 || (c.discount_type === "percent" && c.discount_value > 100))) throw new Error("Kampanya adı, pozitif adet ve geçerli indirim değerleri girin. Yüzde indirim 0–100 olmalı.");
       for (const c of items) {
         const payload = {
           tenant_id: tid,
@@ -74,7 +79,7 @@ const AdminCampaigns = () => {
           countdown_seconds: c.countdown_seconds, active: c.active, sort_order: c.sort_order,
         };
         if (c.id) {
-          const { error } = await supabase.from("discount_campaigns").update(payload).eq("id", c.id);
+          const { error } = await supabase.from("discount_campaigns").update(payload).eq("tenant_id", tid).eq("id", c.id);
           if (error) throw error;
         } else {
           const { error } = await supabase.from("discount_campaigns").insert(payload);
@@ -96,7 +101,7 @@ const AdminCampaigns = () => {
         <div>
           <h1 className="font-display text-2xl">Kampanyalar & İndirimler</h1>
           <p className="text-xs text-muted-foreground mt-1">
-            Müşteri teklif sayfasında belirlediğiniz koşulları sağladığında, geri sayımlı bir indirim bandı belirir. Süre dolmadan gönderirse indirim uygulanır.
+            Koşullara uyan kampanya hızlı fiyat ön tahmininde gösterilir. İndirim teknik teklif aşamasında teyit edilir.
           </p>
         </div>
         <div className="flex gap-2">
@@ -115,6 +120,7 @@ const AdminCampaigns = () => {
         </div>
       )}
 
+      <p className="text-sm"><Link className="underline" to="/admin/pricing">Malzeme fiyatları ve hesaplama ayarları</Link> · Hızlı fiyat oluşması için bu ayarlar tamamlanmalı.</p>
       <div className="space-y-3">
         {items.map((c, i) => (
           <div key={c.id ?? `new-${i}`} className="border border-border rounded-md p-4 bg-card">
@@ -141,11 +147,7 @@ const AdminCampaigns = () => {
                 <Input type="number" step="0.01" value={c.discount_value}
                   onChange={e => upd(i, { discount_value: parseFloat(e.target.value) || 0 })} />
               </div>
-              <div>
-                <Label className="text-xs">Süre (saniye)</Label>
-                <Input type="number" value={c.countdown_seconds}
-                  onChange={e => upd(i, { countdown_seconds: parseInt(e.target.value) || 0 })} />
-              </div>
+
 
               <div className="col-span-2 md:col-span-3">
                 <Label className="text-xs">Mesaj (banner üzerinde gösterilir)</Label>
@@ -183,7 +185,7 @@ const AdminCampaigns = () => {
       </div>
 
       <div className="text-[11px] text-muted-foreground border border-border rounded-md p-3 bg-muted/30">
-        <strong>Nasıl çalışır?</strong> Müşteri STL yükleyip tahmini fiyat oluşunca, koşullara uyan en yüksek öncelikli aktif kampanya seçilir. Geri sayım başlar; süre dolmadan teklif gönderilirse indirim tutarı uygulanır ve teklif kaydında saklanır.
+        <strong>Nasıl çalışır?</strong> Müşteri STL yükleyip tahmini fiyat oluşunca, koşullara uyan en yüksek öncelikli aktif kampanya seçilir. İndirim ön tahmini teklif kaydına eklenir; kesin fiyat yönetici tarafından doğrulanır. Süreli kampanya için sunucu tarafı son tarih tanımlaması gerekir; bu ekranda geri sayım uygulanmaz.
       </div>
     </div>
   );

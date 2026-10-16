@@ -17,7 +17,7 @@ export async function inlineCriticalCss(page) {
    if(!(link instanceof HTMLLinkElement)||!link.href.startsWith(location.origin+'/assets/')||link.rel!=='stylesheet')continue;
    const text=select(sheet.cssRules);const style=document.createElement('style');style.setAttribute('data-static-critical','');style.textContent=text;link.before(style);total+=text.length;
    const fallback=document.createElement('noscript');fallback.textContent=`<link rel="stylesheet" href="${link.getAttribute('href').replaceAll('&','&amp;').replaceAll('"','&quot;')}">`;link.after(fallback);
-   link.rel='preload';link.as='style';link.setAttribute('fetchpriority','low');link.setAttribute('onload',"this.onload=null;this.rel='stylesheet'");
+   link.rel='preload';link.as='style';link.setAttribute('fetchpriority','low');link.removeAttribute('onload');
    link.setAttribute('data-deferred-stylesheet','');
   }
   // Dynamic-import preload hints from the rendering session would otherwise
@@ -51,8 +51,11 @@ export async function serializedPrerender(page) {
   html.querySelectorAll('link[rel="modulepreload"]').forEach(link=>link.remove());
   html.querySelectorAll('link[data-deferred-stylesheet]').forEach(link=>{
    link.setAttribute('rel','preload');link.setAttribute('as','style');
-   link.setAttribute('onload',"this.onload=null;this.rel='stylesheet'");
+   link.removeAttribute('onload');
   });
+  if(html.querySelector('link[data-deferred-stylesheet]') && !html.querySelector('script[src="/deferred-styles.js"]')) {
+   const loader=document.createElement('script');loader.src='/deferred-styles.js';loader.defer=true;html.querySelector('head').appendChild(loader);
+  }
   return '<!doctype html>\n'+html.outerHTML;
  });
 }

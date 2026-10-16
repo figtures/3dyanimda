@@ -1,23 +1,46 @@
 import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-const api = vi.hoisted(() => ({ pricingError: false, materialError: false, filters: vi.fn() }));
+const api = vi.hoisted(() => ({ pricingError: false, materialError: false, campaigns: [] as any[], filters: vi.fn() }));
 vi.mock('@/contexts/TenantContext', () => ({ useTenant: () => ({ tenant: { id: 'brand-a' } }) }));
 vi.mock('@/lib/supabase', () => ({ demoMode: false, supabase: { from: (table: string) => {
   const result = () => table === 'materials' ? { error: api.materialError, data: api.materialError ? null : [
     { id: 'pla', name: 'PLA', technology: 'FDM', density_g_cm3: 1.24, price_per_gram: 6, setup_fee: 35, min_price: 90, description: 'PLA açıklaması', color: 'Siyah' },
     { id: 'asa', name: 'ASA', technology: 'FDM', density_g_cm3: 0, price_per_gram: 0, setup_fee: 0, min_price: 0 },
     { id: 'resin', name: 'Şeffaf Reçine', technology: 'SLA', density_g_cm3: 1.2, price_per_gram: 8, setup_fee: 40, min_price: 100 },
-  ] } : table === 'pricing_settings' ? { error: api.pricingError, data: ['margin_percent','vat_percent','labor_per_hour','min_order_price'].map((key,i) => ({ key, value: [30,20,150,150][i] })) } : { data: [] };
+  ] } : table === 'pricing_settings' ? { error: api.pricingError, data: ['margin_percent','vat_percent','labor_per_hour','min_order_price'].map((key,i) => ({ key, value: [30,20,150,150][i] })) } : { data: api.campaigns };
   const chain = { select: () => chain, eq: (key: string, value: unknown) => { api.filters(table,key,value); return chain; }, order: () => chain, then: (resolve: (value: unknown) => unknown, reject: (error: unknown) => unknown) => Promise.resolve(result()).then(resolve,reject) };
   return chain;
 } } }));
 vi.mock('./StlViewer', () => ({ default: ({onMetrics}: {onMetrics: (metrics: unknown) => void}) => <button onClick={() => onMetrics({volumeCm3: 100, bboxCm: {x:10,y:5,z:2}, triangles:12})}>Modeli ölç</button> }));
 import QuoteStudio from './QuoteStudio';
 afterEach(cleanup);
-beforeEach(() => { vi.clearAllMocks(); api.pricingError = false; api.materialError = false; });
+beforeEach(() => { vi.clearAllMocks(); api.pricingError = false; api.materialError = false; api.campaigns = []; });
 const props = () => ({file:null, onFile:vi.fn(), onSpec:vi.fn(), service:'3D Baskı'});
 const change = (label: string, value: string) => fireEvent.change(screen.getByLabelText(label), {target:{value}});
 describe('quote production preferences', () => {
+  it('preserves material and measured estimate when moving between file and options steps', async () => {
+    const p={...props(),file:new File(['solid test'],'test.stl')};
+    const view=render(<QuoteStudio {...p} stage="file"/>);
+    await waitFor(()=>expect(document.querySelector('option[value="pla"]')).toBeTruthy());
+    fireEvent.click(await screen.findByRole('button',{name:'Modeli ölç'}));
+    view.rerender(<QuoteStudio {...p} stage="options"/>);
+    change('Malzeme tercihi','pla');
+    expect(p.onSpec.mock.lastCall?.[0].estimatedTotal).toBeGreaterThan(0);
+    view.rerender(<QuoteStudio {...p} stage="file"/>);
+    view.rerender(<QuoteStudio {...p} stage="options"/>);
+    expect(screen.getByLabelText('Malzeme tercihi')).toHaveValue('pla');
+    expect(p.onSpec.mock.lastCall?.[0].estimatedTotal).toBeGreaterThan(0);
+  });
+  it('shows configured campaign content and removes its discount when eligibility changes', async () => {
+    api.campaigns=[{name:'Seri üretim',badge:'SERİ',message:'Beş adet ve üzeri',discount_type:'percent',discount_value:10,min_quote_amount:0,min_quantity:5}];
+    const p={...props(),file:new File(['solid test'],'test.stl')}; render(<QuoteStudio {...p}/>);
+    await screen.findByRole('option',{name:'PLA'}); change('Malzeme tercihi','pla');
+    fireEvent.click(await screen.findByRole('button',{name:'Modeli ölç'}));
+    change('Adet','5'); expect(await screen.findByText('Beş adet ve üzeri')).toBeInTheDocument();
+    expect(p.onSpec.mock.lastCall?.[0].discount).toBeGreaterThan(0);
+    change('Adet','1'); expect(p.onSpec.mock.lastCall?.[0].discount).toBe(0);
+    expect(screen.queryByText('Beş adet ve üzeri')).not.toBeInTheDocument();
+  });
   it('loads all active technologies for the selected brand and resets incompatible material choices', async () => {
     const p=props(); render(<QuoteStudio {...p}/>);
     await screen.findByRole('option',{name:'Şeffaf Reçine'});

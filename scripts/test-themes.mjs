@@ -117,13 +117,15 @@ try {
     }
     await page.setViewportSize({ width: 390, height: 844 });
     await visit("/teklif-al", theme);
-    await page.getByRole("heading", { name: "Üretim seçenekleri" }).waitFor();
+    await page.getByRole("heading", { name: "Hizmetinizi seçin, dosyanızı ekleyin" }).waitFor();
     await page.getByRole("button", { name: "3D Tarama", exact: true }).click();
+    await page.getByRole("button", {name:"Dosya olmadan devam et"}).click();
     await page
       .getByText(
         "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır.",
       )
       .waitFor();
+    await page.getByRole("button", {name:"Geri",exact:true}).click();
     await page.getByRole("button", { name: "3D Baskı", exact: true }).click();
     const faces = [
       [
@@ -164,6 +166,8 @@ try {
       buffer: Buffer.from(stl),
     };
     await page.locator(".studio-file input").setInputFiles(file);
+    await page.getByRole("button", {name:"Üretim tercihlerini seç"}).click();
+    await page.getByLabel("Malzeme tercihi").selectOption("demo-pla");
     await page.locator(".estimate-box strong").waitFor();
     const price = await page.locator(".estimate-box strong").innerText();
     await page.getByLabel("Adet", { exact: true }).fill("100");
@@ -178,8 +182,11 @@ try {
     if (theme === "studio") {
       await visit("/", theme);
       await page.locator(".upload-label input").setInputFiles(file);
-      await page.locator(".estimate-box strong").waitFor();
+      await page.getByRole("button", {name:"Üretim tercihlerini seç"}).click();
+    await page.getByLabel("Malzeme tercihi").selectOption("demo-pla");
+    await page.locator(".estimate-box strong").waitFor();
       assert.ok(page.url().includes("/teklif-al"));
+      await page.getByRole("button", {name:"Geri",exact:true}).click();
       await page.getByRole("button", { name: "Dosyayı kaldır" }).click();
       assert.equal(await page.locator(".estimate-box strong").count(), 0);
       await visit("/", theme);

@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import { Prose } from "@/components/site/Prose";
 import { CheckCircle2 } from "lucide-react";
 import type { ServiceBodyData } from "@/lib/cms/blocks";
@@ -10,7 +11,7 @@ export function ServiceBodyBlock({ data }: { data: ServiceBodyData }) {
       <div className="container-page grid lg:grid-cols-12 gap-12 items-start">
         <div className={hasAside ? "lg:col-span-7" : "lg:col-span-12"}>
           <Prose>
-            <div dangerouslySetInnerHTML={{ __html: data.body_html || "" }} />
+            <div dangerouslySetInnerHTML={{ __html: safeHtml(data.body_html || "") }} />
           </Prose>
         </div>
         {hasAside && (

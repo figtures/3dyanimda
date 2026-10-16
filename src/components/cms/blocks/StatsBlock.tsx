@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import type { StatsData } from "@/lib/cms/blocks";
 
 export function StatsBlock({ data }: { data: StatsData }) {
@@ -9,7 +10,7 @@ export function StatsBlock({ data }: { data: StatsData }) {
       <div className="container-page">
         {data.eyebrow && <p className="eyebrow">{data.eyebrow}</p>}
         {data.title_html && (
-          <h2 className="font-display text-3xl mt-3 text-foreground max-w-2xl" dangerouslySetInnerHTML={{ __html: data.title_html }} />
+          <h2 className="font-display text-3xl mt-3 text-foreground max-w-2xl" dangerouslySetInnerHTML={{ __html: safeHtml(data.title_html) }} />
         )}
         <div className="mt-10 grid md:grid-cols-3 gap-5">
           {items.map((c, i) => (

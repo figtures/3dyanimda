@@ -9,8 +9,8 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ArrowLeft, Save, Loader2, ImagePlus } from "lucide-react";
 import { toast } from "sonner";
-import ReactQuill from "react-quill-new";
-import "react-quill-new/dist/quill.snow.css";
+import { RichTextEditor } from "@/components/admin/RichTextEditor";
+import { safeHtml } from "@/lib/safe-html";
 import { MediaPicker } from "@/components/admin/MediaPicker";
 import { resolveMediaUrl } from "@/lib/media";
 
@@ -81,10 +81,10 @@ const AdminBlogEdit = () => {
       title: title.trim(),
       slug: slug.trim(),
       excerpt: excerpt.trim() || null,
-      content,
+      content: safeHtml(content),
       title_en: titleEn.trim(),
       excerpt_en: excerptEn.trim(),
-      content_en: contentEn,
+      content_en: safeHtml(contentEn),
       cover_image_url: coverUrl || null,
       tags: tags.split(",").map(t => t.trim()).filter(Boolean),
       published,
@@ -143,8 +143,7 @@ const AdminBlogEdit = () => {
             <div className="space-y-1.5">
               <Label>İçerik (TR)</Label>
               <div className="bg-background rounded border border-border">
-                <ReactQuill theme="snow" value={content} onChange={setContent}
-                  modules={{ toolbar: [[{ header: [2,3,false] }], ["bold","italic","underline","strike"], [{ list: "ordered"},{ list: "bullet"}], ["blockquote","code-block"], ["link","image"], ["clean"]] }} />
+                <RichTextEditor value={content} onChange={setContent} />
               </div>
             </div>
           </TabsContent>
@@ -160,8 +159,7 @@ const AdminBlogEdit = () => {
             <div className="space-y-1.5">
               <Label>Content (EN)</Label>
               <div className="bg-background rounded border border-border">
-                <ReactQuill theme="snow" value={contentEn} onChange={setContentEn}
-                  modules={{ toolbar: [[{ header: [2,3,false] }], ["bold","italic","underline","strike"], [{ list: "ordered"},{ list: "bullet"}], ["blockquote","code-block"], ["link","image"], ["clean"]] }} />
+                <RichTextEditor value={contentEn} onChange={setContentEn} />
               </div>
             </div>
           </TabsContent>

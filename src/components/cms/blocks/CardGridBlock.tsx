@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import { Link } from "react-router-dom";
 import * as Icons from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
@@ -17,7 +18,7 @@ export function CardGridBlock({ data }: { data: CardGridData }) {
             {data.title_html && (
               <h2
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mt-3"
-                dangerouslySetInnerHTML={{ __html: data.title_html }}
+                dangerouslySetInnerHTML={{ __html: safeHtml(data.title_html) }}
               />
             )}
             {data.lead && <p className="text-foreground/75 mt-4 leading-relaxed">{data.lead}</p>}

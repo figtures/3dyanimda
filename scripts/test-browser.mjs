@@ -48,18 +48,22 @@ try {
     await page.getByRole("link", { name: "Teklif Al", exact: true }).click();
     await page.getByRole("heading", { name: "Üretim seçenekleri" }).waitFor();
     assert.ok(page.url().includes(brand.slug));
+    await page.getByRole('navigation',{name:'Teklif adımları'}).getByRole('button').nth(2).click();
     assert.equal(
       await page
         .getByRole("button", { name: "Teklif talebini gönder" })
         .isDisabled(),
       true,
     );
+    await page.getByRole('navigation',{name:'Teklif adımları'}).getByRole('button').first().click();
     await page.getByRole("button", { name: "3D Tarama", exact: true }).click();
+    await page.getByRole("button", {name:"Dosya olmadan devam et"}).click();
     await page
       .getByText(
         "Tarama ve modelleme projeleri kapsam üzerinden fiyatlandırılır.",
       )
       .waitFor();
+    await page.getByRole("button", {name:"Geri",exact:true}).click();
     await page.getByRole("button", { name: "3D Baskı", exact: true }).click();
     // Closed tetrahedron, 10 mm edges, positive signed volume.
     const vertices = [
@@ -101,6 +105,8 @@ try {
       buffer: Buffer.from(stl),
     });
     await page.locator(".studio-metrics").waitFor();
+    await page.getByRole("button", {name:"Üretim tercihlerini seç"}).click();
+    await page.getByLabel("Malzeme tercihi").selectOption("demo-pla");
     await page.locator(".estimate-box strong").waitFor();
     const firstPrice = await page.locator(".estimate-box strong").innerText();
     await page.getByLabel("Adet", { exact: true }).fill("100");
@@ -109,6 +115,7 @@ try {
         document.querySelector(".estimate-box strong")?.textContent !== first,
       firstPrice,
     );
+    await page.getByRole("button", {name:"Geri",exact:true}).click();
     await page.locator(".studio-file input").setInputFiles({
       name: "invalid.stl",
       mimeType: "model/stl",

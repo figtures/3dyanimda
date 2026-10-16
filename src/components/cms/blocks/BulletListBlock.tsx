@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import { BadgeCheck, Circle } from "lucide-react";
 import type { BulletListData } from "@/lib/cms/blocks";
 
@@ -12,7 +13,7 @@ export function BulletListBlock({ data }: { data: BulletListData }) {
       <div className="container-page">
         {data.eyebrow && <p className="eyebrow">{data.eyebrow}</p>}
         {data.title_html && (
-          <h2 className="font-display text-2xl md:text-3xl mt-3 text-foreground max-w-2xl" dangerouslySetInnerHTML={{ __html: data.title_html }} />
+          <h2 className="font-display text-2xl md:text-3xl mt-3 text-foreground max-w-2xl" dangerouslySetInnerHTML={{ __html: safeHtml(data.title_html) }} />
         )}
         <ul className={`mt-8 grid gap-3 ${colCls}`}>
           {items.map((i, k) => (

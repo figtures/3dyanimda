@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import "@/lib/i18n";
 import { getTenantIdentity } from "@/lib/tenant";
 import { useEffect, useState } from "react";
@@ -72,7 +73,7 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
             <img src={resolveMediaUrl(post.cover_image_url)} alt={title} className="w-full max-h-[480px] object-cover rounded-xl mb-10" />
           )}
           <Prose>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div dangerouslySetInnerHTML={{ __html: safeHtml(content) }} />
           </Prose>
           <div className="mt-16 max-w-3xl border border-border rounded-2xl p-8 bg-card shadow-soft">
             <h3 className="font-display text-2xl font-semibold tracking-tight">İstanbul'da 3D üretim mi gerekli?</h3>

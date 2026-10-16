@@ -1,3 +1,4 @@
+import { safeHtml } from "@/lib/safe-html";
 import { ReactNode, useEffect, useState } from "react";
 import { Seo } from "./Seo";
 import { PageHero } from "./PageHero";
@@ -62,7 +63,7 @@ export const LegalLayout = ({ title, eyebrow, description, path, updatedAt, chil
               {lang === "en" ? "Last updated" : "Son güncelleme"}: {finalUpdated}
             </p>
             {override ? (
-              <article className="legal-prose" dangerouslySetInnerHTML={{ __html: override.content }} />
+              <article className="legal-prose" dangerouslySetInnerHTML={{ __html: safeHtml(override.content) }} />
             ) : (
               <article className="legal-prose">{children}</article>
             )}

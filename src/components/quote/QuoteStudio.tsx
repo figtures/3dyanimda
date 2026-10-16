@@ -25,6 +25,7 @@ export type StudioSpec = {
   quantity: number;
   campaignName: string | null;
   discount: number;
+  estimatedTotal?: number | null;
 };
 type CatalogMaterial = QuoteMaterial & { technology: string; description?: string; colors?: string };
 const demoMaterials: CatalogMaterial[] = [
@@ -55,6 +56,8 @@ const demoPricing = {
 };
 type Campaign = {
   name: string;
+  badge?: string | null;
+  message?: string;
   discount_type: string;
   discount_value: number;
   min_quote_amount: number;
@@ -65,11 +68,13 @@ export default function QuoteStudio({
   onFile,
   onSpec,
   service,
+  stage,
 }: {
   file: File | null;
   onFile: (file: File | null) => void;
   onSpec: (spec: StudioSpec) => void;
   service: string;
+  stage?: "file" | "options";
 }) {
   const { tenant } = useTenant();
   const [materials, setMaterials] = useState<CatalogMaterial[]>([]);
@@ -154,7 +159,8 @@ export default function QuoteStudio({
           laborPerHour: map.labor_per_hour,
           minOrder: map.min_order_price,
         });
-      if (!c.error) setCampaigns(c.data || []);
+      if (!c.error) setCampaigns((c.data || []).filter(c => ["percent","fixed"].includes(c.discount_type) && [Number(c.discount_value),Number(c.min_quote_amount),Number(c.min_quantity)].every(v => Number.isFinite(v) && v >= 0) && (c.discount_type !== "percent" || Number(c.discount_value) <= 100)));
+      if (!s.error && Number.isFinite(map.infill_percent) && map.infill_percent >= 5 && map.infill_percent <= 100) setInfill(map.infill_percent);
     }).catch(() => { if (active) setCatalogStatus("error"); });
     return () => {
       active = false;
@@ -209,6 +215,7 @@ export default function QuoteStudio({
       quantity,
       campaignName: campaign?.name || null,
       discount,
+      estimatedTotal: price ? price.total - discount : null,
       summary: [
         `Hizmet: ${service}`,
         `Adet: ${quantity}`,
@@ -270,8 +277,8 @@ export default function QuoteStudio({
     [onFile],
   );
   return (
-    <div className="quote-studio">
-      <div>
+    <div className={`quote-studio${stage ? " quote-studio-staged" : ""}`}>
+      <div hidden={stage === "options"}>
         <div
           className="studio-canvas"
           onDragOver={(e) => e.preventDefault()}
@@ -309,9 +316,10 @@ export default function QuoteStudio({
           <div className="studio-file">
             <label>
               <Upload size={15} className="inline mr-2" />
-              3D dosyası · en fazla 20 MB
+              <span>{file ? "Dosyayı değiştir" : "Dosya seç"}</span><small>STL, OBJ, 3MF, STEP, IGES · en fazla 20 MB</small>
               <input
                 type="file"
+                aria-label="3D dosyası"
                 accept=".stl,.obj,.3mf,.step,.stp,.igs,.iges"
                 onChange={(e) => load(e.target.files?.[0] || null)}
               />
@@ -348,9 +356,8 @@ export default function QuoteStudio({
           </p>
         )}
       </div>
-      <div className="studio-options">
-        <p className="brand-eyebrow">PROJENİZE ÖZEL</p>
-        <h2>Üretim seçenekleri</h2>
+      <div className="studio-options" hidden={stage === "file"}>
+        {!stage && <h2>Üretim seçenekleri</h2>}
         {service === "3D Baskı" && (
           <>
             <p className="studio-hint">Malzemeden emin değilseniz seçimi bize bırakın. Seçenekler talep tercihleridir; stok ve üretim uygunluğu teklif aşamasında teyit edilir.</p>
@@ -437,6 +444,7 @@ export default function QuoteStudio({
             </label>
           )}
         </div>
+        {campaign && <div className="quote-campaign" role="status"><strong>{campaign.badge || "KAMPANYA"} · {campaign.name}</strong>{campaign.message && <p>{campaign.message}</p>}<p>{fmtTRY(discount)} ön tahmin indirimi</p></div>}
         <div className="estimate-box" aria-live="polite">
           {demoMode
             ? "Örnek fiyatlarla demo hesaplama"

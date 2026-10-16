@@ -44,6 +44,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: npm audit --audit-level=low
+      - run: npm run test:db
       - run: npm run typecheck
       - run: npm test -- --reporter=dot
       - run: npm run test:search:local
@@ -88,7 +90,13 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: node --test scripts/quality/critical-css.test.mjs
+        env:
+          CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
       - run: node scripts/test-home-flow.mjs
+        env:
+          CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
+      - run: node scripts/test-quote-flow.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
       - run: node scripts/test-navigation.mjs
@@ -97,5 +105,7 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: navigation-${{ github.sha }}
-          path: /tmp/brand-menu-previews/
+          path: |
+            /tmp/brand-menu-previews/
+            /tmp/quote-flow-previews/
           retention-days: 30

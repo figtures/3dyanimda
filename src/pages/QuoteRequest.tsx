@@ -7,6 +7,8 @@ import { useTenant } from "@/contexts/TenantContext";
 import { getSupabase, demoMode } from "@/lib/backend-config";
 import { Seo } from "@/components/site/Seo";
 import { trackGrowth } from "@/lib/growth-analytics";
+import "@/components/quote/quote-flow.css";
+import { fmtTRY } from "@/lib/quote-engine";
 import type { StudioSpec } from "@/components/quote/QuoteStudio";
 const QuoteStudio = lazy(() => import("@/components/quote/QuoteStudio"));
 
@@ -24,6 +26,12 @@ export default function QuoteRequest() {
   const region = new URLSearchParams(search).get("region") || "";
   const requestedService = ({"3d-baski":"3D Baskı","3d-tarama":"3D Tarama","3d-modelleme":"3D Modelleme"} as Record<string,string>)[new URLSearchParams(search).get("service") || ""];
   const started = useRef(false);
+  const [step, setStep] = useState(1);
+  const stepHeading = useRef<HTMLHeadingElement>(null);
+  function goToStep(next: number) {
+    setStep(next);
+    requestAnimationFrame(() => { stepHeading.current?.focus(); stepHeading.current?.scrollIntoView({block:"start", behavior:"smooth"}); });
+  }
   const [service, setService] = useState(() =>
     ["3D Baskı", "3D Tarama", "3D Modelleme"].includes(state?.studioService)
       ? state.studioService
@@ -134,17 +142,10 @@ export default function QuoteRequest() {
         description={`${brand.name} için 3D üretim talebi oluşturun.`}
         path="/teklif-al"
       />
-      <section className="brand-inner">
+      <section className="brand-inner quote-flow">
         <p className="brand-eyebrow">3D STUDIO & TEKLİF AL</p>
-        <h1>
-          Dosyanızdan başlayın.
-          <br />
-          Üretimi birlikte planlayalım.
-        </h1>
-        <p className="section-lead">
-          CAD dosyanızı veya teknik ihtiyacınızı paylaşın. Kullanım koşulları,
-          adet ve takvim üzerinden proje kapsamını birlikte belirleyelim.
-        </p>
+        <h1>Projenize teklif alın.</h1>
+        <p className="section-lead">Dosyanızı paylaşın, üretim tercihlerinizi seçin ve talebinizi iletin. Dosyanız veya malzeme tercihiniz yoksa birlikte belirleyebiliriz.</p>
         {done ? (
           <div role="status" className="form-message">
             <CheckCircle2 className="mb-4" />
@@ -155,6 +156,13 @@ export default function QuoteRequest() {
           </div>
         ) : (
           <>
+            <nav className="quote-steps" aria-label="Teklif adımları">
+              {["Dosya & hizmet", "Üretim tercihleri", "İletişim & gönderim"].map((label, index) => <button type="button" key={label} aria-current={step === index + 1 ? "step" : undefined} onClick={() => goToStep(index + 1)}><span>{index + 1}</span>{label}</button>)}
+            </nav>
+            <div className="quote-workspace">
+            <div className="quote-main">
+            <h2 className="quote-step-title" ref={stepHeading} tabIndex={-1}>{step === 1 ? "Hizmetinizi seçin, dosyanızı ekleyin" : step === 2 ? "Parçanız nasıl üretilecek?" : "Talebinizi tamamlayın"}</h2>
+            <div hidden={step !== 1}>
             <div
               className="quote-service-choice"
               aria-label="Talep edilen hizmet"
@@ -170,15 +178,20 @@ export default function QuoteRequest() {
                 </button>
               ))}
             </div>
+            </div>
+            <div hidden={step === 3}>
             <Suspense fallback={<p>3D Studio yükleniyor…</p>}>
               <QuoteStudio
                 file={file}
                 onFile={setFile}
                 onSpec={setSpec}
                 service={service}
+                stage={step === 1 ? "file" : "options"}
               />
             </Suspense>
-            <div className="quote-grid">
+            </div>
+            {step < 3 && <div className="quote-step-actions">{step === 2 && <button type="button" className="quote-back" onClick={() => goToStep(1)}>Geri</button>}<button type="button" className="brand-button dark" onClick={() => goToStep(step + 1)}>{step === 1 ? (file ? "Üretim tercihlerini seç" : "Dosya olmadan devam et") : "İletişim bilgilerine geç"}<ArrowUpRight size={18}/></button></div>}
+            <div hidden={step !== 3}>
               <form className="brand-form" onSubmit={submit} onFocus={() => { if (!started.current && !demoMode) { trackGrowth(brand.slug,"quote_start",{service}); started.current = true; } }}>
                 <label>
                   Ad soyad *
@@ -217,6 +230,26 @@ export default function QuoteRequest() {
                     maxLength={200}
                   />
                 </label>
+                <input
+                  type="hidden"
+                  name="material_pref"
+                  value={spec.material}
+                />
+                <input type="hidden" name="quantity" value={spec.quantity} />
+                <label className="wide">
+                  Teknik ihtiyaç / proje açıklaması *
+                  <textarea
+                    name="part_description"
+                    minLength={10}
+                    maxLength={2400}
+                    required
+                    defaultValue={[application, region]
+                      .filter(Boolean)
+                      .join(" · ")}
+                    placeholder="Nerede kullanılacak? Yaklaşık ölçüler, beklentiler ve hedef teslim tarihi…"
+                  />
+                </label>
+                <details className="quote-extra wide"><summary>Proje detayları <span>İsteğe bağlı · tarih, revizyon, kullanım koşulları</span></summary><div className="quote-extra-fields">
                 <label>
                   Departman
                   <input
@@ -237,12 +270,6 @@ export default function QuoteRequest() {
                   Hedef teslim tarihi
                   <input name="target_date" type="date" />
                 </label>
-                <input
-                  type="hidden"
-                  name="material_pref"
-                  value={spec.material}
-                />
-                <input type="hidden" name="quantity" value={spec.quantity} />
                 <label className="wide">
                   Kullanım ortamı ve montaj koşulları
                   <textarea
@@ -251,19 +278,7 @@ export default function QuoteRequest() {
                     placeholder="Sıcaklık, yük, kimyasal temas, eşleşen parçalar ve kritik ölçüler…"
                   />
                 </label>
-                <label className="wide">
-                  Teknik ihtiyaç / proje açıklaması *
-                  <textarea
-                    name="part_description"
-                    minLength={10}
-                    maxLength={2400}
-                    required
-                    defaultValue={[application, region]
-                      .filter(Boolean)
-                      .join(" · ")}
-                    placeholder="Nerede kullanılacak? Yaklaşık ölçüler, beklentiler ve hedef teslim tarihi…"
-                  />
-                </label>
+                </div></details>
                 <label className="wide nda-option">
                   <input type="checkbox" name="nda" value="requested" />
                   Gizlilik sözleşmesi görüşmek istiyorum
@@ -297,27 +312,15 @@ export default function QuoteRequest() {
                   <ArrowUpRight size={18} />
                 </button>
               </form>
-              <aside className="quote-aside">
-                <h2>Teknik değerlendirme için</h2>
-                <p>
-                  Hedef tarih bir teslim taahhüdü değildir. Üretim yöntemi,
-                  malzeme ve takvim teknik değerlendirme sonrasında teklif
-                  kapsamında netleştirilir.
-                </p>
-                <p>
-                  Kullanım amacını ve kritik ölçüleri belirtin. Malzeme
-                  tercihiniz yoksa birlikte belirleyebiliriz.
-                </p>
-                <p>
-                  Dosya formatları: STL, OBJ, 3MF, STEP, IGES.
-                  <br />
-                  Dosya başına en fazla 20 MB.
-                </p>
-                <p>
-                  Fiyat ve teslim süresi; tasarım, malzeme, detay seviyesi ve
-                  adede göre değerlendirilir.
-                </p>
-              </aside>
+              <button type="button" className="quote-back" onClick={() => goToStep(2)}>Üretim tercihlerine dön</button>
+            </div>
+            </div>
+            <aside className="quote-summary" aria-label="Talep özeti">
+              <p className="brand-eyebrow">TALEBİNİZ</p><h2>Proje özeti</h2>
+              <dl><div><dt>Hizmet</dt><dd>{service}</dd></div><div><dt>Dosya</dt><dd>{file?.name || "Dosya eklenmedi"}</dd></div><div><dt>Malzeme</dt><dd>{spec.material}</dd></div><div><dt>Adet</dt><dd>{spec.quantity}</dd></div></dl>
+              <div className="quote-summary-price" aria-live="polite"><span>Tahmini üretim tutarı</span><strong>{spec.estimatedTotal != null ? fmtTRY(spec.estimatedTotal) : "Teknik teklif"}</strong><p>{spec.estimatedTotal != null ? "KDV dahil ön tahmin. Kesin tutar teknik inceleme sonrası teyit edilir." : "Uygun STL ve fiyatlandırılmış FDM malzemesi seçildiğinde hızlı ön hesaplama burada görünür."}</p>{spec.campaignName && <p>{spec.campaignName} · {fmtTRY(spec.discount)} tahmini indirim</p>}</div>
+              <details><summary>Değerlendirme nasıl ilerler?</summary><p>Dosya, kullanım amacı ve kritik ölçüler incelenir. Malzeme, stok, üretilebilirlik, son işlem ve teslimat birlikte netleştirilir. Hedef tarih teslim taahhüdü değildir.</p><p>STL, OBJ, 3MF, STEP, IGES · en fazla 20 MB. STL ölçü birimi milimetre kabul edilir.</p></details>
+            </aside>
             </div>
           </>
         )}

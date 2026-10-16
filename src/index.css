@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  --default-ring-width: 3px;
+  --default-ring-color: hsl(var(--ring));
+}
+
+/* Retain v3 outline and elevation sizing during the security upgrade. */
+@utility shadow-sm { --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); }
+@utility outline-none { outline: 2px solid transparent; outline-offset: 2px; }
 
 /* Legal pages — long-form readable typography */
 @layer components {
@@ -156,9 +164,9 @@
   .bg-navy    { background: var(--gradient-navy); }
   .bg-cream-gradient { background: var(--gradient-cream); }
 
-  .shadow-soft   { box-shadow: var(--shadow-md); }
-  .shadow-deep   { box-shadow: var(--shadow-lg); }
-  .shadow-glow-blue { box-shadow: var(--shadow-glow); }
+
+
+
 
   .container-page {
     @apply max-w-[1280px] mx-auto px-6 md:px-10;
@@ -396,3 +404,20 @@
     }
   }
 }
+
+@utility shadow-soft { box-shadow: var(--shadow-md); }
+
+@utility shadow-deep { box-shadow: var(--shadow-lg); }
+
+@utility shadow-glow-blue { box-shadow: var(--shadow-glow); }
+
+/* The editor keeps rich-text formatting without applying styles to public pages. */
+.tiptap h2 { font-size: 1.5rem; font-weight: 600; margin: 1.25rem 0 .5rem; }
+.tiptap h3 { font-size: 1.25rem; font-weight: 600; margin: 1rem 0 .5rem; }
+.tiptap p { margin: .5rem 0; }
+.tiptap ul { list-style: disc; padding-left: 1.5rem; }
+.tiptap ol { list-style: decimal; padding-left: 1.5rem; }
+.tiptap blockquote { border-left: 3px solid hsl(var(--border)); padding-left: 1rem; }
+.tiptap pre { padding: 1rem; border-radius: .5rem; background: hsl(var(--muted)); white-space: pre-wrap; }
+.tiptap a { color: hsl(var(--accent-blue)); text-decoration: underline; }
+.tiptap img { max-width: 100%; height: auto; }
