@@ -1,85 +1,32 @@
-import {usePublicPage} from "@/content/public-page-query";
-import "@/lib/i18n";
+import { useMemo, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
+import { usePublicPage } from "@/content/public-page-query";
+import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
-import { useTranslation } from "react-i18next";
-import autoImg from "@/assets/auto-parts-collection.jpg";
-import scanImg from "@/assets/service-scanning.jpg";
-import printImg from "@/assets/service-printing.jpg";
-import modelImg from "@/assets/service-modeling.jpg";
+import { previewSearch } from "@/lib/tenant";
 import { resolveMediaUrl } from "@/lib/media";
-
-const cases = [
-  { img: autoImg, t: "1972 Mercedes W114 — Kapı Kol Kapağı", c: "Klasik araç restorasyonu", d: "Sağlam bir örnekten tarama, ASA malzeme + renk eşleştirme. 4 günde teslim." },
-  { img: scanImg, t: "Endüstriyel Sensör Braketi", c: "Endüstri 4.0", d: "Üretim hattındaki kırılan PA braketin PA-CF eşdeğer olarak yeniden üretimi. 36 saatte teslim." },
-  { img: printImg, t: "Yatırımcı Sunum Maketi", c: "Hızlı prototip", d: "Konsept ürünün SLA reçine + krom boya ile sunum kalitesinde prototipi. 48 saatte teslim." },
-  { img: modelImg, t: "Tofaş Şahin Gösterge Çerçevesi", c: "Klasik araç restorasyonu", d: "Eksik parçanın fotoğraf + ölçü referansı ile modellenmesi ve siyah ABS baskısı." },
-];
-
-type DbProject = {
-  id: string; slug: string;
-  title_tr: string; title_en: string | null;
-  excerpt_tr: string | null; excerpt_en: string | null;
-  cover_image_url: string | null; industry: string | null;
-};
-
-const Portfolio = () => {
-  const { i18n } = useTranslation();
-  const isEn = i18n.language?.startsWith("en");
-  const {data}=usePublicPage("/portfoy");
-  const dbItems=(data||[]) as DbProject[];
-
-
-
-  return (
-  <>
-    <Seo
-      title="Portföy & Vaka Çalışmaları — 3D Üretim Projelerimiz"
-      description="Klasik araç restorasyonundan endüstriyel parça üretimine, hızlı prototipten kişiye özel projelere — 3D Yanında'nın tamamladığı işlerden seçkiler."
-      path="/portfoy"
-    />
-    <PageHero
-      eyebrow="Portföy"
-      breadcrumbs={[{ label: "Anasayfa", to: "/" }, { label: "Portföy" }]}
-      title={<>Atölyemizden <span className="text-gradient-blue italic font-medium">çıkmış</span> işler.</>}
-      lead="Müşterilerimizin izniyle paylaştığımız vaka çalışmaları. Her parçanın arkasında bir mühendislik kararı var."
-    />
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="container-page grid md:grid-cols-2 gap-6">
-        {dbItems.map((p) => {
-          const title = isEn && p.title_en ? p.title_en : p.title_tr;
-          const excerpt = isEn && p.excerpt_en ? p.excerpt_en : p.excerpt_tr;
-          return (
-            <article key={p.id} className="group border border-border rounded-2xl overflow-hidden bg-card shadow-soft hover:shadow-deep transition-all">
-              {p.cover_image_url && (
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={resolveMediaUrl(p.cover_image_url)} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-              )}
-              <div className="p-7">
-                {p.industry && <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent-blue">{p.industry}</p>}
-                <h2 className="font-display text-2xl font-semibold tracking-tight mt-2">{title}</h2>
-                {excerpt && <p className="text-foreground/70 mt-3 leading-relaxed">{excerpt}</p>}
-              </div>
-            </article>
-          );
-        })}
-        {cases.map((c) => (
-          <article key={c.t} className="group border border-border rounded-2xl overflow-hidden bg-card shadow-soft hover:shadow-deep transition-all">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src={c.img} alt={c.t} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            </div>
-            <div className="p-7">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent-blue">{c.c}</p>
-              <h2 className="font-display text-2xl font-semibold tracking-tight mt-2">{c.t}</h2>
-              <p className="text-foreground/70 mt-3 leading-relaxed">{c.d}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  </>
-  );
-};
-
-export default Portfolio;
+import { modelsForBrand } from "@/themes/models";
+import "@/components/brand/public-sections.css";
+export type PortfolioProject = {id:string;slug:string;title_tr:string;excerpt_tr:string|null;cover_image_url:string|null;industry:string|null;content_tr?:string;gallery?:unknown;materials?:string[];tags?:string[]};
+export default function Portfolio() {
+ const brand=useBrand(),{search}=useLocation(),query=previewSearch(search);
+ const {data}=usePublicPage("/portfoy");
+ const projects=(data||[]) as PortfolioProject[];
+ const [category,setCategory]=useState("Tümü");
+ const categories=useMemo(()=>["Tümü",...new Set(projects.map(p=>p.industry).filter(Boolean) as string[])],[projects]);
+ const visible=projects.filter(p=>category==="Tümü"||p.industry===category);
+ return <>
+  <Seo title={`Portföy ve Proje Çalışmaları | ${brand.name}`} description={`${brand.name} tarafından yayınlanan 3D baskı, tarama ve modelleme proje çalışmalarını inceleyin.`} path="/portfoy" noindex={!projects.length}/>
+  <PageHero eyebrow="Portföy" title="Fikirden parçaya, projenin hikâyesi." lead="Yayınlanan çalışmalar üzerinden projenin ihtiyacını, kullanılan yaklaşımı ve üretim detaylarını inceleyin." breadcrumbs={[{label:"Anasayfa",to:"/"+query},{label:"Portföy"}]}/>
+  <section className="wrap public-collection">
+   {categories.length>2&&<div className="collection-filters" role="group" aria-label="Portföy kategorisi">{categories.map(c=><button type="button" key={c} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div>}
+   {projects.length>0?<div className="portfolio-grid">{visible.map(p=><Link className="portfolio-project" key={p.id} to={"/portfoy/"+encodeURIComponent(p.slug)+query}>{p.cover_image_url&&<img src={resolveMediaUrl(p.cover_image_url)} alt={p.title_tr} width="960" height="720" loading="lazy"/>}<div>{p.industry&&<p className="collection-meta">{p.industry}</p>}<h2>{p.title_tr}</h2>{p.excerpt_tr&&<p>{p.excerpt_tr}</p>}<span className="text-link">Projeyi incele <ArrowUpRight size={18}/></span></div></Link>)}</div>:<>
+    <div className="public-empty"><h2>Proje seçkimiz hazırlanıyor.</h2><p>Bu marka için henüz yayınlanmış bir müşteri projesi bulunmuyor. Aşağıdaki geometriler, üretim olanaklarını anlatan temsili tasarımlardır.</p></div>
+    <div className="portfolio-concepts">{modelsForBrand(brand.slug).map(model=><article key={model.id}><span className="collection-meta">Temsili tasarım</span><h3>{model.material}</h3><p>{model.description}</p><Link className="text-link" to={"/"+query+"#ornekler"}>3D örnekleri incele <ArrowUpRight size={17}/></Link></article>)}</div>
+   </>}
+   <div className="public-contact"><h2>Sizin projenizle başlayalım.</h2><Link className="brand-button" to={"/teklif-al"+query}>Projenizi paylaşın <ArrowUpRight size={18}/></Link></div>
+  </section>
+ </>;
+}

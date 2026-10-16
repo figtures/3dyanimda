@@ -1,10 +1,17 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { occtCspPlugin } from "./scripts/model-import/occt-csp.mjs";
 
 // https://vitejs.dev/config/
-export default defineConfig(() => ({
+export default defineConfig(({ command, mode }) => {
+  const env = { ...loadEnv(mode, process.cwd(), "VITE_"), ...process.env };
+  if (command === "build" && env.VITE_PRIVATE_PREVIEW_HOST) {
+    if (!env.VITE_SUPABASE_URL || !env.VITE_SUPABASE_PUBLISHABLE_KEY) {
+      throw new Error("Private preview build requires VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY at build time.");
+    }
+  }
+  return ({
   server: {
     host: "::",
     port: 8080,
@@ -33,4 +40,5 @@ export default defineConfig(() => ({
       "@tanstack/query-core",
     ],
   },
-}));
+});
+});

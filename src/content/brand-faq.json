@@ -1,0 +1,42 @@
+{
+  "3dyanimda": [
+    ["3D dosyam olmadan proje başlatabilir miyim?", "Evet. Fikrinizi eskiz, fotoğraf, ölçü veya fiziksel numuneyle anlatabilirsiniz. Baskıya geçmeden önce hangi modelleme çalışmalarına ihtiyaç olduğunu birlikte belirleriz."],
+    ["Kişisel bir hobi projesi için de başvurabilir miyim?", "Tek parça, kişisel aksesuar, masaüstü düzenleyici veya hobi prototipi taleplerinizi paylaşabilirsiniz. Üretilebilirlik, malzeme ve kapsam proje özelinde değerlendirilir."],
+    ["Teklif ekranında hangi dosyaları inceleyebilirim?", "STL, OBJ, 3MF, STEP/STP ve IGES/IGS dosyaları desteklenir. Dosya başına sınır 20 MB’tır. Modelin boyutlarını ve yönünü kontrol ederek üretim tercihlerinizi belirtebilirsiniz."],
+    ["Ekrandaki anlık fiyat kesin satış fiyatı mı?", "Anlık hesap, tanımlanmış malzeme ve fiyatlandırma ayarlarına dayanan bir ön tahmindir. Modelin üretilebilirliği, ek işlemler ve teslimat kapsamı değerlendirilerek nihai teklif netleştirilir."],
+    ["İlk prototipten sonra tasarımı değiştirebilir miyim?", "İlk numuneyi form, montaj veya kullanım açısından değerlendirebilirsiniz. İstenen değişiklikleri yeni bir revizyon olarak tanımlayıp modelleme ve yeniden üretim kapsamını ayrıca planlarız."],
+    ["Hangi malzemeyi seçmeliyim?", "Parçanın nerede kullanılacağını, taşıyacağı yükü, sıcaklık ve esneklik beklentinizi paylaşın. Sadece görünüş için hazırlanan bir model ile çalışan bir parçanın malzeme ihtiyacı farklı olabilir."],
+    ["Teslimat süresi ne zaman netleşir?", "Dosya, adet, malzeme, yüzey işlemleri ve mevcut üretim planı incelendikten sonra süre bildirilir. Numune veya revizyon gerekiyorsa bu adımlar da teslimat planına eklenir."],
+    ["Dosyam üretime hazır değilse ne olur?", "Eksik yüzey, ölçek veya ince detay gibi konuları değerlendirme aşamasında paylaşırız. Gereken düzenlemeler ve kapsam onaylanmadan tasarımın üretime uygun olduğu varsayılmaz."]
+  ],
+  "3dsanayi": [
+    ["Bir aparat veya fikstür talebinde hangi bilgiler gerekli?", "Parçanın görevini, eşleştiği yüzeyleri, kritik ölçüleri, adet ve kullanım koşullarını paylaşın. Teknik resim, CAD modeli ve çalışma istasyonu fotoğrafları kapsamı netleştirmeyi kolaylaştırır."],
+    ["CAD çizimi olmayan bir parçayı yeniden üretebilir miyiz?", "Fiziksel numune, ölçüler ve montaj bilgileri üzerinden tarama veya modelleme ihtiyacını değerlendirebiliriz. Aşınmış ya da kırık bölgelerin özgün geometrisi ayrıca doğrulanmalıdır."],
+    ["Seri üretim öncesinde numune alınabilir mi?", "Projenin gerektirdiği durumlarda ilk numune üzerinden montaj ve kullanım değerlendirmesi planlanabilir. Kabul kriterleri ve sonraki adetlerin kapsamı teklif aşamasında belirlenir."],
+    ["Üretim hattında kullanılacak malzemeye nasıl karar verilir?", "Sıcaklık, yük, aşınma, kimyasal temas ve çalışma çevrimi birlikte değerlendirilir. Malzeme seçimi yalnızca genel dayanım ifadelerine değil, uygulamanızın koşullarına dayanmalıdır."],
+    ["Hangi teknik dosyaları gönderebilirim?", "Teklif ekranı STL, OBJ, 3MF, STEP/STP ve IGES/IGS modellerini kabul eder; dosya başına sınır 20 MB’tır. Kritik toleransları ayrıca talep açıklamasında belirtin."],
+    ["Tolerans ve kalite beklentisini nasıl paylaşmalıyım?", "Montaj referanslarını, kabul ölçülerini ve kontrol yöntemini teknik resimde veya açıklamada tanımlayın. Belirli bir tolerans ya da sertifika, proje için doğrulanmadan taahhüt edilmiş sayılmaz."],
+    ["Teklifte adet artışı nasıl ele alınır?", "İstenen adetle birlikte tekrar sipariş beklentinizi de yazabilirsiniz. Üretim, hazırlık ve ek işlem maliyetleri değerlendirilerek partiye uygun teklif hazırlanır."],
+    ["Bakım için acil parça ihtiyacını iletebilir miyim?", "İstenen tarihi ve duruşun nedenini talebinizde belirtin. Üretilebilirlik ve kapasite kontrolünden sonra uygulanabilir plan paylaşılır; inceleme yapılmadan teslimat garantisi verilmez."]
+  ],
+  "maketyanimda": [
+    ["Maket teklifi için nereden başlamalıyım?", "Projenin sunum amacını, istediğiniz ölçeği, yaklaşık taban ölçüsünü ve teslim tarihini paylaşın. Kütle, cephe, peyzaj ve aydınlatma gibi detayları kapsamın parçası olarak ayrıca belirtin."],
+    ["Ölçek seçimi maketin detaylarını nasıl etkiler?", "Küçük ölçekte bazı ince detayların sadeleştirilmesi gerekebilir. Sunum mesafesi, taban alanı ve vurgulanacak bölümler birlikte değerlendirilerek okunaklı bir maket kurgusu hazırlanır."],
+    ["Mimari modelim doğrudan baskıya uygun mu?", "Görselleştirme için hazırlanmış modeller her zaman üretime uygun olmayabilir. Duvar kalınlıkları, birleşimler, boşluklar ve küçük elemanlar maket ölçeğinde ayrıca kontrol edilir."],
+    ["Teklif ekranına hangi model dosyalarını ekleyebilirim?", "STL, OBJ, 3MF, STEP/STP ve IGES/IGS dosyaları desteklenir. Dosya başına sınır 20 MB’tır. Farklı bir mimari dosya biçiminiz varsa hangi formatta paylaşabileceğinizi iletişimden sorabilirsiniz."],
+    ["Renk, peyzaj ve yüzey bitişi talep edebilir miyim?", "Beklediğiniz sunum dilini referans görsellerle anlatabilirsiniz. Renk, taban, çevre elemanları ve son işlemler temel baskıdan ayrı değerlendirilebilen proje kalemleridir."],
+    ["Maket taşınabilir veya modüler hazırlanabilir mi?", "Taşıma, kurulum ve saklama koşullarınızı başlangıçta paylaşın. Taban ölçüsü ve proje geometrisine göre bölünebilir parçalar ile bağlantı detayları değerlendirilir."],
+    ["Maket fiyatını hangi bilgiler belirler?", "Ölçek, toplam ölçüler, detay seviyesi, model hazırlığı, malzemeler ve son işlemler birlikte değerlendirilir. Yalnızca bina sayısı veya baskı hacmi nihai maliyeti açıklamak için yeterli olmayabilir."],
+    ["Sunum öncesi revizyon yapabilir miyim?", "Güncel proje dosyasını ve değişen alanları belirtin. Revizyonun model hazırlığına, üretilmiş parçalara ve teslimat planına etkisi ayrıca değerlendirilir."]
+  ],
+  "parcayanimda": [
+    ["Kırık veya kayıp bir plastik parça için ne göndermeliyim?", "Parçanın fotoğrafını, yaklaşık ölçülerini ve monte edildiği yeri paylaşın. Varsa sağlam numune veya eş parça, bağlantı geometrisini anlamamıza yardımcı olur."],
+    ["Tek adet parça yaptırabilir miyim?", "Tek adet taleplerinizi iletebilirsiniz. Model hazırlığı, malzeme ve üretim gereksinimleri değerlendirilerek parçaya özel kapsam ve fiyat belirlenir."],
+    ["Parçanın yerine oturacağını nasıl kontrol ederiz?", "Eşleşen yüzeyleri, delik mesafelerini ve kritik ölçüleri belirtin. Gerekli durumlarda ilk numune üzerinden uyum değerlendirmesi ve revizyon planlanabilir."],
+    ["Dış ortamda kullanılacak parça için hangi bilgiler gerekli?", "Güneş, su, sıcaklık, yük ve kullanım sıklığı gibi koşulları paylaşın. Malzeme ve üretim yaklaşımı bu koşullara göre değerlendirilir; her plastik her ortam için uygun değildir."],
+    ["Güvenlik açısından kritik parçaları da üretiyor musunuz?", "Yük taşıyan, araç güvenliğini etkileyen veya özel standart gerektiren uygulamalar ayrıca değerlendirilir. Dosyanın kabul edilmesi, parçanın ilgili kullanım için onaylandığı anlamına gelmez."],
+    ["Hazır modelimi hangi biçimde yükleyebilirim?", "STL, OBJ, 3MF, STEP/STP ve IGES/IGS dosyalarını teklif ekranında inceleyebilirsiniz. Dosya başına sınır 20 MB’tır. Doğru birimi ve ölçüleri göndermeden önce kontrol edin."],
+    ["Orijinal parçanın rengini ve yüzeyini eşleştirebilir miyiz?", "Renk ve görünüş beklentinizi fotoğraf veya numuneyle belirtin. Malzeme ve üretim yöntemine bağlı farklılıklar olabilir; birebir eşleşme değerlendirme yapılmadan taahhüt edilmez."],
+    ["Tekrar siparişte aynı modeli kullanabilir miyim?", "Önceki teklif veya model bilgisini ve istediğiniz adedi paylaşın. Dosyanın doğru revizyonu ile güncel malzeme, kapsam ve fiyat koşulları doğrulanarak yeni sipariş değerlendirilir."]
+  ]
+}

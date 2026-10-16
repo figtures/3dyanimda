@@ -1,3 +1,4 @@
+import { getTenantId } from "@/lib/tenant";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Loader2, Plus, Trash2, Save } from "lucide-react";
@@ -32,11 +33,11 @@ const empty = (): Partial<Job> => ({
   slug: "yeni-pozisyon-" + Date.now(),
   title_tr: "Yeni Pozisyon",
   title_en: "",
-  location: "Beylikdüzü / İstanbul",
+  location: "İstanbul",
   employment_type: "Tam Zamanlı",
   level: "Mid",
   icon: "Briefcase",
-  active: true,
+  active: false,
   sort_order: 0,
 });
 
@@ -54,7 +55,8 @@ const AdminJobs = () => {
   useEffect(() => { load(); }, []);
 
   const add = async () => {
-    const { data, error } = await supabase.from("job_postings").insert(empty() as any).select().single();
+    if (!getTenantId()) return toast.error("Marka bilgisi bulunamadı.");
+    const { data, error } = await supabase.from("job_postings").insert({ ...empty(), tenant_id: getTenantId()! } as any).select().single();
     if (error) return toast.error(error.message);
     setItems((s) => [data as Job, ...s]);
   };

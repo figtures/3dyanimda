@@ -114,22 +114,22 @@ export default function MachineOperation() {
     <>
       <Seo
         title="Makinemi Siz İşletin — İş Ortaklığı"
-        description="3D yazıcınızı veya tarayıcınızı stüdyomuza alıyoruz, sizin adınıza işletip aylık gelir paylaşımı yapıyoruz. Şeffaf raporlama, sigortalı saklama."
+        description="3D yazıcı veya tarayıcı kapasiteniz için üretim iş birliği talebinizi iletin. Çalışma koşullarını birlikte değerlendirelim."
         path="/kariyer/makine-isletim"
       />
       <PageHero
         eyebrow="Kariyer · Makine İşletim"
-        title={<>Makinenizi <em className="text-accent-blue not-italic">geliriniz</em> haline getirelim.</>}
-        lead="Atıl ya da düşük kapasiteli 3D baskı/tarama ekipmanınızı stüdyomuza alıyor; profesyonel bakım, müşteri yönlendirme ve şeffaf gelir paylaşımı sunuyoruz."
+        title="Üretim kapasitenizi birlikte değerlendirelim."
+        lead="Ekipmanınızı, kapasitenizi ve iş birliği beklentinizi paylaşın. İşletim, bakım, sorumluluklar ve ticari koşullar değerlendirme sonrasında karşılıklı belirlenir."
         breadcrumbs={[{ label: "Anasayfa", to: "/" }, { label: "Kariyer", to: "/kariyer" }, { label: "Makine İşletim" }]}
       />
 
       <section className="bg-background py-16">
         <div className="container-page max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          <Benefit icon={TrendingUp} title="Aylık gelir paylaşımı" desc="Net üretim cirosundan şeffaf pay." />
-          <Benefit icon={Eye} title="7/24 izlenebilirlik" desc="Sipariş, üretim ve gelir raporu paneli." />
-          <Benefit icon={Wrench} title="Profesyonel bakım" desc="Kalibrasyon, yedek parça, uzman teknisyen." />
-          <Benefit icon={Cpu} title="Sigorta & sorumluluk" desc="Stüdyomuzda makineniz tam koruma altında." />
+          <Benefit icon={TrendingUp} title="İş birliği modeli" desc="Kapasitenize ve beklentinize uygun çalışma kapsamı." />
+          <Benefit icon={Eye} title="Teknik değerlendirme" desc="Ekipman, malzeme ve üretim ihtiyaçlarının incelenmesi." />
+          <Benefit icon={Wrench} title="Operasyon planı" desc="Bakım ve üretim sorumluluklarının netleştirilmesi." />
+          <Benefit icon={Cpu} title="Karşılıklı mutabakat" desc="Ticari koşulların çalışma öncesinde belirlenmesi." />
         </div>
       </section>
 

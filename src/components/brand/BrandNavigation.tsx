@@ -9,7 +9,7 @@ import {getSiteTheme} from '@/themes/config';
 import './navigation.css';
 import {brandAsset} from '@/lib/brand-assets';
 const services=[{path:'/3d-baski',label:'3D Baskı',caption:'Dijital modelden fiziksel parçaya',icon:Printer},{path:'/3d-tarama',label:'3D Tarama',caption:'Mevcut objeden yüzey verisine',icon:ScanLine},{path:'/3d-modelleme',label:'3D Modelleme',caption:'Fikir ve ölçüden CAD tasarımına',icon:Layers3}];
-const groups=[{title:'Üretimi planlayın',items:[['/cozumler','Uygulama alanları'],['/sektorler','Sektörler'],['/malzemeler','Malzeme seçenekleri']]},{title:'Bilgiye ulaşın',items:[['/rehber','Teknik rehberler'],['/bolgeler','Hizmet bölgeleri'],['/hizmetler','Tüm hizmetler']]},{title:'Bizi tanıyın',items:[['/hakkimizda','Hakkımızda'],['/iletisim','İletişim'],['/admin/login','Yönetim girişi']]}];
+const groups=[{title:'Üretimi planlayın',items:[['/cozumler','Uygulama alanları'],['/sektorler','Sektörler'],['/malzemeler','Malzeme seçenekleri']]},{title:'Bilgiye ulaşın',items:[['/rehber','Teknik rehberler'],['/bolgeler','Hizmet bölgeleri'],['/hizmetler','Tüm hizmetler'],['/sss','Sık sorulan sorular']]},{title:'Bizi tanıyın',items:[['/hakkimizda','Hakkımızda'],['/portfoy','Portföy'],['/kariyer','Kariyer ve iş birliği'],['/iletisim','İletişim'],['/admin/login','Yönetim girişi']]}];
 export default function BrandNavigation(){
  const brand=useBrand();const location=useLocation();const theme=getSiteTheme(brand.slug,location.search);
  const [expanded,setExpanded]=useState(false);const [mobile,setMobile]=useState(false);

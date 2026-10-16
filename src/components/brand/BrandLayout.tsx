@@ -118,6 +118,9 @@ export function BrandLayout() {
               "Kurumsal",
               [
                 ["/hakkimizda", "Hakkımızda"],
+                ["/portfoy", "Portföy"],
+                ["/kariyer", "Kariyer ve iş birliği"],
+                ["/sss", "Sık sorulan sorular"],
                 ["/iletisim", "İletişim"],
                 ["/gizlilik-politikasi", "Gizlilik"],
                 ["/yasal", "Yasal bilgiler"],

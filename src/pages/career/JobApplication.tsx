@@ -1,5 +1,9 @@
 import { getTenantId } from "@/lib/tenant";
 import { useState } from "react";
+import { useBrand } from "@/brands/config";
+import { usePublicPage } from "@/content/public-page-query";
+import { useLocation } from "react-router-dom";
+import { previewSearch } from "@/lib/tenant";
 import { Link } from "react-router-dom";
 import { z } from "zod";
 import { Seo } from "@/components/site/Seo";
@@ -14,16 +18,7 @@ import { CheckCircle2, FileUp, Loader2, X } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 
-const POSITIONS = [
-  "3D Tarama Operatörü",
-  "Reverse Engineering Mühendisi",
-  "Üretim & Baskı Operatörü",
-  "CAD / CAM Tasarımcı",
-  "Kalite Kontrol Mühendisi",
-  "Müşteri Operasyonları",
-  "Pazarlama / Büyüme",
-  "Diğer",
-];
+
 
 const schema = z.object({
   full_name: z.string().trim().min(2, "Ad soyad gerekli").max(120),
@@ -43,11 +38,17 @@ const ALLOWED = [".pdf", ".doc", ".docx"];
 const MAX_MB = 10;
 
 export default function JobApplication() {
+  const brand=useBrand();
+  const {search}=useLocation();
+  const query=previewSearch(search);
+  const {data: jobs=[]}=usePublicPage("/kariyer");
+  const positions=["Genel Başvuru",...(jobs as any[]).map(job=>job.title_tr)];
+  const requested=new URLSearchParams(search).get("position")||"";
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [cv, setCv] = useState<File | null>(null);
   const [form, setForm] = useState({
-    full_name: "", email: "", phone: "", position: "",
+    full_name: "", email: "", phone: "", position: positions.includes(requested)?requested:"Genel Başvuru",
     experience_years: "", cover_letter: "", portfolio_url: "", linkedin_url: "",
     kvkk_consent: false,
   });
@@ -118,13 +119,13 @@ export default function JobApplication() {
     <>
       <Seo
         title="İş Başvurusu — Kariyer"
-        description="3D Yanında ekibine katılın. Mühendislik, üretim ve operasyon pozisyonları için online başvuru."
+        description={`${brand.name} için genel başvurunuzu veya açık pozisyon başvurunuzu iletin.`}
         path="/kariyer/is-basvurusu"
       />
       <PageHero
         eyebrow="Kariyer · İş Başvurusu"
         title={<>Kadromuza <em className="text-accent-blue not-italic">katılın</em>.</>}
-        lead="Aşağıdaki formu doldurun; başvurunuzu 5 iş günü içinde değerlendirip size dönüş yapıyoruz."
+        lead="Deneyiminizi ve ilgi alanlarınızı paylaşın. Başvurularımızı ekibimizin ihtiyaçları doğrultusunda değerlendiriyoruz."
         breadcrumbs={[{ label: "Anasayfa", to: "/" }, { label: "Kariyer", to: "/kariyer" }, { label: "İş Başvurusu" }]}
       />
 
@@ -154,7 +155,7 @@ export default function JobApplication() {
                     <Select value={form.position} onValueChange={(v) => update("position", v)}>
                       <SelectTrigger><SelectValue placeholder="Pozisyon seçin" /></SelectTrigger>
                       <SelectContent>
-                        {POSITIONS.map((p) => <SelectItem key={p} value={p}>{p}</SelectItem>)}
+                        {positions.map((p) => <SelectItem key={p} value={p}>{p}</SelectItem>)}
                       </SelectContent>
                     </Select>
                   </Field>
@@ -163,7 +164,7 @@ export default function JobApplication() {
                   </Field>
                 </div>
                 <Field label="Ön Yazı">
-                  <Textarea value={form.cover_letter} onChange={(e) => update("cover_letter", e.target.value)} placeholder="Kendinizden, deneyiminizden ve neden 3D Yanında ekibine katılmak istediğinizden bahsedin." rows={6} maxLength={4000} />
+                  <Textarea value={form.cover_letter} onChange={(e) => update("cover_letter", e.target.value)} placeholder="Deneyiminizi, ilgi alanlarınızı ve ekibe katılma motivasyonunuzu anlatın." rows={6} maxLength={4000} />
                 </Field>
               </Section>
 
@@ -186,9 +187,9 @@ export default function JobApplication() {
                 <label className="flex gap-3 items-start cursor-pointer rounded-xl border border-border bg-muted/30 p-4 hover:bg-muted/50 transition-colors">
                   <Checkbox checked={form.kvkk_consent} onCheckedChange={(v) => update("kvkk_consent", !!v)} className="mt-0.5" />
                   <span className="text-[13px] text-foreground/85 leading-relaxed">
-                    <Link to="/basvuru-acik-riza-metni" target="_blank" className="text-accent-blue underline">Açık Rıza Metni</Link>'ni okudum;
+                    <Link to={"/basvuru-acik-riza-metni"+query} target="_blank" className="text-accent-blue underline">Açık Rıza Metni</Link>'ni okudum;
                     iş başvuru süreci kapsamında kişisel verilerimin ve CV'min işlenmesine, en fazla 2 yıl saklanmasına onay veriyorum.
-                    <Link to="/kvkk-aydinlatma-metni" target="_blank" className="text-accent-blue underline ml-1">KVKK Aydınlatma Metni</Link>'ni de inceledim.
+                    <Link to={"/kvkk-aydinlatma-metni"+query} target="_blank" className="text-accent-blue underline ml-1">KVKK Aydınlatma Metni</Link>'ni de inceledim.
                   </span>
                 </label>
               </Section>
@@ -248,7 +249,7 @@ const SuccessCard = ({ onReset }: { onReset: () => void }) => (
       <CheckCircle2 className="h-7 w-7 text-accent-blue" />
     </div>
     <h3 className="font-display text-2xl font-semibold text-primary mb-2">Başvurunuz alındı</h3>
-    <p className="text-muted-foreground mb-6">5 iş günü içinde size geri dönüş yapacağız. Teşekkürler!</p>
+    <p className="text-muted-foreground mb-6">Başvurunuz alındı. Ekibimizin ihtiyaçları doğrultusunda değerlendireceğiz. Teşekkürler!</p>
     <Button variant="outline" onClick={onReset} className="rounded-full">Yeni başvuru</Button>
   </div>
 );

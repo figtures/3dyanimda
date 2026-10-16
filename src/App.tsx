@@ -43,6 +43,8 @@ const Contact = lazy(() => import("./pages/Contact"));
 const FaqPage = lazy(() => import("./pages/FaqPage"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const CareerHub = lazy(() => import("./pages/career/CareerHub"));
+const PortfolioProject = lazy(() => import("./pages/PortfolioProject"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const DynamicPage = lazy(() => import("./pages/DynamicPage"));
 
@@ -124,7 +126,7 @@ const queryClient = new QueryClient();
 const initialState=publicRenderState();
 if(initialState)hydrate(queryClient,{...initialState.queries,queries:initialState.queries.queries.map(q=>({...q,state:{...q.state,dataUpdatedAt:Date.now()}}))});
 function publicRouteComponent(path:string){
- return path==='/'?Index:path==='/teklif-al'?QuoteRequest:path==='/iletisim'?Contact:path==='/hakkimizda'?BrandAbout:['/sektorler','/hizmetler','/cozumler','/malzemeler','/rehber','/bolgeler'].includes(path)?ContentHub:(/^\/(3d-baski|3d-tarama|3d-modelleme)$/.test(path)||/^\/(cozumler|sektorler|malzemeler|rehber|bolgeler)\//.test(path))?ContentPage:null;
+ return path==='/kariyer'?CareerHub:path==='/portfoy'?Portfolio:path.startsWith('/portfoy/')?PortfolioProject:path==='/sss'?FaqPage:path==='/kariyer/is-basvurusu'?JobApplication:path==='/kariyer/makine-isletim'?MachineOperation:path==='/'?Index:path==='/teklif-al'?QuoteRequest:path==='/iletisim'?Contact:path==='/hakkimizda'?BrandAbout:['/sektorler','/hizmetler','/cozumler','/malzemeler','/rehber','/bolgeler'].includes(path)?ContentHub:(/^\/(3d-baski|3d-tarama|3d-modelleme)$/.test(path)||/^\/(cozumler|sektorler|malzemeler|rehber|bolgeler)\//.test(path))?ContentPage:null;
 }
 export async function preparePublicRoute(path:string){
  const component=publicRouteComponent(path);await component?.preload();return !!component;
@@ -178,6 +180,8 @@ const routes = prepareRoutes([
         "/rehber/:slug",
         "/bolgeler/*",
       ].map((path) => ({ path, element: wrap(<ContentPage />) })),
+      { path: "/kariyer", element: wrap(<RequireFeature flag="career"><CareerHub /></RequireFeature>) },
+      { path: "/portfoy/:slug", element: wrap(<RequireFeature flag="portfolio"><PortfolioProject /></RequireFeature>) },
       { path: "/hakkimizda", element: wrap(<BrandAbout />) },
       { path: "/teklif-al", element: wrap(<QuoteRequest />) },
       {
