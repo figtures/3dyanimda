@@ -117,6 +117,7 @@ try {
    if(target.route==='/teklif-al'){
     await page.click('.quote-steps button:nth-child(3)');
     await page.waitForSelector('input[name=full_name]',{visible:true});
+    await page.waitForFunction(()=>document.activeElement?.classList.contains('quote-step-title'));
     await page.type('input[name=full_name]','Browser verification');
     await page.click('.quote-steps button:first-child');
     await page.waitForSelector('.quote-service-choice button:nth-child(2)',{visible:true});
