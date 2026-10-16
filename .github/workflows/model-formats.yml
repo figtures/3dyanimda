@@ -2,7 +2,7 @@ name: Model format preview regression
 on:
   push:
     branches: [main]
-    paths: ['src/lib/model-import/**', 'src/components/quote/**', 'deploy/security-headers.mjs', 'scripts/test-model-formats.mjs', 'scripts/fixtures/model-formats.mjs', '.github/workflows/model-formats.yml', 'vite.config.ts', 'package-lock.json']
+    paths: ['src/lib/model-import/**', 'src/components/quote/**', 'deploy/security-headers.mjs', 'scripts/model-import/**', 'scripts/test-model-formats.mjs', 'scripts/fixtures/model-formats.mjs', '.github/workflows/model-formats.yml', 'vite.config.ts', 'package-lock.json']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,6 +22,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: node --test scripts/model-import/occt-csp.test.mjs
       - run: npm run build
         env:
           VITE_PRIVATE_PREVIEW_HOST: '127.0.0.1'

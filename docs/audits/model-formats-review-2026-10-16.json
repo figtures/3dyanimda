@@ -6,8 +6,8 @@
   "reviewedAt": "2026-10-16",
   "integratedUpstreamCommit": "4ea6fb54111a8c9c6b8c753a19789502a29b1e3c",
   "previousSourceHash": "e608f5506e628f1c1172131a870609734ed8b87f0c9503ef0ade71babf3deb58",
-  "sourceHash": "45c695581818730578e272552808cf15a8557555f61134dc15d4d209a4e51e9a",
-  "sourceFileCount": 558,
+  "sourceHash": "85ca080578e2ce427f8085034b6f27e9c49a67f6c44c95414ad791b480ac25c3",
+  "sourceFileCount": 560,
   "changes": [
     "Interactive STL, OBJ, 3MF, STEP/STP and IGES/IGS preview in the shared quote workspace",
     "Bounded archive/XML parsing, per-file disposable worker, abort/timeout and lazy locally served CAD WASM",
@@ -15,7 +15,8 @@
     "Open surfaces remain viewable without automatic volume-based pricing",
     "Explicit wasm-unsafe-eval CSP permission without JavaScript unsafe-eval; dependency license notices",
     "Per-brand public Cloudflare defaults when build variables are missing; safe origin normalization and cross-brand domain rejection",
-    "Preserves merged admin-managed business identity changes"
+    "Preserves merged admin-managed business identity changes",
+    "Adapt the pinned CAD JS bindings to static Emscripten closures; source hash guard and redistributable modification source/license included. CSP remains free of JavaScript unsafe-eval."
   ],
   "validation": {
     "typescript": "pass",
@@ -27,8 +28,9 @@
       "knownVulnerabilities": 0
     },
     "localBrowserQA": false,
-    "remoteBrowserRegression": "Initial CI 38842003700 found missing test-only backend configuration before any model opened; corrected. Re-execution pending.",
-    "packaging": "Normalized dependency license text to LF to match GitHub source bytes; fresh certificate verified locally."
+    "remoteBrowserRegression": "CI 38842284449 passed STL, OBJ and multi-part 3MF then detected CAD JIT CSP incompatibility. Static binding adaptation implemented and sandbox-tested; full browser matrix re-execution pending.",
+    "packaging": "Normalized dependency license text to LF to match GitHub source bytes; fresh certificate verified locally.",
+    "cadCspSandbox": "Actual STEP and IGES fixtures pass in a Node VM with JavaScript string code generation disabled; 1 regression test."
   },
   "carryForward": "Historical editorial, asset, SEO and admin-business identity evidence retain their original scope and dates. No new full-route or human review is claimed.",
   "limitations": [
