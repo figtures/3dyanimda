@@ -44,3 +44,13 @@ export function assertExportedRouteSets(plan,{htmlPaths,indexPaths,approvedPaths
  for(const route of approvedPaths)assert.ok(indexPaths.includes(route),'Missing approved landing route: '+route);
  for(const route of coreRoutes)assert.ok(indexPaths.includes(route),'Missing core route: '+route);
 }
+
+/** Reachable noindex pages are valid destinations, outside the discovery graph. */
+export function indexableLinkTarget(href,{origin,sourcePath,plan}) {
+ const url=new URL(href,origin);
+ if(url.origin!==origin||/^\/(admin|studio|auth)(\/|$)/.test(url.pathname))return null;
+ const target=url.pathname.replace(/\/+$/,'')||'/';
+ if(/\.[a-z0-9]+$/i.test(target))return null;
+ assert.ok(plan.routes.has(target),'Unpublished internal target '+sourcePath+' -> '+target);
+ return plan.noindex.has(target)?null:target;
+}

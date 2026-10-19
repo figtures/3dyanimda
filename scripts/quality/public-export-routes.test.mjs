@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {publicExportRoutes,assertExportedRouteSets} from './public-export-routes.mjs';
+import {publicExportRoutes,assertExportedRouteSets,indexableLinkTarget} from './public-export-routes.mjs';
 const input=extra=>({landing:['/3d-baski','/3d-tarama','/3d-modelleme'].map(path=>({path})),pages:[],posts:[],seo:[],redirects:[],portfolio:[],features:[],faqs:[{id:'q1'}],...extra});
 const output=plan=>({htmlPaths:[...plan.routes.keys()],indexPaths:[...plan.routes.keys()].filter(p=>!plan.noindex.has(p)),approvedPaths:['/3d-baski']});
 test('new sections export while an empty portfolio stays reachable and noindex',()=>{
@@ -25,4 +25,11 @@ test('disabled features and scheduled-out inventory do not create routes',()=>{
 test('missing API results and unsafe CMS slugs cannot silently produce a release',()=>{
  assert.throws(()=>publicExportRoutes(input({faqs:undefined})),/inventory/);
  assert.throws(()=>publicExportRoutes(input({portfolio:[{slug:'../private'}]})),/Unsafe/);
+});
+test('links to exported noindex collections are valid; missing targets still fail',()=>{
+ const plan=publicExportRoutes(input());const options={origin:'https://3dyanimda.com',sourcePath:'/',plan};
+ assert.equal(indexableLinkTarget('/portfoy',options),null);
+ assert.equal(indexableLinkTarget('/kariyer',options),'/kariyer');
+ assert.throws(()=>indexableLinkTarget('/portfoy/missing',options),/Unpublished internal target/);
+ assert.equal(indexableLinkTarget('https://example.com/other',options),null);
 });

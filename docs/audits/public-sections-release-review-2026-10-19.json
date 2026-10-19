@@ -1,7 +1,7 @@
 {
   "policy": "global-originality-v1",
   "result": "pass",
-  "reviewedAt": "2026-10-19T20:22:45.462Z",
+  "reviewedAt": "2026-10-19T20:33:34.517Z",
   "reviewer": "Codex (AI, owner-delegated)",
   "humanReviewPerformed": false,
   "sourceHash": "975fb48c045a285bc8e0599903db7005c5a278c9d8c38ee44a08cdc394be7954",
@@ -144,7 +144,7 @@
     "tenantData": "Job and portfolio reads filter tenant and active/published status. Portfolio and job inserts attach tenant identity. Form HTML is sanitized; preview submissions are blocked; selected role and public SSR queries remain tenant/route scoped.",
     "localEvidence": "Authored location content and source notes are unchanged; prior evidence checksums were verified before carrying them forward.",
     "seoGeoParity": "Original 796 landing records and business identities are unchanged. FAQ structured data follows displayed questions. Empty FAQ/portfolio collections remain reachable with noindex; only complete indexable routes enter discovery.",
-    "exportRepair": "The publication plan is built from successful public API results, independent of the sitemap. The HTML audit requires the exact planned HTML/index route sets, all previously approved landing routes and every core route. Missing, extra, duplicate or incorrectly indexed pages still fail."
+    "exportRepair": "The publication plan is built from successful public API results, independent of the sitemap. The HTML audit requires the exact planned HTML/index route sets, all previously approved landing routes and every core route. Missing, extra, duplicate or incorrectly indexed pages still fail. The link contract distinguishes reachable noindex destinations from missing routes; the Worker routing audit also probes every noindex page."
   },
   "validation": {
     "originality": {
@@ -183,7 +183,7 @@
     },
     "routePlanRegression": {
       "command": "node --test scripts/quality/public-export-routes.test.mjs",
-      "tests": 4,
+      "tests": 5,
       "result": "pass"
     },
     "liveCareerData": {
@@ -192,6 +192,15 @@
       "activePerBrand": 3,
       "total": 12,
       "anonymousBrandIsolation": "verified with tenant host and anon role; each host sees its own three roles only"
+    },
+    "productionExportAttempt": {
+      "runId": 39318993636,
+      "result": "HTML audit passed; follow-on link contract rejected the valid noindex portfolio destination",
+      "brandPageCounts": {
+        "indexable": 217,
+        "noindex": 7
+      },
+      "followup": "Search link validation now uses the same independently recorded API route inventory and verifies noindex HTML before accepting destinations. Added a regression proving unknown targets remain blocked. Full packaging rerun pending."
     }
   },
   "limitations": [

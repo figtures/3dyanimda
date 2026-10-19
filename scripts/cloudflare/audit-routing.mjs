@@ -7,6 +7,7 @@ import https from 'node:https';
 import path from 'node:path';
 import {JSDOM} from 'jsdom';
 import worker from '../../deploy/worker.mjs';
+import {publicExportRoutes} from '../quality/public-export-routes.mjs';
 if(process.env.SITES_MANAGED_LINUX_CONTAINER==='1')throw Error('Run the asset integration test in GitHub Actions.');
 const configFile=path.resolve(process.argv[2]);
 const config=JSON.parse(await readFile(configFile,'utf8'));
@@ -38,6 +39,15 @@ try{
   const dom=new JSDOM(result.body);try{assert.equal(dom.window.document.title,page.title,page.path+' title');assert.equal(dom.window.document.querySelector('link[rel="canonical"]')?.href,manifest.origin+page.path,page.path+' canonical');}finally{dom.window.close();}
  }
  checks.push({check:'all canonical manifest pages serve HTML directly',pages:manifest.pages.length,status:'pass'});
+ const routeInputs=JSON.parse(await readFile(path.join(config.assets.directory,'..',config.vars.SITE_DOMAIN+'-route-inputs.json'),'utf8'));
+ assert.equal(routeInputs.origin,manifest.origin);const plan=publicExportRoutes(routeInputs);
+ for(const route of plan.noindex.keys()) {
+  const result=await request(route);assert.equal(result.status,200,route);assert.equal(result.headers.location,undefined,route);
+  const dom=new JSDOM(result.body,{url:manifest.origin+route});
+  try {assert.equal(dom.window.document.querySelector('link[rel=canonical]')?.href,manifest.origin+route);assert.match(dom.window.document.querySelector('meta[name=robots]')?.content,/noindex/);}
+  finally {dom.window.close();}
+ }
+ checks.push({check:'planned noindex pages remain reachable with correct canonical and robots',pages:plan.noindex.size,status:'pass'});
  for(const route of ['/admin/login','/admin/settings','/studio']){
   const r=await request(route);assert.equal(r.status,200,route);assert.equal(r.headers.location,undefined,route);assert.match(r.headers['x-robots-tag'],/noindex/);assert.equal(r.headers['cache-control'],'no-store');assert.ok(r.body.includes('type="module"'));}
  checks.push({check:'admin and studio shells preserve the requested URL',status:'pass'});

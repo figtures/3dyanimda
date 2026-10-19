@@ -4,7 +4,7 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-19T20:22:45.462Z",
+  "reviewedAt": "2026-10-19T20:33:34.517Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
@@ -251,7 +251,7 @@
     },
     {
       "file": "docs/audits/public-sections-release-review-2026-10-19.json",
-      "sha256": "7d24e1e7cd0a71ab73334aa95cd2647dc29ad26de2664b84a47b3e4bf5298083"
+      "sha256": "59d669bab62625369b791607bb059d9e28466fc0a8b9e50ac39253c8839cae33"
     },
     {
       "file": "docs/audits/public-sections-originality-2026-10-19.json",
@@ -259,11 +259,11 @@
     },
     {
       "file": "scripts/quality/public-export-routes.mjs",
-      "sha256": "9939d6ccf6abcfe4f8504507f928d5d9dc6e49fb9f9b741d36590499198a6fb3"
+      "sha256": "695f67b2e2553764c1a293381eda9c6105ee1c6e905de3040b5e640b082447fc"
     },
     {
       "file": "scripts/quality/public-export-routes.test.mjs",
-      "sha256": "1811cc905231fe45caf9600d1ac3c2210a97cf2b928c44cc9441c7801ec8efbe"
+      "sha256": "976ee64793303198b5906079d7905e3f8e7c3186654b77b3d14538315e4d0256"
     },
     {
       "file": "scripts/export-sites.mjs",
@@ -272,6 +272,14 @@
     {
       "file": "scripts/quality/audit-approved-html.mjs",
       "sha256": "c98c790ab29bc16ce6aa2f6a613bc192c1ab4938019fc20088a52b9cc130225a"
+    },
+    {
+      "file": "scripts/quality/audit-search-contracts.mjs",
+      "sha256": "18ffb3eafcca24585d15f7cae8261f46b7402d7935c2a57068b90e0958fd6f1b"
+    },
+    {
+      "file": "scripts/cloudflare/audit-routing.mjs",
+      "sha256": "a5d073b116f8e7e7f26b6ea9146445df0f6f430fab6f09fd8a1349e9268e1762"
     }
   ],
   "limitations": [
