@@ -9,7 +9,7 @@ import { readFile, writeFile, mkdir, cp, stat, rm } from "node:fs/promises";
 import path from "node:path";
 import {createHash} from "node:crypto";
 import {discoveryFiles} from "./search/discovery.mjs";
-import {compileRedirects,legacyRedirects} from "./search/redirects.mjs";
+import {publicExportRoutes} from "./quality/public-export-routes.mjs";
 import { loadEnv } from "vite";
 import { createClient } from "@supabase/supabase-js";
 import { chromium } from "@playwright/test";
@@ -78,7 +78,7 @@ try {
       throw tenantReadError || new Error(`Tenant read failed: ${host}`);
     if ((tenant.custom_domain || tenant.domain) !== host)
       throw new Error(`Use canonical domain for ${host}`);
-    const [landing, pages, posts, seo, redirects, portfolio, features] = await Promise.all([
+    const [landing, pages, posts, seo, redirects, portfolio, features, faqs] = await Promise.all([
       api
         .from("landing_pages")
         .select("path,updated_at")
@@ -101,66 +101,15 @@ try {
       api.from("url_redirects").select("from_path,to_path,active").eq("tenant_id",tenantId).eq("active",true),
       api.from("portfolio_projects").select("slug,updated_at").eq("tenant_id",tenantId).eq("published",true).or(`published_at.is.null,published_at.lte.${new Date().toISOString()}`),
       api.from("tenant_features").select("feature_key,enabled").eq("tenant_id",tenantId),
+      api.from("faq_items").select("id").eq("tenant_id",tenantId).eq("active",true),
     ]);
-    for (const response of [landing, pages, posts, seo, redirects, portfolio, features])
+    for (const response of [landing, pages, posts, seo, redirects, portfolio, features, faqs])
       if (response.error) throw response.error;
-    const excluded = new Set(
-      seo.data.filter((s) => s.noindex).map((s) => s.path),
-    );
-    const routes = new Map(
-      [
-        "/",
-        "/araclar",
-        "/araclar/stl-onizle",
-        "/araclar/kesit-analizi",
-        "/araclar/tarama-goruntuleyici",
-        "/sektorler",
-        "/hizmetler",
-        "/cozumler",
-        "/malzemeler",
-        "/rehber",
-        "/bolgeler",
-        "/hakkimizda",
-        "/iletisim",
-        "/teklif-al",
-      ].map((p) => [p, null]),
-    );
-    const enabled = key => !features.data.some(f => f.feature_key === key && f.enabled === false);
-    if (enabled('faq')) routes.set('/sss',null);
-    if (enabled('portfolio')) {
-      routes.set('/portfoy',null);
-      for (const project of portfolio.data) routes.set('/portfoy/'+project.slug,project.updated_at);
-    }
-    if (enabled('career')) {
-      routes.set('/kariyer',null);
-      routes.set('/kariyer/is-basvurusu',null);
-      if (enabled('career.machine_ops')) routes.set('/kariyer/makine-isletim',null);
-    }
-    // These routes read legal_documents rather than pages. Keep their HTML
-    // reachable from the footer and quote form even when a document is not yet
-    // available; BrandLegal marks that honest empty state noindex. They are
-    // utility pages and must never enter the discovery/indexing submission set.
-    const utilityRoutes = new Set([
-      "/yasal",
-      "/kvkk-aydinlatma-metni",
-      "/gizlilik-politikasi",
-      "/cerez-politikasi",
-      "/kullanim-kosullari",
-      "/basvuru-acik-riza-metni",
-    ]);
-    for (const p of landing.data) {
-      routes.set(p.path, p.updated_at);
-    }
-    for (const p of pages.data) {
-      const url = "/" + p.slug.replace(/^\//, "");
-      if (!p.meta?.noindex && !/^\/(bolgeler|istanbul)(\/|$)/.test(url))
-        routes.set(url, p.updated_at);
-    }
-    for (const p of posts.data) routes.set("/blog/" + p.slug, p.updated_at);
-    for (const p of excluded) routes.delete(p);
-    for (const url of utilityRoutes) routes.set(url, null);
-    const redirectMap=compileRedirects([...legacyRedirects,...redirects.data],new Set(routes.keys()));
-    for(const source of Object.keys(redirectMap)) routes.delete(source);
+    const routeInputs=Object.fromEntries(Object.entries({landing,pages,posts,seo,redirects,portfolio,features,faqs}).map(([key,response])=>[key,response.data]));
+    const {routes,noindex,redirectMap}=publicExportRoutes(routeInputs);
+    await mkdir(output,{recursive:true});
+    // Audit input stays outside the public asset directory.
+    await writeFile(path.join(output,host+'-route-inputs.json'),JSON.stringify({origin:base,...routeInputs},null,2)+'\n');
     const dest = path.join(output, host);
     await rm(dest, { recursive: true, force: true });
     await mkdir(dest, { recursive: true });
@@ -250,8 +199,8 @@ try {
       const robots = await page
         .locator("meta[name=robots]")
         .getAttribute("content");
-      if (robots?.includes("noindex") && !utilityRoutes.has(url))
-        throw new Error(`Unexpected noindex: ${url}`);
+      if (Boolean(robots?.includes("noindex")) !== noindex.has(url))
+        throw new Error(`Unexpected indexing policy: ${url}`);
       if (
         (await page.locator("link[rel=canonical]").getAttribute("href")) !==
         base + url
@@ -274,7 +223,7 @@ try {
       await bootstrap.embed();
       const exportedHTML = await serializedPrerender(page);
       await writeFile(file, exportedHTML);
-      if (!utilityRoutes.has(url)) {
+      if (!noindex.has(url)) {
         const {documentData, semanticDate} = exportedDocumentData(exportedHTML, base + url);
         const {text,...data}=documentData;
         published.push({path:url,lastmod:semanticDate||lastmod,...data,hash:createHash('sha256').update(JSON.stringify(documentData)).digest('hex')});
@@ -300,7 +249,7 @@ try {
     );
     await context.close();
     console.log(
-      `${host}: ${published.length} index-eligible pages + ${utilityRoutes.size} noindex utility pages exported to ${dest}`,
+      `${host}: ${published.length} index-eligible pages + ${noindex.size} noindex pages exported to ${dest}`,
     );
   }
 } finally {

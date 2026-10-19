@@ -1,0 +1,203 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewedAt": "2026-10-19T20:22:45.462Z",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "sourceHash": "975fb48c045a285bc8e0599903db7005c5a278c9d8c38ee44a08cdc394be7954",
+  "sourceFileCount": 586,
+  "priorSourceHash": "6277f584a25c61cb50ce1fd48f242789dc9bfb37bdfb61418101fbb5e93b80dc",
+  "baseCommit": "595e83ae8d24d82ae4ba65055577060452ef6cc9",
+  "reviewedCommit": "90a00f40c1182f87c0bea94df3c3df912f0a6435",
+  "scope": "Bounded review of the merged public sections, career applications, content widths and editorial procedural scene. Unchanged historical content/assets retain their original evidence dates.",
+  "changedSourceFiles": [
+    {
+      "file": "src/App.tsx",
+      "sha256": "8bbbc2b893a1ba55e7ca4275ed9db9a7857ae2be7dde66fc080a68143470d053"
+    },
+    {
+      "file": "src/components/brand/BrandLayout.tsx",
+      "sha256": "b69d0cb82ef625ba4a047926bf455192690a47e71b4151994665dd396a42b5e0"
+    },
+    {
+      "file": "src/components/brand/BrandNavigation.tsx",
+      "sha256": "07d0067448446df5864bbc66117353f6d7ac6c6a6c1999730c6a14789106ce6a"
+    },
+    {
+      "file": "src/components/brand/HomeDiscovery.tsx",
+      "sha256": "677ab0ca76c7e2d79e3a1c38c64a639244603a8b9212e8961240dc901654fd52"
+    },
+    {
+      "file": "src/components/brand/page-shell.css",
+      "sha256": "d93cfe06ad37ab863380350e8c9a83c957295c71d72f5a9a8c042ff542d1bb14"
+    },
+    {
+      "file": "src/components/brand/public-sections.css",
+      "sha256": "b9bd345828ba34f25e9a093472f714394c1b03df3c19c6d53c3497d75baa256f"
+    },
+    {
+      "file": "src/components/site/LegalLayout.tsx",
+      "sha256": "0bef47aa0210b56d9149bba63378c4f4a65fb9e1ae59ad7f25b344d7e73c9bdb"
+    },
+    {
+      "file": "src/content/brand-faq.json",
+      "sha256": "7c68bbfcc6137937fa6019d153f5251a74b7e6961f2e3f753bc863292965772e"
+    },
+    {
+      "file": "src/content/career-roles.json",
+      "sha256": "295ff9120b334d0dca215a93c8c9c2646c0712d40fd7c5467524caaf27d9fea6"
+    },
+    {
+      "file": "src/content/public-page-query.ts",
+      "sha256": "95ca68c6a5e4040856967758b5a11e6295f91d67e63db624efdb54d5e2f8b6a4"
+    },
+    {
+      "file": "src/lib/public-render-state.test.ts",
+      "sha256": "8e3942bb10516ac6ba1955fb8829e216a26fe8f0f9ece61555ca4bdf38ce7a8a"
+    },
+    {
+      "file": "src/lib/public-render-state.ts",
+      "sha256": "7d597c008c008dae26b6515bb295cf066165d0480f7dcb2f145a9ca5e63b5be5"
+    },
+    {
+      "file": "src/lib/route-preparation.ts",
+      "sha256": "52409ebaa5dffc2afb5a3ebb1411d51c503d2a35c46847d31644b365ffa21fd6"
+    },
+    {
+      "file": "src/pages/FaqPage.tsx",
+      "sha256": "5ac598debb81159a9d93c6e728e9d8ca7213b58cfcc2015a49ef0b1772d8e72b"
+    },
+    {
+      "file": "src/pages/Index.tsx",
+      "sha256": "ed7e69b8feececf400611ffb3b702d534d5f28dadb67c0b001da18bc33588066"
+    },
+    {
+      "file": "src/pages/Portfolio.tsx",
+      "sha256": "d9fdbf408364f3f1d6ba3a5c4cf1598bb1a1fa9af1c037519d7a6d5cde2fa66f"
+    },
+    {
+      "file": "src/pages/PortfolioProject.tsx",
+      "sha256": "045e4bf20383716a31e3e6b1ea40ef2244be9a3e81cc945f97f71e45fcbcd353"
+    },
+    {
+      "file": "src/pages/admin/AdminJobs.tsx",
+      "sha256": "3f7a351f99156d523c1de27107c7b5583da7204c94bbc40a44bce8a194c84550"
+    },
+    {
+      "file": "src/pages/admin/AdminPortfolio.tsx",
+      "sha256": "a7f8ac940575aff2c0b4c025e6b51bef171870fb2404600e139c4aac40a729bf"
+    },
+    {
+      "file": "src/pages/career/ApplicationFrame.tsx",
+      "sha256": "e9af3185bcb95e0665f8d9b77d71e07a0dfa51176428c65a3ba1113cb4625d3c"
+    },
+    {
+      "file": "src/pages/career/CareerHub.tsx",
+      "sha256": "6e7477bfdbb7bb5d74a05e3ba6607e54d5d036164475c53079323a0d3fc3ff18"
+    },
+    {
+      "file": "src/pages/career/JobApplication.tsx",
+      "sha256": "4ce520d5f0f66a1fc716b6085eef204f4ea1c6112b7900a06c24ae8df3b505c8"
+    },
+    {
+      "file": "src/pages/career/MachineOperation.tsx",
+      "sha256": "637c743b4f3fb5ba4e0cc58a2974bc3bf4a8d8eb3680d552f12cbed3d840815c"
+    },
+    {
+      "file": "src/pages/career/career-content.ts",
+      "sha256": "b1b4fb85b9e7ded891b292bad7f2810d7abbb54e078b660663ef3820ae1c8d59"
+    },
+    {
+      "file": "src/pages/career/career.css",
+      "sha256": "d03d0511126834c4dec9706a252fefb2bc4e311d972d0d8d6e0e9bf265ba9fc1"
+    },
+    {
+      "file": "src/themes/EditorialHero.tsx",
+      "sha256": "48171a7fca5b812dc5aa953f2806678b8107251eafe1581f9806a32aa5377cc4"
+    },
+    {
+      "file": "src/themes/FormationScene.tsx",
+      "sha256": "981c23b8bc8625dddd98a3d463c3e9018638b37203d6c206f8e46bcbcf44b0e8"
+    },
+    {
+      "file": "src/themes/HomeHero.tsx",
+      "sha256": "efa43764ff16dbca6c62e09944863c86f8b82baf80e0bbecbbd6d6fc37329ea7"
+    },
+    {
+      "file": "src/themes/PartScene.tsx",
+      "sha256": "7398893827f6e2f780f7b97e7ce60c3a2086c57b0a30612c48ec3584b2787489"
+    },
+    {
+      "file": "src/themes/editorial-visual.css",
+      "sha256": "927d3b96cca0f570f568b6ae68300b35c69cbf2d3c281e0695c9d8cb910450ca"
+    },
+    {
+      "file": "src/themes/themes.css",
+      "sha256": "36d6594453479f03c2be73a387b5be068e7a1045bf944bdadf1b1ca50df63c80"
+    }
+  ],
+  "checks": {
+    "renderedText": "Reviewed all 32 authored brand FAQ entries, 12 role descriptions, career story and application copy, and public portfolio empty states. No fabricated customer projects, salaries, benefits, production certifications or delivery guarantees are introduced.",
+    "imageProvenance": "No public asset files changed. Career and scene fallback images reuse the existing reviewed brand illustrations and are labelled as representative designs.",
+    "modelGeometry": "FormationScene builds an impeller, fluted lathed vessel and architectural massing from explicit procedural geometry; existing GLB files and model assignments are unchanged. These are illustrative objects, not customer case studies.",
+    "visualSimilarity": "Existing asset originality evidence is unchanged. The 800-record text/image/model audit passed again. Public-page visual and alignment evidence is the 32-case review on the identical application source; no fresh all-route visual crawl is claimed.",
+    "tenantData": "Job and portfolio reads filter tenant and active/published status. Portfolio and job inserts attach tenant identity. Form HTML is sanitized; preview submissions are blocked; selected role and public SSR queries remain tenant/route scoped.",
+    "localEvidence": "Authored location content and source notes are unchanged; prior evidence checksums were verified before carrying them forward.",
+    "seoGeoParity": "Original 796 landing records and business identities are unchanged. FAQ structured data follows displayed questions. Empty FAQ/portfolio collections remain reachable with noindex; only complete indexable routes enter discovery.",
+    "exportRepair": "The publication plan is built from successful public API results, independent of the sitemap. The HTML audit requires the exact planned HTML/index route sets, all previously approved landing routes and every core route. Missing, extra, duplicate or incorrectly indexed pages still fail."
+  },
+  "validation": {
+    "originality": {
+      "file": "docs/audits/public-sections-originality-2026-10-19.json",
+      "records": 800,
+      "result": "pass"
+    },
+    "publicBrowser": {
+      "runId": 38983816341,
+      "commit": "5bbfcc4a52df20c6a63c32dd1644a41874ee2c66",
+      "result": "pass",
+      "cases": 32,
+      "brands": 4,
+      "themes": 4,
+      "widths": [
+        390,
+        1440
+      ],
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/38983816341"
+    },
+    "quality": {
+      "runId": 38983816333,
+      "result": "pass",
+      "jobs": [
+        "local contracts, typecheck, 218 application tests, build",
+        "public API inventory",
+        "home/quote/runtime/navigation browser checks",
+        "read-only public domains"
+      ],
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/38983816333"
+    },
+    "postMergeQuality": {
+      "runId": 39315346366,
+      "result": "pass",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/39315346366"
+    },
+    "routePlanRegression": {
+      "command": "node --test scripts/quality/public-export-routes.test.mjs",
+      "tests": 4,
+      "result": "pass"
+    },
+    "liveCareerData": {
+      "date": "2026-10-19",
+      "brands": 4,
+      "activePerBrand": 3,
+      "total": 12,
+      "anonymousBrandIsolation": "verified with tenant host and anon role; each host sees its own three roles only"
+    }
+  },
+  "limitations": [
+    "This is AI review under the existing delegated review policy, not a human/legal attestation.",
+    "The prior all-route evidence retains its original scope and dates. Current public-page browser evidence is a bounded 32-case fixture review, not a fresh full crawl or live form submission.",
+    "Frontend release packaging and actual Cloudflare deployment are subsequent independent gates; their results are not predeclared here.",
+    "Existing unpublished legal-document empty states are preserved. No claim of legal disclosure completeness, live email delivery, analytics receipt or search ranking is made."
+  ]
+}

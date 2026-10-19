@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-16T10:47:29.497Z",
+  "reviewedAt": "2026-10-19T20:22:45.462Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "6277f584a25c61cb50ce1fd48f242789dc9bfb37bdfb61418101fbb5e93b80dc",
-  "sourceFileCount": 574,
+  "sourceHash": "975fb48c045a285bc8e0599903db7005c5a278c9d8c38ee44a08cdc394be7954",
+  "sourceFileCount": 586,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,7 +35,7 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/public-sections-release-review-2026-10-19.json",
     "latestBrandAssetFiles": 80,
     "latestSourceSnapshot": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
@@ -49,7 +49,8 @@
       "navigation": 64,
       "runId": 38839001387
     },
-    "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json"
+    "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json",
+    "latestPublicSectionBrowserCases": 32
   },
   "evidence": [
     {
@@ -247,6 +248,30 @@
     {
       "file": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
       "sha256": "02c36267aa49628ec329a5b88f2d9792faa521aecc75e2af831c46c93402588a"
+    },
+    {
+      "file": "docs/audits/public-sections-release-review-2026-10-19.json",
+      "sha256": "7d24e1e7cd0a71ab73334aa95cd2647dc29ad26de2664b84a47b3e4bf5298083"
+    },
+    {
+      "file": "docs/audits/public-sections-originality-2026-10-19.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "scripts/quality/public-export-routes.mjs",
+      "sha256": "9939d6ccf6abcfe4f8504507f928d5d9dc6e49fb9f9b741d36590499198a6fb3"
+    },
+    {
+      "file": "scripts/quality/public-export-routes.test.mjs",
+      "sha256": "1811cc905231fe45caf9600d1ac3c2210a97cf2b928c44cc9441c7801ec8efbe"
+    },
+    {
+      "file": "scripts/export-sites.mjs",
+      "sha256": "aab69f7fea4213077c6094fce72d7f24ffd9d976ddac8658193080eec7144bda"
+    },
+    {
+      "file": "scripts/quality/audit-approved-html.mjs",
+      "sha256": "c98c790ab29bc16ce6aa2f6a613bc192c1ab4938019fc20088a52b9cc130225a"
     }
   ],
   "limitations": [
@@ -264,7 +289,8 @@
     "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed.",
     "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately.",
     "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI.",
-    "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings."
+    "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings.",
+    "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",
