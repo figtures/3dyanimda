@@ -1,0 +1,35 @@
+/* One content edge for navigation, page headers, collections and full-bleed bands. */
+.brand-site[data-theme] {
+  --page-gutter: clamp(20px, 4vw, 64px);
+  --page-max: 1472px;
+  --page-width: min(var(--page-max), calc(100% - 2 * var(--page-gutter)));
+  --page-inset: max(var(--page-gutter), calc((100% - var(--page-max)) / 2));
+}
+.brand-site[data-theme] :is(.product-header-inner, .wrap, .container-page, .brand-inner, .brand-section) {
+  box-sizing: border-box;
+  width: var(--page-width);
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: 0;
+}
+/* Backgrounds may bleed; their contents still share the navigation's edges. */
+.brand-site[data-theme] :is(.brand-footer, .brand-preview),
+.brand-site[data-theme].theme-industrial .content-hero,
+.brand-site[data-theme].theme-industrialtwo .content-hero,
+.brand-site[data-theme] .home-flow .showcase-section {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: var(--page-inset);
+}
+.brand-site[data-theme] .container-page .container-page {
+  width: 100%;
+  padding-inline: 0;
+}
+/* Keep the quote action on the right content edge on phones, too. */
+@media (max-width: 1099px) {
+  .brand-site .product-menu-toggle { order: -1; }
+}
+@media (max-width: 380px) {
+  .brand-site[data-theme] { --page-gutter: 16px; }
+}

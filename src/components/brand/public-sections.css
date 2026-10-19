@@ -1,0 +1,72 @@
+.brand-site .public-collection { padding-block: 24px clamp(64px,8vw,112px); }
+.brand-site .public-collection :is(h2,h3) { line-height:1.3; letter-spacing:0; }
+.brand-site .public-collection p { line-height:1.85; color:var(--muted); }
+.brand-site .public-subsection { margin-top:72px; }
+.brand-site .public-subsection > h2 { font-size:clamp(28px,3vw,42px); margin-bottom:32px; }
+.brand-site .career-paths,.brand-site .career-roles,.brand-site .portfolio-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
+.brand-site .career-paths > article,.brand-site .career-roles > article { padding:clamp(24px,3vw,42px); background:var(--soft); border-radius:20px; }
+.brand-site .career-paths h2 { font-size:30px; margin:28px 0 18px; }
+.brand-site .career-paths :is(.brand-button,.text-link),.brand-site .career-roles .text-link { margin-top:24px; }
+.brand-site .career-roles h3 { margin:12px 0; font-size:25px; }
+.brand-site .career-roles details { margin-top:20px; }
+.brand-site .career-roles summary { cursor:pointer; padding-block:12px; }
+.brand-site .public-empty { background:var(--soft); border-radius:20px; padding:clamp(24px,4vw,48px); }
+.brand-site .public-empty h2 { font-size:30px; margin-bottom:18px; }
+.brand-site .public-empty h3 { font-size:22px; margin-bottom:16px; }
+.brand-site .public-empty .text-link { margin-top:20px; }
+.brand-site .portfolio-project { display:block; overflow:hidden; background:var(--soft); border-radius:20px; }
+.brand-site .portfolio-project > img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+.brand-site .portfolio-project > div { padding:28px; }
+.brand-site .portfolio-project h2 { margin:10px 0 14px; font-size:28px; }
+.brand-site .portfolio-project .text-link { margin-top:24px; }
+.brand-site .collection-meta { font-size:13px; }
+.brand-site .collection-filters { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:32px; }
+.brand-site .collection-filters button { min-height:44px; padding:10px 20px; border-radius:100px; background:var(--soft); }
+.brand-site .collection-filters [aria-pressed=true] { background:var(--text); color:var(--paper); }
+.brand-site .portfolio-concepts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:36px; margin-top:48px; }
+.brand-site .portfolio-concepts h3 { font-size:24px; margin:12px 0 18px; }
+.brand-site .portfolio-concepts .text-link { margin-top:24px; }
+.brand-site .public-contact { display:flex; align-items:center; justify-content:space-between; gap:32px; margin-top:72px; }
+.brand-site .public-contact h2 { font-size:clamp(25px,3vw,38px); }
+.brand-site .public-contact .brand-button { flex-shrink:0; }
+.brand-site .project-cover { width:100%; max-height:700px; object-fit:cover; border-radius:24px; margin-bottom:32px; }
+.brand-site .public-prose { max-width:80ch; margin-block:24px; line-height:1.85; overflow-wrap:anywhere; }
+.brand-site .public-prose :is(p,ul,ol,h2,h3,h4) { margin-block:20px; }
+.brand-site .public-prose :is(ul,ol) { padding-left:24px; }
+.brand-site .public-prose ul { list-style:disc; }
+.brand-site .public-prose ol { list-style:decimal; }
+.brand-site .public-prose img { max-width:100%; height:auto; }
+.brand-site .project-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:40px; }
+.brand-site .project-gallery img { width:100%; height:auto; border-radius:18px; }
+.brand-site .faq-collection { max-width:980px; }
+.brand-site .faq-search { display:flex; align-items:center; gap:16px; background:var(--soft); border-radius:16px; padding:8px 20px; margin-bottom:32px; }
+.brand-site .faq-search input { width:100%; min-width:0; min-height:48px; background:transparent; border:0; color:var(--text); }
+.brand-site .public-faq-list { display:grid; gap:12px; }
+.brand-site .public-faq-list details { padding:4px 24px; background:var(--soft); border-radius:16px; }
+.brand-site .public-faq-list summary { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-block:20px; cursor:pointer; list-style:none; line-height:1.6; font-weight:500; }
+.brand-site .public-faq-list summary::-webkit-details-marker { display:none; }
+.brand-site .public-faq-list summary svg { flex-shrink:0; }
+.brand-site .public-faq-list details[open] summary svg { transform:rotate(45deg); }
+.brand-site .public-faq-list details p { padding:0 44px 24px 0; }
+.brand-site .home-discovery { padding-block:var(--home-space); }
+.brand-site .sector-discovery { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:clamp(32px,6vw,80px); align-items:center; }
+.brand-site .sector-discovery h2 { font-size:clamp(28px,3vw,44px); line-height:1.3; margin:16px 0 24px; }
+.brand-site .sector-discovery p { line-height:1.85; color:var(--muted); }
+.brand-site .sector-discovery .text-link { margin-top:24px; }
+.brand-site .sector-discovery nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.brand-site .sector-discovery nav a { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:22px; background:var(--soft); border-radius:14px; line-height:1.5; min-height:92px; }
+.brand-site .sector-discovery nav svg { flex-shrink:0; }
+.brand-site .discover-paths { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; margin-top:72px; }
+.brand-site .discover-paths a { display:grid; grid-template-columns:1fr 22px; gap:18px; padding:28px; border-radius:18px; background:var(--soft); }
+.brand-site .discover-paths strong { font-size:22px; font-weight:500; }
+.brand-site .discover-paths p { grid-column:1/-1; line-height:1.8; color:var(--muted); }
+@media(max-width:760px){
+ .brand-site .career-paths,.brand-site .career-roles,.brand-site .portfolio-grid,.brand-site .portfolio-concepts,.brand-site .sector-discovery,.brand-site .discover-paths { grid-template-columns:1fr; }
+ .brand-site .public-contact { align-items:flex-start; flex-direction:column; margin-top:48px; }
+ .brand-site .project-gallery { grid-template-columns:1fr; }
+ .brand-site .public-faq-list details { padding-inline:18px; }
+ .brand-site .public-faq-list details p { padding-right:0; }
+ .brand-site .sector-discovery nav { gap:10px; }
+ .brand-site .sector-discovery nav a { padding:16px; font-size:14px; }
+ .brand-site .discover-paths { gap:16px; margin-top:40px; }
+}

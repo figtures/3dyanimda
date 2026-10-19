@@ -78,7 +78,7 @@ try {
       throw tenantReadError || new Error(`Tenant read failed: ${host}`);
     if ((tenant.custom_domain || tenant.domain) !== host)
       throw new Error(`Use canonical domain for ${host}`);
-    const [landing, pages, posts, seo, redirects] = await Promise.all([
+    const [landing, pages, posts, seo, redirects, portfolio, features] = await Promise.all([
       api
         .from("landing_pages")
         .select("path,updated_at")
@@ -99,8 +99,10 @@ try {
         ),
       api.from("seo_meta").select("path,noindex").eq("tenant_id", tenantId),
       api.from("url_redirects").select("from_path,to_path,active").eq("tenant_id",tenantId).eq("active",true),
+      api.from("portfolio_projects").select("slug,updated_at").eq("tenant_id",tenantId).eq("published",true).or(`published_at.is.null,published_at.lte.${new Date().toISOString()}`),
+      api.from("tenant_features").select("feature_key,enabled").eq("tenant_id",tenantId),
     ]);
-    for (const response of [landing, pages, posts, seo, redirects])
+    for (const response of [landing, pages, posts, seo, redirects, portfolio, features])
       if (response.error) throw response.error;
     const excluded = new Set(
       seo.data.filter((s) => s.noindex).map((s) => s.path),
@@ -123,6 +125,17 @@ try {
         "/teklif-al",
       ].map((p) => [p, null]),
     );
+    const enabled = key => !features.data.some(f => f.feature_key === key && f.enabled === false);
+    if (enabled('faq')) routes.set('/sss',null);
+    if (enabled('portfolio')) {
+      routes.set('/portfoy',null);
+      for (const project of portfolio.data) routes.set('/portfoy/'+project.slug,project.updated_at);
+    }
+    if (enabled('career')) {
+      routes.set('/kariyer',null);
+      routes.set('/kariyer/is-basvurusu',null);
+      if (enabled('career.machine_ops')) routes.set('/kariyer/makine-isletim',null);
+    }
     // These routes read legal_documents rather than pages. Keep their HTML
     // reachable from the footer and quote form even when a document is not yet
     // available; BrandLegal marks that honest empty state noindex. They are

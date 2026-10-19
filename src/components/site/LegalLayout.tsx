@@ -58,7 +58,7 @@ export const LegalLayout = ({ title, eyebrow, description, path, updatedAt, chil
       />
       <section className="bg-background py-16 lg:py-24">
         <div className="container-page">
-          <div className="max-w-3xl mx-auto">
+          <div className="legal-document">
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-8">
               {lang === "en" ? "Last updated" : "Son güncelleme"}: {finalUpdated}
             </p>

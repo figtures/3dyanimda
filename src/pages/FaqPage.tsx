@@ -1,42 +1,18 @@
-import {usePublicPage} from "@/content/public-page-query";
-import {useBrand} from "@/brands/config";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowUpRight, Plus, Search } from "lucide-react";
+import { usePublicPage } from "@/content/public-page-query";
+import { useBrand } from "@/brands/config";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
-import { FAQ, faqJsonLd } from "@/components/site/FAQ";
-import i18n from "@/lib/i18n";
-
-const fallbackItems = [
- { q: "3D dosyam olmadan başlayabilir miyim?", a: "Evet. Ölçülerini, örnek parçanı veya fikrini paylaş; modelleme ihtiyacını birlikte değerlendirelim." },
- { q: "Fiyat ve teslim süresi nasıl belirleniyor?", a: "Tasarım, malzeme, adet ve detay seviyesi incelendikten sonra proje özelinde teklif hazırlanır." },
- { q: "Hangi bölgelere hizmet veriyorsunuz?", a: "İstanbul'un tamamındaki projeleri değerlendiriyoruz. Numune ve teslimat planı projenin kapsamına göre birlikte netleştirilir." },
-];
-
-const FaqPage = () => {
-  const brand=useBrand();
-  const {data}=usePublicPage("/sss");
-  const lang=i18n.language?.startsWith("en")?"en":"tr";
-  const mapped=((data||[]) as any[]).map(r=>({q:(lang==="en"?r.question_en:r.question_tr)||r.question_tr||r.question_en||"",a:(lang==="en"?r.answer_en:r.answer_tr)||r.answer_tr||r.answer_en||""})).filter(x=>x.q&&x.a);
-  const items=mapped.length?mapped:fallbackItems;
-
-
-  return (
-    <>
-      <Seo
-        title="Sık Sorulan Sorular — 3D Üretim, Tarama ve Baskı"
-        description={`${brand.name}: 3D tarama, modelleme ve baskı hizmetleri hakkında sorular ve cevaplar.`}
-        path="/sss"
-        jsonLd={[faqJsonLd(items)]}
-      />
-      <PageHero
-        eyebrow="Sık Sorulan Sorular"
-        breadcrumbs={[{ label: "Anasayfa", to: "/" }, { label: "SSS" }]}
-        title={<>Aklınıza gelen <span className="text-gradient-blue italic font-medium">her şey</span>, tek sayfada.</>}
-        lead="3D üretim hakkında sıkça sorulan soruları derledik. Aradığınızı bulamazsanız iletişim sayfasından bize ulaşın."
-      />
-      <FAQ items={items} title="Hizmetlerimiz hakkında merak edilenler" />
-
-    </>
-  );
-};
-
-export default FaqPage;
+import { faqJsonLd } from "@/components/site/FAQ";
+import { previewSearch } from "@/lib/tenant";
+import "@/components/brand/public-sections.css";
+export default function FaqPage() {
+ const brand=useBrand(),{search}=useLocation(),query=previewSearch(search);
+ const {data}=usePublicPage("/sss");const items=(data||[]) as any[];
+ const [term,setTerm]=useState("");
+ const filtered=items.filter(x=>(x.question_tr+" "+x.answer_tr).toLocaleLowerCase("tr").includes(term.toLocaleLowerCase("tr")));
+ const jsonItems=filtered.map(x=>({q:x.question_tr,a:x.answer_tr}));
+ return <><Seo title={`Sık Sorulan Sorular | ${brand.name}`} description="Dosya hazırlığı, malzeme seçimi, fiyatlandırma ve teslimat hakkında sorularınıza yanıtlar." path="/sss" jsonLd={jsonItems.length?[faqJsonLd(jsonItems)]:undefined} noindex={!items.length}/><PageHero eyebrow="Sık sorulan sorular" title="Başlamadan önce aklınızdakiler." lead="İlk kez 3D baskı yaptırıyor veya teknik bir proje planlıyor olabilirsiniz. İhtiyacınız olan yanıtı burada bulun." breadcrumbs={[{label:"Anasayfa",to:"/"+query},{label:"SSS"}]}/><section className="wrap public-collection faq-collection"><label className="faq-search"><Search size={20} aria-hidden="true"/><span className="sr-only">Sorularda ara</span><input type="search" value={term} onChange={e=>setTerm(e.target.value)} placeholder="Dosya, malzeme, teslimat…"/></label><div className="public-faq-list">{filtered.map((item,i)=><details key={item.id||i}><summary>{item.question_tr}<Plus size={20} aria-hidden="true"/></summary><p>{item.answer_tr}</p></details>)}</div>{!filtered.length&&<p role="status">{items.length?"Aramanızla eşleşen soru bulunamadı. Farklı bir kelime deneyebilirsiniz.":"Sorularınızı iletişim sayfamızdan bize iletebilirsiniz."}</p>}<div className="public-contact"><h2>Başka bir sorunuz var mı?</h2><Link className="brand-button" to={"/iletisim"+query}>Bize ulaşın <ArrowUpRight size={18}/></Link></div></section></>;
+}

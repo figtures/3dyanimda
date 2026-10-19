@@ -1,6 +1,7 @@
 import { previewSearch } from "@/lib/tenant";
 import "@/engineering/engineering.css";
 import "@/themes/home-flow.css";
+import HomeDiscovery from "@/components/brand/HomeDiscovery";
 import ModelShowcase from "@/themes/ModelShowcase";
 import HomeHero, { services as heroServices } from "@/themes/HomeHero";
 import { useState } from "react";
@@ -63,7 +64,7 @@ export default function Index() {
   const { search } = useLocation();
   const q = previewSearch(search);
   const link = (s: string) => s + q;
-  const { data: pages = [] } = useContent(false,false,{kinds:['solution','guide']});
+  const { data: pages = [] } = useContent(false,false,{kinds:['solution','guide','sector']});
   const img =
     b.image ||
     `/brand/industrial/${b.heroAsset}.webp`;
@@ -124,6 +125,7 @@ export default function Index() {
         </div>
       </section>
       <ModelShowcase />
+      <HomeDiscovery sectors={pages.filter(p=>p.kind==="sector")} />
       <section className="wrap applications-section" id="uygulamalar" aria-labelledby="applications-title">
         <div className="section-heading">
           <p className="brand-eyebrow">{b.focus}</p>

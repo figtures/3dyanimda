@@ -1,5 +1,6 @@
 import { previewSearch } from "@/lib/tenant";
 import ServiceVisual from "./ServiceVisual";
+import EditorialHero from "./EditorialHero";
 import { modelsForBrand } from "./models";
 import { lazy, Suspense, useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -111,7 +112,7 @@ export default function HomeHero() {
   const title =
     customTitle ||
     (theme === "editorial" && brand.slug === "3dyanimda"
-      ? "İyi fikirler, üretimle tamamlanır."
+      ? "Fikirlerinizin üçüncü boyutu."
       : theme === "studio" && brand.slug === "3dyanimda"
         ? "Üretime buradan başlayın."
         : brand.title);
@@ -155,27 +156,7 @@ export default function HomeHero() {
         </section>
       </>
     );
-  if (theme === "editorial")
-    return (
-      <section className="editorial-hero wrap">
-        <div className="theme-overline">
-          <span>FİKİR. GEOMETRİ. ÜRETİM.</span>
-          <span>İSTANBUL / {brand.focus}</span>
-        </div>
-        <h1>
-          {title}
-          <span className="editorial-dot" aria-hidden="true">
-            ↗
-          </span>
-        </h1>
-        <div className="editorial-intro">
-          <p>{brand.lead}</p>
-          <Link className="brand-button" to={link("/teklif-al")}>
-            Projenizi başlatın <ArrowUpRight size={20} />
-          </Link>
-        </div>
-      </section>
-    );
+  if (theme === "editorial") return <EditorialHero title={title} query={q} />;
   return (
     <section className="studio-home wrap">
       <div className="theme-overline">
