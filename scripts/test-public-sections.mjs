@@ -39,6 +39,10 @@ try {
    await page.screenshot({path:`${out}/${brand}-${theme}-printer-${width}.png`});
    await page.getByRole('button',{name:'Baskı animasyonunu oynat',exact:true}).click();
    await page.waitForFunction(()=>document.querySelector('.printer-scene')?.dataset.motion==='playing');
+   // Reduced motion opens on the finished object. Restart before observing
+   // deposition so the check does not time the completed-pose hold on software GPUs.
+   await page.getByRole('button',{name:'Baskı animasyonunu baştan göster',exact:true}).click();
+   await page.waitForFunction(()=>document.querySelector('.print-stage-progress span')?.style.transform==='scaleX(0)');
    const before=await page.locator('.print-stage-progress span').getAttribute('style');
    await page.waitForFunction(value=>document.querySelector('.print-stage-progress span')?.getAttribute('style')!==value,before);
    await page.getByRole('button',{name:'Baskı animasyonunu duraklat',exact:true}).click();

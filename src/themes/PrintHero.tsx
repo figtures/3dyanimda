@@ -42,7 +42,7 @@ export default function PrintHero({ query }: { query: string }) {
       <div className="print-hero-copy">
         <p className="print-hero-eyebrow"><span aria-hidden="true" />3D BASKI · TARAMA · MODELLEME</p>
         <h1 id="print-hero-title">{legacyTitle ? <>Fikrinizden{" "}<span>parçaya.</span></> : customTitle}</h1>
-        <p className="print-hero-lead">{customLead || <>Üretim yanınızda.<br />Dosyanız, numuneniz veya fikrinizle başlayın. Tasarımdan 3D baskıya, bir sonraki parçanızı birlikte üretelim.</>}</p>
+        <p className="print-hero-lead">{customLead || <>Üretim yanınızda.<br />{" "}Dosyanız, numuneniz veya fikrinizle başlayın. Tasarımdan 3D baskıya, bir sonraki parçanızı birlikte üretelim.</>}</p>
         <div className="print-hero-actions">
           <Link className="print-hero-primary" to={"/teklif-al" + query}>Projenizi başlatın <ArrowUpRight size={20} aria-hidden="true" /></Link>
           <a className="print-hero-secondary" href="#hizmetler">Hizmetleri keşfedin <ArrowDown size={17} aria-hidden="true" /></a>

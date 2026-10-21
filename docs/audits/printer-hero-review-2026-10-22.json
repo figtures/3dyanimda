@@ -1,12 +1,12 @@
 {
-  "reviewedAt": "2026-10-21T23:43:40.490Z",
+  "reviewedAt": "2026-10-21T23:47:49.840Z",
   "reviewer": "Codex (AI, owner-delegated)",
   "humanReviewPerformed": false,
   "result": "pass",
   "brand": "3dyanimda",
   "request": "Balance the left-heavy footer and create an immediate, original, performant 3D-printer homepage hero.",
   "baseCommit": "2cf3c8dba457fe9c3892b2b526cf09afec294250",
-  "sourceHash": "c93304c97a3454f66388b47864858cf7c8ac1c1347b7f9ebb9a4e4d384b5184f",
+  "sourceHash": "01dab00d1862c2f8424d825626529cf4952ab07958eaf94f2bfbed476b8591f3",
   "sourceFileCount": 597,
   "changes": [
     "3dyanimda-only PrintHero selected across all four supported themes; other brand hero branches unchanged.",
@@ -66,7 +66,18 @@
         "Mobile CTA bottom 473.66px precedes scene top 477.66px in 360px fixture."
       ]
     },
-    "ciBrowserRegression": "Existing required workflow updated to check all four 3dyanimda themes at 390 and 1440px, reduced-motion initialization, controls, footer columns and screenshots. Execution is recorded by the PR checks, not claimed here."
+    "ciBrowserRegression": "Existing required workflow updated to check all four 3dyanimda themes at 390 and 1440px, reduced-motion initialization, controls, footer columns and screenshots. Execution is recorded by the PR checks, not claimed here.",
+    "ciAcceleratedVisual": {
+      "run": 39695401552,
+      "artifact": 12391365135,
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "renderer": "webgl",
+      "visual": "Inspected rendered initial completed form, housing, reel, nozzle, controls and responsive layout. No page errors.",
+      "status": "Initial visual passed; first timing assertion waited on a completed-pose hold. Revised test explicitly restarts before asserting deposition; subsequent CI run remains required."
+    }
   },
   "performance": {
     "webgl": {
@@ -94,13 +105,14 @@
   },
   "unchangedEvidence": "Existing content, geographic/SEO, asset and other-brand evidence retain their original dates. This is a bounded presentation and motion delta, not a fresh all-route human review.",
   "limitations": [
-    "Cloud review browser has WebGL disabled; animated Canvas fallback was visually reviewed. Accelerated rendering must also pass the repository browser workflow before merge.",
+    "Cloud review browser has WebGL disabled; animated Canvas fallback was reviewed there. The accelerated 390px initial pose was inspected from the existing CI screenshot; motion and full matrix must pass the revised repository browser workflow before merge.",
     "No new legal exclusivity, production frame-rate or Lighthouse guarantee is asserted.",
     "Screenshots include the private-preview toolbar; public production does not display it."
   ],
   "screenshots": [
     "docs/audits/printer-desktop-2026-10-22.jpg",
     "docs/audits/printer-mobile-2026-10-22.jpg",
-    "docs/audits/printer-footer-desktop-2026-10-22.jpg"
+    "docs/audits/printer-footer-desktop-2026-10-22.jpg",
+    "docs/audits/printer-webgl-mobile-2026-10-22.png"
   ]
 }

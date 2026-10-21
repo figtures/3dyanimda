@@ -4,13 +4,13 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-21T23:43:40.490Z",
+  "reviewedAt": "2026-10-21T23:47:49.840Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "c93304c97a3454f66388b47864858cf7c8ac1c1347b7f9ebb9a4e4d384b5184f",
+  "sourceHash": "01dab00d1862c2f8424d825626529cf4952ab07958eaf94f2bfbed476b8591f3",
   "sourceFileCount": 597,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -319,7 +319,7 @@
     },
     {
       "file": "docs/audits/printer-hero-review-2026-10-22.json",
-      "sha256": "e9b98f4529ecef3a213158a574e8230ee035e51b8feddf7fb09f33e042dfb687"
+      "sha256": "44886832545f35d7cab96a985e723e3694600761e4a3363a8237ca55c888bf4f"
     },
     {
       "file": "docs/audits/printer-desktop-2026-10-22.jpg",
@@ -336,6 +336,10 @@
     {
       "file": "docs/audits/global-originality.json",
       "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "docs/audits/printer-webgl-mobile-2026-10-22.png",
+      "sha256": "940f4ac25f4bcca3f108ea0662cf77c39b90eaaef459e81b3ed92b5bc92fe23b"
     }
   ],
   "limitations": [
