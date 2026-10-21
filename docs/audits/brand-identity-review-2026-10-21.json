@@ -3,7 +3,7 @@
   "result": "pass",
   "reviewer": "Codex (AI, owner-delegated)",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-21T21:13:42.119Z",
+  "reviewedAt": "2026-10-21T21:57:54.759Z",
   "baseCommit": "112c0769195929f78666c4519f60a21a0aee18e7",
   "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
   "sourceFileCount": 587,
@@ -14,7 +14,7 @@
     "imageProvenance": "No public asset or model bytes changed. Brand asset alt text is updated only for 3dyanimda.",
     "localEvidence": "The workshop address matches the live owner-managed contact_info. Kadıköy describes delivery from Ataşehir, not a separate branch. Existing locality source references are retained.",
     "seoGeoParity": "Brand display name and alternate names are consistent in catalog, CMS seed and Organization/WebSite graphs. About/Contact entity links refer to the same organization. No unverified social or map URL is added.",
-    "publicationGate": "The seed is bounded to five reviewed landing-page patches, matches the observed baseline or an already-applied target, and records the exact resulting payload hash before each update. Existing publication and validation triggers stay enabled."
+    "publicationGate": "The seed is bounded to five reviewed landing-page patches, matches the observed baseline or an already-applied target, and records the exact resulting payload hash before each update. Existing publication and validation triggers stay enabled. Both conflict-update clauses also explicitly require the verified 3dyanimda tenant ID and matching record keys."
   },
   "validation": {
     "applicationTests": 220,
@@ -25,7 +25,7 @@
       "records": 800,
       "result": "pass"
     },
-    "databaseIntegration": "pass: actual publication, content-validation and semantic-date triggers; five exact payload approvals; tenant isolation; field/noindex preservation; repeatability; concurrent-edit rejection"
+    "databaseIntegration": "pass: actual publication/content/date triggers; exact approvals; other-tenant preservation; noindex/contact preservation; repeatability; concurrent-edit rejection; explicit conflict-update tenant predicates"
   },
   "limitations": [
     "The current Supabase connector accepts reads but mutations returned Invalid or expired requestState; no CMS write or frontend deployment is claimed.",

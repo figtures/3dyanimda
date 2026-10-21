@@ -4,7 +4,7 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-21T21:13:42.119Z",
+  "reviewedAt": "2026-10-21T21:57:54.759Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
@@ -285,7 +285,7 @@
     },
     {
       "file": "docs/audits/brand-identity-review-2026-10-21.json",
-      "sha256": "14f0e45d52265aedbc6a9e8f7b2b18923387f1429a5f7ed61ef0e223a873bc1d"
+      "sha256": "16ecd2ce1b7b85357bdb0951c7aa436315f66018f4ed432e77532be00996654d"
     },
     {
       "file": "docs/audits/brand-identity-originality-2026-10-21.json",
@@ -301,7 +301,7 @@
     },
     {
       "file": "supabase/seeds/3dyanimda-brand-identity.sql",
-      "sha256": "9e2951ed6fc44e64379c1d25ff0d55bb011d734e25b239fe0c51f4c975a128d3"
+      "sha256": "34c3c8d34055e071a715d292900a8462b3b6c3e4fda8673f2e97a4bb7625a419"
     }
   ],
   "limitations": [
