@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-21T21:57:54.759Z",
+  "reviewedAt": "2026-10-21T23:43:40.490Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
-  "sourceFileCount": 587,
+  "sourceHash": "c93304c97a3454f66388b47864858cf7c8ac1c1347b7f9ebb9a4e4d384b5184f",
+  "sourceFileCount": 597,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -53,7 +53,8 @@
     "latestPublicSectionBrowserCases": 32,
     "latestBrandIdentityReview": "docs/audits/brand-identity-review-2026-10-21.json",
     "latestBrandIdentityPages": 5,
-    "latestBrandCmsVerification": "docs/audits/brand-cms-verification-2026-10-22.json"
+    "latestBrandCmsVerification": "docs/audits/brand-cms-verification-2026-10-22.json",
+    "latestPrinterHeroReview": "docs/audits/printer-hero-review-2026-10-22.json"
   },
   "evidence": [
     {
@@ -315,6 +316,26 @@
     {
       "file": "docs/audits/brand-cms-verified-1792620078806.jpg",
       "sha256": "8de5bab1fc4c28338a89539c7a16a0d079d9cad43e2194ad8e13ad8401225535"
+    },
+    {
+      "file": "docs/audits/printer-hero-review-2026-10-22.json",
+      "sha256": "e9b98f4529ecef3a213158a574e8230ee035e51b8feddf7fb09f33e042dfb687"
+    },
+    {
+      "file": "docs/audits/printer-desktop-2026-10-22.jpg",
+      "sha256": "72f1f035f413063fbc4c12981d536fb6bdd01a34e06802896b9a7019744751b7"
+    },
+    {
+      "file": "docs/audits/printer-mobile-2026-10-22.jpg",
+      "sha256": "5d21fe308d16b179a5c974a0e4b2bcaac3e7177f0aa1f763dc15c80af9e2750b"
+    },
+    {
+      "file": "docs/audits/printer-footer-desktop-2026-10-22.jpg",
+      "sha256": "a24fc3fd96dbda4611cc85cf66df65c66c306c25ede42b35631b7ca510325265"
+    },
+    {
+      "file": "docs/audits/global-originality.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
     }
   ],
   "limitations": [
@@ -335,7 +356,8 @@
     "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings.",
     "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks.",
     "21 October bounded brand identity review carries forward unchanged historical rendering/asset evidence. Current source/content, 220 application tests, 72 technical contracts, build and real publication-trigger tests passed; no fresh full-route visual crawl, CMS write or Cloudflare deployment is claimed. See docs/audits/brand-identity-review-2026-10-21.json.",
-    "22 October live CMS correction applied and verified: nine SQL checks passed, five published payloads match their reviews, and the other-tenant fingerprint is unchanged. Frontend deployment remains pending. See docs/audits/brand-cms-verification-2026-10-22.json."
+    "22 October live CMS correction applied and verified: nine SQL checks passed, five published payloads match their reviews, and the other-tenant fingerprint is unchanged. Frontend deployment remains pending. See docs/audits/brand-cms-verification-2026-10-22.json.",
+    "22 October bounded printer-hero/footer review: current source, local live-CMS browser inspection, 223 application tests, 72 technical contracts and 800-record originality audit. The previous evidence is retained with its dates; current PR browser checks are an independent merge gate. See docs/audits/printer-hero-review-2026-10-22.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",
