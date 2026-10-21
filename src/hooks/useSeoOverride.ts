@@ -28,12 +28,11 @@ export function useSeoOverride(path: string): SeoOverride | null {
   const cacheKey = `${tenant?.id}::${path}::${lang}`;
   const cached = cache.get(cacheKey);
   const fresh = cached && Date.now() - cached.at < TTL_MS;
-  const [data, setData] = useState<SeoOverride | null>(
-    fresh ? cached!.data : null,
-  );
+  const [snapshot, setSnapshot] = useState<{key: string; data: SeoOverride | null}>(() => ({key: cacheKey, data: fresh ? cached!.data : null}));
 
   useEffect(() => {
     let mounted = true;
+    const setData = (data: SeoOverride | null) => setSnapshot({key: cacheKey, data});
     if (!tenant) return;
     const c = cache.get(cacheKey);
     if (c && Date.now() - c.at < TTL_MS) {
@@ -69,5 +68,5 @@ export function useSeoOverride(path: string): SeoOverride | null {
     };
   }, [cacheKey, path, tenant?.id, lang]);
 
-  return data;
+  return snapshot.key === cacheKey ? snapshot.data : fresh ? cached!.data : null;
 }

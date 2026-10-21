@@ -19,6 +19,7 @@ export function pageGraph(input: {
     url, name: input.title, description: input.description, inLanguage: "tr-TR",
     isPartOf: { "@id": input.origin + "/#website" },
     publisher: { "@id": input.origin + "/#organization" },
+    ...(['AboutPage', 'ContactPage'].includes(input.type || '') ? { about: { '@id': input.origin + '/#organization' } } : {}),
     ...(input.modified ? { dateModified: input.modified } : {}),
     ...(input.image ? { primaryImageOfPage: { "@type": "ImageObject", "@id":url+'#primaryimage', url: new URL(input.image, input.origin).href, contentUrl:new URL(input.image,input.origin).href } } : {}),
   };

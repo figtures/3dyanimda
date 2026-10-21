@@ -58,7 +58,7 @@ export const Seo = ({
   const favicon=brandAsset(tenant?.slug,'favicon',settings);
   const appleIcon=brandAsset(tenant?.slug,'apple_touch_icon',settings);
   const og = share.url;
-  const identity = businessGraph({ name, origin: base, description: business.description || undefined,
+  const identity = businessGraph({ name, alternateNames: business.alternateNames, origin: base, description: business.description || undefined,
     logo: brandAsset(tenant?.slug,'organization_logo',settings).url, email: business.email, telephone: business.phone,
     sameAs: business.sameAs, hasMap: business.googleBusinessUrl, openingHoursSpecification: business.openingHoursSpecification,
     address: business.address,

@@ -7,7 +7,7 @@ export default function BrandAbout() {
   return (
     <>
       <Seo
-        title={business.aboutTitle || "Yaklaşımımız"}
+        title={`Hakkımızda | ${b.name}`}
         description={business.description || `${b.name}: ${b.focus} için ihtiyaca göre 3D tasarım ve üretim yaklaşımımız.`}
         path="/hakkimizda"
         pageType="AboutPage"

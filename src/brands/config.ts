@@ -16,6 +16,7 @@ export function useBrand() {
   return {
     ...base,
     name: business.name,
+    description: business.description || base.description,
     business,
     eyebrow: hero.eyebrow_tr || base.eyebrow,
     title: hero.title_tr || base.title,

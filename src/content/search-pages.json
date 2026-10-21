@@ -6,36 +6,44 @@
     "summary": "Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
     "sections": [
       {
-        "title": "İlk baskı hangi soruya cevap verecek?",
-        "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım."
+        "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım.",
+        "title": "İlk baskı hangi soruya cevap verecek?"
       },
       {
-        "title": "Tek dosyada kaybolmayan revizyonlar",
-        "body": "Alternatif tasarımları ayrı kodlarla paylaşmanız karşılaştırmayı kolaylaştırır. Örneğin iki kapak seçeneğinde yalnızca değişen tırnakları işaretleyin; ortak gövde dosyasını ayrıca belirtin. Denemeden çıkan bulguları onaylanan revizyona bağlayarak sonraki üretimde hangi çizimin esas alınacağını netleştirebiliriz."
+        "body": "Alternatif tasarımları ayrı kodlarla paylaşmanız karşılaştırmayı kolaylaştırır. Örneğin iki kapak seçeneğinde yalnızca değişen tırnakları işaretleyin; ortak gövde dosyasını ayrıca belirtin. Denemeden çıkan bulguları onaylanan revizyona bağlayarak sonraki üretimde hangi çizimin esas alınacağını netleştirebiliriz.",
+        "title": "Tek dosyada kaybolmayan revizyonlar"
       },
       {
-        "title": "Ürün ekibinden gereken bilgiler",
-        "body": "Hedef dış ölçüyü, kullanılacak bileşenleri ve numuneyi inceleyecek kişinin beklentisini talebe ekleyin. Sunum parçasında görünen yüzeyler öncelikli olabilir; montaj prototipinde karşı parçanın referansları önem kazanır. Malzeme ve yüzey tercihini projenin bu aşamasına göre değerlendirelim."
+        "body": "Hedef dış ölçüyü, kullanılacak bileşenleri ve numuneyi inceleyecek kişinin beklentisini talebe ekleyin. Sunum parçasında görünen yüzeyler öncelikli olabilir; montaj prototipinde karşı parçanın referansları önem kazanır. Malzeme ve yüzey tercihini projenin bu aşamasına göre değerlendirelim.",
+        "title": "Ürün ekibinden gereken bilgiler"
       },
       {
-        "title": "Bir sonraki revizyona veri bırakın",
-        "body": "Prototipi test ederken yalnızca “oldu” veya “olmadı” sonucu tutmayın. Hangi yüzeyin temas ettiğini, hangi ölçünün değişmesi gerektiğini ve parçanın hangi kullanımda zorlandığını işaretleyin. Aynı parçanın iki revizyonunu birlikte sipariş edecekseniz dosya adlarını ayrı tutun. Böylece sonraki baskı, önceki denemenin ölçülebilir sonucuna dayanır."
+        "body": "Prototipi test ederken yalnızca “oldu” veya “olmadı” sonucu tutmayın. Hangi yüzeyin temas ettiğini, hangi ölçünün değişmesi gerektiğini ve parçanın hangi kullanımda zorlandığını işaretleyin. Aynı parçanın iki revizyonunu birlikte sipariş edecekseniz dosya adlarını ayrı tutun. Böylece sonraki baskı, önceki denemenin ölçülebilir sonucuna dayanır.",
+        "title": "Bir sonraki revizyona veri bırakın"
+      },
+      {
+        "title": "Baskı talebine hangi dosyayla başlayabilirsiniz?",
+        "body": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS modelinizi teklif ekranında açabilirsiniz; dosya başına sınır 20 MB’tır. Önizlemede ölçü birimini ve dış boyutları kontrol edin, istediğiniz adedi ve parçanın nerede kullanılacağını yazın. Hazır modeliniz yoksa fotoğraf, eskiz veya numuneyle modelleme ihtiyacını birlikte değerlendirebiliriz."
+      },
+      {
+        "title": "Ön tahminden onaylı üretim teklifine",
+        "body": "Teklif ekranındaki anlık hesap, seçtiğiniz malzeme ve üretim ayarlarına bağlı bir ön tahmindir. Dosya hazırlığı, parçanın geometrisi, adet, son işlemler ve teslimat kapsamı incelendikten sonra nihai teklif belirlenir. Üretim ölçüsü, malzeme uygunluğu ve teslim tarihi proje özelinde teyit edilir; onayınızdan sonra üretim planlanır."
       }
     ],
     "kind": "service",
     "image": "/brand/services/3dyanimda-print.webp",
     "faq": [
       {
-        "q": "Görünüş numunesi ile işlevsel prototip aynı siparişte olabilir mi?",
-        "a": "Aynı proje altında ayrı parça kodlarıyla değerlendirilebilir. Her numunenin amacı, adedi ve onay ölçütü talepte birbirinden ayrılmalıdır."
+        "a": "Aynı proje altında ayrı parça kodlarıyla değerlendirilebilir. Her numunenin amacı, adedi ve onay ölçütü talepte birbirinden ayrılmalıdır.",
+        "q": "Görünüş numunesi ile işlevsel prototip aynı siparişte olabilir mi?"
       },
       {
-        "q": "Modelim henüz tamamlanmadıysa nasıl başlayabilirim?",
-        "a": "Mevcut eskizi, temel ölçüleri ve test etmek istediğiniz özelliği paylaşın. Önce modelleme kapsamını, ardından fiziksel numune ihtiyacını belirleyebiliriz."
+        "a": "Mevcut eskizi, temel ölçüleri ve test etmek istediğiniz özelliği paylaşın. Önce modelleme kapsamını, ardından fiziksel numune ihtiyacını belirleyebiliriz.",
+        "q": "Modelim henüz tamamlanmadıysa nasıl başlayabilirim?"
       },
       {
-        "q": "Prototipimi nasıl teslim alabilirim?",
-        "a": "Baskı numuneleri kargo, kurye veya elden teslim edilebilir; İstanbul dışındaki adreslere de kargo gönderimi yapılır. Örnek Mahallesi, Ataşehir’deki atölyeden teslim alacaksanız gelmeden randevu oluşturun. Numunenin adedi, ambalaj ihtiyacı ve hedef adresi teklif talebinize ekleyin."
+        "a": "Baskı numuneleri kargo, kurye veya elden teslim edilebilir; İstanbul dışındaki adreslere de kargo gönderimi yapılır. Örnek Mahallesi, Ataşehir’deki atölyeden teslim alacaksanız gelmeden randevu oluşturun. Numunenin adedi, ambalaj ihtiyacı ve hedef adresi teklif talebinize ekleyin.",
+        "q": "Prototipimi nasıl teslim alabilirim?"
       }
     ],
     "status": "published",
@@ -48,19 +56,13 @@
     "evidence": "",
     "reviewed_at": null,
     "editorial": {
-      "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3dyanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
+      "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3D Yanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
       "takeaways": [
         "Görsel sunum ile çalışan prototipin kabul kriterleri farklıdır.",
         "Fiyatı yalnızca gramaj değil; geometri, hazırlık ve son işlem de etkiler.",
         "Tekrar üretim için dosya revizyonunu ve onaylı numuneyi birlikte kaydedin."
       ],
       "comparison": {
-        "title": "Hangi prototip, hangi karar için?",
-        "columns": [
-          "İhtiyaç",
-          "Öncelik",
-          "Talebe eklenecek bilgi"
-        ],
         "rows": [
           [
             "Görünüş modeli",
@@ -82,6 +84,12 @@
             "Onaylı revizyonun tekrarı",
             "Numune onayı ve adet planı"
           ]
+        ],
+        "title": "Hangi prototip, hangi karar için?",
+        "columns": [
+          "İhtiyaç",
+          "Öncelik",
+          "Talebe eklenecek bilgi"
         ]
       },
       "relatedPaths": [
@@ -100,36 +108,44 @@
     "summary": "Elinizdeki objeyi yeni tasarımın referansı yapmak için tarama kapsamını belirleyin. Dış formu görmek, mevcut ürüne oturan bir aksesuar geliştirmek ve CAD referansı oluşturmak farklı çıktılar gerektirir.",
     "sections": [
       {
-        "title": "Referans objenin projedeki rolü",
-        "body": "Tarama talebine yalnızca objenin fotoğrafını değil, ona bağlı tasarım fikrini de ekleyin. Yeni bir muhafaza mevcut yüzeye oturacaksa temas bölgesini gösterin. Sunum için dijitalleştirilen bir obje söz konusuysa görünmesi gereken yüzeyleri ve kullanım ölçeğini açıklayın."
+        "body": "Tarama talebine yalnızca objenin fotoğrafını değil, ona bağlı tasarım fikrini de ekleyin. Yeni bir muhafaza mevcut yüzeye oturacaksa temas bölgesini gösterin. Sunum için dijitalleştirilen bir obje söz konusuysa görünmesi gereken yüzeyleri ve kullanım ölçeğini açıklayın.",
+        "title": "Referans objenin projedeki rolü"
       },
       {
-        "title": "Yüzey verisinden tasarım girdisine",
-        "body": "Elde edilen yüzeyin doğrudan görüntülenmesi ile düzenlenebilir bir tasarım referansına dönüştürülmesi ayrı işlemlerdir. Dosyayı hangi yazılımda ve hangi amaçla kullanacağınızı baştan bilmek teslim biçimini belirlemeye yardımcı olur. CAD yeniden çizimi gerekiyorsa bunu tarama talebinde belirtin."
+        "body": "Elde edilen yüzeyin doğrudan görüntülenmesi ile düzenlenebilir bir tasarım referansına dönüştürülmesi ayrı işlemlerdir. Dosyayı hangi yazılımda ve hangi amaçla kullanacağınızı baştan bilmek teslim biçimini belirlemeye yardımcı olur. CAD yeniden çizimi gerekiyorsa bunu tarama talebinde belirtin.",
+        "title": "Yüzey verisinden tasarım girdisine"
       },
       {
-        "title": "Objeyi paylaşmadan önce",
-        "body": "Yaklaşık boyut, malzeme görünümü ve hareketli parçaların durumunu not edin. Sökülebilen kapaklar veya gizli yüzeyler varsa fotoğraflarda işaretleyin. Fiziksel gönderimden önce değerlendirme kapsamı ve numunenin geri dönüş şekli görüşülmelidir."
+        "body": "Yaklaşık boyut, malzeme görünümü ve hareketli parçaların durumunu not edin. Sökülebilen kapaklar veya gizli yüzeyler varsa fotoğraflarda işaretleyin. Fiziksel gönderimden önce değerlendirme kapsamı ve numunenin geri dönüş şekli görüşülmelidir.",
+        "title": "Objeyi paylaşmadan önce"
       },
       {
-        "title": "Taramadan önce çıktı üzerinde anlaşın",
-        "body": "Nesnenin bütününü mü, montaja oturan belirli bir yüzeyini mi istediğinizi belirtin. Fotoğrafa bir cetvel eklemek ilk kapsam değerlendirmesine yardımcı olur; bu fotoğraf ölçüm raporu yerine geçmez. Renkli görünüm, geometrik ağ, CAD dosyası ve teknik rapor aynı teslim değildir. Beklenen dosya biçimi ve sonradan düzenleme ihtiyacını teklif aşamasında ayırın."
+        "body": "Nesnenin bütününü mü, montaja oturan belirli bir yüzeyini mi istediğinizi belirtin. Fotoğrafa bir cetvel eklemek ilk kapsam değerlendirmesine yardımcı olur; bu fotoğraf ölçüm raporu yerine geçmez. Renkli görünüm, geometrik ağ, CAD dosyası ve teknik rapor aynı teslim değildir. Beklenen dosya biçimi ve sonradan düzenleme ihtiyacını teklif aşamasında ayırın.",
+        "title": "Taramadan önce çıktı üzerinde anlaşın"
+      },
+      {
+        "title": "Tarama teklifi için ilk paylaşım",
+        "body": "Objenin farklı açılardan çekilmiş fotoğraflarını, yaklaşık boyutlarını ve malzemesini paylaşın. Hangi yüzeylerin önemli olduğunu ve veriyi arşiv, yeniden tasarım ya da üretim için kullanacağınızı belirtin. Gönderilemeyecek bir parça için bulunduğu konumu, erişim koşullarını ve yerinde çalışma beklentinizi ekleyin."
+      },
+      {
+        "title": "Tarama ve modelleme kapsamını ayrı netleştirelim",
+        "body": "Tarama fiyatı; geometriye, yüzeye erişime, hazırlığa, yerinde çalışma ihtiyacına ve istenen çıktıya göre değerlendirilir. Yüzey ağı temizliği ile düzenlenebilir CAD modelinin hazırlanması farklı çalışmalardır. Numuneyi göndermeden önce teslim formatı, geri gönderim ve takvim üzerinde anlaşalım."
       }
     ],
     "kind": "service",
     "image": "/brand/services/3dyanimda-scan.webp",
     "faq": [
       {
-        "q": "Ürünün tüm yüzeylerinin taranması gerekli mi?",
-        "a": "Kapsam, dijital verinin kullanım amacına bağlıdır. Yalnızca eşleşme bölgesi gereken bir aksesuar projesi ile tam obje sunumunun veri ihtiyacı farklıdır."
+        "a": "Kapsam, dijital verinin kullanım amacına bağlıdır. Yalnızca eşleşme bölgesi gereken bir aksesuar projesi ile tam obje sunumunun veri ihtiyacı farklıdır.",
+        "q": "Ürünün tüm yüzeylerinin taranması gerekli mi?"
       },
       {
-        "q": "Tarama dosyasını sonradan modellemede kullanabilir miyim?",
-        "a": "Referans olarak kullanılabilir; düzenlenebilir CAD geometrisine dönüşüm ayrı çalışma gerektirebilir. İstediğiniz düzenlemeleri teklif öncesinde tarif edin."
+        "a": "Referans olarak kullanılabilir; düzenlenebilir CAD geometrisine dönüşüm ayrı çalışma gerektirebilir. İstediğiniz düzenlemeleri teklif öncesinde tarif edin.",
+        "q": "Tarama dosyasını sonradan modellemede kullanabilir miyim?"
       },
       {
-        "q": "Prototipi taşımadan yerinde 3D tarama yaptırabilir miyim?",
-        "a": "Yerinde 3D tarama hizmeti veriyoruz. İncelenecek prototipin fotoğraflarını, yaklaşık boyutunu ve bulunduğu adresi paylaşın; erişim ve çekim koşullarını birlikte planlayalım. Atölyeye getirmeyi tercih ederseniz Örnek Mahallesi’ndeki çalışma noktası için önceden randevu alın."
+        "a": "Yerinde 3D tarama hizmeti veriyoruz. İncelenecek prototipin fotoğraflarını, yaklaşık boyutunu ve bulunduğu adresi paylaşın; erişim ve çekim koşullarını birlikte planlayalım. Atölyeye getirmeyi tercih ederseniz Örnek Mahallesi’ndeki çalışma noktası için önceden randevu alın.",
+        "q": "Prototipi taşımadan yerinde 3D tarama yaptırabilir miyim?"
       }
     ],
     "status": "published",
@@ -149,12 +165,6 @@
         "Erişilemeyen iç yüzeyler için ek ölçüm veya söküm gerekebilir."
       ],
       "comparison": {
-        "title": "Tarama çıktısını kullanım amacına göre seçin",
-        "columns": [
-          "Amaç",
-          "Çıktı",
-          "Kontrol"
-        ],
         "rows": [
           [
             "Dijital arşiv",
@@ -171,6 +181,12 @@
             "Hizalanmış veri",
             "Referans sistemi ve karşılaştırma kapsamı"
           ]
+        ],
+        "title": "Tarama çıktısını kullanım amacına göre seçin",
+        "columns": [
+          "Amaç",
+          "Çıktı",
+          "Kontrol"
         ]
       },
       "relatedPaths": [
@@ -188,36 +204,44 @@
     "summary": "Eskiz, ölçü ve kullanım senaryosunu birlikte ele alarak ilk ürün geometrisini geliştirin. Modelleme sürecinin çıktısını yalnızca görünüşe değil, prototiple sınanacak tasarım kararlarına bağlayın.",
     "sections": [
       {
-        "title": "Bir kullanım senaryosuyla başlayın",
-        "body": "Ürün kimin elinde, hangi ortamda ve hangi hareketle kullanılacak? Bu sorular gövde biçimi kadar düğme erişimini, açılma yönünü ve taşınabilirliği de etkiler. Referans görsellerinizi beğendiğiniz özelliklerle birlikte paylaşmanız tasarım niyetini anlaşılır kılar."
+        "body": "Ürün kimin elinde, hangi ortamda ve hangi hareketle kullanılacak? Bu sorular gövde biçimi kadar düğme erişimini, açılma yönünü ve taşınabilirliği de etkiler. Referans görsellerinizi beğendiğiniz özelliklerle birlikte paylaşmanız tasarım niyetini anlaşılır kılar.",
+        "title": "Bir kullanım senaryosuyla başlayın"
       },
       {
-        "title": "Değişebilir bölgeleri ayırın",
-        "body": "Hazır elektronik bileşen, bağlantı elemanı veya korunması gereken dış ölçü sabit girdi olabilir. Buna karşılık form, yüzey geçişi ve kapak düzeni geliştirilebilir alanlardır. İlk görüşmede bu sınırları ayırarak revizyonun nerede yapılabileceğini belirleyelim."
+        "body": "Hazır elektronik bileşen, bağlantı elemanı veya korunması gereken dış ölçü sabit girdi olabilir. Buna karşılık form, yüzey geçişi ve kapak düzeni geliştirilebilir alanlardır. İlk görüşmede bu sınırları ayırarak revizyonun nerede yapılabileceğini belirleyelim.",
+        "title": "Değişebilir bölgeleri ayırın"
       },
       {
-        "title": "Dijital onaydan fiziksel denemeye",
-        "body": "Ekrandaki modelde genel formu ve yerleşimi değerlendirdikten sonra kritik bölümleri numuneyle inceleyebilirsiniz. Elde tutuş veya geçme davranışı gibi konular fiziksel geri bildirim gerektirebilir. Sonraki düzenlemeleri aynı dosyanın üzerine belirsiz biçimde eklemek yerine sürümlendirelim."
+        "body": "Ekrandaki modelde genel formu ve yerleşimi değerlendirdikten sonra kritik bölümleri numuneyle inceleyebilirsiniz. Elde tutuş veya geçme davranışı gibi konular fiziksel geri bildirim gerektirebilir. Sonraki düzenlemeleri aynı dosyanın üzerine belirsiz biçimde eklemek yerine sürümlendirelim.",
+        "title": "Dijital onaydan fiziksel denemeye"
       },
       {
-        "title": "Revizyonu yönetilebilir hale getirin",
-        "body": "İlk tasarım görüşmesinde sabit kalacak ölçüleri ve değişebilecek özellikleri listeleyin. Bir kutuda kart ölçüsü sabitken kablo çıkışının yeri değişebilir. Bu ayrım, modelin nasıl kurulacağını etkiler. Kontrol görüntüsü, ölçü listesi ve fiziksel numune onayını farklı aşamalar olarak ele almak, yalnızca görüntü üzerinden verilmiş bir onayın üretim onayıyla karışmasını önler."
+        "body": "İlk tasarım görüşmesinde sabit kalacak ölçüleri ve değişebilecek özellikleri listeleyin. Bir kutuda kart ölçüsü sabitken kablo çıkışının yeri değişebilir. Bu ayrım, modelin nasıl kurulacağını etkiler. Kontrol görüntüsü, ölçü listesi ve fiziksel numune onayını farklı aşamalar olarak ele almak, yalnızca görüntü üzerinden verilmiş bir onayın üretim onayıyla karışmasını önler.",
+        "title": "Revizyonu yönetilebilir hale getirin"
+      },
+      {
+        "title": "Modelleme talebinizin başlangıç paketi",
+        "body": "Eskiz, teknik resim, fotoğraf, temel ölçüler veya fiziksel numuneyle başlayabilirsiniz. Parçanın işlevini, değişmemesi gereken boyutları ve birlikte çalışacağı bileşenleri belirtin. Mevcut bir dosyanız varsa teklif ekranına ekleyin; yalnızca görselleştirme mi yoksa üretime hazırlık mı istediğinizi açıklayın."
+      },
+      {
+        "title": "Revizyon, dosya teslimi ve fiyat kapsamı",
+        "body": "Teklif; mevcut referansların yeterliliği, geometrinin karmaşıklığı, ölçüm veya tarama gereksinimi, revizyon kapsamı ve teslim formatına göre hazırlanır. Düzenlenebilir CAD dosyası, baskı ağı ve görsel sunum aynı çıktı değildir. İhtiyaç duyduğunuz teslimleri ve onay adımlarını işe başlamadan birlikte belirleyelim."
       }
     ],
     "kind": "service",
     "image": "/brand/services/3dyanimda-model.webp",
     "faq": [
       {
-        "q": "Bir referans ürünün aynısını çizmeniz yeterli olur mu?",
-        "a": "Referansın hangi özelliğini istediğinizi belirtmeniz gerekir. Kullanım hakkı, hedef ölçüler ve sizin ürününüze özgü değişiklikler modelleme kapsamına girmeden netleştirilir."
+        "a": "Referansın hangi özelliğini istediğinizi belirtmeniz gerekir. Kullanım hakkı, hedef ölçüler ve sizin ürününüze özgü değişiklikler modelleme kapsamına girmeden netleştirilir.",
+        "q": "Bir referans ürünün aynısını çizmeniz yeterli olur mu?"
       },
       {
-        "q": "Modelleme tesliminde hangi formatı istemeliyim?",
-        "a": "Dosyayı üretim, görselleştirme veya sonraki CAD düzenlemesi için kullanacağınızı yazın. Teslim formatı ve düzenlenebilirlik beklentisi buna göre kapsamlandırılır."
+        "a": "Dosyayı üretim, görselleştirme veya sonraki CAD düzenlemesi için kullanacağınızı yazın. Teslim formatı ve düzenlenebilirlik beklentisi buna göre kapsamlandırılır.",
+        "q": "Modelleme tesliminde hangi formatı istemeliyim?"
       },
       {
-        "q": "Tasarım için fiziksel örneği nasıl ulaştırabilirim?",
-        "a": "Referans ürününüzü kargo veya kurye ile gönderebilir, randevu alarak elden getirebilirsiniz. Şehir dışındaki ekiplerle de kargo üzerinden numune alışverişi yapılabilir. Gönderiye ürün kodunu ve modelde değiştirilmesini istediğiniz özellikleri eklemek, örneği doğru çizim revizyonuyla eşleştirmeye yardımcı olur."
+        "a": "Referans ürününüzü kargo veya kurye ile gönderebilir, randevu alarak elden getirebilirsiniz. Şehir dışındaki ekiplerle de kargo üzerinden numune alışverişi yapılabilir. Gönderiye ürün kodunu ve modelde değiştirilmesini istediğiniz özellikleri eklemek, örneği doğru çizim revizyonuyla eşleştirmeye yardımcı olur.",
+        "q": "Tasarım için fiziksel örneği nasıl ulaştırabilirim?"
       }
     ],
     "status": "published",
@@ -237,12 +261,6 @@
         "Teslim formatını üretim ve sonraki revizyon ihtiyaçlarına göre seçin."
       ],
       "comparison": {
-        "title": "Tasarım başlangıç noktaları",
-        "columns": [
-          "Elinizdeki veri",
-          "Çalışma",
-          "İlk karar"
-        ],
         "rows": [
           [
             "Eskiz / fikir",
@@ -259,6 +277,12 @@
             "Ölçüm veya tarama destekli modelleme",
             "Kopyalanacak ve değiştirilecek bölgeler"
           ]
+        ],
+        "title": "Tasarım başlangıç noktaları",
+        "columns": [
+          "Elinizdeki veri",
+          "Çalışma",
+          "İlk karar"
         ]
       },
       "relatedPaths": [

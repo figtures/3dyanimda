@@ -1,6 +1,7 @@
 /** Tenant-owned public business facts. Empty saved fields intentionally remove legacy values. */
 export type ContactInfo = {
   business_name?: string;
+  business_alternate_names?: string;
   business_description?: string;
   email?: string;
   phone?: string;
@@ -169,12 +170,16 @@ export function resolveBusinessProfile(settings: Record<string, unknown>, brand:
   const phoneDisplay = own(contact, 'phone_display') ? clean(contact.phone_display) : phone;
   // Clearing a required display name restores the tenant name, never a previous override.
   const name = clean(value('business_name', verified.name)) || clean(brand.name);
+  const alternateNames = [...new Set(clean(contact.business_alternate_names).split(/[\n,]/).map(clean).filter(alias =>
+    alias && alias !== name && alias.length <= 100 && !/^(?:3d\s*yanında|(?:www\.)?3dyaninda\.com)$/i.test(alias),
+  ))].slice(0, 6);
   const legacyGeo = record(verified.geo);
   const geo = !addressOwned && !freeformChanged && Number.isFinite(legacyGeo.latitude) && Number.isFinite(legacyGeo.longitude)
     && Math.abs(Number(legacyGeo.latitude)) <= 90 && Math.abs(Number(legacyGeo.longitude)) <= 180
     ? { latitude: Number(legacyGeo.latitude), longitude: Number(legacyGeo.longitude) } : undefined;
   return {
     name,
+    alternateNames,
     description: clean(value('business_description', verified.description)),
     email: normalizeEmail(value('email', verified.email)),
     phone,

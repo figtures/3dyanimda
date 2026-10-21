@@ -6,6 +6,7 @@ const entities = [
   "Örnek Mahallesi",
   "Örnek",
   "3dyanımda",
+  "3D Yanımda",
   "3dsanayi",
   "maketyanımda",
   "parçayanımda",

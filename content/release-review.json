@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-19T20:33:34.517Z",
+  "reviewedAt": "2026-10-21T21:13:42.119Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "975fb48c045a285bc8e0599903db7005c5a278c9d8c38ee44a08cdc394be7954",
-  "sourceFileCount": 586,
+  "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
+  "sourceFileCount": 587,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -50,7 +50,9 @@
       "runId": 38839001387
     },
     "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json",
-    "latestPublicSectionBrowserCases": 32
+    "latestPublicSectionBrowserCases": 32,
+    "latestBrandIdentityReview": "docs/audits/brand-identity-review-2026-10-21.json",
+    "latestBrandIdentityPages": 5
   },
   "evidence": [
     {
@@ -280,6 +282,26 @@
     {
       "file": "scripts/cloudflare/audit-routing.mjs",
       "sha256": "a5d073b116f8e7e7f26b6ea9146445df0f6f430fab6f09fd8a1349e9268e1762"
+    },
+    {
+      "file": "docs/audits/brand-identity-review-2026-10-21.json",
+      "sha256": "14f0e45d52265aedbc6a9e8f7b2b18923387f1429a5f7ed61ef0e223a873bc1d"
+    },
+    {
+      "file": "docs/audits/brand-identity-originality-2026-10-21.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "scripts/test-brand-identity-seed.mjs",
+      "sha256": "62259eaba5c0eb15145e3dad0b269087b82b5552844585f34ead41daf5cb2881"
+    },
+    {
+      "file": "scripts/fixtures/brand-identity-baseline.json",
+      "sha256": "b98583ad041a970e557be1ad1eb844eb66893b57093a9fa08bb762031a68a7f5"
+    },
+    {
+      "file": "supabase/seeds/3dyanimda-brand-identity.sql",
+      "sha256": "9e2951ed6fc44e64379c1d25ff0d55bb011d734e25b239fe0c51f4c975a128d3"
     }
   ],
   "limitations": [
@@ -298,7 +320,8 @@
     "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately.",
     "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI.",
     "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings.",
-    "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks."
+    "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks.",
+    "21 October bounded brand identity review carries forward unchanged historical rendering/asset evidence. Current source/content, 220 application tests, 72 technical contracts, build and real publication-trigger tests passed; no fresh full-route visual crawl, CMS write or Cloudflare deployment is claimed. See docs/audits/brand-identity-review-2026-10-21.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",
