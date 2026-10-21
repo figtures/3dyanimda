@@ -49,6 +49,7 @@ jobs:
       - run: npm run typecheck
       - run: npm test -- --reporter=dot
       - run: npm run test:search:local
+      - run: node scripts/test-brand-identity-seed.mjs
       - run: npm run audit:protocols
       - run: npm run audit:search-evidence
       - run: npm run build

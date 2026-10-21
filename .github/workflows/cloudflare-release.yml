@@ -1,5 +1,7 @@
 name: Cloudflare release packaging
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
     paths:
@@ -12,6 +14,8 @@ on:
       - 'src/**'
       - 'public/**'
       - 'content/**'
+      - 'scripts/quality/public-export-*'
+      - 'docs/audits/**'
       - 'deploy/**'
       - 'package.json'
       - 'package-lock.json'
@@ -66,6 +70,7 @@ jobs:
           path: |
             .cloudflare/${{ matrix.brand }}/wrangler.json
             .cloudflare/${{ matrix.brand }}/dry-run/
+            .cloudflare/${{ matrix.brand }}/release/*-route-inputs.json
             .cloudflare/${{ matrix.brand }}/release/${{ matrix.brand }}.com/search-manifest.json
             artifacts/release/
             .cloudflare/browser-libraries/*/packages.json

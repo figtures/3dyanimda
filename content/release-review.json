@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-16T10:47:29.497Z",
+  "reviewedAt": "2026-10-21T21:57:54.759Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "6277f584a25c61cb50ce1fd48f242789dc9bfb37bdfb61418101fbb5e93b80dc",
-  "sourceFileCount": 574,
+  "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
+  "sourceFileCount": 587,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -35,7 +35,7 @@
     "modelSelectionCases": 36,
     "deltaRuntimeCases": 375,
     "deltaReview": "docs/audits/final-delta-review-2026-10-11.json",
-    "latestDeltaReview": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
+    "latestDeltaReview": "docs/audits/public-sections-release-review-2026-10-19.json",
     "latestBrandAssetFiles": 80,
     "latestSourceSnapshot": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
     "latestHomeFlowBrowserCases": 48,
@@ -49,7 +49,11 @@
       "navigation": 64,
       "runId": 38839001387
     },
-    "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json"
+    "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json",
+    "latestPublicSectionBrowserCases": 32,
+    "latestBrandIdentityReview": "docs/audits/brand-identity-review-2026-10-21.json",
+    "latestBrandIdentityPages": 5,
+    "latestBrandCmsVerification": "docs/audits/brand-cms-verification-2026-10-22.json"
   },
   "evidence": [
     {
@@ -247,6 +251,70 @@
     {
       "file": "docs/audits/runtime-navigation-pricing-2026-10-16.json",
       "sha256": "02c36267aa49628ec329a5b88f2d9792faa521aecc75e2af831c46c93402588a"
+    },
+    {
+      "file": "docs/audits/public-sections-release-review-2026-10-19.json",
+      "sha256": "59d669bab62625369b791607bb059d9e28466fc0a8b9e50ac39253c8839cae33"
+    },
+    {
+      "file": "docs/audits/public-sections-originality-2026-10-19.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "scripts/quality/public-export-routes.mjs",
+      "sha256": "695f67b2e2553764c1a293381eda9c6105ee1c6e905de3040b5e640b082447fc"
+    },
+    {
+      "file": "scripts/quality/public-export-routes.test.mjs",
+      "sha256": "976ee64793303198b5906079d7905e3f8e7c3186654b77b3d14538315e4d0256"
+    },
+    {
+      "file": "scripts/export-sites.mjs",
+      "sha256": "aab69f7fea4213077c6094fce72d7f24ffd9d976ddac8658193080eec7144bda"
+    },
+    {
+      "file": "scripts/quality/audit-approved-html.mjs",
+      "sha256": "c98c790ab29bc16ce6aa2f6a613bc192c1ab4938019fc20088a52b9cc130225a"
+    },
+    {
+      "file": "scripts/quality/audit-search-contracts.mjs",
+      "sha256": "18ffb3eafcca24585d15f7cae8261f46b7402d7935c2a57068b90e0958fd6f1b"
+    },
+    {
+      "file": "scripts/cloudflare/audit-routing.mjs",
+      "sha256": "a5d073b116f8e7e7f26b6ea9146445df0f6f430fab6f09fd8a1349e9268e1762"
+    },
+    {
+      "file": "docs/audits/brand-identity-review-2026-10-21.json",
+      "sha256": "16ecd2ce1b7b85357bdb0951c7aa436315f66018f4ed432e77532be00996654d"
+    },
+    {
+      "file": "docs/audits/brand-identity-originality-2026-10-21.json",
+      "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+    },
+    {
+      "file": "scripts/test-brand-identity-seed.mjs",
+      "sha256": "62259eaba5c0eb15145e3dad0b269087b82b5552844585f34ead41daf5cb2881"
+    },
+    {
+      "file": "scripts/fixtures/brand-identity-baseline.json",
+      "sha256": "b98583ad041a970e557be1ad1eb844eb66893b57093a9fa08bb762031a68a7f5"
+    },
+    {
+      "file": "supabase/seeds/3dyanimda-brand-identity.sql",
+      "sha256": "34c3c8d34055e071a715d292900a8462b3b6c3e4fda8673f2e97a4bb7625a419"
+    },
+    {
+      "file": "docs/audits/brand-cms-verification-2026-10-22.json",
+      "sha256": "1677fd37947ef8eb82b1dfd3e5acc0b18f2f000f1061ad64b5440ede5ce72719"
+    },
+    {
+      "file": "supabase/seeds/3dyanimda-brand-identity.verify.sql",
+      "sha256": "c9713cdebb4f29c8a7198006aa3a94680ba679a5b09a2adf36ce2bd83b03cf21"
+    },
+    {
+      "file": "docs/audits/brand-cms-verified-1792620078806.jpg",
+      "sha256": "8de5bab1fc4c28338a89539c7a16a0d079d9cad43e2194ad8e13ad8401225535"
     }
   ],
   "limitations": [
@@ -264,7 +332,10 @@
     "16 October admin business-profile delta: current source/contract review and inherited asset/content evidence, with CI regression coverage; see business-profile-review-2026-10-16.json. No fresh full-route or new admin/contact visual review is claimed.",
     "16 October multi-format preview and Cloudflare configuration delta: source/type/unit/build/dependency checks passed; remote browser execution is tracked separately.",
     "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI.",
-    "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings."
+    "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings.",
+    "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks.",
+    "21 October bounded brand identity review carries forward unchanged historical rendering/asset evidence. Current source/content, 220 application tests, 72 technical contracts, build and real publication-trigger tests passed; no fresh full-route visual crawl, CMS write or Cloudflare deployment is claimed. See docs/audits/brand-identity-review-2026-10-21.json.",
+    "22 October live CMS correction applied and verified: nine SQL checks passed, five published payloads match their reviews, and the other-tenant fingerprint is unchanged. Frontend deployment remains pending. See docs/audits/brand-cms-verification-2026-10-22.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

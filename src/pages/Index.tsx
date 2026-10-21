@@ -71,7 +71,7 @@ export default function Index() {
   return (
     <>
       <Seo
-        title={searchTitles[b.slug] || b.focus}
+        title={b.slug === '3dyanimda' ? `${b.name} | ${b.business.address?.addressLocality ? b.business.address.addressLocality + '’de ' : ''}3D Baskı, Tarama ve Modelleme` : searchTitles[b.slug] || b.focus}
         description={b.description}
         image={img}
       />

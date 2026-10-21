@@ -1,0 +1,40 @@
+{
+  "kind": "live-cms-verification",
+  "result": "pass",
+  "verifiedAt": "2026-10-21T22:02:20.009Z",
+  "clientDate": "2026-10-22",
+  "projectRef": "zdxjmhhjuomcpdtllnuq",
+  "tenantId": "10000000-0000-4000-8000-000000000001",
+  "domain": "3dyanimda.com",
+  "sourceCommit": "c2fee4efb8b5d789f9e18ec36e046e2a5211728d",
+  "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
+  "method": "Owner-approved Supabase SQL Editor fallback after connector requestState errors",
+  "seedSha256": "34c3c8d34055e071a715d292900a8462b3b6c3e4fda8673f2e97a4bb7625a419",
+  "sqlEditorReportedSuccess": true,
+  "checks": {
+    "businessName": "3D Yanımda",
+    "homeTitle": "3D Yanımda | Ataşehir’de 3D Baskı, Tarama ve Modelleme",
+    "reviewedPages": 5,
+    "allFivePagesPublishedWithMatchingReviewHash": true,
+    "verificationRows": 9,
+    "allVerificationRowsPassed": true,
+    "otherTenantFingerprintBefore": "626b914d1f7ee6b35a6de238ab59d64b",
+    "otherTenantFingerprintAfter": "626b914d1f7ee6b35a6de238ab59d64b",
+    "otherTenantTables": [
+      "tenants",
+      "site_settings",
+      "seo_meta",
+      "landing_pages",
+      "publication_reviews"
+    ]
+  },
+  "evidence": {
+    "query": "supabase/seeds/3dyanimda-brand-identity.verify.sql",
+    "screenshot": "docs/audits/brand-cms-verified-1792620078806.jpg"
+  },
+  "limitations": [
+    "Frontend deployment and production HTTP verification are not completed by this database change.",
+    "Cloudflare dashboard still requires sign-in.",
+    "No ranking, indexing or independent human/legal review is claimed."
+  ]
+}

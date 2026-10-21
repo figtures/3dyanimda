@@ -23,6 +23,7 @@ function editableValues(settings: Record<string, unknown>, name: string, origin:
   const data: ContactInfo = { ...stored };
   const defaults: ContactInfo = {
     business_name: profile.name,
+    business_alternate_names: profile.alternateNames.join('\n'),
     business_description: profile.description,
     visit_note: profile.visitNote,
     delivery_note: profile.deliveryNote,
@@ -187,6 +188,7 @@ const AdminContactInfo = () => {
       <Card className="p-5 space-y-4">
         <h2 className="font-display text-lg font-semibold flex items-center gap-2"><Building2 className="h-5 w-5 text-primary" aria-hidden="true" /> Marka kimliği</h2>
         {field("business_name", "İşletme / marka adı", { placeholder: brandName, hint: "Müşterilerinizin bildiği gerçek marka adını kullanın. Anahtar kelime veya ilçe listesi eklemeyin." })}
+        {field("business_alternate_names", "Kullanılan diğer marka yazımları", { multiline: true, rows: 2, hint: "Her satıra bu işletmenin gerçekten kullandığı bir ad veya kendi alan adını yazın. Başka işletmelerin adlarını eklemeyin." })}
         {field("business_description", "Kısa işletme açıklaması", { multiline: true, hint: "Gerçek hizmetlerinizi ve üretim yaklaşımınızı kısaca anlatın." })}
       </Card>
 

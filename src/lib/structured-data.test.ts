@@ -1,6 +1,15 @@
 import {describe,it,expect} from 'vitest';
 import {businessGraph,containsLegacyIdentity} from './structured-data';
 describe('tenant structured data',()=>{
+ it('links one organization and its workshop, with honest aliases on the existing website node',()=>{
+  const origin='https://3dyanimda.com';
+  const graph=businessGraph({name:'3D Yanımda',origin,alternateNames:['3dyanımda','3dyanimda.com','3D Yanında'],email:'info@3dyanimda.com',telephone:'+905364488230',logo:'/logo.png',address:{addressLocality:'Ataşehir',addressRegion:'İstanbul',addressCountry:'TR'}})['@graph'];
+  expect(graph).toHaveLength(3);
+  expect(graph[0]).toMatchObject({'@id':origin+'/#organization',alternateName:['3dyanımda','3dyanimda.com'],location:{'@id':origin+'/#localbusiness'}});
+  expect(graph[1]).toMatchObject({'@id':origin+'/#website',name:'3D Yanımda',alternateName:['3dyanımda','3dyanimda.com'],publisher:{'@id':origin+'/#organization'}});
+  expect(graph[2]).toMatchObject({parentOrganization:{'@id':origin+'/#organization'},email:'info@3dyanimda.com',telephone:'+905364488230',logo:origin+'/logo.png'});
+  expect(JSON.stringify(graph)).not.toMatch(/sameAs|GeoCoordinates|legalName|foundingDate|aggregateRating|3D Yanında/);
+ });
  it('keeps legitimate Beylikdüzü area data while rejecting source company identity',()=>{
   expect(containsLegacyIdentity({areaServed:{name:'Beylikdüzü'}})).toBe(false);
   expect(containsLegacyIdentity({url:'https://3dyaninda.com/'})).toBe(true);

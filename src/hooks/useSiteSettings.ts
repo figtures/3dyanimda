@@ -24,10 +24,9 @@ async function load(id: string): Promise<Settings> {
 export function useSiteSettings() {
   const { tenant } = useTenant();
   const id = tenant?.id;
-  const [settings, setSettings] = useState<Settings>(() =>
-    id ? (cache.get(id) ?? {}) : {},
-  );
+  const [snapshot, setSnapshot] = useState(() => ({id, value: id ? (cache.get(id) ?? {}) : {}}));
   useEffect(() => {
+    const setSettings = (value: Settings) => setSnapshot({id, value});
     if (!id) {
       setSettings({});
       return;
@@ -57,7 +56,7 @@ export function useSiteSettings() {
       listeners.delete(listener);
     };
   }, [id]);
-  return settings;
+  return snapshot.id === id ? snapshot.value : id ? (cache.get(id) ?? {}) : {};
 }
 async function refreshForTenant(id: string): Promise<Settings> {
   // Publish only a successful response. A failed refresh leaves the last good cache intact.

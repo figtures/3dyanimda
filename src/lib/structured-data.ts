@@ -2,6 +2,7 @@ import { normalizeGoogleBusinessUrl, normalizePublicUrl, normalizeSocialUrl, SOC
 
 export type BusinessIdentity = {
  name: string; origin: string; description?: string; logo?: string;
+ alternateNames?: string[];
  email?: string; telephone?: string; sameAs?: string[]; hasMap?: string;
  address?: {streetAddress?: string;addressLocality?: string;addressRegion?: string;addressCountry?: string;postalCode?:string};
  geo?: {latitude: number;longitude: number};
@@ -17,10 +18,14 @@ export function businessGraph(identity: BusinessIdentity) {
  const hasMap=normalizeGoogleBusinessUrl(identity.hasMap);
  const geo=identity.geo&&Number.isFinite(identity.geo.latitude)&&Number.isFinite(identity.geo.longitude)&&Math.abs(identity.geo.latitude)<=90&&Math.abs(identity.geo.longitude)<=180?identity.geo:undefined;
  const hasAddress=address&&Object.values(address).some(v=>typeof v==='string'&&v.trim());
+ const alternateName=[...new Set((identity.alternateNames||[]).map(value=>value.trim()).filter(value=>value&&value!==name&&!/^(?:3d\s*yanında|(?:www\.)?3dyaninda\.com)$/i.test(value)))];
+ const aliases=alternateName.length?{alternateName}:{};
  const organization = {'@type':'Organization','@id':origin+'/#organization',name,url:origin,description,
+  ...aliases,...(hasAddress?{address:{'@type':'PostalAddress',...address},location:{'@id':origin+'/#localbusiness'}}:{}),
   ...(logo?{logo:new URL(logo,origin).href}:{}),...(email?{email}:{}),...(telephone?{telephone}:{}),...(sameAs?.length?{sameAs}:{}),
   ...((email||telephone)?{contactPoint:[{'@type':'ContactPoint',contactType:'customer service',...(email?{email}:{}),...(telephone?{telephone}:{}),availableLanguage:['Turkish']}]}:{})};
- return {'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':origin+'/#website',url:origin,name,inLanguage:'tr-TR',publisher:{'@id':origin+'/#organization'}},...(hasAddress ? [{'@type':'ProfessionalService','@id':origin+'/#localbusiness',name,url:origin,parentOrganization:{'@id':origin+'/#organization'},
+ return {'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':origin+'/#website',url:origin,name,...aliases,inLanguage:'tr-TR',publisher:{'@id':origin+'/#organization'}},...(hasAddress ? [{'@type':'ProfessionalService','@id':origin+'/#localbusiness',name,url:origin,parentOrganization:{'@id':origin+'/#organization'},
+  ...(logo?{logo:new URL(logo,origin).href}:{}),...(email?{email}:{}),...(telephone?{telephone}:{}),
   ...(address?{address:{'@type':'PostalAddress',...address}}:{}),...(geo?{geo:{'@type':'GeoCoordinates',...geo}}:{}),...(hasMap?{hasMap}:{}),
   ...(openingHoursSpecification?.length?{openingHoursSpecification}:{}),areaServed:{'@type':'City',name:'İstanbul'}}] : [])]};
 }

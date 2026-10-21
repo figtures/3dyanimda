@@ -1,0 +1,36 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-21T21:57:54.759Z",
+  "baseCommit": "112c0769195929f78666c4519f60a21a0aee18e7",
+  "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
+  "sourceFileCount": 587,
+  "scope": "Bounded review of the 3D Yanımda name, CMS profile, three service pages, two local pages, entity links and transient tenant metadata. Historical unchanged content and visual evidence retain their original dates.",
+  "checks": {
+    "renderedText": "Reviewed all five edited page payloads and business-profile copy. They describe verified workshop contact facts, project-dependent estimates and actual supported model formats; no ranking, deadline or certification promises were added.",
+    "tenantIsolation": "JSON comparison confirms that authored records for the other brands are byte-for-byte unchanged. Profile and metadata hooks discard state from a previous tenant or route while new data is loading.",
+    "imageProvenance": "No public asset or model bytes changed. Brand asset alt text is updated only for 3dyanimda.",
+    "localEvidence": "The workshop address matches the live owner-managed contact_info. Kadıköy describes delivery from Ataşehir, not a separate branch. Existing locality source references are retained.",
+    "seoGeoParity": "Brand display name and alternate names are consistent in catalog, CMS seed and Organization/WebSite graphs. About/Contact entity links refer to the same organization. No unverified social or map URL is added.",
+    "publicationGate": "The seed is bounded to five reviewed landing-page patches, matches the observed baseline or an already-applied target, and records the exact resulting payload hash before each update. Existing publication and validation triggers stay enabled. Both conflict-update clauses also explicitly require the verified 3dyanimda tenant ID and matching record keys."
+  },
+  "validation": {
+    "applicationTests": 220,
+    "technicalContracts": 72,
+    "typecheck": "pass",
+    "productionBuild": "pass",
+    "originality": {
+      "records": 800,
+      "result": "pass"
+    },
+    "databaseIntegration": "pass: actual publication/content/date triggers; exact approvals; other-tenant preservation; noindex/contact preservation; repeatability; concurrent-edit rejection; explicit conflict-update tenant predicates"
+  },
+  "limitations": [
+    "The current Supabase connector accepts reads but mutations returned Invalid or expired requestState; no CMS write or frontend deployment is claimed.",
+    "Cloudflare dashboard requires sign-in in this browser; production build error details have not been inspected.",
+    "This is a bounded AI source/content review with unit and contract evidence; no fresh full-site visual crawl or human/legal review is claimed.",
+    "Verified Google Business/social-profile links and Search Console canonical/indexing evidence are still unavailable."
+  ]
+}
