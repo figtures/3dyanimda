@@ -52,7 +52,8 @@
     "integratedUpstreamReview": "docs/audits/persistent-quote-review-2026-10-16.json",
     "latestPublicSectionBrowserCases": 32,
     "latestBrandIdentityReview": "docs/audits/brand-identity-review-2026-10-21.json",
-    "latestBrandIdentityPages": 5
+    "latestBrandIdentityPages": 5,
+    "latestBrandCmsVerification": "docs/audits/brand-cms-verification-2026-10-22.json"
   },
   "evidence": [
     {
@@ -302,6 +303,18 @@
     {
       "file": "supabase/seeds/3dyanimda-brand-identity.sql",
       "sha256": "34c3c8d34055e071a715d292900a8462b3b6c3e4fda8673f2e97a4bb7625a419"
+    },
+    {
+      "file": "docs/audits/brand-cms-verification-2026-10-22.json",
+      "sha256": "1677fd37947ef8eb82b1dfd3e5acc0b18f2f000f1061ad64b5440ede5ce72719"
+    },
+    {
+      "file": "supabase/seeds/3dyanimda-brand-identity.verify.sql",
+      "sha256": "c9713cdebb4f29c8a7198006aa3a94680ba679a5b09a2adf36ce2bd83b03cf21"
+    },
+    {
+      "file": "docs/audits/brand-cms-verified-1792620078806.jpg",
+      "sha256": "8de5bab1fc4c28338a89539c7a16a0d079d9cad43e2194ad8e13ad8401225535"
     }
   ],
   "limitations": [
@@ -321,7 +334,8 @@
     "16 October local service content and model-info panel delta: targeted source/type/unit/build/originality review passed; fresh browser rendering is tracked separately in CI.",
     "16 October pricing readiness delta: no business rates were invented or written. Live estimation requires owner-configured prices and settings.",
     "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks.",
-    "21 October bounded brand identity review carries forward unchanged historical rendering/asset evidence. Current source/content, 220 application tests, 72 technical contracts, build and real publication-trigger tests passed; no fresh full-route visual crawl, CMS write or Cloudflare deployment is claimed. See docs/audits/brand-identity-review-2026-10-21.json."
+    "21 October bounded brand identity review carries forward unchanged historical rendering/asset evidence. Current source/content, 220 application tests, 72 technical contracts, build and real publication-trigger tests passed; no fresh full-route visual crawl, CMS write or Cloudflare deployment is claimed. See docs/audits/brand-identity-review-2026-10-21.json.",
+    "22 October live CMS correction applied and verified: nine SQL checks passed, five published payloads match their reviews, and the other-tenant fingerprint is unchanged. Frontend deployment remains pending. See docs/audits/brand-cms-verification-2026-10-22.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",
