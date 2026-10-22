@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-21T23:47:49.840Z",
+  "reviewedAt": "2026-10-22T01:14:13.042Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "01dab00d1862c2f8424d825626529cf4952ab07958eaf94f2bfbed476b8591f3",
-  "sourceFileCount": 597,
+  "sourceHash": "315dfbfd031d38c8a0cdba8371d71c0a1651e61c9103db2b63ef879a81f8d1ab",
+  "sourceFileCount": 634,
   "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -95,7 +95,7 @@
     },
     {
       "file": "docs/audits/publication-content-manifest.json",
-      "sha256": "6c4651165ee06688d03b65cec58eb3c9b02f888270edc63c9ffed2d4cfc555e8"
+      "sha256": "8e26ac2bd88f5d84d8b74f07f746848464b1dce68558ef0f3b4da2c492f5c8a1"
     },
     {
       "file": "docs/audits/reviewed-assets-2026-10-08.json",
