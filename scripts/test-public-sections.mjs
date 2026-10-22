@@ -94,10 +94,9 @@ try {
   await page.locator('.career-consent input').check();await page.getByRole('button',{name:'İş birliği talebini gönder',exact:true}).click();await page.getByText('Tasarım önizlemesindesiniz. Talebiniz gönderilmedi.').waitFor();await fits();await aligned();
   for(const path of ['/3d-baski','/sektorler','/iletisim','/teklif-al','/araclar','/yasal']) {await visit(path);await fits();await aligned();}
   await visit('/portfoy');await page.locator('.portfolio-project').nth(6).waitFor();
-  assert.equal(await page.locator('.portfolio-project').count(),7,`${brand}: seven portfolio concepts`);
-  assert.equal(await page.locator('.portfolio-project .portfolio-kind').count(),7);
-  for(const label of await page.locator('.portfolio-project .portfolio-kind').allTextContents())assert.equal(label.trim(),'Konsept çalışma');
-  assert.match(await page.locator('.portfolio-disclosure').innerText(),/Görseller yapay zekâ ile hazırlanmıştır/);
+  assert.equal(await page.locator('.portfolio-project').count(),7,`${brand}: seven portfolio applications`);
+  assert.equal(await page.locator('.portfolio-project .portfolio-kind').count(),0);
+  assert.equal(await page.locator('.portfolio-disclosure').count(),0);
   const assertImagesLoaded=async selector=>{
    const images=page.locator(selector);assert.ok(await images.count(),`${brand}: expected portfolio images`);
    for(const image of await images.all()){
@@ -127,8 +126,8 @@ try {
   await firstProject.click();await page.waitForURL(url=>url.pathname+url.search===projectHref);
   await page.locator('.portfolio-detail .public-prose').waitFor();
   assert.equal((await page.locator('main h1').innerText()).trim(),projectTitle);
-  assert.equal((await page.locator('.portfolio-detail .portfolio-kind').innerText()).trim(),'Konsept çalışma · Temsili görsel');
-  assert.ok((await page.locator('.portfolio-detail .public-prose').innerText()).length>500,`${brand}: substantive concept detail`);
+  assert.match(await page.locator('.portfolio-detail figcaption').innerText(),/Uygulama görselleştirmesi/);
+  assert.ok((await page.locator('.portfolio-detail .public-prose').innerText()).length>500,`${brand}: substantive application detail`);
   await assertImagesLoaded('.portfolio-detail .project-cover');await fits();await aligned();
   await page.screenshot({path:`${out}/${brand}-${theme}-portfolio-detail-${width}.png`,fullPage:true});
   await visit('/portfoy/missing-project');await page.getByText('Bu proje yayında değil.').waitFor();

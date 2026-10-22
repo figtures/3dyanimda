@@ -23,9 +23,9 @@
 .brand-site .portfolio-project:hover { box-shadow:0 14px 40px #0000000b; }
 .brand-site .portfolio-project:focus-visible { outline:2px solid var(--text); outline-offset:5px; }
 .brand-site .portfolio-meta { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-.brand-site .portfolio-kind { display:inline-flex; align-items:center; width:fit-content; padding:6px 10px; border-radius:100px; font-size:11px; line-height:1.4; background:var(--paper); color:var(--muted); }
-.brand-site p.portfolio-disclosure { max-width:80ch; margin:0 0 32px; font-size:13px; }
-.brand-site .portfolio-detail > .portfolio-kind { margin-bottom:18px; background:var(--soft); }
+.brand-site .project-figure { margin-bottom:32px; }
+.brand-site .project-figure .project-cover { margin-bottom:10px; }
+.brand-site .project-figure figcaption { font-size:12px; line-height:1.6; color:var(--muted); }
 .brand-site .collection-meta { font-size:13px; }
 .brand-site .collection-filters { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:32px; }
 .brand-site .collection-filters button { min-height:44px; padding:10px 20px; border-radius:100px; background:var(--soft); }

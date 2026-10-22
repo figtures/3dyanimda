@@ -185,8 +185,8 @@ const AdminPortfolio = () => {
           </Tabs>
 
           <div className="flex items-center gap-3">
-            <Switch id="portfolio-concept" checked={(editing.tags??[]).includes("concept")} onCheckedChange={checked=>set({tags:checked?[...new Set([...(editing.tags??[]),"concept"]) ]:(editing.tags??[]).filter(tag=>tag!=="concept")})}/>
-            <div><Label htmlFor="portfolio-concept">Konsept çalışma</Label><p className="text-xs text-muted-foreground">Tamamlanmış müşteri projesi olmayan temsili çalışmalar için bu etiketi açık tutun.</p></div>
+            <Switch id="portfolio-illustration" checked={(editing.tags??[]).includes("illustrative-image")} onCheckedChange={checked=>set({tags:checked?[...new Set([...(editing.tags??[]),"illustrative-image"]) ]:(editing.tags??[]).filter(tag=>tag!=="illustrative-image")})}/>
+            <div><Label htmlFor="portfolio-illustration">Yapay zekâ ile hazırlanmış görsel</Label><p className="text-xs text-muted-foreground">Görselin altında kısa bir kaynak açıklaması gösterir.</p></div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">

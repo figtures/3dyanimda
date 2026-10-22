@@ -29,7 +29,7 @@ for(const [label,rows] of [['projects',projects],['assets',assets],['visual brie
  requireUnique(rows,key,`${label}: duplicate brand/slug`);
  for(const brand of brands)assert.equal(rows.filter(row=>row.brand===brand).length,7,`${label}: seven records for ${brand}`);
 }
-requireUnique(projects,row=>row.slug,'Project slugs must be distinct across the four concept selections');
+requireUnique(projects,row=>row.slug,'Application slugs must be distinct across the four brand selections');
 requireUnique(projects,row=>normalized(row.title_tr),'Duplicate project title');
 requireUnique(projects,row=>normalized(row.excerpt_tr),'Duplicate project excerpt');
 requireUnique(projects,row=>normalized(row.content_tr),'Duplicate complete project body');
@@ -49,17 +49,18 @@ assert.equal(generated.size,28,'Exactly 28 generation records');
 const assetsByKey=new Map(assets.map(row=>[key(row),row]));
 const briefsByKey=new Map(briefs.map(row=>[key(row),row]));
 const records=[];
-const portfolioAuditRows=[],excludedDisclosures=[];
+const portfolioAuditRows=[];
 for(const project of projects){
  const id=key(project),asset=assetsByKey.get(id),brief=briefsByKey.get(id),generation=generated.get(id);
  assert.ok(brands.includes(project.brand),`${id}: registered brand required`);
  assert.match(project.slug,/^[a-z0-9]+(?:-[a-z0-9]+)*$/,`${id}: safe slug required`);
  for(const field of ['title_tr','excerpt_tr','content_tr','industry'])assert.ok(typeof project[field]==='string'&&project[field].trim(),`${id}: missing ${field}`);
- assert.ok(Array.isArray(project.tags)&&project.tags.includes('concept'),`${id}: explicit concept classification required`);
- assert.ok(normalized(project.content_tr).length>500,`${id}: substantive project body required`);
+ assert.ok(Array.isArray(project.tags)&&project.tags.includes('application')&&project.tags.includes('illustrative-image'),`${id}: application and illustrative-image classification required`);
+ assert.ok(!project.tags.includes('concept'),`${id}: obsolete concept classification must be removed`);
+ assert.ok(normalized(project.content_tr).length>500,`${id}: substantive application body required`);
  assert.ok(asset&&brief&&generation,`${id}: asset/brief/generation record required`);
  const expectedPath=`/images/portfolio/${project.brand}/${project.slug}.webp`;
- assert.equal(project.cover_image_url,expectedPath,`${id}: cover must belong to its concept`);
+ assert.equal(project.cover_image_url,expectedPath,`${id}: cover must belong to its application`);
  assert.equal(asset.path,expectedPath,`${id}: manifest path must match cover`);
  assert.match(asset.sha256,/^[a-f0-9]{64}$/,`${id}: asset SHA-256 required`);
  assert.ok(typeof asset.source==='string'&&asset.source.length,`${id}: recorded generation source required`);
@@ -80,20 +81,18 @@ for(const project of projects){
  const dom=new JSDOM(project.content_tr);
  try{
   const document=dom.window.document;
-  const notices=[...document.querySelectorAll('p[data-concept-disclosure="true"]')];
-  assert.equal(notices.length,1,`${id}: one explicitly marked concept notice required`);
-  const notice=normalized(notices[0].textContent);
-  assert.match(notice,/konsept/i,`${id}: marked notice must identify the concept`);
-  assert.match(notice,/müşteri projesi değildir/i,`${id}: marked notice must distinguish customer work`);
-  excludedDisclosures.push({brand:project.brand,slug:project.slug,text:notice,sha256:hash(notice),selector:'p[data-concept-disclosure="true"]'});
-  notices[0].remove();
-  const sections=[...document.querySelectorAll('p,li')].map(node=>({body:normalized(node.textContent)})).filter(section=>section.body);
-  assert.ok(sections.length>=3,`${id}: editorial paragraphs remain after disclosure exclusion`);
+  assert.equal(document.querySelectorAll('[data-concept-disclosure]').length,0,`${id}: obsolete concept-notice markup must be removed`);
+  assert.doesNotMatch(normalized(document.body.textContent),/tamamlanmış müşteri projesi değildir|temsili bir tasarım konseptidir/i,`${id}: obsolete boilerplate disclaimer must be removed`);
+  assert.ok(document.querySelectorAll('h2,h3').length>=3,`${id}: structured application explanation required`);
+  assert.ok(document.querySelectorAll('p,li').length>=4,`${id}: needs, process, practical checks and project inputs require substantive prose`);
+  // Keep every visible heading and paragraph: no disclosure or other prose is
+  // excluded from the global originality input.
+  const sections=[...document.querySelectorAll('h2,h3,p,li')].map(node=>({body:normalized(node.textContent)})).filter(section=>section.body);
   portfolioAuditRows.push({brand:project.brand,path:`/portfoy/${project.slug}`,kind:'portfolio',status:'published',
    title:project.title_tr,summary:project.excerpt_tr,sections,faq:[],image:expectedPath});
  }finally{dom.window.close();}
  records.push({brand:project.brand,slug:project.slug,title:project.title_tr,industry:project.industry,
-  concept:true,payloadSha256:hash(JSON.stringify(stable(project))),bodySha256:hash(normalized(project.content_tr)),
+  classification:'application',illustrativeImage:true,payloadSha256:hash(JSON.stringify(stable(project))),bodySha256:hash(normalized(project.content_tr)),
   cover:{path:expectedPath,sha256:asset.sha256,bytes:bytes.length,width:metadata.width,height:metadata.height},
   provenance:{generationFile:generation.file,tool:generation.tool,promptSha256:hash(generation.prompt),subjectSha256:hash(generation.subject)}});
 }
@@ -111,17 +110,18 @@ await writeFile(path.join(root,combinedOutput),combinedJSON);
 const evidence=await Promise.all([projectFile,assetFile,briefFile,...generationFiles,...editorialFiles].map(async file=>({file,sha256:hash(await readFile(path.join(root,file)))})));
 const report={result:'pass',reviewType:'Automated bounded portfolio payload and asset verification',testedAt:new Date().toISOString(),
  projects:records.length,brands:Object.fromEntries(brands.map(brand=>[brand,records.filter(row=>row.brand===brand).length])),
- checks:['28 distinct brand/slug payloads, seven per brand','distinct titles, excerpts and complete bodies','explicit concept classification',
-  'nonempty category and substantial detail text','one matching cover, visual brief and generation record per project',
+ checks:['28 distinct brand/slug payloads, seven per brand','distinct titles, excerpts and complete bodies','application and illustrative-image classification',
+  'nonempty category and substantial structured application text; no obsolete concept disclaimer','one matching cover, visual brief and generation record per application',
   'cover SHA-256, byte size, WebP format and 1200×900 dimensions match manifest','28 distinct actual image hashes',
   'generation tool, source reference, prompt and subject reconciled with visual briefs'],
  combinedAudit:{input:combinedOutput,inputRecords:824,expectedRecordsWithHomeAllocations:828,sha256:hash(combinedJSON),
-  exclusion:'Only explicitly marked p[data-concept-disclosure="true"] notices are omitted from cross-prose duplication checks; all project excerpts and remaining paragraphs, cover images, landing content and home allocations are retained.',
-  excludedNoticeCount:excludedDisclosures.length,excludedNotices:excludedDisclosures},
+  exclusion:null,allPortfolioProseRetained:true,
+  retainedProse:'Every application excerpt, heading, paragraph and list item is included. No concept notices or other prose are excluded. Existing landing inventory and four home asset allocations are also retained.',
+  excludedNoticeCount:0,excludedNotices:[]},
  evidence,records,limitations:['This automated report is not a publication certificate or a human semantic review.',
   'Exact text and byte uniqueness do not establish visual or semantic dissimilarity, web-wide uniqueness or legal exclusivity.',
   'Recorded generation references are reconciled; ephemeral original files are not required or independently revalidated by this check.',
   'No browser execution, live CMS write/readback, deployment, production route or delivered customer-work claim is made.']};
 await mkdir(path.dirname(path.join(root,output)),{recursive:true});
 await writeFile(path.join(root,output),JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify({result:report.result,projects:report.projects,brands:report.brands,output,combinedInput:combinedOutput,expectedGlobalAuditRecords:828,excludedNoticeCount:excludedDisclosures.length}));
+console.log(JSON.stringify({result:report.result,projects:report.projects,brands:report.brands,output,combinedInput:combinedOutput,expectedGlobalAuditRecords:828,excludedNoticeCount:0}));

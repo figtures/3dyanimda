@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { PGlite } from '@electric-sql/pglite';
-import { loadInputs, portfolioTenants, renderSeed } from './prepare-portfolio-engineering.mjs';
+import { loadInputs, portfolioTenants, renderSeed, validatePortfolioApplication } from './prepare-portfolio-engineering.mjs';
+import { renderPublicationSql, validateDeploymentEvidence, preparePublication } from './publish-portfolio-applications.mjs';
 
 // In-memory integration harness. The synthetic report never leaves this test process.
 // Production SQL generation requires the real source-bound certificate through prepareSeed().
@@ -15,7 +16,38 @@ const review = {
   humanReviewPerformed: false, checks: {}, evidence: [], limitations: ['Not a release certificate'],
 };
 const seed = renderSeed({ ...inputs, review });
+assert.throws(() => validatePortfolioApplication({ ...inputs.projects[0], tags: ['application'] }), /illustrative-image tags/);
+assert.throws(() => validatePortfolioApplication({ ...inputs.projects[0], content_tr: '<p>Placeholder application.</p>' }), /Substantive application prose/);
+const assets = JSON.parse(readFileSync('content/authoring/portfolio/assets.json', 'utf8'));
+// Synthetic in-memory evidence exercises validation only. It is never written as actual deployment evidence.
+const evidence = {
+  schemaVersion: 1, kind: 'portfolio-asset-deployment', sourceHash: review.sourceHash, checkedAt: review.reviewedAt,
+  assets: assets.map(asset => ({ brand: asset.brand, slug: asset.slug,
+    url: `https://${asset.brand}.com${asset.path}`, finalUrl: `https://${asset.brand}.com${asset.path}`,
+    status: 200, contentType: 'image/webp', sha256: asset.sha256, bytes: asset.bytes, checkedAt: review.reviewedAt })),
+};
+const evidenceInputs = { projects: inputs.projects, assets, evidence, sourceHash: review.sourceHash };
+assert.equal(validateDeploymentEvidence(evidenceInputs), true);
+assert.throws(() => preparePublication(), /actual-deployment-evidence/);
+assert.throws(() => validateDeploymentEvidence({ ...evidenceInputs, evidence: undefined }), /evidence is required/);
+for (const [mutate, pattern] of [
+  [value => { value.sourceHash = 'b'.repeat(64); }, /source hash mismatch/],
+  [value => { value.assets[0].sha256 = '0'.repeat(64); }, /SHA256 mismatch/],
+  [value => { value.assets[0].url = value.assets[0].url.replace('3dyanimda.com', '3dsanayi.com'); }, /Wrong deployed URL/],
+  [value => { value.assets[0].finalUrl += '?cached=1'; }, /Unexpected deployment redirect/],
+  [value => { value.assets[0].status = 404; }, /HTTP status/],
+  [value => { value.assets[0].contentType = 'text/html'; }, /not image\/webp/],
+  [value => { value.assets[0].brand = 'wrong-brand'; }, /Missing reviewed\/deployed asset/],
+  [value => { value.assets[0] = value.assets[1]; }, /Duplicate deployment asset/],
+  [value => { value.assets.pop(); }, /Exactly 28 deployed image checks/],
+]) {
+  const invalid = structuredClone(evidence);
+  mutate(invalid);
+  assert.throws(() => validateDeploymentEvidence({ ...evidenceInputs, evidence: invalid }), pattern);
+}
+const publish = renderPublicationSql({ ...evidenceInputs, review });
 assert.doesNotMatch(seed, /(?:DISABLE TRIGGER|session_replication_role|ALTER TABLE|CREATE FUNCTION|GRANT |SECURITY DEFINER)/i);
+assert.doesNotMatch(publish, /(?:DISABLE TRIGGER|session_replication_role|ALTER TABLE|CREATE FUNCTION|GRANT |SECURITY DEFINER)/i);
 const db = new PGlite();
 const rows = async (sql, params = []) => (await db.query(sql, params)).rows;
 const insert = (table, value) => db.query(`INSERT INTO ${table} SELECT * FROM jsonb_populate_record(NULL::${table},$1::jsonb)`, [JSON.stringify(value)]);
@@ -37,9 +69,9 @@ const otherState = async () => JSON.stringify(await rows(`
   UNION ALL SELECT 'portfolio',to_jsonb(s) FROM portfolio_projects s WHERE tenant_id='${unrelated}'
   ORDER BY kind,row
 `));
-async function rejectUnchanged(pattern) {
+async function rejectUnchanged(pattern, sql = seed) {
   const before = await state();
-  await assert.rejects(db.exec(seed), pattern);
+  await assert.rejects(db.exec(sql), pattern);
   await db.exec('ROLLBACK');
   assert.equal(await state(), before, 'Rejected transaction must leave every observed row unchanged');
 }
@@ -140,6 +172,51 @@ try {
   const later = await state();
   await db.exec(seed);
   assert.equal(await state(), later, 'Repeat after separate publishing preserves publication state, translations and gallery');
+
+  // Exercise publication against the actual always-on portfolio modification-date trigger.
+  const core = readFileSync('supabase/migrations/20260503174920_0816abb4-dbe4-45ab-b03d-29cb0cc36379.sql', 'utf8');
+  const timestampFunction = core.match(/CREATE OR REPLACE FUNCTION public\.update_updated_at_column\(\)[\s\S]*?\$\$;/)?.[0];
+  assert.ok(timestampFunction, 'Expected production update_updated_at_column function');
+  await db.exec(timestampFunction);
+  await db.exec('CREATE TRIGGER trg_portfolio_projects_updated_at BEFORE UPDATE ON portfolio_projects FOR EACH ROW EXECUTE FUNCTION update_updated_at_column()');
+  const lastProject = [...inputs.projects].sort((a, b) => a.brand.localeCompare(b.brand) || a.slug.localeCompare(b.slug)).at(-1);
+  const lastTenant = portfolioTenants.find(value => value.slug === lastProject.brand).id;
+  // Last tenant and slug cause a late conflict after other draft updates; everything must roll back.
+  await db.query("UPDATE portfolio_projects SET content_tr='Owner changed reviewed text' WHERE tenant_id=$1 AND slug=$2", [lastTenant, lastProject.slug]);
+  await rejectUnchanged(/Reviewed portfolio fields changed/, publish);
+  await db.query('UPDATE portfolio_projects SET content_tr=$1 WHERE tenant_id=$2 AND slug=$3', [lastProject.content_tr, lastTenant, lastProject.slug]);
+  await db.query("UPDATE tenants SET status='suspended' WHERE id=$1", [lastTenant]);
+  await rejectUnchanged(/Reviewed tenant identity mismatch/, publish);
+  await db.query("UPDATE tenants SET status='active' WHERE id=$1", [lastTenant]);
+  await db.exec('BEGIN');
+  await db.query('DELETE FROM portfolio_projects WHERE tenant_id=$1 AND slug=$2', [lastTenant, lastProject.slug]);
+  const removedProject = await state();
+  // Use the transaction body here so the test can restore its deliberately deleted fixture.
+  await assert.rejects(db.exec(publish.replace(/^BEGIN;$/m, '').replace(/^COMMIT;$/m, '')), /Reviewed portfolio count mismatch/);
+  await db.exec('ROLLBACK');
+  assert.notEqual(await state(), removedProject, 'Missing-row test restores its deleted fixture');
+  await db.query('UPDATE portfolio_projects SET title_en=$1,excerpt_en=$2,gallery=$3::jsonb WHERE tenant_id=$4 AND slug=$5',
+    ['Owner draft translation', 'Owner draft description', '["/owner-draft-gallery.webp"]', lastTenant, lastProject.slug]);
+  await db.query("INSERT INTO portfolio_projects(tenant_id,slug,title_tr,published) VALUES($1,'owner-added-project','Owner added project',false)", [tenant]);
+  const ownerAdded = (await rows("SELECT to_jsonb(p) AS row FROM portfolio_projects p WHERE tenant_id=$1 AND slug='owner-added-project'", [tenant]))[0].row;
+  const alreadyPublished = (await rows('SELECT to_jsonb(p) AS row FROM portfolio_projects p WHERE tenant_id=$1 AND slug=$2', [tenant, project.slug]))[0].row;
+  const preservedColumns = await rows(`SELECT id,to_jsonb(p)-'published'-'published_at'-'updated_at' AS row
+    FROM portfolio_projects p ORDER BY id`);
+  const unrelatedBeforePublish = await otherState();
+  await db.exec(publish);
+  assert.deepEqual(await rows(`SELECT t.slug,count(*)::int AS count,bool_and(p.published AND p.published_at IS NOT NULL) AS published
+    FROM portfolio_projects p JOIN tenants t ON t.id=p.tenant_id WHERE t.id<>'${unrelated}' AND p.slug<>'owner-added-project' GROUP BY t.slug ORDER BY t.slug`),
+  portfolioTenants.map(value => ({ slug: value.slug, count: 7, published: true })).sort((a, b) => a.slug.localeCompare(b.slug)));
+  assert.deepEqual(await rows(`SELECT id,to_jsonb(p)-'published'-'published_at'-'updated_at' AS row
+    FROM portfolio_projects p ORDER BY id`), preservedColumns, 'Publication preserves content, translations, gallery and other fields');
+  assert.deepEqual((await rows('SELECT to_jsonb(p) AS row FROM portfolio_projects p WHERE tenant_id=$1 AND slug=$2', [tenant, project.slug]))[0].row,
+    alreadyPublished, 'Already published exact application is completely untouched');
+  assert.deepEqual((await rows("SELECT to_jsonb(p) AS row FROM portfolio_projects p WHERE tenant_id=$1 AND slug='owner-added-project'", [tenant]))[0].row,
+    ownerAdded, 'Unreviewed owner addition in a scoped tenant stays untouched');
+  assert.equal(await otherState(), unrelatedBeforePublish, 'Publishing leaves unrelated tenant content and projects unchanged');
+  const publishedState = await state();
+  await db.exec(publish);
+  assert.equal(await state(), publishedState, 'Repeated publication performs no updates, including timestamp trigger changes');
   // Even a separately approved owner edit must not be silently certified by a repeated old seed.
   // This targets a field outside this page's patch after its patched summary is already applied.
   await db.exec(`BEGIN;
@@ -150,7 +227,7 @@ try {
       WHERE tenant_id='${tenant}' AND path='/cozumler/montaj-yardimcilari';
     COMMIT;`);
   await rejectUnchanged(/Reviewed landing baseline changed/);
-  console.log('PASS portfolio engineering seed: 28 drafts, four exact landing approvals under real guards, preserved fields/noindex, tenant isolation, idempotence and transactional conflict rejection.');
+  console.log('PASS portfolio seed + publication: 28 drafts then guarded publication, four exact landing approvals, rejected invalid asset evidence, preserved fields/tenants, real timestamp trigger, idempotence and conflict rollback.');
 } catch (error) {
   console.error(error.message);
   if (error.where) console.error(error.where);

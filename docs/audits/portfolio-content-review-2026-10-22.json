@@ -1,7 +1,7 @@
 {
   "result": "pass",
   "reviewType": "Automated bounded portfolio payload and asset verification",
-  "testedAt": "2026-10-22T00:34:43.719Z",
+  "testedAt": "2026-10-22T01:09:03.292Z",
   "projects": 28,
   "brands": {
     "3dyanimda": 7,
@@ -12,9 +12,9 @@
   "checks": [
     "28 distinct brand/slug payloads, seven per brand",
     "distinct titles, excerpts and complete bodies",
-    "explicit concept classification",
-    "nonempty category and substantial detail text",
-    "one matching cover, visual brief and generation record per project",
+    "application and illustrative-image classification",
+    "nonempty category and substantial structured application text; no obsolete concept disclaimer",
+    "one matching cover, visual brief and generation record per application",
     "cover SHA-256, byte size, WebP format and 1200×900 dimensions match manifest",
     "28 distinct actual image hashes",
     "generation tool, source reference, prompt and subject reconciled with visual briefs"
@@ -23,212 +23,17 @@
     "input": "artifacts/release/portfolio-combined-input.json",
     "inputRecords": 824,
     "expectedRecordsWithHomeAllocations": 828,
-    "sha256": "7a769a1697d30c0a64d495d1c754e687a1e5b5fa489ccaa794dd441ff9ed8604",
-    "exclusion": "Only explicitly marked p[data-concept-disclosure=\"true\"] notices are omitted from cross-prose duplication checks; all project excerpts and remaining paragraphs, cover images, landing content and home allocations are retained.",
-    "excludedNoticeCount": 28,
-    "excludedNotices": [
-      {
-        "brand": "3dyanimda",
-        "slug": "robotik-hucre-tutucu",
-        "text": "Bu çalışma, robotik tutucu ve parçaya özel çene tasarımını anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "98ae37aa47410f0240b26c1efd657a53aefaf85627ca2b715310c527bb0f71bb",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dyanimda",
-        "slug": "endustriyel-cihaz-muhafazasi",
-        "text": "Bu çalışma, endüstriyel cihaz için modüler muhafaza geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "baba7128537ccde57d2b92f66cbc8a8298cbb7ed0da943df9a96054c1ce5789a",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dyanimda",
-        "slug": "akiskan-kanali-gelistirme",
-        "text": "Bu çalışma, kompakt sistemlerde dallanan kanal geometrisi geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "3af28226d0f00721b9e81850fc6a53cd61cc958b262495f32fc78e626fb06724",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dyanimda",
-        "slug": "tersine-muhendislik-govde",
-        "text": "Bu çalışma, numuneden revizyonlu makine gövdesi geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "6706df63cda9a24f3d52d3972195bb0ca7102be347c3066b2de6ad6d7f1fe634",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dyanimda",
-        "slug": "moduler-urun-platformu",
-        "text": "Bu çalışma, ortak mimariye dayanan modüler ürün ailesi geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "729d7624d6cec119753358b82381f66530cfd3039f9f7fdac34e8d90cf564919",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dyanimda",
-        "slug": "kurumsal-montaj-seti",
-        "text": "Bu çalışma, kurumsal projelerde birbiriyle ilişkili özel parçaların birlikte planlanmasını anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "e800f9ece8094adfdd1051f5982c041b0d84ce49824822bf85cc2e4a1ac08f56",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dyanimda",
-        "slug": "uretim-master-modeli",
-        "text": "Bu çalışma, üretim hazırlığında master model ve yüzey geliştirme yaklaşımını anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "be5571aea6e7a8b11c2103067b274db8d9f1d04ab0b962f91b9bc46d5026f33b",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "montaj-konumlandirma-fiksturu",
-        "text": "Bu çalışma, üretim hattı için konumlandırma ve montaj fikstürü tasarımını anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "83a6dee3d04c76bd225ae2d6186ceecb1bd527af93aa7f061cdf3fafb40e2c0e",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "kalite-kontrol-aparati",
-        "text": "Bu çalışma, geometrik ölçüm için referans aparatı geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "62147bc54c213362d0bacec51dbc7d023d6da9b85f17ba0e7d4d5896558e5dcc",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "konveyor-kilavuz-sistemi",
-        "text": "Bu çalışma, konveyör hattında değiştirilebilir ürün kılavuzları geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "5113714ba62c6b38c0c6f908a986db59de37a82fe43242389365baee5b9d8981",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "sensor-konumlandirma-modulu",
-        "text": "Bu çalışma, otomasyon sensörü için konumlandırma ve koruma modülü geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "afd9582b540a149a522d24a01311a442a8190d7ce0b8de14173607ac642ba1ae",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "vakum-sekillendirme-modeli",
-        "text": "Bu çalışma, vakum şekillendirme için üretim modeli tasarlamayı anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "a8d5f6b668707d56d5d16166953b43318cf35c4bf623ab0725a177a5b3eaea03",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "bakim-erisimi-aparati",
-        "text": "Bu çalışma, bakım sırasında alt grup yerleşimini destekleyen özel aparat geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "a01ffc7cdf3ca07fc032c0b19c9f2ca3463f220b55a4152627e765334c6ae052",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "3dsanayi",
-        "slug": "moduler-test-duzenegi",
-        "text": "Bu çalışma, ürün doğrulama çalışmaları için modüler numune tutma düzeneğini anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "4eb1f72bf37a5dfa0be7a9e13de33018db6e5c798c2a240ead197f1f51451155",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "karma-kullanim-sunum-maketi",
-        "text": "Bu çalışma, karma kullanımlı proje için mimari sunum maketi hazırlamayı anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "e7d01b0f943c54cacaf7cfbc56be6314b28679660b10da7fd8aa1f9f6083336e",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "endustriyel-tesis-yerlesimi",
-        "text": "Bu çalışma, endüstriyel tesis yerleşimi için fiziksel maket geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "c11c8f62e72b12a877faba8ec85328d2c12fb68160edd9c1cb1bb7bb14d0aef0",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "topografya-yerlesim-modeli",
-        "text": "Bu çalışma, topoğrafya ve yapı yerleşiminin fiziksel modelle incelenmesini anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "392ed78e9a5e5dce297dd9c9d72108c0c3e87ed38553ecbefe8d88898c179844",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "enerji-tesisi-anlatim-maketi",
-        "text": "Bu çalışma, enerji tesisi bileşenlerini bir anlatım maketinde birleştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "09971e15b02ff375c9f63cb70e4a3cede8cec928914626e8e14f04941e358c22",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "yapi-kesit-sunum-modeli",
-        "text": "Bu çalışma, yapı içi mekân ilişkileri için kesit maketi geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "cfb49a51242a5f0d31207e0702e68e0fb66197fc41eefee835ebf3e3f69d1897",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "kentsel-masterplan-modeli",
-        "text": "Bu çalışma, kentsel masterplan kararlarını fiziksel model üzerinden değerlendirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "045a11f3550ec24ed5cc2ca8bae4af5b6541e225b1bf54f23ce0f4b01e90bd24",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "maketyanimda",
-        "slug": "urun-kesit-sergileme-modeli",
-        "text": "Bu çalışma, teknik ürünlerin iç yapısı için kesitli sergileme modeli geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "cc1abc91a6608befa789a6cb66155f383c53e0fb821cfda6a5be5841b9ca9311",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "makine-koruyucu-kapak",
-        "text": "Bu çalışma, makine kapağının numuneden yeniden tasarlanmasını anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "e646488a595b37f443b64cd74a46fbaaa9e08f45f8ed90544099b9f0291cedb5",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "kirilmis-montaj-braketi",
-        "text": "Bu çalışma, kırık braket numunesinden revizyonlu bağlantı geometrisi geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "92093d56804aa90a2e6baaacb895a9f5ce4ae4deda83178f68332dfe6ff87567",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "cihaz-baglanti-adaptoru",
-        "text": "Bu çalışma, iki farklı cihaz arayüzü için bağlantı adaptörü tasarlamayı anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "1f90cad2aec06c51a0815e41fb30fd630626628466c117f309be0303ba168e08",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "disli-geometri-prototipi",
-        "text": "Bu çalışma, aşınmış dişli numunesinden geometri prototipi geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "043ff5e98bafbf2e383c8a0728956288ab9476e1f6254cb4121cc85a00123dd4",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "ozel-kablo-kilavuzu",
-        "text": "Bu çalışma, ekipmana özel kablo güzergâhı ve kılavuz parçaları geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "ebfdf9dc10d7d2cddbca7d2165d659b4a7bea97a52d1bd85b733862d85922377",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "servis-kontrol-dugmesi",
-        "text": "Bu çalışma, servis paneli için özel kontrol düğmeleri geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "14f19138fba8671708bb3324a388022826f7ab7194e18685dabee291fc8bdb55",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      },
-      {
-        "brand": "parcayanimda",
-        "slug": "kullanim-kosuluna-ozel-yatak",
-        "text": "Bu çalışma, silindirik ekipman için kullanım koşuluna özel destek yatağı geliştirmeyi anlatan temsili bir tasarım konseptidir; tamamlanmış müşteri projesi değildir.",
-        "sha256": "43e4e73777e807cef7f13b1cfaca7e361c1a8b3040899925d4c4441ed2980497",
-        "selector": "p[data-concept-disclosure=\"true\"]"
-      }
-    ]
+    "sha256": "32012d8047162edd1bbeacb6db8b2ff90fb81de0b30b859bf410974d476ff0d7",
+    "exclusion": null,
+    "allPortfolioProseRetained": true,
+    "retainedProse": "Every application excerpt, heading, paragraph and list item is included. No concept notices or other prose are excluded. Existing landing inventory and four home asset allocations are also retained.",
+    "excludedNoticeCount": 0,
+    "excludedNotices": []
   },
   "evidence": [
     {
       "file": "content/authoring/portfolio/projects.json",
-      "sha256": "3d0228635da188e2dbf3370055f1ca069bc9ac191876e0429eb3b371a42b9483"
+      "sha256": "dbcc9fff66d93e498e080b5c5ad592b728f6033aaf81c52de8f400e1c3725127"
     },
     {
       "file": "content/authoring/portfolio/assets.json",
@@ -277,9 +82,10 @@
       "slug": "robotik-hucre-tutucu",
       "title": "Robotik hücre için adaptif tutucu",
       "industry": "Endüstriyel otomasyon",
-      "concept": true,
-      "payloadSha256": "5d398d8b4485786240204207692ff2d516127bf3059b4208d188e5dc6bf5345a",
-      "bodySha256": "eac2e6da4020d203df465d46b649941c57f18be7044301dc976d3f8e840b0fd0",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "5d9bbc733585c09a33928bd96bca02584ae64a10eff0055b4b9f40b3fcc136ec",
+      "bodySha256": "f358ecedb7c70f1211bb23d1c0cd3e13b48562ab59ca0304af48acac899be9c4",
       "cover": {
         "path": "/images/portfolio/3dyanimda/robotik-hucre-tutucu.webp",
         "sha256": "fc76af78d6a2d0a5058cf0da4b1601fe2e6221196cad4639cd07c95f7d3c1f37",
@@ -299,9 +105,10 @@
       "slug": "endustriyel-cihaz-muhafazasi",
       "title": "Saha cihazı için modüler muhafaza",
       "industry": "Ürün geliştirme",
-      "concept": true,
-      "payloadSha256": "77a9bfdeab48fda950a5798747926392937ebbad5ac56941b585dab782acc988",
-      "bodySha256": "b8f4761999f24703c5685f723081868ac02eead532ce3cf14184541d9eeded55",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "fb17899bfeb4354313377cb160ae9d99155f1d10b20c30a7d2b89088a534d54b",
+      "bodySha256": "fb759a4d7e2fa410aa605211542d768c599ee7b0fc71f7e03cd49a14c7ee799a",
       "cover": {
         "path": "/images/portfolio/3dyanimda/endustriyel-cihaz-muhafazasi.webp",
         "sha256": "d6f367b06eab9f1c0b6b108512016a2f9554d9fcb24c4942808617c308a2a25b",
@@ -321,9 +128,10 @@
       "slug": "akiskan-kanali-gelistirme",
       "title": "Kompakt sistem için akış kanalı",
       "industry": "Ürün geliştirme",
-      "concept": true,
-      "payloadSha256": "dc2514af4951518b2da8e0d0ebb5cca83b7628086d72c201b37f147aa9b9c1ae",
-      "bodySha256": "2b0be150311243185ffb57b92f690e2c1396dadb24463958d0682a525f89b37f",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "26505239bf8f24ab430c4607d11898b41cdbfe1dc2eff27bcde26d25f679b3ad",
+      "bodySha256": "2c4cfb00dc7e908fa30e2adf09d81ae861fda4453779da5a58dcc719d50607c5",
       "cover": {
         "path": "/images/portfolio/3dyanimda/akiskan-kanali-gelistirme.webp",
         "sha256": "4bec26ba177bafe16624a5efb89ed0927fd00bb7f273f7d18612fdd6688e30a2",
@@ -343,9 +151,10 @@
       "slug": "tersine-muhendislik-govde",
       "title": "Numuneden revizyonlu makine gövdesine",
       "industry": "Tersine mühendislik",
-      "concept": true,
-      "payloadSha256": "ed2244e81a8a66af1a241eef5e6cc94566be07c4cd97d44bcde7f68a2d6be6e8",
-      "bodySha256": "220fa31a61366d1f0b0e33dc1b6881f28db89b051c3c088c8d387618d652dd7d",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "ef70e28b1cc65b3f1b86c369c1f0082cb966af9fb05564be938a1ef5844f7207",
+      "bodySha256": "855e5983bf3d05b441b389f5535cc24e5a54525d99a10e1fcf8e03be77460b3a",
       "cover": {
         "path": "/images/portfolio/3dyanimda/tersine-muhendislik-govde.webp",
         "sha256": "0121e4345b08fb30a91d54974ce52366034dc053733971cc0f4c90e75b40a104",
@@ -365,9 +174,10 @@
       "slug": "moduler-urun-platformu",
       "title": "Modüler ürün ailesi geliştirme",
       "industry": "Ürün geliştirme",
-      "concept": true,
-      "payloadSha256": "8c07d57a32b888440efbb00b26cbc1976615001c45afd5cf93f21e82f49dfec4",
-      "bodySha256": "9a80f35d71bbd54106c8ae212a8f4f73abcfdf5e2484ac73e2cc1e905aebaafc",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "7d4184f8013ed8067a38388cb26fe2c444e34b7a0b10fdd217118dfa2ff991cf",
+      "bodySha256": "2c0547e68ab80715387166c7918dd90cca59b11a9e06efc338b93b088bf076e1",
       "cover": {
         "path": "/images/portfolio/3dyanimda/moduler-urun-platformu.webp",
         "sha256": "bd0927730b65571941f3ad5d5f3de6056332da831f9c76c6df76778cf27942a6",
@@ -387,9 +197,10 @@
       "slug": "kurumsal-montaj-seti",
       "title": "Kurumsal proje için montaj seti",
       "industry": "Proje bazlı üretim",
-      "concept": true,
-      "payloadSha256": "f2757c2a587138c024eb6a8641ea4c5515df8ad91cb55cbb908d2f07fed3f3d3",
-      "bodySha256": "d37a11162d2cbd3798f0e06fc6e6bf4f1cf85ccec6a9113f3f9669ca2edb321c",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "3f3a257324473f3554691ec3868431d7e0571f9d497efe92d914c1ac4f8bd43a",
+      "bodySha256": "27ed689cb79f95617f20f86d7a018fdcc85b3dccb924e29a2f9a8c2522c0e956",
       "cover": {
         "path": "/images/portfolio/3dyanimda/kurumsal-montaj-seti.webp",
         "sha256": "e5c6987763a69807a6a94d2777d567d007237a533d7e3a31aa1779805863ba29",
@@ -409,9 +220,10 @@
       "slug": "uretim-master-modeli",
       "title": "Üretim hazırlığı için master model",
       "industry": "Proje bazlı üretim",
-      "concept": true,
-      "payloadSha256": "0038f97cdd77443129cc8e8541e97c82998e6ebd7f86fc36eed260e59cfb23ee",
-      "bodySha256": "1765b6f1ddaed6a6e5e16cbd9365e9a3489ce08c9726b8e2fd86406c325d5bad",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "8fd0a9bfeee8a349b951d814a9431eaded51529cb0f1d560e632746703d243db",
+      "bodySha256": "02363406dabd4bc0b29f0e0f88c0fd72000c6abca53611b831fce81733e116fd",
       "cover": {
         "path": "/images/portfolio/3dyanimda/uretim-master-modeli.webp",
         "sha256": "cc2c0f9dbab0f5c426ec75f0be34b813257939bc833976d3a5242c4adc0650d2",
@@ -431,9 +243,10 @@
       "slug": "montaj-konumlandirma-fiksturu",
       "title": "Çok istasyonlu montaj fikstürü",
       "industry": "Üretim hatları",
-      "concept": true,
-      "payloadSha256": "225243ab78b1735ae7154368f6ad1c69f31271b583e0e5e1ddd3fae086788d12",
-      "bodySha256": "492cf3e6a240edcb644f212657e84f030925ad64e5cc4b1ce00c5da187b74c37",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "993826490a0066269f25b816a9c399e4e904020ea1c51efedf02c5f0a5d7a3d7",
+      "bodySha256": "53eea9ea3075d6619ea90d72e473f1602bce259fb532d2c9d163a6345142bb85",
       "cover": {
         "path": "/images/portfolio/3dsanayi/montaj-konumlandirma-fiksturu.webp",
         "sha256": "69b7ecb126a3bd46828dd2098839893131e8c4673610fad759a503cc28d93283",
@@ -453,9 +266,10 @@
       "slug": "kalite-kontrol-aparati",
       "title": "Geometrik kontrol için referans aparatı",
       "industry": "Kalite kontrol",
-      "concept": true,
-      "payloadSha256": "527ccf07bd3909a97172bdf34bd0cbe62b31f1bcd2a530c709904d69ddff6c9d",
-      "bodySha256": "87e62f69dc9f9c15f4189ec2933fa431f3fd6d761acc3ffdfb46e985286f45aa",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "8ca5b931610da59ac25a208d3e66f1dee9e34a349e37940276b7ba15f3e649e1",
+      "bodySha256": "61b482bf74e6625d511a019066fe20ddde8c9e6da8bc9b451a6d91aa48ad9490",
       "cover": {
         "path": "/images/portfolio/3dsanayi/kalite-kontrol-aparati.webp",
         "sha256": "dc723b0b6d8b035de9c53a929105a1761f9858652fdc45db3b5eecfc4b0b8f73",
@@ -475,9 +289,10 @@
       "slug": "konveyor-kilavuz-sistemi",
       "title": "Konveyör için değiştirilebilir kılavuz",
       "industry": "Üretim hatları",
-      "concept": true,
-      "payloadSha256": "ffb6b4ad80093fe5f41715065389caefd58a647b31900cec40de73283e52b92c",
-      "bodySha256": "fac574d3808951815ca8182968b6babe9aad4c9d22ee4a0b5db66d2f69319d9c",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "f304c532c676d5edb953d48aad19255f796f985d37d6f51e0cade1b9ec7c19cc",
+      "bodySha256": "569695a51c9f30fadd652586b023fa9616e912dc0a7822a67b8466ce983fd8a4",
       "cover": {
         "path": "/images/portfolio/3dsanayi/konveyor-kilavuz-sistemi.webp",
         "sha256": "476d24f130d0432c05fe2b8fc213cd11035ccf22b7c5c6c9d0831d024e19765d",
@@ -497,9 +312,10 @@
       "slug": "sensor-konumlandirma-modulu",
       "title": "Otomasyon sensörü konumlandırma modülü",
       "industry": "Endüstriyel otomasyon",
-      "concept": true,
-      "payloadSha256": "a7b56e95af854155a97b2dc3a4f6990f06bf3bd76dccd9d8d9426431bea3f744",
-      "bodySha256": "6af18d900cf4747c850fad5e8f77e24b8ed508abf12ef9712d1aefdd9088c66f",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "8734270b2eafe646c640a7e224800ca969159f403cf0dbc522e60021cf8d1ac7",
+      "bodySha256": "c6cd82a4b929713cedf24bed54355df0eaa434da87e368374ca6df2c8aeb75d5",
       "cover": {
         "path": "/images/portfolio/3dsanayi/sensor-konumlandirma-modulu.webp",
         "sha256": "8a9a683018cc38eff8e913055898b9e4f477f90801da54cedd6af9ffeba213df",
@@ -519,9 +335,10 @@
       "slug": "vakum-sekillendirme-modeli",
       "title": "Vakum şekillendirme için kalıp modeli",
       "industry": "Üretim hazırlığı",
-      "concept": true,
-      "payloadSha256": "7e15053ce8ba59a11b4932b9073a69257b262f9a2a877577ad1853813bda2601",
-      "bodySha256": "dc7a80dec90107d7615613bf88235b93318105c8531b769f570c20e2fcf44009",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "bbea7c8a5542529b51481b094f7b8b479187dd5673237cfc427b65865efb1244",
+      "bodySha256": "5b2f00ca1095bcd739e165e71139c1d0573afd9b29571e2bafa569bca9fbb411",
       "cover": {
         "path": "/images/portfolio/3dsanayi/vakum-sekillendirme-modeli.webp",
         "sha256": "0e8b01cdeb66cd1280e9faa80bb3933c51ab4e60b1c90245266d897f828a0b98",
@@ -541,9 +358,10 @@
       "slug": "bakim-erisimi-aparati",
       "title": "Bakım işlemleri için erişim aparatı",
       "industry": "Bakım mühendisliği",
-      "concept": true,
-      "payloadSha256": "830ce0303ea284ee9a2973f54669521bc6a180397ee9f2f5ac77bd14d7a9c3fd",
-      "bodySha256": "fee0bba46cbe6f48a05047a8a9100ed822750626ebd6dc9b10e4054d626b168e",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "07428cba75ea2b3eab1f7b14ad3e39fe08a6149979fdb97c2774c76d1c9745bc",
+      "bodySha256": "41bad85d59afa55be60a5592ee4fe78a0566e38245f64d9faf209b9560f13840",
       "cover": {
         "path": "/images/portfolio/3dsanayi/bakim-erisimi-aparati.webp",
         "sha256": "d8871876e15fa3530191eefb25ad9af154b6347716624189693b349c6680c807",
@@ -563,9 +381,10 @@
       "slug": "moduler-test-duzenegi",
       "title": "Ürün doğrulama için modüler test düzeneği",
       "industry": "Kalite kontrol",
-      "concept": true,
-      "payloadSha256": "917a71e6653868ba99df54f962c92aa093de4fff58b053000b304187eaa26e2c",
-      "bodySha256": "e3520788d77616890256cf587c274e6644b2ccc0c637dd32d24c32c30ee79f08",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "d312a013edaf71966dad1b30e42c2cd179815b3b279e60c04d2290d1f43f1e61",
+      "bodySha256": "69d23eba9db7bb537ddc44adb3525dc4d6e035559ce81c3b6b02234e3460f748",
       "cover": {
         "path": "/images/portfolio/3dsanayi/moduler-test-duzenegi.webp",
         "sha256": "89e956546e949ef4421560f797341b2f6be2bc169f6b31fc6c76649e0b644ed0",
@@ -585,9 +404,10 @@
       "slug": "karma-kullanim-sunum-maketi",
       "title": "Karma kullanımlı proje sunum maketi",
       "industry": "Mimari sunum",
-      "concept": true,
-      "payloadSha256": "27230e4a662a12f194438b24a9be8f9961f6cef0d69f2f9873eabee6973fcff1",
-      "bodySha256": "22d433d9348a134ce1e752c9def8966d4945bc16f92d203c9415b845275a340e",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "6adf304350c2bd79c97beebbb7f9f90549fc9a0cfe42f257a1863c904c45ee96",
+      "bodySha256": "c97c92d7b410b0286da52ab7870d44ab9cd407e1fb8f65ecdb5fc396e021c5b5",
       "cover": {
         "path": "/images/portfolio/maketyanimda/karma-kullanim-sunum-maketi.webp",
         "sha256": "ccaaac75fc5ae23ff72bde10690480e02bd144d97c6ad5acda9ebbcbad2a94ef",
@@ -607,9 +427,10 @@
       "slug": "endustriyel-tesis-yerlesimi",
       "title": "Endüstriyel tesis yerleşim maketi",
       "industry": "Endüstriyel maket",
-      "concept": true,
-      "payloadSha256": "e94b1ef466eed7deadb5a867d5a1dfef01e0b96770f201ef72ac24a83bafce33",
-      "bodySha256": "fdcdfe4feb95915b98fab13e1c1b85a7bf4f80cc85b28585825159590a4cd7fe",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "c04754ec0be247c6ba21e7d26ae997bef9fd799c7bf6f5568b3a47b87ec7687c",
+      "bodySha256": "29a49b679a49664112f7deedf37bdbd2b59bda1d5cc942c594f6ca5ce2efa666",
       "cover": {
         "path": "/images/portfolio/maketyanimda/endustriyel-tesis-yerlesimi.webp",
         "sha256": "0e97fa727a6b5235490d91ee0aaeafccdd38f568ebc4d35b6eda5a396c194dea",
@@ -629,9 +450,10 @@
       "slug": "topografya-yerlesim-modeli",
       "title": "Topoğrafya ve yerleşim modeli",
       "industry": "Arazi ve kent",
-      "concept": true,
-      "payloadSha256": "dd11f27b1d52d6d7c9ba2218872c9c4ed9b5fcd69d5f29d70ae684006779af85",
-      "bodySha256": "f20f080f29d3af6170201793de9b9c37630ded504625bd1eefb744007b82dcff",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "8b7d4613dc74a2bdd4ceed77175afe1c9328c9f4ec5f233d4866ce71366ffa91",
+      "bodySha256": "95d0428ef64e61b126e19810468ee3a563f71eb92a32762924e8423d9ce4b847",
       "cover": {
         "path": "/images/portfolio/maketyanimda/topografya-yerlesim-modeli.webp",
         "sha256": "ffc2d1087b3c20eba99d3131645f50fd24d8936916f0b10791dfcecf62cc3ac0",
@@ -651,9 +473,10 @@
       "slug": "enerji-tesisi-anlatim-maketi",
       "title": "Enerji tesisi için anlatım maketi",
       "industry": "Endüstriyel maket",
-      "concept": true,
-      "payloadSha256": "f2a427f3962bbaf2d3598c0fca89d7ec793896675b37c64277cab5e25726fe36",
-      "bodySha256": "168bfe4226905974bf21153c42ab2f197a15c2abd094d790146e87d938d98e6d",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "f1a549777ab1c42aa0a8b0486dcdca58469fb37ff8ad3ae56938746f83f04511",
+      "bodySha256": "c16e51eb496f9ba4ade820a8685c60d3691de995cc90fccdd90f2be7f92d13d0",
       "cover": {
         "path": "/images/portfolio/maketyanimda/enerji-tesisi-anlatim-maketi.webp",
         "sha256": "eeb7e1d2d9d7f5dec38822c3cdeea6338a943a098127040542d9f493218b8714",
@@ -673,9 +496,10 @@
       "slug": "yapi-kesit-sunum-modeli",
       "title": "Mekânı açıklayan yapı kesit modeli",
       "industry": "Mimari sunum",
-      "concept": true,
-      "payloadSha256": "10b4550d4834a928006c08423d6f03aeb6cc5aa1292b53eea21473d45a1dfcc4",
-      "bodySha256": "db2a5c788903e4dbb17c704459a66e9a2c06d8b867c26cb6c268c8ff60cca2f8",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "394ce01c07f59bce2b50f4d1cc0017edf3d2973a4ce97c6efce257a6fc774149",
+      "bodySha256": "ae34530463e1b8def7933c80520b95b974dad9468cf6151e3415d27c3ba3dc36",
       "cover": {
         "path": "/images/portfolio/maketyanimda/yapi-kesit-sunum-modeli.webp",
         "sha256": "9837a48009b5fd920e3ebccca494ec43d9f9b41b4211d86f153c19ec97a4778b",
@@ -695,9 +519,10 @@
       "slug": "kentsel-masterplan-modeli",
       "title": "Kentsel masterplan karar modeli",
       "industry": "Arazi ve kent",
-      "concept": true,
-      "payloadSha256": "af398988444f2482584c0f5b43b35b0e9f0793668a7f244da33a8332d439c880",
-      "bodySha256": "144ab4d625e761bddfbcd6eb240774bcb9fbac514e80abdfc32a8fc255fdcba6",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "eedabae109a3737a33e4a0854d93ece9b3b3df7a45b1cc51152e5c7091ae68a7",
+      "bodySha256": "bd7b8c19c0c1f3e5ac844dffb5e7dd85c61eb4d0f8246228c19658c43af787a2",
       "cover": {
         "path": "/images/portfolio/maketyanimda/kentsel-masterplan-modeli.webp",
         "sha256": "cf95bc063f2c7b714ea55d0e17914c4eaa6ee9aaff279e2176109e77b33c76c3",
@@ -717,9 +542,10 @@
       "slug": "urun-kesit-sergileme-modeli",
       "title": "Teknik ürün için sergileme modeli",
       "industry": "Teknik sunum",
-      "concept": true,
-      "payloadSha256": "516937a51599b56cccbb4d536c787a18db64e1f86050280ef0780d9a34edfa19",
-      "bodySha256": "8886d258b06c2e39c804481396f5f1832ffd7b6ff9d330fa5b60546095488f11",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "ddf117085b3a64b4cbed5a26687622c4483e70fdf4c081672e94ca298e5665e9",
+      "bodySha256": "dc12b52a40e70cd9726d61866fb0e0324055b4505616e66a0251f9cbe63338b6",
       "cover": {
         "path": "/images/portfolio/maketyanimda/urun-kesit-sergileme-modeli.webp",
         "sha256": "d63137bdc94dfb99c9cbb16f4afb388b37baf544f0aeac206ace3b94a6b5fac6",
@@ -739,9 +565,10 @@
       "slug": "makine-koruyucu-kapak",
       "title": "Makine için yeniden tasarlanan koruyucu kapak",
       "industry": "Makine parçaları",
-      "concept": true,
-      "payloadSha256": "9712c64952b5551861cdec543b8d959ac699195b9dbdff0f395d4aae2693d5fb",
-      "bodySha256": "4290fd8f9b3e534d55f2ec9c83e7e6695a571e5cc8e91cebc19c68af0134f9d9",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "f3515d6a02cdd8c5c0b398af094f58b80b3626c806a4175ca419e462b8f779dc",
+      "bodySha256": "cce4f63ae920981efc2b2e13c5d9c2923582c376b916f1d430bfaffec1fde56e",
       "cover": {
         "path": "/images/portfolio/parcayanimda/makine-koruyucu-kapak.webp",
         "sha256": "51de42add83b68e33099ef29083705ab5109ed800b8e54909410e77b54b679bf",
@@ -761,9 +588,10 @@
       "slug": "kirilmis-montaj-braketi",
       "title": "Numuneden güçlendirilmiş montaj braketi",
       "industry": "Makine parçaları",
-      "concept": true,
-      "payloadSha256": "f887ce1a23a3b6c1f17f4c2c16141b06e2ea961eb26b4e1559dddfdd2b6e25f5",
-      "bodySha256": "916ac4882180fdde1402f846e8246cdfe4cce919a4eb85b19cd6d7c41529f1d6",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "06cd9721104daa3c9cd7349af6fdd5c6db214f7bd3b279d9a941a70fc4aeeeb0",
+      "bodySha256": "cbbf47b2d082e959b8b1e555d15b4aec652da39522ecb93fd53fc6a5f7f9f131",
       "cover": {
         "path": "/images/portfolio/parcayanimda/kirilmis-montaj-braketi.webp",
         "sha256": "a61fce055dce2da86410692b24729d010fdaa9d23b090ea940cf901d572faeb4",
@@ -783,9 +611,10 @@
       "slug": "cihaz-baglanti-adaptoru",
       "title": "İki sistemi buluşturan bağlantı adaptörü",
       "industry": "Sistem uyarlama",
-      "concept": true,
-      "payloadSha256": "b82117632bc77b257dd8620e7bcdb0aed9c5a743b9881fa67c39b341ce9cde3b",
-      "bodySha256": "a367b13c3d9d037a91dc55437d984b97d8952a4976b432a8099933409876223c",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "27551c49ab1534725679fdcdfb7fde50d805694ba2e6e9e221bde94eb52d1191",
+      "bodySha256": "43f159d481eb24bf2339f1b090ed4f62fed766c1003e0fe11779b7612e7a78c1",
       "cover": {
         "path": "/images/portfolio/parcayanimda/cihaz-baglanti-adaptoru.webp",
         "sha256": "e009aefbaa30b76e247f4e7cfe08f5c800987f49020258a559ad9704ee264a23",
@@ -805,9 +634,10 @@
       "slug": "disli-geometri-prototipi",
       "title": "Aşınmış dişliden geometri prototipine",
       "industry": "Makine parçaları",
-      "concept": true,
-      "payloadSha256": "10b5359d27466fa78420190d392d2c9032a40fc134e7a77006b53392eee22c97",
-      "bodySha256": "b0a966fe6091c47b3106ecce225519d2ce2903e94c35bce28e5e83810b7f29c0",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "2f1e3b01a0a63a8618d8f26aa0b4a3996329fc3798e9fd718b64659016795628",
+      "bodySha256": "10a41b59048d9a0aa36ef66cf50c0bd482b7e60cef584d8dc502899f0090aa2d",
       "cover": {
         "path": "/images/portfolio/parcayanimda/disli-geometri-prototipi.webp",
         "sha256": "6f9805b6bebcd211d1295d64cfd44ed038b5dfe355a18771a4d6447fe25dbb88",
@@ -827,9 +657,10 @@
       "slug": "ozel-kablo-kilavuzu",
       "title": "Ekipmana özel kablo kılavuzu",
       "industry": "Ekipman ve cihaz",
-      "concept": true,
-      "payloadSha256": "1145d19f7762b9aa9e0839ee1c9a4002503a304947b67e207b9e62064223e3db",
-      "bodySha256": "7c80d5fc73f0e56d4e59e34985ea28cbb21c38df16b0175283a6ebebf7783f55",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "1675160b0d1eb94979502663cf0e4b1fbb34312855275d85f2ce41454bea97a5",
+      "bodySha256": "4a65f31c0f1e34144826051933b133028f06efb9eb1dc76d50d84d60f9ff85f4",
       "cover": {
         "path": "/images/portfolio/parcayanimda/ozel-kablo-kilavuzu.webp",
         "sha256": "7df33e578dbfa9bc157a0912ede7e18292e35660b8f9a6414a50bb7a5cd0985c",
@@ -849,9 +680,10 @@
       "slug": "servis-kontrol-dugmesi",
       "title": "Servis paneli için kontrol düğmesi seti",
       "industry": "Ekipman ve cihaz",
-      "concept": true,
-      "payloadSha256": "b6dadb9ba29a07be33b7535647d36d7311379c7ecb75317395b4b19250331871",
-      "bodySha256": "2b5b7051b36a5a1ca00e6dec6d3d640973c7e6fcf9c8e7a5f80eeb101462928d",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "74dd6d65b3c912db3f12bd26c58ac42544f80b3eead89bc3c871845a36bf5852",
+      "bodySha256": "abaf63d0dfddd39e5c8236d87f288489167ee34bdc7fb0c35483d0b9d66bf2b7",
       "cover": {
         "path": "/images/portfolio/parcayanimda/servis-kontrol-dugmesi.webp",
         "sha256": "6db93bff2ab387cad15cbbfcb0cdb06638ab9143ceaba2085036dfdd900823ea",
@@ -871,9 +703,10 @@
       "slug": "kullanim-kosuluna-ozel-yatak",
       "title": "Kullanım koşuluna özel destek yatağı",
       "industry": "Sistem uyarlama",
-      "concept": true,
-      "payloadSha256": "75a30bfc7901190f7cff12d874f4bbc4ff36bf1f4918ff774f9aef66daed2094",
-      "bodySha256": "f689769d62eee69f02c05935b9ad099f0903680b2ef82cb28143939302572faa",
+      "classification": "application",
+      "illustrativeImage": true,
+      "payloadSha256": "a79562701f712bb50565e26ccff56b707b9fc81d32a784e34702c70595e86fc3",
+      "bodySha256": "9ef76df69a88250963c97599c20c293623b577b610707d09872816218b6f451e",
       "cover": {
         "path": "/images/portfolio/parcayanimda/kullanim-kosuluna-ozel-yatak.webp",
         "sha256": "719b1030c96588a23e82bae26aa6d87411c569301e89952abc74b443986fa1da",
