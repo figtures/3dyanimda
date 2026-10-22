@@ -12,7 +12,7 @@
   },
   "sourceHash": "315dfbfd031d38c8a0cdba8371d71c0a1651e61c9103db2b63ef879a81f8d1ab",
   "sourceFileCount": 634,
-  "contentManifestHash": "ed49b79c33070edc24347f2490b7c0668e0e8db6f0618a95597be0b6f1457475",
+  "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
     "allBrandsAllThemesAllRoutes": true,
@@ -95,7 +95,7 @@
     },
     {
       "file": "docs/audits/publication-content-manifest.json",
-      "sha256": "5d26d873b04633547b2debeb5b74e41af4bf6d35f246e532471b6ac2528b236f"
+      "sha256": "8e26ac2bd88f5d84d8b74f07f746848464b1dce68558ef0f3b4da2c492f5c8a1"
     },
     {
       "file": "docs/audits/reviewed-assets-2026-10-08.json",
