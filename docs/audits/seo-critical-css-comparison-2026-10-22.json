@@ -1,0 +1,35 @@
+{
+  "measuredAt": "2026-10-22T23:06:57.774Z",
+  "brand": "3dyanimda",
+  "status": "local_selector_comparison_not_release_verification",
+  "method": "Read live decoded HTML, attach its existing critical stylesheet to the matching asset link in JSDOM, then execute the updated inlineCriticalCss callback against the unchanged static DOM. Compare UTF-8 critical CSS bytes. HTML after values are CSS-only replacement estimates, not newly exported HTML.",
+  "fix": "Recurse named cascade layers instead of copying every Tailwind utility; preserve layer order, empty layer blocks, media/supports wrappers and complete keyframes. Full deferred stylesheet and noscript fallback retained.",
+  "limitations": [
+    "No field Core Web Vitals, CrUX, Search Console or GA4 account data was accessed.",
+    "Sizes are decoded UTF-8 bytes, not Brotli wire transfer sizes or load-time measurements.",
+    "A production Chromium export and first-render browser regression remain required on the supported build runner before claiming release verification.",
+    "Other concurrent content changes can change final exported HTML sizes."
+  ],
+  "pages": [
+    {"path":"/","httpStatus":200,"htmlBeforeBytes":328858,"criticalBeforeBytes":219745,"criticalFilteredBytes":76664,"criticalReductionPercent":65.11,"htmlAfterCssReplacementEstimateBytes":185777,"renderStateBytes":28822,"bootstrapBytes":5617,"contentEncoding":"br"},
+    {"path":"/3d-baski","httpStatus":200,"htmlBeforeBytes":236786,"criticalBeforeBytes":186796,"criticalFilteredBytes":44595,"criticalReductionPercent":76.13,"htmlAfterCssReplacementEstimateBytes":94585,"renderStateBytes":16625,"bootstrapBytes":5628,"contentEncoding":"br"},
+    {"path":"/rehber/stl-dosya-hazirlama","httpStatus":200,"htmlBeforeBytes":227315,"criticalBeforeBytes":185690,"criticalFilteredBytes":43208,"criticalReductionPercent":76.73,"htmlAfterCssReplacementEstimateBytes":84833,"renderStateBytes":13074,"bootstrapBytes":5053,"contentEncoding":"br"}
+  ],
+  "sourceChecks": {
+    "homepageImageElements":5,
+    "homepageImagesWithWidthAndHeight":5,
+    "threeDimensionalHero":"Already lazy-loaded; printer renderer caps FPS and pixel ratio, pauses when hidden/offscreen, observes resize and disposes resources. Animation retained.",
+    "bootstrap":"Already route-scoped; selected state measured above. No new large JSON snapshot added."
+  },
+  "localTests": {
+    "analytics":"npx vitest run src/lib/growth-analytics.test.ts src/pages/QuoteRequest.analytics.test.tsx — 23 passed",
+    "criticalCssSelection":"node --test scripts/quality/critical-css-selection.test.mjs — 3 passed",
+    "browserRegression":"scripts/quality/critical-css.test.mjs extended for named layers, first-render inline-only CSS and JS-on/off fallback; not executed in this environment"
+  },
+  "syntheticUtilityFixture":{"unusedRules":256,"criticalBeforeBytes":10579,"criticalAfterBytes":299,"note":"CSSOM-normalized named layer before versus production filter output; deterministic unit-test fixture, not live page performance."},
+  "analyticsAccountActionsPending": [
+    "Keep generate_lead as the sole saved-quote key event; quote_submit_success is diagnostic, not a second conversion.",
+    "Confirm enhanced-measurement history pageviews and automatic form/file/outbound collection do not duplicate manual sanitized events or disclose URLs/filenames.",
+    "After deployment, verify consented GA4 Realtime/DebugView receipt; associate guide/tool/service/location content_group with saved quote funnels using actual data."
+  ]
+}

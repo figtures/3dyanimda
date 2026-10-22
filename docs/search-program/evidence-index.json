@@ -148,8 +148,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "5ec5814aee7ace7c82e077b2a3c425493362a6e0e9a95f557f825ebedaccb570",
-      "bytes": 7427
+      "sha256": "863a1a4dea96def8667163414831de77555102dda3576b0dfa3150c8a991ede9",
+      "bytes": 7475
     },
     {
       "path": "public/brand/optimized/service-3dsanayi-model-1024.avif",
@@ -333,13 +333,13 @@
     },
     {
       "path": "scripts/quality/critical-css.mjs",
-      "sha256": "317d820d257308e9e92dcf552c54ef3ad1ccc62d902b6e3b381e021ab4c58a1d",
-      "bytes": 4406
+      "sha256": "044b182ee7a191a80987ad3cfccaeb9b46a5f2fb5176c11b35353a20297af830",
+      "bytes": 4811
     },
     {
       "path": "scripts/quality/critical-css.test.mjs",
-      "sha256": "8677de2963e1b370a9b959f5cc29f5a3544e075619c1623b0b594b940311545f",
-      "bytes": 2718
+      "sha256": "6399811b1b2a4e96e555eca6f430212a84470e20e10664980a1c49646c5a9c2e",
+      "bytes": 3626
     },
     {
       "path": "scripts/quality/evidence-index.mjs",
@@ -463,8 +463,8 @@
     },
     {
       "path": "src/components/site/Seo.tsx",
-      "sha256": "35b01297ad219fc5df7dd29171433d49338736a9cba63a3953230ede845c30f8",
-      "bytes": 6133
+      "sha256": "247a96d45176a6085da88f086d83ae9661cd6dff58e8399d1e105e1e82ab1116",
+      "bytes": 6925
     },
     {
       "path": "src/content/answer-unit.test.ts",
@@ -478,13 +478,13 @@
     },
     {
       "path": "src/content/editorial.test.ts",
-      "sha256": "fa2186b27da33a2872314d538f1e705d35aa28e17ed401b92d34a2f52959f6be",
-      "bytes": 1445
+      "sha256": "36abbc9be483a6fdfdf3aca76c8e024793d9cd4dcfb1f1917b62f06bc0ca4f74",
+      "bytes": 2390
     },
     {
       "path": "src/content/editorial.ts",
-      "sha256": "4030ef372c37bc3d9a93b89f1361fc1a3a741068d09a1b601003c47d7f93549d",
-      "bytes": 1470
+      "sha256": "f79deead2c81198e6e98b608c3d0f0e1970fdead8f8cd9998d15441c21de700c",
+      "bytes": 2125
     },
     {
       "path": "src/content/local-preview.test.ts",
@@ -493,8 +493,8 @@
     },
     {
       "path": "src/content/metadata.test.ts",
-      "sha256": "5ac5045c3e364831fb09e384849c679ef702f350230ed10a2da5cb60ffd75bf0",
-      "bytes": 1624
+      "sha256": "b3c79a6e4abd4f8ee136ac2e7d736410848898fbb20a9e254719ef72fb0de624",
+      "bytes": 2105
     },
     {
       "path": "src/content/metadata.ts",
@@ -508,13 +508,13 @@
     },
     {
       "path": "src/content/related.test.ts",
-      "sha256": "5fabbe1ee022af4ed4ac093a3dcc4ac1fe180c6099f642fbbf268c7b3d0e3690",
-      "bytes": 1062
+      "sha256": "c7380fc5fb270ba4bde002b88c6c3fca159491299adc4d77ea9fc18696f1cd2f",
+      "bytes": 1836
     },
     {
       "path": "src/content/related.ts",
-      "sha256": "b46a49ac64f60428b5b804c06a3baad8d87325d53a460e97050b7eacb78105c4",
-      "bytes": 497
+      "sha256": "053997ec49e47f814c05f7ebb676874498e5ccc16700aa338bc21829fdf232b0",
+      "bytes": 939
     },
     {
       "path": "src/content/responsive-image.ts",
@@ -553,8 +553,8 @@
     },
     {
       "path": "src/lib/growth-analytics.test.ts",
-      "sha256": "b78a1ec34110881363acefdd2dae2a92ff10a5f483eb72385bf876a63043ab26",
-      "bytes": 4245
+      "sha256": "8a54bba9fd3594e3c7701488f1e636cfd7fd0f9b73310d10a16539863e33411d",
+      "bytes": 7522
     },
     {
       "path": "src/lib/mount-app.test.tsx",
@@ -618,13 +618,13 @@
     },
     {
       "path": "src/lib/social-meta.test.ts",
-      "sha256": "c5fd55869477f313660d33f485e2ed571a7e12eba9da8697d454f25652232d9a",
-      "bytes": 877
+      "sha256": "65f6d7fdadd83d8e356990b40bba5fa060de24c967b241c7759887960f998a86",
+      "bytes": 2164
     },
     {
       "path": "src/lib/structured-data.test.ts",
-      "sha256": "245aba0f116113bc97e67134d1dfaa7b13765b7cbc882cc93cdc29ccc4b69201",
-      "bytes": 2986
+      "sha256": "cd1228906fa93783fa2834233a09b411dac53b4013ef7067c76752ed9422dae0",
+      "bytes": 3737
     },
     {
       "path": "src/main.tsx",
@@ -638,8 +638,8 @@
     },
     {
       "path": "src/pages/ContentPage.tsx",
-      "sha256": "8642f04d146a15f815561f95b9886a649a5b1d861a6daf78f496807207b0636e",
-      "bytes": 9541
+      "sha256": "d6d18a6437d55dca67c502f1de6fc38ce3c213dd6f39079733c68f80fe0fdec7",
+      "bytes": 10727
     },
     {
       "path": "src/pages/Index.tsx",
@@ -658,8 +658,8 @@
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
-      "sha256": "6f01abb049e6f41e136b75f095c7ac9816ef314f942437d3c969180568b31a2b",
-      "bytes": 7182
+      "sha256": "c618e8dfde27006e86e8269155d098b1f239f32f5b168fde9f0148ef5c42e630",
+      "bytes": 7466
     },
     {
       "path": "src/components/brand/BrandNavigation.tsx",
@@ -668,8 +668,8 @@
     },
     {
       "path": "src/components/brand/GrowthAnalytics.tsx",
-      "sha256": "a33105011d72a77d6d25dbff69afc8ce0aa509db6a2a01b0351cbaafff1b496f",
-      "bytes": 1904
+      "sha256": "66c0ded1bc5ff655cb00698618e904679968e2b6552c4c1c55c93c0949dca759",
+      "bytes": 1768
     },
     {
       "path": "src/components/brand/navigation.css",
@@ -758,8 +758,8 @@
     },
     {
       "path": "src/lib/structured-data.ts",
-      "sha256": "5aadd6625d87ae9429b2c25de1a27b3bd00362adae4dfa4a648a97910f831423",
-      "bytes": 3348
+      "sha256": "c0b3ee2f6cba8a48812757ad8be8b22ec9c04cc8992a250e5cba20df804d502f",
+      "bytes": 3740
     },
     {
       "path": "src/pages/Blog.tsx",
@@ -768,18 +768,18 @@
     },
     {
       "path": "src/pages/BlogPost.tsx",
-      "sha256": "4216b7d458174b93b1b5fd288cd28be2af7457e52c3134ffe68a82bf3ca03fe0",
-      "bytes": 4304
+      "sha256": "cea683de711ad4ff9c1d582dcf57d81d76af2779b1cd33e10a452f622aa86593",
+      "bytes": 5243
     },
     {
       "path": "src/pages/Portfolio.tsx",
-      "sha256": "e997d93ef7b8ea115abcf8056d3b4b808efac4c6a594298cd2f3938e6c759745",
-      "bytes": 4895
+      "sha256": "d58f8b46b1fe19bc151d1bf9920e90334d286c6effe72a0da9b3f806f2194a8d",
+      "bytes": 4583
     },
     {
       "path": "src/pages/QuoteRequest.tsx",
-      "sha256": "306aba8d1175c2f15b0ef239964e73c7ee6e73c3f84c716d48111ae6645a5fc9",
-      "bytes": 14830
+      "sha256": "f000631a3506407aa695889a7dda7ce006d0bcbaed355d80918fb89168c53182",
+      "bytes": 14946
     },
     {
       "path": "src/pages/career/CareerHub.tsx",
@@ -883,13 +883,13 @@
     },
     {
       "path": "src/content/structured-content.test.ts",
-      "sha256": "ab9e6ff1ab0e6361344d75951cc203cbb1e9512d2f56825905e88db13de83689",
-      "bytes": 2724
+      "sha256": "2e110959cdecf507ceba4b4e0a40b55371df76e18c3a24379bc4974358c5031b",
+      "bytes": 3673
     },
     {
       "path": "src/content/structured-content.ts",
-      "sha256": "965449e7fca1c0ca4d7b7f2770cce79fb93ef80e9e9eb129ca7a2566e1bb6eac",
-      "bytes": 2928
+      "sha256": "3dcb203725339f149579718a8c312c4128f39104fba5c37dcde962cdb8933a96",
+      "bytes": 3089
     },
     {
       "path": "src/lib/backend-config.ts",
@@ -1013,13 +1013,13 @@
     },
     {
       "path": "src/lib/business-profile.ts",
-      "sha256": "a6d8da0d6d40f7a418eeca57e3d64beed5db7a4e36b4916cd7c6ffb03f10ece9",
-      "bytes": 13112
+      "sha256": "2325c8705939ccd97f971c14e51b264ec5b04de61662d4a20d6cdc49d6f95c03",
+      "bytes": 17123
     },
     {
       "path": "src/lib/business-profile.test.ts",
-      "sha256": "ce8502d215b00297ff08b7446399d3483c983fa6c31ae44209b1fefff6ce774a",
-      "bytes": 8265
+      "sha256": "202fea2f139304227096e460ace1bd76368a5b1e4abd363be74c009feb124273",
+      "bytes": 11821
     },
     {
       "path": "src/components/brand/BusinessProfile.test.tsx",
@@ -1033,8 +1033,8 @@
     },
     {
       "path": "src/components/brand/business-profile.css",
-      "sha256": "dd8369971e7e76391243fe4965b9cc2d68c543a34650f1f331d3f31cc248106b",
-      "bytes": 2513
+      "sha256": "d019f68da4bbb95cf9b6f74d8cb1294f65c527bcb22b5bf0f4d2f1fe53cc158c",
+      "bytes": 2929
     },
     {
       "path": "src/hooks/useSiteSettings.test.tsx",
@@ -1048,13 +1048,13 @@
     },
     {
       "path": "src/pages/admin/AdminContactInfo.tsx",
-      "sha256": "0a5c69095f8420dc6ec7df4dcbe0f6a99fadee5ceef1b3d26e20226d1beecaff",
-      "bytes": 17165
+      "sha256": "5db416494cbad17c111cf8dac2ee80aa9e65fb9c884bce13fc38766266325a83",
+      "bytes": 20998
     },
     {
       "path": "src/pages/admin/AdminContactInfo.test.tsx",
-      "sha256": "ee5c11971b2c0ebed650ed9179dc0ce56a7ec434c24039d29808eed3820e67eb",
-      "bytes": 10150
+      "sha256": "166a7005a8fc5565de9836b4c32a263c3c650e2d83089fb3f19ab68844128093",
+      "bytes": 12300
     },
     {
       "path": "scripts/quality/exported-business-profile.mjs",
@@ -1069,7 +1069,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-22T00:43:39.622Z",
+  "checksumsRefreshedAt": "2026-10-22T23:14:11.164Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

@@ -32,4 +32,10 @@ describe('tenant structured data',()=>{
   expect(graph['@graph'][0]).toHaveProperty('sameAs',['https://www.google.com/maps?cid=123','https://instagram.com/3dyanimda']);
   expect(graph['@graph'][2]).toHaveProperty('hasMap','https://www.google.com/maps?cid=123');
  });
+ it('uses only configured languages and service areas without creating branch identities',()=>{
+  const graph=businessGraph({name:'3D Yanımda',origin:'https://3dyanimda.com',email:'info@3dyanimda.com',address:{addressLocality:'Ataşehir',addressCountry:'TR'},availableLanguages:['Türkçe','English','English'],serviceAreas:['İstanbul','Türkiye']})['@graph'];
+  expect(graph[0]).toHaveProperty('contactPoint',[{ '@type':'ContactPoint', contactType:'customer service',email:'info@3dyanimda.com',availableLanguage:['Türkçe','English']}]);
+  expect(graph[2]).toHaveProperty('areaServed',[{'@type':'City',name:'İstanbul'},{'@type':'Place',name:'Türkiye'}]);
+  expect(graph.filter(node=>node['@type']==='ProfessionalService')).toHaveLength(1);
+ });
 });

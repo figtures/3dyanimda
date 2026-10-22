@@ -6,7 +6,7 @@ import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
 import { getSupabase, demoMode } from "@/lib/backend-config";
 import { Seo } from "@/components/site/Seo";
-import { trackGrowth } from "@/lib/growth-analytics";
+import { trackGrowth, trackQuoteSaved } from "@/lib/growth-analytics";
 import "@/components/quote/quote-flow.css";
 import { fmtTRY } from "@/lib/quote-engine";
 import type { StudioSpec } from "@/components/quote/QuoteStudio";
@@ -109,6 +109,7 @@ export default function QuoteRequest() {
           .from("stl-uploads")
           .upload(path, file, { upsert: false });
         if (upload.error) throw upload.error;
+        if (brand.slug === "3dyanimda") trackGrowth(brand.slug, "file_upload_success", {service, file_type:ext});
       }
       const { error: insertError } = await supabase
         .from("quote_requests")
@@ -128,7 +129,7 @@ export default function QuoteRequest() {
           status: "new",
         });
       if (insertError) throw insertError;
-      trackGrowth(brand.slug, "generate_lead", {service});
+      trackQuoteSaved(brand.slug, service);
       setDone(true);
     } catch {
       trackGrowth(brand.slug, "quote_submit_error", {service});

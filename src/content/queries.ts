@@ -3,7 +3,7 @@ import { getSupabase, demoMode } from "@/lib/backend-config";
 import type { LandingPage } from "./types";
 import { localDraftPreviewAllowed } from "./local-preview";
 import {selectRelatedContent} from './related';
-const summaryColumns:string='id,tenant_id,path,title,summary,kind,image,status,city,district,neighborhood,service,updated_at,editorial->answer';
+const summaryColumns:string='id,tenant_id,path,title,summary,kind,image,status,city,district,neighborhood,service,updated_at,editorial->answer,editorial->media';
 export function contentQuery(tenant: Tenant | null, includeDrafts = false, full = false, options:{kinds?:string[];enabled?:boolean}={}) {
   const localDraftPreview = localDraftPreviewAllowed({ development: import.meta.env.DEV, demoMode, hostname: window.location.hostname, search: window.location.search });
   return {
@@ -34,7 +34,7 @@ export function contentQuery(tenant: Tenant | null, includeDrafts = false, full 
       const { data, error } = await query;
       if (error) throw error;
       const {readEditorial}=await import("./editorial");
-      return (data as unknown as (LandingPage & {answer?:string})[]).map(p => ({...p, editorial:readEditorial(p.editorial || (p.answer ? {answer:p.answer} : undefined))}));
+      return (data as unknown as (LandingPage & {answer?:string|null;media?:unknown})[]).map(p => ({...p, editorial:readEditorial(p.editorial || (p.answer || p.media ? {answer:p.answer||'',media:p.media||undefined} : undefined))}));
     },
     staleTime: 60000,
   };
@@ -56,7 +56,7 @@ export function relatedContentQuery(tenant: Tenant | null, page:LandingPage|null
   queryKey:['landing-pages',tenant?.id,'related',page?.path,page?.kind,page?.editorial?.relatedPaths||[]],enabled:!!tenant&&!!page,
   queryFn:async():Promise<LandingPage[]>=>{
    if(!page||!tenant)return [];
-   if(demoMode){const pages=await contentQuery(tenant).queryFn();return selectRelatedContent(pages,page);}
+   if(demoMode){const pages=await contentQuery(tenant).queryFn();return selectRelatedContent(pages,page,tenant.slug);}
    const supabase=await getSupabase();
    const base=()=>supabase.from('landing_pages').select(summaryColumns).eq('tenant_id',tenant.id).eq('status','published').order('path');
    const paths=page.editorial?.relatedPaths||[];
@@ -67,7 +67,7 @@ export function relatedContentQuery(tenant: Tenant | null, page:LandingPage|null
     return (data||[]) as unknown as LandingPage[];
    };
    const results=await Promise.all([load('kind',[page.kind]),load('path',paths)]);
-   return selectRelatedContent(results.flat(),page);
+   return selectRelatedContent(results.flat(),page,tenant.slug);
   },staleTime:60000,
  };
 }

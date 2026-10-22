@@ -8,7 +8,15 @@ export async function inlineCriticalCss(page) {
   };
   const select=rules=>Array.from(rules).map(rule=>{
    if(rule.type===CSSRule.STYLE_RULE)return matches(rule.selectorText)?rule.cssText:'';
-   if(rule.cssRules && !rule.name){const inner=select(rule.cssRules);return inner?rule.cssText.slice(0,rule.cssText.indexOf('{')+1)+inner+'}':'';}
+   // Named cascade layers are grouping rules too. Keeping them wholesale copies
+   // every Tailwind utility into every exported page. Keyframes also have a
+   // name/cssRules but are not selectors, so retain those intact.
+   const layer=rule.cssRules && /^@layer\b/.test(rule.cssText);
+   if(rule.cssRules && (!rule.name || layer)){
+    const inner=select(rule.cssRules);
+    // An empty layer still establishes cascade order for the deferred sheet.
+    return inner || layer ? rule.cssText.slice(0,rule.cssText.indexOf('{')+1)+inner+'}' : '';
+   }
    return rule.cssText;
   }).join('\n');
   let total=0;

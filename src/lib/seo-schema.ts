@@ -7,6 +7,12 @@ export interface CrumbEntry {
   label: string;
   url?: string;
 }
+/** Use a real source date or omit it; rendering never invents publication history. */
+export const contentDate = (value?: string | null): string | undefined => {
+  if (!value || !/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(value)) return undefined;
+  const time = Date.parse(value);
+  return Number.isFinite(time) && time <= Date.now() + 300_000 ? new Date(time).toISOString() : undefined;
+};
 export const orgSchema = () => {
   const { name, origin } = getTenantIdentity();
   return {
@@ -72,13 +78,17 @@ export const articleSchema = (opts: {
   url: string;
   image?: string;
   datePublished?: string;
+  dateModified?: string;
 }) => ({
   "@context": "https://schema.org",
   "@type": "Article",
   headline: opts.title,
   description: opts.description,
-  image: opts.image,
-  datePublished: opts.datePublished,
+  ...(opts.image ? {image: new URL(opts.image, getTenantIdentity().origin).href} : {}),
+  ...(contentDate(opts.datePublished) ? {datePublished: contentDate(opts.datePublished)} : {}),
+  ...(contentDate(opts.dateModified) ? {dateModified: contentDate(opts.dateModified)} : {}),
+  inLanguage: 'tr-TR',
+  isAccessibleForFree: true,
   author: { "@id": `${getTenantIdentity().origin}/#organization` },
   publisher: { "@id": `${getTenantIdentity().origin}/#organization` },
   mainEntityOfPage: { "@type": "WebPage", "@id": opts.url },

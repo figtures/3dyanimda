@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { normalizeGoogleBusinessUrl, normalizeMapEmbedUrl, normalizePublicUrl, normalizeSocialUrl, resolveBusinessProfile, validateContactInfo } from './business-profile';
+import { normalizeBusinessHours, normalizeGoogleBusinessUrl, normalizeMapEmbedUrl, normalizePublicUrl, normalizeSocialUrl, resolveBusinessProfile, validateContactInfo } from './business-profile';
 
 const brand = { name: '3D Yanımda', origin: 'https://3dyanimda.com' };
 const legacy = {
@@ -89,6 +89,46 @@ describe('tenant business profile resolution', () => {
     expect(resolveBusinessProfile({}, brand).visitNote).toContain('önceden randevu');
     const business = resolveBusinessProfile({ contact_info: { visit_note: '', delivery_note: '', onsite_note: '' } }, brand);
     expect([business.visitNote, business.deliveryNote, business.onsiteNote]).toEqual(['', '', '']);
+  });
+
+  it('uses a known address for directions without asserting a verified business profile', () => {
+    const business = resolveBusinessProfile({ contact_info: { address_tr: 'Örnek Mahallesi, Bestekar Sokak No: 17, Ataşehir, İstanbul' } }, brand);
+    const directions = new URL(business.directionsUrl!);
+    expect(directions.pathname).toBe('/maps/dir/');
+    expect(directions.searchParams.get('destination')).toBe(business.addressText);
+    expect(business.googleBusinessUrl).toBeUndefined();
+    expect(business.sameAs).toEqual([]);
+    expect(resolveBusinessProfile({}, brand).directionsUrl).toBeUndefined();
+  });
+
+  it('validates paired coordinates, preserves zero and removes explicitly cleared legacy coordinates', () => {
+    expect(resolveBusinessProfile({ contact_info: { geo_latitude: '0', geo_longitude: '0' } }, brand).geo).toEqual({ latitude: 0, longitude: 0 });
+    expect(resolveBusinessProfile({ contact_info: { geo_latitude: '91', geo_longitude: '29' } }, brand).geo).toBeUndefined();
+    expect(resolveBusinessProfile({ verified_business_identity: legacy, contact_info: { geo_latitude: '', geo_longitude: '' } }, brand).geo).toBeUndefined();
+    expect(validateContactInfo({ geo_latitude: '40.98' })).toHaveProperty('geo_longitude');
+    expect(validateContactInfo({ geo_latitude: '40,98', geo_longitude: '29.12' })).toHaveProperty('geo_latitude');
+    expect(validateContactInfo({ geo_latitude: '', geo_longitude: '' })).toEqual({});
+  });
+
+  it('normalizes actual weekly hours for visible content and schema with no invented opening times', () => {
+    const hours = [{ dayOfWeek: ['Tuesday', 'Monday'], opens: '09:00', closes: '18:00' }];
+    const business = resolveBusinessProfile({ verified_business_identity: { openingHoursSpecification: hours } }, brand);
+    expect(business.openingHours).toEqual([{ dayOfWeek: 'Monday', opens: '09:00', closes: '18:00' }, { dayOfWeek: 'Tuesday', opens: '09:00', closes: '18:00' }]);
+    expect(business.openingHoursSpecification?.[0]).toMatchObject({ '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday' });
+    expect(resolveBusinessProfile({}, brand).openingHoursSpecification).toBeUndefined();
+    expect(resolveBusinessProfile({ verified_business_identity: { openingHoursSpecification: hours }, contact_info: { opening_hours: [] } }, brand).openingHours).toEqual([]);
+    expect(normalizeBusinessHours([{ dayOfWeek: 'Monday', opens: '24:00', closes: '25:00' }])).toEqual([]);
+    expect(validateContactInfo({ opening_hours: [{ dayOfWeek: 'Monday', opens: '18:00', closes: '09:00' }] })).toHaveProperty('opening_hours');
+    expect(validateContactInfo({ opening_hours: [{ dayOfWeek: 'Monday', opens: '09:00', closes: '18:00' }, { dayOfWeek: 'Monday', opens: '09:00', closes: '18:00' }] })).toHaveProperty('opening_hours');
+  });
+
+  it('keeps onsite service, delivery and supported languages separate and clears explicit blanks', () => {
+    const business = resolveBusinessProfile({ contact_info: { contact_languages: 'Türkçe\nEnglish', service_areas: 'İstanbul\nİstanbul', delivery_areas: 'Türkiye' } }, brand);
+    expect(business.availableLanguages).toEqual(['Türkçe', 'English']);
+    expect(business.serviceAreas).toEqual(['İstanbul']);
+    expect(business.deliveryAreas).toEqual(['Türkiye']);
+    const cleared = resolveBusinessProfile({ contact_info: { contact_languages: '', service_areas: '', delivery_areas: '' } }, brand);
+    expect([cleared.availableLanguages, cleared.serviceAreas, cleared.deliveryAreas]).toEqual([[], [], []]);
   });
 });
 

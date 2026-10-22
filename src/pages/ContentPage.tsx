@@ -12,6 +12,7 @@ import places from "@/content/places.json";
 import {contentMetaTitle,contentMetaDescription} from '@/content/metadata';
 import {sourceNote,contentModified} from '@/content/source-notes';
 import {serviceImageSources} from '@/content/responsive-image';
+import {contentPublished} from '@/content/publication-date';
 import { LocalServiceAccess } from '@/components/brand/LocalServiceAccess';
 export default function ContentPage() {
   const { pathname, search } = useLocation();
@@ -36,6 +37,9 @@ export default function ContentPage() {
   const base = getTenantIdentity().origin;
   const technicalNote=sourceNote(p.path);
   const modified=contentModified(p.updated_at,p.path);
+  const published=contentPublished(p.editorial?.publishedAt);
+  const media=p.editorial?.media;
+  const displayDate=(value:string)=>new Date(value).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"});
   const quoteParams = new URLSearchParams(query);
   quoteParams.set("application", p.title);
   if (p.kind === "service") quoteParams.set("service", p.path.slice(1));
@@ -52,7 +56,11 @@ export default function ContentPage() {
         description={contentMetaDescription(p.summary,b.name)}
         path={p.path}
         image={p.image || undefined}
+        imageAlt={media?.alt}
+        imageWidth={media?.width}
+        imageHeight={media?.height}
         type={p.kind === "guide" ? "article" : "website"}
+        published={p.kind === "guide" ? published : undefined}
         modified={modified}
         keywords={[p.title, b.focus, p.city, p.district, p.neighborhood].filter(Boolean).join(", ")}
         geo={p.city ? {region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ")} : undefined}
@@ -92,14 +100,14 @@ export default function ContentPage() {
               {serviceImageSources(p.image)&&<source type="image/avif" srcSet={serviceImageSources(p.image)} sizes="(max-width: 760px) calc(100vw - 40px), 680px"/>}
               <img
                 src={p.image}
-                alt={p.title + " temsili uygulama görseli"}
-                width="1536"
-                height="1024"
+                alt={media?.alt || p.title + " temsili uygulama görseli"}
+                width={media?.width || 1536}
+                height={media?.height || 1024}
                 loading="lazy"
                 decoding="async"
               />
               </picture>
-              <figcaption>Uygulama alanını anlatan temsili görsel.</figcaption>
+              <figcaption>{media?.caption || "Uygulama alanını anlatan temsili görsel."}</figcaption>
             </figure>
           )}
           {p.kind !== "location" && p.local_context && (
@@ -132,6 +140,13 @@ export default function ContentPage() {
               <p>{p.logistics}</p>
             </section>
           )}
+          {!!p.editorial?.resources?.length && <section id="araclar-ve-dosyalar">
+            <h2>Bu konu için araçlar ve örnek dosyalar</h2>
+            <ul>{p.editorial.resources.map(resource => <li key={resource.path}>
+              <a href={resource.path} {...(/\.(csv|stl|obj|3mf|pdf|txt)$/.test(resource.path)?{download:true}:{})}>{resource.title}</a>
+              {resource.description && <p>{resource.description}</p>}
+            </li>)}</ul>
+          </section>}
           {!!p.faq.length && (
             <section id="sorular">
               <h2>Sık sorulan sorular</h2>
@@ -145,7 +160,7 @@ export default function ContentPage() {
           )}
           {technicalNote && <section className="article-sources" data-source-note><h2>Teknik kaynak notu</h2><p>{technicalNote.text}</p><p>{technicalNote.scope}</p><ul>{technicalNote.sources.map(s=><li key={s.id}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
           {!!p.editorial?.sources?.length && <section className="article-sources"><h2>{p.kind === "location" ? "Bölge ve hizmet kaynakları" : "Teknik başvuru kaynakları"}</h2><p>Bağlantılar ilgili konu için genel başvuru kaynaklarıdır. İşletmeye özgü kapasite, teslimat süresi veya parça performansını belgelemez.</p><ul>{p.editorial.sources.filter(s=>!technicalNote || !s.url.includes('/category/material-guide_')).map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
-          {modified && <p className="content-byline">{b.name} bilgi merkezi · Güncelleme: <time data-content-modified dateTime={modified}>{new Date(modified).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"})}</time></p>}
+          {(published || modified) && <p className="content-byline">{b.name} bilgi merkezi{published && <> · İlk yayın: <time data-content-published dateTime={published}>{displayDate(published)}</time></>}{modified && <> · Güncelleme: <time data-content-modified dateTime={modified}>{displayDate(modified)}</time></>}</p>}
         </article>
         <aside className="article-aside">
           <p className="brand-eyebrow">PROJENİZE BAŞLAYALIM</p>
@@ -170,6 +185,7 @@ export default function ContentPage() {
             </a>
           ))}
           {p.editorial?.comparison && <a href="#karsilastirma">Karşılaştırma</a>}
+          {!!p.editorial?.resources?.length && <a href="#araclar-ve-dosyalar">Araçlar ve örnek dosyalar</a>}
           {!!p.faq.length && <a href="#sorular">Sorular ve yanıtlar</a>}
         </aside>
       </div>

@@ -39,6 +39,7 @@ const AdminBlogEdit = () => {
   const [coverUrl, setCoverUrl] = useState("");
   const [tags, setTags] = useState("");
   const [published, setPublished] = useState(false);
+  const [publishedAt, setPublishedAt] = useState<string | null>(null);
   const [slugTouched, setSlugTouched] = useState(false);
 
   useEffect(() => {
@@ -57,6 +58,7 @@ const AdminBlogEdit = () => {
       setCoverUrl(data.cover_image_url ?? "");
       setTags((data.tags ?? []).join(", "));
       setPublished(data.published);
+      setPublishedAt(data.published_at ?? null);
       setSlugTouched(true);
       setLoading(false);
     })();
@@ -88,19 +90,21 @@ const AdminBlogEdit = () => {
       cover_image_url: coverUrl || null,
       tags: tags.split(",").map(t => t.trim()).filter(Boolean),
       published,
-      published_at: published ? new Date().toISOString() : null,
+      published_at: publishedAt || (published ? new Date().toISOString() : null),
       author_id: u.user?.id,
     };
     if (isNew) {
       const { data, error } = await supabase.from("blog_posts").insert(payload).select("id").single();
       setSaving(false);
       if (error) return toast.error(error.message);
+      setPublishedAt(payload.published_at);
       toast.success("Oluşturuldu");
       navigate(`/admin/blog/${data.id}`);
     } else {
       const { error } = await supabase.from("blog_posts").update(payload).eq("id", id);
       setSaving(false);
       if (error) return toast.error(error.message);
+      setPublishedAt(payload.published_at);
       toast.success("Kaydedildi");
     }
   };

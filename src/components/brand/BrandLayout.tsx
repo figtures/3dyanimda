@@ -165,7 +165,7 @@ export function BrandLayout() {
           <span>
             © {new Date().getFullYear()} {brand.name}
           </span>
-          {business.addressText && <span className="footer-address"><MapPin size={14} aria-hidden="true" /> {business.addressText}</span>}
+          {business.addressText && (brand.slug === '3dyanimda' && business.directionsUrl ? <a className="footer-address" href={business.directionsUrl} target="_blank" rel="noopener noreferrer" aria-label={`${business.addressText} için yol tarifi`}><MapPin size={14} aria-hidden="true" /> {business.addressText}</a> : <span className="footer-address"><MapPin size={14} aria-hidden="true" /> {business.addressText}</span>)}
           <Link to={link("/gizlilik-politikasi")}>Gizlilik</Link>
           <Link to={link("/iletisim")}>İletişim</Link>
           {import.meta.env.VITE_GA4_MEASUREMENT_ID && <button type="button" onClick={() => window.dispatchEvent(new Event("brand:privacy-settings"))}>Çerez tercihleri</button>}

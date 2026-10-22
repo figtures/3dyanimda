@@ -31,9 +31,46 @@ export type ContactInfo = {
   visit_note?: string;
   delivery_note?: string;
   onsite_note?: string;
+  geo_latitude?: string;
+  geo_longitude?: string;
+  opening_hours?: BusinessHours[];
+  contact_languages?: string;
+  service_areas?: string;
+  delivery_areas?: string;
   floating_enabled?: boolean;
   floating_whatsapp?: boolean;
   floating_phone?: boolean;
+};
+
+export const WEEKDAYS = [
+  { key: 'Monday', label: 'Pazartesi' }, { key: 'Tuesday', label: 'Salı' },
+  { key: 'Wednesday', label: 'Çarşamba' }, { key: 'Thursday', label: 'Perşembe' },
+  { key: 'Friday', label: 'Cuma' }, { key: 'Saturday', label: 'Cumartesi' },
+  { key: 'Sunday', label: 'Pazar' },
+] as const;
+export type BusinessHours = { dayOfWeek: typeof WEEKDAYS[number]['key']; opens: string; closes: string };
+const clock = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
+export function normalizeBusinessHours(value: unknown): BusinessHours[] {
+  if (!Array.isArray(value)) return [];
+  const rows: BusinessHours[] = [];
+  for (const entry of value) {
+    const row = record(entry);
+    const days = Array.isArray(row.dayOfWeek) ? row.dayOfWeek : [row.dayOfWeek];
+    for (const day of days) {
+      const key = typeof day === 'string' ? day.replace('https://schema.org/', '') : '';
+      if (!WEEKDAYS.some(item => item.key === key) || !clock.test(clean(row.opens)) || !clock.test(clean(row.closes)) || clean(row.opens) >= clean(row.closes)) continue;
+      if (!rows.some(item => item.dayOfWeek === key)) rows.push({ dayOfWeek: key as BusinessHours['dayOfWeek'], opens: clean(row.opens), closes: clean(row.closes) });
+    }
+  }
+  return rows.sort((a, b) => WEEKDAYS.findIndex(day => day.key === a.dayOfWeek) - WEEKDAYS.findIndex(day => day.key === b.dayOfWeek));
+}
+
+const splitFacts = (value: unknown): string[] => [...new Set(clean(value).split(/[\n,;]/).map(clean).filter(Boolean))].filter(item => item.length <= 100).slice(0, 20);
+const coordinate = (value: unknown, limit: number): number | undefined => {
+  const text = typeof value === 'number' ? String(value) : clean(value);
+  if (!text || !/^-?\d+(?:\.\d+)?$/.test(text)) return;
+  const number = Number(text);
+  return Number.isFinite(number) && Math.abs(number) <= limit ? number : undefined;
 };
 
 export type PostalAddress = {
@@ -174,9 +211,17 @@ export function resolveBusinessProfile(settings: Record<string, unknown>, brand:
     alias && alias !== name && alias.length <= 100 && !/^(?:3d\s*yanında|(?:www\.)?3dyaninda\.com)$/i.test(alias),
   ))].slice(0, 6);
   const legacyGeo = record(verified.geo);
-  const geo = !addressOwned && !freeformChanged && Number.isFinite(legacyGeo.latitude) && Number.isFinite(legacyGeo.longitude)
-    && Math.abs(Number(legacyGeo.latitude)) <= 90 && Math.abs(Number(legacyGeo.longitude)) <= 180
-    ? { latitude: Number(legacyGeo.latitude), longitude: Number(legacyGeo.longitude) } : undefined;
+  const geoOwned = own(contact, 'geo_latitude') || own(contact, 'geo_longitude');
+  const latitude = coordinate(geoOwned ? contact.geo_latitude : !addressOwned && !freeformChanged ? legacyGeo.latitude : undefined, 90);
+  const longitude = coordinate(geoOwned ? contact.geo_longitude : !addressOwned && !freeformChanged ? legacyGeo.longitude : undefined, 180);
+  const geo = latitude !== undefined && longitude !== undefined ? { latitude, longitude } : undefined;
+  const addressText = own(contact, 'address_tr') ? clean(contact.address_tr) : formatPostalAddress(address);
+  const destination = geo ? `${geo.latitude},${geo.longitude}` : addressText;
+  const directionsUrl = destination ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}` : undefined;
+  const openingHours = normalizeBusinessHours(own(contact, 'opening_hours') ? contact.opening_hours : verified.openingHoursSpecification);
+  const availableLanguages = own(contact, 'contact_languages') ? splitFacts(contact.contact_languages) : ['Türkçe'];
+  const serviceAreas = own(contact, 'service_areas') ? splitFacts(contact.service_areas) : ['İstanbul'];
+  const deliveryAreas = splitFacts(contact.delivery_areas);
   return {
     name,
     alternateNames,
@@ -184,9 +229,10 @@ export function resolveBusinessProfile(settings: Record<string, unknown>, brand:
     email: normalizeEmail(value('email', verified.email)),
     phone,
     phoneDisplay: phoneDisplay || phone,
-    addressText: own(contact, 'address_tr') ? clean(contact.address_tr) : formatPostalAddress(address),
+    addressText,
     address,
     googleBusinessUrl,
+    directionsUrl,
     mapEmbedUrl: normalizeMapEmbedUrl(contact.map_url),
     socialLinks,
     sameAs: [...new Set([googleBusinessUrl, ...socialLinks.map(profile => profile.url)].filter((url): url is string => Boolean(url)))],
@@ -198,7 +244,11 @@ export function resolveBusinessProfile(settings: Record<string, unknown>, brand:
     deliveryNote: clean(value('delivery_note', 'Kargo, kurye ve elden teslim seçenekleri için projenizi paylaşın. İstanbul dışındaki şehirlere de kargo gönderimi yapıyoruz. Teslimat yöntemi ve takvimini birlikte belirleyelim.')),
     onsiteNote: clean(value('onsite_note', 'Taranacak parçayı, yaklaşık ölçülerini ve bulunduğu konumu paylaşın; yerinde hizmet için çalışma koşullarını ve randevuyu birlikte değerlendirelim.')),
     geo,
-    openingHoursSpecification: Array.isArray(verified.openingHoursSpecification) ? verified.openingHoursSpecification as Record<string, unknown>[] : undefined,
+    openingHours,
+    openingHoursSpecification: openingHours.length ? openingHours.map(row => ({ '@type': 'OpeningHoursSpecification', ...row })) : undefined,
+    availableLanguages,
+    serviceAreas,
+    deliveryAreas,
   };
 }
 
@@ -214,5 +264,16 @@ export function validateContactInfo(data: ContactInfo): Partial<Record<keyof Con
     if (clean(data[profile.key]) && !normalizeSocialUrl(profile.key, data[profile.key])) errors[profile.key] = `${profile.label} işletme profilinizin tam HTTPS bağlantısını girin.`;
   }
   if (clean(data.about_image_url) && !normalizePublicUrl(data.about_image_url, 'https://example.invalid')) errors.about_image_url = 'HTTPS görsel bağlantısı veya / ile başlayan site içi görsel yolu girin.';
+  const hasLatitude = Boolean(clean(data.geo_latitude));
+  const hasLongitude = Boolean(clean(data.geo_longitude));
+  if (hasLatitude || hasLongitude) {
+    if (coordinate(data.geo_latitude, 90) === undefined) errors.geo_latitude = 'Enlemi -90 ile 90 arasında, ondalık ayıracı nokta olacak şekilde girin.';
+    if (coordinate(data.geo_longitude, 180) === undefined) errors.geo_longitude = 'Boylamı -180 ile 180 arasında, ondalık ayıracı nokta olacak şekilde girin.';
+  }
+  if (data.opening_hours !== undefined && (!Array.isArray(data.opening_hours) || normalizeBusinessHours(data.opening_hours).length !== data.opening_hours.length)) errors.opening_hours = 'Her gün için tek bir geçerli saat aralığı girin. Kapanış saati açılıştan sonra olmalıdır.';
+  for (const key of ['contact_languages', 'service_areas', 'delivery_areas'] as const) {
+    const entries = clean(data[key]).split(/[\n,;]/).map(clean).filter(Boolean);
+    if (entries.length > 20 || entries.some(entry => entry.length > 100)) errors[key] = 'En fazla 20 değer girin; her değer 100 karakteri geçmemelidir.';
+  }
   return errors;
 }

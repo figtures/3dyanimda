@@ -36,6 +36,10 @@
 .brand-site .contact-details address { font-style: normal; color: var(--muted); line-height: 1.8; white-space: pre-line; }
 .brand-site .contact-details p { white-space: pre-line; }
 .brand-site .contact-details a { overflow-wrap: anywhere; }
+.brand-site .contact-details .contact-directions { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; margin-top: .5rem; }
+.business-hours { margin: 0; color: var(--muted); }
+.business-hours > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; margin-bottom: .5rem; max-width: 22rem; }
+.business-hours dd { margin: 0; font-variant-numeric: tabular-nums; }
 .brand-site .contact-profile-section { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
 .contact-profile-section h2 { margin-bottom: 1rem; font-size: 1.2rem; }
 .brand-site .business-map { width: 100%; height: clamp(260px, 42vw, 440px); border: 1px solid var(--line); margin-top: 2rem; background: var(--soft); }

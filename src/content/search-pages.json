@@ -1,9 +1,10 @@
 [
   {
-    "brand": "3dyanimda",
     "path": "/3d-baski",
+    "kind": "service",
     "title": "Ürün geliştirme için 3D baskı",
     "summary": "Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
+    "image": "/images/editorial/3dyanimda/3d-baski.png",
     "sections": [
       {
         "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım.",
@@ -22,16 +23,14 @@
         "title": "Bir sonraki revizyona veri bırakın"
       },
       {
-        "title": "Baskı talebine hangi dosyayla başlayabilirsiniz?",
-        "body": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS modelinizi teklif ekranında açabilirsiniz; dosya başına sınır 20 MB’tır. Önizlemede ölçü birimini ve dış boyutları kontrol edin, istediğiniz adedi ve parçanın nerede kullanılacağını yazın. Hazır modeliniz yoksa fotoğraf, eskiz veya numuneyle modelleme ihtiyacını birlikte değerlendirebiliriz."
+        "body": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS modelinizi teklif ekranında açabilirsiniz; dosya başına sınır 20 MB’tır. Önizlemede ölçü birimini ve dış boyutları kontrol edin, istediğiniz adedi ve parçanın nerede kullanılacağını yazın. Hazır modeliniz yoksa fotoğraf, eskiz veya numuneyle modelleme ihtiyacını birlikte değerlendirebiliriz.",
+        "title": "Baskı talebine hangi dosyayla başlayabilirsiniz?"
       },
       {
-        "title": "Ön tahminden onaylı üretim teklifine",
-        "body": "Teklif ekranındaki anlık hesap, seçtiğiniz malzeme ve üretim ayarlarına bağlı bir ön tahmindir. Dosya hazırlığı, parçanın geometrisi, adet, son işlemler ve teslimat kapsamı incelendikten sonra nihai teklif belirlenir. Üretim ölçüsü, malzeme uygunluğu ve teslim tarihi proje özelinde teyit edilir; onayınızdan sonra üretim planlanır."
+        "body": "Teklif ekranındaki anlık hesap, seçtiğiniz malzeme ve üretim ayarlarına bağlı bir ön tahmindir. Dosya hazırlığı, parçanın geometrisi, adet, son işlemler ve teslimat kapsamı incelendikten sonra nihai teklif belirlenir. Üretim ölçüsü, malzeme uygunluğu ve teslim tarihi proje özelinde teyit edilir; onayınızdan sonra üretim planlanır.",
+        "title": "Ön tahminden onaylı üretim teklifine"
       }
     ],
-    "kind": "service",
-    "image": "/brand/services/3dyanimda-print.webp",
     "faq": [
       {
         "a": "Aynı proje altında ayrı parça kodlarıyla değerlendirilebilir. Her numunenin amacı, adedi ve onay ölçütü talepte birbirinden ayrılmalıdır.",
@@ -55,6 +54,7 @@
     "logistics": "",
     "evidence": "",
     "reviewed_at": null,
+    "updated_at": "2026-10-22T23:14:10.616Z",
     "editorial": {
       "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3D Yanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
       "takeaways": [
@@ -97,15 +97,22 @@
         "/rehber/3d-baski-mi-cnc-mi",
         "/3d-modelleme",
         "/cozumler/urun-gelistirme-prototipleri"
-      ]
+      ],
+      "media": {
+        "alt": "Dijital modelden baskı katmanlarına geçiş; görünüş, montaj ve işlev için farklı kontrol hedefleri.",
+        "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+        "width": 1200,
+        "height": 630
+      }
     },
-    "updated_at": "2026-10-07"
+    "brand": "3dyanimda"
   },
   {
-    "brand": "3dyanimda",
     "path": "/3d-tarama",
+    "kind": "service",
     "title": "Ürün referanslarını dijitale taşıyan 3D tarama",
     "summary": "Elinizdeki objeyi yeni tasarımın referansı yapmak için tarama kapsamını belirleyin. Dış formu görmek, mevcut ürüne oturan bir aksesuar geliştirmek ve CAD referansı oluşturmak farklı çıktılar gerektirir.",
+    "image": "/images/editorial/3dyanimda/3d-tarama.png",
     "sections": [
       {
         "body": "Tarama talebine yalnızca objenin fotoğrafını değil, ona bağlı tasarım fikrini de ekleyin. Yeni bir muhafaza mevcut yüzeye oturacaksa temas bölgesini gösterin. Sunum için dijitalleştirilen bir obje söz konusuysa görünmesi gereken yüzeyleri ve kullanım ölçeğini açıklayın.",
@@ -124,16 +131,14 @@
         "title": "Taramadan önce çıktı üzerinde anlaşın"
       },
       {
-        "title": "Tarama teklifi için ilk paylaşım",
-        "body": "Objenin farklı açılardan çekilmiş fotoğraflarını, yaklaşık boyutlarını ve malzemesini paylaşın. Hangi yüzeylerin önemli olduğunu ve veriyi arşiv, yeniden tasarım ya da üretim için kullanacağınızı belirtin. Gönderilemeyecek bir parça için bulunduğu konumu, erişim koşullarını ve yerinde çalışma beklentinizi ekleyin."
+        "body": "Objenin farklı açılardan çekilmiş fotoğraflarını, yaklaşık boyutlarını ve malzemesini paylaşın. Hangi yüzeylerin önemli olduğunu ve veriyi arşiv, yeniden tasarım ya da üretim için kullanacağınızı belirtin. Gönderilemeyecek bir parça için bulunduğu konumu, erişim koşullarını ve yerinde çalışma beklentinizi ekleyin.",
+        "title": "Tarama teklifi için ilk paylaşım"
       },
       {
-        "title": "Tarama ve modelleme kapsamını ayrı netleştirelim",
-        "body": "Tarama fiyatı; geometriye, yüzeye erişime, hazırlığa, yerinde çalışma ihtiyacına ve istenen çıktıya göre değerlendirilir. Yüzey ağı temizliği ile düzenlenebilir CAD modelinin hazırlanması farklı çalışmalardır. Numuneyi göndermeden önce teslim formatı, geri gönderim ve takvim üzerinde anlaşalım."
+        "body": "Tarama fiyatı; geometriye, yüzeye erişime, hazırlığa, yerinde çalışma ihtiyacına ve istenen çıktıya göre değerlendirilir. Yüzey ağı temizliği ile düzenlenebilir CAD modelinin hazırlanması farklı çalışmalardır. Numuneyi göndermeden önce teslim formatı, geri gönderim ve takvim üzerinde anlaşalım.",
+        "title": "Tarama ve modelleme kapsamını ayrı netleştirelim"
       }
     ],
-    "kind": "service",
-    "image": "/brand/services/3dyanimda-scan.webp",
     "faq": [
       {
         "a": "Kapsam, dijital verinin kullanım amacına bağlıdır. Yalnızca eşleşme bölgesi gereken bir aksesuar projesi ile tam obje sunumunun veri ihtiyacı farklıdır.",
@@ -157,6 +162,7 @@
     "logistics": "",
     "evidence": "",
     "reviewed_at": null,
+    "updated_at": "2026-10-22T23:14:10.616Z",
     "editorial": {
       "answer": "3D tarama, elinizdeki nesnenin erişilebilen yüzeylerini dijital geometriye dönüştürür. Görsel arşiv, ölçü incelemesi ve yeniden tasarım farklı çıktılar gerektirir. Parçayı tekrar ürettirmek istiyorsanız tarama verisinin yanında düzenlenebilir CAD modeline ihtiyaç olup olmadığını başlangıçta belirlemek gerekir.",
       "takeaways": [
@@ -193,15 +199,22 @@
         "/3d-modelleme",
         "/rehber/tarama-ve-tersine-muhendislik",
         "/cozumler/urun-gelistirme-prototipleri"
-      ]
+      ],
+      "media": {
+        "alt": "Fiziksel nesneden yüzey ağına ve istenen ağ, CAD veya rapor çıktısına giden üç aşama.",
+        "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+        "width": 1200,
+        "height": 630
+      }
     },
-    "updated_at": "2026-10-07"
+    "brand": "3dyanimda"
   },
   {
-    "brand": "3dyanimda",
     "path": "/3d-modelleme",
+    "kind": "service",
     "title": "3D modelleme ve ürün tasarımı: fikirden test edilebilir modele",
     "summary": "Eskiz, ölçü ve kullanım senaryosunu birlikte ele alarak ilk ürün geometrisini geliştirin. Modelleme sürecinin çıktısını yalnızca görünüşe değil, prototiple sınanacak tasarım kararlarına bağlayın.",
+    "image": "/images/editorial/3dyanimda/3d-modelleme.png",
     "sections": [
       {
         "body": "Ürün kimin elinde, hangi ortamda ve hangi hareketle kullanılacak? Bu sorular gövde biçimi kadar düğme erişimini, açılma yönünü ve taşınabilirliği de etkiler. Referans görsellerinizi beğendiğiniz özelliklerle birlikte paylaşmanız tasarım niyetini anlaşılır kılar.",
@@ -220,16 +233,14 @@
         "title": "Revizyonu yönetilebilir hale getirin"
       },
       {
-        "title": "Modelleme talebinizin başlangıç paketi",
-        "body": "Eskiz, teknik resim, fotoğraf, temel ölçüler veya fiziksel numuneyle başlayabilirsiniz. Parçanın işlevini, değişmemesi gereken boyutları ve birlikte çalışacağı bileşenleri belirtin. Mevcut bir dosyanız varsa teklif ekranına ekleyin; yalnızca görselleştirme mi yoksa üretime hazırlık mı istediğinizi açıklayın."
+        "body": "Eskiz, teknik resim, fotoğraf, temel ölçüler veya fiziksel numuneyle başlayabilirsiniz. Parçanın işlevini, değişmemesi gereken boyutları ve birlikte çalışacağı bileşenleri belirtin. Mevcut bir dosyanız varsa teklif ekranına ekleyin; yalnızca görselleştirme mi yoksa üretime hazırlık mı istediğinizi açıklayın.",
+        "title": "Modelleme talebinizin başlangıç paketi"
       },
       {
-        "title": "Revizyon, dosya teslimi ve fiyat kapsamı",
-        "body": "Teklif; mevcut referansların yeterliliği, geometrinin karmaşıklığı, ölçüm veya tarama gereksinimi, revizyon kapsamı ve teslim formatına göre hazırlanır. Düzenlenebilir CAD dosyası, baskı ağı ve görsel sunum aynı çıktı değildir. İhtiyaç duyduğunuz teslimleri ve onay adımlarını işe başlamadan birlikte belirleyelim."
+        "body": "Teklif; mevcut referansların yeterliliği, geometrinin karmaşıklığı, ölçüm veya tarama gereksinimi, revizyon kapsamı ve teslim formatına göre hazırlanır. Düzenlenebilir CAD dosyası, baskı ağı ve görsel sunum aynı çıktı değildir. İhtiyaç duyduğunuz teslimleri ve onay adımlarını işe başlamadan birlikte belirleyelim.",
+        "title": "Revizyon, dosya teslimi ve fiyat kapsamı"
       }
     ],
-    "kind": "service",
-    "image": "/brand/services/3dyanimda-model.webp",
     "faq": [
       {
         "a": "Referansın hangi özelliğini istediğinizi belirtmeniz gerekir. Kullanım hakkı, hedef ölçüler ve sizin ürününüze özgü değişiklikler modelleme kapsamına girmeden netleştirilir.",
@@ -253,6 +264,7 @@
     "logistics": "",
     "evidence": "",
     "reviewed_at": null,
+    "updated_at": "2026-10-22T23:14:10.616Z",
     "editorial": {
       "answer": "3D modelleme; eskiz, teknik resim, ölçü veya tarama referansını üretilebilir dijital tasarıma dönüştürür. Ürün geliştirmede modelin dış görünüşü kadar montaj ilişkileri ve değiştirilebilir ölçüleri de önemlidir. Baskıya uygun ağ dosyası ile sonraki revizyonlarda düzenlenebilen CAD teslimi birlikte planlanabilir.",
       "takeaways": [
@@ -289,9 +301,15 @@
         "/3d-baski",
         "/3d-tarama",
         "/rehber/3d-baski-mi-cnc-mi"
-      ]
+      ],
+      "media": {
+        "alt": "Referans eskizden ölçülü CAD modeline ve revizyonlu fiziksel numune kararına geçiş.",
+        "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+        "width": 1200,
+        "height": 630
+      }
     },
-    "updated_at": "2026-10-16"
+    "brand": "3dyanimda"
   },
   {
     "brand": "3dsanayi",
@@ -1104,45 +1122,57 @@
     "updated_at": "2026-10-07"
   },
   {
-    "brand": "3dyanimda",
     "path": "/rehber/prototip-maliyetini-ne-belirler",
+    "kind": "guide",
     "title": "Prototip maliyetini ne belirler?",
     "summary": "3D baskı teklifini gramajdan öte okuyun: dosya hazırlığı, geometri, numune, revizyon ve tekrar üretim maliyetini aynı kapsamda değerlendirin.",
-    "kind": "guide",
-    "image": "",
-    "status": "published",
+    "image": "/images/editorial/3dyanimda/rehber--prototip-maliyetini-ne-belirler.png",
     "sections": [
       {
-        "title": "İlk sipariş ile tekrar siparişi ayırın",
-        "body": "İlk üretimde dosya düzeltme, ölçü tamamlama veya baskı yönünü belirleme çalışması gerekebilir. Bu hazırlıklar, onaylı aynı dosyanın tekrarında aynı kapsamda tekrarlanmayabilir. Teklifte tek seferlik hazırlık kalemini, parça başı üretimi ve her siparişte gerekli kontrolü ayrı görmek toplam bütçeyi anlamayı kolaylaştırır. Tasarım değişirse eski tekrar fiyatının otomatik olarak geçerli olduğunu varsaymayın."
+        "body": "İlk üretimde dosya düzeltme, ölçü tamamlama veya baskı yönünü belirleme çalışması gerekebilir. Bu hazırlıklar, onaylı aynı dosyanın tekrarında aynı kapsamda tekrarlanmayabilir. Teklifte tek seferlik hazırlık kalemini, parça başı üretimi ve her siparişte gerekli kontrolü ayrı görmek toplam bütçeyi anlamayı kolaylaştırır. Tasarım değişirse eski tekrar fiyatının otomatik olarak geçerli olduğunu varsaymayın.",
+        "title": "İlk sipariş ile tekrar siparişi ayırın"
       },
       {
-        "title": "Geometri neden fiyatı değiştirir?",
-        "body": "İnce ve yüksek bir parça, aynı hacimde daha alçak bir parçadan farklı baskı süresine sahip olabilir. Destek ihtiyacı olan yüzeyler temizleme işi doğurur. Birbiri içine kapanan boşluklar ise üretim yönü veya geometri değişikliği gerektirebilir. Dosyayı teklif öncesinde inceletmek, görünüşte küçük bir ayrıntının süreye ve son işleme etkisini görmenizi sağlar."
+        "body": "İnce ve yüksek bir parça, aynı hacimde daha alçak bir parçadan farklı baskı süresine sahip olabilir. Destek ihtiyacı olan yüzeyler temizleme işi doğurur. Birbiri içine kapanan boşluklar ise üretim yönü veya geometri değişikliği gerektirebilir. Dosyayı teklif öncesinde inceletmek, görünüşte küçük bir ayrıntının süreye ve son işleme etkisini görmenizi sağlar.",
+        "title": "Geometri neden fiyatı değiştirir?"
       },
       {
-        "title": "Hangi detay gerçekten gerekli?",
-        "body": "Numunenin bir toplantıda görünüş anlatmak için mi, montaj kontrolü için mi kullanılacağını belirtin. Görünmeyecek bir alt yüzeyde kozmetik kalite aramak ya da yalnızca sunumda kullanılacak parça için çalışma ortamına yönelik gereksiz talepler eklemek kapsamı büyütebilir. Buna karşılık çalışan prototipte kritik ölçü veya malzemeyi yalnızca maliyet düşürmek için değiştirmek denemenin amacını bozabilir."
+        "body": "Numunenin bir toplantıda görünüş anlatmak için mi, montaj kontrolü için mi kullanılacağını belirtin. Görünmeyecek bir alt yüzeyde kozmetik kalite aramak ya da yalnızca sunumda kullanılacak parça için çalışma ortamına yönelik gereksiz talepler eklemek kapsamı büyütebilir. Buna karşılık çalışan prototipte kritik ölçü veya malzemeyi yalnızca maliyet düşürmek için değiştirmek denemenin amacını bozabilir.",
+        "title": "Hangi detay gerçekten gerekli?"
       },
       {
-        "title": "Karşılaştırılabilir teklif dosyası hazırlayın",
-        "body": "Tek bir revizyon klasörü oluşturun: model, varsa teknik resim, adet, kullanım açıklaması ve onay ölçütü. Teklife modelleme, montaj, bağlantı elemanları, son işlem ve teslimatın dâhil olup olmadığını sorun. “Bir adet ilk numune, onaydan sonra ayrı miktar” biçimindeki talep, bütün sayıyı test edilmemiş tasarımla sipariş etme riskini azaltır."
+        "body": "Tek bir revizyon klasörü oluşturun: model, varsa teknik resim, adet, kullanım açıklaması ve onay ölçütü. Teklife modelleme, montaj, bağlantı elemanları, son işlem ve teslimatın dâhil olup olmadığını sorun. “Bir adet ilk numune, onaydan sonra ayrı miktar” biçimindeki talep, bütün sayıyı test edilmemiş tasarımla sipariş etme riskini azaltır.",
+        "title": "Karşılaştırılabilir teklif dosyası hazırlayın"
+      },
+      {
+        "title": "Revizyon maliyetini dosya kararıyla azaltın",
+        "body": "Teklif öncesinde eski dosyaları ayırmak, görünmeyen yüzeylerin beklentisini sadeleştirmek ve ilk numunenin amacını belirlemek kapsamı daha okunur yapar. Bunun parasal karşılığı projeye göre değişir. Talep tablosunda zorunlu gereksinimleri ve değerlendirilebilecek seçenekleri ayrı belirtin; malzeme veya kritik ölçüyü yalnızca toplamı düşürmek için sessizce değiştirmeyin."
       }
     ],
     "faq": [
       {
-        "q": "Dosyam olmadan fiyat alabilir miyim?",
-        "a": "Fotoğraf, yaklaşık ölçü ve kullanım amacıyla ön kapsam görüşü alınabilir. Kesin üretim teklifi için geometrinin ve modelleme ihtiyacının netleşmesi gerekir."
+        "a": "Fotoğraf, yaklaşık ölçü ve kullanım amacıyla ön kapsam görüşü alınabilir. Kesin üretim teklifi için geometrinin ve modelleme ihtiyacının netleşmesi gerekir.",
+        "q": "Dosyam olmadan fiyat alabilir miyim?"
       },
       {
-        "q": "Çok adet her zaman daha ucuz mu?",
-        "a": "Parça başı hazırlık paylaşılabilir, ancak toplam üretim süresi, son işlem ve kontrol ihtiyacı devam eder. Adet etkisi dosya ve üretim düzenine göre değerlendirilir."
+        "a": "Parça başı hazırlık paylaşılabilir, ancak toplam üretim süresi, son işlem ve kontrol ihtiyacı devam eder. Adet etkisi dosya ve üretim düzenine göre değerlendirilir.",
+        "q": "Çok adet her zaman daha ucuz mu?"
       },
       {
-        "q": "Teklif tutarı neden dosya değişince güncellenir?",
-        "a": "Ölçü, duvar, destek ihtiyacı ve baskı yönü değişiklikleri üretim süresini veya malzeme kullanımını değiştirebilir. Yeni revizyon yeni kapsam olarak kontrol edilmelidir."
+        "a": "Ölçü, duvar, destek ihtiyacı ve baskı yönü değişiklikleri üretim süresini veya malzeme kullanımını değiştirebilir. Yeni revizyon yeni kapsam olarak kontrol edilmelidir.",
+        "q": "Teklif tutarı neden dosya değişince güncellenir?"
       }
     ],
+    "status": "published",
+    "city": "",
+    "district": "",
+    "neighborhood": "",
+    "service": "",
+    "local_context": "",
+    "logistics": "",
+    "evidence": "",
+    "reviewed_at": null,
+    "updated_at": "2026-10-22T23:14:10.616Z",
     "editorial": {
       "answer": "Prototip maliyeti; modelleme ve dosya hazırlığı, baskı süresi, malzeme, destek temizliği, son işlem ve doğrulama kapsamından oluşur. Aynı ağırlıktaki iki parça farklı süre ve işçilik gerektirebilir. Sağlıklı fiyat karşılaştırması için bütün tekliflerde aynı dosya revizyonu, adet ve teslim beklentisi kullanılmalıdır.",
       "takeaways": [
@@ -1151,41 +1181,102 @@
         "Kritik yüzeyler dışında gereksiz son işlemi azaltabilirsiniz."
       ],
       "comparison": {
-        "title": "Teklifte hangi kalem nerede oluşur?",
+        "title": "İlk numune ve tekrar sipariş",
         "columns": [
-          "Kalem",
+          "Başlık",
           "İlk numune",
-          "Tekrar üretim"
+          "Aynı revizyonun tekrarı"
         ],
         "rows": [
           [
             "Model hazırlığı",
-            "Mevcut dosyaya bağlı",
-            "Revizyon yoksa kapsam yeniden kontrol edilir"
+            "Eksik kararlar ve dosya kontrolü",
+            "Dosyanın değişmediği teyit edilir"
           ],
           [
-            "Baskı",
-            "Geometri ve ayarlara bağlı",
-            "Adet ve yerleşime bağlı"
+            "Üretim",
+            "Amaç ve ayarlar belirlenir",
+            "Adet ve yerleşim yeniden değerlendirilir"
           ],
           [
             "Son işlem",
-            "İstenen yüzeye bağlı",
-            "Her parça için değerlendirilir"
+            "Görünür yüzeyler tanımlanır",
+            "Her parçada gerekli işçilik sürer"
           ],
           [
-            "Kontrol",
-            "Kabul planı belirlenir",
-            "Belirlenen plana göre yürütülür"
+            "Kabul",
+            "Ölçüt ve karşı parça seçilir",
+            "Kabul edilmiş kapsam korunur"
           ]
         ]
       },
       "relatedPaths": [
         "/3d-baski",
         "/3d-modelleme",
-        "/rehber/3d-baski-mi-cnc-mi"
-      ]
+        "/rehber/3d-baski-mi-cnc-mi",
+        "/rehber/3d-baski-fiyatlandirma",
+        "/rehber/numune-ve-revizyon"
+      ],
+      "resources": [
+        {
+          "title": "Teknik talep tablosunu indirin",
+          "path": "/downloads/3dyanimda/teknik-talep.csv",
+          "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+        }
+      ],
+      "sources": [],
+      "media": {
+        "alt": "Hazırlık, üretim ve tamamlama başlıkları altında prototip maliyetini etkileyen dokuz kapsam girdisi.",
+        "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+        "width": 1200,
+        "height": 630
+      }
     },
+    "brand": "3dyanimda"
+  },
+  {
+    "path": "/rehber/3d-baski-mi-cnc-mi",
+    "kind": "guide",
+    "title": "Prototip için 3D baskı mı, CNC mi?",
+    "summary": "Yöntem seçimini parça geometrisi, malzeme, adet ve test amacı üzerinden yapın; ilk prototip ile nihai üretim için aynı yöntemi seçmek zorunda değilsiniz.",
+    "image": "/images/editorial/3dyanimda/rehber--3d-baski-mi-cnc-mi.png",
+    "sections": [
+      {
+        "body": "“Elime nasıl oturuyor?” ile “bu yük altında nasıl davranıyor?” farklı prototip sorularıdır. Ergonomi incelemesinde dış geometri yeterli olabilir; işlevsel denemede malzeme ve üretim yönü belirleyici hale gelir. İlk toplantıda prototipin cevaplaması gereken üç soruyu yazmak, gereğinden pahalı veya amaca uygun olmayan yöntemi seçmeyi önler.",
+        "title": "Önce test sorusunu yazın"
+      },
+      {
+        "body": "CNC işleme için takımın yüzeye erişmesi gerekir. Baskıda ise desteklerin yerleşimi ve sonradan temizlenmesi düşünülür. Bir yöntemde kolay olan kapalı veya derin bir ayrıntı diğerinde farklı kurgu isteyebilir. Parçayı bölmek, montaj eklemek ya da tasarımı sadeleştirmek gibi seçeneklerin kullanım üzerindeki etkisini dosya üzerinden değerlendirin.",
+        "title": "Geometriyi üretim erişimiyle karşılaştırın"
+      },
+      {
+        "body": "Aynı ailedeki malzemeler üretim biçimi ve ürün sınıfına göre farklı davranabilir. Katmanlı imalatla üretilen bir numunenin bütün yönlerde aynı performansı verdiğini varsaymayın. Yük yönünü, sıcaklığı, ortamı ve kabul kriterini paylaşın. Testin sonucu yalnızca denenmiş malzeme, geometri ve koşullar için anlamlıdır.",
+        "title": "Malzeme adı tek başına eşdeğerlik değildir"
+      },
+      {
+        "body": "İlk aşamada geometri ve montajı, ikinci aşamada gerekli işlevi doğrulamak bazı projelerde daha kontrollü ilerleme sağlar. Ancak ek numune ve teslim sürelerini bütçeye dâhil edin. Farklı yöntemlerle hazırlanmış teklifleri kıyaslarken dosya revizyonu, yüzey işlemi ve kontrol kapsamının aynı olduğundan emin olun.",
+        "title": "İki aşamalı prototip planı kurun"
+      },
+      {
+        "title": "İlk geometriyi ve nihai görevi ayrı değerlendirin",
+        "body": "Bir tutucu gövdenin eldeki yerleşimini görmek için hazırlanan numune ile çalışma koşullarındaki son parçanın gereksinimleri farklı olabilir. Teklif görüşmesine iki hedefi de yazın: ilk denemede cevaplanacak soru ve nihai parçanın koşulları. CNC, SLA veya SLS gibi yöntemleri kıyaslama tablosunda görmek bu süreçlerin tamamının aynı atölyede sunulduğunu göstermez; uygun yöntem ve tedarik kapsamı ayrıca teyit edilir."
+      }
+    ],
+    "faq": [
+      {
+        "a": "Geometri, malzeme, adet ve hazırlık ihtiyacı bilinmeden genel bir fiyat sıralaması yapılamaz. Aynı kullanım hedefi için kapsamı eşitlenmiş teklifler karşılaştırılmalıdır.",
+        "q": "Hangi yöntem daha ucuz?"
+      },
+      {
+        "a": "Görünüş veya montaj açısından temsil edebilir. Farklı malzeme ve üretim yöntemindeki seri ürünün mekanik davranışını tek başına doğrulamaz.",
+        "q": "3D baskı numunesi seri ürünü temsil eder mi?"
+      },
+      {
+        "a": "Üretim planı uygunsa farklı parçalar veya revizyonlar için ayrı yöntemler değerlendirilebilir. Montaj arayüzleri ve teslim sorumlulukları birlikte tanımlanmalıdır.",
+        "q": "İki yöntemi bir projede kullanabilir miyim?"
+      }
+    ],
+    "status": "published",
     "city": "",
     "district": "",
     "neighborhood": "",
@@ -1194,48 +1285,7 @@
     "logistics": "",
     "evidence": "",
     "reviewed_at": null,
-    "updated_at": "2026-10-06T15:00:00Z"
-  },
-  {
-    "brand": "3dyanimda",
-    "path": "/rehber/3d-baski-mi-cnc-mi",
-    "title": "Prototip için 3D baskı mı, CNC mi?",
-    "summary": "Yöntem seçimini parça geometrisi, malzeme, adet ve test amacı üzerinden yapın; ilk prototip ile nihai üretim için aynı yöntemi seçmek zorunda değilsiniz.",
-    "kind": "guide",
-    "image": "",
-    "status": "published",
-    "sections": [
-      {
-        "title": "Önce test sorusunu yazın",
-        "body": "“Elime nasıl oturuyor?” ile “bu yük altında nasıl davranıyor?” farklı prototip sorularıdır. Ergonomi incelemesinde dış geometri yeterli olabilir; işlevsel denemede malzeme ve üretim yönü belirleyici hale gelir. İlk toplantıda prototipin cevaplaması gereken üç soruyu yazmak, gereğinden pahalı veya amaca uygun olmayan yöntemi seçmeyi önler."
-      },
-      {
-        "title": "Geometriyi üretim erişimiyle karşılaştırın",
-        "body": "CNC işleme için takımın yüzeye erişmesi gerekir. Baskıda ise desteklerin yerleşimi ve sonradan temizlenmesi düşünülür. Bir yöntemde kolay olan kapalı veya derin bir ayrıntı diğerinde farklı kurgu isteyebilir. Parçayı bölmek, montaj eklemek ya da tasarımı sadeleştirmek gibi seçeneklerin kullanım üzerindeki etkisini dosya üzerinden değerlendirin."
-      },
-      {
-        "title": "Malzeme adı tek başına eşdeğerlik değildir",
-        "body": "Aynı ailedeki malzemeler üretim biçimi ve ürün sınıfına göre farklı davranabilir. Katmanlı imalatla üretilen bir numunenin bütün yönlerde aynı performansı verdiğini varsaymayın. Yük yönünü, sıcaklığı, ortamı ve kabul kriterini paylaşın. Testin sonucu yalnızca denenmiş malzeme, geometri ve koşullar için anlamlıdır."
-      },
-      {
-        "title": "İki aşamalı prototip planı kurun",
-        "body": "İlk aşamada geometri ve montajı, ikinci aşamada gerekli işlevi doğrulamak bazı projelerde daha kontrollü ilerleme sağlar. Ancak ek numune ve teslim sürelerini bütçeye dâhil edin. Farklı yöntemlerle hazırlanmış teklifleri kıyaslarken dosya revizyonu, yüzey işlemi ve kontrol kapsamının aynı olduğundan emin olun."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Hangi yöntem daha ucuz?",
-        "a": "Geometri, malzeme, adet ve hazırlık ihtiyacı bilinmeden genel bir fiyat sıralaması yapılamaz. Aynı kullanım hedefi için kapsamı eşitlenmiş teklifler karşılaştırılmalıdır."
-      },
-      {
-        "q": "3D baskı numunesi seri ürünü temsil eder mi?",
-        "a": "Görünüş veya montaj açısından temsil edebilir. Farklı malzeme ve üretim yöntemindeki seri ürünün mekanik davranışını tek başına doğrulamaz."
-      },
-      {
-        "q": "İki yöntemi bir projede kullanabilir miyim?",
-        "a": "Üretim planı uygunsa farklı parçalar veya revizyonlar için ayrı yöntemler değerlendirilebilir. Montaj arayüzleri ve teslim sorumlulukları birlikte tanımlanmalıdır."
-      }
-    ],
+    "updated_at": "2026-10-22T23:14:10.616Z",
     "editorial": {
       "answer": "3D baskı ile CNC arasında seçim yaparken parçanın neyi kanıtlayacağını belirleyin. Görünüş ve ilk montaj denemesinde hızlı tasarım değişikliği ön plandayken, belirli malzeme ve hassas işlenmiş yüzey ihtiyacı farklı yöntem gerektirebilir. Karar yalnızca birim fiyatla değil, hazırlık, test ve revizyon toplamıyla verilmelidir.",
       "takeaways": [
@@ -1244,50 +1294,57 @@
         "Üretim yöntemini değiştirirken eski test sonucunu doğrudan genellemeyin."
       ],
       "comparison": {
-        "title": "Seçim görüşmesine götürülecek sorular",
+        "title": "Üretim yaklaşımını karşılaştırın",
         "columns": [
           "Başlık",
-          "3D baskı değerlendirmesi",
-          "CNC değerlendirmesi"
+          "Katmanlı imalat",
+          "Talaşlı imalat"
         ],
         "rows": [
           [
             "Geometri",
-            "Destek ve katman yönü",
+            "Katman, destek ve erişim",
             "Takım erişimi ve bağlama"
           ],
           [
+            "Malzeme",
+            "Belirli baskı malzemesinin verisi",
+            "Belirli stok malzemenin verisi"
+          ],
+          [
             "Revizyon",
-            "Yeni baskı düzeni",
+            "Yeni dosya ve üretim düzeni",
             "Program ve bağlama değişikliği"
           ],
           [
-            "Malzeme",
-            "Yazdırılabilir malzeme ve yön etkisi",
-            "İşlenebilir stok malzeme"
-          ],
-          [
-            "Son kontrol",
-            "Kritik ölçü ve yüzey denemesi",
-            "Kritik ölçü ve yüzey denemesi"
+            "Kabul",
+            "Kritik ölçü ve görev testi",
+            "Kritik ölçü ve görev testi"
           ]
         ]
       },
       "relatedPaths": [
         "/3d-baski",
         "/rehber/prototip-maliyetini-ne-belirler",
-        "/cozumler/urun-gelistirme-prototipleri"
-      ]
+        "/cozumler/urun-gelistirme-prototipleri",
+        "/rehber/fdm-sla-sls-karsilastirma"
+      ],
+      "resources": [
+        {
+          "title": "Teknik talep tablosunu indirin",
+          "path": "/downloads/3dyanimda/teknik-talep.csv",
+          "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+        }
+      ],
+      "sources": [],
+      "media": {
+        "alt": "Katman ekleyen 3D baskı ile stok malzemeden talaş kaldıran CNC şemaları; destek ve takım erişimi farkı.",
+        "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+        "width": 1200,
+        "height": 630
+      }
     },
-    "city": "",
-    "district": "",
-    "neighborhood": "",
-    "service": "",
-    "local_context": "",
-    "logistics": "",
-    "evidence": "",
-    "reviewed_at": null,
-    "updated_at": "2026-10-06T15:00:00Z"
+    "brand": "3dyanimda"
   },
   {
     "brand": "3dsanayi",

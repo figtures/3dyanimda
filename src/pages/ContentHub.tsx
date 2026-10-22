@@ -69,8 +69,11 @@ export default function ContentHub() {
               {p.image && (
                 <img
                   src={p.image}
-                  alt={p.title + " temsili görseli"}
+                  alt={p.editorial?.media?.alt || p.title + " temsili görseli"}
+                  width={p.editorial?.media?.width}
+                  height={p.editorial?.media?.height}
                   loading="lazy"
+                  decoding="async"
                 />
               )}
               <span className="brand-eyebrow">

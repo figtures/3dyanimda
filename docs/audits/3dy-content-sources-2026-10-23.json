@@ -1,0 +1,48 @@
+{
+  "brand": "3dyanimda",
+  "reviewedOn": "2026-10-23",
+  "scope": "Primary-source checks supporting new general educational content, not the operator's equipment, stock, certifications, tolerances, pricing, customer work or production results.",
+  "sources": [
+    {
+      "url": "https://formlabs.com/blog/fdm-vs-sla-vs-sls-how-to-choose-the-right-3d-printing-technology/",
+      "publisher": "Formlabs",
+      "supports": ["General distinction between filament extrusion, photopolymer curing and powder sintering", "Different material and post-processing considerations"],
+      "usedBy": ["/rehber/fdm-sla-sls-karsilastirma"],
+      "verification": "Opened and searched primary manufacturer article. No operator capability or numerical performance assertion inferred."
+    },
+    {
+      "url": "https://help.prusa3d.com/article/asa_1809",
+      "publisher": "Prusa Research",
+      "supports": ["ASA as a UV-resistant outdoor material candidate", "Printing preparation and shape-stability considerations"],
+      "usedBy": ["/rehber/asa-pa-cf-karsilastirma", "/rehber/malzeme-secim-sorulari"],
+      "verification": "Opened and searched primary manufacturer material guide. No generic safe operating temperature or product lifetime inferred."
+    },
+    {
+      "url": "https://help.prusa3d.com/article/polyamide-nylon_167188",
+      "publisher": "Prusa Research",
+      "supports": ["Moisture management for polyamide", "Need to evaluate the particular material product"],
+      "usedBy": ["/rehber/asa-pa-cf-karsilastirma"],
+      "verification": "Opened and searched primary manufacturer material guide. No universal PA-CF performance ranking inferred."
+    },
+    {
+      "url": "https://help.prusa3d.com/article/composite-materials-filled-with-carbon-kevlar-or-glass_167387",
+      "publisher": "Prusa Research",
+      "supports": ["Fiber additives alter mechanical behavior rather than improving every property", "Abrasive fiber-filled filament requires suitable nozzle hardware"],
+      "usedBy": ["/rehber/asa-pa-cf-karsilastirma"],
+      "verification": "Opened primary article; Description and Use a hardened nozzle sections support these bounded statements."
+    },
+    {
+      "url": "https://www.artec3d.com/learning-center/accuracy-precision-resolution",
+      "publisher": "Artec 3D",
+      "supports": ["Resolution, accuracy and repeatability are different concepts", "A dense surface mesh is not by itself evidence of measurement accuracy"],
+      "usedBy": ["/rehber/3d-tarama-kalite-kontrol"],
+      "verification": "Opened and searched primary manufacturer explanation. No CMM ownership, accreditation or achievable tolerance inferred."
+    }
+  ],
+  "authoredExamples": {
+    "type": "Original instructional examples, not represented as completed customer projects",
+    "downloads": ["/downloads/3dyanimda/teknik-talep.csv", "/downloads/3dyanimda/numune-kabul.csv", "/downloads/3dyanimda/referans-kup-20mm.stl"],
+    "stlValidation": "Automated test verifies 12 triangles, every undirected edge shared twice, axis bounds 0–20 and positive signed volume 8000 coordinate units cubed. The guide explicitly asks the user to interpret the unit as millimeters."
+  },
+  "stillRequiresOperatorEvidence": ["Historical first publication timestamps", "Actual customer project permissions and outcome records", "Current numeric prices and production lead times", "Equipment, certified measurement and achievable tolerance evidence", "Exact stocked polymer technical datasheets and physical surface samples", "Real tool-workflow screenshots rather than explanatory diagrams"]
+}

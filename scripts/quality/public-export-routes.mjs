@@ -25,7 +25,13 @@ export function publicExportRoutes({landing,pages,posts,seo,redirects,portfolio,
   const url='/'+p.slug.replace(/^\//,'');
   if(!p.meta?.noindex&&!/^\/(bolgeler|istanbul)(\/|$)/.test(url))routes.set(url,p.updated_at);
  }
- for(const p of posts)routes.set('/blog/'+p.slug,p.updated_at);
+ // The API normally supplies published, date-eligible posts. Preserve that
+ // contract if a caller passes a broader snapshot, and never export an empty hub.
+ const visiblePosts=enabled('blog')?posts.filter(p=>p.published!==false&&(!p.published_at||Date.parse(p.published_at)<=Date.now())):[];
+ if(visiblePosts.length){
+  routes.set('/blog',null);
+  for(const p of visiblePosts)routes.set('/blog/'+p.slug,p.updated_at);
+ } else routes.delete('/blog');
  for(const p of seo.filter(p=>p.noindex))routes.delete(p.path);
  for(const url of legalRoutes)routes.set(url,null);
  const redirectMap=compileRedirects([...legacyRedirects,...redirects],new Set(routes.keys()));

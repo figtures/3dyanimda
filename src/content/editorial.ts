@@ -1,6 +1,18 @@
 import { z } from "zod";
 import { answerUnitSchema } from './answer-unit';
 export const editorialSchema = z.object({
+  publishedAt: z.string().datetime({offset:true}).optional(),
+  media: z.object({
+    alt:z.string().trim().min(1).max(300),
+    caption:z.string().trim().max(600).optional(),
+    width:z.number().int().positive().max(16000),
+    height:z.number().int().positive().max(16000),
+  }).optional(),
+  resources:z.array(z.object({
+    title:z.string().trim().min(1).max(150),
+    description:z.string().trim().max(400).optional(),
+    path:z.string().regex(/^\/(?!\/)[a-z0-9/._-]+$/).refine(value=>!/^\/(admin|studio|api|auth)(\/|$)/.test(value)&&!value.includes('..'),"Bağlantı herkese açık bir içerik veya dosya yolu olmalı."),
+  })).max(6).optional(),
   answerUnit:answerUnitSchema.optional(),
   answer: z.string().max(1600).refine(value=>value.trim().split(/\s+/u).filter(Boolean).length<=120,"Doğrudan cevap en fazla 120 kelime olmalı; ayrıntıları ayrı bölümlere taşıyın.").default(""),
   takeaways: z.array(z.string().max(500)).max(8).default([]),
