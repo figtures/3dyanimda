@@ -633,8 +633,8 @@
     },
     {
       "path": "src/pages/ContentHub.tsx",
-      "sha256": "9fc6e2f0f1d3782e55375e6d3b749102ebcd7047c5683410c0479fef923a84d2",
-      "bytes": 4882
+      "sha256": "5679b67b25ef7f79b372441eb563a54d5fc5c96c5c60d82ce25745397f3afbb3",
+      "bytes": 5050
     },
     {
       "path": "src/pages/ContentPage.tsx",
@@ -1069,7 +1069,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-22T23:14:11.164Z",
+  "checksumsRefreshedAt": "2026-10-22T23:29:20.975Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

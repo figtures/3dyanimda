@@ -4,7 +4,7 @@
   "origin": "https://3dyanimda.com",
   "date": "2026-10-23",
   "updatedAt": "2026-10-23",
-  "stage": "cms-merged-source-prepared-awaiting-deployment-and-live-acceptance",
+  "stage": "cms-reviewed-ci-in-progress-awaiting-cloudflare-deployment-and-live-acceptance",
   "progressUpdates": {
     "cmsMergeVerifiedByReleaseOwner": true,
     "cmsPublishedLandingPages": 204,
@@ -13,15 +13,20 @@
     "cmsMetadataOverrides": 103,
     "cmsMatchingContentReviews": 22,
     "otherThreeBrandFingerprintsUnchanged": true,
-    "sourceAndAssetUpload": "in-progress-at-tracker-update",
+    "sourceAndAssetUpload": "source-and-assets-committed-to-github-pull-request",
     "liveDeploymentVerified": false,
-    "analyticsConnector": "Windsor installation confirmed; executable Windsor namespace/tools not exposed after discovery. Account metrics cannot yet be queried; do not request reinstall."
+    "analyticsConnector": "Windsor installation confirmed; executable Windsor namespace/tools not exposed after discovery. Account metrics cannot yet be queried; do not request reinstall.",
+    "deploymentProvider": "GitHub pull request and Cloudflare deployment",
+    "pullRequestUrl": "https://github.com/figtures/3dyanimda/pull/14",
+    "lastReportedPullRequestHead": "9929f76f577b7adc7b93b6b83f50020104851aeb",
+    "ciStatus": "in-progress",
+    "ciFollowUp": "Two stale-test fixes are in progress; no final passing CI or deployment result is recorded yet."
   },
   "sourceWorkbook": "3d-yanimda-seo-gap-audit-2026-10-22(1).xlsx",
   "sourceExtraction": "seo-audit-input.json",
   "scope": "Yalnız 3dyanimda. Özgün kaynak satırları korunur; güncel değerlendirme ayrıdır. Rakip/diğer markalar değiştirilmez.",
   "limits": [
-    "Yayın öncesi anlık görüntü; root son CMS/yayın/QA sonuçlarıyla güncellemelidir.",
+    "CMS birleşimi ve 22 eşleşen içerik incelemesi doğrulandı. GitHub PR #14 CI sürecinde; iki eski test beklentisinin düzeltmesi sürüyor. Cloudflare yayın ve yeni sürüm canlı kabul kanıtı henüz yok.",
     "Yerel test/payload canlı düzeltme değildir; başlangıç canlı taraması yeni sürüm sonucu değildir.",
     "Gerçek tarih/saat/konum/profil/uzman/fiyat/üretim/izin kanıtı uydurulmaz.",
     "GSC/GA4/GBP/WAF erişimi kurulu/yok varsayılmaz; doğru hesap ve gerçek veri ayrı doğrulanır.",
@@ -35,7 +40,7 @@
     },
     "implemented-awaiting-deploy": {
       "label": "Hazır; yayın/doğrulama bekliyor",
-      "description": "Kaynak/payload hazır; CMS merge veya canlı kabul tamamlandı değildir."
+      "description": "İlgili kod/varlık hazır; bu içerik partisinin CMS birleşimi doğrulandı. CI, Cloudflare yayını ve bulguya özgü canlı kabul henüz tamamlandı sayılmaz."
     },
     "needs-facts": {
       "label": "Gerçek bilgi/kanıt bekliyor",
@@ -61,7 +66,8 @@
   "dependencyCatalog": {
     "D_DEPLOY": {
       "label": "D_DEPLOY",
-      "description": "Hedef 3dyanimda build/export/yayını; diğer marka kapsamı korunur."
+      "description": "GitHub PR #14 için son başlıkta CI geçişi, birleştirme ve Cloudflare yayın kimliği/commit doğrulaması; diğer marka kapsamı korunur.",
+      "currentState": "pending-ci-and-cloudflare-evidence"
     },
     "D_POST_RELEASE": {
       "label": "D_POST_RELEASE",
@@ -69,11 +75,13 @@
     },
     "D_CONTENT_MERGE": {
       "label": "D_CONTENT_MERGE",
-      "description": "Güncel CMS kaydına merge; ilgisiz alan/tarih/review korunur."
+      "description": "Bu parti CMS'de doğrulandı: 204 yayımlanmış landing kaydı, 17 rehber, 21 medya, 103 description override; diğer üç markanın fingerprint'i değişmedi. Sonraki değişikliklerde güncel kayıt birleştirmesi yine gerekir.",
+      "currentState": "verified-for-current-batch"
     },
     "D_CONTENT_REVIEW": {
       "label": "D_CONTENT_REVIEW",
-      "description": "Teknik doğruluk/kapsam/kaynak/özgün fayda/yayın onayı."
+      "description": "Bu partide 22 eşleşen içerik incelemesi doğrulandı. İlerideki gerçek vaka/yerel genişleme veya yeni iddialar için teknik kapsam, kaynak ve onay şartı devam eder.",
+      "currentState": "verified-for-current-22-records-future-claims-still-conditional"
     },
     "D_BUSINESS_FACTS": {
       "label": "D_BUSINESS_FACTS",
@@ -161,7 +169,8 @@
     },
     "D_IMAGE_DIMENSIONS": {
       "label": "D_IMAGE_DIMENSIONS",
-      "description": "/hizmetler üç mevcut görsel ölçü/aspect-ratio kontrolü; yeni medya hazır."
+      "description": "ContentHub için gerçek media width/height/alt ve küçük sorgu projeksiyonu kaynakta tamamlandı; 5 odaklı test geçti. Yayın sonrası görünüm/CLS kontrolü ayrı bekliyor.",
+      "currentState": "source-and-five-focused-tests-complete-live-render-pending"
     },
     "D_SOCIAL_PREVIEW": {
       "label": "D_SOCIAL_PREVIEW",
@@ -348,6 +357,16 @@
         "docs/audits/seo-critical-css-comparison-2026-10-22.json"
       ]
     },
+    "hubMedia": {
+      "label": "ContentHub görsel ölçü ve alt doğrulaması",
+      "description": "ContentHub exact media dimensions/alt, small projection; 5 focused tests passed before deployment.",
+      "paths": [
+        "src/pages/ContentHub.tsx",
+        "src/pages/ContentHub.media.test.tsx",
+        "src/content/queries.ts",
+        "src/content/queries.media.test.ts"
+      ]
+    },
     "criticalCss": {
       "label": "criticalCss",
       "description": "scripts/quality/critical-css.mjs; scripts/quality/critical-css.test.mjs; scripts/quality/critical-css-selection.test.mjs",
@@ -413,7 +432,37 @@
       "allOriginalCompetitorMappingsPreserved": true,
       "findingsWithoutWorkstream": []
     },
-    "deploymentVerified": false
+    "deploymentVerified": false,
+    "remainingDependencyIds": [
+      "D_SOCIAL",
+      "D_DEPLOY",
+      "D_GBP",
+      "D_BUSINESS_FACTS",
+      "D_CAPABILITY",
+      "D_GSC",
+      "D_OBSERVATION",
+      "D_POST_RELEASE",
+      "D_SOCIAL_PREVIEW",
+      "D_PUBLICATION_DATES",
+      "D_CASES",
+      "D_EXPERT",
+      "D_TAXONOMY",
+      "D_PRICES",
+      "D_WORKFLOW_EVIDENCE",
+      "D_DEMAND",
+      "D_LOCAL_FACTS",
+      "D_WAF",
+      "D_WORKSHOP_PHOTOS",
+      "D_MATERIAL_FACTS",
+      "D_ANALYTICS",
+      "D_FIELD_PERFORMANCE",
+      "D_RENDER_QA",
+      "D_PARTNERS"
+    ],
+    "currentBatchSatisfiedDependencyIds": [
+      "D_CONTENT_MERGE"
+    ],
+    "currentBatchReviewedRecords": 22
   },
   "findings": [
     {
@@ -668,7 +717,7 @@
         "evidenceUrls": "https://3dyaninda.com/oto-yedek-parca-3d-uretim\nhttps://3dyanimda.com/sektorler/otomotiv"
       },
       "currentAssessment": "Otomotiv sayfası mevcut; ayrı yedek parça talep sayfası başlangıçta yok.",
-      "implementation": "/cozumler/yedek-parca-uretimi taslağı hazır; dosya/numune, teknik kapsam ve güvenlik sınırları açık. Gerçek vaka iddiası eklenmedi.",
+      "implementation": "/cozumler/yedek-parca-uretimi içeriği CMS'ye birleştirildi; dosya/numune, teknik kapsam ve güvenlik sınırları açık. Canlı yayın kabulü bekliyor; gerçek müşteri vaka kanıtı eklenmedi.",
       "acceptance": "Hizmetin gerçekten sunulduğu doğrulanır; onaylı ana sayfa yayımlanır; kritik parçalar için yetkinlik/uygunluk iddiası uydurulmaz.",
       "status": "conditional",
       "dependencies": [
@@ -881,7 +930,7 @@
         "evidenceUrls": "https://3dyanimda.com/bolgeler/istanbul/atasehir/3d-baski"
       },
       "currentAssessment": "103 açıklama 180 karakteri aşıyor; bu kesin SEO hatası veya ceza değildir.",
-      "implementation": "103 etkilenen rota için 103 benzersiz description_tr override hazır; 152–171 karakter; otomatik kesin uzunluk eşiği/ceza iddiası değil, snippet düzenlemesi.",
+      "implementation": "103 rota için 152–171 karakter aralığında 103 benzersiz description_tr override CMS'de doğrulandı. Bu snippet düzenlemesidir; uzunluk cezası veya sıralama artışı iddiası değildir.",
       "acceptance": "CMS merge sonrası açıklamalar benzersiz ve ana fayda önde; index/canonical değişmez; gerçek CTR etkisi 28 günlük veriyle ayrıca ölçülür.",
       "status": "implemented-awaiting-deploy",
       "dependencies": [
@@ -1623,7 +1672,8 @@
         "W06",
         "W15",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F040",
@@ -1806,7 +1856,8 @@
         "W06",
         "W15",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F046",
@@ -1840,7 +1891,8 @@
         "W06",
         "W15",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F047",
@@ -2149,7 +2201,8 @@
       ],
       "workstreamIds": [
         "W09"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F057",
@@ -2277,7 +2330,8 @@
       ],
       "workstreamIds": [
         "W15"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F061",
@@ -2373,7 +2427,8 @@
       "workstreamIds": [
         "W14",
         "W15"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F064",
@@ -2403,7 +2458,8 @@
       ],
       "workstreamIds": [
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F065",
@@ -2437,7 +2493,8 @@
         "W05",
         "W15",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F066",
@@ -2530,7 +2587,8 @@
         "W10",
         "W14",
         "W15"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F069",
@@ -2563,7 +2621,8 @@
         "W10",
         "W14",
         "W15"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F070",
@@ -2622,7 +2681,8 @@
       "workstreamIds": [
         "W15",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F072",
@@ -2700,7 +2760,7 @@
         "evidenceUrls": "https://3dyaninda.com/istanbul/atasehir/3d-yedek-parca\nhttps://3dyanimda.com/bolgeler/istanbul/atasehir"
       },
       "currentAssessment": "Rakipte 39 yerel yedek parça URL'si olması 39 yeni sayfa gerektirmez.",
-      "implementation": "Tüm 39 eşleme conditional-no-automatic-clone; önce tek ana yedek parça taslağı hazır.",
+      "implementation": "39 yerel yedek parça eşlemesi conditional-no-automatic-clone olarak tutuldu. Tek ana yedek parça içeriği CMS'de; yeni yerel seri üretilmedi ve canlı kabul bekliyor.",
       "acceptance": "Ana hizmet onayı + gerçek yerel talep + özgün teslim/fayda kanıtı olan sınırlı sayfalar seçilir; toplu klon yayınlanmaz.",
       "status": "conditional",
       "dependencies": [
@@ -2949,7 +3009,7 @@
         "evidenceUrls": "Repo/CMS ve içerik onayı gerekli"
       },
       "currentAssessment": "İçerik özgünlük/onay/yayın kapısı repo içinde mevcut; 800 kayıt mevcut denetimi geçti.",
-      "implementation": "Yeni taslaklar aynı doğrulama/review hash kapısına tabi; bypass veya otomatik onay uygulanmadı.",
+      "implementation": "Bu partideki 22 içerik için eşleşen inceleme kayıtları CMS'de doğrulandı; yayın kapısı korunuyor. Yeni/gelecekteki iddialar için aynı kalite ve onay koşulları geçerli.",
       "acceptance": "Gerçek kapsam, kaynak, benzersiz değer, canonical/link ve içerik onayı geçmeden yeni sayfa yayımlanmaz.",
       "status": "done-existing",
       "dependencies": [
@@ -3320,7 +3380,8 @@
       "workstreamIds": [
         "W15",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F095",
@@ -3351,7 +3412,8 @@
       ],
       "workstreamIds": [
         "W14"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F096",
@@ -3386,7 +3448,8 @@
         "W15",
         "W17",
         "W19"
-      ]
+      ],
+      "currentBatchCmsState": "verified-in-current-cms-merge-live-deployment-pending"
     },
     {
       "id": "F097",
@@ -3500,19 +3563,19 @@
         "action": "CSS aspect-ratio veya ölçülerle ayrılan alanı doğrulayın; CLS ölçümüyle karar verin.",
         "evidenceUrls": "https://3dyanimda.com/"
       },
-      "currentAssessment": "Eski ana sayfa uyarısı güncel değil: 5/5 ana sayfa img boyutlu. /hizmetler üç ana görselinde boyut eksiği ayrıca saptandı.",
-      "implementation": "Yeni 21 editoryal görsel için gerçek width/height ve responsive render hazır; /hizmetler mevcut üç görselinin son düzeltmesi yayın kabulünde ayrıca kontrol edilmeli.",
-      "acceptance": "Ana sayfa/hizmetler/rehber görselleri ölçü veya aspect-ratio ile yer ayırır; gerçek CLS ayrıca ölçülür.",
+      "currentAssessment": "Eski ana sayfa uyarısı güncel değil: 5/5 ana sayfa img boyutlu. /hizmetler üç ana görselindeki ölçü açığı ContentHub kaynak düzeltmesiyle ele alındı; yeni sürüm canlı doğrulaması henüz yapılmadı.",
+      "implementation": "ContentHub gerçek media width/height ve alt değerlerini küçük sorgu projeksiyonuyla alıyor; 5 odaklı test geçti. Yeni 21 editoryal görselin gerçek ölçü ve responsive render desteği de hazır.",
+      "acceptance": "Yayın sonrasında ana sayfa/hizmetler/rehber görselleri gerçek ölçü veya aspect-ratio ile yer ayırır ve uygun alt taşır; ilk görünüm regresyonu ve gerçek CLS ayrıca ölçülür.",
       "status": "implemented-awaiting-deploy",
       "dependencies": [
-        "D_IMAGE_DIMENSIONS",
         "D_DEPLOY",
         "D_RENDER_QA"
       ],
       "evidence": [
         "live",
         "media",
-        "content"
+        "content",
+        "hubMedia"
       ],
       "workstreamIds": [
         "W15",
@@ -3953,7 +4016,7 @@
         "status": "Planlandı"
       },
       "currentAssessment": "Görseller ve tarih alanları hazır; 13 rehberin tarihsel ilk yayını kanıt gerektiriyor.",
-      "implementation": "Article/görünür metin/OG eşleşmesi; ilk blog yayın tarihini koruma; bugüne fallback yok.",
+      "implementation": "Görsel/tarih alanı desteği ve 21 medya kaydı CMS/kaynakta hazır; 13 eski rehberin kanıtlı ilk yayın tarihleri ayrı açık. İlk blog tarihini koruma ve bugüne fallback kaldırma uygulandı.",
       "acceptance": "13 rehberde gerçek yayın tarihi, değişiklik tarihi ve ilgili görsel tutarlı üretildi.",
       "status": "needs-facts",
       "dependencies": [
@@ -3975,7 +4038,8 @@
         "media",
         "seo",
         "schema"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W06",
@@ -3991,7 +4055,7 @@
         "status": "Planlandı"
       },
       "currentAssessment": "21 özgün konu görseli ve tek görsel seçimi hazır; canlı başlangıç hâlâ ortak fallback.",
-      "implementation": "3 hizmet+13 mevcut rehber+4 yeni rehber+1 çözüm için 1200×630 PNG/SVG; dosya decode ve görsel QA geçti.",
+      "implementation": "3 hizmet+13 mevcut rehber+4 yeni rehber+1 çözüm için 21 adet 1200×630 PNG/SVG hazır ve CMS medya kaydı doğrulandı; dosya decode/görsel QA geçti; canlı erişim bekliyor.",
       "acceptance": "Önce 3 hizmet ve 13 rehber; 1200×630, okunaklı marka, doğru URL/tür/alt; uygun marka fallback.",
       "status": "implemented-awaiting-deploy",
       "dependencies": [
@@ -4026,7 +4090,8 @@
         "blog",
         "tracker",
         "schema"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W07",
@@ -4127,7 +4192,8 @@
       ],
       "evidence": [
         "content"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W10",
@@ -4159,7 +4225,8 @@
         "content",
         "media",
         "local"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W11",
@@ -4174,7 +4241,7 @@
         "dependency": "İşletmenin gerçekten verdiği hizmet",
         "status": "Planlandı"
       },
-      "currentAssessment": "Ana yedek parça sayfası taslağı hazır; gerçek hizmet ve sınırları işletme onayına tabi.",
+      "currentAssessment": "Ana yedek parça içeriği CMS'ye birleştirildi; Cloudflare yayın/canlı kabul bekleniyor. Gerçek müşteri vaka ve özel kapasite iddiaları ayrı kanıt gerektirir.",
       "implementation": "Tek ana çözüm sayfası seçildi; yerel seri sayfa üretimi yok.",
       "acceptance": "Sunuluyorsa ayrı talep niyeti, dosya/numune süreci, gerçek örnek ve sınırlar.",
       "status": "conditional",
@@ -4192,7 +4259,8 @@
       "evidence": [
         "tracker",
         "content"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W12",
@@ -4247,7 +4315,7 @@
         "dependency": "Hedef repo ve tarayıcı test ortamı",
         "status": "Planlandı"
       },
-      "currentAssessment": "Head ve hata durumları kaynak/test düzeyinde geliştirildi; canlı yeni sürüm QA bekliyor.",
+      "currentAssessment": "Head/hata/metadata uygulaması ve 103 CMS açıklaması hazır. PR #14 CI sürecinde; iki eski test beklentisi düzeltiliyor. Yeni sürüm canlı QA henüz yapılmadı.",
       "implementation": "Seo/BlogPost/export testleri, metadata kaynak önceliği ve 103 snippet önerisi hazır.",
       "acceptance": "Doğrudan HTTP + hydration + rota geçişi: bir title/canonical, doğru OG/schema, doğru 404.",
       "status": "implemented-awaiting-deploy",
@@ -4339,7 +4407,8 @@
         "tracker",
         "media",
         "local"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W15",
@@ -4389,7 +4458,8 @@
         "local",
         "tracker",
         "analytics"
-      ]
+      ],
+      "currentBatchCmsState": "verified-current-merge-and-22-content-reviews-live-deployment-pending"
     },
     {
       "id": "W16",
@@ -4527,7 +4597,7 @@
         "dependency": "İlgili geliştirmelerin yayını",
         "status": "Planlandı"
       },
-      "currentAssessment": "Başlangıç denetimi tamam; yeni sürüm henüz canlı kabul edilmedi.",
+      "currentAssessment": "225 URL'lik başlangıç denetimi tamam; yeni içerik partisi CMS'de doğrulandı. Yeni GitHub/Cloudflare sürümünün yayın ve canlı denetim kanıtı bekleniyor.",
       "implementation": "Yeniden çalıştırılabilir sitemap/head/HTML/link/image denetimi hazır.",
       "acceptance": "200, self-canonical, doğru index durumu, erişilir görsel ve sitemap tutarlılığı; gerekirse yeniden tarama talebi.",
       "status": "awaiting-observation",
@@ -4702,7 +4772,7 @@
       "priority": "P1",
       "recommendedDisposition": "new-selected",
       "selectedTargetUrl": "https://3dyanimda.com/cozumler/yedek-parca-uretimi",
-      "currentAssessment": "Seçili özgün taslak hazır; CMS onay/yayın ve hizmet koşulları geçmeden canlı tamamlandı sayılmaz.",
+      "currentAssessment": "Seçili özgün içerik CMS'ye birleştirildi ve mevcut partinin inceleme kayıtları doğrulandı; Cloudflare yayın/canlı kabul bekliyor. Gerçek vaka/özel hizmet iddialarının kanıt koşulları ayrıca korunur.",
       "status": "conditional",
       "acceptance": "Onaylı özgün içerik; 200/canonical/index/sitemap/görsel/kaynak/href kontrolü.",
       "dependencies": [
@@ -4735,7 +4805,7 @@
       "priority": "P1",
       "recommendedDisposition": "deepen",
       "selectedTargetUrl": "https://3dyanimda.com/teklif-al",
-      "currentAssessment": "Mevcut hedef iyileştirmesi kaynakta hazır; CMS merge/canlı kabul bekliyor.",
+      "currentAssessment": "Teklif/ölçüm iyileştirmesi PR #14 kaynaklarında; CI ve Cloudflare yayınından sonra canlı başarı akışı doğrulanacak.",
       "status": "implemented-awaiting-deploy",
       "acceptance": "Mevcut URL ve ilgili bulguların kabul şartları; yayın sonrası regresyon.",
       "dependencies": [
@@ -4800,7 +4870,7 @@
       "priority": "P2",
       "recommendedDisposition": "deepen",
       "selectedTargetUrl": "https://3dyanimda.com/bolgeler/istanbul",
-      "currentAssessment": "Mevcut hedef iyileştirmesi kaynakta hazır; CMS merge/canlı kabul bekliyor.",
+      "currentAssessment": "Mevcut hedefin içerik iyileştirmesi CMS'ye birleştirildi; Cloudflare yayınından sonra görünür içerik/link kabulü doğrulanacak.",
       "status": "implemented-awaiting-deploy",
       "acceptance": "Mevcut URL ve ilgili bulguların kabul şartları; yayın sonrası regresyon.",
       "dependencies": [
@@ -10999,7 +11069,7 @@
       "priority": "P1",
       "recommendedDisposition": "new-selected",
       "selectedTargetUrl": "https://3dyanimda.com/rehber/fdm-sla-sls-karsilastirma",
-      "currentAssessment": "Seçili özgün taslak hazır; CMS onay/yayın ve hizmet koşulları geçmeden canlı tamamlandı sayılmaz.",
+      "currentAssessment": "Seçili özgün içerik CMS'ye birleştirildi ve mevcut partinin inceleme kayıtları doğrulandı; Cloudflare yayın/canlı kabul bekliyor. Gerçek vaka/özel hizmet iddialarının kanıt koşulları ayrıca korunur.",
       "status": "implemented-awaiting-deploy",
       "acceptance": "Onaylı özgün içerik; 200/canonical/index/sitemap/görsel/kaynak/href kontrolü.",
       "dependencies": [
@@ -11061,7 +11131,7 @@
       "priority": "P2",
       "recommendedDisposition": "new-selected",
       "selectedTargetUrl": "https://3dyanimda.com/rehber/asa-pa-cf-karsilastirma",
-      "currentAssessment": "Seçili özgün taslak hazır; CMS onay/yayın ve hizmet koşulları geçmeden canlı tamamlandı sayılmaz.",
+      "currentAssessment": "Seçili özgün içerik CMS'ye birleştirildi ve mevcut partinin inceleme kayıtları doğrulandı; Cloudflare yayın/canlı kabul bekliyor. Gerçek vaka/özel hizmet iddialarının kanıt koşulları ayrıca korunur.",
       "status": "implemented-awaiting-deploy",
       "acceptance": "Onaylı özgün içerik; 200/canonical/index/sitemap/görsel/kaynak/href kontrolü.",
       "dependencies": [
@@ -11129,7 +11199,7 @@
       "priority": "P2",
       "recommendedDisposition": "new-selected",
       "selectedTargetUrl": "https://3dyanimda.com/rehber/3d-tarama-kullanim-alanlari",
-      "currentAssessment": "Seçili özgün taslak hazır; CMS onay/yayın ve hizmet koşulları geçmeden canlı tamamlandı sayılmaz.",
+      "currentAssessment": "Seçili özgün içerik CMS'ye birleştirildi ve mevcut partinin inceleme kayıtları doğrulandı; Cloudflare yayın/canlı kabul bekliyor. Gerçek vaka/özel hizmet iddialarının kanıt koşulları ayrıca korunur.",
       "status": "implemented-awaiting-deploy",
       "acceptance": "Onaylı özgün içerik; 200/canonical/index/sitemap/görsel/kaynak/href kontrolü.",
       "dependencies": [
@@ -11161,7 +11231,7 @@
       "priority": "P2",
       "recommendedDisposition": "new-selected",
       "selectedTargetUrl": "https://3dyanimda.com/rehber/3d-tarama-kalite-kontrol",
-      "currentAssessment": "Seçili özgün taslak hazır; CMS onay/yayın ve hizmet koşulları geçmeden canlı tamamlandı sayılmaz.",
+      "currentAssessment": "Seçili özgün içerik CMS'ye birleştirildi ve mevcut partinin inceleme kayıtları doğrulandı; Cloudflare yayın/canlı kabul bekliyor. Gerçek vaka/özel hizmet iddialarının kanıt koşulları ayrıca korunur.",
       "status": "conditional",
       "acceptance": "Onaylı özgün içerik; 200/canonical/index/sitemap/görsel/kaynak/href kontrolü.",
       "dependencies": [
@@ -11257,7 +11327,7 @@
       "priority": "P2",
       "recommendedDisposition": "deepen",
       "selectedTargetUrl": "https://3dyanimda.com/cozumler/kurumsal-proje-yonetimi",
-      "currentAssessment": "Mevcut hedef iyileştirmesi kaynakta hazır; CMS merge/canlı kabul bekliyor.",
+      "currentAssessment": "Mevcut hedefin içerik iyileştirmesi CMS'ye birleştirildi; Cloudflare yayınından sonra görünür içerik/link kabulü doğrulanacak.",
       "status": "implemented-awaiting-deploy",
       "acceptance": "Mevcut URL ve ilgili bulguların kabul şartları; yayın sonrası regresyon.",
       "dependencies": [
@@ -11396,5 +11466,50 @@
         "W12"
       ]
     }
-  ]
+  ],
+  "releaseVerification": {
+    "deliveryRoute": "External GitHub repository and Cloudflare; not a native Sites version.",
+    "pullRequest": {
+      "url": "https://github.com/figtures/3dyanimda/pull/14",
+      "lastReportedHead": "9929f76f577b7adc7b93b6b83f50020104851aeb",
+      "headIsFinal": false,
+      "mergedCommit": null
+    },
+    "cms": {
+      "verified": true,
+      "publishedLandingPages": 204,
+      "publishedGuides": 17,
+      "mediaRecords": 21,
+      "descriptionOverrides": 103,
+      "matchingContentReviews": 22,
+      "otherThreeBrandFingerprintsUnchanged": true
+    },
+    "continuousIntegration": {
+      "status": "in-progress",
+      "followUp": "Two stale-test fixes are in progress.",
+      "verifiedPassingHead": null,
+      "runUrl": null
+    },
+    "deployment": {
+      "provider": "Cloudflare",
+      "status": "awaiting-ci-and-deployment-evidence",
+      "deploymentId": null,
+      "deployedCommit": null,
+      "verifiedAt": null
+    },
+    "liveAcceptance": {
+      "status": "not-yet-run-for-new-release",
+      "auditReport": null,
+      "verifiedAt": null,
+      "checks": [
+        "all sitemap URLs: HTTP/canonical/index/H1/unique metadata",
+        "new and updated guide/service media: HTTP/dimensions/alt/OG/Article parity",
+        "same-district related links and no broken targets",
+        "contact directions and business identity parity",
+        "first-render/mobile/hydration/route-change regressions",
+        "analytics receipt and field performance require separate account/data evidence"
+      ]
+    },
+    "completionRule": "Promote a source-ready finding only after the deployed commit and that finding's live acceptance evidence are recorded. CMS publication flags, PR head, passing local tests or a deployment request alone do not complete live acceptance."
+  }
 }
