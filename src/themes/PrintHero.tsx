@@ -34,20 +34,19 @@ export default function PrintHero({ query }: { query: string }) {
 
   const customTitle = brand.settings.hero_content?.title_tr;
   const legacyTitle = !customTitle || customTitle.replace(/\s+/g, " ").trim() === "Fikrinizden parçaya. Üretim yanınızda.";
-  const customLead = brand.settings.hero_content?.lead_tr;
   const phase = unavailable ? "Fikirden fiziksel forma" : paused ? "Bir ana yakından bakın" : state.phase === "complete" ? "Bir fikir, artık bir form." : state.phase === "reset" ? "Yeni bir form başlıyor" : "Katmanlar birleşiyor";
 
   return <section className="print-hero" aria-labelledby="print-hero-title">
     <div className="print-hero-body wrap">
       <div className="print-hero-copy">
-        <p className="print-hero-eyebrow"><span aria-hidden="true" />3D BASKI · TARAMA · MODELLEME</p>
+        <p className="print-hero-eyebrow"><span aria-hidden="true" />{brand.eyebrow}</p>
         <h1 id="print-hero-title">{legacyTitle ? <>Fikrinizden{" "}<span>parçaya.</span></> : customTitle}</h1>
-        <p className="print-hero-lead">{customLead || <>Üretim yanınızda.<br />{" "}Dosyanız, numuneniz veya fikrinizle başlayın. Tasarımdan 3D baskıya, bir sonraki parçanızı birlikte üretelim.</>}</p>
+        <p className="print-hero-lead">{brand.lead}</p>
         <div className="print-hero-actions">
           <Link className="print-hero-primary" to={"/teklif-al" + query}>Projenizi başlatın <ArrowUpRight size={20} aria-hidden="true" /></Link>
           <a className="print-hero-secondary" href="#hizmetler">Hizmetleri keşfedin <ArrowDown size={17} aria-hidden="true" /></a>
         </div>
-        <p className="print-hero-location">İstanbul, Ataşehir <span aria-hidden="true">/</span> Fikirden üretime.</p>
+        <p className="print-hero-location">İstanbul, Ataşehir <span aria-hidden="true">/</span> Mühendislikten üretime.</p>
       </div>
 
       <div className="print-hero-visual">

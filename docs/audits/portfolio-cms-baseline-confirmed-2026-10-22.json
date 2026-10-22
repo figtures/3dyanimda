@@ -1,0 +1,490 @@
+{
+  "faq": [
+    {
+      "id": "e1b45d33-1304-4ca1-9478-302539804123",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "Anlık hesap, tanımlanmış malzeme ve fiyatlandırma ayarlarına dayanan bir ön tahmindir. Modelin üretilebilirliği, ek işlemler ve teslimat kapsamı değerlendirilerek nihai teklif netleştirilir.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "Ekrandaki anlık fiyat kesin satış fiyatı mı?"
+    },
+    {
+      "id": "612eb578-4e9a-4545-a0c9-a7d4069c2fbe",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "İlk numuneyi form, montaj veya kullanım açısından değerlendirebilirsiniz. İstenen değişiklikleri yeni bir revizyon olarak tanımlayıp modelleme ve yeniden üretim kapsamını ayrıca planlarız.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "İlk prototipten sonra tasarımı değiştirebilir miyim?"
+    },
+    {
+      "id": "0cbbaf6b-3894-4443-b445-2fa08cdc7cd2",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "Parçanın nerede kullanılacağını, taşıyacağı yükü, sıcaklık ve esneklik beklentinizi paylaşın. Sadece görünüş için hazırlanan bir model ile çalışan bir parçanın malzeme ihtiyacı farklı olabilir.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 60,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "Hangi malzemeyi seçmeliyim?"
+    },
+    {
+      "id": "3f501574-6b17-434a-97a5-39b0520fe2ae",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "Evet. Fikrinizi eskiz, fotoğraf, ölçü veya fiziksel numuneyle anlatabilirsiniz. Baskıya geçmeden önce hangi modelleme çalışmalarına ihtiyaç olduğunu birlikte belirleriz.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "3D dosyam olmadan proje başlatabilir miyim?"
+    },
+    {
+      "id": "bf2d6266-b969-47ca-82c3-0f175c5bf7c9",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "Eksik yüzey, ölçek veya ince detay gibi konuları değerlendirme aşamasında paylaşırız. Gereken düzenlemeler ve kapsam onaylanmadan tasarımın üretime uygun olduğu varsayılmaz.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 80,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "Dosyam üretime hazır değilse ne olur?"
+    },
+    {
+      "id": "1f55c871-77f5-4347-8efe-a5aa8f02aadd",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "Dosya, adet, malzeme, yüzey işlemleri ve mevcut üretim planı incelendikten sonra süre bildirilir. Numune veya revizyon gerekiyorsa bu adımlar da teslimat planına eklenir.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 70,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "Teslimat süresi ne zaman netleşir?"
+    },
+    {
+      "id": "0a2f5b40-8f86-4830-99e6-6ea9481751ab",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "Tek parça, kişisel aksesuar, masaüstü düzenleyici veya hobi prototipi taleplerinizi paylaşabilirsiniz. Üretilebilirlik, malzeme ve kapsam proje özelinde değerlendirilir.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "Kişisel bir hobi projesi için de başvurabilir miyim?"
+    },
+    {
+      "id": "217685d9-5cec-420b-801b-a4146f8ade6b",
+      "active": true,
+      "category": "Üretim süreci",
+      "answer_en": "",
+      "answer_tr": "STL, OBJ, 3MF, STEP/STP ve IGES/IGS dosyaları desteklenir. Dosya başına sınır 20 MB’tır. Modelin boyutlarını ve yönünü kontrol ederek üretim tercihlerinizi belirtebilirsiniz.",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-16T22:29:51.961312+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-10-16T22:29:51.961312+00:00",
+      "question_en": "",
+      "question_tr": "Teklif ekranında hangi dosyaları inceleyebilirim?"
+    }
+  ],
+  "seo": [
+    {
+      "id": "d764ed51-1535-49b2-b4f5-4b535c96b80d",
+      "path": "/",
+      "noindex": false,
+      "title_en": "",
+      "title_tr": "3D Yanımda | Ataşehir’de 3D Baskı, Tarama ve Modelleme",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-03T15:42:10.87976+00:00",
+      "updated_at": "2026-10-21T21:59:22.837121+00:00",
+      "keywords_en": "",
+      "keywords_tr": "",
+      "og_image_url": "",
+      "description_en": "",
+      "description_tr": "İstanbul Ataşehir’de 3D baskı, tarama ve modelleme. Prototip, özel parça veya hobi projenizi 3D Yanımda ile değerlendirin; dosyanızı paylaşarak teklif isteyin."
+    },
+    {
+      "id": "772b0b54-e0ee-4bd4-bb62-1cb9ec9c675a",
+      "path": "/3d-baski",
+      "noindex": false,
+      "title_en": "",
+      "title_tr": "3D Baskı ve Prototip Üretimi | 3D Yanımda",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-21T21:59:22.837121+00:00",
+      "updated_at": "2026-10-21T21:59:22.837121+00:00",
+      "keywords_en": "",
+      "keywords_tr": "",
+      "og_image_url": "",
+      "description_en": "",
+      "description_tr": "Modelinizden prototip, özel parça veya hobi ürünü için 3D baskı teklifi alın. Dosya, malzeme, adet ve teslimat kapsamını Ataşehir’de birlikte değerlendirelim."
+    },
+    {
+      "id": "657d151b-33e4-4998-949f-45c4fa344a9f",
+      "path": "/hakkimizda",
+      "title_tr": "Hakkımızda | 3D Yanımda",
+      "title_en": "",
+      "description_tr": "Ataşehir’deki 3D Yanımda’yı tanıyın. Dosya ve numune değerlendirmesinden modelleme, üretim onayı ve teslimata kadar çalışma yaklaşımımız.",
+      "description_en": "",
+      "keywords_tr": "",
+      "keywords_en": "",
+      "og_image_url": "",
+      "noindex": false,
+      "created_at": "2026-10-21 21:59:22.837121+00",
+      "updated_at": "2026-10-21 21:59:22.837121+00",
+      "tenant_id": "10000000-0000-4000-8000-000000000001"
+    }
+  ],
+  "columns": [
+    {
+      "type": "uuid",
+      "table": "faq_items",
+      "column": "id"
+    },
+    {
+      "type": "text",
+      "table": "faq_items",
+      "column": "question_tr"
+    },
+    {
+      "type": "text",
+      "table": "faq_items",
+      "column": "answer_tr"
+    },
+    {
+      "type": "text",
+      "table": "faq_items",
+      "column": "question_en"
+    },
+    {
+      "type": "text",
+      "table": "faq_items",
+      "column": "answer_en"
+    },
+    {
+      "type": "text",
+      "table": "faq_items",
+      "column": "category"
+    },
+    {
+      "type": "integer",
+      "table": "faq_items",
+      "column": "sort_order"
+    },
+    {
+      "type": "boolean",
+      "table": "faq_items",
+      "column": "active"
+    },
+    {
+      "type": "timestamp with time zone",
+      "table": "faq_items",
+      "column": "created_at"
+    },
+    {
+      "type": "timestamp with time zone",
+      "table": "faq_items",
+      "column": "updated_at"
+    },
+    {
+      "type": "uuid",
+      "table": "faq_items",
+      "column": "tenant_id"
+    },
+    {
+      "type": "uuid",
+      "table": "portfolio_projects",
+      "column": "id"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "slug"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "title_tr"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "title_en"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "excerpt_tr"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "excerpt_en"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "content_tr"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "content_en"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "cover_image_url"
+    },
+    {
+      "type": "jsonb",
+      "table": "portfolio_projects",
+      "column": "gallery"
+    },
+    {
+      "type": "text",
+      "table": "portfolio_projects",
+      "column": "industry"
+    },
+    {
+      "type": "ARRAY",
+      "table": "portfolio_projects",
+      "column": "materials"
+    },
+    {
+      "type": "ARRAY",
+      "table": "portfolio_projects",
+      "column": "tags"
+    },
+    {
+      "type": "integer",
+      "table": "portfolio_projects",
+      "column": "sort_order"
+    },
+    {
+      "type": "boolean",
+      "table": "portfolio_projects",
+      "column": "published"
+    },
+    {
+      "type": "timestamp with time zone",
+      "table": "portfolio_projects",
+      "column": "published_at"
+    },
+    {
+      "type": "timestamp with time zone",
+      "table": "portfolio_projects",
+      "column": "created_at"
+    },
+    {
+      "type": "timestamp with time zone",
+      "table": "portfolio_projects",
+      "column": "updated_at"
+    },
+    {
+      "type": "uuid",
+      "table": "portfolio_projects",
+      "column": "tenant_id"
+    }
+  ],
+  "landing": [
+    {
+      "id": "346f07a6-e019-414c-9d0e-1584027899a1",
+      "faq": [
+        {
+          "a": "Aynı proje altında ayrı parça kodlarıyla değerlendirilebilir. Her numunenin amacı, adedi ve onay ölçütü talepte birbirinden ayrılmalıdır.",
+          "q": "Görünüş numunesi ile işlevsel prototip aynı siparişte olabilir mi?"
+        },
+        {
+          "a": "Mevcut eskizi, temel ölçüleri ve test etmek istediğiniz özelliği paylaşın. Önce modelleme kapsamını, ardından fiziksel numune ihtiyacını belirleyebiliriz.",
+          "q": "Modelim henüz tamamlanmadıysa nasıl başlayabilirim?"
+        },
+        {
+          "a": "Baskı numuneleri kargo, kurye veya elden teslim edilebilir; İstanbul dışındaki adreslere de kargo gönderimi yapılır. Örnek Mahallesi, Ataşehir’deki atölyeden teslim alacaksanız gelmeden randevu oluşturun. Numunenin adedi, ambalaj ihtiyacı ve hedef adresi teklif talebinize ekleyin.",
+          "q": "Prototipimi nasıl teslim alabilirim?"
+        }
+      ],
+      "city": "",
+      "kind": "service",
+      "path": "/3d-baski",
+      "image": "/brand/services/3dyanimda-print.webp",
+      "title": "Ürün geliştirme için 3D baskı",
+      "status": "published",
+      "service": "",
+      "summary": "Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
+      "district": "",
+      "evidence": "",
+      "sections": [
+        {
+          "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım.",
+          "title": "İlk baskı hangi soruya cevap verecek?"
+        },
+        {
+          "body": "Alternatif tasarımları ayrı kodlarla paylaşmanız karşılaştırmayı kolaylaştırır. Örneğin iki kapak seçeneğinde yalnızca değişen tırnakları işaretleyin; ortak gövde dosyasını ayrıca belirtin. Denemeden çıkan bulguları onaylanan revizyona bağlayarak sonraki üretimde hangi çizimin esas alınacağını netleştirebiliriz.",
+          "title": "Tek dosyada kaybolmayan revizyonlar"
+        },
+        {
+          "body": "Hedef dış ölçüyü, kullanılacak bileşenleri ve numuneyi inceleyecek kişinin beklentisini talebe ekleyin. Sunum parçasında görünen yüzeyler öncelikli olabilir; montaj prototipinde karşı parçanın referansları önem kazanır. Malzeme ve yüzey tercihini projenin bu aşamasına göre değerlendirelim.",
+          "title": "Ürün ekibinden gereken bilgiler"
+        },
+        {
+          "body": "Prototipi test ederken yalnızca “oldu” veya “olmadı” sonucu tutmayın. Hangi yüzeyin temas ettiğini, hangi ölçünün değişmesi gerektiğini ve parçanın hangi kullanımda zorlandığını işaretleyin. Aynı parçanın iki revizyonunu birlikte sipariş edecekseniz dosya adlarını ayrı tutun. Böylece sonraki baskı, önceki denemenin ölçülebilir sonucuna dayanır.",
+          "title": "Bir sonraki revizyona veri bırakın"
+        },
+        {
+          "body": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS modelinizi teklif ekranında açabilirsiniz; dosya başına sınır 20 MB’tır. Önizlemede ölçü birimini ve dış boyutları kontrol edin, istediğiniz adedi ve parçanın nerede kullanılacağını yazın. Hazır modeliniz yoksa fotoğraf, eskiz veya numuneyle modelleme ihtiyacını birlikte değerlendirebiliriz.",
+          "title": "Baskı talebine hangi dosyayla başlayabilirsiniz?"
+        },
+        {
+          "body": "Teklif ekranındaki anlık hesap, seçtiğiniz malzeme ve üretim ayarlarına bağlı bir ön tahmindir. Dosya hazırlığı, parçanın geometrisi, adet, son işlemler ve teslimat kapsamı incelendikten sonra nihai teklif belirlenir. Üretim ölçüsü, malzeme uygunluğu ve teslim tarihi proje özelinde teyit edilir; onayınızdan sonra üretim planlanır.",
+          "title": "Ön tahminden onaylı üretim teklifine"
+        }
+      ],
+      "editorial": {
+        "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3D Yanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
+        "takeaways": [
+          "Görsel sunum ile çalışan prototipin kabul kriterleri farklıdır.",
+          "Fiyatı yalnızca gramaj değil; geometri, hazırlık ve son işlem de etkiler.",
+          "Tekrar üretim için dosya revizyonunu ve onaylı numuneyi birlikte kaydedin."
+        ],
+        "comparison": {
+          "rows": [
+            [
+              "Görünüş modeli",
+              "Yüzey ve görsel bütünlük",
+              "Görünecek yüzeyler ve sunum amacı"
+            ],
+            [
+              "Montaj prototipi",
+              "Eşleşen parçalar ve geçmeler",
+              "Kritik ölçüler, karşı parça ve montaj sırası"
+            ],
+            [
+              "İşlev denemesi",
+              "Yük, sıcaklık ve hareket",
+              "Çalışma koşulu ve test yöntemi"
+            ],
+            [
+              "Küçük seri",
+              "Onaylı revizyonun tekrarı",
+              "Numune onayı ve adet planı"
+            ]
+          ],
+          "title": "Hangi prototip, hangi karar için?",
+          "columns": [
+            "İhtiyaç",
+            "Öncelik",
+            "Talebe eklenecek bilgi"
+          ]
+        },
+        "relatedPaths": [
+          "/rehber/prototip-maliyetini-ne-belirler",
+          "/rehber/3d-baski-mi-cnc-mi",
+          "/3d-modelleme",
+          "/cozumler/urun-gelistirme-prototipleri"
+        ]
+      },
+      "logistics": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-21T21:59:22.837121+00:00",
+      "reviewed_at": null,
+      "neighborhood": "",
+      "local_context": ""
+    }
+  ],
+  "settings": [
+    {
+      "key": "autofocus_content",
+      "value": {
+        "lead_tr": "Bir tasarımı doğrulamak, montajı kolaylaştırmak veya az adetli bir ihtiyacı karşılamak için. Üretim yöntemini kullanım koşulları, adet ve hedeflenen işlevle birlikte değerlendiriyoruz.",
+        "title_tr": "Bir parçadan fazlası.\nSürecinize uygun bir çözüm."
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-03T15:42:10.87976+00:00"
+    },
+    {
+      "key": "contact_info",
+      "value": {
+        "email": "info@3dyanimda.com",
+        "phone": "+905364488230",
+        "whatsapp": "905364488230",
+        "about_text": "3D Yanımda, İstanbul’un Ataşehir ilçesinde 3D baskı, 3D tarama ve 3D modelleme projelerini değerlendirir. Örnek Mahallesi, Bestekar Sokak No: 17’deki çalışma noktamıza ziyaretler randevuyla yapılır. Bir ürün ekibinin prototipi, üretimde ihtiyaç duyulan özel parça veya kişisel bir hobi fikriyle başlayabilirsiniz.\n\nÖnce parçanın kullanım amacını, temel ölçülerini ve beklentinizi konuşuruz. Hazır modeliniz varsa dosyayı inceleriz; fiziksel örnek, eskiz veya fotoğrafla geliyorsanız gereken tarama ve modelleme çalışmalarını belirleriz. Malzeme, üretim yöntemi, adet, revizyon ve ek işlemler teklif kapsamına birlikte alınır.\n\nKapsam ve fiyat onaylandıktan sonra üretim planı netleşir. Kargo, kurye veya randevuyla elden teslim seçeneği; parça, ambalaj ve hedef adresle birlikte değerlendirilir. Mevcut dosyayı değiştireceğiniz ya da numuneyi tekrar üreteceğiniz işlerde onaylı revizyonu ve kontrol beklentisini birlikte kaydederiz.",
+        "address_en": "Örnek Mahallesi, Bestekar Sokak No: 17, Ataşehir / Istanbul, Türkiye",
+        "address_tr": "Örnek Mahallesi, Bestekar Sokak No: 17, Ataşehir / İstanbul",
+        "about_title": "3D Yanımda ile fikirden üretime.",
+        "location_en": "Örnek Mahallesi, Ataşehir · Shipping to other cities",
+        "location_tr": "Örnek Mahallesi, Ataşehir · Diğer şehirlere kargo",
+        "business_name": "3D Yanımda",
+        "phone_display": "+90 536 448 82 30",
+        "floating_phone": false,
+        "floating_enabled": true,
+        "floating_whatsapp": true,
+        "business_description": "3D Yanımda, İstanbul Ataşehir’de 3D baskı, 3D tarama ve 3D modelleme hizmetleri sunar. Prototip, özel parça ve hobi projelerinde dosya veya numuneden başlayarak üretim kapsamını birlikte belirler.",
+        "business_alternate_names": "3dyanımda\n3dyanimda.com"
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-21T21:59:22.837121+00:00"
+    },
+    {
+      "key": "hero_content",
+      "value": {
+        "lead_tr": "3D Yanımda, İstanbul Ataşehir’de 3D baskı, 3D tarama ve 3D modelleme hizmetleri sunar. Fabrika parçasından hobi projenize; dosyanız, numuneniz veya fikrinizle başlayın.",
+        "title_tr": "Fikrinizden parçaya.\nÜretim yanınızda.",
+        "eyebrow_tr": "KURUMSAL 3D ÜRETİM ÇÖZÜMLERİ",
+        "cta_primary_tr": "Hemen teklif al",
+        "cta_secondary_tr": "Hizmetleri keşfet"
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-21T21:59:22.837121+00:00"
+    },
+    {
+      "key": "services_cards",
+      "value": [
+        {
+          "id": "s1",
+          "link": "/teklif-al",
+          "desc_tr": "Tasarım kararlarını fiziksel model üzerinden değerlendirmek için form, yerleşim ve montaj prototipleri.",
+          "title_tr": "Ürün geliştirme prototipleri"
+        },
+        {
+          "id": "s2",
+          "link": "/teklif-al",
+          "desc_tr": "Tekrarlayan montaj ve konumlandırma adımları için projeye özel yardımcı parçalar.",
+          "title_tr": "Montaj yardımcıları"
+        },
+        {
+          "id": "s3",
+          "link": "/teklif-al",
+          "desc_tr": "Elektronik cihazlar, test düzenekleri ve özel sistemler için geometriye uygun muhafazalar.",
+          "title_tr": "Özel muhafaza & aparatlar"
+        },
+        {
+          "id": "s4",
+          "link": "/teklif-al",
+          "desc_tr": "Kalıp yatırımından önce veya düşük adetli ihtiyaçlarda değerlendirilebilecek üretim alternatifleri.",
+          "title_tr": "Küçük seri üretim"
+        }
+      ],
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-03T15:42:10.87976+00:00"
+    }
+  ],
+  "portfolio": []
+}

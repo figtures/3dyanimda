@@ -1,0 +1,170 @@
+{
+  "brand": "3dyanimda",
+  "purpose": "Engineering-led corporate positioning; merge only these reviewed fields into current tenant records after checking the live baseline.",
+  "site_settings": {
+    "contact_info": {
+      "business_description": "3D Yanımda, İstanbul Ataşehir’de mühendislik odaklı 3D baskı, 3D tarama ve 3D modelleme hizmetleri sunar. Ürün geliştirme, özel parça, aparat ve kurumsal üretim projelerini prototipten proje bazlı seri üretime kadar teknik gereksinimleriyle birlikte ele alır.",
+      "about_title": "Mühendislikten üretime,\nprojenizin yanındayız.",
+      "about_text": "3D Yanımda; Ar-Ge, ürün geliştirme, üretim ve satın alma ekiplerinin 3D baskı, 3D tarama ve 3D modelleme ihtiyaçlarını ortak bir proje akışında ele alır. Tek prototip, montaj aparatı, özel muhafaza, işlevsel parça veya tekrarlanan üretim partileri için başlangıç noktamız, parçanın yerine getirmesi gereken görevdir.\n\nHazır CAD dosyası, teknik resim, fiziksel numune ya da geliştirilmesi gereken bir tasarımla başlayabilirsiniz. Kritik ölçüler, montaj ilişkileri, çalışma ortamı, malzeme beklentisi ve kontrol kriterleri üzerinden teknik kapsamı birlikte belirleriz. Tarama, tersine mühendislik, model revizyonu ve prototipleme gereksinimlerini üretimden önce planlarız.\n\nNumune değerlendirmesi, onaylı dosya revizyonu, adet ve parti planı aynı kapsam içinde takip edilir. Üretim yöntemi, son işlemler, kontrol kapsamı ve teslimat takvimi projenin gereksinimlerine göre netleştirilir. Böylece ilk tasarım kararından tekrar siparişe kadar hangi verinin esas alındığı açık olur.\n\nİstanbul Ataşehir’deki çalışma noktamıza ziyaretler randevuyla yapılır. Numune gönderimi, yerinde çalışma gereksinimi, kargo, kurye veya elden teslim seçenekleri proje koşullarıyla birlikte değerlendirilir. Projenizin ölçeğini, teknik beklentilerini ve hedef takvimini paylaşarak başlayabilirsiniz."
+    },
+    "hero_content": {
+      "eyebrow_tr": "KURUMSAL 3D ÜRETİM ÇÖZÜMLERİ",
+      "lead_tr": "Tek prototipten proje bazlı seri üretime, mühendislik odaklı 3D baskı, tarama ve modelleme. Ar-Ge, üretim ve satın alma ekipleri için dosya veya numuneden başlayarak kapsamı birlikte planlayalım."
+    },
+    "autofocus_content": {
+      "title_tr": "Projenizin ölçeğine göre.\nMühendislik yaklaşımıyla.",
+      "lead_tr": "İlk prototip, özel aparat veya tekrarlanan üretim partileri. Kullanım koşullarını, kritik ölçüleri, adet planını ve kabul kriterlerini birlikte değerlendirerek tasarımdan teslimata proje kapsamını oluşturuyoruz."
+    },
+    "services_cards": [
+      {
+        "id": "s1",
+        "link": "/teklif-al",
+        "desc_tr": "Tasarım kararlarını fiziksel model üzerinden değerlendirmek için form, yerleşim ve montaj prototipleri.",
+        "title_tr": "Ürün geliştirme prototipleri"
+      },
+      {
+        "id": "s2",
+        "link": "/teklif-al",
+        "desc_tr": "Tekrarlayan montaj ve konumlandırma adımları için projeye özel yardımcı parçalar.",
+        "title_tr": "Montaj yardımcıları"
+      },
+      {
+        "id": "s3",
+        "link": "/teklif-al",
+        "desc_tr": "Elektronik cihazlar, test düzenekleri ve özel sistemler için geometriye uygun muhafazalar.",
+        "title_tr": "Özel muhafaza & aparatlar"
+      },
+      {
+        "id": "s4",
+        "link": "/teklif-al",
+        "desc_tr": "Numune onayı, dosya revizyonu ve parti planıyla kapsamlandırılan seri ve tekrarlı üretim talepleri.",
+        "title_tr": "Proje bazlı seri üretim"
+      }
+    ]
+  },
+  "seo_meta": [
+    {
+      "path": "/",
+      "description_tr": "İstanbul Ataşehir’de mühendislik odaklı 3D baskı, tarama ve modelleme. Ürün geliştirme, özel parça ve kurumsal üretim projeleri için 3D Yanımda."
+    },
+    {
+      "path": "/3d-baski",
+      "description_tr": "Prototip, işlevsel parça ve proje bazlı seri üretim için 3D baskı. Teknik dosya, malzeme, adet planı ve kontrol kapsamıyla 3D Yanımda’dan teklif alın."
+    },
+    {
+      "path": "/hakkimizda",
+      "description_tr": "3D Yanımda’nın mühendislik ve kurumsal üretim yaklaşımı. Teknik değerlendirme, tarama, CAD tasarımı, prototipleme ve üretim planıyla projenizi ilerletin."
+    }
+  ],
+  "faq_replacement": {
+    "match_question_tr": "Kişisel bir hobi projesi için de başvurabilir miyim?",
+    "question_tr": "Prototipten seri üretime farklı ölçeklerde çalışabilir miyiz?",
+    "answer_tr": "Tek prototip, özel parça, üretim partisi veya tekrarlı sipariş taleplerinizi paylaşabilirsiniz. Adet, kullanım koşulları, kabul kriterleri ve takvim incelenerek uygun üretim yöntemi ve proje kapsamı belirlenir."
+  },
+  "landing_page_review_targets": [
+    {
+      "path": "/3d-baski",
+      "notes": "Keep the existing substantive service content. The current editorial.answer calls the service low-volume only and the comparison's last row is labelled Küçük seri. Replace those bounded phrases as below; refresh publication review through the established guarded workflow.",
+      "editorial_answer": "3D baskı, dijital modelden fiziksel prototip, işlevsel parça ve proje bazlı üretim partileri geliştirmek için kullanılır. 3D Yanımda’da değerlendirme görünüş, montaj, ergonomi veya işlev gibi teknik hedeflerle başlar. Dosya revizyonu, adet planı, kullanım koşulları ve kabul kriterleri birlikte incelenerek malzeme, üretim yöntemi ve kontrol kapsamı belirlenir.",
+      "comparison_last_row": [
+        "Proje bazlı seri üretim",
+        "Onaylı revizyonun üretim partilerinde tekrarı",
+        "Numune onayı, adet planı ve kontrol kriterleri"
+      ]
+    },
+    {
+      "path": "/sektorler/drone-hobi",
+      "notes": "Preserve this established route. If its current 3dyanimda title is hobby-led, revise title/summary to robotik ve insansız sistemler with existing scoped prototyping content; do not claim flight certification or completed defence work. Review the full live page before editing."
+    }
+  ],
+  "landing_patches": [
+    {
+      "path": "/3d-baski",
+      "expected_payload_hash": "ac5b877d9badd82f4dd02ee2a474547c",
+      "patch": {
+        "title": "Mühendislik ve üretim projeleri için 3D baskı",
+        "summary": "Ürün geliştirme prototipinden işlevsel parçaya ve üretim partilerine. Teknik dosyayı, kullanım koşullarını ve kabul kriterlerini aynı üretim planında birleştirelim.",
+        "editorial": {
+          "answer": "3D baskı, dijital modelden fiziksel prototip, işlevsel parça ve proje bazlı üretim partileri geliştirmek için kullanılır. 3D Yanımda’da değerlendirme görünüş, montaj, ergonomi veya işlev gibi teknik hedeflerle başlar. Dosya revizyonu, adet planı, kullanım koşulları ve kabul kriterleri birlikte incelenerek malzeme, üretim yöntemi ve kontrol kapsamı belirlenir.",
+          "takeaways": [
+            "Görsel sunum ile çalışan prototipin kabul kriterleri farklıdır.",
+            "Fiyatı yalnızca gramaj değil; geometri, hazırlık ve son işlem de etkiler.",
+            "Tekrar üretim için dosya revizyonunu ve onaylı numuneyi birlikte kaydedin."
+          ],
+          "comparison": {
+            "rows": [
+              [
+                "Görünüş modeli",
+                "Yüzey ve görsel bütünlük",
+                "Görünecek yüzeyler ve sunum amacı"
+              ],
+              [
+                "Montaj prototipi",
+                "Eşleşen parçalar ve geçmeler",
+                "Kritik ölçüler, karşı parça ve montaj sırası"
+              ],
+              [
+                "İşlev denemesi",
+                "Yük, sıcaklık ve hareket",
+                "Çalışma koşulu ve test yöntemi"
+              ],
+              [
+                "Proje bazlı seri üretim",
+                "Onaylı revizyonun üretim partilerinde tekrarı",
+                "Numune onayı, adet planı ve kontrol kriterleri"
+              ]
+            ],
+            "title": "Hangi prototip, hangi karar için?",
+            "columns": [
+              "İhtiyaç",
+              "Öncelik",
+              "Talebe eklenecek bilgi"
+            ]
+          },
+          "relatedPaths": [
+            "/rehber/prototip-maliyetini-ne-belirler",
+            "/rehber/3d-baski-mi-cnc-mi",
+            "/3d-modelleme",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        }
+      }
+    },
+    {
+      "path": "/cozumler/kucuk-seri-uretim",
+      "expected_payload_hash": "b05e396568f05c86e48db87a6c1f5379",
+      "patch": {
+        "title": "Proje bazlı seri üretim ve tekrarlı sipariş yönetimi",
+        "summary": "Pilot numuneden üretim partilerine geçerken onaylı dosyayı, adet planını, yüzey beklentisini ve kontrol kapsamını birlikte yönetin.",
+        "editorial": {
+          "answer": "Üretim partisi planlanırken parça adedinin yanında montaj, kontrol ve paketleme akışı da değerlendirilir. Pilot numunede netleşen dosya revizyonu ve kabul kriterleri, sonraki partiler için ortak referans oluşturur.",
+          "takeaways": [
+            "İlk parti ve tekrar sipariş adetleri",
+            "Onay referansı olarak saklanacak numune",
+            "Kontrol edilecek ürün özellikleri"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski"
+          ]
+        }
+      }
+    },
+    {
+      "path": "/cozumler/montaj-yardimcilari",
+      "expected_payload_hash": "5635fcddb63b7f651e305622e7341a86",
+      "patch": {
+        "summary": "Ürün montajında parça yerini, bağlantı yönünü ve operatör erişimini belirleyen yardımcı aparatları, iş istasyonunuzun gereksinimlerine göre planlayın."
+      }
+    },
+    {
+      "path": "/sektorler/drone-hobi",
+      "expected_payload_hash": "2ff58f8bc5050c45077ca891f59b3f09",
+      "patch": {
+        "title": "Robotik ve insansız sistemler için gövde prototipleri",
+        "summary": "Elektronik, batarya ve mekanik bileşenleri ortak bir tasarımda konumlandırın. Gövde geometrisini, bakım erişimini ve montaj ilişkilerini fiziksel numuneyle değerlendirin."
+      }
+    }
+  ]
+}

@@ -50,7 +50,7 @@
     "brand": "3dyanimda",
     "path": "/cozumler/montaj-yardimcilari",
     "title": "Ürün montajı için hizalama ve yerleştirme yardımcıları",
-    "summary": "Küçük seri ürün montajında parça yerini, bağlantı yönünü ve operatör erişimini belirleyen yardımcı aparatları planlayın.",
+    "summary": "Ürün montajında parça yerini, bağlantı yönünü ve operatör erişimini belirleyen yardımcı aparatları, iş istasyonunuzun gereksinimlerine göre planlayın.",
     "sections": [
       {
         "title": "Ürünün hassas yüzeyini koruyun",
@@ -143,8 +143,8 @@
   {
     "brand": "3dyanimda",
     "path": "/cozumler/kucuk-seri-uretim",
-    "title": "Az adetli ürünlerde 3D baskıyla küçük seri üretim",
-    "summary": "İlk ürün onayından tekrarlı siparişe geçerken dosya sürümü, yüzey beklentisi ve örnek kabulünü aynı sipariş kaydında tutun.",
+    "title": "Proje bazlı seri üretim ve tekrarlı sipariş yönetimi",
+    "summary": "Pilot numuneden üretim partilerine geçerken onaylı dosyayı, adet planını, yüzey beklentisini ve kontrol kapsamını birlikte yönetin.",
     "sections": [
       {
         "title": "Pilot partiyi öğrenme aşaması olarak planlayın",
@@ -174,7 +174,7 @@
     "reviewed_at": null,
     "updated_at": "2026-10-06",
     "editorial": {
-      "answer": "Az sayıda parçanın bir araya gelmesiyle daha önce görülmeyen montaj veya paketleme sorunları ortaya çıkabilir.",
+      "answer": "Üretim partisi planlanırken parça adedinin yanında montaj, kontrol ve paketleme akışı da değerlendirilir. Pilot numunede netleşen dosya revizyonu ve kabul kriterleri, sonraki partiler için ortak referans oluşturur.",
       "takeaways": [
         "İlk parti ve tekrar sipariş adetleri",
         "Onay referansı olarak saklanacak numune",
@@ -2519,8 +2519,8 @@
   {
     "brand": "3dyanimda",
     "path": "/sektorler/drone-hobi",
-    "title": "Robotik ve hobi projelerinde gövde ve yerleşim prototipi",
-    "summary": "Elektronik, batarya ve mekanik bileşenleri bir arada konumlandırmak için tasarım numuneleri hazırlayın.",
+    "title": "Robotik ve insansız sistemler için gövde prototipleri",
+    "summary": "Elektronik, batarya ve mekanik bileşenleri ortak bir tasarımda konumlandırın. Gövde geometrisini, bakım erişimini ve montaj ilişkilerini fiziksel numuneyle değerlendirin.",
     "sections": [
       {
         "title": "Bileşenleri gerçek hacimleriyle temsil edin",

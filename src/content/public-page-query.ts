@@ -12,11 +12,16 @@ export function publicPageQuery(tenant:Tenant|null,path:string) {
     const {default:roles}=await import('./career-roles.json');
     return (roles[tenant!.slug as keyof typeof roles]||[]).map(role=>({...role,id:tenant!.slug+'-'+role.slug}));
   }
+  if(demoMode && (path==='/portfoy'||path.startsWith('/portfoy/'))) {
+    const {default:portfolio}=await import('../../content/authoring/portfolio/projects.json');
+    const projects=portfolio.filter(project=>project.brand===tenant!.slug).map(project=>({...project,id:project.brand+'-'+project.slug}));
+    return path==='/portfoy'?projects:projects.find(project=>project.slug===decodeURIComponent(path.slice(9)))||null;
+  }
   if(demoMode)return path.startsWith('/blog/')||path.startsWith('/portfoy/')||isLegalPath(path)?null:[];
   const db=await getSupabase(),id=tenant!.id,now=new Date().toISOString();
   const result=path==='/blog'? await db.from('blog_posts').select('slug,title,excerpt,title_en,excerpt_en,cover_image_url,published_at').eq('tenant_id',id).eq('published',true).or(`published_at.is.null,published_at.lte.${now}`).order('published_at',{ascending:false})
    :path.startsWith('/blog/')? await db.from('blog_posts').select('slug,title,excerpt,content,title_en,excerpt_en,content_en,cover_image_url,tags,published_at').eq('tenant_id',id).eq('slug',decodeURIComponent(path.slice(6))).eq('published',true).or(`published_at.is.null,published_at.lte.${now}`).maybeSingle()
-   :path==='/portfoy'? await db.from('portfolio_projects').select('id,slug,title_tr,title_en,excerpt_tr,excerpt_en,cover_image_url,industry').eq('tenant_id',id).eq('published',true).or(`published_at.is.null,published_at.lte.${now}`).order('sort_order',{ascending:true})
+   :path==='/portfoy'? await db.from('portfolio_projects').select('id,slug,title_tr,title_en,excerpt_tr,excerpt_en,cover_image_url,industry,tags').eq('tenant_id',id).eq('published',true).or(`published_at.is.null,published_at.lte.${now}`).order('sort_order',{ascending:true})
    :path.startsWith('/portfoy/')? await db.from('portfolio_projects').select('id,slug,title_tr,excerpt_tr,content_tr,cover_image_url,gallery,industry,materials,tags').eq('tenant_id',id).eq('slug',decodeURIComponent(path.slice(9))).eq('published',true).or(`published_at.is.null,published_at.lte.${now}`).maybeSingle()
    :path==='/kariyer'? await db.from('job_postings').select('id,slug,title_tr,department,location,employment_type,level,summary_tr,description_tr,requirements_tr').eq('tenant_id',id).eq('active',true).order('sort_order',{ascending:true})
    :path==='/sss'? await db.from('faq_items').select('id,question_tr,question_en,answer_tr,answer_en,category,sort_order,active').eq('tenant_id',id).eq('active',true).order('sort_order',{ascending:true})

@@ -93,7 +93,44 @@ try {
   await page.getByRole('button',{name:'Devam et',exact:true}).click();await page.getByRole('heading',{name:'İş birliği',exact:true}).waitFor();
   await page.locator('.career-consent input').check();await page.getByRole('button',{name:'İş birliği talebini gönder',exact:true}).click();await page.getByText('Tasarım önizlemesindesiniz. Talebiniz gönderilmedi.').waitFor();await fits();await aligned();
   for(const path of ['/3d-baski','/sektorler','/iletisim','/teklif-al','/araclar','/yasal']) {await visit(path);await fits();await aligned();}
-  await visit('/portfoy');await page.getByText('Proje seçkimiz hazırlanıyor.').waitFor();assert.ok(await page.getByText('Temsili tasarım',{exact:true}).count());await fits();await aligned();
+  await visit('/portfoy');await page.locator('.portfolio-project').nth(6).waitFor();
+  assert.equal(await page.locator('.portfolio-project').count(),7,`${brand}: seven portfolio concepts`);
+  assert.equal(await page.locator('.portfolio-project .portfolio-kind').count(),7);
+  for(const label of await page.locator('.portfolio-project .portfolio-kind').allTextContents())assert.equal(label.trim(),'Konsept çalışma');
+  assert.match(await page.locator('.portfolio-disclosure').innerText(),/Görseller yapay zekâ ile hazırlanmıştır/);
+  const assertImagesLoaded=async selector=>{
+   const images=page.locator(selector);assert.ok(await images.count(),`${brand}: expected portfolio images`);
+   for(const image of await images.all()){
+    await image.scrollIntoViewIfNeeded();
+    await image.evaluate(async img=>{await img.decode();});
+    assert.ok(await image.evaluate(img=>img.complete&&img.naturalWidth>0&&img.naturalHeight>0),`${brand}: image failed to load`);
+   }
+  };
+  await assertImagesLoaded('.portfolio-project img');
+  const categoryFilter=page.getByRole('group',{name:'Portföy kategorisi'});
+  const selectedCategory=(await categoryFilter.getByRole('button').nth(1).innerText()).trim();
+  const initialCategories=await page.locator('.portfolio-project .collection-meta').allTextContents();
+  const expectedFiltered=initialCategories.filter(value=>value.trim()===selectedCategory).length;
+  assert.ok(expectedFiltered>0&&expectedFiltered<7,`${brand}: category must select a subset`);
+  await categoryFilter.getByRole('button',{name:selectedCategory,exact:true}).click();
+  await page.waitForFunction(count=>document.querySelectorAll('.portfolio-project').length===count,expectedFiltered);
+  assert.equal(await categoryFilter.getByRole('button',{name:selectedCategory,exact:true}).getAttribute('aria-pressed'),'true');
+  for(const category of await page.locator('.portfolio-project .collection-meta').allTextContents())assert.equal(category.trim(),selectedCategory);
+  await categoryFilter.getByRole('button',{name:'Tümü',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelectorAll('.portfolio-project').length===7);
+  await fits();await aligned();
+  await page.screenshot({path:`${out}/${brand}-${theme}-portfolio-${width}.png`,fullPage:true});
+  const firstProject=page.locator('.portfolio-project').first();
+  const projectTitle=(await firstProject.locator('h2').innerText()).trim();
+  const projectHref=await firstProject.getAttribute('href');
+  assert.ok(projectHref?.startsWith('/portfoy/')&&projectHref.endsWith(q),`${brand}: scoped detail link`);
+  await firstProject.click();await page.waitForURL(url=>url.pathname+url.search===projectHref);
+  await page.locator('.portfolio-detail .public-prose').waitFor();
+  assert.equal((await page.locator('main h1').innerText()).trim(),projectTitle);
+  assert.equal((await page.locator('.portfolio-detail .portfolio-kind').innerText()).trim(),'Konsept çalışma · Temsili görsel');
+  assert.ok((await page.locator('.portfolio-detail .public-prose').innerText()).length>500,`${brand}: substantive concept detail`);
+  await assertImagesLoaded('.portfolio-detail .project-cover');await fits();await aligned();
+  await page.screenshot({path:`${out}/${brand}-${theme}-portfolio-detail-${width}.png`,fullPage:true});
   await visit('/portfoy/missing-project');await page.getByText('Bu proje yayında değil.').waitFor();
   assert.ok((await page.locator('meta[name="robots"]').getAttribute('content')).includes('noindex'));
   cases.push({brand,theme,width,result:'pass'});await writeFile(`${out}/report.json`,JSON.stringify({cases,errors,production:false},null,2)+'\n');console.log(`PUBLIC_SECTIONS_PASS ${brand}/${theme}/${width}`);await page.close();

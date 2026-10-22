@@ -2,8 +2,8 @@
   {
     "brand": "3dyanimda",
     "path": "/3d-baski",
-    "title": "Ürün geliştirme için 3D baskı",
-    "summary": "Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
+    "title": "Mühendislik ve üretim projeleri için 3D baskı",
+    "summary": "Ürün geliştirme prototipinden işlevsel parçaya ve üretim partilerine. Teknik dosyayı, kullanım koşullarını ve kabul kriterlerini aynı üretim planında birleştirelim.",
     "sections": [
       {
         "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım.",
@@ -56,7 +56,7 @@
     "evidence": "",
     "reviewed_at": null,
     "editorial": {
-      "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3D Yanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
+      "answer": "3D baskı, dijital modelden fiziksel prototip, işlevsel parça ve proje bazlı üretim partileri geliştirmek için kullanılır. 3D Yanımda’da değerlendirme görünüş, montaj, ergonomi veya işlev gibi teknik hedeflerle başlar. Dosya revizyonu, adet planı, kullanım koşulları ve kabul kriterleri birlikte incelenerek malzeme, üretim yöntemi ve kontrol kapsamı belirlenir.",
       "takeaways": [
         "Görsel sunum ile çalışan prototipin kabul kriterleri farklıdır.",
         "Fiyatı yalnızca gramaj değil; geometri, hazırlık ve son işlem de etkiler.",
@@ -80,9 +80,9 @@
             "Çalışma koşulu ve test yöntemi"
           ],
           [
-            "Küçük seri",
-            "Onaylı revizyonun tekrarı",
-            "Numune onayı ve adet planı"
+            "Proje bazlı seri üretim",
+            "Onaylı revizyonun üretim partilerinde tekrarı",
+            "Numune onayı, adet planı ve kontrol kriterleri"
           ]
         ],
         "title": "Hangi prototip, hangi karar için?",
