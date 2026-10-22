@@ -1,0 +1,422 @@
+[
+  {
+    "brand": "3dyanimda",
+    "slug": "robotik-hucre-tutucu",
+    "title_tr": "Robotik hücre için adaptif tutucu",
+    "excerpt_tr": "Robotik hücrede parça geometrisine uyarlanan çeneler, değiştirilebilir temas yüzeyleri ve montaj arayüzünü birlikte ele alan mühendislik uygulaması.",
+    "industry": "Endüstriyel otomasyon",
+    "content_tr": "<h2>İhtiyaç: parçayı doğru yerden kavramak</h2><p>Bir otomasyon hücresinde tutucu seçimi, parçanın biçimi kadar yaklaşma yönü ve bir sonraki istasyonla da ilişkilidir. Bu uygulama, silindirik bir iş parçasını karşılıklı çenelerle kavrayan düzeni ele alır. Amaç, temas bölgelerini görünür kılmak ve değişen ürün geometrileri için hangi parçaların yeniden tasarlanacağını planlamaktır.</p><h2>Yaklaşım: ortak arayüz, uyarlanan çeneler</h2><p>Robot bağlantısı, hareket mekanizması ve parçaya temas eden ekler ayrı modüller olarak düşünülür. Çene geometrisinde erişim boşlukları, kablo güzergâhı, bağlantı elemanları ve çevredeki ekipman dikkate alınır. Katmanlı üretim, özel temas biçimlerini denemek için değerlendirilebilir; nihai malzeme ve üretim yöntemi çalışma koşulları üzerinden seçilir.</p><h2>Kabul: kavrama senaryosunu sınamak</h2><p>Değerlendirme planında parçanın tutuş noktası, yüzeyde iz oluşumu, yerleştirme yönü ve serbest bırakma davranışı tanımlanır. İlk geometri numunesi montaj ve erişim kontrolüne hizmet edebilir. Taşıma yükü, çevrim ve güvenli kullanım uygunluğu ise gerçek sistem koşullarında ayrıca doğrulanır; görsel, gerçekleştirilmiş bir performans testini göstermez.</p><h2>Proje başlangıcı ve teslim kapsamı</h2><p>Talepte parça modeli, yaklaşık kütle, mevcut tutucu arayüzü, istasyon yerleşimi ve beklenen hareketler paylaşılır. Çalışma kapsamına çene CAD geometrisi, montaj yerleşimi, numune üretimi ve revizyon listesi alınabilir. Ürün ailesi büyüdüğünde ortak bağlantıyı koruyan farklı çene setleri, onaylı sürümler üzerinden ayrı ayrı yönetilebilir.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/robotik-hucre-tutucu.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 10
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "endustriyel-cihaz-muhafazasi",
+    "title_tr": "Saha cihazı için modüler muhafaza",
+    "excerpt_tr": "Elektronik yerleşimi, kablo girişleri ve servis erişimini ortak bir ürün mimarisinde buluşturan modüler saha cihazı uygulaması.",
+    "industry": "Ürün geliştirme",
+    "content_tr": "<h2>İhtiyaç: elektroniği ürün mimarisine taşımak</h2><p>Bir saha cihazının dış kabuğu, kartın çevresine çizilmiş bir kutudan fazlasıdır. Montaj noktaları, bağlantı uçları, kullanıcı erişimi ve bakım sırası birlikte düşünülmelidir. Bu uygulama, alt gövde, çıkarılabilir elektronik taşıyıcı ve kapaktan oluşan düzenle ürün geliştirme kararlarını tek bir fiziksel model üzerinde incelemeyi amaçlar.</p><h2>Yaklaşım: işlevleri modüllere ayırmak</h2><p>Kart taşıyıcı gövdeden ayrılarak elektronik revizyonların dış biçime etkisi değerlendirilir. Kablo girişleri, bağlantı ayakları, vida yuvaları ve kapak oturma yüzeyleri aynı montaj senaryosunda ele alınır. Modelde gösterilen conta kanalı ve havalandırma ayrıntıları tasarım seçenekleridir; uygulanacak çözüm cihazın çevresel gereksinimleriyle birlikte netleştirilir.</p><h2>Kabul: montaj ve servis senaryosu</h2><p>Numune üzerinden kartın yerleşmesi, konektörlerin erişilebilirliği, kablonun bükülme alanı ve kapağın açılma sırası kontrol edilebilir. Isı yönetimi, sızdırmazlık veya darbe dayanımı beklentileri için ayrı doğrulama yöntemleri belirlenir. Görseldeki muhafaza herhangi bir koruma sınıfı, sertifika ya da saha kullanım onayı taşıyan ürün olarak sunulmaz.</p><h2>Başlangıç bilgileri ve proje çıktıları</h2><p>Elektronik kartın güncel modeli, sabit konektör konumları, montaj yüzeyi ve kullanım ortamı başlangıç girdileridir. Tasarım alternatifleri, düzenlenebilir CAD teslimi, montaj prototipi ve onaylanan revizyonun üretim kapsamı birlikte planlanabilir. Tek cihazdan farklı kart seçenekleri kullanan ürün ailesine geçişte hangi modüllerin ortak kalacağı ayrıca kaydedilir.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/endustriyel-cihaz-muhafazasi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 20
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "akiskan-kanali-gelistirme",
+    "title_tr": "Kompakt sistem için akış kanalı",
+    "excerpt_tr": "Dar bir montaj hacminde dallanan hava yolunu, bağlantı yüzeylerini ve iç geometri erişimini birlikte inceleyen kanal geliştirme uygulaması.",
+    "industry": "Ürün geliştirme",
+    "content_tr": "<h2>İhtiyaç: sınırlı hacimde doğru yerleşim</h2><p>Kompakt bir cihazda hava yolu; komşu bileşenler, bağlantı noktaları ve kullanılabilir montaj alanı tarafından şekillenir. Bu uygulama, tek girişten farklı çıkışlara yönelen kanal biçimini ele alır. Dış kabuğu ve kesit eşini birlikte göstermek, iç geçişlerin üretim ve montaj kararlarıyla ilişkisini anlaşılır hale getirir.</p><h2>Yaklaşım: iç ve dış geometriyi birlikte kurmak</h2><p>Giriş ve çıkış arayüzleri sabitlenerek geçişler, dönüşler ve flanş çevreleri modellenir. Et kalınlığı, parça birleşimi, destek ihtiyacı ve içeride kalabilecek üretim artıklarının temizliği değerlendirilir. Kanalın tek parça veya birleşimli hazırlanması, erişilebilirlik ve seçilen üretim yöntemi üzerinden karşılaştırılabilecek seçeneklerdir.</p><h2>Kabul: yerleşimden çalışma koşuluna</h2><p>Geometri numunesinde bağlantı delikleri, komşu parçalara açıklık ve montaj aletlerinin erişimi kontrol edilebilir. Basınç kaybı, debi dağılımı, sızdırmazlık ve sıcaklık uygunluğu ayrı analiz veya deney gerektirir. Konsept görseli akış performansı kanıtı değildir; kabul ölçütleri cihazın gerçek çalışma senaryosundan türetilmelidir.</p><h2>Talep bilgileri ve teslim planı</h2><p>Sistem yerleşimi, arayüz ölçüleri, taşınacak ortamın özellikleri ve hedef çalışma koşulları talebe eklenir. Kapsam; kanal CAD modeli, kesit incelemesi, montaj numunesi ve tasarım revizyonlarını içerebilir. İç yüzey bitişi veya özel bağlantı gereksinimleri de başlangıçta tanımlanarak sonraki üretim teklifine açık kalemler halinde taşınır.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/akiskan-kanali-gelistirme.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 30
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "tersine-muhendislik-govde",
+    "title_tr": "Numuneden revizyonlu makine gövdesine",
+    "excerpt_tr": "Mevcut makine gövdesini referans alıp bağlantıları koruyarak yeni revizyonu değerlendiren tarama, CAD ve prototip uygulaması.",
+    "industry": "Tersine mühendislik",
+    "content_tr": "<h2>İhtiyaç: numunenin arkasındaki tasarımı anlamak</h2><p>Teknik dosyası bulunmayan bir gövdeyi yeniden ele alırken görünen yüzeyler kadar montaj referansları da önem taşır. Bu uygulama, kullanılmış metal numune ile yeniden modellenmiş geometriyi yan yana değerlendirir. Amaç, mevcut parçayı olduğu gibi kopyalamak yerine korunacak arayüzlerle değiştirilebilecek bölgeleri açıkça ayırmaktır.</p><h2>Yaklaşım: ölçümden düzenlenebilir geometriye</h2><p>Numune üzerinde yatak yuvası, bağlantı kulakları, birleşim yüzeyleri ve hasarlı bölgeler işaretlenir. Tarama verisi gerektiğinde ölçü kontrolleriyle tamamlanır; aşınma izleri özgün tasarım ölçüsü kabul edilmez. Takviye nervürleri gibi revizyon seçenekleri, karşı parçalarla uyumu ve üretim yaklaşımıyla birlikte ayrı sürümler halinde modellenebilir.</p><h2>Kabul: kritik arayüzleri doğrulamak</h2><p>İlk prototip; delik yerleşimi, montaj sırası ve çevre bileşenlerle açıklık kontrolünde kullanılabilir. Yatak geçmesi, yük aktarımı ve sıcaklık davranışı için uygun malzeme ve kontrol yöntemi ayrıca belirlenir. Görseldeki polimer geometri, metal gövdeyle eşdeğer çalışma performansına sahip olduğu iddiasını taşımaz; kullanım onayı ayrı bir aşamadır.</p><h2>Başlangıç paketi ve teslimler</h2><p>Mevcut numune, sağlam eş parça, montaj fotoğrafları ve bilinen kritik ölçüler çalışmayı besler. Teslim kapsamı ölçüm referanslarını, düzenlenebilir CAD modelini, değişiklik listesini ve geometri numunesini içerebilir. Nihai üretim adedi, malzemesi ve kontrol raporu beklentisi tanımlanarak kurumsal satın alma sürecine uygun bir teknik kapsam hazırlanabilir.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/tersine-muhendislik-govde.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 40
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "moduler-urun-platformu",
+    "title_tr": "Modüler ürün ailesi geliştirme",
+    "excerpt_tr": "Farklı cihaz boyutlarını ortak tasarım dili, değiştirilebilir bağlantı modülleri ve izlenebilir revizyonlarla birleştiren ürün ailesi uygulaması.",
+    "industry": "Ürün geliştirme",
+    "content_tr": "<h2>İhtiyaç: her modeli sıfırdan tasarlamamak</h2><p>Bir ürün ailesinde farklı kartlar ve bağlantılar kullanılırken dış görünüşün ve bakım yaklaşımının tutarlı kalması istenebilir. Bu uygulama, üç farklı gövde boyutunu ortak mimari içinde ele alır. Hedef; hangi parçaların ortak tutulabileceğini, hangi bölümlerin ürün seçeneğine göre değişeceğini ve sürüm ilişkilerini görünür kılmaktır.</p><h2>Yaklaşım: platform ve varyant ayrımı</h2><p>Ön yüz, dış kabuk, arka bağlantı modülü ve iç taşıyıcı için işlev sınırları tanımlanır. Bir modül değiştiğinde etkilenecek bağlantılar ve sabit kalacak ölçüler birlikte değerlendirilir. Ortak köşe dili ve yüzey geçişleri görsel bütünlüğü desteklerken montaj yönü, sabitleme elemanları ve servis erişimi teknik omurgayı oluşturur.</p><h2>Kabul: birlikte çalışan varyantlar</h2><p>Değerlendirme, yalnızca her gövdenin ayrı ayrı uygunluğunu değil, ortak modüllerin planlanan varyantlarla eşleşmesini de kapsar. Numunelerde montaj sırası, parça karışıklığı riski ve kullanıcı temas noktaları incelenebilir. Ortaklaştırmanın maliyet ya da stok avantajı proje verileriyle hesaplanır; uygulama üzerinden sayısal tasarruf sonucu ileri sürülmez.</p><h2>Kapsam ve ürün ekibinden gerekenler</h2><p>Planlanan cihaz seçenekleri, kart yerleşimleri, konektör listeleri ve değişmemesi gereken marka öğeleri başlangıçta paylaşılır. Çıktılar platform CAD yapısını, varyant eşleştirme tablosunu, numune setini ve sürüm kayıtlarını içerebilir. İlk ürünün onayıyla sonraki modellerin değerlendirmesi ilişkilendirilerek geliştirme ve sipariş süreçlerinde hangi geometriye başvurulacağı net tutulur.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/moduler-urun-platformu.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 50
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "kurumsal-montaj-seti",
+    "title_tr": "Kurumsal proje için montaj seti",
+    "excerpt_tr": "Bir kurumsal projenin farklı özel parçalarını montaj ilişkileri, parça kodları ve teslim kapsamıyla birlikte planlayan üretim seti uygulaması.",
+    "industry": "Proje bazlı üretim",
+    "content_tr": "<h2>İhtiyaç: farklı parçaları tek sistemde buluşturmak</h2><p>Bir cihaz kurulumu veya saha uygulaması, tek bir parçadan çok birbirine bağlı özel bileşenler gerektirebilir. Bu uygulama; konumlandırma braketleri, sensör muhafazası, kablo kılavuzu, montaj plakası ve ara parçayı ortak proje setinde toplar. Temel mesele, her parçanın işleviyle birlikte diğer bileşenlere olan bağımlılığını anlaşılır kılmaktır.</p><h2>Yaklaşım: parça listesi üzerinden koordinasyon</h2><p>Her bileşene işlevi, bağlantı arayüzü, revizyonu ve miktarıyla birlikte ayrı kimlik verilir. Ortak montaj referansları belirlenir; uygun üretim yöntemi ve malzeme her parçanın kullanımına göre değerlendirilebilir. Taşıma tepsisindeki düzen, kurulum sırasını anlatan bir sunum fikridir; üretilecek ambalajın yapısı teslim koşullarına göre ayrıca tasarlanır.</p><h2>Kabul: parçadan bütün montaja</h2><p>Kontrol planı tekil ölçülerle sistem uyumunu birleştirir. Kritik bağlantılar numune montajında, görünür yüzeyler ise hedef kullanım bağlamında değerlendirilebilir. Setin eksiksizliği, parça revizyonlarının tutarlılığı ve montaj erişimi teslim öncesi kontrol başlıklarıdır. Çalışmanın görseli, tamamlanmış müşteri kurulumu ya da sahada doğrulanmış bir sistem olarak sunulmaz.</p><h2>Talep ve teslim organizasyonu</h2><p>Sistem yerleşimi, mevcut CAD dosyaları, parça listesi ve kurulum takvimi başlangıç girdileridir. Kapsam; eksik parçaların modellenmesi, prototip seti, onaylı üretim parçaları ve paketleme düzenini içerebilir. Farklı lokasyonlara teslim veya aşamalı sipariş ihtiyacı varsa aynı teknik revizyonun hangi pakete gireceği teklif aşamasında kaydedilir.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/kurumsal-montaj-seti.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 60
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "uretim-master-modeli",
+    "title_tr": "Üretim hazırlığı için master model",
+    "excerpt_tr": "Bir ekipman kapağının form, yüzey ve sonraki üretim adımlarını ortak referans geometri üzerinden inceleyen master model uygulaması.",
+    "industry": "Proje bazlı üretim",
+    "content_tr": "<h2>İhtiyaç: onaylı formu fiziksel referansa taşımak</h2><p>Bir ürünün dış yüzeyini değerlendirmek için ekrandaki modelin ötesinde fiziksel bir referans gerekebilir. Bu uygulama, eğrisel ekipman kapağını erken geometri numunesi ve yüzeyi geliştirilmiş master model yaklaşımıyla ele alır. Amaç, form onayıyla sonraki üretim hazırlığını ilişkilendirmek ve değişen yüzey kararlarının kaydını tutmaktır.</p><h2>Yaklaşım: geometri ve bitişi birlikte planlamak</h2><p>Görünecek yüzeyler, birleşim çizgileri, kenarlar ve tutulacak referans bölgeler başlangıçta ayrılır. Modelin üretim yönü, bölümlere ayrılması ve birleşim yerlerinin bitirilmesi değerlendirilir. Zımpara, dolgu veya kaplama gibi işlemlerin gerekliliği hedef yüzey üzerinden belirlenir; tek bir işlem sırası tüm geometriler için önceden kabul edilmez.</p><h2>Kabul: yüzeyi amaçlanan koşulda görmek</h2><p>Form değerlendirmesi, hedef ışık altında yüzey sürekliliği ve karşı parçayla birleşim kontrolünü kapsayabilir. Master modelin sonraki kalıplama veya çoğaltma yöntemine uygunluğu, o sürecin gereksinimleriyle ayrıca incelenir. Görseldeki yüzey kalitesi numune kararı için bir anlatım öğesidir; teslim edilmiş ürünün toleransını veya seri üretim sonucunu belgelememektedir.</p><h2>Başlangıç girdileri ve çıktı paketi</h2><p>Güncel CAD dosyası, görünen yüzeylerin tanımı, bitiş referansları ve modelin sonraki kullanım amacı paylaşılır. Çalışma kapsamı geometri hazırlığını, numuneyi, yüzey geliştirmeyi ve onay kayıtlarını içerebilir. Farklı boyutlu ürünlerde taşıma, birleşim ve saklama koşulları da ele alınarak fiziksel modelin kullanım ömrüne uygun bir teslim planı oluşturulur.</p>",
+    "cover_image_url": "/images/portfolio/3dyanimda/uretim-master-modeli.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 70
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "montaj-konumlandirma-fiksturu",
+    "title_tr": "Çok istasyonlu montaj fikstürü",
+    "excerpt_tr": "İş parçasını referans yüzeylerinden konumlandırmayı ve operatör erişimini birlikte ele alan değiştirilebilir yataklı montaj fikstürü uygulaması.",
+    "industry": "Üretim hatları",
+    "content_tr": "<h2>İhtiyaç: montaj sırasında kararlı yerleşim</h2><p>Bir iş parçasının her çevrimde aynı yönle yerleşmesi, montaj akışının temel girdilerindendir. Bu uygulama, metal taban üzerindeki parçaya özel yataklar ve mekanik bağlama elemanlarıyla konumlandırma yaklaşımını gösterir. Referans yüzeyleri, montaj aletlerinin yaklaşma yönü ve operatörün parçayı çıkarma hareketi aynı düzen içinde değerlendirilir.</p><h2>Yaklaşım: taban, yatak ve bağlama ilişkisi</h2><p>Ortak tabana bağlanan özel yataklar, farklı ürün varyantları için değiştirilebilir bileşenler olarak ele alınır. Dayama noktaları ve bağlantı elemanları, parçayı istenmeyen biçimde zorlamayacak bir yerleşim için birlikte incelenir. Katmanlı üretim, geometrisi ürüne uyarlanan yatakları denemekte kullanılabilir; işlevsel malzeme seçimi temas ve çalışma koşullarına bağlıdır.</p><h2>Kabul: gerçek montaj sırasıyla değerlendirme</h2><p>İlk numunede yerleştirme yönü, bağlama sırası, takım erişimi ve parçanın çıkarılması gözlemlenir. Konum tekrarına ilişkin beklentiler ölçüm yöntemiyle birlikte tanımlanır; yüzeyde iz oluşumu ve kullanım boyunca değişebilecek temas bölgeleri kaydedilir. Görsel, gerçekleşmiş bir üretim hattı kurulumu veya ölçülmüş çevrim süresi iyileştirmesi iddiası içermez.</p><h2>Proje girdileri ve teslim kapsamı</h2><p>İş parçasının CAD modeli, montaj operasyonları, mevcut masa arayüzü ve kritik referanslar başlangıç verileridir. Fikstür yerleşimi, yatak geometrileri, montaj numunesi ve revizyon dokümanı kapsamlandırılabilir. Birden fazla istasyon için talep varsa ortak ve istasyona özgü bileşenler ayrılarak onaylı tasarımın hangi operasyonda kullanılacağı açık tutulur.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/montaj-konumlandirma-fiksturu.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 10
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "kalite-kontrol-aparati",
+    "title_tr": "Geometrik kontrol için referans aparatı",
+    "excerpt_tr": "Ölçüm sırasında parçanın yerleşimini ve kontrol noktalarına erişimi planlayan, değiştirilebilir referans yataklı kontrol aparatı uygulaması.",
+    "industry": "Kalite kontrol",
+    "content_tr": "<h2>İhtiyaç: ölçümün başlangıç konumunu tanımlamak</h2><p>Bir parçanın ölçülmesi sırasında nasıl tutulduğu, hangi yüzeyin referans alındığı ve ölçüm noktasına nasıl ulaşıldığı açık olmalıdır. Bu uygulama, gövdeyi özel yataklarda taşıyan kontrol aparatını ele alır. Geometri, parçanın yerleşimiyle ölçüm aracının erişimini birlikte düşünmek için hazırlanmış bir anlatım modelidir.</p><h2>Yaklaşım: referansları kontrol planına bağlamak</h2><p>Teknik resimde belirtilen dayanaklar, aparatın destek ve yönlendirme bölgelerine aktarılır. Temas noktaları, bağlama etkisi ve parça varyantları birlikte değerlendirilir. Ölçüm kolunun yerleşimi yalnızca bir gösterim seçeneğidir; gerçek projede kullanılacak ölçüm cihazı, prob erişimi ve kontrol sırası mevcut kalite planına göre belirlenir.</p><h2>Kabul: cihaz ve aparatın birlikte değerlendirilmesi</h2><p>Numune çalışmasında parçanın doğru yönle yerleşmesi, kontrol noktalarının erişilebilirliği ve operatörün yerleştirme sırası incelenir. Tekrarlanabilirlik beklentisi uygun ölçüm çalışmasıyla sınanır. Aparatın kendisi tek başına kalibrasyon, tolerans uygunluğu veya ürün kabulü sağlamaz; sonuçların anlamı kullanılan yöntem, cihaz ve referans koşullarıyla birlikte değerlendirilmelidir.</p><h2>İstenen bilgiler ve olası teslimler</h2><p>Güncel teknik resim, CAD dosyası, kontrol edilecek özellikler ve mevcut ölçüm ekipmanı paylaşılır. Kapsam, aparat modeli, referans yerleşim açıklaması, numune ve revizyon listesini içerebilir. Kontrol raporunun biçimi, parça değişim sıklığı ve farklı ürünler için kullanılacak yatakların ayrımı da başlangıçta konuşularak kalite ekibinin günlük işleyişine uygunlaştırılır.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/kalite-kontrol-aparati.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 20
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "konveyor-kilavuz-sistemi",
+    "title_tr": "Konveyör için değiştirilebilir kılavuz",
+    "excerpt_tr": "Ürün geçişini, değişen geometrileri ve bakım erişimini aynı düzen içinde ele alan ayarlanabilir konveyör kılavuzu uygulaması.",
+    "industry": "Üretim hatları",
+    "content_tr": "<h2>İhtiyaç: ürünün geçişini yönlendirmek</h2><p>Konveyör üzerindeki ürünün duruşu ve hat boyunca değişen temasları, kılavuzun biçimini etkiler. Bu uygulama, silindirik bir ürün için giriş bölgeleri ve yan kılavuzlardan oluşan düzeni ele alır. Amaç, mevcut taşıma sistemine uyarlanan parçaların montajını ve ürün değişimindeki ayar ihtiyaçlarını birlikte incelemektir.</p><h2>Yaklaşım: temas yüzeyi ile taşıyıcıyı ayırmak</h2><p>Metal bağlantı elemanları ve ayar yuvaları, ürüne temas eden değiştirilebilir bloklardan ayrı düşünülür. Geçişlerdeki açıklık, giriş eğrisi ve bağlantı noktalarına erişim değerlendirilir. Kılavuz malzemesinin seçimi; ürün yüzeyi, sürtünme, temizlik yöntemi ve kullanım ortamına göre yapılır; görseldeki renk tek başına malzeme tanımı değildir.</p><h2>Kabul: ürün akışını sahada sınamak</h2><p>Değerlendirme senaryosu, hattın gerçek ürünlerini ve çalışma koşullarını içermelidir. İlk geometri numunesi montaj ve geçiş kontrolünde kullanılabilir; takılma, yüzeyde iz oluşumu ve ayar sonrası davranış gözlemlenir. Çalışma hızı veya aşınma ömrü için sonuç ancak uygun denemelerle belirlenebilir; uygulama bunlar hakkında gerçekleşmiş performans iddiası taşımaz.</p><h2>Başlangıç verileri ve çıktı kapsamı</h2><p>Konveyör yerleşimi, montaj arayüzleri, ürün boyut seçenekleri ve gözlenen geçiş sorunları talebe eklenir. Kapsam kılavuz geometrilerini, bağlantı yerleşimini, numune setini ve ürün değişiminde kullanılacak ayar referanslarını içerebilir. Yedek temas blokları veya farklı hat noktaları için üretim isteniyorsa miktarlar ve onaylı revizyonlar ayrı kalemlerle tanımlanır.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/konveyor-kilavuz-sistemi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 30
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "sensor-konumlandirma-modulu",
+    "title_tr": "Otomasyon sensörü konumlandırma modülü",
+    "excerpt_tr": "Sensörün görüş alanını, konum ayarını, korunmasını ve kablo güzergâhını birlikte planlayan otomasyon modülü uygulaması.",
+    "industry": "Endüstriyel otomasyon",
+    "content_tr": "<h2>İhtiyaç: sensörü doğru konumda tutmak</h2><p>Bir sensörün algılama işlevi, çevresindeki mekanik yerleşimle yakından ilişkilidir. Bu uygulama, ayarlanabilir ray, yönlendirme desteği ve koruyucu başlıktan oluşan montajı ele alır. Hedef, sensörün görüş alanı ile ekipmanın çevresindeki hareketleri birlikte değerlendirmek ve kurulumu tekrar tanımlanabilir bir mekanik düzene bağlamaktır.</p><h2>Yaklaşım: ayar ve servis erişimini korumak</h2><p>Montaj arayüzü, konum ayarı ve koruyucu parça ayrı görevler üstlenir. Kablo çıkışı, konektör erişimi ve başlığın sensör yüzeyini gölgelememesi tasarımın parçasıdır. Hareketli parçalarla açıklık ve temizlik erişimi de değerlendirilir. Gösterilen sensör genel bir temsilidir; gerçek cihazın üretici ölçüleri ve montaj gereksinimleri esas alınmalıdır.</p><h2>Kabul: mekanik yerleşim ve algılama birlikte</h2><p>Numunede ayar aralığı, sabitleme erişimi ve kablonun hareket boyunca konumu incelenebilir. Sensörün gerçek ürünleri algılaması, titreşim altında davranışı ve çevresel etkilerden korunması sistem koşullarında ayrıca denenir. Koruyucu başlığın varlığı tek başına darbe, su veya başka çevresel koşullara dayanım onayı anlamına gelmez.</p><h2>Gerekli bilgiler ve teslimler</h2><p>Sensör modeli, teknik çizimi, hedef ürünün hareketi, görüş mesafesi ve mevcut bağlantı yüzeyi paylaşılır. Modül CAD modeli, montaj yerleşimi, prototip bileşenler ve revizyon kaydı çalışmanın çıktıları olabilir. Farklı sensör seçenekleri veya hat istasyonları bulunuyorsa ortak taşıyıcıyla değiştirilebilir arayüzlerin kapsamı ayrıca tanımlanarak saha kurulumları arasında tutarlılık hedeflenir.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/sensor-konumlandirma-modulu.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 40
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "vakum-sekillendirme-modeli",
+    "title_tr": "Vakum şekillendirme için kalıp modeli",
+    "excerpt_tr": "Ürün formu, çıkış yönü, hava tahliyesi ve altlık ilişkisini birlikte ele alan vakum şekillendirme modeli uygulaması.",
+    "industry": "Üretim hazırlığı",
+    "content_tr": "<h2>İhtiyaç: formu üretim sürecine hazırlamak</h2><p>Bir yüzey geometrisinin fiziksel olarak üretilebilmesi, kullanılacak şekillendirme yönteminin sınırlarıyla birlikte değerlendirilmesini gerektirir. Bu uygulama, yükseltilmiş hacimleri olan bir model ve yanında gösterilen temsili şekillenmiş parça üzerinden yaklaşımı anlatır. Modelin çıkarılması, altlığa bağlanması ve işlem sırasında erişilmesi tasarımın başlangıç kararları arasındadır.</p><h2>Yaklaşım: geometriyi prosesle birlikte ele almak</h2><p>Çıkış yönleri, köşe geçişleri, yüzey kalitesi ve hava tahliyesi için ayrılacak bölgeler incelenir. Modelin tek parça ya da modüler hazırlanması, üretim ve bakım ihtiyaçlarına göre değerlendirilebilir. Katmanlı üretimle hazırlanan geometriye uygulanacak son işlemler ve altlık seçimi, gerçek şekillendirme koşulları bilinmeden kesinleştirilmez.</p><h2>Kabul: deneme parçasından geri bildirim</h2><p>İlk model üzerinden yürütülecek denemede parçanın çıkışı, yüzeydeki aktarım izleri ve kritik bölgelerin oluşumu gözlemlenir. Kullanılacak levha, sıcaklık koşulları ve çevrim planı modele ilişkin kabul ölçütlerini etkiler. Görseldeki örnek bir üretim sonucunun belgesi değildir; süreç uygunluğu ve model ömrü ayrı değerlendirmelerle doğrulanmalıdır.</p><h2>Talep paketi ve proje çıktıları</h2><p>Hedef parça modeli, malzeme bilgisi, makine yerleşimi, altlık ölçüleri ve beklenen üretim adedi başlangıç girdileridir. Kapsam; modele uyarlama, prototip üretimi, yüzey hazırlığı ve deneme sonrası revizyonları içerebilir. Üretim ekibiyle paylaşılacak teknik dosyalar ve kabul kayıtları belirlenerek tasarım değişikliklerinin sonraki deneme parçalarıyla ilişkilendirilmesi sağlanabilir.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/vakum-sekillendirme-modeli.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 50
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "bakim-erisimi-aparati",
+    "title_tr": "Bakım işlemleri için erişim aparatı",
+    "excerpt_tr": "Bir alt grubu servis sırasında uygun yönde tutmayı ve çevresindeki bağlantılara erişimi planlayan bakım aparatı uygulaması.",
+    "industry": "Bakım mühendisliği",
+    "content_tr": "<h2>İhtiyaç: bakım noktasına erişim sağlamak</h2><p>Bir makine alt grubunda bakım yapılırken bileşenin duruşu, bağlantıların erişilebilirliği ve kabloların konumu önem kazanır. Bu uygulama, silindirik bir alt grubu açılı biçimde taşıyan destek ve ayrı kablo tutucuyu ele alır. Amaç, servis işleminin sırasını mekanik yerleşimle birlikte inceleyerek gerekli aparat geometrisini tanımlamaktır.</p><h2>Yaklaşım: görev ve temas noktalarını ayırmak</h2><p>Desteğin oturma yüzeyleri, kaymayı sınırlayan temas bölgeleri ve takviye nervürleri birlikte düşünülür. Bağlantı elemanlarına erişim için açılan boşluklar, parçanın tutulmasını zorlaştırmayacak şekilde değerlendirilir. Taşınabilirlik, tezgâha sabitleme ve kabloyu geçici olarak düzenleme gereksinimleri, bakım ekibinin gerçek işlem sırasına göre ayrı kalemler halinde ele alınır.</p><h2>Kabul: uygulanacak işlemin koşulları</h2><p>Numune değerlendirmesinde alt grubun yerleştirilmesi, sökme takımlarının erişimi ve yeniden alınması kontrol edilir. Destek üzerinde uygulanacak kuvvetler ve devrilme riski, gerçek çalışma biçimine göre ayrıca değerlendirilmelidir. Bu uygulama kaldırma donanımı veya güvenliği doğrulanmış yük taşıma aparatı olarak sunulmaz; uygunluk kararı kullanım koşulları ve kontrol planıyla ilişkilidir.</p><h2>Başlangıç bilgileri ve teslim kapsamı</h2><p>Alt grubun ölçüleri, kütlesi, servis adımları, kullanılacak takımlar ve tezgâh düzeni paylaşılır. Kapsam aparat CAD modelini, montaj veya erişim numunesini ve revizyon kayıtlarını içerebilir. Bakımda farklı ürün çeşitleri bulunuyorsa değiştirilebilir temas parçaları ayrıca planlanarak her alt grubun hangi yerleşimle değerlendirileceği açıkça belgelenir.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/bakim-erisimi-aparati.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 60
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "moduler-test-duzenegi",
+    "title_tr": "Ürün doğrulama için modüler test düzeneği",
+    "excerpt_tr": "Farklı numunelerin aynı temel düzen üzerinde konumlandırılmasını ve deneme koşullarının kaydedilmesini ele alan test düzeneği uygulaması.",
+    "industry": "Kalite kontrol",
+    "content_tr": "<h2>İhtiyaç: numuneleri tanımlı koşullarda karşılaştırmak</h2><p>Ürün geliştirmede farklı revizyonların değerlendirilmesi, numunelerin nasıl yerleştirildiğinin açık olmasını gerektirir. Bu uygulama, profil çerçeve, hareketli taşıyıcı ve değiştirilebilir tutucularla kurulan masaüstü düzeni ele alır. Hedef, aynı temel yerleşimde farklı ürün geometrilerinin nasıl konumlandırılabileceğini ve değişen deneme parametrelerinin nasıl ayrılacağını göstermektir.</p><h2>Yaklaşım: ortak iskelet, özel numune arayüzü</h2><p>Çerçevenin bağlantıları ve hareket alanı, numuneye temas eden parçaların geometrisinden ayrı değerlendirilir. Tutucuların değişimi, montaj referansları ve ayar noktaları izlenebilir biçimde tasarlanabilir. Düzenin ölçeği, sabitlenmesi ve uygulanacak hareket ya da yük türü belirlenmeden herhangi bir deney kapasitesi veya ölçüm doğruluğu varsayılmaz.</p><h2>Kabul: deney planına bağlı doğrulama</h2><p>Numune üzerindeki temaslar, yerleştirme sırası ve kontrol edilecek hareket ilk inceleme başlıklarıdır. Sonuç üretilecekse sensör, ölçüm aracı, veri kaydı ve karşılaştırma yöntemi ayrıca tanımlanır. Görsel yalnızca mekanik uygulamai gösterir; standarda uygun test cihazı, tamamlanmış deney veya ürün performansının kanıtı olarak değerlendirilmez.</p><h2>Talep girdileri ve çıktı yapısı</h2><p>Numune ailesi, denenmek istenen özellik, mevcut ekipman ve kayıt ihtiyacı başlangıçta paylaşılır. Çalışma kapsamına mekanik yerleşim, değiştirilebilir tutucu CAD modelleri, geometri numunesi ve revizyon listesi alınabilir. Farklı denemelerin karışmaması için numune sürümüyle düzenek ayarlarını ilişkilendiren kayıt yapısı da proje ekibiyle birlikte planlanabilir.</p>",
+    "cover_image_url": "/images/portfolio/3dsanayi/moduler-test-duzenegi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 70
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "karma-kullanim-sunum-maketi",
+    "title_tr": "Karma kullanımlı proje sunum maketi",
+    "excerpt_tr": "Yapı kütleleri, açık alanlar ve yaya ilişkilerini ortak sunum dilinde birleştiren karma kullanımlı mimari proje uygulaması.",
+    "industry": "Mimari sunum",
+    "content_tr": "<h2>İhtiyaç: çok katmanlı projeyi birlikte anlatmak</h2><p>Konut, çalışma ve ortak kullanım alanlarını bir araya getiren projelerde tek bir cephe görüntüsü bütün yerleşimi anlatmayabilir. Bu uygulama, yapı kütleleriyle aralarındaki açık alanları ortak maket tabanında ele alır. Amaç, izleyicinin farklı işlevleri, girişleri ve mekânsal ilişkileri kısa bir bakışta takip edebilmesini sağlamaktır.</p><h2>Yaklaşım: ölçeği anlatım amacıyla seçmek</h2><p>Maketin sunulacağı ortam, izleme mesafesi ve vurgulanacak mimari kararlar birlikte değerlendirilir. Kütle, cephe, peyzaj ve dolaşım detayları seçilen ölçeğe göre sadeleştirilebilir. Model parçalarının üretime hazırlanması, tabanla ilişkisi ve taşınabilir bölümlere ayrılması; projenin görsel dili ve kurulum koşullarıyla birlikte planlanır.</p><h2>Kabul: proje dosyası ve sunum okunaklılığı</h2><p>İlk kontrol, maketteki kütlelerin güncel mimari model ve vaziyet planıyla eşleşmesine odaklanır. Renk, doku ve detay düzeyi örnek parçalar üzerinden değerlendirilebilir. Uygulamadaki yapılar özgün bir anlatım çalışmasıdır; proje sunumunda kütle ve mekân ilişkisini değerlendirmek için kullanılır.</p><h2>Başlangıç paketi ve teslim organizasyonu</h2><p>Güncel mimari dosyalar, vaziyet planı, cephe referansları, yaklaşık taban alanı ve sunum tarihi paylaşılır. Kapsam; model hazırlığı, numune onayı, fiziksel maket, taban ve ambalajı içerebilir. Sökülebilir bölümler, aydınlatma veya sonradan değiştirilecek yapı adaları isteniyorsa bu özellikler üretim başlamadan önce ayrı teslim kalemleri olarak tanımlanır.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/karma-kullanim-sunum-maketi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 10
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "endustriyel-tesis-yerlesimi",
+    "title_tr": "Endüstriyel tesis yerleşim maketi",
+    "excerpt_tr": "Üretim binaları, servis yolları ve tesis içi ilişkileri görünür kılan, açılabilir bölümlerle geliştirilebilen endüstriyel yerleşim uygulaması.",
+    "industry": "Endüstriyel maket",
+    "content_tr": "<h2>İhtiyaç: tesisin bütününü görünür kılmak</h2><p>Bir endüstriyel kampüste yapıların konumu kadar servis yolları, yükleme alanları ve süreçler arası bağlantılar da anlatılmak istenebilir. Bu uygulama, fabrika kütleleriyle çevre düzenini tek taban üzerinde ele alır. Ayrılabilir çatı fikri, dış yerleşim ile iç organizasyonun aynı sunumda farklı ayrıntı düzeyleriyle gösterilebilmesine olanak tanır.</p><h2>Yaklaşım: hiyerarşiyi ölçekle kurmak</h2><p>Ana yapılar, yardımcı tesisler ve seçilmiş proses öğeleri anlatımdaki önemlerine göre ayrılır. Borular, tanklar ve yapı içi elemanların detay düzeyi sunum mesafesine uygunlaştırılır. Açılabilir bölümlerin birleşimleri ve taşıma sırasında korunacak parçalar, görünüş kadar montaj ve kullanım açısından da tasarım sürecine dahil edilir.</p><h2>Kabul: yerleşim ve anlaşılabilirlik</h2><p>Maket, güncel tesis planı üzerinden bina konumları ve dolaşım ilişkileri bakımından kontrol edilir. Çatıların çıkarılması, hassas elemanlara erişim ve yeniden montaj sırası numuneyle değerlendirilebilir. Bu görsel belirli bir fabrikanın teslim edilmiş modeli değildir; proses kapasitesi, emniyet mesafeleri veya tesis mühendisliği onayı hakkında iddia içermez.</p><h2>Talep bilgileri ve teslim kapsamı</h2><p>Vaziyet planı, yapı modelleri, gösterilecek proses bölümleri ve sunum hedef kitlesi başlangıç girdileridir. Kapsama model sadeleştirme, fiziksel üretim, taban, sökülebilir parçalar ve taşıma koruması alınabilir. Tesisin farklı fazları gösterilecekse değiştirilecek bölgeler önceden tanımlanarak sonraki güncellemelerin mevcut maketle nasıl eşleşeceği birlikte planlanır.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/endustriyel-tesis-yerlesimi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 20
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "topografya-yerlesim-modeli",
+    "title_tr": "Topoğrafya ve yerleşim modeli",
+    "excerpt_tr": "Arazi eğimini, yapı oturumlarını ve açık alan kararlarını katmanlı yüzey üzerinden birlikte inceleyen topoğrafya uygulaması.",
+    "industry": "Arazi ve kent",
+    "content_tr": "<h2>İhtiyaç: araziyi düz plandan çıkarmak</h2><p>Eğimli bir arazide yapı yerleşimi, giriş kotları ve açık alanlar yalnızca üstten görünüşle kolay okunmayabilir. Bu uygulama, katmanlı topoğrafya üzerinde yapı kütlelerini ve doğal öğeleri bir araya getirir. Amaç, arazi biçiminin tasarım kararlarıyla ilişkisini fiziksel bir modelde karşılaştırmaya uygun hale getirmektir.</p><h2>Yaklaşım: veriyi okunabilir hacme dönüştürmek</h2><p>Eş yükselti bilgileri, sınırlar ve sabit referanslar ortak koordinat düzeninde hazırlanır. Katman aralığı ile bina detaylarının sadeleştirilmesi, modelin boyutu ve incelenecek kararlarla birlikte belirlenir. Bitki, su ve dolaşım öğelerinin görsel hiyerarşisi, arazi biçimini örtmeyecek ve önemli ilişkileri öne çıkaracak biçimde planlanabilir.</p><h2>Kabul: kot ve yerleşim ilişkileri</h2><p>İncelemede yapı oturumlarının konumu, araziyle birleşimleri ve farklı bakışlardan okunaklılık kontrol edilir. Modelin ölçeği ve gösterim yöntemi nedeniyle oluşan sadeleştirmeler proje ekibiyle açıkça paylaşılır. Görsel gerçek bir araziyi veya tamamlanmış planlama çalışmasını belgelememektedir; uygulama kararlarında ölçülü proje dosyaları ve ilgili teknik çalışmalar esas alınır.</p><h2>Başlangıç verileri ve teslimler</h2><p>Arazi modeli, eş yükselti çizgileri, yapı yerleşimi, sınırlar ve hedef sunum boyutu paylaşılır. Çalışma kapsamı veri düzenleme, katmanlı taban, yapı kütleleri ve sunum plintini içerebilir. Alternatif yerleşimler karşılaştırılacaksa çıkarılabilir yapı parçaları ve değişim senaryoları tanımlanarak modelin tasarım toplantılarında nasıl kullanılacağı önceden planlanır.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/topografya-yerlesim-modeli.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 30
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "enerji-tesisi-anlatim-maketi",
+    "title_tr": "Enerji tesisi için anlatım maketi",
+    "excerpt_tr": "Rüzgâr, güneş ve yardımcı tesis öğelerini ortak yerleşim diliyle anlatan, kurumsal sunum ve sergileme için enerji tesisi uygulaması.",
+    "industry": "Endüstriyel maket",
+    "content_tr": "<h2>İhtiyaç: teknik sistemi anlaşılır hale getirmek</h2><p>Bir enerji projesi farklı uzmanlıklardan izleyicilere anlatılırken ekipmanların yerleşimi ve birbirleriyle ilişkisi öne çıkabilir. Bu uygulama; rüzgâr türbinlerini, güneş paneli alanını ve yardımcı yapıları ortak bir kampüs modeli içinde gösterir. Hedef, teknik sunumda konuşulan bileşenleri izleyicinin takip edebileceği fiziksel bir çerçeveye taşımaktır.</p><h2>Yaklaşım: ayrıntı ile bütünlüğü dengelemek</h2><p>Türbin, panel dizileri ve servis yolları, seçilen ölçeğin izin verdiği detayla hazırlanır. İnce elemanların bağlantıları, taşımada korunması ve kurulum sırası değerlendirilir. Renkler ve malzeme görünüşleri, bileşen gruplarını ayırt etmeye yardımcı olacak şekilde seçilebilir; gerçek proje kullanılıyorsa yerleşim onaylı teknik çizimlerle eşleştirilir.</p><h2>Kabul: anlatım hedefini kontrol etmek</h2><p>Sunum maketinde bileşenlerin tanınması, aralarındaki mesafelerin doğru temsil edilmesi ve farklı görüş açılarından okunaklılık değerlendirilir. Hareket veya aydınlatma istenirse bunların kapsamı ayrıca ele alınır. Bu uygulama belirli bir enerji yatırımına ait değildir; enerji üretimi, saha uygunluğu veya teknik kapasite sonucu gösteren bir mühendislik modeli olarak sunulmaz.</p><h2>Proje girdileri ve teslim kapsamı</h2><p>Yerleşim planı, ekipman görünümleri, sunumun amacı ve sergileneceği alan başlangıçta paylaşılır. Kapsam model hazırlığı, fiziksel maket, sunum tabanı ve taşıma ambalajını içerebilir. Fuar gibi tekrar kurulum gerektiren kullanımlarda modüllerin korunması, yerlerine oturması ve sonrasında saklanması da üretim planına dahil edilebilir.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/enerji-tesisi-anlatim-maketi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 40
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "yapi-kesit-sunum-modeli",
+    "title_tr": "Mekânı açıklayan yapı kesit modeli",
+    "excerpt_tr": "Atrium, katlar ve dolaşım ilişkilerini seçilmiş bir kesitle görünür kılan, iç ve dış mekânı birlikte anlatan mimari uygulama.",
+    "industry": "Mimari sunum",
+    "content_tr": "<h2>İhtiyaç: iç mekânı dış kabukla birlikte göstermek</h2><p>Bir yapının içindeki boşlukları ve katlar arası ilişkileri anlatmak için dış cephe maketi yeterli olmayabilir. Bu uygulama, seçilmiş bir kesitle atriumu, merdivenleri, döşemeleri ve bölücüleri görünür kılar. Amaç, tasarımın mekânsal kararlarını izleyicinin farklı açılardan okuyabileceği fiziksel bir sunuma dönüştürmektir.</p><h2>Yaklaşım: kesit çizgisini anlatıma göre seçmek</h2><p>Gösterilecek ilişkiler belirlendikten sonra kesit düzlemi ve açık bırakılacak yüzeyler planlanır. Döşeme kalınlıkları, ince taşıyıcılar ve iç mekân ayrıntıları seçilen ölçekte üretilebilir biçimde ele alınır. Dış kabuk ile iç elemanların renk ve doku farkı, kesitteki derinliği ve mekân sınırlarını anlaşılır kılmak için kullanılabilir.</p><h2>Kabul: dosya uyumu ve görüş açıları</h2><p>Yapı modeliyle katların konumu, merdiven ilişkisi ve boşluklar karşılaştırılır. Önemli mekânların kesit yüzeyi veya komşu parçalar tarafından kapanmaması kontrol edilir. Uygulamadaki mimari özgündür ve tamamlanmış bir müşteri projesi olarak gösterilmez; maket, uygulama çizimi veya taşıyıcı sistem doğrulamasının yerine geçen bir teknik belge değildir.</p><h2>Başlangıç paketi ve çıktı planı</h2><p>Mimari model, kat planları, kesitler, vurgulanacak mekânlar ve sunum ortamı paylaşılır. Kapsam model düzenleme, fiziksel kesit maketi, taban ve hassas elemanların korunmasını içerebilir. Çıkarılabilir kat veya değiştirilebilir iç düzen isteniyorsa birleşimlerin nerede olacağı, üretim öncesinde görsel onayla birlikte teknik olarak da planlanır.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/yapi-kesit-sunum-modeli.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 50
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "kentsel-masterplan-modeli",
+    "title_tr": "Kentsel masterplan karar modeli",
+    "excerpt_tr": "Yapı yoğunluğu, meydan, park ve dolaşım kararlarını ortak ölçekte karşılaştırmaya yarayan kentsel masterplan uygulaması.",
+    "industry": "Arazi ve kent",
+    "content_tr": "<h2>İhtiyaç: plan kararlarını birlikte görmek</h2><p>Bir kentsel yerleşimde yapı kütleleri, açık alanlar ve dolaşım ağı birbirini etkiler. Bu uygulama, farklı yüksekliklerdeki kütleleri bir meydan ve doğrusal park çevresinde bir araya getirir. Hedef, tek bir yapıdan ziyade bütün yerleşimin mekânsal ilişkilerini tasarım toplantısı veya sunum sırasında görünür kılmaktır.</p><h2>Yaklaşım: karşılaştırmaya uygun sadeleştirme</h2><p>Bina kütleleri seçilen ölçekte ortak bir anlatım diliyle hazırlanır; ayrıntı yerine yerleşim, yükseklik ilişkisi ve boşluklar öne çıkarılır. Yollar, yaya güzergâhları ve bitkilendirme farklı görsel yoğunluklarla temsil edilebilir. Alternatiflerin denenebilmesi için bazı kütlelerin veya adaların çıkarılabilir olması modelin kullanım biçimine göre değerlendirilebilir.</p><h2>Kabul: model ile planın eşleşmesi</h2><p>İnceleme, kütle yerleşimleri ve kamusal alan sınırlarının güncel planla uyumunu kapsar. Karşılaştırılacak alternatifler aynı ölçek ve taban referansıyla hazırlanmalıdır. Görseldeki yerleşim gerçek bir kenti veya onaylanmış planı temsil etmez; nüfus, trafik, güneşlenme ya da mevzuat uygunluğu gibi konularda hesaplanmış sonuç iddiası içermez.</p><h2>Gerekli bilgiler ve teslimler</h2><p>Plan dosyaları, yapı kütleleri, sınırlar, gösterilecek alternatifler ve sunum boyutu talebe eklenir. Kapsam; veri sadeleştirme, taban üretimi, kütle setleri ve taşıma düzenini içerebilir. Bir karar toplantısında farklı seçenekler kullanılacaksa parçaların hangi senaryoya ait olduğu ve değişim sırası, proje ekibiyle kararlaştırılan kayıt düzeninde açık tutulur.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/kentsel-masterplan-modeli.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 60
+  },
+  {
+    "brand": "maketyanimda",
+    "slug": "urun-kesit-sergileme-modeli",
+    "title_tr": "Teknik ürün için sergileme modeli",
+    "excerpt_tr": "Bir teknik ürünün iç geometrisini görünür kılarak çalışma ilişkilerini açıklamayı amaçlayan kesitli sergileme modeli uygulaması.",
+    "industry": "Teknik sunum",
+    "content_tr": "<h2>İhtiyaç: kapalı gövdenin içini anlatmak</h2><p>Teknik ürünlerin önemli özellikleri çoğu zaman dışarıdan görülemeyen bölgelerde bulunur. Bu uygulama, pompa benzeri bir düzeneğin gövdesini keserek iç kanalı ve çarkı görünür kılar. Hedef, eğitim, satış görüşmesi veya fuar sunumunda anlatılan parçalar arasındaki mekânsal ilişkiyi anlaşılır bir fiziksel modele dönüştürmektir.</p><h2>Yaklaşım: işlevsel ayrımları görünür kılmak</h2><p>Gösterilecek bileşenler, izleyicinin bilmesi gereken sıraya göre seçilir. Kesit yüzeyi, renk ayrımları ve sadeleştirilmiş geometri iç düzenin okunmasını destekler. Modelin büyütülmesi, tabana bağlanması ve hassas bölümlerin korunması birlikte değerlendirilir. Çalışan mekanizma veya hareketli parça isteniyorsa bunun kapsamı statik sergileme modelinden ayrı tanımlanır.</p><h2>Kabul: teknik anlatım ve fiziksel kullanım</h2><p>Referans CAD verisiyle bileşenlerin konumu karşılaştırılır; önemli yüzeylerin kesit tarafından yanlış yorumlanacak biçimde kaybolmaması kontrol edilir. Modelin izleme mesafesi ve taşınması da değerlendirme kapsamındadır. Bu görsel özgün bir sergileme uygulamaidir; çalışan pompa, basınç altında kullanılabilir ürün veya ölçülmüş performans gösterimi olarak sunulmaz.</p><h2>Başlangıç verileri ve proje çıktıları</h2><p>Ürün modeli, anlatılacak teknik özellikler, hedef kitle ve sergi alanı bilgileri paylaşılır. Kapsam; model sadeleştirme, kesit düzeni, renk planı, fiziksel üretim ve sunum tabanını içerebilir. Kurumsal sunum dili veya açıklama etiketleri gerekiyorsa kullanılacak metinler ve görsel hiyerarşi, ürün ekibinin teknik onayıyla birlikte ayrıca hazırlanabilir.</p>",
+    "cover_image_url": "/images/portfolio/maketyanimda/urun-kesit-sergileme-modeli.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 70
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "makine-koruyucu-kapak",
+    "title_tr": "Makine için yeniden tasarlanan koruyucu kapak",
+    "excerpt_tr": "Mevcut kapağın bağlantılarını referans alıp erişim, takviye ve montaj ayrıntılarını yeniden değerlendiren yedek parça uygulaması.",
+    "industry": "Makine parçaları",
+    "content_tr": "<h2>İhtiyaç: kapağın görevini ve bağlantılarını anlamak</h2><p>Kırılmış bir kapakta yalnızca dış biçimi yeniden oluşturmak yeterli olmayabilir. Bağlantı tırnakları, açılma yönü ve çevre ekipmanla ilişkisi de değerlendirilmelidir. Bu uygulama, hasarlı numune ile iç takviye bölgeleri yeniden ele alınan kapağı yan yana gösterir; yeni geometriyi mevcut arayüzlerle birlikte incelemeyi amaçlar.</p><h2>Yaklaşım: korunacak ve değişecek bölgeler</h2><p>Montaj yüzeyleri, vida yuvaları ve erişim boşlukları numune ile eş parçalar üzerinden belirlenir. Hasar veya deformasyon bulunan alanlar doğrudan doğru ölçü kabul edilmez. Takviye nervürleri ve köşe geçişleri tasarım seçenekleri olarak incelenebilir; malzeme ve üretim yöntemi, kapağın karşılaşacağı sıcaklık, temas ve çevre koşullarına göre değerlendirilir.</p><h2>Kabul: montajdan kullanım uygunluğuna</h2><p>Geometri numunesiyle kapağın yerine oturması, açılıp kapanması ve çevre parçalara açıklığı kontrol edilebilir. Koruyucu işlev, darbe beklentisi veya makine güvenliğiyle ilgili gereksinimler ayrıca tanımlanmalıdır. Görseldeki revizyon, doğrulanmış bir makine güvenlik muhafazası veya orijinal parçayla eşdeğer performans kanıtı olarak sunulmaz; nihai kullanım kararı gerçek koşullara dayanır.</p><h2>Başlangıç paketi ve teslimler</h2><p>Kırık parça, sağlam eş numune, bağlantı bölgesinin fotoğrafları ve bilinen ölçüler talebe eklenir. Kapsam; yeniden modelleme, montaj numunesi ve onaylı revizyonun üretimini içerebilir. Parçanın erişim kapağı mı yoksa güvenlik işlevi bulunan bir muhafaza mı olduğu başlangıçta belirtilerek teknik değerlendirme ve gerekli kontrol adımları buna göre planlanır.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/makine-koruyucu-kapak.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 10
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "kirilmis-montaj-braketi",
+    "title_tr": "Numuneden güçlendirilmiş montaj braketi",
+    "excerpt_tr": "Kırılma bölgesini ve bağlantı geometrisini referans alarak takviye seçeneklerini inceleyen özel montaj braketi uygulaması.",
+    "industry": "Makine parçaları",
+    "content_tr": "<h2>İhtiyaç: kırılan biçimin ötesine bakmak</h2><p>Bir bağlantı braketi yeniden hazırlanırken kırılmanın yeri, parçanın montajı ve çalışma koşulları birlikte değerlendirilmelidir. Bu uygulama, kırılmış L biçimli numuneyle nervürlü bir geometri seçeneğini yan yana gösterir. Amaç, korunacak delik düzenini ve olası tasarım değişikliklerini açıkça ayırarak numune üzerinden ilerleyen bir geliştirme süreci tarif etmektir.</p><h2>Yaklaşım: bağlantı ve takviyeyi birlikte değerlendirmek</h2><p>Delik merkezleri, temas yüzeyleri, vida başı boşlukları ve çevredeki parçalar başlangıç referanslarıdır. Köşe geçişleri ve takviye nervürleri montaj erişimini kapatmadan ele alınır. Görseldeki daha dolgun geometri tek başına dayanım artışı kanıtlamaz; uygun malzeme, üretim yönü ve tasarım kararı gerçek yükleme biçimiyle birlikte değerlendirilmelidir.</p><h2>Kabul: uyum ve işlevi ayrı doğrulamak</h2><p>İlk numune üzerinde deliklerin eşleşmesi, vidalama erişimi ve parçanın yerleşimi kontrol edilebilir. İşlevsel kullanım için yük, titreşim, sıcaklık ve çevrim beklentileri tanımlanır. Güvenlik açısından kritik bağlantılarda gerekli mühendislik doğrulaması ayrıca planlanır; prototipin fiziksel olarak yerine oturması, kullanım ömrünün veya yük kapasitesinin doğrulandığı anlamına gelmez.</p><h2>Talep girdileri ve çıktı kapsamı</h2><p>Kırık parçanın tüm parçaları, montaj fotoğrafları, karşı bileşen ve varsa teknik resim paylaşılır. Kapsam; CAD modelini, alternatif geometriyi, uyum numunesini ve revizyon kaydını içerebilir. Yeni üretim miktarıyla tekrar sipariş ihtiyacı ayrıca belirtilerek onaylı tasarımın hangi dosya ve malzeme koşullarıyla üretileceği açıkça kayıt altına alınır.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/kirilmis-montaj-braketi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 20
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "cihaz-baglanti-adaptoru",
+    "title_tr": "İki sistemi buluşturan bağlantı adaptörü",
+    "excerpt_tr": "Farklı bağlantı arayüzlerini hizalama, sabitleme ve montaj erişimi üzerinden buluşturan özel cihaz adaptörü uygulaması.",
+    "industry": "Sistem uyarlama",
+    "content_tr": "<h2>İhtiyaç: farklı arayüzleri birlikte çalıştırmak</h2><p>İki ekipman parçasının bağlantı biçimi farklı olduğunda arada özel bir adaptör gerekebilir. Bu uygulama, bir ucunda dikdörtgen diğer ucunda dairesel bağlantı bulunan kademeli gövdeyi ele alır. Amaç, sistemlerin birbirine göre konumunu korurken sabitleme ve erişim gereksinimlerinin nasıl çözümlenebileceğini fiziksel geometri üzerinden incelemektir.</p><h2>Yaklaşım: her iki tarafın referanslarını korumak</h2><p>Bağlanacak yüzeyler, delik yerleşimleri, merkez eksenleri ve kullanılabilir hacim birlikte modellenir. Değiştirilebilir hizalama bileziği, farklı seçenekleri değerlendirmek için ayrı bir modül olarak düşünülebilir. Metal dişli elemanların kullanımı, bağlantının sökülme sıklığı ve uygulanacak kuvvetlerle ilişkilendirilir; bütün bileşenler için tek bir malzeme seçimi peşinen kabul edilmez.</p><h2>Kabul: montaj zincirini kontrol etmek</h2><p>Numune, iki karşı parçayla birlikte yerleşim ve alet erişimi açısından incelenir. Hizalama, boşluk ve sıkma sırası kontrol başlıkları arasındadır. Adaptörün yük aktarımı, sızdırmazlık veya elektriksel gereksinimleri varsa bunlar ayrıca doğrulanmalıdır. Konsept, gerçek bir cihaz üreticisinin onayladığı aksesuar veya işlevsel uygunluğu kanıtlanmış parça olarak sunulmaz.</p><h2>Başlangıç verileri ve teslimler</h2><p>Her iki arayüzün teknik dosyası, montaj fotoğrafları, çalışma koşulları ve hedef yerleşim talebe eklenir. Kapsam adaptör CAD modeli, uyum numunesi, montaj açıklaması ve onaylı revizyonu içerebilir. Birden fazla cihaz varyantı için çözüm isteniyorsa ortak gövdeyle değişen bilezik veya bağlantı parçalarının eşleştirmesi ayrıca hazırlanabilir.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/cihaz-baglanti-adaptoru.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 30
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "disli-geometri-prototipi",
+    "title_tr": "Aşınmış dişliden geometri prototipine",
+    "excerpt_tr": "Aşınmış numunedeki diş, göbek ve mil bağlantısını yeniden inceleyerek montaj kontrolüne hazırlayan dişli geometri uygulaması.",
+    "industry": "Makine parçaları",
+    "content_tr": "<h2>İhtiyaç: aşınmış numuneyi doğru yorumlamak</h2><p>Dişleri veya göbeği aşınmış bir parçanın görünüşü, başlangıçtaki tasarım ölçülerini doğrudan vermeyebilir. Bu uygulama, mevcut dişliyle benzer geometrinin prototipini ve ara bileşeni bir arada ele alır. Hedef, diş düzeni, göbek yapısı ve mil bağlantısı arasındaki ilişkileri yeniden modelleme öncesinde açıkça değerlendirmektir.</p><h2>Yaklaşım: geometriyi eş parçayla okumak</h2><p>Diş sayısı, diş profili, göbek boyutları ve kama bağlantısı gibi özellikler uygun referanslarla belirlenir. Eş dişli ve montaj düzeni, numunede kaybolmuş bilgiyi anlamaya yardımcı olabilir. Aşınmayı yeni modele taşımamak için sağlam bölgeler ve varsa teknik kayıtlar birlikte incelenir; yalnızca fotoğrafa bakarak işlevsel dişli ölçüsü kesinleştirilmez.</p><h2>Kabul: geometri kontrolü ile çalışma testi</h2><p>Prototip, mil üzerinde yerleşim, çevre parçalara açıklık ve düşük riskli montaj incelemesi için değerlendirilebilir. Gerçek çalışma için tork, hız, yağlama, sıcaklık ve kullanım çevrimi ayrıca ele alınır. Görseldeki polimer numune, çalışan mekanizmada kullanılabilirliği veya orijinal dişlinin yük kapasitesini karşıladığı doğrulanmış ürün olarak sunulmaz.</p><h2>Talep paketi ve çıktı kapsamı</h2><p>Numune, eş dişli, mil bağlantısı, makinenin kullanım bilgileri ve bilinen teknik ölçüler paylaşılır. Çalışma kapsamına geometri modeli, uyum numunesi ve kontrol edilecek özelliklerin listesi alınabilir. İşlevsel yedek parça üretimi isteniyorsa uygun yöntem, malzeme ve doğrulama gereksinimleri ayrıca kapsamlandırılarak geometri çalışmasından ayrı bir onay aşaması oluşturulur.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/disli-geometri-prototipi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 40
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "ozel-kablo-kilavuzu",
+    "title_tr": "Ekipmana özel kablo kılavuzu",
+    "excerpt_tr": "Ekipmanın bağlantı yüzeylerine uyarlanan kanallar, kapaklar ve değiştirilebilir klipslerle kablo güzergâhını düzenleyen tasarım uygulaması.",
+    "industry": "Ekipman ve cihaz",
+    "content_tr": "<h2>İhtiyaç: kablonun yolunu ekipmanla birlikte düşünmek</h2><p>Kabloların ekipman içinde veya çevresinde izlediği yol, servis erişimini ve hareketli parçalarla açıklığı etkiler. Bu uygulama, eğrisel kanal parçaları, çıkarılabilir kapaklar ve montaj klipslerini ortak bir düzen içinde ele alır. Amaç, mevcut bağlantı yüzeylerine uyarlanan güzergâhın montaj ve bakım sırasında nasıl kullanılacağını görünür kılmaktır.</p><h2>Yaklaşım: güzergâhı modüllere ayırmak</h2><p>Kablo demeti, konektörler ve erişilmesi gereken noktalar yerleşim modeline eklenir. Kanal kesiti ve dönüşleri, kablonun bükülme gereksinimleriyle birlikte değerlendirilir. Kapakların açılma yönü, klipslerin değiştirilebilmesi ve sabitleme elemanlarının erişimi tasarımın parçalarıdır. Malzeme seçimi, ekipmanın sıcaklık ve çevre koşullarına göre ayrıca yapılır.</p><h2>Kabul: yerleşim ve bakım denemesi</h2><p>Numunede kabloların yerleşmesi, kapakların kapanması ve konektörlerin servis sırasında çıkarılması incelenir. Hareketli uygulamalarda kablonun bütün hareket boyunca davranışı ayrıca değerlendirilmelidir. Konsept, elektriksel yalıtım sınıfı, alev davranışı veya kablo ömrü için doğrulanmış performans göstermemektedir; ilgili gereksinimler gerçek ekipman koşullarıyla birlikte kontrol planına alınır.</p><h2>Başlangıç bilgileri ve teslim planı</h2><p>Ekipman modeli, kablo ve konektör ölçüleri, mevcut bağlantılar ve bakım beklentisi paylaşılır. Kapsam güzergâh tasarımını, kanal ve klips modellerini, montaj numunesini ve revizyon listesini içerebilir. Farklı makine seçenekleri varsa ortak kanal parçalarıyla modele özel bağlantıların ayrımı, tekrar üretimde doğru bileşenlerin seçilebilmesi için açıkça tanımlanır.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/ozel-kablo-kilavuzu.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 50
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "servis-kontrol-dugmesi",
+    "title_tr": "Servis paneli için kontrol düğmesi seti",
+    "excerpt_tr": "Mil bağlantısı, kavrama yüzeyi ve panelle uyumu birlikte değerlendiren, farklı kontroller için ortak tasarım dilinde düğme seti uygulaması.",
+    "industry": "Ekipman ve cihaz",
+    "content_tr": "<h2>İhtiyaç: kullanıcı temasını ve bağlantıyı yenilemek</h2><p>Eksilen veya kırılan kontrol düğmelerinde mil bağlantısı kadar kullanıcının parçayı nasıl kavradığı da önemlidir. Bu uygulama, farklı boyutlardaki düğmeleri ortak biçim ve yüzey diliyle ele alır. Amaç, mevcut panel arayüzünü korurken yeni parçaların erişim ve montaj ihtiyaçlarını birlikte değerlendirmektir.</p><h2>Yaklaşım: iç bağlantı ve dış kavrama</h2><p>Mil kesiti, oturma derinliği ve varsa sabitleme mekanizması ölçülür. Dış çap, kavrama kanalları ve komşu kontrollere açıklık aynı yerleşimde incelenir. Metal insert veya farklı bağlantı seçeneği, kullanım koşullarına göre değerlendirilebilir. Görseldeki iç yüzey görünümü, bağlantı yapısını açıklayan bir tasarım gösterimidir; belirli bir cihaz markasının orijinal parçasını temsil etmez.</p><h2>Kabul: panel üzerinde denemek</h2><p>Numunede mil üzerine oturma, dönme hareketi, panel yüzeyine açıklık ve eldivenli kullanım gibi hedef senaryolar kontrol edilebilir. Gerekli dönme kuvveti, aşınma ve sıcaklık davranışı ayrıca değerlendirilir. Kontrolün anlamını gösteren işaretlerin yeniden üretilmesi gerekiyorsa bunların doğruluğu cihaz bilgisiyle teyit edilir; görsel çalışma işlevsel güvenlik onayı değildir.</p><h2>Talep ve teslim kapsamı</h2><p>Mevcut düğme veya sağlam eş örnek, mil ölçüsü, panel fotoğrafı ve kullanım koşulları paylaşılır. Kapsam düğme CAD geometrisini, uyum numunesini ve farklı kontrol seçeneklerinin üretimini içerebilir. Renk, işaretleme ve yüzey beklentileri başlangıçta belirlenerek setteki her parçanın hangi panel konumuna karşılık geldiği kayıt altına alınır.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/servis-kontrol-dugmesi.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 60
+  },
+  {
+    "brand": "parcayanimda",
+    "slug": "kullanim-kosuluna-ozel-yatak",
+    "title_tr": "Kullanım koşuluna özel destek yatağı",
+    "excerpt_tr": "Silindirik ekipmanın temas yüzeylerini, bağlantısını ve servis erişimini değiştirilebilir destek parçalarıyla ele alan özel yatak uygulaması.",
+    "industry": "Sistem uyarlama",
+    "content_tr": "<h2>İhtiyaç: ekipmana uygun temas oluşturmak</h2><p>Standart bir düz yüzey, silindirik ekipmanın konumlandırılması veya montajı için yeterli olmayabilir. Bu uygulama, nervürlü taban, değiştirilebilir temas ekleri ve tutma bantlarıyla kurulan destek düzenini ele alır. Hedef, ekipmanın oturduğu bölgeleri ve çevresindeki servis erişimini birlikte değerlendirerek parçaya özgü geometriyi görünür kılmaktır.</p><h2>Yaklaşım: taşıyıcı ve temas parçalarını ayırmak</h2><p>Tabanın bağlantı arayüzü ile ekipmana temas eden ekler farklı görevler üstlenir. Oturma biçimi, bağlantı yönü ve bantların geçtiği bölgeler birlikte modellenir. Temas malzemesi seçilirken yüzeyde iz oluşumu, sıcaklık ve kullanım ortamı dikkate alınır; farklı çaplara uyarlama ihtiyacı varsa ortak tabanın sınırları ayrıca incelenir.</p><h2>Kabul: yerleşim ve uygulama koşulları</h2><p>Geometri numunesinde ekipmanın oturması, bağlantılara erişim ve sökme sırası kontrol edilebilir. Uygulanacak yükler, titreşim, kayma veya devrilme olasılığı gerçek kullanım biçimine göre ayrıca değerlendirilir. Bu uygulama, kaldırma aparatı veya basınçlı ekipman için onaylı destek olarak sunulmaz; nihai işlev için uygun mühendislik ve kontrol kapsamı belirlenmelidir.</p><h2>Başlangıç verileri ve teslimler</h2><p>Ekipman ölçüleri, kütle bilgisi, desteklenecek yüzeyler, sabitleme noktaları ve çalışma ortamı paylaşılır. Kapsama CAD modeli, değiştirilebilir temas geometrileri, montaj numunesi ve revizyon kaydı alınabilir. Birden fazla cihaz için set hazırlanacaksa her ekipmanın doğru ek parçayla eşleşmesi, parça listesi ve onaylı sürüm bilgisi üzerinden yönetilir.</p>",
+    "cover_image_url": "/images/portfolio/parcayanimda/kullanim-kosuluna-ozel-yatak.webp",
+    "materials": [],
+    "tags": [
+      "application",
+      "illustrative-image"
+    ],
+    "sort_order": 70
+  }
+]

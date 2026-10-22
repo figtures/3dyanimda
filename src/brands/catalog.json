@@ -4,27 +4,27 @@
     "name": "3D Yanımda",
     "eyebrow": "KURUMSAL 3D ÜRETİM ÇÖZÜMLERİ",
     "title": "Fikrinizden parçaya.\nÜretim yanınızda.",
-    "lead": "3D Yanımda, İstanbul Ataşehir’de 3D baskı, 3D tarama ve 3D modelleme hizmetleri sunar. Fabrika parçasından hobi projenize; dosyanız, numuneniz veya fikrinizle başlayın.",
-    "focus": "Prototip & kurumsal üretim",
+    "lead": "Tek prototipten proje bazlı seri üretime, mühendislik odaklı 3D baskı, tarama ve modelleme. Ar-Ge, üretim ve satın alma ekipleri için dosya veya numuneden başlayarak kapsamı birlikte planlayalım.",
+    "focus": "Mühendislik & kurumsal üretim",
     "accent": "#2359e8",
     "ink": "#1c2328",
     "model": "form",
-    "featureTitle": "Bir parçadan fazlası.\nSürecinize uygun bir çözüm.",
-    "featureLead": "Bir tasarımı doğrulamak, montajı kolaylaştırmak veya az adetli bir ihtiyacı karşılamak için. Üretim yöntemini kullanım koşulları, adet ve hedeflenen işlevle birlikte değerlendiriyoruz.",
+    "featureTitle": "Projenizin ölçeğine göre.\nMühendislik yaklaşımıyla.",
+    "featureLead": "İlk prototip, özel aparat veya tekrarlanan üretim partileri. Kullanım koşullarını, kritik ölçüleri, adet planını ve kabul kriterlerini birlikte değerlendirerek tasarımdan teslimata proje kapsamını oluşturuyoruz.",
     "applications": [
       "Ürün geliştirme prototipleri",
       "Montaj yardımcıları",
       "Özel muhafaza & aparatlar",
-      "Küçük seri üretim"
+      "Proje bazlı seri üretim"
     ],
-    "description": "3D Yanımda: İstanbul’da 3D baskı, 3D tarama ve 3D modelleme. Prototip & kurumsal üretim için proje bazlı üretim.",
+    "description": "İstanbul Ataşehir’de mühendislik odaklı 3D baskı, tarama ve modelleme. Ürün geliştirme, özel parça ve kurumsal üretim projeleri için 3D Yanımda.",
     "heroAsset": "product-prototype",
     "heroCaption": "Elde kullanılan ürün için gövde prototipi",
     "applicationDetails": [
       "Tasarım kararlarını fiziksel model üzerinden değerlendirmek için form, yerleşim ve montaj prototipleri.",
       "Tekrarlayan montaj ve konumlandırma adımları için projeye özel yardımcı parçalar.",
       "Elektronik cihazlar, test düzenekleri ve özel sistemler için geometriye uygun muhafazalar.",
-      "Kalıp yatırımından önce veya düşük adetli ihtiyaçlarda değerlendirilebilecek üretim alternatifleri."
+      "Numune onayı, dosya revizyonu ve parti planıyla kapsamlandırılan seri ve tekrarlı üretim talepleri."
     ],
     "audiences": [
       "Ar-Ge & ürün geliştirme",
@@ -32,9 +32,9 @@
       "Satın alma"
     ],
     "audienceTexts": [
-      "Tasarımınızı fiziksel olarak değerlendirin. Model revizyonu, montaj kontrolü ve sonraki iterasyon için proje kapsamını birlikte belirleyelim.",
-      "Sahadaki ihtiyacı ölçülebilir bir parça tarifine dönüştürelim. Kullanım koşulları, bağlantı noktaları ve işlev üzerinden ilerleyelim.",
-      "Teknik kapsamı, adedi ve teslimat beklentisini aynı talepte toplayın. Proje bazlı üretim değerlendirmesi ve teklif için ortak bir başlangıç oluşturun."
+      "Ürün mimarisini, montaj ilişkilerini ve tasarım alternatiflerini fiziksel prototiple değerlendirin. Model revizyonlarını karar ve kabul kriterleriyle birlikte planlayalım.",
+      "Sahadaki ihtiyacı ölçülebilir bir parça tarifine dönüştürelim. Aparat, muhafaza ve işlevsel parça taleplerinde kullanım koşulları, kritik ölçüler ve üretim akışı üzerinden ilerleyelim.",
+      "Teknik kapsamı, adet ve tekrar sipariş planını, kontrol beklentisini ve teslimat takvimini aynı talepte toplayın. Projeye uygun üretim yöntemini ve teklif kalemlerini birlikte netleştirelim."
     ]
   },
   {

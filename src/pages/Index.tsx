@@ -24,7 +24,7 @@ import { useBrand } from "@/brands/config";
 import { useContent } from "@/content/useContent";
 import { Seo } from "@/components/site/Seo";
 const serviceIntroductions: Record<string, string[]> = {
-  "3dyanimda": ["Ürün ekibinizin sıradaki kararını fiziksel numuneyle netleştirin.", "Elinizdeki objenin formunu yeni ürün geliştirmede referans alın.", "Kullanım senaryonuzu ölçü ve geometriyle somutlaştırın."],
+  "3dyanimda": ["Prototip, özel parça ve üretim partilerini aynı mühendislik kapsamı içinde planlayın.", "Mevcut parçayı tersine mühendislik ve tasarım revizyonu için dijital referansa dönüştürün.", "Ürün mimarisini, kritik ölçüleri ve montaj ilişkilerini üretime yönelik CAD tasarımında birleştirin."],
   "3dsanayi": ["Montaj istasyonunuz için işe özel yardımcı ekipman geliştirin.", "Çizimi bulunmayan geometrileri mühendislik değerlendirmesine taşıyın.", "Sabit referansları ve ayarlanabilir bölgeleri birlikte planlayın."],
   "maketyanimda": ["Mimari kararlarınızı dokunulabilir ölçekte sunun.", "Özgün yüzey detaylarını maket çalışmasına aktarın.", "Kütle, cephe ve kurulum ilişkisini ölçeğe uyarlayın."],
   "parcayanimda": ["Eksik bileşeniniz için yeni üretim seçeneğini değerlendirin.", "Sağlam yüzeylerden yola çıkarak parça referansı oluşturun.", "Bağlantı noktanıza uyan yeni bir geometri tasarlayın."],

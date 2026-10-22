@@ -1,0 +1,550 @@
+{
+  "landing": [
+    {
+      "id": "346f07a6-e019-414c-9d0e-1584027899a1",
+      "faq": [
+        {
+          "a": "Aynı proje altında ayrı parça kodlarıyla değerlendirilebilir. Her numunenin amacı, adedi ve onay ölçütü talepte birbirinden ayrılmalıdır.",
+          "q": "Görünüş numunesi ile işlevsel prototip aynı siparişte olabilir mi?"
+        },
+        {
+          "a": "Mevcut eskizi, temel ölçüleri ve test etmek istediğiniz özelliği paylaşın. Önce modelleme kapsamını, ardından fiziksel numune ihtiyacını belirleyebiliriz.",
+          "q": "Modelim henüz tamamlanmadıysa nasıl başlayabilirim?"
+        },
+        {
+          "a": "Baskı numuneleri kargo, kurye veya elden teslim edilebilir; İstanbul dışındaki adreslere de kargo gönderimi yapılır. Örnek Mahallesi, Ataşehir’deki atölyeden teslim alacaksanız gelmeden randevu oluşturun. Numunenin adedi, ambalaj ihtiyacı ve hedef adresi teklif talebinize ekleyin.",
+          "q": "Prototipimi nasıl teslim alabilirim?"
+        }
+      ],
+      "city": "",
+      "kind": "service",
+      "path": "/3d-baski",
+      "image": "/brand/services/3dyanimda-print.webp",
+      "title": "Ürün geliştirme için 3D baskı",
+      "status": "published",
+      "service": "",
+      "summary": "Bir ürün fikrini toplantıda gösterilecek objeden montaj denemesinde kullanılacak prototipe taşıyın. İlk numunenin hangi tasarım kararını doğrulayacağını birlikte belirleyelim.",
+      "district": "",
+      "evidence": "",
+      "sections": [
+        {
+          "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım.",
+          "title": "İlk baskı hangi soruya cevap verecek?"
+        },
+        {
+          "body": "Alternatif tasarımları ayrı kodlarla paylaşmanız karşılaştırmayı kolaylaştırır. Örneğin iki kapak seçeneğinde yalnızca değişen tırnakları işaretleyin; ortak gövde dosyasını ayrıca belirtin. Denemeden çıkan bulguları onaylanan revizyona bağlayarak sonraki üretimde hangi çizimin esas alınacağını netleştirebiliriz.",
+          "title": "Tek dosyada kaybolmayan revizyonlar"
+        },
+        {
+          "body": "Hedef dış ölçüyü, kullanılacak bileşenleri ve numuneyi inceleyecek kişinin beklentisini talebe ekleyin. Sunum parçasında görünen yüzeyler öncelikli olabilir; montaj prototipinde karşı parçanın referansları önem kazanır. Malzeme ve yüzey tercihini projenin bu aşamasına göre değerlendirelim.",
+          "title": "Ürün ekibinden gereken bilgiler"
+        },
+        {
+          "body": "Prototipi test ederken yalnızca “oldu” veya “olmadı” sonucu tutmayın. Hangi yüzeyin temas ettiğini, hangi ölçünün değişmesi gerektiğini ve parçanın hangi kullanımda zorlandığını işaretleyin. Aynı parçanın iki revizyonunu birlikte sipariş edecekseniz dosya adlarını ayrı tutun. Böylece sonraki baskı, önceki denemenin ölçülebilir sonucuna dayanır.",
+          "title": "Bir sonraki revizyona veri bırakın"
+        },
+        {
+          "body": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS modelinizi teklif ekranında açabilirsiniz; dosya başına sınır 20 MB’tır. Önizlemede ölçü birimini ve dış boyutları kontrol edin, istediğiniz adedi ve parçanın nerede kullanılacağını yazın. Hazır modeliniz yoksa fotoğraf, eskiz veya numuneyle modelleme ihtiyacını birlikte değerlendirebiliriz.",
+          "title": "Baskı talebine hangi dosyayla başlayabilirsiniz?"
+        },
+        {
+          "body": "Teklif ekranındaki anlık hesap, seçtiğiniz malzeme ve üretim ayarlarına bağlı bir ön tahmindir. Dosya hazırlığı, parçanın geometrisi, adet, son işlemler ve teslimat kapsamı incelendikten sonra nihai teklif belirlenir. Üretim ölçüsü, malzeme uygunluğu ve teslim tarihi proje özelinde teyit edilir; onayınızdan sonra üretim planlanır.",
+          "title": "Ön tahminden onaylı üretim teklifine"
+        }
+      ],
+      "editorial": {
+        "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3D Yanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
+        "takeaways": [
+          "Görsel sunum ile çalışan prototipin kabul kriterleri farklıdır.",
+          "Fiyatı yalnızca gramaj değil; geometri, hazırlık ve son işlem de etkiler.",
+          "Tekrar üretim için dosya revizyonunu ve onaylı numuneyi birlikte kaydedin."
+        ],
+        "comparison": {
+          "rows": [
+            [
+              "Görünüş modeli",
+              "Yüzey ve görsel bütünlük",
+              "Görünecek yüzeyler ve sunum amacı"
+            ],
+            [
+              "Montaj prototipi",
+              "Eşleşen parçalar ve geçmeler",
+              "Kritik ölçüler, karşı parça ve montaj sırası"
+            ],
+            [
+              "İşlev denemesi",
+              "Yük, sıcaklık ve hareket",
+              "Çalışma koşulu ve test yöntemi"
+            ],
+            [
+              "Küçük seri",
+              "Onaylı revizyonun tekrarı",
+              "Numune onayı ve adet planı"
+            ]
+          ],
+          "title": "Hangi prototip, hangi karar için?",
+          "columns": [
+            "İhtiyaç",
+            "Öncelik",
+            "Talebe eklenecek bilgi"
+          ]
+        },
+        "relatedPaths": [
+          "/rehber/prototip-maliyetini-ne-belirler",
+          "/rehber/3d-baski-mi-cnc-mi",
+          "/3d-modelleme",
+          "/cozumler/urun-gelistirme-prototipleri"
+        ]
+      },
+      "logistics": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-21T21:59:22.837121+00:00",
+      "reviewed_at": null,
+      "neighborhood": "",
+      "local_context": "",
+      "expected_payload_hash": "ac5b877d9badd82f4dd02ee2a474547c"
+    },
+    {
+      "id": "efae1917-4142-4fe2-97e3-04fadbd54fd1",
+      "faq": [
+        {
+          "a": "Birim maliyet kadar hazırlık, modelleme, kontrol ve son işlem de önemlidir. Karşılaştırma aynı adet, aynı yüzey ve aynı kabul kapsamıyla yapılmalıdır; yalnızca baskı ağırlığı yeterli olmaz.",
+          "q": "Az adet her durumda daha ekonomik midir?"
+        }
+      ],
+      "city": "",
+      "kind": "solution",
+      "path": "/cozumler/kucuk-seri-uretim",
+      "image": "",
+      "title": "Az adetli ürünlerde 3D baskıyla küçük seri üretim",
+      "status": "published",
+      "service": "",
+      "summary": "İlk ürün onayından tekrarlı siparişe geçerken dosya sürümü, yüzey beklentisi ve örnek kabulünü aynı sipariş kaydında tutun.",
+      "district": "",
+      "evidence": "",
+      "sections": [
+        {
+          "body": "Pilot partide rastgele yalnızca bir parçaya bakmak yerine hangi özelliklerin her parçada kontrol edileceğini belirleyin. Ürün üzerindeki yön işareti, delik erişimi ve eşleşen bileşene oturma gibi maddeler sevkiyat öncesi listede yer alabilir.",
+          "title": "Pilot partiyi öğrenme aşaması olarak planlayın"
+        },
+        {
+          "body": "Onaylanan model, renk, üretim yönü ve son işlem kapsamı sipariş kimliğiyle ilişkilendirilmelidir. Önceki numunenin elde bulunması tekrar kontrolünü kolaylaştırır. Malzeme veya tasarım değiştiğinde bunu aynı parçanın sıradan tekrar baskısı gibi ele almayın; değişikliğin kullanım üzerindeki etkisini yeniden değerlendirin.",
+          "title": "Tekrar siparişin referansını dondurun"
+        }
+      ],
+      "editorial": {
+        "answer": "Az sayıda parçanın bir araya gelmesiyle daha önce görülmeyen montaj veya paketleme sorunları ortaya çıkabilir.",
+        "takeaways": [
+          "İlk parti ve tekrar sipariş adetleri",
+          "Onay referansı olarak saklanacak numune",
+          "Kontrol edilecek ürün özellikleri"
+        ],
+        "relatedPaths": [
+          "/3d-modelleme",
+          "/3d-tarama",
+          "/3d-baski"
+        ]
+      },
+      "logistics": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-08T16:16:43.53484+00:00",
+      "reviewed_at": null,
+      "neighborhood": "",
+      "local_context": "",
+      "expected_payload_hash": "b05e396568f05c86e48db87a6c1f5379"
+    },
+    {
+      "id": "8fa00951-0e38-4964-9a4b-0879bfc18d2d",
+      "faq": [
+        {
+          "a": "Değişen yüzeyler sınırlıysa ayrı yerleştirme parçaları değerlendirilebilir. Varyantların ortak dayama noktaları ve karıştırılma olasılığı görülmeden tek gövde kararı verilmez.",
+          "q": "Bir aparat birkaç ürün varyantında kullanılabilir mi?"
+        }
+      ],
+      "city": "",
+      "kind": "solution",
+      "path": "/cozumler/montaj-yardimcilari",
+      "image": "",
+      "title": "Ürün montajı için hizalama ve yerleştirme yardımcıları",
+      "status": "published",
+      "service": "",
+      "summary": "Küçük seri ürün montajında parça yerini, bağlantı yönünü ve operatör erişimini belirleyen yardımcı aparatları planlayın.",
+      "district": "",
+      "evidence": "",
+      "sections": [
+        {
+          "body": "Tutucunun temas bölgelerini çizim üzerinde seçin; çizilmeye açık alanları ve parçanın serbest bırakılacağı yönü gösterin. Aparatın yalnızca yer belirlemesi mi yoksa kuvvet de taşıması mı beklendiğini ayırmak gerekir.",
+          "title": "Ürünün hassas yüzeyini koruyun"
+        },
+        {
+          "body": "Önce tek iş istasyonunun hareketini tarif edin. Parça oturtulduktan sonra vida, yapıştırıcı veya ikinci bileşene erişim kalmalıdır. Numunede takma ve çıkarma hareketlerini operatörle deneyin; sıkışma oluşan noktaları işaretleyin. İkinci bir ürün revizyonu geldiğinde hangi temas yüzeylerinin değiştiği ayrıca kontrol edilir.",
+          "title": "Montaj sırasını küçük bir denemeyle görün"
+        }
+      ],
+      "editorial": {
+        "answer": "Boyanmış bir gövde veya gösterge ekranı montaj sırasında doğrudan sert dayama yüzeyine basmamalıdır.",
+        "takeaways": [
+          "Montaj adımlarını gösteren kısa video",
+          "Temas edebilecek ve korunacak yüzeyler",
+          "Ürün varyantları ve bağlantı elemanları"
+        ],
+        "relatedPaths": [
+          "/3d-modelleme",
+          "/3d-tarama",
+          "/3d-baski"
+        ]
+      },
+      "logistics": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-08T16:16:43.53484+00:00",
+      "reviewed_at": null,
+      "neighborhood": "",
+      "local_context": "",
+      "expected_payload_hash": "5635fcddb63b7f651e305622e7341a86"
+    },
+    {
+      "id": "f711af4e-5c2a-4214-a695-adf770d5754a",
+      "faq": [
+        {
+          "a": "Dosyanın kullanım izni, ölçüsü ve sizin bileşenlerinizle uyumu kontrol edilmelidir. Gereken model düzeltmeleri baskı işinden ayrı kapsam olabilir.",
+          "q": "Hazır indirilen model doğrudan basılabilir mi?"
+        }
+      ],
+      "city": "",
+      "kind": "sector",
+      "path": "/sektorler/drone-hobi",
+      "image": "",
+      "title": "Robotik ve hobi projelerinde gövde ve yerleşim prototipi",
+      "status": "published",
+      "service": "",
+      "summary": "Elektronik, batarya ve mekanik bileşenleri bir arada konumlandırmak için tasarım numuneleri hazırlayın.",
+      "district": "",
+      "evidence": "",
+      "sections": [
+        {
+          "body": "Bataryanın takılma yönü, anahtara erişim ve bileşenleri değiştirme ihtiyacı modelde gösterilmelidir. İlk gövde denemesi, ekipmanın işlevinden önce bu yerleşim ilişkilerini anlamaya yönelik olabilir.",
+          "title": "Bileşenleri gerçek hacimleriyle temsil edin"
+        },
+        {
+          "body": "Hareketli mekanizma veya pervane çevresindeki boşluklar tasarım sınırıdır. Prototip, çalışan düzende kullanılmadan önce yetkili proje ekibinin kontrolünden geçmelidir. Darbe, titreşim veya uçuş yükü gibi beklentiler ayrıca değerlendirilir; yalnızca monte edilebilmesi güvenli çalışma kanıtı değildir.",
+          "title": "Hareket alanlarını açık bırakın"
+        }
+      ],
+      "editorial": {
+        "answer": "Kart dış ölçüsü kadar konektör ve kablo çıkışı da yer kaplar.",
+        "takeaways": [
+          "Gerçek bileşen ölçüleri ve bağlantılar",
+          "Kablo ve bakım erişimi",
+          "Hareketli bölgelerin sınırları"
+        ],
+        "relatedPaths": [
+          "/3d-modelleme",
+          "/3d-tarama",
+          "/3d-baski"
+        ]
+      },
+      "logistics": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "updated_at": "2026-10-08T16:16:43.53484+00:00",
+      "reviewed_at": null,
+      "neighborhood": "",
+      "local_context": "",
+      "expected_payload_hash": "2ff58f8bc5050c45077ca891f59b3f09"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "/3d-baski",
+      "report": {
+        "scope": "Bounded review of the 3D Yanımda name, CMS profile, three service pages, two local pages, entity links and transient tenant metadata. Historical unchanged content and visual evidence retain their original dates.",
+        "checks": {
+          "renderedText": "Reviewed all five edited page payloads and business-profile copy. They describe verified workshop contact facts, project-dependent estimates and actual supported model formats; no ranking, deadline or certification promises were added.",
+          "seoGeoParity": "Brand display name and alternate names are consistent in catalog, CMS seed and Organization/WebSite graphs. About/Contact entity links refer to the same organization. No unverified social or map URL is added.",
+          "localEvidence": "The workshop address matches the live owner-managed contact_info. Kadıköy describes delivery from Ataşehir, not a separate branch. Existing locality source references are retained.",
+          "imageProvenance": "No public asset or model bytes changed. Brand asset alt text is updated only for 3dyanimda.",
+          "publicationGate": "The seed is bounded to five reviewed landing-page patches, matches the observed baseline or an already-applied target, and records the exact resulting payload hash before each update. Existing publication and validation triggers stay enabled. Both conflict-update clauses also explicitly require the verified 3dyanimda tenant ID and matching record keys.",
+          "tenantIsolation": "JSON comparison confirms that authored records for the other brands are byte-for-byte unchanged. Profile and metadata hooks discard state from a previous tenant or route while new data is loading."
+        },
+        "policy": "global-originality-v1",
+        "result": "pass",
+        "reviewer": "Codex (AI, owner-delegated)",
+        "baseCommit": "112c0769195929f78666c4519f60a21a0aee18e7",
+        "reviewedAt": "2026-10-21T21:57:54.759Z",
+        "sourceHash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0",
+        "validation": {
+          "typecheck": "pass",
+          "originality": {
+            "result": "pass",
+            "records": 800
+          },
+          "productionBuild": "pass",
+          "applicationTests": 220,
+          "technicalContracts": 72,
+          "databaseIntegration": "pass: actual publication/content/date triggers; exact approvals; other-tenant preservation; noindex/contact preservation; repeatability; concurrent-edit rejection; explicit conflict-update tenant predicates"
+        },
+        "limitations": [
+          "The current Supabase connector accepts reads but mutations returned Invalid or expired requestState; no CMS write or frontend deployment is claimed.",
+          "Cloudflare dashboard requires sign-in in this browser; production build error details have not been inspected.",
+          "This is a bounded AI source/content review with unit and contract evidence; no fresh full-site visual crawl or human/legal review is claimed.",
+          "Verified Google Business/social-profile links and Search Console canonical/indexing evidence are still unavailable."
+        ],
+        "sourceFileCount": 587,
+        "humanReviewPerformed": false
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "collection": "landing_pages",
+      "approved_at": "2026-10-21T21:59:22.837121+00:00",
+      "payload_hash": "ac5b877d9badd82f4dd02ee2a474547c",
+      "manifest_hash": "5703c39af22d462a85c5bac8016f7ca545e29c99791f965da98833a7f9f345d0"
+    },
+    {
+      "path": "/cozumler/kucuk-seri-uretim",
+      "report": {
+        "checks": {
+          "renderedText": true,
+          "seoGeoParity": true,
+          "localEvidence": true,
+          "modelGeometry": true,
+          "imageProvenance": true,
+          "visualSimilarity": true,
+          "allBrandsAllThemesAllRoutes": true
+        },
+        "policy": "global-originality-v1",
+        "result": "pass",
+        "evidence": [
+          {
+            "file": "docs/audits/final-content-review-2026-10-08.json",
+            "sha256": "c57db32e4b632f9b5de373b8e3a6dc1da264146b1c98f27c301516a0a5ae0f9c"
+          },
+          {
+            "file": "docs/audits/final-asset-review-2026-10-08.json",
+            "sha256": "12f6af1e2bac5c221ae80029d5609f0dc33d7fd2971588efeead175af1e657b1"
+          },
+          {
+            "file": "docs/audits/final-runtime-review-2026-10-08.json",
+            "sha256": "e5161bd8bf1a4ae64aadb5fd25a9b4268d7622b6b9eb2aba3a16e9b1e3fe6627"
+          },
+          {
+            "file": "docs/audits/all-local-originality.json",
+            "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+          },
+          {
+            "file": "docs/audits/rendered-local.json",
+            "sha256": "0fad9feb570b4d04b319424af750a1b0945db3731922505a206d60adc86ab73e"
+          },
+          {
+            "file": "docs/audits/rendered-editorial.json",
+            "sha256": "86bfde944a42ae50153e75640ed0e29a5da567f1f286686aa05112210fbb4d08"
+          },
+          {
+            "file": "docs/audits/local-content-completeness.json",
+            "sha256": "da6f5e6fb81db46c72c0b260ec506de7b159e3c759a1f3ac3792b315d09c9280"
+          },
+          {
+            "file": "docs/audits/confirmed-business-contact-2026-10-08.json",
+            "sha256": "d90882050dad93a5c716e6746362b70505e740a0ad8389ec88ecb07d9a01545c"
+          },
+          {
+            "file": "docs/audits/ga4-setup-2026-10-08.json",
+            "sha256": "28b44da3f4b78e589df3eba20a8762f902f3f762568f7123d87819e09866ebaa"
+          },
+          {
+            "file": "docs/audits/publication-content-manifest.json",
+            "sha256": "a689dba386e97afe0d4413cb223f36f709e14416546ba521cadb4af548e60dd7"
+          },
+          {
+            "file": "docs/audits/reviewed-assets-2026-10-08.json",
+            "sha256": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036"
+          }
+        ],
+        "reviewer": "Codex (AI, owner-delegated)",
+        "reviewedAt": "2026-10-08T16:11:34.076506+00:00",
+        "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+        "limitations": [
+          "This is an actual AI review under explicit owner delegation; no human reviewer attestation is claimed.",
+          "Full inventory automated checks and prior rendered evidence were reconciled; targeted semantic full-text review covers 28 routes and 185 flagged technical/safety sentences, as itemized in the content report.",
+          "Asset originality is assessed within the brand-network inventory and documented generation records; no web-wide uniqueness or legal exclusivity guarantee.",
+          "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception."
+        ],
+        "reviewerType": "ai_agent",
+        "authorization": {
+          "source": "Current owner instruction in conversation",
+          "statement": "son inceleme kaydını sen yap onayla ve geç",
+          "receivedAt": "2026-10-08T19:00:37+03:00"
+        },
+        "humanReviewPerformed": false
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "collection": "landing_pages",
+      "approved_at": "2026-10-08T16:16:43.53484+00:00",
+      "payload_hash": "b05e396568f05c86e48db87a6c1f5379",
+      "manifest_hash": "a533860fd477bba7b777d69b48f8082f3c4b7c74f19a8b258455315626f1c57f"
+    },
+    {
+      "path": "/cozumler/montaj-yardimcilari",
+      "report": {
+        "checks": {
+          "renderedText": true,
+          "seoGeoParity": true,
+          "localEvidence": true,
+          "modelGeometry": true,
+          "imageProvenance": true,
+          "visualSimilarity": true,
+          "allBrandsAllThemesAllRoutes": true
+        },
+        "policy": "global-originality-v1",
+        "result": "pass",
+        "evidence": [
+          {
+            "file": "docs/audits/final-content-review-2026-10-08.json",
+            "sha256": "c57db32e4b632f9b5de373b8e3a6dc1da264146b1c98f27c301516a0a5ae0f9c"
+          },
+          {
+            "file": "docs/audits/final-asset-review-2026-10-08.json",
+            "sha256": "12f6af1e2bac5c221ae80029d5609f0dc33d7fd2971588efeead175af1e657b1"
+          },
+          {
+            "file": "docs/audits/final-runtime-review-2026-10-08.json",
+            "sha256": "e5161bd8bf1a4ae64aadb5fd25a9b4268d7622b6b9eb2aba3a16e9b1e3fe6627"
+          },
+          {
+            "file": "docs/audits/all-local-originality.json",
+            "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+          },
+          {
+            "file": "docs/audits/rendered-local.json",
+            "sha256": "0fad9feb570b4d04b319424af750a1b0945db3731922505a206d60adc86ab73e"
+          },
+          {
+            "file": "docs/audits/rendered-editorial.json",
+            "sha256": "86bfde944a42ae50153e75640ed0e29a5da567f1f286686aa05112210fbb4d08"
+          },
+          {
+            "file": "docs/audits/local-content-completeness.json",
+            "sha256": "da6f5e6fb81db46c72c0b260ec506de7b159e3c759a1f3ac3792b315d09c9280"
+          },
+          {
+            "file": "docs/audits/confirmed-business-contact-2026-10-08.json",
+            "sha256": "d90882050dad93a5c716e6746362b70505e740a0ad8389ec88ecb07d9a01545c"
+          },
+          {
+            "file": "docs/audits/ga4-setup-2026-10-08.json",
+            "sha256": "28b44da3f4b78e589df3eba20a8762f902f3f762568f7123d87819e09866ebaa"
+          },
+          {
+            "file": "docs/audits/publication-content-manifest.json",
+            "sha256": "a689dba386e97afe0d4413cb223f36f709e14416546ba521cadb4af548e60dd7"
+          },
+          {
+            "file": "docs/audits/reviewed-assets-2026-10-08.json",
+            "sha256": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036"
+          }
+        ],
+        "reviewer": "Codex (AI, owner-delegated)",
+        "reviewedAt": "2026-10-08T16:11:34.076506+00:00",
+        "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+        "limitations": [
+          "This is an actual AI review under explicit owner delegation; no human reviewer attestation is claimed.",
+          "Full inventory automated checks and prior rendered evidence were reconciled; targeted semantic full-text review covers 28 routes and 185 flagged technical/safety sentences, as itemized in the content report.",
+          "Asset originality is assessed within the brand-network inventory and documented generation records; no web-wide uniqueness or legal exclusivity guarantee.",
+          "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception."
+        ],
+        "reviewerType": "ai_agent",
+        "authorization": {
+          "source": "Current owner instruction in conversation",
+          "statement": "son inceleme kaydını sen yap onayla ve geç",
+          "receivedAt": "2026-10-08T19:00:37+03:00"
+        },
+        "humanReviewPerformed": false
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "collection": "landing_pages",
+      "approved_at": "2026-10-08T16:16:43.53484+00:00",
+      "payload_hash": "5635fcddb63b7f651e305622e7341a86",
+      "manifest_hash": "a533860fd477bba7b777d69b48f8082f3c4b7c74f19a8b258455315626f1c57f"
+    },
+    {
+      "path": "/sektorler/drone-hobi",
+      "report": {
+        "checks": {
+          "renderedText": true,
+          "seoGeoParity": true,
+          "localEvidence": true,
+          "modelGeometry": true,
+          "imageProvenance": true,
+          "visualSimilarity": true,
+          "allBrandsAllThemesAllRoutes": true
+        },
+        "policy": "global-originality-v1",
+        "result": "pass",
+        "evidence": [
+          {
+            "file": "docs/audits/final-content-review-2026-10-08.json",
+            "sha256": "c57db32e4b632f9b5de373b8e3a6dc1da264146b1c98f27c301516a0a5ae0f9c"
+          },
+          {
+            "file": "docs/audits/final-asset-review-2026-10-08.json",
+            "sha256": "12f6af1e2bac5c221ae80029d5609f0dc33d7fd2971588efeead175af1e657b1"
+          },
+          {
+            "file": "docs/audits/final-runtime-review-2026-10-08.json",
+            "sha256": "e5161bd8bf1a4ae64aadb5fd25a9b4268d7622b6b9eb2aba3a16e9b1e3fe6627"
+          },
+          {
+            "file": "docs/audits/all-local-originality.json",
+            "sha256": "cfc244e730d7360ac0300c0ebefb93c90e51a6a7c896c001f4bd40d9d5fdc35c"
+          },
+          {
+            "file": "docs/audits/rendered-local.json",
+            "sha256": "0fad9feb570b4d04b319424af750a1b0945db3731922505a206d60adc86ab73e"
+          },
+          {
+            "file": "docs/audits/rendered-editorial.json",
+            "sha256": "86bfde944a42ae50153e75640ed0e29a5da567f1f286686aa05112210fbb4d08"
+          },
+          {
+            "file": "docs/audits/local-content-completeness.json",
+            "sha256": "da6f5e6fb81db46c72c0b260ec506de7b159e3c759a1f3ac3792b315d09c9280"
+          },
+          {
+            "file": "docs/audits/confirmed-business-contact-2026-10-08.json",
+            "sha256": "d90882050dad93a5c716e6746362b70505e740a0ad8389ec88ecb07d9a01545c"
+          },
+          {
+            "file": "docs/audits/ga4-setup-2026-10-08.json",
+            "sha256": "28b44da3f4b78e589df3eba20a8762f902f3f762568f7123d87819e09866ebaa"
+          },
+          {
+            "file": "docs/audits/publication-content-manifest.json",
+            "sha256": "a689dba386e97afe0d4413cb223f36f709e14416546ba521cadb4af548e60dd7"
+          },
+          {
+            "file": "docs/audits/reviewed-assets-2026-10-08.json",
+            "sha256": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036"
+          }
+        ],
+        "reviewer": "Codex (AI, owner-delegated)",
+        "reviewedAt": "2026-10-08T16:11:34.076506+00:00",
+        "sourceHash": "5864afc3a3a5154311458fa1a421d5eb373faef4964721696c4b26aee1a075f6",
+        "limitations": [
+          "This is an actual AI review under explicit owner delegation; no human reviewer attestation is claimed.",
+          "Full inventory automated checks and prior rendered evidence were reconciled; targeted semantic full-text review covers 28 routes and 185 flagged technical/safety sentences, as itemized in the content report.",
+          "Asset originality is assessed within the brand-network inventory and documented generation records; no web-wide uniqueness or legal exclusivity guarantee.",
+          "Approval covers reviewed editorial content, illustrative assets and technical rendering/SEO consistency. It does not certify DNS/SSL deployment, indexing, rankings, legal disclosures, email delivery, instant pricing or live GA4 reception."
+        ],
+        "reviewerType": "ai_agent",
+        "authorization": {
+          "source": "Current owner instruction in conversation",
+          "statement": "son inceleme kaydını sen yap onayla ve geç",
+          "receivedAt": "2026-10-08T19:00:37+03:00"
+        },
+        "humanReviewPerformed": false
+      },
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "collection": "landing_pages",
+      "approved_at": "2026-10-08T16:16:43.53484+00:00",
+      "payload_hash": "2ff58f8bc5050c45077ca891f59b3f09",
+      "manifest_hash": "a533860fd477bba7b777d69b48f8082f3c4b7c74f19a8b258455315626f1c57f"
+    }
+  ]
+}

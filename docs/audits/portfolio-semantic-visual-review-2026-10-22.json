@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22T03:34:40+03:00",
+  "reviewDate": "2026-10-22",
+  "reviewer": {
+    "type": "AI",
+    "agent": "portfolio_assets",
+    "name": "Codex AI reviewer",
+    "humanReview": false
+  },
+  "scope": "All 28 original illustrative portfolio concepts: Turkish title, excerpt, complete HTML body, tags, materials, brief and generated cover image.",
+  "status": "passed_after_minor_copy_corrections",
+  "counts": {
+    "projects": 28,
+    "uniqueBrandSlugs": 28,
+    "perBrand": {
+      "3dyanimda": 7,
+      "3dsanayi": 7,
+      "maketyanimda": 7,
+      "parcayanimda": 7
+    },
+    "completeBodiesRead": 28,
+    "coversVisuallyReviewed": 28,
+    "conceptTags": 28,
+    "conceptExcerpts": 28,
+    "explicitNotCompletedClientDisclosures": 28,
+    "coverPathMatches": 28,
+    "titleAndIndustryBriefMatches": 28
+  },
+  "findings": {
+    "completedClientClaims": 0,
+    "unsupportedNumericToleranceClaims": 0,
+    "unsupportedCertificationClaims": 0,
+    "unsupportedMeasuredResultsOrSavingsClaims": 0,
+    "unresolvedSubstantiveTextImageMismatches": 0,
+    "materialsPolicy": "All 28 materials arrays are empty. Body references to material and manufacturing options are conditional and require project-specific assessment.",
+    "performancePolicy": "Acceptance and engineering sections describe potential checks; no image or concept is presented as completed testing, load capacity evidence, certified equipment or delivered customer work.",
+    "visualAssessment": "All 28 images were inspected in a full contact sheet; six newly generated Parça Yanımda images and the maintenance support example were also inspected at larger size. Subjects match the portfolio briefs at illustrative level. Consistent neutral studio presentation, original unbranded geometry, no visible customer logos or textual capacity claims."
+  },
+  "minorCorrections": [
+    {
+      "slug": "endustriyel-tesis-yerlesimi",
+      "change": "Removed repeated Turkish phrasing anlatmayı anlatan from concept disclosure."
+    },
+    {
+      "slug": "yapi-kesit-sunum-modeli",
+      "change": "Removed repeated Turkish phrasing anlatmayı anlatan from concept disclosure."
+    },
+    {
+      "slug": "urun-kesit-sergileme-modeli",
+      "change": "Removed repeated Turkish phrasing anlatmayı anlatan from concept disclosure."
+    },
+    {
+      "slug": "servis-kontrol-dugmesi",
+      "change": "Changed cutaway description to inner-surface view to match visible knob geometry."
+    }
+  ],
+  "provenance": {
+    "tool": "Built-in image_gen",
+    "generatedCovers": 28,
+    "reusedExistingGeneratedSources": 22,
+    "newlyGeneratedSources": 6,
+    "promptAndSourceManifests": [
+      "content/authoring/portfolio/image-generation.json",
+      "content/authoring/portfolio/generation-02.json",
+      "content/authoring/portfolio/generation-03.json",
+      "content/authoring/portfolio/generation-04.json",
+      "content/authoring/portfolio/generation-05.json"
+    ],
+    "optimizedFormat": "WebP",
+    "dimensions": "1200x900",
+    "totalBytes": 1860462,
+    "assetManifest": "content/authoring/portfolio/assets.json",
+    "allAssetHashesVerified": true
+  },
+  "evidence": {
+    "projectFile": "content/authoring/portfolio/projects.json",
+    "projectSha256": "3d0228635da188e2dbf3370055f1ca069bc9ac191876e0429eb3b371a42b9483",
+    "briefFile": "content/authoring/portfolio/visual-briefs.json",
+    "briefSha256": "553b1c097ffb1fab3bec54028f85c9bf174f65ffc63acf2b704dbe9f42545b87",
+    "assetManifestSha256": "146badf44aa425ea1748eacd1be22ba7a5b51702ef93fbdedc6ee91e48462dfb",
+    "contactSheet": "docs/audits/portfolio-visual-contact-sheet-2026-10-22.jpg",
+    "contactSheetSha256": "d406e191c084bad15e84392923662d291138ae7d427fb36e09ab83098c31ae53"
+  },
+  "limitations": [
+    "AI semantic and visual review, not independent human or legal review.",
+    "Generated illustrations are not photographs of manufactured products or delivered client work.",
+    "No dimensional, structural, mechanical safety, manufacturability, tolerance, material performance, certification or performance-test validation was conducted.",
+    "No live deployment, database contents, CMS editor behavior or production asset HTTP verification is claimed by this review.",
+    "The review covers the exact project-file hash recorded here; later content changes require fresh assessment."
+  ],
+  "projects": [
+    {
+      "brand": "3dyanimda",
+      "slug": "robotik-hucre-tutucu",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "fc76af78d6a2d0a5058cf0da4b1601fe2e6221196cad4639cd07c95f7d3c1f37"
+    },
+    {
+      "brand": "3dyanimda",
+      "slug": "endustriyel-cihaz-muhafazasi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "d6f367b06eab9f1c0b6b108512016a2f9554d9fcb24c4942808617c308a2a25b"
+    },
+    {
+      "brand": "3dyanimda",
+      "slug": "akiskan-kanali-gelistirme",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "4bec26ba177bafe16624a5efb89ed0927fd00bb7f273f7d18612fdd6688e30a2"
+    },
+    {
+      "brand": "3dyanimda",
+      "slug": "tersine-muhendislik-govde",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "0121e4345b08fb30a91d54974ce52366034dc053733971cc0f4c90e75b40a104"
+    },
+    {
+      "brand": "3dyanimda",
+      "slug": "moduler-urun-platformu",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "bd0927730b65571941f3ad5d5f3de6056332da831f9c76c6df76778cf27942a6"
+    },
+    {
+      "brand": "3dyanimda",
+      "slug": "kurumsal-montaj-seti",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "e5c6987763a69807a6a94d2777d567d007237a533d7e3a31aa1779805863ba29"
+    },
+    {
+      "brand": "3dyanimda",
+      "slug": "uretim-master-modeli",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "cc2c0f9dbab0f5c426ec75f0be34b813257939bc833976d3a5242c4adc0650d2"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "montaj-konumlandirma-fiksturu",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "69b7ecb126a3bd46828dd2098839893131e8c4673610fad759a503cc28d93283"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "kalite-kontrol-aparati",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "dc723b0b6d8b035de9c53a929105a1761f9858652fdc45db3b5eecfc4b0b8f73"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "konveyor-kilavuz-sistemi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "476d24f130d0432c05fe2b8fc213cd11035ccf22b7c5c6c9d0831d024e19765d"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "sensor-konumlandirma-modulu",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "8a9a683018cc38eff8e913055898b9e4f477f90801da54cedd6af9ffeba213df"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "vakum-sekillendirme-modeli",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "0e8b01cdeb66cd1280e9faa80bb3933c51ab4e60b1c90245266d897f828a0b98"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "bakim-erisimi-aparati",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "d8871876e15fa3530191eefb25ad9af154b6347716624189693b349c6680c807"
+    },
+    {
+      "brand": "3dsanayi",
+      "slug": "moduler-test-duzenegi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "89e956546e949ef4421560f797341b2f6be2bc169f6b31fc6c76649e0b644ed0"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "karma-kullanim-sunum-maketi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "ccaaac75fc5ae23ff72bde10690480e02bd144d97c6ad5acda9ebbcbad2a94ef"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "endustriyel-tesis-yerlesimi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "0e97fa727a6b5235490d91ee0aaeafccdd38f568ebc4d35b6eda5a396c194dea"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "topografya-yerlesim-modeli",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "ffc2d1087b3c20eba99d3131645f50fd24d8936916f0b10791dfcecf62cc3ac0"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "enerji-tesisi-anlatim-maketi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "eeb7e1d2d9d7f5dec38822c3cdeea6338a943a098127040542d9f493218b8714"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "yapi-kesit-sunum-modeli",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "9837a48009b5fd920e3ebccca494ec43d9f9b41b4211d86f153c19ec97a4778b"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "kentsel-masterplan-modeli",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "cf95bc063f2c7b714ea55d0e17914c4eaa6ee9aaff279e2176109e77b33c76c3"
+    },
+    {
+      "brand": "maketyanimda",
+      "slug": "urun-kesit-sergileme-modeli",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "d63137bdc94dfb99c9cbb16f4afb388b37baf544f0aeac206ace3b94a6b5fac6"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "makine-koruyucu-kapak",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "51de42add83b68e33099ef29083705ab5109ed800b8e54909410e77b54b679bf"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "kirilmis-montaj-braketi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "a61fce055dce2da86410692b24729d010fdaa9d23b090ea940cf901d572faeb4"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "cihaz-baglanti-adaptoru",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "e009aefbaa30b76e247f4e7cfe08f5c800987f49020258a559ad9704ee264a23"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "disli-geometri-prototipi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "6f9805b6bebcd211d1295d64cfd44ed038b5dfe355a18771a4d6447fe25dbb88"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "ozel-kablo-kilavuzu",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "7df33e578dbfa9bc157a0912ede7e18292e35660b8f9a6414a50bb7a5cd0985c"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "servis-kontrol-dugmesi",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "6db93bff2ab387cad15cbbfcb0cdb06638ab9143ceaba2085036dfdd900823ea"
+    },
+    {
+      "brand": "parcayanimda",
+      "slug": "kullanim-kosuluna-ozel-yatak",
+      "semanticReview": "pass",
+      "visualSubjectMatch": "pass_as_illustrative_concept",
+      "clientWorkDisclosure": "present",
+      "coverSha256": "719b1030c96588a23e82bae26aa6d87411c569301e89952abc74b443986fa1da"
+    }
+  ]
+}

@@ -19,6 +19,13 @@
 .brand-site .portfolio-project > div { padding:28px; }
 .brand-site .portfolio-project h2 { margin:10px 0 14px; font-size:28px; }
 .brand-site .portfolio-project .text-link { margin-top:24px; }
+.brand-site .portfolio-project { transition:box-shadow .25s ease; }
+.brand-site .portfolio-project:hover { box-shadow:0 14px 40px #0000000b; }
+.brand-site .portfolio-project:focus-visible { outline:2px solid var(--text); outline-offset:5px; }
+.brand-site .portfolio-meta { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.brand-site .project-figure { margin-bottom:32px; }
+.brand-site .project-figure .project-cover { margin-bottom:10px; }
+.brand-site .project-figure figcaption { font-size:12px; line-height:1.6; color:var(--muted); }
 .brand-site .collection-meta { font-size:13px; }
 .brand-site .collection-filters { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:32px; }
 .brand-site .collection-filters button { min-height:44px; padding:10px 20px; border-radius:100px; background:var(--soft); }

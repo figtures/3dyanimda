@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { MediaPicker } from "@/components/admin/MediaPicker";
 import { resolveMediaUrl } from "@/lib/media";
 import { getTenantId } from "@/lib/tenant";
+import { RichTextEditor } from "@/components/admin/RichTextEditor";
 
 type Project = {
   id: string;
@@ -106,17 +107,21 @@ const AdminPortfolio = () => {
 
   const remove = async (p: Project) => {
     if (!confirm(`"${p.title_tr}" silinsin mi?`)) return;
-    const { error } = await supabase.from("portfolio_projects" as any).delete().eq("id", p.id);
+    const tenantId=getTenantId();
+    if(!tenantId)return toast.error("Marka bulunamadı.");
+    const { error } = await supabase.from("portfolio_projects" as any).delete().eq("tenant_id",tenantId).eq("id", p.id);
     if (error) return toast.error(error.message);
     toast.success("Silindi");
     load();
   };
 
   const togglePublish = async (p: Project) => {
+    const tenantId=getTenantId();
+    if(!tenantId)return toast.error("Marka bulunamadı.");
     const next = !p.published;
     const { error } = await supabase.from("portfolio_projects" as any)
       .update({ published: next, published_at: next ? new Date().toISOString() : null })
-      .eq("id", p.id);
+      .eq("tenant_id",tenantId).eq("id", p.id);
     if (error) return toast.error(error.message);
     load();
   };
@@ -159,8 +164,8 @@ const AdminPortfolio = () => {
                 <Textarea rows={2} value={editing.excerpt_tr ?? ""} onChange={e => set({ excerpt_tr: e.target.value })} />
               </div>
               <div className="space-y-1.5">
-                <Label>İçerik (TR — markdown / düz metin)</Label>
-                <Textarea rows={10} value={editing.content_tr ?? ""} onChange={e => set({ content_tr: e.target.value })} />
+                <Label>İçerik (TR)</Label>
+                <RichTextEditor value={editing.content_tr ?? ""} onChange={value => set({ content_tr:value })} />
               </div>
             </TabsContent>
             <TabsContent value="en" className="space-y-4 pt-4">
@@ -174,10 +179,15 @@ const AdminPortfolio = () => {
               </div>
               <div className="space-y-1.5">
                 <Label>Content (EN)</Label>
-                <Textarea rows={10} value={editing.content_en ?? ""} onChange={e => set({ content_en: e.target.value })} />
+                <RichTextEditor value={editing.content_en ?? ""} onChange={value => set({ content_en:value })} />
               </div>
             </TabsContent>
           </Tabs>
+
+          <div className="flex items-center gap-3">
+            <Switch id="portfolio-illustration" checked={(editing.tags??[]).includes("illustrative-image")} onCheckedChange={checked=>set({tags:checked?[...new Set([...(editing.tags??[]),"illustrative-image"]) ]:(editing.tags??[]).filter(tag=>tag!=="illustrative-image")})}/>
+            <div><Label htmlFor="portfolio-illustration">Yapay zekâ ile hazırlanmış görsel</Label><p className="text-xs text-muted-foreground">Görselin altında kısa bir kaynak açıklaması gösterir.</p></div>
+          </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">

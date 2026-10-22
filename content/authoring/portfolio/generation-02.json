@@ -1,0 +1,42 @@
+[
+  {
+    "brand": "3dyanimda",
+    "slug": "kurumsal-montaj-seti",
+    "title": "Kurumsal proje için montaj seti",
+    "industry": "Proje bazlı üretim",
+    "subject": "A precisely arranged corporate engineering project kit: six distinct original custom-made components including two terracotta-orange locating brackets, a dark polymer sensor enclosure, a curved cable guide, a machined-looking mounting plate and a robust assembly spacer, organized on a neutral recessed tray. Uniform designed system, functional mechanical parts with bolt holes and chamfers, no numbered labels, no toy-like objects.",
+    "tool": "image_gen",
+    "source": "/workspace/scratch/246a8508be53/generated_images/exec-9eb10c94-d942-431d-980e-7516609f4b0f.png",
+    "prompt": "Use case: product-mockup. Asset type: cover for a clearly labelled illustrative portfolio concept on a Turkish engineering company's website. Create an original premium photorealistic engineering product visualization, landscape 4:3. A precisely arranged corporate engineering project kit: six distinct original custom-made components including two terracotta-orange locating brackets, a dark polymer sensor enclosure, a curved cable guide, a machined-looking mounting plate and a robust assembly spacer, organized on a neutral recessed tray. Uniform designed system, functional mechanical parts with bolt holes and chamfers, no numbered labels, no toy-like objects. Subject fully in frame with breathing room, clean pale warm-grey studio backdrop, three-quarter camera, realistic crafted materials, soft directional studio light and contact shadow, crisp high-end finish. This is an illustrative concept, not a documentary photo of delivered client work. No text, numbers, dimension labels, customer logos, brands, watermark, UI, infographics, sci-fi glow or busy background."
+  },
+  {
+    "brand": "3dyanimda",
+    "slug": "uretim-master-modeli",
+    "title": "Üretim hazırlığı için master model",
+    "industry": "Proje bazlı üretim",
+    "subject": "A refined large industrial product master pattern for a curved ergonomic equipment cover, made from matte warm-grey resin with subtle machining and finish detail. Next to it are an orange unfinished additive prototype and a clean silhouette matching the final shell, demonstrating a coherent progression in surface refinement. Studio product visualization, no manufactured-success claims, no text, no logos.",
+    "tool": "image_gen",
+    "source": "/workspace/scratch/246a8508be53/generated_images/exec-33b6cf62-b297-4ed2-b322-085f13e29859.png",
+    "prompt": "Use case: product-mockup. Asset type: cover for a clearly labelled illustrative portfolio concept on a Turkish engineering company's website. Create an original premium photorealistic engineering product visualization, landscape 4:3. A refined large industrial product master pattern for a curved ergonomic equipment cover, made from matte warm-grey resin with subtle machining and finish detail. Next to it are an orange unfinished additive prototype and a clean silhouette matching the final shell, demonstrating a coherent progression in surface refinement. Studio product visualization, no manufactured-success claims, no text, no logos. Subject fully in frame with breathing room, clean pale warm-grey studio backdrop, three-quarter camera, realistic crafted materials, soft directional studio light and contact shadow, crisp high-end finish. This is an illustrative concept, not a documentary photo of delivered client work. No text, numbers, dimension labels, customer logos, brands, watermark, UI, infographics, sci-fi glow or busy background."
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "montaj-konumlandirma-fiksturu",
+    "title": "Çok istasyonlu montaj fikstürü",
+    "industry": "Üretim hatları",
+    "subject": "A substantial industrial assembly fixture on a brushed aluminium base plate: cobalt-blue custom conformal nesting blocks locate a cast metal component, two graphite toggle clamps, precise datum pins and ergonomic access cutouts. Strong mechanically plausible tooling geometry, organised professional manufacturing fixture, clean studio product photograph, no factory clutter and no writing.",
+    "tool": "image_gen",
+    "source": "/workspace/scratch/246a8508be53/generated_images/exec-2f72007f-a392-42c4-b123-dda806052877.png",
+    "prompt": "Use case: product-mockup. Asset type: cover for a clearly labelled illustrative portfolio concept on a Turkish engineering company's website. Create an original premium photorealistic engineering product visualization, landscape 4:3. A substantial industrial assembly fixture on a brushed aluminium base plate: cobalt-blue custom conformal nesting blocks locate a cast metal component, two graphite toggle clamps, precise datum pins and ergonomic access cutouts. Strong mechanically plausible tooling geometry, organised professional manufacturing fixture, clean studio product photograph, no factory clutter and no writing. Subject fully in frame with breathing room, clean pale warm-grey studio backdrop, three-quarter camera, realistic crafted materials, soft directional studio light and contact shadow, crisp high-end finish. This is an illustrative concept, not a documentary photo of delivered client work. No text, numbers, dimension labels, customer logos, brands, watermark, UI, infographics, sci-fi glow or busy background."
+  },
+  {
+    "brand": "3dsanayi",
+    "slug": "kalite-kontrol-aparati",
+    "title": "Geometrik kontrol için referans aparatı",
+    "industry": "Kalite kontrol",
+    "subject": "An original industrial quality-control checking fixture: aluminium base, cobalt-blue 3D printed locating nests supporting a complex grey equipment housing, three polished reference pins and a black mechanical dial-indicator arm with an unlabelled face. Emphasize repeatable positioning and accessible inspection points, grounded stable construction, studio engineering product photograph, no numerical measurement claims.",
+    "tool": "image_gen",
+    "source": "/workspace/scratch/246a8508be53/generated_images/exec-13629408-afab-4398-922b-f3666255c38d.png",
+    "prompt": "Use case: product-mockup. Asset type: cover for a clearly labelled illustrative portfolio concept on a Turkish engineering company's website. Create an original premium photorealistic engineering product visualization, landscape 4:3. An original industrial quality-control checking fixture: aluminium base, cobalt-blue 3D printed locating nests supporting a complex grey equipment housing, three polished reference pins and a black mechanical dial-indicator arm with an unlabelled face. Emphasize repeatable positioning and accessible inspection points, grounded stable construction, studio engineering product photograph, no numerical measurement claims. Subject fully in frame with breathing room, clean pale warm-grey studio backdrop, three-quarter camera, realistic crafted materials, soft directional studio light and contact shadow, crisp high-end finish. This is an illustrative concept, not a documentary photo of delivered client work. No text, numbers, dimension labels, customer logos, brands, watermark, UI, infographics, sci-fi glow or busy background."
+  }
+]

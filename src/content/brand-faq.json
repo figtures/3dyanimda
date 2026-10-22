@@ -1,7 +1,7 @@
 {
   "3dyanimda": [
     ["3D dosyam olmadan proje başlatabilir miyim?", "Evet. Fikrinizi eskiz, fotoğraf, ölçü veya fiziksel numuneyle anlatabilirsiniz. Baskıya geçmeden önce hangi modelleme çalışmalarına ihtiyaç olduğunu birlikte belirleriz."],
-    ["Kişisel bir hobi projesi için de başvurabilir miyim?", "Tek parça, kişisel aksesuar, masaüstü düzenleyici veya hobi prototipi taleplerinizi paylaşabilirsiniz. Üretilebilirlik, malzeme ve kapsam proje özelinde değerlendirilir."],
+    ["Prototipten seri üretime farklı ölçeklerde çalışabilir miyiz?", "Tek prototip, özel parça, üretim partisi veya tekrarlı sipariş taleplerinizi paylaşabilirsiniz. Adet, kullanım koşulları, kabul kriterleri ve takvim incelenerek uygun üretim yöntemi ve proje kapsamı belirlenir."],
     ["Teklif ekranında hangi dosyaları inceleyebilirim?", "STL, OBJ, 3MF, STEP/STP ve IGES/IGS dosyaları desteklenir. Dosya başına sınır 20 MB’tır. Modelin boyutlarını ve yönünü kontrol ederek üretim tercihlerinizi belirtebilirsiniz."],
     ["Ekrandaki anlık fiyat kesin satış fiyatı mı?", "Anlık hesap, tanımlanmış malzeme ve fiyatlandırma ayarlarına dayanan bir ön tahmindir. Modelin üretilebilirliği, ek işlemler ve teslimat kapsamı değerlendirilerek nihai teklif netleştirilir."],
     ["İlk prototipten sonra tasarımı değiştirebilir miyim?", "İlk numuneyi form, montaj veya kullanım açısından değerlendirebilirsiniz. İstenen değişiklikleri yeni bir revizyon olarak tanımlayıp modelleme ve yeniden üretim kapsamını ayrıca planlarız."],
