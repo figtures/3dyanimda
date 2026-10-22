@@ -143,8 +143,8 @@
   {
     "brand": "3dyanimda",
     "path": "/cozumler/kucuk-seri-uretim",
-    "title": "Proje bazlı seri üretim ve tekrarlı sipariş yönetimi",
-    "summary": "Pilot numuneden üretim partilerine geçerken onaylı dosyayı, adet planını, yüzey beklentisini ve kontrol kapsamını birlikte yönetin.",
+    "title": "Az adetli ürünlerde 3D baskıyla küçük seri üretim",
+    "summary": "İlk ürün onayından tekrarlı siparişe geçerken dosya sürümü, yüzey beklentisi ve örnek kabulünü aynı sipariş kaydında tutun.",
     "sections": [
       {
         "title": "Pilot partiyi öğrenme aşaması olarak planlayın",
@@ -174,7 +174,7 @@
     "reviewed_at": null,
     "updated_at": "2026-10-06",
     "editorial": {
-      "answer": "Üretim partisi planlanırken parça adedinin yanında montaj, kontrol ve paketleme akışı da değerlendirilir. Pilot numunede netleşen dosya revizyonu ve kabul kriterleri, sonraki partiler için ortak referans oluşturur.",
+      "answer": "Az sayıda parçanın bir araya gelmesiyle daha önce görülmeyen montaj veya paketleme sorunları ortaya çıkabilir.",
       "takeaways": [
         "İlk parti ve tekrar sipariş adetleri",
         "Onay referansı olarak saklanacak numune",
@@ -2519,8 +2519,8 @@
   {
     "brand": "3dyanimda",
     "path": "/sektorler/drone-hobi",
-    "title": "Robotik ve insansız sistemler için gövde prototipleri",
-    "summary": "Elektronik, batarya ve mekanik bileşenleri ortak bir tasarımda konumlandırın. Gövde geometrisini, bakım erişimini ve montaj ilişkilerini fiziksel numuneyle değerlendirin.",
+    "title": "Robotik ve hobi projelerinde gövde ve yerleşim prototipi",
+    "summary": "Elektronik, batarya ve mekanik bileşenleri bir arada konumlandırmak için tasarım numuneleri hazırlayın.",
     "sections": [
       {
         "title": "Bileşenleri gerçek hacimleriyle temsil edin",
