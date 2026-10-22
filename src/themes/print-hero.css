@@ -1,0 +1,132 @@
+.brand-site .print-hero {
+  --print-ink: #252a2c;
+  --print-muted: #626967;
+  --print-orange: #bd421b;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  color: var(--print-ink);
+  background: #f7f6f2;
+}
+.brand-site .print-hero-body {
+  min-height: clamp(590px, calc(100svh - 154px), 810px);
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  align-items: center;
+  column-gap: clamp(16px, 3vw, 54px);
+  padding-block: 34px 20px;
+}
+.print-hero-copy { position: relative; z-index: 2; padding-block: 28px 40px; }
+.brand-site .print-hero-eyebrow {
+  display: flex; align-items: center; gap: 11px;
+  font-size: 10px; font-weight: 600; letter-spacing: .13em;
+  margin: 0 0 clamp(28px, 4vw, 58px); color: #5b625f;
+}
+.print-hero-eyebrow > span { width: 7px; height: 7px; border-radius: 50%; background: var(--print-orange); flex-shrink: 0; }
+.brand-site .print-hero h1 {
+  margin: 0;
+  font-size: clamp(60px, 6.6vw, 102px);
+  font-weight: 500;
+  line-height: .99;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+  white-space: pre-line;
+  color: var(--print-ink);
+}
+.print-hero h1 > span { display: block; color: var(--print-orange); }
+.brand-site .print-hero-lead {
+  margin: 30px 0 0; max-width: 37ch;
+  font-size: clamp(15px, 1.25vw, 18px); line-height: 1.8;
+  color: var(--print-muted);
+}
+.print-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; margin-top: 30px; }
+.print-hero-primary { display: inline-flex; align-items: center; justify-content: center; gap: 28px; min-height: 54px; padding: 15px 22px; border-radius: 4px; background: var(--print-orange); color: #fff; font-size: 14px; font-weight: 600; }
+.print-hero-primary:hover { background: #a93816; }
+.print-hero-primary svg { transition: transform .2s; }
+.print-hero-primary:hover svg { transform: translate(2px, -2px); }
+.print-hero-secondary { min-height: 44px; display: inline-flex; align-items: center; gap: 12px; font-size: 13px; color: #414947; }
+.print-hero-secondary:hover { color: var(--print-orange); }
+.brand-site .print-hero-location { margin: 38px 0 0; font-size: 11px; color: #757b75; letter-spacing: .015em; }
+.print-hero-location > span { margin-inline: 14px; color: #b4b6ae; }
+.print-hero-visual { position: relative; min-width: 0; padding-top: 8px; }
+.print-stage-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: #80857f; font-size: 9px; letter-spacing: .15em; padding-inline: 20px; }
+.print-stage-symbol { font-size: 20px; font-weight: 300; line-height: 1; color: #a2a69f; }
+.print-stage { position: relative; height: clamp(460px, calc(100svh - 294px), 640px); margin: 0 -5%; isolation: isolate; }
+.print-stage-glow { position: absolute; z-index: -1; inset: 9% 0 3%; border-radius: 50%; background: radial-gradient(ellipse at 60% 60%, #eadbc870, #ecece050 45%, transparent 70%); }
+.print-stage-poster, .printer-scene { position: absolute; inset: 0; }
+.printer-poster-svg { display: block; width: 100%; height: 100%; }
+.print-stage-poster { opacity: 1; transition: opacity .25s; }
+.print-stage[data-ready="true"] .print-stage-poster { opacity: 0; pointer-events: none; visibility: hidden; transition: opacity .25s, visibility 0s .25s; }
+.printer-scene { opacity: 0; visibility: hidden; transition: opacity .25s; }
+.print-stage[data-ready="true"] .printer-scene { opacity: 1; visibility: visible; }
+.printer-scene canvas { display: block; width: 100%; height: 100%; touch-action: pan-y; }
+.print-stage-caption { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: -5px; padding-right: 62px; }
+.print-stage-status { display: flex; align-items: center; gap: 10px; color: #424b48; font-size: 12px; min-height: 44px; }
+.print-status-dot { width: 5px; height: 5px; background: #929a92; border-radius: 50%; flex-shrink: 0; }
+.print-status-dot[data-running="true"] { background: var(--print-orange); }
+.print-stage-controls { display: flex; gap: 4px; }
+.print-stage-controls button { width: 44px; height: 44px; display: grid; place-items: center; color: #535b55; border: 1px solid transparent; border-radius: 50%; }
+.print-stage-controls button:hover { background: #e9e7df; }
+.print-stage-controls button:disabled { opacity: .35; cursor: default; }
+.print-stage-progress { height: 1px; background: #d9ddd3; overflow: hidden; }
+.print-stage-progress > span { display: block; height: 100%; width: 100%; background: var(--print-orange); transform-origin: left; transition: transform .4s linear; }
+.brand-site .print-stage-note { display: flex; gap: 7px; justify-content: space-between; margin: 12px 0 0; color: #777e75; font-size: 9px; letter-spacing: .025em; }
+.print-stage-note > span:first-child { display: none; }
+.brand-site .print-hero-baseline { min-height: 66px; border-top: 1px solid #dcdfd6; display: flex; justify-content: space-between; align-items: center; gap: 24px; color: #777d75; }
+.print-hero-baseline > span { font-size: 9px; letter-spacing: .12em; }
+.print-hero-baseline > div { display: flex; align-items: center; gap: 34px; }
+.print-hero-baseline a { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; font-size: 12px; color: #414943; }
+.print-hero-baseline a:hover { color: var(--print-orange); }
+@media (min-width: 1600px) { .brand-site .print-hero h1 { font-size: 108px; } }
+@media (max-width: 1099px) and (min-width: 861px) {
+  .brand-site .print-hero h1 { font-size: 65px; }
+  .brand-site .print-hero-body { min-height: 610px; }
+  .print-stage { height: 480px; margin-inline: -10%; }
+  .print-hero-actions { gap: 8px 14px; }
+  .print-hero-location { max-width: 30ch; }
+}
+@media (max-width: 860px) {
+  .brand-site .print-hero-body { grid-template-columns: 1fr; min-height: 0; padding-block: 28px 16px; gap: 10px; }
+  .print-hero-copy { padding: 0; }
+  .brand-site .print-hero-eyebrow { margin-bottom: 20px; }
+  .brand-site .print-hero h1 { font-size: clamp(48px, 8vw, 72px); }
+  .brand-site .print-hero h1 > span { display: inline; margin-left: .2em; }
+  .brand-site .print-hero-lead { max-width: 52ch; margin-top: 20px; font-size: 15px; }
+  .print-hero-lead br { display: none; }
+  .print-hero-actions { margin-top: 20px; }
+  .brand-site .print-hero-location { display: none; }
+  .print-stage { height: 370px; margin: -20px auto 0; max-width: 600px; }
+  .print-stage-heading { display: none; }
+  .print-hero-visual { padding: 0; }
+  .print-stage-caption { margin-top: -14px; }
+  .print-hero-baseline > span { display: none; }
+  .print-hero-baseline > div { justify-content: space-between; width: 100%; gap: 16px; }
+  .brand-site .print-hero-baseline { min-height: 56px; }
+}
+@media (max-width: 540px) {
+  .brand-site .print-hero-body { padding-block: 26px 12px; gap: 6px; }
+  .brand-site .print-hero-eyebrow { font-size: 8px; letter-spacing: .11em; margin-bottom: 17px; }
+  .brand-site .print-hero h1 { font-size: clamp(44px, 11vw, 57px); line-height: 1.04; letter-spacing: -.055em; }
+  .brand-site .print-hero h1 > span { display: block; margin-left: 0; }
+  .brand-site .print-hero-lead { font-size: 13px; line-height: 1.7; max-width: 40ch; margin-top: 15px; }
+  .print-hero-actions { margin-top: 17px; gap: 6px 18px; }
+  .print-hero-primary { padding: 12px 15px; min-height: 46px; font-size: 12px; gap: 16px; }
+  .print-hero-secondary { gap: 7px; font-size: 11px; }
+  .print-stage { height: clamp(250px, 36svh, 310px); margin: -2px -10% -8px; }
+  .print-stage-caption { margin-top: 0; }
+  .print-stage-status { font-size: 10px; gap: 7px; }
+  .brand-site .print-stage-note { font-size: 8px; margin-top: 8px; }
+  .print-hero-baseline a { font-size: 11px; gap: 8px; }
+}
+@media (max-height: 720px) and (max-width: 540px) {
+  .brand-site .print-hero-body { padding-top: 17px; }
+  .brand-site .print-hero h1 { font-size: 40px; }
+  .brand-site .print-hero-eyebrow { margin-bottom: 12px; }
+  .brand-site .print-hero-lead { margin-top: 12px; }
+  .print-hero-actions { margin-top: 12px; }
+  .print-stage { height: 235px; margin-top: 0; }
+  .brand-site .print-stage-note { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .print-hero *, .print-hero *::before, .print-hero *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

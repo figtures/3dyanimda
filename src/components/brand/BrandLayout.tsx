@@ -19,6 +19,7 @@ import "@/themes/themes.css";
 import "@/themes/industrialtwo.css";
 import "./business-profile.css";
 import "./page-shell.css";
+import "./print-footer.css";
 import { BusinessProfileLinks } from "./BusinessProfileLinks";
 import { getSiteTheme, themeNames } from "@/themes/config";
 import GrowthAnalytics from "./GrowthAnalytics";
@@ -92,7 +93,7 @@ export function BrandLayout() {
       <main id="main" aria-busy={navigation.state !== "idle"}>
         <Outlet />
       </main>
-      <footer className="brand-footer">
+      <footer className={`brand-footer${brand.slug === "3dyanimda" ? " print-brand-footer" : ""}`}>
         <div className="footer-directory">
           {[
             [

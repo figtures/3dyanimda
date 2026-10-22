@@ -1,6 +1,7 @@
 import { previewSearch } from "@/lib/tenant";
 import ServiceVisual from "./ServiceVisual";
 import EditorialHero from "./EditorialHero";
+import PrintHero from "./PrintHero";
 import { modelsForBrand } from "./models";
 import { lazy, Suspense, useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -116,6 +117,7 @@ export default function HomeHero() {
       : theme === "studio" && brand.slug === "3dyanimda"
         ? "Üretime buradan başlayın."
         : brand.title);
+  if (brand.slug === "3dyanimda") return <PrintHero query={q} />;
   if (theme === "industrial" || theme === "industrialtwo")
     return (
       <>

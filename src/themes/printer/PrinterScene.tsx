@@ -1,0 +1,108 @@
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import { buildPrinter } from "./build-printer";
+import { PRINT_LAYERS, printFrame } from "./print-path";
+import type { PrinterSceneProps } from "./types";
+
+export default function PrinterScene({ paused, restart, onReady, onFailure, onState }: PrinterSceneProps) {
+  const host = useRef<HTMLDivElement>(null);
+  const running = useRef(!paused);
+  const callbacks = useRef({ onReady, onFailure, onState });
+  const control = useRef<{ resume: () => void; restart: () => void }>();
+  const previousRestart = useRef(restart);
+  callbacks.current = { onReady, onFailure, onState };
+  useEffect(() => { running.current = !paused; control.current?.resume(); }, [paused]);
+  useEffect(() => { if (previousRestart.current !== restart) { previousRestart.current = restart; control.current?.restart(); } }, [restart]);
+
+  useEffect(() => {
+    const el = host.current;
+    if (!el) return;
+    let renderer: THREE.WebGLRenderer;
+    const canvas = document.createElement("canvas");
+    const options: WebGLContextAttributes = { alpha: true, antialias: true, powerPreference: "low-power" };
+    const context = canvas.getContext("webgl2", options) || canvas.getContext("webgl", options);
+    if (!context) { callbacks.current.onFailure(); return; }
+    try { renderer = new THREE.WebGLRenderer({ canvas, context, ...options }); }
+    catch { callbacks.current.onFailure(); return; }
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.24;
+    renderer.setClearColor(0x000000, 0);
+    renderer.domElement.setAttribute("aria-hidden", "true");
+    el.appendChild(renderer.domElement);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(34, 1, .1, 60);
+    let model: ReturnType<typeof buildPrinter>;
+    let environmentTexture: THREE.WebGLRenderTarget;
+    try {
+      const room = new RoomEnvironment(), pmrem = new THREE.PMREMGenerator(renderer);
+      environmentTexture = pmrem.fromScene(room, .07); scene.environment = environmentTexture.texture; room.dispose(); pmrem.dispose();
+      model = buildPrinter(); scene.add(model.root);
+    } catch {
+      renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); callbacks.current.onFailure(); return;
+    }
+    scene.add(new THREE.HemisphereLight(0xe6f0f4, 0x6b6254, 2.4));
+    const key = new THREE.DirectionalLight(0xffead5, 3.6); key.position.set(-3, 6, 5); scene.add(key);
+    const rim = new THREE.DirectionalLight(0xcbdfe8, 2.4); rim.position.set(4, 4, -2); scene.add(rim);
+    const light = new THREE.PointLight(0xffe8cc, 3.5, 5); light.position.set(0, 3.3, .8); scene.add(light);
+
+    let disposed = false, failed = false, visible = true, request = 0, last = 0, elapsed = running.current ? 10.8 : 44;
+    let announced = false, lastLabel = "", distance = 9, pointerX = 0, pointerY = 0, targetX = 0, targetY = 0;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const paint = () => {
+      if (disposed || failed || !visible || document.hidden) return;
+      const pose = printFrame(elapsed);
+      model.update(pose.progress, pose.head, pose.opacity, pose.lift, pose.phase === "printing");
+      const key = `${pose.phase}:${pose.layer}`;
+      if (key !== lastLabel) { lastLabel = key; callbacks.current.onState({ layer: pose.layer, total: PRINT_LAYERS, phase: pose.phase }); }
+      pointerX += (targetX - pointerX) * .07; pointerY += (targetY - pointerY) * .07;
+      const azimuth = .53 + pointerX * .065, elevation = .29 + pointerY * .035;
+      camera.position.set(.2 + Math.sin(azimuth) * distance, 1.8 + elevation * distance, Math.cos(azimuth) * distance);
+      camera.lookAt(.2, 1.8, 0);
+      renderer.render(scene, camera);
+      if (!announced) { announced = true; callbacks.current.onReady(); }
+    };
+    const fit = () => {
+      const { width, height } = el.getBoundingClientRect(); if (!width || !height || disposed) return;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, width < 580 ? 1.25 : 1.5));
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      distance = Math.max(7.7, 4.9 / (2 * Math.tan(THREE.MathUtils.degToRad(17)) * camera.aspect));
+      camera.updateProjectionMatrix(); paint();
+    };
+    const tick = (now: number) => {
+      request = 0;
+      if (disposed || failed || !visible || document.hidden || !running.current) return;
+      if (now - last >= 1000 / 30) { elapsed += Math.min((now - last) / 1000, .1); last = now; paint(); }
+      request = requestAnimationFrame(tick);
+    };
+    const resume = () => {
+      cancelAnimationFrame(request); request = 0;
+      if (disposed || failed) return;
+      el.dataset.motion = !visible || document.hidden ? "suspended" : running.current ? "playing" : "paused";
+      paint();
+      if (visible && !document.hidden && running.current) { last = performance.now(); request = requestAnimationFrame(tick); }
+    };
+    control.current = { resume, restart: () => { elapsed = 0; lastLabel = ""; resume(); } };
+    const resize = new ResizeObserver(fit); resize.observe(el);
+    const intersection = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; resume(); }, { threshold: .02 }); intersection.observe(el);
+    const pointer = (event: PointerEvent) => {
+      if (motion.matches || event.pointerType !== "mouse") return;
+      const box = el.getBoundingClientRect(); targetX = (event.clientX - box.left) / box.width * 2 - 1; targetY = (event.clientY - box.top) / box.height * 2 - 1;
+    };
+    const leave = () => { targetX = targetY = 0; };
+    const lost = (event: Event) => { event.preventDefault(); failed = true; cancelAnimationFrame(request); renderer.domElement.style.visibility = "hidden"; callbacks.current.onFailure(); };
+    el.addEventListener("pointermove", pointer); el.addEventListener("pointerleave", leave);
+    renderer.domElement.addEventListener("webglcontextlost", lost);
+    document.addEventListener("visibilitychange", resume);
+    fit(); resume();
+    return () => {
+      disposed = true; cancelAnimationFrame(request); control.current = undefined;
+      resize.disconnect(); intersection.disconnect(); document.removeEventListener("visibilitychange", resume);
+      el.removeEventListener("pointermove", pointer); el.removeEventListener("pointerleave", leave); renderer.domElement.removeEventListener("webglcontextlost", lost);
+      model.dispose(); environmentTexture.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
+    };
+  }, []);
+  return <div className="printer-scene" data-renderer="webgl" ref={host} role="img" aria-label="3D yazıcının turuncu, kıvrımlı bir formu katman katman ürettiği temsili animasyon" />;
+}

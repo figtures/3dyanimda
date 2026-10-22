@@ -32,7 +32,28 @@ try {
   await visit('/');await page.locator('.home-discovery').waitFor();
   await page.locator('.sector-discovery nav a').nth(7).waitFor();assert.equal(await page.locator('.sector-discovery nav a').count(),8);
   for(const path of ['/kariyer','/portfoy','/sss'])assert.ok(await page.locator(`.discover-paths a[href="${path+q}"]`).count());
-  if(theme==='editorial') {
+  if(brand==='3dyanimda') {
+   await page.locator('.print-stage[data-scene-state="ready"]').waitFor();
+   assert.equal(await page.locator('.printer-scene').getAttribute('data-motion'),'paused','Reduced motion must start paused');
+   assert.ok(await page.getByRole('link',{name:'Projenizi başlatın',exact:true}).isVisible());
+   await page.screenshot({path:`${out}/${brand}-${theme}-printer-${width}.png`});
+   await page.getByRole('button',{name:'Baskı animasyonunu oynat',exact:true}).click();
+   await page.waitForFunction(()=>document.querySelector('.printer-scene')?.dataset.motion==='playing');
+   // Reduced motion opens on the finished object. Restart before observing
+   // deposition so the check does not time the completed-pose hold on software GPUs.
+   await page.getByRole('button',{name:'Baskı animasyonunu baştan göster',exact:true}).click();
+   await page.waitForFunction(()=>document.querySelector('.print-stage-progress span')?.style.transform==='scaleX(0)');
+   const before=await page.locator('.print-stage-progress span').getAttribute('style');
+   await page.waitForFunction(value=>document.querySelector('.print-stage-progress span')?.getAttribute('style')!==value,before);
+   await page.getByRole('button',{name:'Baskı animasyonunu duraklat',exact:true}).click();
+   await page.waitForFunction(()=>document.querySelector('.printer-scene')?.dataset.motion==='paused');
+   await page.getByRole('button',{name:'Baskı animasyonunu baştan göster',exact:true}).click();
+   await page.waitForFunction(()=>document.querySelector('.print-stage-progress span')?.style.transform==='scaleX(0)');
+   await page.getByRole('button',{name:'Baskı animasyonunu duraklat',exact:true}).click();
+   const footerLayout=await page.locator('.print-brand-footer').evaluate(el=>({display:getComputedStyle(el).display,columns:getComputedStyle(el).gridTemplateColumns.split(' ').length}));
+   assert.equal(footerLayout.display,'grid');assert.equal(footerLayout.columns,width<960?1:2);
+   console.log('PRINTER_REVIEW',JSON.stringify({brand,theme,width,renderer:await page.locator('.printer-scene').getAttribute('data-renderer'),reducedMotion:true,controls:'pass'}));
+  } else if(theme==='editorial') {
    await page.locator('.formation-canvas canvas').waitFor();
    await page.waitForFunction(()=>document.querySelector('.formation-canvas canvas')?.style.opacity==='1');
    assert.ok(await page.getByRole('link',{name:'Fikrinizi üretime taşıyın'}).isVisible());

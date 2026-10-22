@@ -1,0 +1,118 @@
+{
+  "reviewedAt": "2026-10-21T23:47:49.840Z",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "result": "pass",
+  "brand": "3dyanimda",
+  "request": "Balance the left-heavy footer and create an immediate, original, performant 3D-printer homepage hero.",
+  "baseCommit": "2cf3c8dba457fe9c3892b2b526cf09afec294250",
+  "sourceHash": "01dab00d1862c2f8424d825626529cf4952ab07958eaf94f2bfbed476b8591f3",
+  "sourceFileCount": 597,
+  "changes": [
+    "3dyanimda-only PrintHero selected across all four supported themes; other brand hero branches unchanged.",
+    "Legacy two-sentence title is presented as a compact two-line headline; custom CMS titles and lead remain supported.",
+    "Procedurally authored printer and fluted vessel, synchronized nozzle path and deposited layers. No third-party models or image requests.",
+    "Immediate inline vector poster, lazy WebGL renderer, animated Canvas2D projection when WebGL is unavailable.",
+    "Explicit pause/resume/restart, reduced-motion initial pause, offscreen and background suspension, capped pixel ratio and frame cadence.",
+    "Footer identity plus three navigation columns share the full content width; tablet and mobile reflow preserve contacts and all links."
+  ],
+  "verification": {
+    "typecheck": "pass",
+    "applicationTests": {
+      "passed": 223,
+      "files": 39
+    },
+    "technicalContracts": {
+      "passed": 72
+    },
+    "originalityAudit": {
+      "records": 800,
+      "result": "pass"
+    },
+    "productionBuild": "pass",
+    "cloudBrowser": {
+      "origin": "http://terminal.local:4173",
+      "artifact": "Production Vite bundle with live public CMS, private-preview tenant/theme routing.",
+      "viewports": [
+        {
+          "width": 1363,
+          "height": 936,
+          "themes": [
+            "editorial",
+            "industrial"
+          ]
+        },
+        {
+          "iframeWidth": 390,
+          "height": 844,
+          "contentWidth": 375,
+          "theme": "editorial"
+        },
+        {
+          "iframeWidth": 360,
+          "height": 740,
+          "contentWidth": 345,
+          "theme": "editorial"
+        }
+      ],
+      "renderer": "canvas",
+      "checks": [
+        "Hero visible and animation running after navigation.",
+        "Pause changes motion to paused; progress stays fixed across subsequent observations.",
+        "Restart resumes from the bed and the deposited form grows.",
+        "Scrolling below the hero changes data-motion to suspended.",
+        "Desktop and mobile footer columns visually reviewed.",
+        "No horizontal overflow in inspected viewports.",
+        "Mobile CTA bottom 473.66px precedes scene top 477.66px in 360px fixture."
+      ]
+    },
+    "ciBrowserRegression": "Existing required workflow updated to check all four 3dyanimda themes at 390 and 1440px, reduced-motion initialization, controls, footer columns and screenshots. Execution is recorded by the PR checks, not claimed here.",
+    "ciAcceleratedVisual": {
+      "run": 39695401552,
+      "artifact": 12391365135,
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "renderer": "webgl",
+      "visual": "Inspected rendered initial completed form, housing, reel, nozzle, controls and responsive layout. No page errors.",
+      "status": "Initial visual passed; first timing assertion waited on a completed-pose hold. Revised test explicitly restarts before asserting deposition; subsequent CI run remains required."
+    }
+  },
+  "performance": {
+    "webgl": {
+      "maximumFramesPerSecond": 30,
+      "maximumDevicePixelRatio": 1.5,
+      "smallViewportDevicePixelRatio": 1.25,
+      "realTimeShadows": false,
+      "postprocessing": false
+    },
+    "canvas": {
+      "maximumFramesPerSecond": 24,
+      "maximumDevicePixelRatio": 1.5,
+      "staticSurfacesCached": true,
+      "partRedrawnOnlyWhenLayerChanges": true
+    },
+    "network": "No external machine, part or texture downloads.",
+    "offscreen": "Animation loops stop while offscreen, paused or document.hidden.",
+    "measurement": "These are implementation budgets; no new production Lighthouse score or measured device frame-rate claim."
+  },
+  "originality": {
+    "method": "Original procedural code, analytic fluted perimeter shared with toolhead path; physical printer conventions are generic.",
+    "externalModelOrTextureSources": [],
+    "imageGenerationUsed": false,
+    "globalExclusivityClaim": false
+  },
+  "unchangedEvidence": "Existing content, geographic/SEO, asset and other-brand evidence retain their original dates. This is a bounded presentation and motion delta, not a fresh all-route human review.",
+  "limitations": [
+    "Cloud review browser has WebGL disabled; animated Canvas fallback was reviewed there. The accelerated 390px initial pose was inspected from the existing CI screenshot; motion and full matrix must pass the revised repository browser workflow before merge.",
+    "No new legal exclusivity, production frame-rate or Lighthouse guarantee is asserted.",
+    "Screenshots include the private-preview toolbar; public production does not display it."
+  ],
+  "screenshots": [
+    "docs/audits/printer-desktop-2026-10-22.jpg",
+    "docs/audits/printer-mobile-2026-10-22.jpg",
+    "docs/audits/printer-footer-desktop-2026-10-22.jpg",
+    "docs/audits/printer-webgl-mobile-2026-10-22.png"
+  ]
+}
