@@ -25,7 +25,8 @@
     "274 Vitest tests passed across 49 files; 74 search/export/release contract tests and 3 CSS selection tests passed. TypeScript, production Vite compilation, protocol integrity and evidence checks passed.",
     "ContentHub now receives validated CMS media dimensions through the small summary projection and renders only known intrinsic dimensions. Five tests cover actual sizes, unknown omission, projection and full-record authority.",
     "CMS publication plan uses strict expected baseline hashes and a single transaction, preserving both review triggers and validating exact readback; other tenants are fingerprinted before and after.",
-    "Historical broad all-brand/theme evidence remains historical. Shared-code changes receive current unit/DOM coverage; existing CI performs real browser/export verification before merge."
+    "Historical broad all-brand/theme evidence remains historical. Shared-code changes receive current unit/DOM coverage; existing CI performs real browser/export verification before merge.",
+    "CI surfaced historical fixed solution-count and brand-card-only expectations. Reviewed regression updates now compare the exact tenant-scoped published solution inventory and exact SEO override/page/home/fallback image precedence, while retaining MIME, raster dimension, Twitter/Article parity and cross-tenant rejection checks. Nine new social image contract fixtures pass; current browser/export runs must pass before merge."
   ],
   "limitations": [
     "Local supervised browser preview could not start because the preview runner could not resolve the available Vite dependency symlink. No alternative browser was installed; fresh full-browser/export checks are required in the existing CI before merge.",

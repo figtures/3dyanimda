@@ -11,6 +11,7 @@ assert.ok(originality.result==='pass'||originality.status==='pass','Current orig
 const certificate=await read('content/release-review.json');
 const files=[reviewFile,'content/authoring/seo-gap-cms-delta-2026-10-23.json','docs/audits/seo-gap-cms-baseline-hashes-2026-10-23.json','content/authoring/seo-gap-meta-3dyanimda-2026-10-23.json','docs/audits/seo-gap-originality-2026-10-23.json','docs/audits/seo-gap-content-contracts-2026-10-23.json','docs/audits/3dy-guide-assets-2026-10-23.json','docs/audits/3dy-content-sources-2026-10-23.json','docs/audits/seo-critical-css-comparison-2026-10-22.json','docs/audits/seo-local-quality-2026-10-23.json','docs/audits/seo-gap-live-baseline-2026-10-23.json'];
 files.push('scripts/quality/public-export-routes.mjs','scripts/quality/public-export-routes.test.mjs');
+files.push('scripts/quality/audit-search-contracts.mjs','scripts/search/social-image-contract.test.mjs','scripts/test-home-flow.mjs','scripts/test-navigation.mjs','scripts/quality/review-candidate.mjs');
 for(const file of files){const sha256=createHash('sha256').update(await readFile(file)).digest('hex');const index=certificate.evidence.findIndex(item=>item.file===file);const item={file,sha256};if(index<0)certificate.evidence.push(item);else certificate.evidence[index]=item;}
 const snapshot=sourceSnapshot();
 certificate.sourceHash=snapshot.sourceHash;certificate.sourceFileCount=snapshot.sourceFileCount;certificate.reviewedAt=new Date().toISOString();

@@ -4,7 +4,7 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-22T23:22:52.324Z",
+  "reviewedAt": "2026-10-22T23:39:23.034Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
@@ -283,7 +283,7 @@
     },
     {
       "file": "scripts/quality/audit-search-contracts.mjs",
-      "sha256": "18ffb3eafcca24585d15f7cae8261f46b7402d7935c2a57068b90e0958fd6f1b"
+      "sha256": "35650a6268aed0a2b690255fc307e3c56183582f1a93d575e7d7e670b7ebfe7b"
     },
     {
       "file": "scripts/cloudflare/audit-routing.mjs",
@@ -347,7 +347,7 @@
     },
     {
       "file": "docs/audits/seo-gap-release-review-2026-10-23.json",
-      "sha256": "5f0041f99250044e93ec1259a171134cd03abb673dc19778f0f49741beebfd7c"
+      "sha256": "75474c6aa8ff283af80da4957c287c692fb8891c931dea6e0b3f1bf2c62d9385"
     },
     {
       "file": "content/authoring/seo-gap-cms-delta-2026-10-23.json",
@@ -388,6 +388,22 @@
     {
       "file": "docs/audits/seo-gap-live-baseline-2026-10-23.json",
       "sha256": "08261d81c129543542708229cb093508a8a71fabd173c1553c3c4c5cada1b1b2"
+    },
+    {
+      "file": "scripts/search/social-image-contract.test.mjs",
+      "sha256": "02958e308d2b04ae33da66ab7ff45e65735636f0e4143f91ed8b0207f1c84b37"
+    },
+    {
+      "file": "scripts/test-home-flow.mjs",
+      "sha256": "f8310034a585daeba2bc0ff67ad131d3fc3f1ad83087f9e9672e40c361df06b8"
+    },
+    {
+      "file": "scripts/test-navigation.mjs",
+      "sha256": "7c5af8950d6d3f22837d82c7e088bb851a4ce58b9efb634c0d48d50f1f6f04b1"
+    },
+    {
+      "file": "scripts/quality/review-candidate.mjs",
+      "sha256": "804e9bb6f299d6cd6cd512f87d24e30f660ef443bf46e97ea47b14267d4a9f18"
     }
   ],
   "limitations": [

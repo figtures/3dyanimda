@@ -6,6 +6,9 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {chromium} from '@playwright/test';
 import {createPublicApiRelay} from '../public-api-relay.mjs';
+import {capturePublicBootstrap} from './public-bootstrap.mjs';
+import {assertExportedSocialImage} from './audit-search-contracts.mjs';
+import {JSDOM} from 'jsdom';
 const env={...loadEnv('production',process.cwd(),''),...process.env};
 const brands=['3dyanimda','3dsanayi','maketyanimda','parcayanimda'];
 const records=new Map();
@@ -32,15 +35,23 @@ try {
    });
    await context.route(env.VITE_SUPABASE_URL+'/**',relay);
    const page=await context.newPage();page.setDefaultTimeout(20000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
+   const bootstrap=capturePublicBootstrap(page,env.VITE_SUPABASE_URL,new URL(origin).hostname);
    page.on('response',r=>{if(r.url().startsWith(env.VITE_SUPABASE_URL)&&r.status()>=400)errors.push('API '+r.status()+' '+new URL(r.url()).pathname);});
    const local=[...records.values()].filter(p=>p.brand===brand&&p.kind==='location').slice(0,5).map(p=>p.path);
    const routes=env.REVIEW_ROUTES?env.REVIEW_ROUTES.split(','):[...new Set(['/', '/hizmetler','/cozumler','/malzemeler','/rehber','/bolgeler','/sektorler','/teklif-al','/iletisim','/hakkimizda','/araclar',...local,...Object.keys(notes).filter(p=>records.has(brand+p))])];
    for(const route of routes){
+    bootstrap.clear();
     await page.goto(origin+route,{waitUntil:'networkidle'});await page.locator('h1').waitFor();
     await page.waitForFunction(()=>document.querySelector('[data-pending-queries]')?.getAttribute('data-pending-queries')==='0');
     const data=await page.evaluate(()=>({h1:[...document.querySelectorAll('h1')].map(e=>e.textContent),title:document.title,canonical:document.querySelector('link[rel=canonical]')?.href,robots:document.querySelector('meta[name=robots]')?.content,theme:document.querySelector('.brand-site')?.getAttribute('data-theme'),image:document.querySelector('meta[property="og:image"]')?.content,schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(e=>JSON.parse(e.textContent)),date:document.querySelector('[data-content-modified]')?.getAttribute('datetime'),text:document.querySelector('main')?.textContent||''}));
     assert.equal(data.h1.length,1,brand+route);assert.equal(data.canonical,origin+route);assert.equal(data.theme,theme);assert.doesNotMatch(data.robots,/noindex/);assert.equal(data.schemas.length,1);
-    assert.equal(data.image,origin+'/brand/identity/'+brand+'/og-image.png');
+    // Use the same actual public-query snapshot as the HTML exporter. Resolve
+    // explicit SEO overrides, route media and brand fallback in that order.
+    const exported=await page.evaluate(async()=>typeof window.__renderPublicPage==='function'?await window.__renderPublicPage():null);
+    await bootstrap.embed();
+    const socialDocument=new JSDOM(await page.content(),{url:origin+route});
+    try{await assertExportedSocialImage(socialDocument.window.document,{origin,route,directory:root,landingRoute:records.has(brand+route),snapshot:exported?.state?{...exported.state,apiOrigin:env.VITE_SUPABASE_URL}:undefined});}
+    finally{socialDocument.window.close();}
     const nodes=data.schemas[0]['@graph'];assert.equal(nodes.filter(n=>n['@type']==='Organization').length,1);assert.equal(new Set(nodes.map(n=>n['@id'])).size,nodes.length);
     const content=records.get(brand+route);if(content){assert.equal(data.h1[0],content.title);assert.ok(data.text.includes(content.summary));const node=nodes.find(n=>n['@type']==='FAQPage');assert.deepEqual(node.mainEntity.map(n=>[n.name,n.acceptedAnswer.text]),content.faq.map(f=>[f.q,f.a]));assert.equal(nodes.find(n=>n['@id']===origin+route+'#webpage').dateModified,data.date);}
     if(notes[route])assert.ok(data.text.includes(notes[route].text));
