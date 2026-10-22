@@ -7,6 +7,8 @@ export type BusinessIdentity = {
  address?: {streetAddress?: string;addressLocality?: string;addressRegion?: string;addressCountry?: string;postalCode?:string};
  geo?: {latitude: number;longitude: number};
  openingHoursSpecification?: Record<string, unknown>[];
+ availableLanguages?: string[];
+ serviceAreas?: string[];
 };
 const profileUrl=(value:unknown)=>normalizeGoogleBusinessUrl(value)||SOCIAL_PROFILES.map(profile=>normalizeSocialUrl(profile.key,value)).find(Boolean);
 /** Only verified business fields are supplied; service-area pages never create fictional branches. */
@@ -20,14 +22,17 @@ export function businessGraph(identity: BusinessIdentity) {
  const hasAddress=address&&Object.values(address).some(v=>typeof v==='string'&&v.trim());
  const alternateName=[...new Set((identity.alternateNames||[]).map(value=>value.trim()).filter(value=>value&&value!==name&&!/^(?:3d\s*yanında|(?:www\.)?3dyaninda\.com)$/i.test(value)))];
  const aliases=alternateName.length?{alternateName}:{};
+ const labels=(values:string[])=>[...new Set(values.map(value=>value.trim()).filter(Boolean))];
+ const languages=labels(identity.availableLanguages ?? ['Turkish']);
+ const areas=labels(identity.serviceAreas ?? ['İstanbul']).map(name=>({'@type':name==='İstanbul'?'City':'Place',name}));
  const organization = {'@type':'Organization','@id':origin+'/#organization',name,url:origin,description,
   ...aliases,...(hasAddress?{address:{'@type':'PostalAddress',...address},location:{'@id':origin+'/#localbusiness'}}:{}),
   ...(logo?{logo:new URL(logo,origin).href}:{}),...(email?{email}:{}),...(telephone?{telephone}:{}),...(sameAs?.length?{sameAs}:{}),
-  ...((email||telephone)?{contactPoint:[{'@type':'ContactPoint',contactType:'customer service',...(email?{email}:{}),...(telephone?{telephone}:{}),availableLanguage:['Turkish']}]}:{})};
+  ...((email||telephone)?{contactPoint:[{'@type':'ContactPoint',contactType:'customer service',...(email?{email}:{}),...(telephone?{telephone}:{}),...(languages.length?{availableLanguage:languages}:{})}]}:{})};
  return {'@context':'https://schema.org','@graph':[organization,{'@type':'WebSite','@id':origin+'/#website',url:origin,name,...aliases,inLanguage:'tr-TR',publisher:{'@id':origin+'/#organization'}},...(hasAddress ? [{'@type':'ProfessionalService','@id':origin+'/#localbusiness',name,url:origin,parentOrganization:{'@id':origin+'/#organization'},
   ...(logo?{logo:new URL(logo,origin).href}:{}),...(email?{email}:{}),...(telephone?{telephone}:{}),
   ...(address?{address:{'@type':'PostalAddress',...address}}:{}),...(geo?{geo:{'@type':'GeoCoordinates',...geo}}:{}),...(hasMap?{hasMap}:{}),
-  ...(openingHoursSpecification?.length?{openingHoursSpecification}:{}),areaServed:{'@type':'City',name:'İstanbul'}}] : [])]};
+  ...(openingHoursSpecification?.length?{openingHoursSpecification}:{}),...(areas.length?{areaServed:areas.length===1?areas[0]:areas}:{})}] : [])]};
 }
 export function containsLegacyIdentity(value: unknown): boolean {
  const text=JSON.stringify(value);

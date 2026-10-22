@@ -17,6 +17,25 @@ test('published portfolio and empty FAQ have their own indexing decisions',()=>{
  assert.ok(plan.routes.has('/portfoy/ornek-proje'));assert.ok(!plan.noindex.has('/portfoy'));assert.equal(plan.noindex.get('/sss'),'empty-faq');
  assertExportedRouteSets(plan,output(plan));
 });
+test('a populated blog exports its index and published detail routes together',()=>{
+ const plan=publicExportRoutes(input({posts:[{slug:'malzeme-secimi',published:true,published_at:'2026-01-01T00:00:00Z',updated_at:'2026-01-02T00:00:00Z'}]}));
+ assert.ok(plan.routes.has('/blog'));
+ assert.equal(plan.routes.get('/blog/malzeme-secimi'),'2026-01-02T00:00:00Z');
+ assert.equal(indexableLinkTarget('/blog',{origin:'https://3dyanimda.com',sourcePath:'/blog/malzeme-secimi',plan}),'/blog');
+ assertExportedRouteSets(plan,output(plan));
+});
+test('empty, disabled and not-yet-public blog inventories do not create an empty blog hub',()=>{
+ for(const extra of [
+  {},
+  {pages:[{slug:'blog'}]},
+  {features:[{feature_key:'blog',enabled:false}],posts:[{slug:'existing'}]},
+  {posts:[{slug:'draft',published:false},{slug:'future',published_at:'2999-01-01T00:00:00Z'}]},
+ ]) {
+  const plan=publicExportRoutes(input(extra));
+  assert.ok(![...plan.routes.keys()].some(path=>path==='/blog'||path.startsWith('/blog/')));
+  assertExportedRouteSets(plan,output(plan));
+ }
+});
 test('disabled features and scheduled-out inventory do not create routes',()=>{
  const plan=publicExportRoutes(input({features:[{feature_key:'career',enabled:false},{feature_key:'portfolio',enabled:false},{feature_key:'faq',enabled:false}]}));
  for(const path of ['/kariyer','/kariyer/is-basvurusu','/kariyer/makine-isletim','/portfoy','/sss'])assert.ok(!plan.routes.has(path));

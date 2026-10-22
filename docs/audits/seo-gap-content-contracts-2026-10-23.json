@@ -1,0 +1,511 @@
+{
+  "observedAt": "2026-10-22T23:11:31.062Z",
+  "scope": "Source and prepared CMS delta review only; no database or publishing action. Existing CMS publication dates compared against read-only baseline.",
+  "result": "pass",
+  "checks": [
+    {
+      "name": "delta shape",
+      "pass": true,
+      "details": {
+        "existing": 17,
+        "new": 5
+      }
+    },
+    {
+      "name": "all 22 deltas use effective final owner",
+      "pass": true,
+      "details": [
+        {
+          "path": "/rehber/teklif-icin-dosya-hazirlama",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/3d-baski-fiyatlandirma",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/tarama-ve-tersine-muhendislik",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/numune-ve-revizyon",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/stl-dosya-hazirlama",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/tarama-verisinden-cad",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/kesit-nasil-incelenir",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/teknik-teklif-dosyasi",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/malzeme-secim-sorulari",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/maket-olcek-planlama",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/numune-kabul-plani",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/prototip-maliyetini-ne-belirler",
+          "owner": "search-pages"
+        },
+        {
+          "path": "/rehber/3d-baski-mi-cnc-mi",
+          "owner": "search-pages"
+        },
+        {
+          "path": "/bolgeler/istanbul",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/3d-baski",
+          "owner": "search-pages"
+        },
+        {
+          "path": "/3d-tarama",
+          "owner": "search-pages"
+        },
+        {
+          "path": "/3d-modelleme",
+          "owner": "search-pages"
+        },
+        {
+          "path": "/rehber/fdm-sla-sls-karsilastirma",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/asa-pa-cf-karsilastirma",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/3d-tarama-kullanim-alanlari",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/rehber/3d-tarama-kalite-kontrol",
+          "owner": "editorial-pages"
+        },
+        {
+          "path": "/cozumler/yedek-parca-uretimi",
+          "owner": "editorial-pages"
+        }
+      ]
+    },
+    {
+      "name": "other brands unchanged",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "unplanned source content edits absent",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "existing first-publication dates preserved",
+      "pass": true,
+      "details": [
+        {
+          "path": "/rehber/teklif-icin-dosya-hazirlama",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/3d-baski-fiyatlandirma",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/tarama-ve-tersine-muhendislik",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/numune-ve-revizyon",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/stl-dosya-hazirlama",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/tarama-verisinden-cad",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/kesit-nasil-incelenir",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/teknik-teklif-dosyasi",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/malzeme-secim-sorulari",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/maket-olcek-planlama",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/numune-kabul-plani",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/prototip-maliyetini-ne-belirler",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/rehber/3d-baski-mi-cnc-mi",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/bolgeler/istanbul",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/3d-baski",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/3d-tarama",
+          "before": null,
+          "after": null
+        },
+        {
+          "path": "/3d-modelleme",
+          "before": null,
+          "after": null
+        }
+      ]
+    },
+    {
+      "name": "new guides dated only at current integration timestamp",
+      "pass": true,
+      "details": [
+        {
+          "path": "/rehber/fdm-sla-sls-karsilastirma",
+          "kind": "guide",
+          "publishedAt": "2026-10-22T23:08:58.391Z",
+          "reviewedAt": "2026-10-22T23:08:58.391Z"
+        },
+        {
+          "path": "/rehber/asa-pa-cf-karsilastirma",
+          "kind": "guide",
+          "publishedAt": "2026-10-22T23:08:58.391Z",
+          "reviewedAt": "2026-10-22T23:08:58.391Z"
+        },
+        {
+          "path": "/rehber/3d-tarama-kullanim-alanlari",
+          "kind": "guide",
+          "publishedAt": "2026-10-22T23:08:58.391Z",
+          "reviewedAt": "2026-10-22T23:08:58.391Z"
+        },
+        {
+          "path": "/rehber/3d-tarama-kalite-kontrol",
+          "kind": "guide",
+          "publishedAt": "2026-10-22T23:08:58.391Z",
+          "reviewedAt": "2026-10-22T23:08:58.391Z"
+        },
+        {
+          "path": "/cozumler/yedek-parca-uretimi",
+          "kind": "solution",
+          "publishedAt": null,
+          "reviewedAt": "2026-10-22T23:08:58.391Z"
+        }
+      ]
+    },
+    {
+      "name": "delta patches and effective source data match",
+      "pass": true,
+      "details": null
+    },
+    {
+      "name": "all merged SEO titles unique per brand",
+      "pass": true,
+      "details": {
+        "records": 801,
+        "duplicates": []
+      }
+    },
+    {
+      "name": "related and resource targets resolve locally",
+      "pass": true,
+      "details": {
+        "checkedLinks": 120,
+        "badLinks": []
+      }
+    },
+    {
+      "name": "all manifest images decode and dimensions/alt/captions valid",
+      "pass": true,
+      "details": [
+        {
+          "route": "/3d-baski",
+          "url": "/images/editorial/3dyanimda/3d-baski.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/3d-tarama",
+          "url": "/images/editorial/3dyanimda/3d-tarama.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/3d-modelleme",
+          "url": "/images/editorial/3dyanimda/3d-modelleme.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/teklif-icin-dosya-hazirlama",
+          "url": "/images/editorial/3dyanimda/rehber--teklif-icin-dosya-hazirlama.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/3d-baski-fiyatlandirma",
+          "url": "/images/editorial/3dyanimda/rehber--3d-baski-fiyatlandirma.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/tarama-ve-tersine-muhendislik",
+          "url": "/images/editorial/3dyanimda/rehber--tarama-ve-tersine-muhendislik.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/numune-ve-revizyon",
+          "url": "/images/editorial/3dyanimda/rehber--numune-ve-revizyon.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/stl-dosya-hazirlama",
+          "url": "/images/editorial/3dyanimda/rehber--stl-dosya-hazirlama.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/tarama-verisinden-cad",
+          "url": "/images/editorial/3dyanimda/rehber--tarama-verisinden-cad.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/kesit-nasil-incelenir",
+          "url": "/images/editorial/3dyanimda/rehber--kesit-nasil-incelenir.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/teknik-teklif-dosyasi",
+          "url": "/images/editorial/3dyanimda/rehber--teknik-teklif-dosyasi.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/malzeme-secim-sorulari",
+          "url": "/images/editorial/3dyanimda/rehber--malzeme-secim-sorulari.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/maket-olcek-planlama",
+          "url": "/images/editorial/3dyanimda/rehber--maket-olcek-planlama.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/numune-kabul-plani",
+          "url": "/images/editorial/3dyanimda/rehber--numune-kabul-plani.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/prototip-maliyetini-ne-belirler",
+          "url": "/images/editorial/3dyanimda/rehber--prototip-maliyetini-ne-belirler.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/3d-baski-mi-cnc-mi",
+          "url": "/images/editorial/3dyanimda/rehber--3d-baski-mi-cnc-mi.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/fdm-sla-sls-karsilastirma",
+          "url": "/images/editorial/3dyanimda/rehber--fdm-sla-sls-karsilastirma.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/asa-pa-cf-karsilastirma",
+          "url": "/images/editorial/3dyanimda/rehber--asa-pa-cf-karsilastirma.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/3d-tarama-kullanim-alanlari",
+          "url": "/images/editorial/3dyanimda/rehber--3d-tarama-kullanim-alanlari.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/rehber/3d-tarama-kalite-kontrol",
+          "url": "/images/editorial/3dyanimda/rehber--3d-tarama-kalite-kontrol.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        },
+        {
+          "route": "/cozumler/yedek-parca-uretimi",
+          "url": "/images/editorial/3dyanimda/cozumler--yedek-parca-uretimi.png",
+          "width": 1200,
+          "height": 630,
+          "alt": true,
+          "caption": true,
+          "valid": true
+        }
+      ]
+    },
+    {
+      "name": "new and updated record editorial contracts",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "technicalSourceReview": [
+    {
+      "url": "https://formlabs.com/blog/fdm-vs-sla-vs-sls-how-to-choose-the-right-3d-printing-technology/",
+      "claimScope": "Filament/resin/powder process definitions and support/wash/post-cure/powder-removal workflows. No machine inventory, price or 3D Yanımda capacity conclusion.",
+      "verified": true
+    },
+    {
+      "url": "https://help.prusa3d.com/article/asa_1809",
+      "claimScope": "ASA UV/outdoor candidacy and warping/production-condition considerations; no universal safe operating temperature.",
+      "verified": true
+    },
+    {
+      "url": "https://help.prusa3d.com/article/polyamide-nylon_167188",
+      "claimScope": "Polyamide moisture management and product-specific production conditions; no uniform PA family performance.",
+      "verified": true
+    },
+    {
+      "url": "https://help.prusa3d.com/article/composite-materials-filled-with-carbon-kevlar-or-glass_167387",
+      "claimScope": "Fiber-filled filament abrasion and nozzle suitability; carbon fill not universal strength superiority.",
+      "verified": true
+    },
+    {
+      "url": "https://www.artec3d.com/learning-center/accuracy-precision-resolution",
+      "claimScope": "Accuracy/reference agreement, precision/repeatability and resolution/detail are distinct; no specific device accuracy, accredited service or tolerance promise.",
+      "verified": true
+    }
+  ],
+  "technicalLimitations": [
+    "All five technical source pages independently opened and relevant passages found through web research. Technical source dates are not page publication dates.",
+    "STL export/20mm cube and CSV templates are authored educational examples, not fabricated customer jobs.",
+    "No SLA/SLS equipment ownership, guaranteed tolerance, working temperature, certified CMM/measurement or vehicle safety approval is asserted."
+  ],
+  "localPageRecommendation": {
+    "sideOfCityRoutes": 110,
+    "action": "Do not bulk add geographic fact padding or noindex without demand/intent evidence. Fix known navigation now; local grouping and single-workshop access are valid. Further enriched pages require route-specific business/query/enquiry evidence or a clearly useful verified logistical distinction.",
+    "existingEvidenceOpportunity": "Adalar and workshop-access families already have stronger registered facts; evaluate only relevant facts with owner-confirmed delivery/onsite conditions. Shared city-side routing alone does not justify 110 novel landing-page narratives.",
+    "needsOwnerEvidence": [
+      "Search Console query and landing-page overlap",
+      "Actual local enquiry and delivery patterns",
+      "Verified route-specific on-site/collection constraints",
+      "Real completed case-study permission and evidence, if used"
+    ]
+  }
+}

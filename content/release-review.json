@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-22T01:36:04.781Z",
+  "reviewedAt": "2026-10-22T23:39:23.034Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "bc20aac151a9d797411f664e90cade10e219cfdd543267a0d9928309d84442c5",
-  "sourceFileCount": 634,
+  "sourceHash": "e81a12807017df45fee08ae1c336ee545e2cc2f5f89b96dcb1a8ee3a5f70c41a",
+  "sourceFileCount": 694,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -54,7 +54,11 @@
     "latestBrandIdentityReview": "docs/audits/brand-identity-review-2026-10-21.json",
     "latestBrandIdentityPages": 5,
     "latestBrandCmsVerification": "docs/audits/brand-cms-verification-2026-10-22.json",
-    "latestPrinterHeroReview": "docs/audits/printer-hero-review-2026-10-22.json"
+    "latestPrinterHeroReview": "docs/audits/printer-hero-review-2026-10-22.json",
+    "latestSeoGapReview": "docs/audits/seo-gap-release-review-2026-10-23.json",
+    "latestSeoGapExistingLandingUpdates": 17,
+    "latestSeoGapNewPages": 5,
+    "historicalEvidenceNote": "Earlier all-route/theme evidence keeps its original coverage and dates. The latest bounded review describes current tests and remaining CI/live verification separately."
   },
   "evidence": [
     {
@@ -263,11 +267,11 @@
     },
     {
       "file": "scripts/quality/public-export-routes.mjs",
-      "sha256": "695f67b2e2553764c1a293381eda9c6105ee1c6e905de3040b5e640b082447fc"
+      "sha256": "1e2cc5224744c3124901976e3d8685a09a90c56582f019aab819db9aa9c7df53"
     },
     {
       "file": "scripts/quality/public-export-routes.test.mjs",
-      "sha256": "976ee64793303198b5906079d7905e3f8e7c3186654b77b3d14538315e4d0256"
+      "sha256": "e87f414a37854762d652a4095da21f12fe7c80d355b7564f92b90f3f1b2f31e7"
     },
     {
       "file": "scripts/export-sites.mjs",
@@ -279,7 +283,7 @@
     },
     {
       "file": "scripts/quality/audit-search-contracts.mjs",
-      "sha256": "18ffb3eafcca24585d15f7cae8261f46b7402d7935c2a57068b90e0958fd6f1b"
+      "sha256": "35650a6268aed0a2b690255fc307e3c56183582f1a93d575e7d7e670b7ebfe7b"
     },
     {
       "file": "scripts/cloudflare/audit-routing.mjs",
@@ -340,6 +344,66 @@
     {
       "file": "docs/audits/printer-webgl-mobile-2026-10-22.png",
       "sha256": "940f4ac25f4bcca3f108ea0662cf77c39b90eaaef459e81b3ed92b5bc92fe23b"
+    },
+    {
+      "file": "docs/audits/seo-gap-release-review-2026-10-23.json",
+      "sha256": "75474c6aa8ff283af80da4957c287c692fb8891c931dea6e0b3f1bf2c62d9385"
+    },
+    {
+      "file": "content/authoring/seo-gap-cms-delta-2026-10-23.json",
+      "sha256": "ee80f732d9e8021834c1564c9af3deaa9245557736664eb9cb562006749e14bc"
+    },
+    {
+      "file": "docs/audits/seo-gap-cms-baseline-hashes-2026-10-23.json",
+      "sha256": "8fa6459f598e2bf685a7295cfbb0024e02dd1c62bec23c6113a712cc6aa9351c"
+    },
+    {
+      "file": "content/authoring/seo-gap-meta-3dyanimda-2026-10-23.json",
+      "sha256": "551885dd2686cf1157001b5389f89174231fd1c0e0d14712545fd46e11d08c1a"
+    },
+    {
+      "file": "docs/audits/seo-gap-originality-2026-10-23.json",
+      "sha256": "53e8eed796d16d4ad23a8f61c77d7715ccf70289790fbd941a1fcb37d36f3df8"
+    },
+    {
+      "file": "docs/audits/seo-gap-content-contracts-2026-10-23.json",
+      "sha256": "a882ee6b37227202c23a33e80f44f2d16f007acacaa394a994834b0a2bdcdaab"
+    },
+    {
+      "file": "docs/audits/3dy-guide-assets-2026-10-23.json",
+      "sha256": "e6d1d23cbc458f9f5a87fbf88bb870963360a2d2e7120738f864b4ba57521498"
+    },
+    {
+      "file": "docs/audits/3dy-content-sources-2026-10-23.json",
+      "sha256": "ec2c7601466c466ee739db109aa93163ab7d423b8283913608006e1bd967ce56"
+    },
+    {
+      "file": "docs/audits/seo-critical-css-comparison-2026-10-22.json",
+      "sha256": "a3433102e2da9cf0ed6bfa241cc7111babeb5e4c8aa69b35585a13db5da830f2"
+    },
+    {
+      "file": "docs/audits/seo-local-quality-2026-10-23.json",
+      "sha256": "c7895310acc7ff1307abf56282ed79d1184a3fc319219da62ce9ac696dad3edb"
+    },
+    {
+      "file": "docs/audits/seo-gap-live-baseline-2026-10-23.json",
+      "sha256": "08261d81c129543542708229cb093508a8a71fabd173c1553c3c4c5cada1b1b2"
+    },
+    {
+      "file": "scripts/search/social-image-contract.test.mjs",
+      "sha256": "02958e308d2b04ae33da66ab7ff45e65735636f0e4143f91ed8b0207f1c84b37"
+    },
+    {
+      "file": "scripts/test-home-flow.mjs",
+      "sha256": "f8310034a585daeba2bc0ff67ad131d3fc3f1ad83087f9e9672e40c361df06b8"
+    },
+    {
+      "file": "scripts/test-navigation.mjs",
+      "sha256": "7c5af8950d6d3f22837d82c7e088bb851a4ce58b9efb634c0d48d50f1f6f04b1"
+    },
+    {
+      "file": "scripts/quality/review-candidate.mjs",
+      "sha256": "804e9bb6f299d6cd6cd512f87d24e30f660ef443bf46e97ea47b14267d4a9f18"
     }
   ],
   "limitations": [

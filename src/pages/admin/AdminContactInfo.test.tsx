@@ -149,4 +149,32 @@ describe('business profile editor', () => {
     fireEvent.submit(container.querySelector('form')!);
     expect(mocks.save).not.toHaveBeenCalled();
   });
+
+  it('saves complete hours and validated coordinates without filling missing business facts', async () => {
+    render(<AdminContactInfo />);
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Kaydet' })).toBeEnabled());
+    expect(screen.getByLabelText('Pazartesi açılış')).toHaveValue('');
+    fireEvent.change(screen.getByLabelText('Atölye enlemi'), { target: { value: '40.98' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Kaydet' }));
+    expect(mocks.save).not.toHaveBeenCalled();
+    expect(screen.getByLabelText('Atölye boylamı')).toHaveAttribute('aria-invalid', 'true');
+    fireEvent.change(screen.getByLabelText('Atölye boylamı'), { target: { value: '29.12' } });
+    fireEvent.change(screen.getByLabelText('Pazartesi açılış'), { target: { value: '10:00' } });
+    fireEvent.change(screen.getByLabelText('Pazartesi kapanış'), { target: { value: '17:00' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Kaydet' }));
+    await waitFor(() => expect(mocks.save).toHaveBeenCalledWith('contact_info', expect.objectContaining({ geo_latitude: '40.98', geo_longitude: '29.12', opening_hours: [{ dayOfWeek: 'Monday', opens: '10:00', closes: '17:00' }] }), 'tenant-a'));
+    expect(mocks.save.mock.calls[0][1]).not.toHaveProperty('contact_languages');
+    expect(mocks.save.mock.calls[0][1]).not.toHaveProperty('delivery_areas');
+  });
+
+  it('clears stale coordinates when an address is edited', async () => {
+    mocks.settings.contact_info = { geo_latitude: '40.98', geo_longitude: '29.12' };
+    render(<AdminContactInfo />);
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Kaydet' })).toBeEnabled());
+    fireEvent.change(screen.getByLabelText('İlçe'), { target: { value: 'Kadıköy' } });
+    expect(screen.getByLabelText('Atölye enlemi')).toHaveValue('');
+    expect(screen.getByLabelText('Atölye boylamı')).toHaveValue('');
+    fireEvent.click(screen.getByRole('button', { name: 'Kaydet' }));
+    await waitFor(() => expect(mocks.save).toHaveBeenCalledWith('contact_info', expect.objectContaining({ geo_latitude: '', geo_longitude: '' }), 'tenant-a'));
+  });
 });

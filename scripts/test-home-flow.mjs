@@ -9,9 +9,47 @@ const server=await createServer({server:{host:'127.0.0.1',port:8091}});await ser
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE,headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const page=await browser.newPage();await page.emulateMedia({reducedMotion:'reduce'});
 const errors=[],cases=[];page.on('pageerror',e=>errors.push(e.message));
+const solutionInventories=new Map();
 try{
  for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(const theme of ["industrial", "industrialtwo", "editorial", "studio"])for(const width of [320,390,768,1440]){
   await page.setViewportSize({width,height:900});await page.goto(`http://127.0.0.1:8091/?tenant=${brand}&theme=${theme}`,{waitUntil:'networkidle'});await page.locator('.home-flow').waitFor();
+  if(!solutionInventories.has(brand)){
+   // Read the selected tenant's authoritative published data, never infer the
+   // expected inventory from the rendered cards. CI without an API uses the
+   // same reviewed local CMS sources; configured CI reads the public CMS.
+   const inventory=await page.evaluate(async()=>{
+    const {exportPublicTenant}=await import('/src/contexts/TenantContext.tsx');
+    const {demoMode,getSupabase}=await import('/src/lib/backend-config.ts');
+    const tenant=exportPublicTenant();
+    if(!tenant)throw Error('Home solution inventory has no resolved tenant');
+    let rows;
+    if(demoMode){
+     // Independent of contentQuery and the component's filtering: overlays
+     // replace a brand/path record before publication and kind are selected.
+     const sources=await Promise.all([import('/src/content/pages.json'),import('/src/content/editorial-pages.json'),import('/src/content/search-pages.json')]);
+     const merged=new Map();
+     for(const source of sources)for(const row of source.default)merged.set(row.brand+row.path,row);
+     rows=[...merged.values()].filter(row=>row.brand===tenant.slug&&row.status==='published'&&row.kind==='solution');
+    }else{
+     const result=await (await getSupabase()).from('landing_pages').select('tenant_id,path,title,summary,kind,status').eq('tenant_id',tenant.id).eq('status','published').eq('kind','solution').order('path');
+     if(result.error)throw result.error;
+     rows=result.data;
+    }
+    return {tenant:tenant.slug,id:tenant.id,source:demoMode?'local-published':'public-cms',rows:rows.map(row=>({brand:row.brand,tenant_id:row.tenant_id,status:row.status,kind:row.kind,path:row.path,title:row.title,summary:row.summary}))};
+   });
+   assert.equal(inventory.tenant,brand,'Home solution inventory must match the selected brand');
+   assert.ok(inventory.rows.length>=5,`${brand}: established solution inventory is unexpectedly incomplete`);
+   assert.equal(new Set(inventory.rows.map(row=>row.path)).size,inventory.rows.length,`${brand}: duplicate solution routes`);
+   for(const row of inventory.rows){
+    assert.equal(row.status,'published',`${brand}${row.path}: draft in public solution inventory`);
+    assert.equal(row.kind,'solution',`${brand}${row.path}: wrong home inventory kind`);
+    assert.equal(inventory.source==='local-published'?row.brand:row.tenant_id,inventory.source==='local-published'?brand:inventory.id,`${brand}${row.path}: cross-tenant solution`);
+    assert.match(row.path,/^\/cozumler\/[a-z0-9-]+$/,`${brand}: invalid solution route`);
+    assert.ok(row.title.trim()&&row.summary.trim(),`${brand}${row.path}: incomplete solution copy`);
+   }
+   solutionInventories.set(brand,inventory);
+  }
+  const inventory=solutionInventories.get(brand);
   assert.equal(await page.locator('h1').count(),1);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,`${brand}/${theme}/${width} horizontal overflow`);
   assert.equal(await page.locator('.home-chapters').count(),0);
@@ -40,7 +78,12 @@ try{
    // Return the intentional compact initial state before captures.
    await disclosures.evaluateAll((nodes,group)=>nodes.forEach((n,i)=>{n.open=group!=='.editorial-card details'&&i===0;}),selector);
   }
-  assert.equal(await page.locator('.application-list > details').count(),5);
+  const renderedSolutions=await page.locator('.application-list > details').evaluateAll(nodes=>nodes.map(node=>({
+   path:new URL(node.querySelector('.application-copy a').href).pathname,
+   title:node.querySelector('summary h3').textContent.replace(/\s+/g,' ').trim(),
+   summary:node.querySelector('.application-copy p').textContent.replace(/\s+/g,' ').trim(),
+  })));
+  assert.deepEqual(renderedSolutions,inventory.rows.map(({path,title,summary})=>({path,title:title.replace(/\s+/g,' ').trim(),summary:summary.replace(/\s+/g,' ').trim()})),`${brand}/${theme}/${width}: rendered solutions differ from published inventory`);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,`${brand}/${theme}/${width} expanded overflow`);
   const controls=await page.locator('.product-quote,.home-services ~ .showcase-section .brand-button,.immersive-hero .brand-button').evaluateAll(nodes=>nodes.map(n=>{const s=getComputedStyle(n);return {background:s.backgroundColor,color:s.color};}));
   function luminance(rgb){return rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(x=>{x/=255;return x<=.04045?x/12.92:((x+.055)/1.055)**2.4;}).reduce((sum,x,i)=>sum+x*[.2126,.7152,.0722][i],0);}
@@ -64,7 +107,7 @@ try{
     await page.locator(selector).screenshot({style:'.product-header{visibility:hidden !important}',path:`${out}/${theme}-${width}-${selector.slice(1)}.png`,animations:'disabled'});
    }
   }
-  cases.push({brand,theme,width,status:'PASS',controls});console.log(`HOME_FLOW_PASS ${brand}/${theme}/${width}`);
+  cases.push({brand,theme,width,status:'PASS',controls,solutionSource:inventory.source,solutionPaths:inventory.rows.map(row=>row.path)});console.log(`HOME_FLOW_PASS ${brand}/${theme}/${width}`);
  }
  assert.deepEqual(errors,[]);
 }finally{

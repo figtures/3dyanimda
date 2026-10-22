@@ -9,7 +9,7 @@ import { useTenant } from "@/contexts/TenantContext";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSettings, setSiteSetting, refreshSiteSettings } from "@/hooks/useSiteSettings";
 import { getTenantId } from "@/lib/tenant";
-import { type ContactInfo, validateContactInfo, formatPostalAddress, resolveBusinessProfile } from "@/lib/business-profile";
+import { type ContactInfo, type BusinessHours, WEEKDAYS, validateContactInfo, formatPostalAddress, resolveBusinessProfile } from "@/lib/business-profile";
 import { toast } from "@/hooks/use-toast";
 import { Save, Loader2, Building2, MapPin, Share2, Image } from "lucide-react";
 
@@ -39,9 +39,15 @@ function editableValues(settings: Record<string, unknown>, name: string, origin:
     address_city: profile.address?.addressRegion,
     address_postal_code: profile.address?.postalCode,
     address_country: profile.address?.addressCountry,
+    geo_latitude: profile.geo ? String(profile.geo.latitude) : undefined,
+    geo_longitude: profile.geo ? String(profile.geo.longitude) : undefined,
+    opening_hours: profile.openingHours,
+    contact_languages: profile.availableLanguages.join('\n'),
+    service_areas: profile.serviceAreas.join('\n'),
+    delivery_areas: profile.deliveryAreas.join('\n'),
   };
   for (const [key, value] of Object.entries(defaults)) {
-    if (!Object.prototype.hasOwnProperty.call(stored, key) && value != null) data[key] = value;
+    if (!Object.prototype.hasOwnProperty.call(stored, key) && value != null) Object.assign(data, { [key]: value });
   }
   return data;
 }
@@ -93,12 +99,16 @@ const AdminContactInfo = () => {
     if (changedTenant || dirty.current.size === 0) setData(editableValues(settings, brandName, origin));
   }, [settings, tenant?.id, brandName, origin]);
 
-  const set = (key: FieldKey, value: string | boolean) => {
+  const set = (key: FieldKey, value: ContactInfo[FieldKey]) => {
     dirty.current.add(key);
     setErrors((current) => ({ ...current, [key]: undefined }));
     setData((current) => {
       const next = { ...current, [key]: value };
       if (addressKeys.includes(key as typeof addressKeys[number])) {
+        next.geo_latitude = '';
+        next.geo_longitude = '';
+        dirty.current.add('geo_latitude');
+        dirty.current.add('geo_longitude');
         for (const addressKey of addressKeys) dirty.current.add(addressKey);
         const text = formatPostalAddress({
           streetAddress: String(next.address_street || ""),
@@ -112,6 +122,10 @@ const AdminContactInfo = () => {
         dirty.current.add("address_tr");
         dirty.current.add("address_en");
       } else if (key === "address_tr") {
+        next.geo_latitude = '';
+        next.geo_longitude = '';
+        dirty.current.add('geo_latitude');
+        dirty.current.add('geo_longitude');
         // A manually replaced address must not retain the old structured address.
         for (const addressKey of addressKeys) {
           next[addressKey] = "";
@@ -120,6 +134,13 @@ const AdminContactInfo = () => {
       }
       return next;
     });
+  };
+
+  const updateHours = (day: BusinessHours['dayOfWeek'], part: 'opens' | 'closes', value: string) => {
+    const current = data.opening_hours || [];
+    const existing = current.find(row => row.dayOfWeek === day);
+    const next = { ...(existing || { dayOfWeek: day, opens: '', closes: '' }), [part]: value };
+    set('opening_hours', [...current.filter(row => row.dayOfWeek !== day), next]);
   };
 
   const freshReady = loadStatus === "ready" && freshSnapshot.current?.tenantId === tenant?.id;
@@ -201,6 +222,7 @@ const AdminContactInfo = () => {
           {field("phone_display", "Telefon (gösterim)", { hint: "Telefonun sayfalarda okunabilir biçimi. Boşsa telefon numarası kullanılır." })}
           {field("whatsapp", "WhatsApp numarası", { hint: "Ülke koduyla, yalnızca rakamlar. Türkiye için 90 ile başlar." })}
         </div>
+        {field("contact_languages", "İletişim dilleri", { multiline: true, rows: 2, hint: "Gerçekten desteklediğiniz dilleri her satıra bir dil olacak şekilde yazın." })}
       </Card>
 
       <Card className="p-5 space-y-4">
@@ -212,6 +234,10 @@ const AdminContactInfo = () => {
           {field("address_city", "İl")}
           {field("address_postal_code", "Posta kodu")}
           {field("address_country", "Ülke kodu", { placeholder: "TR" })}
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          {field("geo_latitude", "Atölye enlemi", { hint: "Google Haritalar'dan doğruladığınız konum. Örnek biçim: 40.12345. Adres değiştiğinde koordinatlar temizlenir." })}
+          {field("geo_longitude", "Atölye boylamı", { hint: "Enlemle birlikte girin. Örnek biçim: 29.12345. Konumu bilmiyorsanız iki alanı da boş bırakın." })}
         </div>
         <p className="text-xs text-muted-foreground">Adres bileşenlerini değiştirdiğinizde aşağıdaki adres metinleri aynı bilgilerle güncellenir. Yalnızca müşterilerle paylaşmak istediğiniz gerçek adresi girin.</p>
         <div className="grid md:grid-cols-2 gap-4">
@@ -226,6 +252,27 @@ const AdminContactInfo = () => {
           {field("delivery_note", "Teslimat / kargo bilgisi", { multiline: true })}
           {field("onsite_note", "Yerinde hizmet bilgisi", { multiline: true })}
         </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          {field("service_areas", "Yerinde hizmet bölgeleri", { multiline: true, rows: 3, hint: "Gerçekte yerinde hizmet sunduğunuz bölgeleri her satıra bir bölge olarak yazın. Kargo kapsamını ayrı alana girin." })}
+          {field("delivery_areas", "Kargo / teslimat bölgeleri", { multiline: true, rows: 3, hint: "Örneğin Türkiye. Bu alan yerinde hizmet kapsamından ayrı gösterilir." })}
+        </div>
+      </Card>
+
+      <Card className="p-5 space-y-4">
+        <h2 className="font-display text-lg font-semibold">Çalışma saatleri</h2>
+        <p className="text-xs text-muted-foreground">Yalnızca doğrulanmış düzenli çalışma saatlerini girin. Randevuyla ziyaret açıklaması ayrıca gösterilir. Boş bırakılan günler için saat yayınlanmaz.</p>
+        <div className="space-y-3">
+          {WEEKDAYS.map(day => {
+            const hours = data.opening_hours?.find(row => row.dayOfWeek === day.key);
+            return <div key={day.key} className="grid grid-cols-2 sm:grid-cols-[9rem_1fr_1fr_auto] gap-3 items-center">
+              <span className="text-sm">{day.label}</span>
+              <div><Label className="sr-only" htmlFor={`hours-${day.key}-opens`}>{day.label} açılış</Label><Input id={`hours-${day.key}-opens`} type="time" value={hours?.opens || ''} onChange={event => updateHours(day.key, 'opens', event.target.value)} /></div>
+              <div><Label className="sr-only" htmlFor={`hours-${day.key}-closes`}>{day.label} kapanış</Label><Input id={`hours-${day.key}-closes`} type="time" value={hours?.closes || ''} onChange={event => updateHours(day.key, 'closes', event.target.value)} /></div>
+              <Button type="button" variant="ghost" size="sm" aria-label={`${day.label} saatlerini temizle`} disabled={!hours} onClick={() => set('opening_hours', (data.opening_hours || []).filter(row => row.dayOfWeek !== day.key))}>Temizle</Button>
+            </div>;
+          })}
+        </div>
+        {errors.opening_hours && <p className="text-xs text-destructive" role="alert">{errors.opening_hours}</p>}
       </Card>
 
       <Card className="p-5 space-y-4">

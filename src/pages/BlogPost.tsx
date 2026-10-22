@@ -2,19 +2,21 @@ import {usePublicPage} from "@/content/public-page-query";
 import { safeHtml } from "@/lib/safe-html";
 import "@/lib/i18n";
 import { getTenantIdentity } from "@/lib/tenant";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Seo } from "@/components/site/Seo";
 import { PageHero } from "@/components/site/PageHero";
 import { Prose } from "@/components/site/Prose";
-import { articleSchema, breadcrumbSchema } from "@/lib/seo-schema";
+import { articleSchema, breadcrumbSchema, contentDate } from "@/lib/seo-schema";
 import { ArrowUpRight, Tag } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { resolveMediaUrl } from "@/lib/media";
+import NotFound from './NotFound';
 
 type DbPost = {
   slug: string; title: string; excerpt: string | null;
   content: string; cover_image_url: string | null;
   tags: string[] | null; published_at: string | null;
+  updated_at?: string | null;
   title_en?: string | null; excerpt_en?: string | null; content_en?: string | null;
 };
 
@@ -26,7 +28,10 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
   const content = isEn && post.content_en ? post.content_en : post.content;
   const path = `/blog/${post.slug}`;
   const url = `${getTenantIdentity().origin}${path}`;
-  const date = post.published_at ? new Date(post.published_at).toLocaleDateString(isEn ? "en-US" : "tr-TR") : "";
+  const published = contentDate(post.published_at);
+  const modified = contentDate(post.updated_at);
+  const image = post.cover_image_url ? resolveMediaUrl(post.cover_image_url) : undefined;
+  const date = published ? new Date(published).toLocaleDateString(isEn ? "en-US" : "tr-TR", {timeZone:'Europe/Istanbul'}) : "";
   return (
     <>
       <Seo
@@ -34,13 +39,19 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
         description={excerpt || title}
         path={path}
         type="article"
+        image={image}
+        imageAlt={title}
+        published={published}
+        modified={modified}
         keywords={(post.tags ?? []).join(", ")}
         jsonLd={[
           articleSchema({
             title,
             description: excerpt || title,
             url,
-            datePublished: post.published_at ?? new Date().toISOString(),
+            image,
+            datePublished: published,
+            dateModified: modified,
           }),
           breadcrumbSchema([
             { label: "Anasayfa", url: "/" },
@@ -62,7 +73,8 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
       <article className="py-16 lg:py-24 bg-background">
         <div className="container-page">
           <div className="flex items-center gap-4 mb-10 text-xs font-mono uppercase tracking-[0.2em] text-foreground/60">
-            <span>{date}</span>
+            {published && <time dateTime={published}>{date}</time>}
+            {modified && modified !== published && <span>Güncelleme: <time data-content-modified dateTime={modified}>{new Date(modified).toLocaleDateString(isEn ? 'en-US' : 'tr-TR', {timeZone:'Europe/Istanbul'})}</time></span>}
             {post.tags && post.tags.length > 0 && (
               <><span>·</span><span className="inline-flex items-center gap-1.5"><Tag className="h-3 w-3" /> {post.tags.join(" · ")}</span></>
             )}
@@ -90,11 +102,12 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const {data}=usePublicPage(`/blog/${slug}`);
+  const {data,isError}=usePublicPage(`/blog/${slug}`);
   const dbPost=data as DbPost|null|undefined;
 
+  if (isError) return <><Seo title="İçerik yüklenemedi" description="İçerik geçici olarak yüklenemedi. Lütfen yeniden deneyin." path={`/blog/${slug}`} noindex /><div className="container-page py-24" role="alert">İçerik şu anda yüklenemiyor. Lütfen yeniden deneyin.</div></>;
   if (dbPost === undefined) return <div className="min-h-screen" aria-hidden />;
-  if (dbPost === null) return <Navigate to="/blog" replace />;
+  if (dbPost === null) return <NotFound />;
   return <DbBlogPostView post={dbPost} />;
 };
 

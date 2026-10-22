@@ -1,0 +1,37 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-requested implementation)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-22T23:16:00Z",
+  "authorization": "3D YANIMDA İÇİN LİSTEDEKİ TÜM EKSİKLERİ VE DÜZENLENİP GELİŞTİRİLMESİ GEREKEN TÜM HER ŞEY İÇİN EKSİKSİZ PLAN ÇIKAR VE TAMAMLA",
+  "scope": {
+    "brand": "3dyanimda",
+    "existingLandingUpdates": 17,
+    "newLandingPages": 5,
+    "metaDescriptionOverrides": 103,
+    "originalDiagrams": 21,
+    "downloadableExamples": 3,
+    "originalFindings": 109,
+    "originalWorkstreams": 20,
+    "originalCompetitorMappings": 191
+  },
+  "review": [
+    "All 13 guide append patches, 5 complete new pages, 103 route-specific metadata descriptions and 21 diagram compositions reviewed against source, intent and existing service scope.",
+    "Publication dates are preserved on existing records; absent first-publication dates remain absent. Four genuinely new guides have the current initial publication timestamp.",
+    "New media are explanatory technical diagrams, not customer-project photography. No prices, certifications, tolerances, workshop assets or case-study outcomes invented.",
+    "All four brands' content originality was checked at current source; 805 raw records, zero findings. Earlier visually similar figures were redrawn, not exempted.",
+    "274 Vitest tests passed across 49 files; 74 search/export/release contract tests and 3 CSS selection tests passed. TypeScript, production Vite compilation, protocol integrity and evidence checks passed.",
+    "ContentHub now receives validated CMS media dimensions through the small summary projection and renders only known intrinsic dimensions. Five tests cover actual sizes, unknown omission, projection and full-record authority.",
+    "CMS publication plan uses strict expected baseline hashes and a single transaction, preserving both review triggers and validating exact readback; other tenants are fingerprinted before and after.",
+    "Historical broad all-brand/theme evidence remains historical. Shared-code changes receive current unit/DOM coverage; existing CI performs real browser/export verification before merge.",
+    "CI surfaced historical fixed solution-count and brand-card-only expectations. Reviewed regression updates now compare the exact tenant-scoped published solution inventory and exact SEO override/page/home/fallback image precedence, while retaining MIME, raster dimension, Twitter/Article parity and cross-tenant rejection checks. Nine new social image contract fixtures pass; current browser/export runs must pass before merge."
+  ],
+  "limitations": [
+    "Local supervised browser preview could not start because the preview runner could not resolve the available Vite dependency symlink. No alternative browser was installed; fresh full-browser/export checks are required in the existing CI before merge.",
+    "This review is source/content approval, not a claim that a deployment or Google indexing has already happened.",
+    "GSC/GA4 account data, GBP ownership, actual WAF crawler logs and post-release 28-day comparison are not established by source tests.",
+    "Actual opening hours, coordinates, official social profiles, named expert identity, historical first publication dates and real case-study/photographic evidence require verified business inputs."
+  ]
+}

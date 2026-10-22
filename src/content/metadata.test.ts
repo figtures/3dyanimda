@@ -4,9 +4,13 @@ import editorial from './editorial-pages.json';
 import search from './search-pages.json';
 import {contentMetaTitle,contentMetaDescription} from './metadata';
 import {contentModified,sourceNote} from './source-notes';
-it('keeps all 796 authored route search titles unique per brand',()=>{
+import additions from '../../content/authoring/seo-gap-3dyanimda-2026-10-23.json';
+it('keeps all authored route search titles unique per brand, with exactly five scoped additions',()=>{
   const records=new Map([...pages,...editorial,...search].map(p=>[p.brand+p.path,p]));
-  expect(records.size).toBe(796);
+  expect(records.size).toBe(796+additions.newPages.length);
+  for(const page of additions.newPages)expect(records.has('3dyanimda'+page.path),page.path).toBe(true);
+  for(const brand of ['3dsanayi','maketyanimda','parcayanimda'])expect([...records.values()].filter(page=>page.brand===brand)).toHaveLength(199);
+  expect([...records.values()].filter(page=>page.brand==='3dyanimda')).toHaveLength(204);
   const titles=new Set<string>();
   for(const p of records.values()) {const key=p.brand+' '+contentMetaTitle(p);expect(titles.has(key),key).toBe(false);titles.add(key);expect(contentMetaTitle(p).length).toBeGreaterThan(3);}
 });

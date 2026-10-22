@@ -1,0 +1,252 @@
+{
+  "brand": "3dyanimda",
+  "createdAt": "2026-10-22T23:13:15.194Z",
+  "method": "Original code-native explanatory SVG diagrams, rasterized with sharp",
+  "source": "scripts/create-3dy-guide-assets.mjs",
+  "subject": "Three core services, thirteen existing guides, four additional guides and one replacement-part solution",
+  "validated": {
+    "imageCount": 21,
+    "dimensions": "1200x630",
+    "format": "png",
+    "completeStreamDecode": true,
+    "visualContactSheetReviewed": true
+  },
+  "totalBytes": 1380606,
+  "limitations": [
+    "Illustrations are schematic, not scale drawings, production photographs or evidence of a completed client project.",
+    "Publication and live HTTP accessibility are checked separately by the release owner."
+  ],
+  "images": [
+    {
+      "route": "/3d-baski",
+      "url": "/images/editorial/3dyanimda/3d-baski.png",
+      "alt": "Dijital modelden baskı katmanlarına geçiş; görünüş, montaj ve işlev için farklı kontrol hedefleri.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 69488,
+      "sha256": "be2b0babfaddcc6067f5b0cc6450445e2e789e5784f40fc92908679ff39c34e3"
+    },
+    {
+      "route": "/3d-tarama",
+      "url": "/images/editorial/3dyanimda/3d-tarama.png",
+      "alt": "Fiziksel nesneden yüzey ağına ve istenen ağ, CAD veya rapor çıktısına giden üç aşama.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 71473,
+      "sha256": "da493eebb4dd563c931953c490099e626cf3940c0e7e6653331af036d8d61acc"
+    },
+    {
+      "route": "/3d-modelleme",
+      "url": "/images/editorial/3dyanimda/3d-modelleme.png",
+      "alt": "Referans eskizden ölçülü CAD modeline ve revizyonlu fiziksel numune kararına geçiş.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 62724,
+      "sha256": "4adc19b5eda41e7a3ce65ee01dbfb73e812f711b32fe027c4ecc769dd2b89357"
+    },
+    {
+      "route": "/rehber/teklif-icin-dosya-hazirlama",
+      "url": "/images/editorial/3dyanimda/rehber--teklif-icin-dosya-hazirlama.png",
+      "alt": "Model veya eskiz, ölçü referansı ve kullanım amacı dosyalarının tek güncel talep paketinde birleştirilmesi.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 55302,
+      "sha256": "2125489a4b96a9dcf517fc480b5efe5e4e5626c0acf3eb7c06ca196fbf2bcce2"
+    },
+    {
+      "route": "/rehber/3d-baski-fiyatlandirma",
+      "url": "/images/editorial/3dyanimda/rehber--3d-baski-fiyatlandirma.png",
+      "alt": "Dosya hazırlığı, üretim, son işlem ve teslimat kalemlerini belirleyen bilgilerin karşılaştırma tablosu.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 62429,
+      "sha256": "ac88491cd7e403976a238fe5c05ffdd59bc84902b976bd9109602032187bc726"
+    },
+    {
+      "route": "/rehber/tarama-ve-tersine-muhendislik",
+      "url": "/images/editorial/3dyanimda/rehber--tarama-ve-tersine-muhendislik.png",
+      "alt": "Aşınma izlerini içeren taranmış yüzey ile referans ölçülerle yeniden kurulan nominal CAD geometrisinin farkı.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 71690,
+      "sha256": "b2b07c87bdf8124c83a13eb43b6c0625d35c45007f5e17fa8e2d574ec12d3463"
+    },
+    {
+      "route": "/rehber/numune-ve-revizyon",
+      "url": "/images/editorial/3dyanimda/rehber--numune-ve-revizyon.png",
+      "alt": "Sürtünme bulgusunun kaydı, hedef model değişikliği ve yeni numunede aynı yöntemle tekrar kontrol.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 64268,
+      "sha256": "d1c627addaf939722f818d15a9c8d656fba74d8246c3e1f52b6e8aeb69309411"
+    },
+    {
+      "route": "/rehber/stl-dosya-hazirlama",
+      "url": "/images/editorial/3dyanimda/rehber--stl-dosya-hazirlama.png",
+      "alt": "Üçgen yüzey ağında açık kenar ve dış normalin yakın planı; boyut, kapalı yüzey, normal yönü ve parça ayrımı kontrol listesi.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 92024,
+      "sha256": "a5ac289e7a9ab3f9c48a78e113034c01149c80565132f222ce59f0f57787c290"
+    },
+    {
+      "route": "/rehber/tarama-verisinden-cad",
+      "url": "/images/editorial/3dyanimda/rehber--tarama-verisinden-cad.png",
+      "alt": "Tarama ağındaki serbest yüzey ve ölçülü bağlantı bölgelerinin ayrılması ve CAD teslim kapsamı.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 77312,
+      "sha256": "abbc64096e128655af3c99cf6062dc39bf2a248bc936401533fbc706aceffe70"
+    },
+    {
+      "route": "/rehber/kesit-nasil-incelenir",
+      "url": "/images/editorial/3dyanimda/rehber--kesit-nasil-incelenir.png",
+      "alt": "Şematik ürün gövdesi kesitinde duvar, elektronik kart ve montaj hareket boşluğunun işaretlenmesi.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 52141,
+      "sha256": "190fee72b5acfb44d8e3ab2acb0724cccd6834b9317b0b13546439c31dc812d9"
+    },
+    {
+      "route": "/rehber/teknik-teklif-dosyasi",
+      "url": "/images/editorial/3dyanimda/rehber--teknik-teklif-dosyasi.png",
+      "alt": "Örnek gövde ve kapak satırlarında parça, revizyon, adet ve numune amacı; fiziksel ve dijital teslim ayrımı.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "Teknik kapsam için örnek tablo. Kayıtlar bir müşteri projesini temsil etmez.",
+      "bytes": 60874,
+      "sha256": "73f5adf7ac0224b74129c00b4cd24e59fad2e8a268a1e7666ff740ffecb99598"
+    },
+    {
+      "route": "/rehber/malzeme-secim-sorulari",
+      "url": "/images/editorial/3dyanimda/rehber--malzeme-secim-sorulari.png",
+      "alt": "Kullanım koşulları merkezine bağlanan beş karar girdisi: temas, sıcaklık, yük, görünüş ve test amacı.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 53194,
+      "sha256": "b5bab1e17fd0f4e627dfb4e5f820f1213c7b5df0d86b1998da245b86bda39068"
+    },
+    {
+      "route": "/rehber/maket-olcek-planlama",
+      "url": "/images/editorial/3dyanimda/rehber--maket-olcek-planlama.png",
+      "alt": "Küçültülmüş sunum modeli ve ayrı büyütülmüş işlevli bağlantı detayı karşılaştırması.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 66331,
+      "sha256": "e1be3a222676b3488b8d5e9ff9eb5e6d5ad13fa8819fa4cf324b046b4b0107ea"
+    },
+    {
+      "route": "/rehber/numune-kabul-plani",
+      "url": "/images/editorial/3dyanimda/rehber--numune-kabul-plani.png",
+      "alt": "Görünüş, montaj ve işlev kontrollerinin inceleme yöntemi ve kaydedilecek kanıtla eşleştirildiği tablo.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 56928,
+      "sha256": "717f07e0818c20a2e8cdc76a83e9fb7bfbcaabc7d9ea94911cc35b874bdf1d63"
+    },
+    {
+      "route": "/rehber/prototip-maliyetini-ne-belirler",
+      "url": "/images/editorial/3dyanimda/rehber--prototip-maliyetini-ne-belirler.png",
+      "alt": "Hazırlık, üretim ve tamamlama başlıkları altında prototip maliyetini etkileyen dokuz kapsam girdisi.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 68918,
+      "sha256": "8ab666afc6b0557f616c4d0b5d306024d3b4c2924a4312c2f246d95e639f0f08"
+    },
+    {
+      "route": "/rehber/3d-baski-mi-cnc-mi",
+      "url": "/images/editorial/3dyanimda/rehber--3d-baski-mi-cnc-mi.png",
+      "alt": "Katman ekleyen 3D baskı ile stok malzemeden talaş kaldıran CNC şemaları; destek ve takım erişimi farkı.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 55288,
+      "sha256": "8151a6fba498a6d843b67f665f5beff65f990b1abb59b034262bffc3a49f3210"
+    },
+    {
+      "route": "/rehber/fdm-sla-sls-karsilastirma",
+      "url": "/images/editorial/3dyanimda/rehber--fdm-sla-sls-karsilastirma.png",
+      "alt": "FDM filament ekstrüzyonu, SLA reçinenin ışıkla kürlenmesi ve SLS toz yatağı sinterleme süreçlerinin şemaları.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 58698,
+      "sha256": "1fce1040af9a570f4d4bdbb9170e264fe7897043392b7ef58b2c64c5f1bcddaf"
+    },
+    {
+      "route": "/rehber/asa-pa-cf-karsilastirma",
+      "url": "/images/editorial/3dyanimda/rehber--asa-pa-cf-karsilastirma.png",
+      "alt": "ASA için dış ortam ve UV sıcaklık koşulları; PA-CF için yük, rijitlik, nem ve yön etkisi değerlendirme alanları.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 72348,
+      "sha256": "b763958b187022f34f5cceba83366c4ed46404d44011c9f8d3ea37fb6b05c83d"
+    },
+    {
+      "route": "/rehber/3d-tarama-kullanim-alanlari",
+      "url": "/images/editorial/3dyanimda/rehber--3d-tarama-kullanim-alanlari.png",
+      "alt": "Fiziksel nesnenin dijital arşiv, yeniden tasarım ve geometri karşılaştırması amaçlarına göre teslim seçenekleri.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 71432,
+      "sha256": "29dd73e4c22166d7dc29cbe00db982386baca1e452b86509a6719274f697f4f8"
+    },
+    {
+      "route": "/rehber/3d-tarama-kalite-kontrol",
+      "url": "/images/editorial/3dyanimda/rehber--3d-tarama-kalite-kontrol.png",
+      "alt": "Aynı referansa hizalanmış nominal ve ölçülen yüzeyler; yöntem, ölçüm belirsizliği ve kabul sınırlarının ayrımı.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 62659,
+      "sha256": "a57cbd928fa26a0fa5cc0e00bc365b40110e4bf6ec78987bfba38a573a6be5da"
+    },
+    {
+      "route": "/cozumler/yedek-parca-uretimi",
+      "url": "/images/editorial/3dyanimda/cozumler--yedek-parca-uretimi.png",
+      "alt": "Patlatılmış bağlantı parçası şemasında referans yüzey, kullanım koşulu, karşı parça ve kritik montaj ölçüsü çağrıları.",
+      "width": 1200,
+      "height": 630,
+      "mimeType": "image/png",
+      "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+      "bytes": 75085,
+      "sha256": "fc2b3471b16b8dc76151308549f7e7b8b0c0ff406a03fb3de5cf0009f798c6c7"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useBrand } from "@/brands/config";
 import { useTenant } from "@/contexts/TenantContext";
 import { demoMode } from "@/lib/backend-config";
-import { CONSENT_EVENT, analyticsHostAllowed, initializeAnalytics, suspendAnalytics, trackGrowth } from "@/lib/growth-analytics";
+import { CONSENT_EVENT, analyticsHostAllowed, initializeAnalytics, suspendAnalytics, trackGrowth, trackContactClick } from "@/lib/growth-analytics";
 
 export default function GrowthAnalytics() {
   const brand = useBrand();
@@ -27,8 +27,7 @@ export default function GrowthAnalytics() {
       if (!anchor) return;
       const url = new URL(anchor.href, location.origin);
       if (url.origin === location.origin && url.pathname === "/teklif-al") trackGrowth(brand.slug,"quote_cta_click");
-      else if (url.protocol === "tel:" || url.protocol === "mailto:" || url.hostname === "wa.me")
-        trackGrowth(brand.slug,"contact_click",{contact_type:url.hostname === "wa.me" ? "whatsapp" : url.protocol.slice(0,-1)});
+      else trackContactClick(brand.slug, anchor.href, location.origin);
     };
     document.addEventListener("click", clicked);
     return () => { suspendAnalytics(); clearTimeout(timer); window.removeEventListener(CONSENT_EVENT,pageView); document.removeEventListener("click",clicked); };

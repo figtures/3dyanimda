@@ -10,10 +10,11 @@ import {businessGraph} from '@/lib/structured-data';
 import {pageGraph} from '@/lib/search';
 import {schemaIntegrity} from '../../scripts/quality/schema-integrity.mjs';
 import {validateVocabulary} from '../../scripts/quality/schema-vocabulary.mjs';
+import additions from '../../content/authoring/seo-gap-3dyanimda-2026-10-23.json';
 const all=new Map<string,LandingPage>();
 for(const p of [...base,...editorial,...search] as LandingPage[])all.set(p.brand+p.path,p);
 describe('full authored structured-content inventory',()=>{
- it('has complete coverage across four brands',()=>{expect(all.size).toBe(796);expect(new Set([...all.values()].map(p=>p.brand)).size).toBe(4);});
+ it('has complete coverage across four brands and scoped additions',()=>{expect(all.size).toBe(796+additions.newPages.length);expect(new Set([...all.values()].map(p=>p.brand)).size).toBe(4);});
  it('matches Schema.org domains, visible FAQ and resolved brand-specific identities on every record',()=>{
   for(const page of all.values()){
    const origin='https://'+page.brand+'.com';const brand=catalog.find(b=>b.slug===page.brand)!;
@@ -24,6 +25,15 @@ describe('full authored structured-content inventory',()=>{
    expect(JSON.stringify(graph)).not.toMatch(/aggregateRating|priceCurrency|ratingValue/);
    if(page.kind==='location')expect(graph['@graph'].some(n=>n['@type']==='ProfessionalService')).toBe(false);
   }
+ });
+ it('uses only an explicit publication date and the visible image for Article metadata',()=>{
+  const source=[...all.values()].find(p=>p.kind==='guide')!;
+  const image='/images/editorial/3dyanimda/stl-dosya-hazirlama.png';
+  const publishedAt='2026-10-01T09:30:00Z';
+  const page={...source,image,updated_at:'2026-10-20T09:30:00Z',editorial:{...source.editorial!,publishedAt}};
+  const article=contentStructuredData(page,'https://3dyanimda.com').find(node=>node['@type']==='Article');
+  expect(article).toMatchObject({datePublished:publishedAt,dateModified:'2026-10-20T09:30:00Z',image:'https://3dyanimda.com'+image});
+  expect(contentStructuredData({...page,editorial:{...page.editorial,publishedAt:undefined}},'https://3dyanimda.com').find(node=>node['@type']==='Article')).not.toHaveProperty('datePublished');
  });
  it('connects the page, service, breadcrumb and visible FAQ without inventing dates',()=>{
   const p=[...all.values()].find(p=>p.kind==='service')!;const origin='https://'+p.brand+'.com';

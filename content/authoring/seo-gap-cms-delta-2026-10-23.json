@@ -1,0 +1,2029 @@
+{
+  "tenant": "10000000-0000-4000-8000-000000000001",
+  "publicationTime": "2026-10-22T23:14:10.616Z",
+  "updates": [
+    {
+      "path": "/rehber/teklif-icin-dosya-hazirlama",
+      "expected_payload_hash": "7574d975b3a6dfbe6522d9fd5957d432",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--teklif-icin-dosya-hazirlama.png",
+        "sections": [
+          {
+            "body": "Dosyayı yalnızca uzantısıyla tarif etmeyin; hangi programdan çıktığını ve hangi ölçülerin güvenilir olduğunu yazın. Henüz çözülmemiş bağlantıları işaretlemek, bu alanların yanlışlıkla tamamlanmış tasarım kabul edilmesini önler.",
+            "title": "Elinizdeki verinin seviyesini belirtin"
+          },
+          {
+            "body": "İlk örnek müşteri sunumuna mı gidecek, elde tutuşu mu gösterecek, yoksa bileşen montajı mı denenecek? Bu bilgi ayrıntı ve yüzey kapsamını etkiler. Bir dosya listesi içinde güncel sürümü, referans görselleri ve yalnızca fikir vermek için eklenen eski çizimleri ayırın.",
+            "title": "Talebi numunenin amacına bağlayın"
+          },
+          {
+            "title": "Tek klasörde gönderilebilecek talep örneği",
+            "body": "Bir elektronik kutu için KUTU-A_rev03.step dosyasını, kapağın ayrı modelini ve bileşen yerleşim görselini aynı talebe ekleyin. Notta bir adet montaj numunesi istendiğini, kartın gerçek boyutlarını ve değişmemesi gereken vida merkezlerini belirtin. Bu örnek bir müşteri projesi veya fiyat teklifi değildir; dosya paketini nasıl düzenleyebileceğinizi gösterir."
+          }
+        ],
+        "editorial": {
+          "answer": "Bir eskiz, görsel tasarım dosyası ve üretilebilir katı model farklı hazırlık işleri gerektirir.",
+          "takeaways": [
+            "Güncel ve eski dosyaların ayrımı",
+            "Modelde henüz kararlaştırılmamış bölgeler",
+            "Numunenin kullanılacağı ilk görüşme veya test"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/teknik-teklif-dosyasi"
+          ],
+          "comparison": {
+            "title": "Elinizdeki veri neyi başlatır?",
+            "columns": [
+              "Veri",
+              "Değerlendirmede işe yaradığı yer",
+              "Yanına eklenecek bilgi"
+            ],
+            "rows": [
+              [
+                "Ölçülü eskiz",
+                "İlk modelleme kapsamı",
+                "Birim, işlev ve değişmeyecek ölçüler"
+              ],
+              [
+                "STL / OBJ",
+                "Yüzey ve baskı ön değerlendirmesi",
+                "Dış ölçü, parça adedi, birim"
+              ],
+              [
+                "STEP / kaynak CAD",
+                "Model düzenleme kapsamı",
+                "Revizyon ve düzenlenmesi istenen bölgeler"
+              ],
+              [
+                "Fiziksel numune",
+                "Tarama veya ölçü tamamlama ihtiyacı",
+                "Fotoğraf, yaklaşık boyut, numune iade planı"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            },
+            {
+              "title": "STL dosyasını önizleyin",
+              "path": "/araclar/stl-onizle",
+              "description": "Modelinizi göndermeden önce görünüşünü ve dış boyutlarını inceleyin."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Model veya eskiz, ölçü referansı ve kullanım amacı dosyalarının tek güncel talep paketinde birleştirilmesi.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/3d-baski-fiyatlandirma",
+      "expected_payload_hash": "4f8801cbe7c110691c6ec0610e1ed4cf",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--3d-baski-fiyatlandirma.png",
+        "sections": [
+          {
+            "body": "Teklifte hazırlık kapsamının ne olduğu ve hangi dosya sürümünü kapsadığı görülmelidir. Model değiştiğinde yeni hazırlık ihtiyacı doğabileceği ayrıca konuşulur.",
+            "title": "Tek seferlik işleri tekrar işlerden ayırın"
+          },
+          {
+            "body": "Baskı parçası destekleriyle mi teslim edilecek, görünür yüzeyi işlenecek mi, eşleşen bileşenle kontrol yapılacak mı? Aynı adet için fiyat karşılaştırırken bu soruların yanıtları eşleşmelidir. Teslimat ve paketleme kapsamını da parça bedelinden bağımsız gözden geçirmek, toplam ihtiyacı doğru okumayı sağlar.",
+            "title": "Ucuz bir kalemi eksik kapsamla karıştırmayın"
+          },
+          {
+            "title": "Aynı parça için iki teklif nasıl eşitlenir?",
+            "body": "Önce her iki teklifin aynı dosya revizyonu ve aynı adedi kapsadığını kontrol edin. “Destekleri alınmış parça” ile “boyanmış sunum modeli” aynı teslim değildir. Modelleme, ilk numune, tekrar baskı, yüzey işi ve taşıma kalemlerini ayrı satırlara yazın. Bir satır boşsa sıfır maliyet kabul etmeyin; kapsam dâhil mi, hariç mi diye sorun."
+          },
+          {
+            "title": "Adet etkisini rakam uydurmadan hesaplayın",
+            "body": "İlk sipariş toplamını tek seferlik hazırlık + adet × parça başı üretim + son işlem + teslimat olarak okuyun. Tekrar sipariş için aynı modelin, malzemenin ve kontrol kapsamının korunup korunmadığını teyit edin. Buradaki maliyet yapısı açıklama içindir; geçerli sayısal fiyat ancak dosyanız ve güncel üretim kapsamınızla hazırlanmış teklifte yer alır."
+          }
+        ],
+        "editorial": {
+          "answer": "Dosyanın düzeltilmesi veya yeni bir kapağın modellenmesi ilk siparişte yer alabilir; sonraki üretimde aynı işin tekrarlanması gerekmeyebilir.",
+          "takeaways": [
+            "İlk siparişe özgü hazırlık kalemleri",
+            "Destek temizliği ve yüzey beklentisi",
+            "Kapsama dâhil kontrol ve teslim işleri"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/teknik-teklif-dosyasi",
+            "/rehber/prototip-maliyetini-ne-belirler"
+          ],
+          "comparison": {
+            "title": "Karşılaştırılabilir fiyat kontrolü",
+            "columns": [
+              "Kalem",
+              "Teklifte istenecek açıklama",
+              "Eksikse sorulacak soru"
+            ],
+            "rows": [
+              [
+                "Dosya hazırlığı",
+                "Hangi revizyon ve kaç düzenleme turu",
+                "Yeni revizyon bu bedeli değiştiriyor mu?"
+              ],
+              [
+                "Üretim",
+                "Adet, malzeme ürünü ve ölçü birimi",
+                "İlk numune ayrı fiyatlanıyor mu?"
+              ],
+              [
+                "Son işlem",
+                "Destek temizliği, yüzey ve boya kapsamı",
+                "Görünmeyen yüzeylere işlem gerekli mi?"
+              ],
+              [
+                "Kontrol ve taşıma",
+                "Kabul yöntemi, paketleme ve teslimat",
+                "Vergi ve kargo toplamda nasıl gösteriliyor?"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Dosya hazırlığı, üretim, son işlem ve teslimat kalemlerini belirleyen bilgilerin karşılaştırma tablosu.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/tarama-ve-tersine-muhendislik",
+      "expected_payload_hash": "d1890e903c22d75f2464256ae39b89a8",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--tarama-ve-tersine-muhendislik.png",
+        "sections": [
+          {
+            "body": "Aşınma, eğrilik veya üretim izi de bu verinin parçası olabilir. Yeni modelin mevcut yüzeyi izlemesi mi, simetrik veya nominal bir geometriye dönmesi mi beklendiği belirlenmelidir. Bu karar yalnızca dosya dönüştürme işlemi değildir.",
+            "title": "Ölçülen yüzey ile tasarım niyetini ayırın"
+          },
+          {
+            "body": "Yeniden baskı için kapalı bir ağ model yeterli olabilirken sonraki tasarım değişiklikleri için farklı bir CAD yapısı gerekebilir. Montaj delikleri ve düz yüzeyler gibi işlevli bölgelerin hangi referansla kurulacağı konuşulur. Tarama, temizleme ve yeniden modelleme ayrı kapsam olarak tekliflenebilir.",
+            "title": "Teslim dosyasının kullanımını açıklayın"
+          },
+          {
+            "title": "Yıpranmış numunede önce tasarım kararını verin",
+            "body": "Kırık bir kapakta sağlam yüzey, kırık bölge ve karşı parçaya temas eden yüzey farklı bilgi taşır. Sağlam kısım biçim referansı olabilir; eksik bölüm için simetri, karşı parça veya teknik çizim gerekir. Numunedeki aşınmayı korumak ile ilk tasarım ölçüsüne dönmek farklı taleplerdir. Bu ayrımı fotoğrafta işaretlemek yeniden modelleme kapsamını netleştirir."
+          }
+        ],
+        "editorial": {
+          "answer": "Tarama verisi numunede görülen biçimi içerir.",
+          "takeaways": [
+            "Mevcut şeklin korunacak ve düzeltilecek yerleri",
+            "Dosyanın sonraki kullanım programı",
+            "İşlevli yüzeylerin referans ölçüleri"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/tarama-verisinden-cad"
+          ],
+          "comparison": {
+            "title": "Tarama ve yeniden modelleme teslimleri",
+            "columns": [
+              "İhtiyaç",
+              "Teslim beklentisi",
+              "Kontrol sorusu"
+            ],
+            "rows": [
+              [
+                "Görsel arşiv",
+                "Temizlenmiş yüzey ağı",
+                "Görünmesi gereken yüzeyler tamam mı?"
+              ],
+              [
+                "Mevcut yere uyum",
+                "Referans ağ ve kritik arayüz",
+                "Temas bölgesi hangi ölçüyle doğrulanacak?"
+              ],
+              [
+                "Tasarım değişikliği",
+                "Düzenlemeye uygun CAD model",
+                "Hangi parametreler değiştirilecek?"
+              ],
+              [
+                "Tekrar üretim",
+                "Üretim dosyası ve numune planı",
+                "Numune kabulünü kim, nasıl yapacak?"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Tarama dosyasını görüntüleyin",
+              "path": "/araclar/tarama-goruntuleyici",
+              "description": "Elinizdeki yüzey verisini dijital talep hazırlığında inceleyin."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Aşınma izlerini içeren taranmış yüzey ile referans ölçülerle yeniden kurulan nominal CAD geometrisinin farkı.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/numune-ve-revizyon",
+      "expected_payload_hash": "e7dbe71a947c26909aaf5ebe50423ea7",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--numune-ve-revizyon.png",
+        "sections": [
+          {
+            "body": "Fotoğraftaki bir işaret ve ilgili ölçü, modellemeye somut girdi sağlar. Tasarım değişikliği önerisi bu gözlemle eşleştirilerek hangi sorunu çözmesinin beklendiği açık tutulur.",
+            "title": "Gözlemi yorumdan ayrı yazın"
+          },
+          {
+            "body": "Her numune sürümünde bütün sorunlar kapanmayabilir. Kabul edilen bölgeler ile yeniden değerlendirilecek bölgeleri ayrı listeleyin. Bir parça yalnızca görünüş için onaylandıysa bu onayı montaj veya işlev onayı gibi genişletmeyin; sonraki siparişin kapsamı bu kayıt üzerinden kurulmalıdır.",
+            "title": "Kapanan ve açık bulguları izleyin"
+          },
+          {
+            "title": "Tek değişiklik kaydını baştan sona takip edin",
+            "body": "Örnek bulgu: “Rev02 kapak sağ arka köşede kapanmıyor.” Buna fotoğraf numarası, denenen karşı parça ve test koşulu eklenir. Tasarım sorumlusu değişikliği onayladıktan sonra Rev03 üretilir ve aynı kontrol tekrarlanır. Eski dosyanın üzerine yazmak yerine revizyonu değiştirin; böylece kabul edilen numune ile sonraki üretim karışmaz."
+          }
+        ],
+        "editorial": {
+          "answer": "“Kapak kötü” demek yerine nerede açıldığını, hangi hareket sırasında sürttüğünü ve hangi bileşene değdiğini kaydedin.",
+          "takeaways": [
+            "Bulguyu gösteren fotoğraf ve ölçü",
+            "Değişiklik önerisinin hedefi",
+            "Bir sonraki numunede kapanacak maddeler"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/numune-kabul-plani"
+          ],
+          "comparison": {
+            "title": "Revizyon kaydında ne bulunmalı?",
+            "columns": [
+              "Kayıt",
+              "Örnek ifade",
+              "Kararı veren"
+            ],
+            "rows": [
+              [
+                "Gözlem",
+                "Kapak bir köşede aralık bırakıyor",
+                "Numuneyi deneyen kişi"
+              ],
+              [
+                "İstenen değişiklik",
+                "Temas bölgesini revize etme talebi",
+                "Tasarım sorumlusu"
+              ],
+              [
+                "Yeni dosya",
+                "Rev03, değişen bölge işaretli",
+                "Modeli hazırlayan"
+              ],
+              [
+                "Tekrar kontrol",
+                "Aynı karşı parçayla kapatma denemesi",
+                "Kabul sorumlusu"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Numune kabul tablosunu indirin",
+              "path": "/downloads/3dyanimda/numune-kabul.csv",
+              "description": "Her bulguyu kontrol yöntemi, sorumlu ve karar ile eşleştirin."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Sürtünme bulgusunun kaydı, hedef model değişikliği ve yeni numunede aynı yöntemle tekrar kontrol.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/stl-dosya-hazirlama",
+      "expected_payload_hash": "02111e1f27b1a013afa2669c9c6955ea",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--stl-dosya-hazirlama.png",
+        "sections": [
+          {
+            "body": "Dışa aktarılan modeli yeniden açıp bilinen bir uzunluğu kontrol edin. Çok küçük ya da çok büyük görünen bir modelin yalnızca ekrandaki zoom nedeniyle öyle göründüğünü varsaymayın; gerçek dış ölçüyü talep notunda yazın.",
+            "title": "Birim ve toplam boyutu karşılaştırın"
+          },
+          {
+            "body": "Ekranda düzgün görünen yüzeyde açık kenar, üst üste binmiş kabuk veya ters yüz bulunabilir. Ayrı üretilecek bileşenleri anlaşılır dosyalara ayırın ve montaj görseli ekleyin. Üçgen sayısını gereksiz büyütmek dosyayı ağırlaştırır; önemli eğrileri koruyan dışa aktarım ayarı kullanılmalıdır.",
+            "title": "Görsel düzgünlük ile ağ bütünlüğünü ayırın"
+          },
+          {
+            "title": "Referans küple birim kontrolü yapın",
+            "body": "Aşağıdaki özgün STL örneğini indirip önizleyicide açın. Dosyadaki küpün her eksende uzunluğu, milimetre kabul edildiğinde 20 mm olmalıdır. Ekrana sığdırma büyütmesi bunu değiştirmez. Kendi modelinizde de bilinen bir ölçüyü dosya dışa aktarımından sonra kontrol edin; yalnızca nesnenin ekranda büyük görünmesine güvenmeyin."
+          },
+          {
+            "title": "Göndermeden önce dosyayı yeniden açın",
+            "body": "Kaynak tasarımı değil, göndereceğiniz son dışa aktarımı inceleyin. Parça adedi, ayrı kabuklar ve revizyon adı doğru olmalı. Önizleyicide görülen modelin üretime hazır olması ayrıca geometri değerlendirmesine bağlıdır. Açık yüzeyli modelde hacim temelli fiyat çıkmaması hata yerine tamamlanması gereken geometriye işaret edebilir."
+          }
+        ],
+        "editorial": {
+          "answer": "STL dosyalarında ölçü birimi bilgisi her iş akışında korunmayabilir.",
+          "takeaways": [
+            "Modelin gerçek birimi ve dış ölçüsü",
+            "Açık kenar veya kabuk kontrolü",
+            "Ayrı üretilecek parçaların adedi"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/teklif-icin-dosya-hazirlama",
+            "/rehber/kesit-nasil-incelenir"
+          ],
+          "comparison": {
+            "title": "STL teslim kontrol listesi",
+            "columns": [
+              "Kontrol",
+              "Nasıl incelenir?",
+              "Talep notu"
+            ],
+            "rows": [
+              [
+                "Birim",
+                "Bilinen uzunluğu yeniden ölçün",
+                "mm ve gerçek dış ölçü"
+              ],
+              [
+                "Parça adedi",
+                "Kabukları ve ayrılacak parçaları görün",
+                "Her parça için adet"
+              ],
+              [
+                "Yüzey bütünlüğü",
+                "Açık sınır ve kesişmeleri kontrol edin",
+                "Onarım istenen bölgeler"
+              ],
+              [
+                "Revizyon",
+                "Dosya adıyla çizim revizyonunu karşılaştırın",
+                "Tek geçerli sürüm"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "20 mm referans küp STL dosyası",
+              "path": "/downloads/3dyanimda/referans-kup-20mm.stl",
+              "description": "Özgün, kapalı ağ örneği. STL birim taşımaz; bu dosyadaki kenar uzunluğu milimetre yorumunda 20 mm olmalıdır."
+            },
+            {
+              "title": "STL dosyasını önizleyin",
+              "path": "/araclar/stl-onizle",
+              "description": "Modelinizi göndermeden önce görünüşünü ve dış boyutlarını inceleyin."
+            },
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Üçgen yüzey ağında açık kenar ve dış normalin yakın planı; boyut, kapalı yüzey, normal yönü ve parça ayrımı kontrol listesi.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/tarama-verisinden-cad",
+      "expected_payload_hash": "da3b43ae4f8b3bc73183623b5651064c",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--tarama-verisinden-cad.png",
+        "sections": [
+          {
+            "body": "Tüm ağın aynı yöntemle dönüştürülmesi yerine bu bölgeler ayrıştırılır. Hangi yüzeyin referans sayılacağı ve hangi kusurların düzeltilmesi istendiği açıklanmalıdır.",
+            "title": "Nominal geometri gereken bölgeleri seçin"
+          },
+          {
+            "body": "Sonraki aşamada boy değiştirilecek, delik eklenecek veya montaj geliştirilecekse model yapısının bunu desteklemesi gerekir. Dosya formatı tek başına düzenleme kolaylığını garanti etmez. Kaynak ağ, kurulan yüzeyler ve nihai çıktı arasındaki ilişki teslim kapsamına göre belgelenebilir.",
+            "title": "Düzenleme beklentisini teslimata yazın"
+          },
+          {
+            "title": "Üç ayrı dosyayı teslim listesine yazın",
+            "body": "Kaynak tarama ağı, çalışma modeli ve dışa aktarılan teslim dosyası aynı şey değildir. Sonradan vida konumunu değiştirecekseniz yalnızca bir STEP dosyası istemek yerine düzenlenmesi beklenen bölgeleri tarif edin. Kaynak proje dosyasının teslim edilip edilmeyeceği ayrıca kararlaştırılır. Böylece arşivleme ihtiyacı ile modelleme işinin kapsamı birbirine karışmaz."
+          }
+        ],
+        "editorial": {
+          "answer": "Bir cihazın elde kavranan yüzeyi taranmış biçimi izleyebilir; vida ekseni veya kapak yatağı ise ölçülü geometri gerektirebilir.",
+          "takeaways": [
+            "Serbest biçimli ve ölçülü yüzeylerin ayrımı",
+            "Düzenlenecek parametre veya bölgeler",
+            "Kaynak ağın eksik alanları"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/numune-kabul-plani"
+          ],
+          "comparison": {
+            "title": "Yüzeyden tasarım modeline kararlar",
+            "columns": [
+              "Bölge",
+              "Yaklaşım",
+              "Doğrulama girdisi"
+            ],
+            "rows": [
+              [
+                "Serbest dış form",
+                "Ölçülen biçimi referans alma",
+                "Korunacak yüzey ve sapma beklentisi"
+              ],
+              [
+                "Delik / düzlem",
+                "İşlevli geometriyi tanımlama",
+                "Teknik ölçü veya karşı parça"
+              ],
+              [
+                "Kırık / eksik bölge",
+                "Yeniden tasarım kararı",
+                "Simetri, referans veya çizim"
+              ],
+              [
+                "Montaj arayüzü",
+                "Numuneyle uyum denemesi",
+                "Kabul koşulu ve güncel bileşen"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Tarama dosyasını görüntüleyin",
+              "path": "/araclar/tarama-goruntuleyici",
+              "description": "Elinizdeki yüzey verisini dijital talep hazırlığında inceleyin."
+            },
+            {
+              "title": "Numune kabul tablosunu indirin",
+              "path": "/downloads/3dyanimda/numune-kabul.csv",
+              "description": "Her bulguyu kontrol yöntemi, sorumlu ve karar ile eşleştirin."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Tarama ağındaki serbest yüzey ve ölçülü bağlantı bölgelerinin ayrılması ve CAD teslim kapsamı.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/kesit-nasil-incelenir",
+      "expected_payload_hash": "8365b2e6c96c7be010b42abc91d11f8e",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--kesit-nasil-incelenir.png",
+        "sections": [
+          {
+            "body": "Vida yatağı çevresindeki duvar, kapağın bindirmesi ve kart altındaki boşluk aynı görünümde değerlendirilebilir. Kritik ölçüler ayrı notlanır; ekrandaki çizgi kalınlığı gerçek duvar kalınlığı olarak yorumlanmaz.",
+            "title": "Kesiti bağlantı ekseninden geçirin"
+          },
+          {
+            "body": "Bir düğme veya tırnak yalnızca başlangıç konumunda değil hareket ederken de yer ister. Kesitleri farklı konumlarda karşılaştırın. Görünen bir boşluğun üretim toleransı ve montaj payıyla yeterli olup olmadığı numune üzerinde değerlendirilmelidir; görüntüleyici tek başına uygunluk sertifikası değildir.",
+            "title": "Hareket için gereken boşluğu kontrol edin"
+          },
+          {
+            "title": "Aynı modelde üç düzlemi karşılaştırın",
+            "body": "Önce vida ekseninden geçen kesiti, sonra kapak kenarını, son olarak hareketli elemanın bulunduğu bölgeyi inceleyin. Her görünümün hangi soruyu yanıtladığını not edin. Ekran görüntüsünü dosya revizyonuyla eşleştirin. Kesit görünümünde boşluğun görülebilmesi ölçülmüş ve kabul edilmiş bir boşluk olduğu anlamına gelmez; kritik değeri teknik notta ayrıca belirtin."
+          }
+        ],
+        "editorial": {
+          "answer": "Rastgele bir düzlem yerine sorun yaşanabilecek bağlantının ortasından geçen kesit seçin.",
+          "takeaways": [
+            "İncelenecek bağlantı ekseni",
+            "En dar iç boşluklar",
+            "Hareketli elemanın iki uç konumu"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/stl-dosya-hazirlama",
+            "/rehber/numune-kabul-plani"
+          ],
+          "comparison": {
+            "title": "Kesit seçimini soruya bağlayın",
+            "columns": [
+              "Soru",
+              "Bakılacak kesit",
+              "Sonraki kontrol"
+            ],
+            "rows": [
+              [
+                "Vida yatağında yer var mı?",
+                "Vida ekseni boyunca",
+                "Gerçek vida ve montaj denemesi"
+              ],
+              [
+                "Kapak gövdeye temas ediyor mu?",
+                "Kapak birleşimi boyunca",
+                "Kritik ölçü ve tolerans"
+              ],
+              [
+                "Kart yeterli boşluğa sahip mi?",
+                "Kart kenarı ve bağlantılar",
+                "Güncel bileşen yerleşimi"
+              ],
+              [
+                "Hareket engelleniyor mu?",
+                "Hareketin iki uç konumu",
+                "Fiziksel numunede işlev denemesi"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Model kesitini inceleyin",
+              "path": "/araclar/kesit-analizi",
+              "description": "İç geometriyi kesit düzlemiyle görüntüleyin."
+            },
+            {
+              "title": "20 mm referans küp STL dosyası",
+              "path": "/downloads/3dyanimda/referans-kup-20mm.stl",
+              "description": "Özgün, kapalı ağ örneği. STL birim taşımaz; bu dosyadaki kenar uzunluğu milimetre yorumunda 20 mm olmalıdır."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Şematik ürün gövdesi kesitinde duvar, elektronik kart ve montaj hareket boşluğunun işaretlenmesi.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/teknik-teklif-dosyasi",
+      "expected_payload_hash": "85df54338bd86b899fb9c38f0b73826b",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--teknik-teklif-dosyasi.png",
+        "sections": [
+          {
+            "body": "Görünür yüz, kritik ölçü ve varsa eşleşen bileşen açıkça belirtilsin. Henüz kararlaştırılmamış malzeme veya renk için tahmini seçim yazmak yerine kararın açık olduğunu göstermek daha sağlıklıdır.",
+            "title": "Karar tablosunu dosyaya ekleyin"
+          },
+          {
+            "body": "Fiziksel parça, düzenlenebilir model, kontrol raporu ve montaj desteği farklı teslimatlardır. İstenen dosya formatı ve veri sorumlusu belirtilmelidir. Ticari teklif üzerinde kapsam dışı kalan bir iş, teknik dosyada istenmiş olsa bile otomatik dâhil sayılmaz; iki belge arasındaki farklar sipariş öncesinde kapatılır.",
+            "title": "Teslim edilecekleri ayrı satırlara ayırın"
+          },
+          {
+            "title": "Paylaşılabilir kapsam tablosu hazırlayın",
+            "body": "İndirilebilir talep tablosunda her parçaya ayrı satır açın. Birim, adet, revizyon, tercih edilen malzeme ve kabul ölçütünü birbirinden ayırın. Henüz bilinmeyen değerleri “karar bekliyor” olarak işaretleyin. Gizli proje dosyalarının paylaşım kapsamını görüşmeden önce belirleyin; dosya iletmek bir gizlilik sözleşmesinin kendiliğinden kurulduğu anlamına gelmez."
+          }
+        ],
+        "editorial": {
+          "answer": "Her parça için kod, revizyon, adet ve numune amacı yer alsın.",
+          "takeaways": [
+            "Kod, revizyon ve adet tablosu",
+            "Fiziksel ve dijital teslimatlar",
+            "Açık kararlar ve tarih türü"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/cozumler/kurumsal-proje-yonetimi",
+            "/rehber/numune-ve-revizyon"
+          ],
+          "comparison": {
+            "title": "Satın alma ve tasarım için ortak kapsam",
+            "columns": [
+              "Alan",
+              "Neyi netleştirir?",
+              "Eksik bırakılırsa"
+            ],
+            "rows": [
+              [
+                "Parça kodu / revizyon",
+                "Hangi dosyanın fiyatlandığı",
+                "Eski sürümle değerlendirme"
+              ],
+              [
+                "Adet / ilk numune",
+                "İlk onay ile toplam sipariş",
+                "Test edilmemiş seriye geçiş"
+              ],
+              [
+                "Teslim dosyası",
+                "Kaynak CAD, ağ veya fiziksel ürün",
+                "Beklenmeyen ek modelleme"
+              ],
+              [
+                "Kabul koşulu",
+                "Kontrol ve onay sorumluluğu",
+                "Belirsiz revizyon talebi"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            },
+            {
+              "title": "Numune kabul tablosunu indirin",
+              "path": "/downloads/3dyanimda/numune-kabul.csv",
+              "description": "Her bulguyu kontrol yöntemi, sorumlu ve karar ile eşleştirin."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Örnek gövde ve kapak satırlarında parça, revizyon, adet ve numune amacı; fiziksel ve dijital teslim ayrımı.",
+            "caption": "Teknik kapsam için örnek tablo. Kayıtlar bir müşteri projesini temsil etmez.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/malzeme-secim-sorulari",
+      "expected_payload_hash": "98af6c62bdb3211fbd9873494c0d1953",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--malzeme-secim-sorulari.png",
+        "sections": [
+          {
+            "body": "Başarı ölçütü değiştiğinde malzeme ve geometri de değişebilir. Bir özelliği iyileştirmenin başka bir özelliği etkileyebileceği kabul edilerek öncelik sırası oluşturulur.",
+            "title": "Başarıyı nasıl anlayacağınızı tarif edin"
+          },
+          {
+            "body": "Gerçek ortam sıcaklığı ölçülmediyse kesin bir değer yazmak yerine hangi kaynağa yakın olduğunu açıklayın. Kimyasal temas varsa ürünün adını paylaşın. Renk ve yüzey için referans görsel, mekanik davranış için kullanım tarifi ekleyin; bunlar aynı tür veri değildir.",
+            "title": "Bilinen koşullarla varsayımları ayırın"
+          },
+          {
+            "title": "Kullanım koşullarını tek cümle yerine tabloyla anlatın",
+            "body": "Örneğin pencere yakınındaki bir muhafaza için ışığa maruz kalmayı; motor yanındaki bir kapak için gerçek sıcaklık kaynağını; tekrar açılan bir klips için hareket ve yük yönünü yazın. Bunlar belirli malzemeyi otomatik seçtirmez. İstenen renk ve yüzey ile mekanik gereksinimleri ayrı tutarak uygun adayın teknik veri sayfasını değerlendirin."
+          }
+        ],
+        "editorial": {
+          "answer": "Prototip elden düşmeye dayanmalı mı, yalnızca toplantıda gösterilecek mi, yoksa bir kapağın tekrar açılması mı denenecek?",
+          "takeaways": [
+            "Numunede başarı sayılacak davranış",
+            "Bilinen koşullar ve belirsizlikler",
+            "Görünüş ile mekanik öncelik sırası"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/malzemeler/asa",
+            "/malzemeler/muhendislik-polimerleri",
+            "/rehber/asa-pa-cf-karsilastirma"
+          ],
+          "comparison": {
+            "title": "Malzeme seçimi için beş soru",
+            "columns": [
+              "Başlık",
+              "Paylaşılacak veri",
+              "Karara etkisi"
+            ],
+            "rows": [
+              [
+                "Sıcaklık",
+                "Çalışma ve bekleme koşulu",
+                "Malzeme ürününün uygunluğu"
+              ],
+              [
+                "Yük",
+                "Yön, süre ve tekrar",
+                "Geometri ve baskı yönü"
+              ],
+              [
+                "Temas",
+                "Su, kimyasal veya sürtünme",
+                "Ürün föyü ve doğrulama ihtiyacı"
+              ],
+              [
+                "Görünüş",
+                "Renk, yüzey, görünür bölgeler",
+                "Son işlem kapsamı"
+              ],
+              [
+                "Amaç",
+                "Sunum, uyum veya işlev",
+                "Numune ve kabul planı"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Prusa — ASA malzeme özellikleri ve üretim koşulları",
+              "url": "https://help.prusa3d.com/article/asa_1809"
+            },
+            {
+              "title": "Prusa — Poliamid malzeme ve nem yönetimi",
+              "url": "https://help.prusa3d.com/article/polyamide-nylon_167188"
+            }
+          ],
+          "media": {
+            "alt": "Kullanım koşulları merkezine bağlanan beş karar girdisi: temas, sıcaklık, yük, görünüş ve test amacı.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/maket-olcek-planlama",
+      "expected_payload_hash": "39809aee4d221723925882af6fbdcdf9",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--maket-olcek-planlama.png",
+        "sections": [
+          {
+            "body": "Modelin gerçekçi görünmesiyle mekanizmayı anlatması farklı hedeflerdir. Özellikle gösterilmek istenen detaylar ayrı büyütülmüş parça veya kesit olarak sunulabilir.",
+            "title": "Küçültmenin hangi bilgiyi kaybettirdiğini görün"
+          },
+          {
+            "body": "Çıkarılabilir kapak veya patlatılmış yerleşim, iç bileşenleri anlatmayı kolaylaştırabilir. Bağlantı yerleri ve tutma yüzleri tasarımda gösterilir. Modelin kutuya nasıl gireceği, masada nasıl duracağı ve hangi sırayla kurulacağı toplam teslim kapsamına eklenmelidir.",
+            "title": "Birleşimleri sunumun parçası yapın"
+          },
+          {
+            "title": "Ölçek hesaplamasını kritik ayrıntıyla birlikte yapın",
+            "body": "1:10 ölçekte 600 mm uzunluk, sunum modelinde 60 mm olur. Ancak her ayrıntıyı aynı oranda küçültmek sunum amacına hizmet etmeyebilir. Kritik bir düğmeyi büyütülmüş ayrı örnekle göstermek veya iç yapıyı çıkarılabilir kesit olarak sunmak daha açıklayıcı olabilir. Bu sayısal örnek yalnızca ölçek hesabıdır; üretilebilir en küçük detay için dosya ayrıca incelenir."
+          }
+        ],
+        "editorial": {
+          "answer": "Bir ürünün bütün ölçülerini aynı oranda küçültmek bağlantı ve düğme gibi ayrıntıları okunmaz hâle getirebilir.",
+          "takeaways": [
+            "Gösterilecek ana ürün özelliği",
+            "Toplam sunum ve taşıma boyutu",
+            "Ayrı gösterilecek iç bileşenler"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/kesit-nasil-incelenir"
+          ],
+          "comparison": {
+            "title": "Sunum modelinde seçimler",
+            "columns": [
+              "Hedef",
+              "Model kararı",
+              "Kontrol"
+            ],
+            "rows": [
+              [
+                "Genel oranı göstermek",
+                "Ortak ölçek",
+                "Dış ölçü ve sunum alanı"
+              ],
+              [
+                "İç yapıyı anlatmak",
+                "Açılabilir kesit",
+                "Kurulum sırası"
+              ],
+              [
+                "Küçük ayrıntıyı göstermek",
+                "Ayrı büyütülmüş parça",
+                "Ölçek etiketinin görünürlüğü"
+              ],
+              [
+                "Taşınabilirlik",
+                "Parçalama ve kutu",
+                "Birleşim ve koruma planı"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Küçültülmüş sunum modeli ve ayrı büyütülmüş işlevli bağlantı detayı karşılaştırması.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/numune-kabul-plani",
+      "expected_payload_hash": "ac46e7e4448b353b3cc39e5fb57dc2a3",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--numune-kabul-plani.png",
+        "sections": [
+          {
+            "body": "Kullanılacak karşı parça ve kontrol yöntemi belli olmalıdır. Ölçülecek değer varsa referans çizim ve kabul sınırı yetkili tasarım sorumlusunca belirtilir.",
+            "title": "Kontrol maddesini gözlenebilir yazın"
+          },
+          {
+            "body": "Bir numunenin ergonomisi onaylanıp yüzeyi reddedilebilir. Her başlığın durumunu ayrı kaydetmek, sonraki revizyonun nerede çalışacağını gösterir. Koşullu kabul varsa hangi eksiklerin tamamlanacağı ve tekrar üretime izin verilip verilmediği yazılmalıdır.",
+            "title": "Kısmi onayın kapsamını koruyun"
+          },
+          {
+            "title": "Her kararın kanıt türünü seçin",
+            "body": "Görünüş değerlendirmesi için fotoğraf, montaj için karşı parça, kritik boyut için tanımlı ölçüm yöntemi gerekir. Kontrolü yapan kişi, tarih ve dosya revizyonu birlikte kaydedilmelidir. Şablondaki “kabul / red / inceleme gerekli” alanını doldururken kısmi onayı bütün ürünün onayı gibi genişletmeyin. Ölçüm doğruluğu gereken işlerde yöntem ve yeterlilik ayrıca değerlendirilir."
+          }
+        ],
+        "editorial": {
+          "answer": "“Kaliteli olsun” yerine kapağın kapanması, düğmenin erişilmesi veya parçanın belirtilen yuvaya oturması gibi somut maddeler seçin.",
+          "takeaways": [
+            "Her madde için kontrol yöntemi",
+            "Kullanılan karşı parça ve revizyon",
+            "Kabul, red ve açık bulgu ayrımı"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/3d-tarama-kalite-kontrol",
+            "/rehber/numune-ve-revizyon"
+          ],
+          "comparison": {
+            "title": "Kabul kanıtı ve kapsamı",
+            "columns": [
+              "Karar",
+              "Kanıt",
+              "Kapsam sınırı"
+            ],
+            "rows": [
+              [
+                "Görünüş",
+                "Aydınlatma ve açıları belli fotoğraf",
+                "Gizli yüzeyleri doğrulamaz"
+              ],
+              [
+                "Montaj",
+                "Güncel karşı parçayla deneme",
+                "Başka varyanta otomatik geçmez"
+              ],
+              [
+                "Boyut",
+                "Tanımlı referans ve ölçüm yöntemi",
+                "Cihaz yeterliliği gerekir"
+              ],
+              [
+                "İşlev",
+                "Kaydedilmiş koşullarda deneme",
+                "Farklı yük veya ortama genellenmez"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Numune kabul tablosunu indirin",
+              "path": "/downloads/3dyanimda/numune-kabul.csv",
+              "description": "Her bulguyu kontrol yöntemi, sorumlu ve karar ile eşleştirin."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Artec 3D — Doğruluk, tekrarlanabilirlik ve çözünürlük",
+              "url": "https://www.artec3d.com/learning-center/accuracy-precision-resolution"
+            }
+          ],
+          "media": {
+            "alt": "Görünüş, montaj ve işlev kontrollerinin inceleme yöntemi ve kaydedilecek kanıtla eşleştirildiği tablo.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/prototip-maliyetini-ne-belirler",
+      "expected_payload_hash": "91b0346731104d80cc86aac0d3bb3cb7",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--prototip-maliyetini-ne-belirler.png",
+        "sections": [
+          {
+            "body": "İlk üretimde dosya düzeltme, ölçü tamamlama veya baskı yönünü belirleme çalışması gerekebilir. Bu hazırlıklar, onaylı aynı dosyanın tekrarında aynı kapsamda tekrarlanmayabilir. Teklifte tek seferlik hazırlık kalemini, parça başı üretimi ve her siparişte gerekli kontrolü ayrı görmek toplam bütçeyi anlamayı kolaylaştırır. Tasarım değişirse eski tekrar fiyatının otomatik olarak geçerli olduğunu varsaymayın.",
+            "title": "İlk sipariş ile tekrar siparişi ayırın"
+          },
+          {
+            "body": "İnce ve yüksek bir parça, aynı hacimde daha alçak bir parçadan farklı baskı süresine sahip olabilir. Destek ihtiyacı olan yüzeyler temizleme işi doğurur. Birbiri içine kapanan boşluklar ise üretim yönü veya geometri değişikliği gerektirebilir. Dosyayı teklif öncesinde inceletmek, görünüşte küçük bir ayrıntının süreye ve son işleme etkisini görmenizi sağlar.",
+            "title": "Geometri neden fiyatı değiştirir?"
+          },
+          {
+            "body": "Numunenin bir toplantıda görünüş anlatmak için mi, montaj kontrolü için mi kullanılacağını belirtin. Görünmeyecek bir alt yüzeyde kozmetik kalite aramak ya da yalnızca sunumda kullanılacak parça için çalışma ortamına yönelik gereksiz talepler eklemek kapsamı büyütebilir. Buna karşılık çalışan prototipte kritik ölçü veya malzemeyi yalnızca maliyet düşürmek için değiştirmek denemenin amacını bozabilir.",
+            "title": "Hangi detay gerçekten gerekli?"
+          },
+          {
+            "body": "Tek bir revizyon klasörü oluşturun: model, varsa teknik resim, adet, kullanım açıklaması ve onay ölçütü. Teklife modelleme, montaj, bağlantı elemanları, son işlem ve teslimatın dâhil olup olmadığını sorun. “Bir adet ilk numune, onaydan sonra ayrı miktar” biçimindeki talep, bütün sayıyı test edilmemiş tasarımla sipariş etme riskini azaltır.",
+            "title": "Karşılaştırılabilir teklif dosyası hazırlayın"
+          },
+          {
+            "title": "Revizyon maliyetini dosya kararıyla azaltın",
+            "body": "Teklif öncesinde eski dosyaları ayırmak, görünmeyen yüzeylerin beklentisini sadeleştirmek ve ilk numunenin amacını belirlemek kapsamı daha okunur yapar. Bunun parasal karşılığı projeye göre değişir. Talep tablosunda zorunlu gereksinimleri ve değerlendirilebilecek seçenekleri ayrı belirtin; malzeme veya kritik ölçüyü yalnızca toplamı düşürmek için sessizce değiştirmeyin."
+          }
+        ],
+        "editorial": {
+          "answer": "Prototip maliyeti; modelleme ve dosya hazırlığı, baskı süresi, malzeme, destek temizliği, son işlem ve doğrulama kapsamından oluşur. Aynı ağırlıktaki iki parça farklı süre ve işçilik gerektirebilir. Sağlıklı fiyat karşılaştırması için bütün tekliflerde aynı dosya revizyonu, adet ve teslim beklentisi kullanılmalıdır.",
+          "takeaways": [
+            "“Gram fiyatı” toplam proje maliyetini tek başına açıklamaz.",
+            "İlk numune ile onaylı dosyanın tekrar baskısını ayrı fiyatlandırın.",
+            "Kritik yüzeyler dışında gereksiz son işlemi azaltabilirsiniz."
+          ],
+          "comparison": {
+            "title": "İlk numune ve tekrar sipariş",
+            "columns": [
+              "Başlık",
+              "İlk numune",
+              "Aynı revizyonun tekrarı"
+            ],
+            "rows": [
+              [
+                "Model hazırlığı",
+                "Eksik kararlar ve dosya kontrolü",
+                "Dosyanın değişmediği teyit edilir"
+              ],
+              [
+                "Üretim",
+                "Amaç ve ayarlar belirlenir",
+                "Adet ve yerleşim yeniden değerlendirilir"
+              ],
+              [
+                "Son işlem",
+                "Görünür yüzeyler tanımlanır",
+                "Her parçada gerekli işçilik sürer"
+              ],
+              [
+                "Kabul",
+                "Ölçüt ve karşı parça seçilir",
+                "Kabul edilmiş kapsam korunur"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/3d-baski",
+            "/3d-modelleme",
+            "/rehber/3d-baski-mi-cnc-mi",
+            "/rehber/3d-baski-fiyatlandirma",
+            "/rehber/numune-ve-revizyon"
+          ],
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Hazırlık, üretim ve tamamlama başlıkları altında prototip maliyetini etkileyen dokuz kapsam girdisi.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/3d-baski-mi-cnc-mi",
+      "expected_payload_hash": "77c02302b6b4d5b4f9407dda80cdf716",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/rehber--3d-baski-mi-cnc-mi.png",
+        "sections": [
+          {
+            "body": "“Elime nasıl oturuyor?” ile “bu yük altında nasıl davranıyor?” farklı prototip sorularıdır. Ergonomi incelemesinde dış geometri yeterli olabilir; işlevsel denemede malzeme ve üretim yönü belirleyici hale gelir. İlk toplantıda prototipin cevaplaması gereken üç soruyu yazmak, gereğinden pahalı veya amaca uygun olmayan yöntemi seçmeyi önler.",
+            "title": "Önce test sorusunu yazın"
+          },
+          {
+            "body": "CNC işleme için takımın yüzeye erişmesi gerekir. Baskıda ise desteklerin yerleşimi ve sonradan temizlenmesi düşünülür. Bir yöntemde kolay olan kapalı veya derin bir ayrıntı diğerinde farklı kurgu isteyebilir. Parçayı bölmek, montaj eklemek ya da tasarımı sadeleştirmek gibi seçeneklerin kullanım üzerindeki etkisini dosya üzerinden değerlendirin.",
+            "title": "Geometriyi üretim erişimiyle karşılaştırın"
+          },
+          {
+            "body": "Aynı ailedeki malzemeler üretim biçimi ve ürün sınıfına göre farklı davranabilir. Katmanlı imalatla üretilen bir numunenin bütün yönlerde aynı performansı verdiğini varsaymayın. Yük yönünü, sıcaklığı, ortamı ve kabul kriterini paylaşın. Testin sonucu yalnızca denenmiş malzeme, geometri ve koşullar için anlamlıdır.",
+            "title": "Malzeme adı tek başına eşdeğerlik değildir"
+          },
+          {
+            "body": "İlk aşamada geometri ve montajı, ikinci aşamada gerekli işlevi doğrulamak bazı projelerde daha kontrollü ilerleme sağlar. Ancak ek numune ve teslim sürelerini bütçeye dâhil edin. Farklı yöntemlerle hazırlanmış teklifleri kıyaslarken dosya revizyonu, yüzey işlemi ve kontrol kapsamının aynı olduğundan emin olun.",
+            "title": "İki aşamalı prototip planı kurun"
+          },
+          {
+            "title": "İlk geometriyi ve nihai görevi ayrı değerlendirin",
+            "body": "Bir tutucu gövdenin eldeki yerleşimini görmek için hazırlanan numune ile çalışma koşullarındaki son parçanın gereksinimleri farklı olabilir. Teklif görüşmesine iki hedefi de yazın: ilk denemede cevaplanacak soru ve nihai parçanın koşulları. CNC, SLA veya SLS gibi yöntemleri kıyaslama tablosunda görmek bu süreçlerin tamamının aynı atölyede sunulduğunu göstermez; uygun yöntem ve tedarik kapsamı ayrıca teyit edilir."
+          }
+        ],
+        "editorial": {
+          "answer": "3D baskı ile CNC arasında seçim yaparken parçanın neyi kanıtlayacağını belirleyin. Görünüş ve ilk montaj denemesinde hızlı tasarım değişikliği ön plandayken, belirli malzeme ve hassas işlenmiş yüzey ihtiyacı farklı yöntem gerektirebilir. Karar yalnızca birim fiyatla değil, hazırlık, test ve revizyon toplamıyla verilmelidir.",
+          "takeaways": [
+            "Bir prototipin malzemesi, nihai ürünün malzemesiyle aynı olmayabilir.",
+            "Karmaşık iç geometri ve işleme erişimini birlikte inceleyin.",
+            "Üretim yöntemini değiştirirken eski test sonucunu doğrudan genellemeyin."
+          ],
+          "comparison": {
+            "title": "Üretim yaklaşımını karşılaştırın",
+            "columns": [
+              "Başlık",
+              "Katmanlı imalat",
+              "Talaşlı imalat"
+            ],
+            "rows": [
+              [
+                "Geometri",
+                "Katman, destek ve erişim",
+                "Takım erişimi ve bağlama"
+              ],
+              [
+                "Malzeme",
+                "Belirli baskı malzemesinin verisi",
+                "Belirli stok malzemenin verisi"
+              ],
+              [
+                "Revizyon",
+                "Yeni dosya ve üretim düzeni",
+                "Program ve bağlama değişikliği"
+              ],
+              [
+                "Kabul",
+                "Kritik ölçü ve görev testi",
+                "Kritik ölçü ve görev testi"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/3d-baski",
+            "/rehber/prototip-maliyetini-ne-belirler",
+            "/cozumler/urun-gelistirme-prototipleri",
+            "/rehber/fdm-sla-sls-karsilastirma"
+          ],
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Katman ekleyen 3D baskı ile stok malzemeden talaş kaldıran CNC şemaları; destek ve takım erişimi farkı.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/bolgeler/istanbul",
+      "expected_payload_hash": "3f02fed0c268bd28377ed2e1b2208ffe",
+      "isNew": false,
+      "patch": {
+        "image": "",
+        "sections": [
+          {
+            "body": "İstanbul içindeki toplantı veya sunum tarihinizi numunenin kullanılacağı gün olarak belirtin. Dosyanın hazırlanması, fiziksel üretim ve taşıma sürelerini aynı işlem gibi değerlendirmeyin.",
+            "title": "Dosyayla başlayacağınız adımı seçin"
+          },
+          {
+            "body": "Gönderilecek fiziksel örnek varsa hangi model revizyonunu temsil ettiğini yazın. Kırılgan yüzey ve aksesuarları fotoğrafla belgeleyin. Numune değerlendirmesiyle tekrar üretim kararının farklı tarihlerde olabileceğini planlayın; tüm ürün ekibinin aynı dosya sürümünü değerlendirmesini sağlayın.",
+            "title": "Numuneyi teslimden önce tanımlayın"
+          },
+          {
+            "title": "İstanbul içinden doğru hizmetle başlayın",
+            "body": "Dijital modeliniz hazırsa 3D baskı hizmetine; elde fiziksel bir nesne varsa tarama kapsamına; eskiz veya değişiklik talebi varsa modelleme hizmetine geçin. Hazır dosya da olsa ölçü birimini ve adedi paylaşın. Atölye randevusu, üretim takvimi ve taşıma planı farklı adımlardır; aynı gün teslim varsayımıyla hareket etmeyin."
+          }
+        ],
+        "editorial": {
+          "answer": "Yeni bir ürün fikrinde form denemesi için eskiz ve dış ölçüler, montaj kontrolü için bileşen bilgileri gerekir.",
+          "takeaways": [
+            "Prototipin kullanılacağı görüşme tarihi",
+            "Bileşen veya gövde referansları",
+            "Dijital veri ile fiziksel numunenin eşleştirilmesi"
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/3d-baski",
+            "/rehber/3d-baski-fiyatlandirma"
+          ],
+          "comparison": {
+            "title": "İstanbul talebinde başlangıç noktası",
+            "columns": [
+              "Elinizdeki veri",
+              "Başlangıç hizmeti",
+              "Teslim planı"
+            ],
+            "rows": [
+              [
+                "Hazır model",
+                "3D baskı",
+                "Dosya ve adet sonrası üretim değerlendirmesi"
+              ],
+              [
+                "Fiziksel nesne",
+                "3D tarama",
+                "Numune gönderimi veya yerinde çalışma görüşmesi"
+              ],
+              [
+                "Eskiz / revizyon",
+                "3D modelleme",
+                "Dijital çıktı ve sonraki üretim kapsamı"
+              ]
+            ]
+          },
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": []
+        }
+      }
+    },
+    {
+      "path": "/3d-baski",
+      "expected_payload_hash": "ac5b877d9badd82f4dd02ee2a474547c",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/3d-baski.png",
+        "sections": [
+          {
+            "body": "Elde tutuşu görmek için hazırlanan bir gövdeyle elektronik yerleşimini denemek için hazırlanan gövdenin ayrıntıları aynı olmayabilir. Projenizin bir sonraki kararını anlatın: boyut, düğme konumu, kapak erişimi veya bağlantı uyumu. Numune kapsamını bu kararı görünür kılacak şekilde oluşturalım.",
+            "title": "İlk baskı hangi soruya cevap verecek?"
+          },
+          {
+            "body": "Alternatif tasarımları ayrı kodlarla paylaşmanız karşılaştırmayı kolaylaştırır. Örneğin iki kapak seçeneğinde yalnızca değişen tırnakları işaretleyin; ortak gövde dosyasını ayrıca belirtin. Denemeden çıkan bulguları onaylanan revizyona bağlayarak sonraki üretimde hangi çizimin esas alınacağını netleştirebiliriz.",
+            "title": "Tek dosyada kaybolmayan revizyonlar"
+          },
+          {
+            "body": "Hedef dış ölçüyü, kullanılacak bileşenleri ve numuneyi inceleyecek kişinin beklentisini talebe ekleyin. Sunum parçasında görünen yüzeyler öncelikli olabilir; montaj prototipinde karşı parçanın referansları önem kazanır. Malzeme ve yüzey tercihini projenin bu aşamasına göre değerlendirelim.",
+            "title": "Ürün ekibinden gereken bilgiler"
+          },
+          {
+            "body": "Prototipi test ederken yalnızca “oldu” veya “olmadı” sonucu tutmayın. Hangi yüzeyin temas ettiğini, hangi ölçünün değişmesi gerektiğini ve parçanın hangi kullanımda zorlandığını işaretleyin. Aynı parçanın iki revizyonunu birlikte sipariş edecekseniz dosya adlarını ayrı tutun. Böylece sonraki baskı, önceki denemenin ölçülebilir sonucuna dayanır.",
+            "title": "Bir sonraki revizyona veri bırakın"
+          },
+          {
+            "body": "STL, OBJ, 3MF, STEP/STP veya IGES/IGS modelinizi teklif ekranında açabilirsiniz; dosya başına sınır 20 MB’tır. Önizlemede ölçü birimini ve dış boyutları kontrol edin, istediğiniz adedi ve parçanın nerede kullanılacağını yazın. Hazır modeliniz yoksa fotoğraf, eskiz veya numuneyle modelleme ihtiyacını birlikte değerlendirebiliriz.",
+            "title": "Baskı talebine hangi dosyayla başlayabilirsiniz?"
+          },
+          {
+            "body": "Teklif ekranındaki anlık hesap, seçtiğiniz malzeme ve üretim ayarlarına bağlı bir ön tahmindir. Dosya hazırlığı, parçanın geometrisi, adet, son işlemler ve teslimat kapsamı incelendikten sonra nihai teklif belirlenir. Üretim ölçüsü, malzeme uygunluğu ve teslim tarihi proje özelinde teyit edilir; onayınızdan sonra üretim planlanır.",
+            "title": "Ön tahminden onaylı üretim teklifine"
+          }
+        ],
+        "editorial": {
+          "answer": "3D baskı, dijital modelinizden fiziksel prototip veya düşük adetli parça üretmek için kullanılır. 3D Yanımda’da değerlendirme parçanın neyi doğrulayacağıyla başlar: görünüş, montaj, ergonomi veya işlev. Dosya, adet ve kullanım koşulları birlikte incelenerek malzeme, baskı yönü ve numune kapsamı belirlenir.",
+          "takeaways": [
+            "Görsel sunum ile çalışan prototipin kabul kriterleri farklıdır.",
+            "Fiyatı yalnızca gramaj değil; geometri, hazırlık ve son işlem de etkiler.",
+            "Tekrar üretim için dosya revizyonunu ve onaylı numuneyi birlikte kaydedin."
+          ],
+          "comparison": {
+            "rows": [
+              [
+                "Görünüş modeli",
+                "Yüzey ve görsel bütünlük",
+                "Görünecek yüzeyler ve sunum amacı"
+              ],
+              [
+                "Montaj prototipi",
+                "Eşleşen parçalar ve geçmeler",
+                "Kritik ölçüler, karşı parça ve montaj sırası"
+              ],
+              [
+                "İşlev denemesi",
+                "Yük, sıcaklık ve hareket",
+                "Çalışma koşulu ve test yöntemi"
+              ],
+              [
+                "Küçük seri",
+                "Onaylı revizyonun tekrarı",
+                "Numune onayı ve adet planı"
+              ]
+            ],
+            "title": "Hangi prototip, hangi karar için?",
+            "columns": [
+              "İhtiyaç",
+              "Öncelik",
+              "Talebe eklenecek bilgi"
+            ]
+          },
+          "relatedPaths": [
+            "/rehber/prototip-maliyetini-ne-belirler",
+            "/rehber/3d-baski-mi-cnc-mi",
+            "/3d-modelleme",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ],
+          "media": {
+            "alt": "Dijital modelden baskı katmanlarına geçiş; görünüş, montaj ve işlev için farklı kontrol hedefleri.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/3d-tarama",
+      "expected_payload_hash": "b17718d03659a1b69baf293d5a2f05b5",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/3d-tarama.png",
+        "sections": [
+          {
+            "body": "Tarama talebine yalnızca objenin fotoğrafını değil, ona bağlı tasarım fikrini de ekleyin. Yeni bir muhafaza mevcut yüzeye oturacaksa temas bölgesini gösterin. Sunum için dijitalleştirilen bir obje söz konusuysa görünmesi gereken yüzeyleri ve kullanım ölçeğini açıklayın.",
+            "title": "Referans objenin projedeki rolü"
+          },
+          {
+            "body": "Elde edilen yüzeyin doğrudan görüntülenmesi ile düzenlenebilir bir tasarım referansına dönüştürülmesi ayrı işlemlerdir. Dosyayı hangi yazılımda ve hangi amaçla kullanacağınızı baştan bilmek teslim biçimini belirlemeye yardımcı olur. CAD yeniden çizimi gerekiyorsa bunu tarama talebinde belirtin.",
+            "title": "Yüzey verisinden tasarım girdisine"
+          },
+          {
+            "body": "Yaklaşık boyut, malzeme görünümü ve hareketli parçaların durumunu not edin. Sökülebilen kapaklar veya gizli yüzeyler varsa fotoğraflarda işaretleyin. Fiziksel gönderimden önce değerlendirme kapsamı ve numunenin geri dönüş şekli görüşülmelidir.",
+            "title": "Objeyi paylaşmadan önce"
+          },
+          {
+            "body": "Nesnenin bütününü mü, montaja oturan belirli bir yüzeyini mi istediğinizi belirtin. Fotoğrafa bir cetvel eklemek ilk kapsam değerlendirmesine yardımcı olur; bu fotoğraf ölçüm raporu yerine geçmez. Renkli görünüm, geometrik ağ, CAD dosyası ve teknik rapor aynı teslim değildir. Beklenen dosya biçimi ve sonradan düzenleme ihtiyacını teklif aşamasında ayırın.",
+            "title": "Taramadan önce çıktı üzerinde anlaşın"
+          },
+          {
+            "body": "Objenin farklı açılardan çekilmiş fotoğraflarını, yaklaşık boyutlarını ve malzemesini paylaşın. Hangi yüzeylerin önemli olduğunu ve veriyi arşiv, yeniden tasarım ya da üretim için kullanacağınızı belirtin. Gönderilemeyecek bir parça için bulunduğu konumu, erişim koşullarını ve yerinde çalışma beklentinizi ekleyin.",
+            "title": "Tarama teklifi için ilk paylaşım"
+          },
+          {
+            "body": "Tarama fiyatı; geometriye, yüzeye erişime, hazırlığa, yerinde çalışma ihtiyacına ve istenen çıktıya göre değerlendirilir. Yüzey ağı temizliği ile düzenlenebilir CAD modelinin hazırlanması farklı çalışmalardır. Numuneyi göndermeden önce teslim formatı, geri gönderim ve takvim üzerinde anlaşalım.",
+            "title": "Tarama ve modelleme kapsamını ayrı netleştirelim"
+          }
+        ],
+        "editorial": {
+          "answer": "3D tarama, elinizdeki nesnenin erişilebilen yüzeylerini dijital geometriye dönüştürür. Görsel arşiv, ölçü incelemesi ve yeniden tasarım farklı çıktılar gerektirir. Parçayı tekrar ürettirmek istiyorsanız tarama verisinin yanında düzenlenebilir CAD modeline ihtiyaç olup olmadığını başlangıçta belirlemek gerekir.",
+          "takeaways": [
+            "Parçanın büyüklüğünü ve yüzey özelliklerini fotoğraflarla gösterin.",
+            "Tarama ağı ile parametrik CAD modeli ayrı teslim kalemleridir.",
+            "Erişilemeyen iç yüzeyler için ek ölçüm veya söküm gerekebilir."
+          ],
+          "comparison": {
+            "rows": [
+              [
+                "Dijital arşiv",
+                "Yüzey ağı",
+                "Eksik yüzey ve geometri temizliği"
+              ],
+              [
+                "Yeniden tasarım",
+                "Referans ağ ve CAD çalışması",
+                "Kritik ölçüler ve tasarım niyeti"
+              ],
+              [
+                "Mevcut modele kıyas",
+                "Hizalanmış veri",
+                "Referans sistemi ve karşılaştırma kapsamı"
+              ]
+            ],
+            "title": "Tarama çıktısını kullanım amacına göre seçin",
+            "columns": [
+              "Amaç",
+              "Çıktı",
+              "Kontrol"
+            ]
+          },
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/rehber/tarama-ve-tersine-muhendislik",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ],
+          "media": {
+            "alt": "Fiziksel nesneden yüzey ağına ve istenen ağ, CAD veya rapor çıktısına giden üç aşama.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/3d-modelleme",
+      "expected_payload_hash": "e5bc58f349ff1f1ae864d1b7fac92f4a",
+      "isNew": false,
+      "patch": {
+        "image": "/images/editorial/3dyanimda/3d-modelleme.png",
+        "sections": [
+          {
+            "body": "Ürün kimin elinde, hangi ortamda ve hangi hareketle kullanılacak? Bu sorular gövde biçimi kadar düğme erişimini, açılma yönünü ve taşınabilirliği de etkiler. Referans görsellerinizi beğendiğiniz özelliklerle birlikte paylaşmanız tasarım niyetini anlaşılır kılar.",
+            "title": "Bir kullanım senaryosuyla başlayın"
+          },
+          {
+            "body": "Hazır elektronik bileşen, bağlantı elemanı veya korunması gereken dış ölçü sabit girdi olabilir. Buna karşılık form, yüzey geçişi ve kapak düzeni geliştirilebilir alanlardır. İlk görüşmede bu sınırları ayırarak revizyonun nerede yapılabileceğini belirleyelim.",
+            "title": "Değişebilir bölgeleri ayırın"
+          },
+          {
+            "body": "Ekrandaki modelde genel formu ve yerleşimi değerlendirdikten sonra kritik bölümleri numuneyle inceleyebilirsiniz. Elde tutuş veya geçme davranışı gibi konular fiziksel geri bildirim gerektirebilir. Sonraki düzenlemeleri aynı dosyanın üzerine belirsiz biçimde eklemek yerine sürümlendirelim.",
+            "title": "Dijital onaydan fiziksel denemeye"
+          },
+          {
+            "body": "İlk tasarım görüşmesinde sabit kalacak ölçüleri ve değişebilecek özellikleri listeleyin. Bir kutuda kart ölçüsü sabitken kablo çıkışının yeri değişebilir. Bu ayrım, modelin nasıl kurulacağını etkiler. Kontrol görüntüsü, ölçü listesi ve fiziksel numune onayını farklı aşamalar olarak ele almak, yalnızca görüntü üzerinden verilmiş bir onayın üretim onayıyla karışmasını önler.",
+            "title": "Revizyonu yönetilebilir hale getirin"
+          },
+          {
+            "body": "Eskiz, teknik resim, fotoğraf, temel ölçüler veya fiziksel numuneyle başlayabilirsiniz. Parçanın işlevini, değişmemesi gereken boyutları ve birlikte çalışacağı bileşenleri belirtin. Mevcut bir dosyanız varsa teklif ekranına ekleyin; yalnızca görselleştirme mi yoksa üretime hazırlık mı istediğinizi açıklayın.",
+            "title": "Modelleme talebinizin başlangıç paketi"
+          },
+          {
+            "body": "Teklif; mevcut referansların yeterliliği, geometrinin karmaşıklığı, ölçüm veya tarama gereksinimi, revizyon kapsamı ve teslim formatına göre hazırlanır. Düzenlenebilir CAD dosyası, baskı ağı ve görsel sunum aynı çıktı değildir. İhtiyaç duyduğunuz teslimleri ve onay adımlarını işe başlamadan birlikte belirleyelim.",
+            "title": "Revizyon, dosya teslimi ve fiyat kapsamı"
+          }
+        ],
+        "editorial": {
+          "answer": "3D modelleme; eskiz, teknik resim, ölçü veya tarama referansını üretilebilir dijital tasarıma dönüştürür. Ürün geliştirmede modelin dış görünüşü kadar montaj ilişkileri ve değiştirilebilir ölçüleri de önemlidir. Baskıya uygun ağ dosyası ile sonraki revizyonlarda düzenlenebilen CAD teslimi birlikte planlanabilir.",
+          "takeaways": [
+            "Dosyayı oluşturmak için mevcut referansları ve eksik ölçüleri ayırın.",
+            "Kritik bağlantılar ile yalnızca görsel olan detayları belirtin.",
+            "Teslim formatını üretim ve sonraki revizyon ihtiyaçlarına göre seçin."
+          ],
+          "comparison": {
+            "rows": [
+              [
+                "Eskiz / fikir",
+                "Ölçülü tasarım geliştirme",
+                "Dış boyut ve işlev"
+              ],
+              [
+                "Teknik resim",
+                "CAD model oluşturma",
+                "Eksik ölçü ve toleranslar"
+              ],
+              [
+                "Fiziksel örnek",
+                "Ölçüm veya tarama destekli modelleme",
+                "Kopyalanacak ve değiştirilecek bölgeler"
+              ]
+            ],
+            "title": "Tasarım başlangıç noktaları",
+            "columns": [
+              "Elinizdeki veri",
+              "Çalışma",
+              "İlk karar"
+            ]
+          },
+          "relatedPaths": [
+            "/3d-baski",
+            "/3d-tarama",
+            "/rehber/3d-baski-mi-cnc-mi"
+          ],
+          "media": {
+            "alt": "Referans eskizden ölçülü CAD modeline ve revizyonlu fiziksel numune kararına geçiş.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/fdm-sla-sls-karsilastirma",
+      "expected_payload_hash": null,
+      "isNew": true,
+      "patch": {
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "path": "/rehber/fdm-sla-sls-karsilastirma",
+        "kind": "guide",
+        "title": "FDM, SLA ve SLS: prototip için hangi yöntem seçilmeli?",
+        "summary": "Filament, reçine ve toz tabanlı 3D üretimi; parça amacı, geometri, son işlem ve teslim kapsamı üzerinden karşılaştırın.",
+        "image": "/images/editorial/3dyanimda/rehber--fdm-sla-sls-karsilastirma.png",
+        "sections": [
+          {
+            "title": "Üç süreç aynı dosyaya farklı hazırlık ister",
+            "body": "FDM, termoplastik filamenti katmanlar halinde biriktirir. SLA, ışıkla sertleşen reçineyi kullanır. SLS, polimer tozunu seçici olarak birleştirir. Destek ihtiyacı, temizleme ve son işlem akışı bu yüzden farklıdır. Formlabs süreç karşılaştırması bu temel ayrımı açıklayan üretici kaynağıdır; belirli makinenin sonuçları bütün cihazlara veya 3D Yanımda’nın kapasitesine genellenmemelidir."
+          },
+          {
+            "title": "Seçimi numunenin sorusundan başlatın",
+            "body": "Bir kutunun elinize oturmasını mı, ince bir dekoratif ayrıntıyı mı, yoksa montaj davranışını mı inceliyorsunuz? Önce bu soruyu yazın. Ardından görünür yüzey, kapalı boşluk, hareketli bölge ve kritik ölçüleri işaretleyin. Genel teknoloji adı, o parça için uygun malzemeyi veya kabul edilebilir toleransı tek başına belirlemez."
+          },
+          {
+            "title": "Son işlemi teklifin parçası yapın",
+            "body": "FDM işinde destek temizliği, SLA işinde yıkama ve son kürleme, SLS işinde toz uzaklaştırma gibi işlemler teslim kapsamını etkiler. Görünüş beklentinizi fotoğraf veya numune referansıyla tarif edin. Boya ve montaj gibi ek işler de ayrı satırda değerlendirilmelidir."
+          },
+          {
+            "title": "Üretim kapsamını görüşmede teyit edin",
+            "body": "Bu sayfa yöntem seçim rehberidir. 3D Yanımda’ya dosyanızı ve hedefinizi gönderdiğinizde uygulanacak süreç, malzeme, üretimin yürütülme biçimi ve teslim dosyaları teklif kapsamında netleştirilir. Karşılaştırmada yer alan bir teknoloji için kesin stok, cihaz parkı veya termin varsaymayın. İlk numune ve kabul adımını, toplam siparişten önce ayrıca konuşun."
+          }
+        ],
+        "faq": [
+          {
+            "q": "En yüksek çözünürlük her iş için en iyi seçim midir?",
+            "a": "Hayır. Yüzey detayı, malzeme, yük yönü, son işlem ve maliyet birlikte değerlendirilir. Bir sunum modelinin önceliği ile montaj numunesinin önceliği farklı olabilir."
+          },
+          {
+            "q": "FDM, SLA ve SLS için aynı dayanım değeri kullanılabilir mi?",
+            "a": "Kullanılmamalıdır. Tam malzeme ürünü, numune üretim koşulları ve test yöntemi bilinmeden değerler doğrudan eşitlenmez."
+          }
+        ],
+        "city": "",
+        "district": "",
+        "neighborhood": "",
+        "service": "",
+        "local_context": "",
+        "logistics": "",
+        "evidence": "23 Ekim 2026 kaynaklı teknik içerik. İşletmeye ait üretim sonucu veya yeni kapasite beyanı içermez.",
+        "reviewed_at": "2026-10-22T23:14:10.616Z",
+        "editorial": {
+          "answer": "FDM, SLA ve SLS seçimini parçanın görevine göre yapın. Filament, reçine ve toz süreçlerinin malzeme ve son işlem ihtiyaçları farklıdır. İnce görünüş ayrıntısı, montaj kontrolü ve işlev denemesi aynı hedef değildir; dosyayı, kritik ölçüleri ve kabul koşullarını birlikte değerlendirin.",
+          "takeaways": [
+            "Teknoloji karşılaştırması bir cihaz parkı beyanı değildir.",
+            "Malzeme ürününü ve son işlem kapsamını teklif üzerinde görün.",
+            "İlk numunede hangi sorunun yanıtlanacağını belirleyin."
+          ],
+          "comparison": {
+            "title": "Süreç farkları",
+            "columns": [
+              "Başlık",
+              "FDM",
+              "SLA",
+              "SLS"
+            ],
+            "rows": [
+              [
+                "Ham madde",
+                "Termoplastik filament",
+                "Fotopolimer reçine",
+                "Polimer tozu"
+              ],
+              [
+                "Temel işlem",
+                "Katman biriktirme",
+                "Işıkla sertleştirme",
+                "Toz birleştirme"
+              ],
+              [
+                "Son işlem",
+                "Destek ve yüzey temizliği",
+                "Yıkama ve son kürleme",
+                "Toz uzaklaştırma"
+              ],
+              [
+                "Teklif sorusu",
+                "Katman ve destek yönü",
+                "Reçine ve son işlem koşulları",
+                "Boşluk ve temizleme erişimi"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/3d-baski",
+            "/rehber/3d-baski-mi-cnc-mi",
+            "/rehber/malzeme-secim-sorulari"
+          ],
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Formlabs — FDM, SLA ve SLS süreç karşılaştırması",
+              "url": "https://formlabs.com/blog/fdm-vs-sla-vs-sls-how-to-choose-the-right-3d-printing-technology/"
+            }
+          ],
+          "publishedAt": "2026-10-22T23:14:10.616Z",
+          "media": {
+            "alt": "FDM filament ekstrüzyonu, SLA reçinenin ışıkla kürlenmesi ve SLS toz yatağı sinterleme süreçlerinin şemaları.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/asa-pa-cf-karsilastirma",
+      "expected_payload_hash": null,
+      "isNew": true,
+      "patch": {
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "path": "/rehber/asa-pa-cf-karsilastirma",
+        "kind": "guide",
+        "title": "ASA ve PA-CF: kullanım koşuluna göre malzeme seçimi",
+        "summary": "Güneş, nem, yük ve boyut beklentisini ayırarak ASA ile karbon elyaf katkılı poliamid adaylarını değerlendirin.",
+        "image": "/images/editorial/3dyanimda/rehber--asa-pa-cf-karsilastirma.png",
+        "sections": [
+          {
+            "title": "ASA ile PA-CF aynı problemi çözmek zorunda değil",
+            "body": "ASA, üretici rehberlerinde UV direnci nedeniyle dış ortam adayları arasında yer alır. PA-CF ise poliamid tabanlı, karbon elyaf katkılı bir malzeme ailesini anlatır. PA6, PA12 veya PA11 gibi farklı tabanlar ve ürün reçeteleri aynı özellikleri vermez. “Karbonlu” etiketi tek başına darbe, esneklik veya her yönde dayanım üstünlüğü anlamına gelmez."
+          },
+          {
+            "title": "Üretim koşulunu tam ürünle eşleyin",
+            "body": "Poliamidin nem yönetimi, ASA’nın üretim sırasında şekil kararlılığı ve lif katkılı filamentin aşındırıcı etkisi farklı hazırlık konularıdır. Prusa’nın ASA, poliamid ve kompozit rehberleri bu ayrımlara giriş sağlar. Fırın, kurutma veya baskı sıcaklığı için genel bir internet değerini her ürüne uygulamak yerine kullanılan filamentin teknik föyü izlenmelidir."
+          },
+          {
+            "title": "Araç içi veya dış ortam isteğini tarif edin",
+            "body": "Bir parçanın araçta bulunması tek başına uygun malzemeyi seçtirmez. Konum, güneş altında bekleme, yakın ısı kaynağı, yük yönü, bağlantı şekli ve görevini yazın. Bir dekoratif kapak ile güvenlik işlevi taşıyan parça aynı değerlendirmeye girmez. Yalnızca bir montaj denemesi yapmak uzun süreli kullanım onayı sağlamaz."
+          },
+          {
+            "title": "Numuneyi hangi koşulda değerlendireceğinizi belirleyin",
+            "body": "Teklifte tam malzeme adı, renk, baskı yönü ve son işlem kapsamını isteyin. Numune kontrolüne ölçü, montaj ve gerekiyorsa tanımlı kullanım denemesini ekleyin. Stok ve makine uygunluğu teklif aşamasında teyit edilir. Bu rehber belirli bir malzemeyle tüm parçaların üretilebildiği veya araç üreticisi onayına sahip olduğu anlamına gelmez."
+          }
+        ],
+        "faq": [
+          {
+            "q": "PA-CF her durumda ASA’dan daha sağlam mıdır?",
+            "a": "Hayır. Sağlamlık tek bir özellik değildir. Rijitlik, darbe, katman yönü, nem ve sıcaklık gibi koşullar tam ürün verileriyle değerlendirilmelidir."
+          },
+          {
+            "q": "ASA için tek bir çalışma sıcaklığı yazabilir miyiz?",
+            "a": "Bütün ASA ürünleri ve geometriler için tek bir güvenli sınır kullanılmamalıdır. Teknik föy, yük ve çalışma koşulları birlikte incelenir."
+          }
+        ],
+        "city": "",
+        "district": "",
+        "neighborhood": "",
+        "service": "",
+        "local_context": "",
+        "logistics": "",
+        "evidence": "23 Ekim 2026 kaynaklı teknik içerik. İşletmeye ait üretim sonucu veya yeni kapasite beyanı içermez.",
+        "reviewed_at": "2026-10-22T23:14:10.616Z",
+        "editorial": {
+          "answer": "ASA ve PA-CF arasında karar vermeden önce parçanın güneş, nem, sıcaklık ve yük koşullarını açıklayın. ASA dış ortam için bir adaydır; PA-CF ise özellikleri poliamid tabanına ve ürüne göre değişen bir kompozit ailesidir. Tam ürün föyü ve numune kontrolü olmadan genel bir üstünlük sıralaması yapılmaz.",
+          "takeaways": [
+            "PA-CF birden fazla poliamid tabanını kapsar.",
+            "Nem ve üretim hazırlığı teklif kapsamını etkiler.",
+            "Dış ortam adayı olmak kullanım ömrü garantisi değildir."
+          ],
+          "comparison": {
+            "title": "Karar görüşmesinde sorulacaklar",
+            "columns": [
+              "Başlık",
+              "ASA adayı",
+              "PA-CF adayı"
+            ],
+            "rows": [
+              [
+                "Güneş",
+                "UV ve renk beklentisi",
+                "İlgili ürünün dış ortam verisi"
+              ],
+              [
+                "Yük",
+                "Geometri ve katman yönü",
+                "Taban polimer ve katkı oranı"
+              ],
+              [
+                "Nem",
+                "Depolama ve ürün koşulları",
+                "Kurutma ve koşullandırma gereksinimi"
+              ],
+              [
+                "Üretim",
+                "Şekil kararlılığı ve ortam",
+                "Nozul uygunluğu ve nem yönetimi"
+              ],
+              [
+                "Kabul",
+                "Ölçü ve kullanım testi",
+                "Ölçü ve kullanım testi"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/malzemeler/asa",
+            "/malzemeler/muhendislik-polimerleri",
+            "/rehber/malzeme-secim-sorulari"
+          ],
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Prusa — ASA malzeme özellikleri ve üretim koşulları",
+              "url": "https://help.prusa3d.com/article/asa_1809"
+            },
+            {
+              "title": "Prusa — Poliamid malzeme ve nem yönetimi",
+              "url": "https://help.prusa3d.com/article/polyamide-nylon_167188"
+            },
+            {
+              "title": "Prusa — Lif katkılı kompozit filamentler",
+              "url": "https://help.prusa3d.com/article/composite-materials-filled-with-carbon-kevlar-or-glass_167387"
+            }
+          ],
+          "publishedAt": "2026-10-22T23:14:10.616Z",
+          "media": {
+            "alt": "ASA için dış ortam ve UV sıcaklık koşulları; PA-CF için yük, rijitlik, nem ve yön etkisi değerlendirme alanları.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/3d-tarama-kullanim-alanlari",
+      "expected_payload_hash": null,
+      "isNew": true,
+      "patch": {
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "path": "/rehber/3d-tarama-kullanim-alanlari",
+        "kind": "guide",
+        "title": "3D tarama hangi işlerde kullanılır, hangi çıktı istenir?",
+        "summary": "Görsel arşiv, yeniden tasarım, uyum kontrolü ve üretim hazırlığında tarama verisinden beklenen teslimi doğru tanımlayın.",
+        "image": "/images/editorial/3dyanimda/rehber--3d-tarama-kullanim-alanlari.png",
+        "sections": [
+          {
+            "title": "Görsel arşiv ile üretim referansını ayırın",
+            "body": "Bir nesnenin biçimini dijital arşivde görmek ile ona oturan yeni bir parça tasarlamak farklı ihtiyaçlardır. Arşivde görünür yüzey ve renk beklentisi öne çıkabilir. Üretim referansında temas bölgeleri, kritik ölçüler ve sonraki modelleme adımı ayrıca tanımlanır. Nesnenin fotoğraflarını paylaşırken bu amacı da yazın."
+          },
+          {
+            "title": "Yeniden tasarımda korunacak yüzeyi seçin",
+            "body": "Mevcut parçadaki aşınma veya kırık, yeni tasarımda aynen korunmayabilir. Tarama çalışmasına başlamadan önce hangi yüzeyin referans, hangisinin değiştirilecek bölge olduğunu gösterin. Bir kapak için karşı gövdeyi de paylaşmak gerekebilir. Dijital ağ elde edilmesi bütün eksik tasarım kararlarının çözüldüğü anlamına gelmez."
+          },
+          {
+            "title": "Kontrol amaçlı veride ölçüm sorusunu yazın",
+            "body": "“Parça doğru mu?” yerine hangi yüzeyin hangi referansa göre karşılaştırılacağını belirtin. Görsel yüzey eşleşmesi, kabul edilebilir ölçüm belirsizliği ve rapor formatı farklı konulardır. Sertifikalı ölçüm veya özel tolerans gereksiniminiz varsa bunu ilk mesajda bildirin; böylece uygunluk ve raporlama kapsamı üretimden önce değerlendirilir."
+          },
+          {
+            "title": "Atölye ve yerinde çalışma için hazırlık",
+            "body": "Numune taşınabiliyorsa yaklaşık boyut, yüzey durumu ve iade beklentisini gönderin. Yerinde taramada adres, erişim alanı, nesnenin hareket ettirilip ettirilemeyeceği ve çalışma ortamı önemlidir. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alın. Gönderim veya yerinde çalışma takvimi fotoğraf ve kapsam değerlendirmesinden sonra kararlaştırılır."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Tarama sonucunda her zaman STEP dosyası mı alınır?",
+            "a": "Hayır. Ağ veya nokta verisi ile CAD yeniden modelleme farklı teslimlerdir. İstenen format ve sonraki düzenleme ihtiyacı teklif sırasında belirtilmelidir."
+          },
+          {
+            "q": "Gizli iç yüzeyler de taranabilir mi?",
+            "a": "Erişilemeyen yüzeyler için söküm, başka veri veya ek ölçüm gerekebilir. Nesnenin tamamının aynı yöntemle elde edilebileceği önceden varsayılmaz."
+          }
+        ],
+        "city": "",
+        "district": "",
+        "neighborhood": "",
+        "service": "",
+        "local_context": "",
+        "logistics": "",
+        "evidence": "23 Ekim 2026 kaynaklı teknik içerik. İşletmeye ait üretim sonucu veya yeni kapasite beyanı içermez.",
+        "reviewed_at": "2026-10-22T23:14:10.616Z",
+        "editorial": {
+          "answer": "3D tarama; biçimi arşivlemek, yeni tasarıma referans üretmek veya belirlenmiş bir karşılaştırma işini desteklemek için kullanılabilir. Amaç değişince gerekli yüzeyler, dosya biçimi ve kontrol yöntemi de değişir. Talebinizde nesnenin fotoğrafını, boyutunu ve veriyi nerede kullanacağınızı birlikte paylaşın.",
+          "takeaways": [
+            "Yüzey ağı ve CAD dosyası ayrı teslimlerdir.",
+            "Kritik yüzeyi ve veri kullanım amacını başlangıçta yazın.",
+            "Yerinde tarama için erişim ve ortamı fotoğrafla gösterin."
+          ],
+          "comparison": {
+            "title": "Amaca göre tarama teslimi",
+            "columns": [
+              "Amaç",
+              "İstenecek çıktı",
+              "Başlangıç girdisi"
+            ],
+            "rows": [
+              [
+                "Görsel arşiv",
+                "Görüntülenebilir ağ",
+                "Görünür yüzey ve renk beklentisi"
+              ],
+              [
+                "Yeni aksesuar",
+                "Referans yüzey ve modelleme kapsamı",
+                "Karşı parça ve temas bölgeleri"
+              ],
+              [
+                "Yeniden üretim",
+                "Üretime uygun model ve numune",
+                "Kritik ölçü ve kabul koşulu"
+              ],
+              [
+                "Ölçü karşılaştırması",
+                "Tanımlı karşılaştırma / rapor kapsamı",
+                "Referans model, yöntem ve tolerans"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/3d-tarama",
+            "/rehber/tarama-verisinden-cad",
+            "/rehber/3d-tarama-kalite-kontrol",
+            "/sektorler/otomotiv"
+          ],
+          "resources": [
+            {
+              "title": "Tarama dosyasını görüntüleyin",
+              "path": "/araclar/tarama-goruntuleyici",
+              "description": "Elinizdeki yüzey verisini dijital talep hazırlığında inceleyin."
+            },
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [],
+          "publishedAt": "2026-10-22T23:14:10.616Z",
+          "media": {
+            "alt": "Fiziksel nesnenin dijital arşiv, yeniden tasarım ve geometri karşılaştırması amaçlarına göre teslim seçenekleri.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/rehber/3d-tarama-kalite-kontrol",
+      "expected_payload_hash": null,
+      "isNew": true,
+      "patch": {
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "path": "/rehber/3d-tarama-kalite-kontrol",
+        "kind": "guide",
+        "title": "3D tarama ile ölçü kontrolü: çözünürlük, doğruluk ve rapor",
+        "summary": "Bir tarama dosyasını kontrol amacıyla kullanmadan önce referans, yöntem, ölçüm belirsizliği ve kabul kapsamını ayırın.",
+        "image": "/images/editorial/3dyanimda/rehber--3d-tarama-kalite-kontrol.png",
+        "sections": [
+          {
+            "title": "Üç teknik terim aynı anlama gelmez",
+            "body": "Çözünürlük, yüzey ayrıntısının temsil edilmesiyle; doğruluk, ölçümün referansa yakınlığıyla; tekrarlanabilirlik ise aynı koşullardaki sonuçların tutarlılığıyla ilgilidir. Artec’in teknik açıklaması bu ayrımı vurgular. Yüksek üçgen sayılı bir dosya tek başına doğru veya kabul edilebilir ölçüm yapıldığını göstermez."
+          },
+          {
+            "title": "Renk haritasından önce referans sistemini tanımlayın",
+            "body": "Bir sapma görselinin anlamı, modelin hangi yüzey veya eksenlerle hizalandığına bağlıdır. Nominal CAD revizyonunu, karşılaştırılacak bölgeyi ve kabul sınırını yazın. Otomatik en iyi hizalamanın her işlevsel ölçüyü temsil ettiğini varsaymayın. Kabul kararının hangi yöntemle verileceği teknik sorumlu tarafından belirlenmelidir."
+          },
+          {
+            "title": "Tarama ve CMM seçimi ölçüm görevine bağlıdır",
+            "body": "Yöntem seçerken erişilecek yüzeyleri, kritik boyutları, yüzey durumunu ve gerekli belirsizliği paylaşın. Tarama verisi ile koordinat ölçüm makinesinin çıktısı aynı hizmet kalemi değildir. 3D Yanımda’ya iletilen özel ölçüm, CMM veya sertifikalı rapor ihtiyacı ayrıca uygunluk değerlendirmesi gerektirir; bu rehber böyle bir cihaz veya akreditasyon beyanı içermez."
+          },
+          {
+            "title": "Kontrol talebinin asgari dosyaları",
+            "body": "Güncel teknik resim veya CAD, parça revizyonu, kontrol edilecek ölçüler ve istenen rapor biçimini aynı pakete koyun. Örnek kabul şablonuna yöntemi, sorumluyu ve bulguyu kaydedin. Numunenin gözle görülen uyumu ile izlenebilir bir ölçüm raporunu birbirinin yerine kullanmayın; siparişten önce hangi teslimin gerekli olduğunu belirleyin."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Tarayıcının çözünürlük değeri parça toleransı mıdır?",
+            "a": "Hayır. Çözünürlük ve tolerans farklı kavramlardır. Belirli ölçüm görevi için cihaz, yöntem, hizalama ve belirsizlik değerlendirilmelidir."
+          },
+          {
+            "q": "Renkli sapma haritası kabul raporu sayılır mı?",
+            "a": "Ancak referans, hizalama, ölçütler ve rapor kapsamı tanımlıysa ilgili kontrolün parçası olabilir. Bir görsel tek başına bütün parçanın kabulü anlamına gelmez."
+          }
+        ],
+        "city": "",
+        "district": "",
+        "neighborhood": "",
+        "service": "",
+        "local_context": "",
+        "logistics": "",
+        "evidence": "23 Ekim 2026 kaynaklı teknik içerik. İşletmeye ait üretim sonucu veya yeni kapasite beyanı içermez.",
+        "reviewed_at": "2026-10-22T23:14:10.616Z",
+        "editorial": {
+          "answer": "Ölçü kontrolünde taramanın görünüşü kadar referansı ve yöntemi önemlidir. Çözünürlük, doğruluk ve tekrarlanabilirlik farklı özelliklerdir. Kritik ölçüler, nominal CAD revizyonu, hizalama yaklaşımı ve rapor beklentisi tanımlanmadan yalnızca renkli sapma görselinden kabul kararı verilmemelidir.",
+          "takeaways": [
+            "Çok ayrıntılı ağ, doğru ölçümün tek başına kanıtı değildir.",
+            "Kabul sınırını tarayıcı tanıtımındaki sayıdan türetmeyin.",
+            "CMM veya sertifikalı rapor talebini önceden belirtin."
+          ],
+          "comparison": {
+            "title": "Kontrol dosyasının bileşenleri",
+            "columns": [
+              "Alan",
+              "Yazılacak bilgi",
+              "Neden gerekli?"
+            ],
+            "rows": [
+              [
+                "Referans",
+                "Nominal model ve revizyon",
+                "Doğru tasarımla karşılaştırma"
+              ],
+              [
+                "Hizalama",
+                "Referans yüzey ve eksenler",
+                "Karşılaştırmanın anlamı"
+              ],
+              [
+                "Ölçüm görevi",
+                "Kritik ölçü ve kabul aralığı",
+                "Uygun yöntem seçimi"
+              ],
+              [
+                "Rapor",
+                "Bulgular, koşullar ve sorumlu",
+                "Kararın izlenebilirliği"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/3d-tarama",
+            "/rehber/numune-kabul-plani",
+            "/rehber/tarama-verisinden-cad"
+          ],
+          "resources": [
+            {
+              "title": "Numune kabul tablosunu indirin",
+              "path": "/downloads/3dyanimda/numune-kabul.csv",
+              "description": "Her bulguyu kontrol yöntemi, sorumlu ve karar ile eşleştirin."
+            },
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Artec 3D — Doğruluk, tekrarlanabilirlik ve çözünürlük",
+              "url": "https://www.artec3d.com/learning-center/accuracy-precision-resolution"
+            }
+          ],
+          "publishedAt": "2026-10-22T23:14:10.616Z",
+          "media": {
+            "alt": "Aynı referansa hizalanmış nominal ve ölçülen yüzeyler; yöntem, ölçüm belirsizliği ve kabul sınırlarının ayrımı.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "path": "/cozumler/yedek-parca-uretimi",
+      "expected_payload_hash": null,
+      "isNew": true,
+      "patch": {
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "path": "/cozumler/yedek-parca-uretimi",
+        "kind": "solution",
+        "title": "Özel ve yedek parça için 3D üretim değerlendirmesi",
+        "summary": "Bulunamayan kapak, düğme, düzenleyici veya muhafaza parçanız için fotoğraf, numune ve kullanım koşullarıyla modelleme ve üretim değerlendirmesi başlatın.",
+        "image": "/images/editorial/3dyanimda/cozumler--yedek-parca-uretimi.png",
+        "sections": [
+          {
+            "title": "Dosya varsa revizyonla, yoksa numuneyle başlayın",
+            "body": "Elinizde STL veya CAD dosyası varsa gerçek ölçü, adet ve parçanın görevini ekleyin. Dosya yoksa farklı açılardan fotoğraf, yaklaşık boyut ve varsa sağlam karşı parçayı paylaşın. Kırık numunenin eksik bölgesi tarama verisinde kendiliğinden oluşmaz; hangi kısmın yeniden tasarlanacağı ayrıca belirlenir."
+          },
+          {
+            "title": "Önce parçanın görevini ve arayüzünü anlayalım",
+            "body": "Bir cihaz kapağı, düğme veya kablo düzenleyici için montaj konumu ve etrafındaki parçalar önemlidir. Vidayla, geçmeyle veya klipsle bağlanan bölgeleri fotoğrafta işaretleyin. Isı, güneş, nem ve tekrarlanan hareket varsa belirtin. Malzeme seçimi ile dosya hazırlığını aynı görüşmede planlamak gereksiz revizyonları azaltmaya yardımcı olur."
+          },
+          {
+            "title": "İlk numune kabulünden sonra adedi netleştirin",
+            "body": "Yeni modellenen bir parçayı önce tanımlı uyum denemesiyle kontrol edin. Karşı parçanın sürümünü, ölçüleri ve kabul eden kişiyi kaydedin. İlk numune onayı; farklı cihazlara, farklı araçlara veya başka çalışma koşullarına otomatik uygunluk sağlamaz. Ek adet, kabul edilmiş aynı dosya ve kapsam üzerinden değerlendirilir."
+          },
+          {
+            "title": "Araç ve klasik parça taleplerinin kapsamı",
+            "body": "Klasik araçlarda dekoratif kapak veya güvenlik işlevi olmayan iç trim talebi için araç modeli, yıl ve donanım bilgisiyle başlangıç yapılabilir. Fren, direksiyon, emniyet sistemi veya yüksek riskli yük taşıyan parçalar bu genel talep akışında uygun kabul edilmez. Numunenin oturması yol kullanımı, üretici onayı ya da uzun süreli dayanım belgesi değildir."
+          },
+          {
+            "title": "Üretim ve teslim planını dosyadan sonra belirleyelim",
+            "body": "3D baskı, gerekli modelleme ve varsa tarama işleri ayrı kapsam olarak değerlendirilir. Teklif; parçanın geometrisi, malzeme adayı, adet, son işlem ve kontrol beklentisiyle hazırlanır. Ataşehir atölyesine gelmeden randevu alın. Elden teslim, kurye veya kargo seçimi üretim planıyla birlikte netleşir; kesin fiyat veya süre dosya görülmeden verilmez."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Kırık parçanın aynısı üretilebilir mi?",
+            "a": "Önce işlevi, elde kalan veri ve malzeme gereksinimi incelenir. Tamamen kayıp bölgeler için karşı parça, çizim veya yeniden tasarım kararı gerekebilir. Üretim uygunluğu numune değerlendirmesinden sonra belirlenir."
+          },
+          {
+            "q": "Tek adet talep gönderebilir miyim?",
+            "a": "Evet. Adedi, dosya veya numune durumunu ve kullanım amacını paylaşabilirsiniz. Hazırlık ile üretim kapsamı değerlendirilerek teklif oluşturulur."
+          },
+          {
+            "q": "Araç parçası için fotoğraf yeterli mi?",
+            "a": "Fotoğraf ilk değerlendirmeyi başlatabilir; hassas uyum için ölçü, numune veya karşı parça gerekebilir. Araç modeli ve donanım farkları ayrıca belirtilmelidir."
+          }
+        ],
+        "city": "",
+        "district": "",
+        "neighborhood": "",
+        "service": "",
+        "local_context": "",
+        "logistics": "",
+        "evidence": "23 Ekim 2026 kaynaklı teknik içerik. İşletmeye ait üretim sonucu veya yeni kapasite beyanı içermez.",
+        "reviewed_at": "2026-10-22T23:14:10.616Z",
+        "editorial": {
+          "answer": "Özel veya bulunamayan bir parça için dosyanızı ya da numune fotoğraflarınızı, yaklaşık ölçüleri ve kullanım koşullarını gönderin. Modelleme, tarama ve baskı kapsamı birlikte değerlendirilir. Yeni tasarımda önce uyum numunesi ve kabul koşulu belirlenir; ardından aynı revizyonun üretim adedi netleştirilir.",
+          "takeaways": [
+            "Parçanın kendisi kadar montaj yerini de gösterin.",
+            "Malzeme ve görev bilinmeden uygunluk varsaymayın.",
+            "Önce numune, sonra kabul edilmiş revizyonla tekrar üretim planlayın."
+          ],
+          "comparison": {
+            "title": "Parça talebi için başlangıç verisi",
+            "columns": [
+              "Durum",
+              "Gönderilecekler",
+              "Değerlendirilecek iş"
+            ],
+            "rows": [
+              [
+                "Hazır model",
+                "Dosya, birim ve adet",
+                "Baskı uygunluğu"
+              ],
+              [
+                "Sağlam numune",
+                "Fotoğraf ve kritik ölçüler",
+                "Tarama / modelleme ihtiyacı"
+              ],
+              [
+                "Kırık numune",
+                "Kalan parça ve karşı yüzey",
+                "Eksik bölgenin yeniden tasarımı"
+              ],
+              [
+                "Eski araç trim parçası",
+                "Araç varyantı ve montaj konumu",
+                "Güvenlik dışı kullanım ve uyum denemesi"
+              ]
+            ]
+          },
+          "relatedPaths": [
+            "/3d-baski",
+            "/3d-modelleme",
+            "/3d-tarama",
+            "/sektorler/otomotiv",
+            "/rehber/asa-pa-cf-karsilastirma"
+          ],
+          "resources": [
+            {
+              "title": "Teknik talep tablosunu indirin",
+              "path": "/downloads/3dyanimda/teknik-talep.csv",
+              "description": "Parça, revizyon, adet, malzeme ve kabul koşullarını doldurabileceğiniz CSV şablonu."
+            },
+            {
+              "title": "Numune kabul tablosunu indirin",
+              "path": "/downloads/3dyanimda/numune-kabul.csv",
+              "description": "Her bulguyu kontrol yöntemi, sorumlu ve karar ile eşleştirin."
+            }
+          ],
+          "sources": [],
+          "media": {
+            "alt": "Patlatılmış bağlantı parçası şemasında referans yüzey, kullanım koşulu, karşı parça ve kritik montaj ölçüsü çağrıları.",
+            "caption": "3D Yanımda açıklayıcı şeması. Geometri ve süreç gösterimleri ölçekli teknik çizim değildir.",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    }
+  ]
+}

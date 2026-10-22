@@ -10,17 +10,22 @@ import { canonicalPath, indexRobots, pageGraph, pageNoindex } from "@/lib/search
 import { socialImage } from "@/lib/social-meta";
 import { composeSchemaGraph } from "@/lib/schema-graph";
 import { resolveBusinessProfile } from "@/lib/business-profile";
+import { contentDate } from "@/lib/seo-schema";
 interface SeoProps {
   title: string;
   description: string;
   path?: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: "website" | "article";
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
   geo?: { region?: string; placename?: string; position?: string };
   keywords?: string;
   modified?: string;
+  published?: string;
   pageType?: "WebPage" | "CollectionPage" | "AboutPage" | "ContactPage";
 }
 export const Seo = ({
@@ -28,12 +33,16 @@ export const Seo = ({
   description,
   path = "/",
   image,
+  imageAlt,
+  imageWidth,
+  imageHeight,
   type = "website",
   jsonLd,
   noindex,
   geo,
   keywords,
   modified,
+  published,
   pageType,
 }: SeoProps) => {
   const { tenant } = useTenant();
@@ -54,23 +63,27 @@ export const Seo = ({
     : `${effectiveTitle} | ${name}`;
   const desc = override?.description || description;
   const noIndex = pageNoindex({requested:noindex,override:override?.noindex,development:import.meta.env.DEV,domain,hostname:window.location.hostname});
-  const share = socialImage(base, tenant?.slug, override?.og_image_url,settings);
+  const share = socialImage(base, tenant?.slug, [override?.og_image_url, {url:image,alt:imageAlt||fullTitle,width:imageWidth,height:imageHeight}],settings);
   const favicon=brandAsset(tenant?.slug,'favicon',settings);
   const appleIcon=brandAsset(tenant?.slug,'apple_touch_icon',settings);
   const og = share.url;
+  const publishedDate = contentDate(published);
+  const modifiedDate = contentDate(modified);
   const identity = businessGraph({ name, alternateNames: business.alternateNames, origin: base, description: business.description || undefined,
     logo: brandAsset(tenant?.slug,'organization_logo',settings).url, email: business.email, telephone: business.phone,
     sameAs: business.sameAs, hasMap: business.googleBusinessUrl, openingHoursSpecification: business.openingHoursSpecification,
     address: business.address,
     geo: business.geo,
+    availableLanguages: business.availableLanguages,
+    serviceAreas: business.serviceAreas,
   });
   // Legacy schemas with source-company identity are excluded, not published under the new brand.
   const schemas = (
     jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []
   ).filter(
     (item) => !containsLegacyIdentity(item),
-  );
-  const structured = JSON.stringify(composeSchemaGraph([identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: image || og, modified, type: pageType }), ...schemas],base,url)).replace(/</g,'\\u003c');
+  ).map(item => type === 'article' && item['@type'] === 'Article' ? {...item,image:og} : item);
+  const structured = JSON.stringify(composeSchemaGraph([identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: og, modified:modifiedDate, type: pageType }), ...schemas],base,url)).replace(/</g,'\\u003c');
   // React 18 suspended renders can leave stale Helmet script registrations.
   // Commit one owned node in an effect, after React commits the current page.
   useLayoutEffect(()=>{
@@ -103,6 +116,8 @@ export const Seo = ({
       <meta property="og:site_name" content={name} />
       <meta property="og:locale" content="tr_TR" />
       <meta property="og:image" content={og} />
+      <meta property="og:image:secure_url" content={og} />
+      <meta property="og:image:type" content={share.mime} />
       <meta property="og:image:alt" content={share.alt} />
       {share.width && <meta property="og:image:width" content={String(share.width)} />}
       {share.height && <meta property="og:image:height" content={String(share.height)} />}
@@ -114,7 +129,8 @@ export const Seo = ({
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={og} />
       <meta name="twitter:image:alt" content={share.alt} />
-      {modified && type === "article" && <meta property="article:modified_time" content={modified} />}
+      {publishedDate && type === "article" && <meta property="article:published_time" content={publishedDate} />}
+      {modifiedDate && type === "article" && <meta property="article:modified_time" content={modifiedDate} />}
       {(override?.keywords || keywords) && (
         <meta name="keywords" content={override?.keywords || keywords} />
       )}
