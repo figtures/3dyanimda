@@ -1,0 +1,104 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "approvalScope": "Bounded source review of one desktop heading color; fresh rendered verification remains required",
+  "reviewer": "Codex (AI, independent delta reviewer under owner-delegated implementation)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-23T00:49:45.552Z",
+  "baseline": {
+    "commit": "fa7b9fe2e97d05e75b9e2cdcf6b108b401c3f152",
+    "sourceHash": "4db57168aca9a5377d7b26ce4f666fc0e968df1a60b78a7724f8b6ddf7505516",
+    "previousReview": "docs/audits/seo-gbp-contrast-review-2026-10-23.json",
+    "evidenceRecords": 90,
+    "baselineChecks": "All 16 Actions jobs and four production Workers builds passed for the baseline commit. These results do not cover this subsequent source delta."
+  },
+  "measuredDiagnosis": {
+    "kind": "candidate-artifact-lab",
+    "production": false,
+    "fieldData": false,
+    "commit": "fa7b9fe2e97d05e75b9e2cdcf6b108b401c3f152",
+    "workflowRun": 39879133892,
+    "desktopJob": 120171973585,
+    "artifactId": 12469833402,
+    "artifactUrl": "https://api.github.com/repos/figtures/3dyanimda/actions/artifacts/12469833402",
+    "artifactName": "lighthouse-3dyanimda-desktop-fa7b9fe2e97d05e75b9e2cdcf6b108b401c3f152",
+    "artifactZipSha256": "8e182acf3a31f97dc24d2cd17ed028536928284434d602f2135371e885254dd2",
+    "artifactDigestVerified": true,
+    "rawHashesVerifiedAgainstArtifactSummary": true,
+    "lighthouseVersion": "13.5.0",
+    "audit": "color-contrast",
+    "desktopAccessibilityScore": 96,
+    "auditScore": 0,
+    "selector": "div.print-hero-body > div.print-hero-visual > div.print-stage-heading > span",
+    "nodeText": "01 — BİR FİKRİN OLUŞUMU",
+    "foreground": "#80857f",
+    "background": "#f7f6f2",
+    "fontSizePx": 9,
+    "fontWeight": "normal",
+    "reportedContrastRatio": 3.48,
+    "requiredContrastRatio": 4.5,
+    "failingItemsPerRepeat": 1,
+    "rawFiles": [
+      {
+        "path": "raw/3dyanimda-home-desktop-1.json.gz",
+        "sha256": "4eb0b6523483fc6f237910f90b377b9692b81514779e98e6dcca4e0884cfb92b",
+        "fetchTime": "2026-10-23T00:37:31.701Z"
+      },
+      {
+        "path": "raw/3dyanimda-home-desktop-2.json.gz",
+        "sha256": "82974e039cf097653e0cf732d0e7da62d46f004cdbcf8a20370b9130103fb6bf",
+        "fetchTime": "2026-10-23T00:37:49.573Z"
+      },
+      {
+        "path": "raw/3dyanimda-home-desktop-3.json.gz",
+        "sha256": "5938e957b221c5d2e11fcd36e193b1ff98645b058838413c09abc738c93780b4",
+        "fetchTime": "2026-10-23T00:38:07.310Z"
+      }
+    ],
+    "assessment": "All three raw desktop repeats identify the same single heading. Its existing max-width:860px rule hides it on smaller screens, consistent with the baseline mobile contrast audit no longer being flagged. No new desktop pass is inferred from the successful CI job conclusion."
+  },
+  "sourceDelta": {
+    "file": "src/themes/print-hero.css",
+    "selector": ".print-stage-heading",
+    "property": "color",
+    "before": "#80857f",
+    "after": "var(--print-muted)",
+    "resolvedAfter": "#626967",
+    "backgroundUnchanged": "#f7f6f2",
+    "beforeFileSha256": "d0176106a66bc0b6a9505d3fd32915f6e50e120d12322a80a1820782383e4fc8",
+    "fileSha256": "3af9c6107fa0464c599c9088eb66ac70927d0301e1815c2a8c117c7c906a60b0",
+    "fileBytes": 8316,
+    "sourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6",
+    "sourceFileCount": 694,
+    "exactSingleColorChangeVerified": true,
+    "baselineSourceHashReconstructed": true,
+    "preserved": "The prior three color fixes, all other CSS declarations, media-query visibility, layout, animation, content and source files are byte-identical to the certified baseline. Reversing only this one color substitution in memory reproduces both the prior CSS hash and full sourceHash."
+  },
+  "staticContrast": {
+    "method": "sRGB relative luminance; (lighter + 0.05) / (darker + 0.05)",
+    "beforeRatio": 3.480590556728519,
+    "afterRatio": 5.198137480109793,
+    "normalTextTarget": 4.5,
+    "result": "pass for this source color pair",
+    "freshRenderedResult": "pending"
+  },
+  "localReview": {
+    "exactOneColorAssertion": "pass",
+    "fullSourceSnapshotReconstruction": "pass",
+    "other89EvidenceHashes": "unchanged",
+    "searchEvidenceIndex": "valid; identity refresh not required",
+    "testStrategy": "No unchanged TypeScript/application test suite is relabeled as freshly rerun for this CSS-only delta. Required PR browser/export/contract jobs and post-merge Lighthouse verification remain separate gates."
+  },
+  "publicationState": {
+    "ciForThisDelta": "pending",
+    "deploymentForThisDelta": "pending",
+    "liveHtmlAndRenderedContrastForThisDelta": "pending"
+  },
+  "limitations": [
+    "This is source approval for one evidenced text-color defect, not a claim of a fresh desktop accessibility score or complete site accessibility compliance.",
+    "Historical review coverage and dates are preserved. The current CSS identity supersedes the previous CSS identity in the certificate; the prior file hash remains in its unchanged historical review.",
+    "The diagnostic measurements use a candidate artifact and local canonical-host HTTPS transport, not production visitor or CrUX field data.",
+    "No private Windsor metrics, OAuth links, credentials, signed transfer URLs, or unrelated profile data are included."
+  ]
+}
