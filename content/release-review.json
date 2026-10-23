@@ -4,13 +4,13 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-22T23:39:23.034Z",
+  "reviewedAt": "2026-10-23T00:23:37.294Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "e81a12807017df45fee08ae1c336ee545e2cc2f5f89b96dcb1a8ee3a5f70c41a",
+  "sourceHash": "4db57168aca9a5377d7b26ce4f666fc0e968df1a60b78a7724f8b6ddf7505516",
   "sourceFileCount": 694,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -58,7 +58,9 @@
     "latestSeoGapReview": "docs/audits/seo-gap-release-review-2026-10-23.json",
     "latestSeoGapExistingLandingUpdates": 17,
     "latestSeoGapNewPages": 5,
-    "historicalEvidenceNote": "Earlier all-route/theme evidence keeps its original coverage and dates. The latest bounded review describes current tests and remaining CI/live verification separately."
+    "historicalEvidenceNote": "Earlier all-route/theme evidence keeps its original coverage and dates. The latest bounded review describes current tests and remaining CI/live verification separately.",
+    "latestGbpContrastReview": "docs/audits/seo-gbp-contrast-review-2026-10-23.json",
+    "latestGbpContactVerification": "docs/audits/seo-gbp-contact-verification-2026-10-23.json"
   },
   "evidence": [
     {
@@ -404,6 +406,22 @@
     {
       "file": "scripts/quality/review-candidate.mjs",
       "sha256": "804e9bb6f299d6cd6cd512f87d24e30f660ef443bf46e97ea47b14267d4a9f18"
+    },
+    {
+      "file": "docs/audits/seo-gbp-contrast-review-2026-10-23.json",
+      "sha256": "72ee68dd92e32ca29c3e01c605222c1dd9e1edc7fd9a5b39775ad7d9881da9d3"
+    },
+    {
+      "file": "docs/audits/seo-gbp-contact-preflight-2026-10-23.json",
+      "sha256": "7ce587dea3ad903a37140acebd17ff3cb9fd0718a24b879a04703e1963d4e577"
+    },
+    {
+      "file": "docs/audits/seo-gbp-contact-verification-2026-10-23.json",
+      "sha256": "a7e30813343573f64a5dad5e0bff5875e52cf9d08949b5bbf872720eb4fcea6f"
+    },
+    {
+      "file": "src/themes/print-hero.css",
+      "sha256": "d0176106a66bc0b6a9505d3fd32915f6e50e120d12322a80a1820782383e4fc8"
     }
   ],
   "limitations": [
@@ -425,7 +443,8 @@
     "19 October bounded public-section and career review: see docs/audits/public-sections-release-review-2026-10-19.json. The same application source passed 32 brand/theme/viewport cases. Publication now validates dynamic route inventory; packaging and deployment remain independent subsequent checks.",
     "21 October bounded brand identity review carries forward unchanged historical rendering/asset evidence. Current source/content, 220 application tests, 72 technical contracts, build and real publication-trigger tests passed; no fresh full-route visual crawl, CMS write or Cloudflare deployment is claimed. See docs/audits/brand-identity-review-2026-10-21.json.",
     "22 October live CMS correction applied and verified: nine SQL checks passed, five published payloads match their reviews, and the other-tenant fingerprint is unchanged. Frontend deployment remains pending. See docs/audits/brand-cms-verification-2026-10-22.json.",
-    "22 October bounded printer-hero/footer review: current source, local live-CMS browser inspection, 223 application tests, 72 technical contracts and 800-record originality audit. The previous evidence is retained with its dates; current PR browser checks are an independent merge gate. See docs/audits/printer-hero-review-2026-10-22.json."
+    "22 October bounded printer-hero/footer review: current source, local live-CMS browser inspection, 223 application tests, 72 technical contracts and 800-record originality audit. The previous evidence is retained with its dates; current PR browser checks are an independent merge gate. See docs/audits/printer-hero-review-2026-10-22.json.",
+    "23 October bounded public GBP/contact and three-color contrast delta: independent exact source-delta review, static contrast calculation, 86 contract tests, 25 targeted application tests, TypeScript and Vite build passed. Public contact compare-and-merge/readback evidence is recorded separately. Fresh CI, rendered accessibility, production deployment and live HTML verification for this delta are still pending; prior source evidence and run dates are unchanged. See docs/audits/seo-gbp-contrast-review-2026-10-23.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",
