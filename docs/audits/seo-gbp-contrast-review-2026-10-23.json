@@ -1,0 +1,119 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "approvalScope": "Bounded source and public business-identity evidence review; not deployment or browser approval",
+  "reviewer": "Codex (AI, independent delta reviewer under owner-delegated implementation)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-23T00:23:37.294Z",
+  "baseline": {
+    "deployedCommit": "c40c8769cde332e269036cad0846e73dcc653e1b",
+    "sourceHash": "e81a12807017df45fee08ae1c336ee545e2cc2f5f89b96dcb1a8ee3a5f70c41a",
+    "historicalEvidenceRecords": 86,
+    "historicalEvidenceHashesUnchanged": true,
+    "reconstruction": "Replacing only the current print-hero.css bytes with the pre-delta file in memory exactly reproduces the certified baseline sourceHash. No working-tree reset or baseline rewrite was performed."
+  },
+  "source": {
+    "sourceHash": "4db57168aca9a5377d7b26ce4f666fc0e968df1a60b78a7724f8b6ddf7505516",
+    "sourceFileCount": 694,
+    "changedFiles": [
+      {
+        "path": "src/themes/print-hero.css",
+        "beforeSha256": "ba5820169e6bcc7ce515eb8222e1472f32302360e3ffa41f7c9e07b8c3d1505a",
+        "sha256": "d0176106a66bc0b6a9505d3fd32915f6e50e120d12322a80a1820782383e4fc8",
+        "bytes": 8305
+      }
+    ],
+    "exactDelta": "Two existing text-color declarations are replaced with var(--print-muted); one direct-child baseline text-color declaration is added with the same token. A byte-exact three-replacement assertion passed. All other CSS, selectors, media queries, animations, layout and source files are unchanged from the certified baseline."
+  },
+  "contrast": {
+    "method": "Static sRGB relative-luminance calculation using (lighter + 0.05) / (darker + 0.05); the unchanged hero background and inherited muted color token were inspected in source.",
+    "background": "#f7f6f2",
+    "newForeground": "#626967",
+    "newToken": "var(--print-muted)",
+    "normalTextTarget": 4.5,
+    "newRatio": 5.198137480109793,
+    "selectors": [
+      {
+        "selector": ".brand-site .print-hero-location",
+        "oldForeground": "#757b75",
+        "oldRatio": 4.0069237201847985
+      },
+      {
+        "selector": ".brand-site .print-stage-note",
+        "oldForeground": "#777e75",
+        "oldRatio": 3.864075515560901
+      },
+      {
+        "selector": ".print-hero-baseline > span",
+        "oldForeground": "#777d75 (inherited)",
+        "oldRatio": 3.9036083598795046
+      }
+    ],
+    "result": "pass for these three source color pairs",
+    "renderedAccessibilityRechecked": false
+  },
+  "publicBusinessIdentity": {
+    "tenantId": "10000000-0000-4000-8000-000000000001",
+    "brand": "3dyanimda",
+    "preflight": "docs/audits/seo-gbp-contact-preflight-2026-10-23.json",
+    "verification": "docs/audits/seo-gbp-contact-verification-2026-10-23.json",
+    "evidenceReview": "The original preflight remains labeled prepared-not-applied. The separate later verification records one compare-and-merge update and an anonymous public API readback. The complete 23-field after payload exactly equals preflight.before merged with the nine explicitly listed delta fields.",
+    "publicFields": [
+      "Verified Google Maps business profile URL",
+      "Verified Instagram profile URL",
+      "Full street/district/city/country address with postal code 34704"
+    ],
+    "preserved": [
+      "All unrelated contact fields",
+      "Appointment-only visit and delivery notes",
+      "Absent opening hours; no 24/7 hours inferred or added",
+      "verified_business_identity unchanged"
+    ],
+    "databaseWritePerformedByThisReviewer": false,
+    "websiteDeploymentVerifiedForThisDelta": false
+  },
+  "localChecks": [
+    {
+      "check": "Independent source-snapshot reconstruction, exact three-color replacement, contrast calculation and public contact payload consistency assertions",
+      "result": "pass"
+    },
+    {
+      "command": "npm run test:search:local",
+      "result": "pass",
+      "tests": 86
+    },
+    {
+      "command": "npx vitest run src/lib/business-profile.test.ts src/components/site/Seo.test.tsx src/pages/Contact.business-profile.test.tsx",
+      "result": "pass",
+      "files": 3,
+      "tests": 25
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "pass"
+    },
+    {
+      "command": "npm run build",
+      "result": "pass",
+      "note": "Vite production compilation completed. Existing occt-import-js browser externalization and chunk-size warnings remain; no browser, network export or deployment is implied."
+    },
+    {
+      "check": "Existing search-program evidence index identity",
+      "result": "pass",
+      "refreshRequired": false,
+      "note": "No stale identity records were found; no historical index dates, results or coverage were changed."
+    }
+  ],
+  "ci": {
+    "status": "not-run-for-this-delta",
+    "browserExportAndLighthouseRequiredBeforeCompletion": true,
+    "previousMainChecksAreHistoricalBaselineOnly": true
+  },
+  "limitations": [
+    "This source review is not a claim of a fresh rendered contrast audit, a full accessibility audit, or an improved Lighthouse score.",
+    "The new CSS and public contact metadata still require the normal PR checks, production export/deployment and live HTML verification.",
+    "Earlier all-brand, all-theme and all-route evidence retains its original dates and scope; no historical run is relabeled as covering this delta.",
+    "No private Windsor performance metrics, OAuth authorization links, account secrets or unrelated profile data are included or approved for repository publication."
+  ]
+}
