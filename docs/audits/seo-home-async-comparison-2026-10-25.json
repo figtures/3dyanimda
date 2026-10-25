@@ -1,0 +1,1464 @@
+{
+  "schemaVersion": 1,
+  "title": "Homepage async shader precompile experiment \u2014 rejected for production",
+  "kind": "instrumented-candidate-lab-comparison",
+  "production": false,
+  "fieldData": false,
+  "decision": "do-not-ship-this-experiment",
+  "reason": "No consistent performance gain across devices; first-render and startup spans grew substantially. Mobile TBT improvement cannot be separated from runner speed variance.",
+  "before": {
+    "commit": "0eaa27fff849169e5239079e95e79c13f917c7f5",
+    "workflowRun": 40148617364
+  },
+  "after": {
+    "commit": "276b9d2358aa5e70113ffcaa7660ca5c6104ed5c",
+    "workflowRun": 40149198199
+  },
+  "method": {
+    "repeatsPerDevice": 3,
+    "lighthouseVersion": "13.5.0",
+    "browser": "Headless Chrome 155 on Linux, SwiftShader",
+    "traceCategories": "same default Lighthouse trace categories plus disabled-by-default-v8.cpu_profiler",
+    "timingDomains": {
+      "tbt": "Lighthouse simulated metric; mobile CPU multiplier 4x, desktop 1x",
+      "phaseMeasures": "unscaled performance.measure wall time; shader-compile includes asynchronous elapsed waiting",
+      "taskWall": "raw trace RunTask wall duration",
+      "threadCpu": "raw trace RunTask tdur; not equivalent to wall duration",
+      "samples": "V8 sample interval overlap with raw task; wall attribution estimate, not CPU utilization"
+    },
+    "limitations": [
+      "Separate GitHub runners were used; benchmarkIndex differs materially between before/after and opposite directions for desktop/mobile. This is not a controlled same-machine causal estimate.",
+      "Both variants have identical diagnostic tracing overhead and profile settings, but neither is uninstrumented final acceptance.",
+      "No actual-device GPU comparison, field INP/CWV measurement or production deployment occurred.",
+      "First-render timing is one renderer.render call; startup timing begins at PrinterScene effect entry, not navigation start."
+    ]
+  },
+  "artifacts": [
+    {
+      "variant": "before",
+      "device": "desktop",
+      "id": 12581371851,
+      "zipSha256": "2e84360dfda3017dc21ba38f3ede770d4954ed006109e7501a643851dbb1fda0",
+      "zipVerified": true,
+      "jobSummaryEqualsArtifact": true,
+      "sourceFilesVerified": 198,
+      "allRawTraceLogPhaseLhrDigestsVerified": true
+    },
+    {
+      "variant": "before",
+      "device": "mobile",
+      "id": 12581465900,
+      "zipSha256": "231cde4491565f2fedb9bf217ccce961507510dea34aa4da2e9a78e1643c1306",
+      "zipVerified": true,
+      "jobSummaryEqualsArtifact": true,
+      "sourceFilesVerified": 198,
+      "allRawTraceLogPhaseLhrDigestsVerified": true
+    },
+    {
+      "variant": "after",
+      "device": "desktop",
+      "id": 12581916377,
+      "zipSha256": "638d47a45b6efa606261a6e1d664a87cb0cd3d4566cc189f605c91575c059b15",
+      "zipVerified": true,
+      "jobSummaryEqualsArtifact": true,
+      "sourceFilesVerified": 198,
+      "allRawTraceLogPhaseLhrDigestsVerified": true
+    },
+    {
+      "variant": "after",
+      "device": "mobile",
+      "id": 12581856390,
+      "zipSha256": "644b65345bfaaa50c560fa2838e246125926544de99703eb4637ce72c03d77e5",
+      "zipVerified": true,
+      "jobSummaryEqualsArtifact": true,
+      "sourceFilesVerified": 198,
+      "allRawTraceLogPhaseLhrDigestsVerified": true
+    }
+  ],
+  "runs": [
+    {
+      "variant": "before",
+      "device": "desktop",
+      "repeat": 1,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 422.4142,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2121
+      },
+      "benchmarkIndex": 3413,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 792.8999999999942,
+          "duration": 566
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 794.2000000000116,
+          "duration": 203.39999999999418
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 997.7000000000116,
+          "duration": 6.599999999976717
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 1004.7999999999884,
+          "duration": 45.10000000000582
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 1006.3999999999942,
+          "duration": 43.39999999999418
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 1049.8999999999942,
+          "duration": 28.89999999999418
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 1087.5,
+          "duration": 271.29999999998836
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 1948.809,
+        "threadCpuMs": 52.955,
+        "startOffsetFromStartupMs": 592.388,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 106.717,
+            "threadCpuMs": 58.547
+          },
+          {
+            "name": "GPUTask",
+            "wallMs": 106.703,
+            "threadCpuMs": 58.536
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 1860.996,
+            "threadCpuMs": 2.12
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "(program)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 1948.809,
+            "sampleCount": 10014
+          }
+        ],
+        "hotOnFirstUseSamplePositions": []
+      },
+      "rawLhrSha256": "78b3b9d6a2a124277ccfefd6646f512322fc3d7aeca3e79f031d6b955559a235",
+      "traceSha256": "1d7cdecd9f3817227b533660658088827aca41dd8f15342549e67a16ce3cb391"
+    },
+    {
+      "variant": "before",
+      "device": "desktop",
+      "repeat": 2,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 408.1221,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2190
+      },
+      "benchmarkIndex": 2864,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 628.2000000000116,
+          "duration": 410.29999999998836
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 628.3999999999942,
+          "duration": 15.10000000000582
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 643.6000000000058,
+          "duration": 6.5
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 650.5,
+          "duration": 46.89999999999418
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 651.8999999999942,
+          "duration": 45.5
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 697.3999999999942,
+          "duration": 25.70000000001164
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 733.8999999999942,
+          "duration": 304.5
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 2080.803,
+        "threadCpuMs": 65.265,
+        "startOffsetFromStartupMs": 436.053,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 124.99,
+            "threadCpuMs": 59.08
+          },
+          {
+            "name": "GPUTask",
+            "wallMs": 124.975,
+            "threadCpuMs": 59.068
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 1961.164,
+            "threadCpuMs": 2.063
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "(program)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 2080.803,
+            "sampleCount": 11358
+          }
+        ],
+        "hotOnFirstUseSamplePositions": []
+      },
+      "rawLhrSha256": "e4043d545cead5f2cc5a492f15b99a466cf3de085c66c6ce6c2b658162a5fe56",
+      "traceSha256": "b487cfc7071b1e3d30b17113f5aba1dc7bb65dc5b6daa45045ddf09443c7372e"
+    },
+    {
+      "variant": "before",
+      "device": "desktop",
+      "repeat": 3,
+      "scores": {
+        "performance": 68,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 391.7321,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2609
+      },
+      "benchmarkIndex": 3128,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 592.8000000000175,
+          "duration": 415.6000000000058
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 593,
+          "duration": 10.10000000000582
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 603.2000000000116,
+          "duration": 5.7999999999883585
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 609.4000000000233,
+          "duration": 48.29999999998836
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 611,
+          "duration": 46.70000000001164
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 657.8000000000175,
+          "duration": 28
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 697.2000000000116,
+          "duration": 311.1000000000058
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 2530.015,
+        "threadCpuMs": 101.912,
+        "startOffsetFromStartupMs": 450.825,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 126.429,
+            "threadCpuMs": 62.195
+          },
+          {
+            "name": "GPUTask",
+            "wallMs": 126.417,
+            "threadCpuMs": 62.184
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 2110.468,
+            "threadCpuMs": 2.087
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 314.666,
+            "threadCpuMs": 1.05
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "(program)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 2529.949,
+            "sampleCount": 14335
+          },
+          {
+            "function": "(idle)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 0.066,
+            "sampleCount": 1
+          }
+        ],
+        "hotOnFirstUseSamplePositions": []
+      },
+      "rawLhrSha256": "0d078d0aa3b7ac61abec690c9da9cb2c9a6b38b1828b43607b13ad3a7bb93733",
+      "traceSha256": "76ccdbd7c0e43e1c3488a7f565324d86b3863afeba68600bf93ecf59cb9208ae"
+    },
+    {
+      "variant": "before",
+      "device": "mobile",
+      "repeat": 1,
+      "scores": {
+        "performance": 71,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1863.4274,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2022.5000000000005
+      },
+      "benchmarkIndex": 1876,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 1403.2999999999884,
+          "duration": 639.9000000000233
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 1403.6000000000058,
+          "duration": 6.600000000005821
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 1410.2999999999884,
+          "duration": 8.900000000023283
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 1419.8999999999942,
+          "duration": 74
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 1423.1000000000058,
+          "duration": 70.60000000000582
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 1493.8999999999942,
+          "duration": 52.30000000001746
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 1568.2000000000116,
+          "duration": 474.8999999999942
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 646.783,
+        "threadCpuMs": 155.303,
+        "startOffsetFromStartupMs": -3.939,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 175.866,
+            "threadCpuMs": 87.421
+          },
+          {
+            "name": "GPUTask",
+            "wallMs": 172.803,
+            "threadCpuMs": 87.404
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 469.097,
+            "sampleCount": 1962
+          },
+          {
+            "function": "Ve",
+            "script": "CSQmge9E.js",
+            "functionStartLineZeroBased": 0,
+            "functionStartColumnZeroBased": 2314,
+            "overlapWallEstimateMs": 22.484,
+            "sampleCount": 104
+          },
+          {
+            "function": "Ao",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3626,
+            "functionStartColumnZeroBased": 17219,
+            "overlapWallEstimateMs": 17.613,
+            "sampleCount": 40
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 1063
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 822
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 380,
+            "samples": 35
+          }
+        ]
+      },
+      "rawLhrSha256": "297d2d4e38f3f3bbf5e4f25259727b3bd1da13e844ccc7187fd5cfeec92c1051",
+      "traceSha256": "236ab76a9182473c1d0e51e7c7f2ac19fa0128ff20910ff0e6745f77f4510ec5"
+    },
+    {
+      "variant": "before",
+      "device": "mobile",
+      "repeat": 2,
+      "scores": {
+        "performance": 67,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1609.4238,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 11294
+      },
+      "benchmarkIndex": 1749.5,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 581.1999999999825,
+          "duration": 574.7000000000116
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 581.3999999999942,
+          "duration": 6.399999999994179
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 587.8999999999942,
+          "duration": 8.5
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 596.8999999999942,
+          "duration": 68.60000000000582
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 599.1999999999825,
+          "duration": 66.20000000001164
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 665.5999999999767,
+          "duration": 41.90000000002328
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 727.0999999999767,
+          "duration": 428.6000000000058
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 3283.601,
+        "threadCpuMs": 210.81,
+        "startOffsetFromStartupMs": 618.89,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 168.346,
+            "threadCpuMs": 90.029
+          },
+          {
+            "name": "GPUTask",
+            "wallMs": 168.329,
+            "threadCpuMs": 90.013
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 2852.858,
+            "threadCpuMs": 2.222
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 284.94,
+            "threadCpuMs": 1.051
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "(program)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 3283.601,
+            "sampleCount": 17531
+          }
+        ],
+        "hotOnFirstUseSamplePositions": []
+      },
+      "rawLhrSha256": "39ef83f89cb5f1bf3a77d0f1643049a9a15809cb14b8ee4d4016d8ef716e543a",
+      "traceSha256": "dae520572ff87dc7ced47cc324641d8ecb44837911afdcfee02d99b441e05272"
+    },
+    {
+      "variant": "before",
+      "device": "mobile",
+      "repeat": 3,
+      "scores": {
+        "performance": 67,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1777.717,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 11444
+      },
+      "benchmarkIndex": 1819.5,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:context",
+          "startTime": 598.1000000000058,
+          "duration": 6
+        },
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 598.1000000000058,
+          "duration": 593.1000000000058
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 604.2000000000116,
+          "duration": 8.199999999982538
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 612.8999999999942,
+          "duration": 66.80000000001746
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 615.1000000000058,
+          "duration": 64.5
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 679.7000000000116,
+          "duration": 34.60000000000582
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 733.2000000000116,
+          "duration": 458
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 3396.466,
+        "threadCpuMs": 206.104,
+        "startOffsetFromStartupMs": 638.623,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 188.227,
+            "threadCpuMs": 91.375
+          },
+          {
+            "name": "GPUTask",
+            "wallMs": 188.194,
+            "threadCpuMs": 91.358
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 2966.382,
+            "threadCpuMs": 2.094
+          },
+          {
+            "name": "RunTask",
+            "wallMs": 269.618,
+            "threadCpuMs": 0.794
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "(program)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 3396.466,
+            "sampleCount": 17475
+          }
+        ],
+        "hotOnFirstUseSamplePositions": []
+      },
+      "rawLhrSha256": "444775de870c4c8fa2704841ba16f5aca3ad7bd1697d0679b58d4947e6340ba8",
+      "traceSha256": "0f467dd2c81520e9c334873b74ef199c589dde128bd17527dca43443da8bac81"
+    },
+    {
+      "variant": "after",
+      "device": "desktop",
+      "repeat": 1,
+      "scores": {
+        "performance": 68,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 426.0165,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 3562
+      },
+      "benchmarkIndex": 1780.5,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 1341.2999999999884,
+          "duration": 3716.5
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 1341.3999999999942,
+          "duration": 6.600000000005821
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 1348.1000000000058,
+          "duration": 9
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 1357.7000000000116,
+          "duration": 67.39999999999418
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 1360.1000000000058,
+          "duration": 64.89999999999418
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 1425.1000000000058,
+          "duration": 44.10000000000582
+        },
+        {
+          "name": "3dy:printer:shader-compile",
+          "startTime": 1488.8999999999942,
+          "duration": 24.20000000001164
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 1518.3999999999942,
+          "duration": 3539.3000000000175
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 3540.764,
+        "threadCpuMs": 203.967,
+        "startOffsetFromStartupMs": 176.467,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 3302.674,
+            "threadCpuMs": 1.651
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 3523.649,
+            "sampleCount": 16501
+          },
+          {
+            "function": "fromBufferAttribute",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 40045,
+            "overlapWallEstimateMs": 2.791,
+            "sampleCount": 4
+          },
+          {
+            "function": "r",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 43,
+            "functionStartColumnZeroBased": 4592,
+            "overlapWallEstimateMs": 1.615,
+            "sampleCount": 7
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 15980
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 489
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 440,
+            "samples": 7
+          }
+        ]
+      },
+      "rawLhrSha256": "b571a31e4b9cf43b5d6fc24a93d511b0058d4eaba08b6c0a4c8a2a2cb0c45080",
+      "traceSha256": "d621869e2b4696884049fa2f96cb365ec5b4337a92b2432aa486548be39e26af"
+    },
+    {
+      "variant": "after",
+      "device": "desktop",
+      "repeat": 2,
+      "scores": {
+        "performance": 70,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 415.5298,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2714.5
+      },
+      "benchmarkIndex": 1857,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 815.8000000000175,
+          "duration": 2913.899999999994
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 815.8999999999942,
+          "duration": 6
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 822,
+          "duration": 8.10000000000582
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 830.6000000000058,
+          "duration": 65.70000000001164
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 832.8000000000175,
+          "duration": 63.39999999999418
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 896.3000000000175,
+          "duration": 38.69999999998254
+        },
+        {
+          "name": "3dy:printer:shader-compile",
+          "startTime": 957,
+          "duration": 22.70000000001164
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 980.6000000000058,
+          "duration": 2749
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 2750.489,
+        "threadCpuMs": 188.604,
+        "startOffsetFromStartupMs": 164.117,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 2525.962,
+            "threadCpuMs": 1.932
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 2736.7,
+            "sampleCount": 13929
+          },
+          {
+            "function": "distanceToSquared",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 38752,
+            "overlapWallEstimateMs": 1.421,
+            "sampleCount": 1
+          },
+          {
+            "function": "r",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 43,
+            "functionStartColumnZeroBased": 4592,
+            "overlapWallEstimateMs": 1.203,
+            "sampleCount": 7
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 13439
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 464
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 464,
+            "samples": 5
+          }
+        ]
+      },
+      "rawLhrSha256": "449a8414d879664a6b355798e6464645d568f8903be7f7bed3de48b669ddd1fa",
+      "traceSha256": "eb49de991f5e25229c1e3d69e57b7582aec88803693e2f86994ae328854fe9d9"
+    },
+    {
+      "variant": "after",
+      "device": "desktop",
+      "repeat": 3,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 420.9113,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2680.5
+      },
+      "benchmarkIndex": 1773.5,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 790.1000000000058,
+          "duration": 2890.100000000006
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 790.2000000000116,
+          "duration": 5.7999999999883585
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 796.1000000000058,
+          "duration": 8
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 804.5,
+          "duration": 66.20000000001164
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 806.7999999999884,
+          "duration": 63.80000000001746
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 870.7000000000116,
+          "duration": 45.39999999999418
+        },
+        {
+          "name": "3dy:printer:shader-compile",
+          "startTime": 940.7000000000116,
+          "duration": 24.89999999999418
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 968.7999999999884,
+          "duration": 2711.3000000000175
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 2712.788,
+        "threadCpuMs": 189.732,
+        "startOffsetFromStartupMs": 178.062,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 2493.638,
+            "threadCpuMs": 1.606
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 2698.548,
+            "sampleCount": 14274
+          },
+          {
+            "function": "getZ",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 99143,
+            "overlapWallEstimateMs": 1.305,
+            "sampleCount": 3
+          },
+          {
+            "function": "computeBoundingSphere",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 103809,
+            "overlapWallEstimateMs": 1.039,
+            "sampleCount": 7
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 13755
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 491
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 464,
+            "samples": 5
+          }
+        ]
+      },
+      "rawLhrSha256": "bb648d36584713a5716a4a7e50cacb40737fbf79bc4982d916f18c0f5365745d",
+      "traceSha256": "5c30a98e56e1f66ebc3b28930c88525c6a5bdf032aab62718ade8a006f7648f4"
+    },
+    {
+      "variant": "after",
+      "device": "mobile",
+      "repeat": 1,
+      "scores": {
+        "performance": 68,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1598.6174,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 7159.999999999999
+      },
+      "benchmarkIndex": 2709,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 689.3999999999942,
+          "duration": 1828.6000000000058
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 689.6999999999971,
+          "duration": 50.80000000000291
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 740.6999999999971,
+          "duration": 8
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 749.0999999999913,
+          "duration": 51.70000000001164
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 750.8000000000029,
+          "duration": 50
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 800.8000000000029,
+          "duration": 27.59999999999127
+        },
+        {
+          "name": "3dy:printer:shader-compile",
+          "startTime": 841.8000000000029,
+          "duration": 21.39999999999418
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 872.3999999999942,
+          "duration": 1645.5
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 1647.043,
+        "threadCpuMs": 86.834,
+        "startOffsetFromStartupMs": 182.211,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 1483.911,
+            "threadCpuMs": 1.622
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 1634.869,
+            "sampleCount": 8976
+          },
+          {
+            "function": "computeBoundingSphere",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 103809,
+            "overlapWallEstimateMs": 1.612,
+            "sampleCount": 4
+          },
+          {
+            "function": "fromBufferAttribute",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 40045,
+            "overlapWallEstimateMs": 0.918,
+            "sampleCount": 3
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 8586
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 363
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 440,
+            "samples": 6
+          }
+        ]
+      },
+      "rawLhrSha256": "55b4c6f31841a77545495d191e7891e329afc6bc0783988f1edea31b663bbc47",
+      "traceSha256": "1e0db527edf3430fd6d1b6e67eb30e5201fad2566d3bd8dc8a307d74112e2f8d"
+    },
+    {
+      "variant": "after",
+      "device": "mobile",
+      "repeat": 2,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1583.5792999999999,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 7817
+      },
+      "benchmarkIndex": 2412.5,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 508.5,
+          "duration": 2006.199999999997
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 508.6999999999971,
+          "duration": 4.69999999999709
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 513.6000000000058,
+          "duration": 6
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 519.8999999999942,
+          "duration": 58.40000000000873
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 521.5,
+          "duration": 56.60000000000582
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 578.3000000000029,
+          "duration": 31.30000000000291
+        },
+        {
+          "name": "3dy:printer:shader-compile",
+          "startTime": 626.3999999999942,
+          "duration": 23.30000000000291
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 655.1999999999971,
+          "duration": 1859.4000000000087
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 1861.135,
+        "threadCpuMs": 71.102,
+        "startOffsetFromStartupMs": 146.015,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 1684.835,
+            "threadCpuMs": 1.925
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 1848.557,
+            "sampleCount": 10103
+          },
+          {
+            "function": "computeBoundingSphere",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 103809,
+            "overlapWallEstimateMs": 1.202,
+            "sampleCount": 8
+          },
+          {
+            "function": "(program)",
+            "script": "",
+            "functionStartLineZeroBased": null,
+            "functionStartColumnZeroBased": null,
+            "overlapWallEstimateMs": 0.883,
+            "sampleCount": 8
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 9688
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 386
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 363,
+            "samples": 6
+          }
+        ]
+      },
+      "rawLhrSha256": "a6a4a4d80f1b1fc2e3568455a6aea1ed3fba6e18292d634c867b283b2220c1d7",
+      "traceSha256": "f5832adff3d93c2ce6ee62cec911352a4e412444c81afe7527d0cfde5e9d6eff"
+    },
+    {
+      "variant": "after",
+      "device": "mobile",
+      "repeat": 3,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1578.2595000000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 6249
+      },
+      "benchmarkIndex": 2425,
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 420.6000000000058,
+          "duration": 1622.1000000000058
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 420.80000000001746,
+          "duration": 4.899999999994179
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 425.80000000001746,
+          "duration": 6.199999999982538
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 432.5,
+          "duration": 50.5
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 433.9000000000233,
+          "duration": 49
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 483,
+          "duration": 36.10000000000582
+        },
+        {
+          "name": "3dy:printer:shader-compile",
+          "startTime": 534.6000000000058,
+          "duration": 18.5
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 564.2000000000116,
+          "duration": 1478.3999999999942
+        }
+      ],
+      "largestRawMainTask": {
+        "wallMs": 1479.785,
+        "threadCpuMs": 50.397,
+        "startOffsetFromStartupMs": 143.008,
+        "overlappingGpuEvents": [
+          {
+            "name": "RunTask",
+            "wallMs": 1320.849,
+            "threadCpuMs": 1.892
+          }
+        ],
+        "topV8SampleAttribution": [
+          {
+            "function": "z",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 3653,
+            "functionStartColumnZeroBased": 285,
+            "overlapWallEstimateMs": 1467.297,
+            "sampleCount": 7730
+          },
+          {
+            "function": "distanceToSquared",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 4,
+            "functionStartColumnZeroBased": 38752,
+            "overlapWallEstimateMs": 2.386,
+            "sampleCount": 1
+          },
+          {
+            "function": "r",
+            "script": "Cs1UH6Ab.js",
+            "functionStartLineZeroBased": 43,
+            "functionStartColumnZeroBased": 4592,
+            "overlapWallEstimateMs": 0.642,
+            "sampleCount": 4
+          }
+        ],
+        "hotOnFirstUseSamplePositions": [
+          {
+            "traceLine": 3654,
+            "traceColumn": 349,
+            "samples": 7339
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 331,
+            "samples": 361
+          },
+          {
+            "traceLine": 3654,
+            "traceColumn": 464,
+            "samples": 6
+          }
+        ]
+      },
+      "rawLhrSha256": "6c835dca1a5cc5783116d2197632442225f0fb8a575bfc26e9b192cf86605a78",
+      "traceSha256": "f2dabe5d5ef2db5103a5a9193bbf738d45c5ae53819148af49008e5b7d443f26"
+    }
+  ],
+  "medians": {
+    "desktop": {
+      "before": {
+        "performance": 69,
+        "tbtMs": 2190,
+        "firstRenderMs": 304.5,
+        "startupMs": 415.6000000000058,
+        "shaderCompileMs": null,
+        "benchmarkIndex": 3128,
+        "largestRawTaskWallMs": 2080.803
+      },
+      "after": {
+        "performance": 69,
+        "tbtMs": 2714.5,
+        "firstRenderMs": 2749,
+        "startupMs": 2913.899999999994,
+        "shaderCompileMs": 24.20000000001164,
+        "benchmarkIndex": 1780.5,
+        "largestRawTaskWallMs": 2750.489
+      }
+    },
+    "mobile": {
+      "before": {
+        "performance": 67,
+        "tbtMs": 11294,
+        "firstRenderMs": 458,
+        "startupMs": 593.1000000000058,
+        "shaderCompileMs": null,
+        "benchmarkIndex": 1819.5,
+        "largestRawTaskWallMs": 3283.601
+      },
+      "after": {
+        "performance": 69,
+        "tbtMs": 7159.999999999999,
+        "firstRenderMs": 1645.5,
+        "startupMs": 1828.6000000000058,
+        "shaderCompileMs": 21.39999999999418,
+        "benchmarkIndex": 2425,
+        "largestRawTaskWallMs": 1647.043
+      }
+    }
+  },
+  "parameterParity": {
+    "desktop": {
+      "allSixLhrSettingsEqual": true,
+      "settings": {
+        "formFactor": "desktop",
+        "throttlingMethod": "simulate",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "additionalTraceCategories": "disabled-by-default-v8.cpu_profiler"
+      }
+    },
+    "mobile": {
+      "allSixLhrSettingsEqual": true,
+      "settings": {
+        "formFactor": "mobile",
+        "throttlingMethod": "simulate",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "additionalTraceCategories": "disabled-by-default-v8.cpu_profiler"
+      }
+    }
+  },
+  "sourceAttribution": {
+    "script": "Cs1UH6Ab.js",
+    "source": "node_modules/three/build/three.module.js",
+    "function": "WebGLProgram.onFirstUse",
+    "hotSourceLine": 20276,
+    "hotStatement": "const programLog = gl.getProgramInfoLog( program ).trim();",
+    "method": "Verified source maps with @jridgewell/trace-mapping. Trace sample lines 3654 and columns 331/349 map to source line 20276; callFrame function-start coordinates separately resolve onFirstUse.",
+    "interpretation": "The observed synchronous first-use stall is sampled at the program-info-log readback statement, concurrent with a low-CPU GPU-process wall wait. This identifies a JavaScript call site, not the exact native driver operation."
+  },
+  "nextHypothesis": {
+    "status": "not-yet-tested",
+    "candidate": "From instrumented baseline only, set renderer.debug.checkShaderErrors to import.meta.env.DEV, retaining development shader diagnostics; no async compile/scheduler change.",
+    "caution": "Necessary uniform queries may still synchronize with GPU work. Do not claim success or alter production before a measured comparison."
+  }
+}

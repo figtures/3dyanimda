@@ -50,8 +50,6 @@ jobs:
       - run: node --test scripts/quality/critical-css.test.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
-      - run: npx vitest run src/themes/printer/PrinterScene.test.tsx
-        if: env.LAB_HOME_DIAGNOSTICS == 'true'
       - run: node scripts/quality/lighthouse-ci.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
