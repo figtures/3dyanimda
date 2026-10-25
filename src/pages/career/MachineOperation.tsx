@@ -27,7 +27,7 @@ const schema = z.object({
   current_location: z.string().trim().max(200).optional().or(z.literal("")),
   expected_volume: z.string().trim().max(200).optional().or(z.literal("")),
   details: z.string().trim().max(4000).optional().or(z.literal("")),
-  kvkk_consent: z.literal(true, { errorMap: () => ({ message: "Açık rıza vermelisiniz" }) }),
+  kvkk_consent: z.literal(true, { error: "Açık rıza vermelisiniz" }),
 });
 
 const MAX_MB = 15;

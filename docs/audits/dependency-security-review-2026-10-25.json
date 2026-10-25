@@ -1,0 +1,116 @@
+{
+  "kind": "targeted-dependency-security-validation",
+  "testedAt": "2026-10-25T01:19:51.062403+00:00",
+  "productionChecked": false,
+  "deployed": false,
+  "browserRun": false,
+  "baselineCiJob": 121038539092,
+  "runtime": {
+    "node": "24.22.1",
+    "installation": "separate clean npm ci from https://registry.npmjs.org",
+    "sharedNodeModulesModified": false
+  },
+  "versions": {
+    "wrangler": "4.151.0",
+    "miniflare": "5.20261012.0-beta",
+    "miniflareUndici": "7.30.1",
+    "rootUndici": "8.12.2",
+    "fastUri": "3.1.9",
+    "zod": "4.6.7",
+    "zodLockNodes": [
+      "node_modules/zod"
+    ]
+  },
+  "changes": [
+    "Upgrade fast-uri within AJV 8 existing range.",
+    "Override Undici only below miniflare@5.20261012.0-beta.",
+    "Use Zod v4 at every application import; deduplicate chromium-bidi Zod.",
+    "Preserve Turkish career consent validation with the Zod v4 error parameter."
+  ],
+  "validation": [
+    {
+      "command": "npm ci --registry=https://registry.npmjs.org",
+      "result": "pass",
+      "installedPackages": 615
+    },
+    {
+      "command": "npm audit --json --registry=https://registry.npmjs.org",
+      "result": "pass",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "pass"
+    },
+    {
+      "command": "npm test -- --reporter=dot",
+      "result": "pass",
+      "files": 55,
+      "tests": 293,
+      "newRegressionTests": 10
+    },
+    {
+      "command": "npm run test:search:local",
+      "result": "pass",
+      "tests": 86
+    },
+    {
+      "command": "npm run test:db",
+      "result": "pass"
+    },
+    {
+      "command": "npm run check:3dyanimda",
+      "result": "pass",
+      "details": "Vite production build and Wrangler 4.151.0 deploy --dry-run; no upload."
+    },
+    {
+      "check": "Miniflare actual local Worker POST request and JSON response",
+      "result": "pass",
+      "details": "Miniflare public convertV4MiniflareOptions bridge, scoped Undici version assertion, dispatchFetch and dispose; no browser."
+    },
+    {
+      "command": "git diff --check on changed package and application paths",
+      "result": "pass"
+    }
+  ],
+  "regressions": [
+    "Career consent rejection and accepted payloads for both forms; optional experience null, numeric coercion, invalid email and URL.",
+    "Quote plus-address email, trimmed data, numeric coercion and invalid quantity/email rejection.",
+    "Editorial defaults, offset timestamp and early rejection of an oversized bounded collection with a single issue.",
+    "Existing full editorial inventory and answer-unit validation suites pass."
+  ],
+  "limits": [
+    "Full verify:3dyanimda and browser/asset routing checks remain in the existing CI workflow after the source certificate is updated.",
+    "Zod v4 early rejection applies to bounded collections; unconstrained collections were not broadened in this patch.",
+    "No claim of live-site deployment or anonymous server-side exploitability."
+  ],
+  "separateCollectionProposal": [
+    "Add a maximum of five cells to each editorial comparison row, matching the existing maximum of five columns.",
+    "Define explicit reviewed caps for answer-unit claims, sources, claimSourceMap, sourceIds, schemaRefs and relationships after checking content inventory requirements.",
+    "Place collection bounds before element-dependent refinements; test that oversized input yields bounded errors before child validation.",
+    "Pair schema caps with limits at the actual ingestion boundary once that boundary is verified; do not infer a new server-side endpoint."
+  ],
+  "sources": [
+    "https://github.com/fastify/fast-uri/releases/tag/v3.1.9",
+    "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+    "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+    "https://github.com/colinhacks/zod/pull/6652",
+    "https://zod.dev/v4/changelog"
+  ],
+  "sourceSha256": {
+    "package.json": "9d7413e742ff22a709a957c53a729a82d7a29c847b0dda20bb8e18d28c455ab5",
+    "package-lock.json": "22f29381b57d4a4011d4884f436223972d723e886622f4eda516eece64561af5",
+    "src/pages/career/JobApplication.tsx": "27cbc9942a4603103157f7d336a56ef2b37e982dafc30fb232d79a454d6098aa",
+    "src/pages/career/MachineOperation.tsx": "e23226b1e3e7d477abaa7c1d392bc3eafa734d63853e9394f43bf4138a54dbe9",
+    "src/pages/career/CareerApplications.validation.test.tsx": "d7410503dd1753dbc457208e46f385c95bc386b4ed389ecf522b71ce05836fd7",
+    "src/components/quote/quote-schema.test.ts": "4787b6a4a020d7f8bddf41b836db78e05ee3f68abd7b61dafb0edeb808b756c8",
+    "src/content/editorial.validation.test.ts": "db65ec764ea929ca7d05084a12c3b6fa351ef851890908a06f4e5b26710eb0d8"
+  }
+}
