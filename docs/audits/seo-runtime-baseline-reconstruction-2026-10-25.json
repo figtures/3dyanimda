@@ -1,0 +1,88 @@
+{
+  "kind": "release-baseline-reconstruction",
+  "result": "pass",
+  "reviewedAt": "2026-10-25T01:11:31.958956Z",
+  "reviewer": "Codex (AI, delegated delta reviewer)",
+  "humanReviewPerformed": false,
+  "baseline": {
+    "commit": "e526216401c2cf51c85ae334398d318aa754c78d",
+    "tree": "13a0b8a0d6096d75ad62b270c7d208372f3e064c",
+    "remoteTreeTruncated": false,
+    "sourceFileCount": 694,
+    "expectedSourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6",
+    "reconstructedSourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6"
+  },
+  "method": "Read the immutable GitHub recursive tree. Compare every local src/public/content source file with the Git blob SHA. Exclude content/release-review.json by the existing sourceSnapshot contract. Reconstruct the baseline in memory by excluding only the three new navigation tests and substituting only the three exact baseline components; no worktree source is reset or overwritten.",
+  "observedDelta": {
+    "modifiedSourcePaths": [
+      "src/pages/ContentPage.tsx",
+      "src/pages/career/CareerHub.tsx",
+      "src/themes/PrintHero.tsx"
+    ],
+    "newSourcePaths": [
+      "src/pages/ContentPage.navigation.test.tsx",
+      "src/pages/career/CareerHub.navigation.test.tsx",
+      "src/themes/PrintHero.navigation.test.tsx"
+    ],
+    "missingSourcePaths": [],
+    "otherRemoteSourceBlobsMatching": 691,
+    "currentSourceFileCount": 697,
+    "currentSourceHash": "a7a8145c68f67b35250d050cce6235ca77ea2c01f82333c0db66d912803e2d1c",
+    "baselineSubstitutions": [
+      {
+        "path": "src/pages/ContentPage.tsx",
+        "gitBlobSha": "f25b6af61978025b3eee74e64b69da12061a6158",
+        "sha256": "d6d18a6437d55dca67c502f1de6fc38ce3c213dd6f39079733c68f80fe0fdec7",
+        "bytes": 10727
+      },
+      {
+        "path": "src/pages/career/CareerHub.tsx",
+        "gitBlobSha": "18e357dd5743f884b44b19e90209d5a2bcb967d6",
+        "sha256": "6e7477bfdbb7bb5d74a05e3ba6607e54d5d036164475c53079323a0d3fc3ff18",
+        "bytes": 5554
+      },
+      {
+        "path": "src/themes/PrintHero.tsx",
+        "gitBlobSha": "36fe6d7f4f56a161226e5ae0b73fd63ff46bc8aa",
+        "sha256": "bda37bf92a82dcd0a35245547ae84de32439c5f5a897dbe66b95576df3ad7b01",
+        "bytes": 5527
+      }
+    ],
+    "unchangedSpecialCases": [
+      {
+        "path": "src/themes/printer/PrinterScene.tsx",
+        "gitBlobSha": "2c11188520d6f141662795d6d9b13ad1bbe8c654",
+        "matchesPublishedMain": true,
+        "note": "The rejected asynchronous renderer experiment is excluded; this file matches published main exactly."
+      },
+      {
+        "path": "src/themes/HomeHero.tsx",
+        "gitBlobSha": "0fd85548d30814fbd3df20cc11aa07c9a9f9fd57",
+        "matchesPublishedMain": true,
+        "note": "The other-brand home hero native anchor is unchanged."
+      },
+      {
+        "path": "src/components/brand/BrandLayout.tsx",
+        "gitBlobSha": "b85380acc47ec8ff91b4905c861ad0ae4952a5a5",
+        "matchesPublishedMain": true,
+        "note": "The skip link and ScrollRestoration component are unchanged."
+      }
+    ]
+  },
+  "existingCertificate": {
+    "sourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6",
+    "sourceFileCount": 694,
+    "reviewedAt": "2026-10-23T00:49:45.552Z",
+    "evidenceRecords": 91,
+    "changedEvidencePaths": [],
+    "allOtherEvidenceHashesPreserved": true,
+    "certificateModifiedByThisCheck": false
+  },
+  "publicationState": "The published baseline and final three-component/three-test candidate delta are verified. Certificate refresh and publication are separate actions; this record does not claim deployment.",
+  "limitations": [
+    "Only the three reproduced anchor failures and associated regression tests are in the candidate source delta. No printer performance experiment is included.",
+    "The source snapshot includes test files by the existing release-certificate contract; the count increases from 694 to 697.",
+    "No earlier browser, all-route, performance or content review is relabeled as newly executed.",
+    "No credentials, personal analytics, OAuth URLs or signed download URLs are included."
+  ]
+}

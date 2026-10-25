@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-23T00:49:45.552Z",
+  "reviewedAt": "2026-10-25T01:11:31.958956Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6",
-  "sourceFileCount": 694,
+  "sourceHash": "a7a8145c68f67b35250d050cce6235ca77ea2c01f82333c0db66d912803e2d1c",
+  "sourceFileCount": 697,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -61,7 +61,13 @@
     "historicalEvidenceNote": "Earlier all-route/theme evidence keeps its original coverage and dates. The latest bounded review describes current tests and remaining CI/live verification separately.",
     "latestGbpContrastReview": "docs/audits/seo-gbp-contrast-review-2026-10-23.json",
     "latestGbpContactVerification": "docs/audits/seo-gbp-contact-verification-2026-10-23.json",
-    "latestDesktopContrastReview": "docs/audits/seo-desktop-contrast-review-2026-10-23.json"
+    "latestDesktopContrastReview": "docs/audits/seo-desktop-contrast-review-2026-10-23.json",
+    "latestAnchorNavigationReview": "docs/audits/seo-anchor-navigation-review-2026-10-25.json",
+    "latestAnchorBaselineReconstruction": "docs/audits/seo-runtime-baseline-reconstruction-2026-10-25.json",
+    "latestAnchorNavigationTests": 9,
+    "latestAnchorNavigationExistingEditorialTests": 3,
+    "latestAnchorNavigationReviewNote": "25 October bounded anchor review adds three component corrections and three navigation test files. The 91 inherited evidence records, their hashes, original dates and prior coverage remain unchanged; this is not a fresh all-route review.",
+    "latestAnchorLiveBaselineEvidence": "docs/audits/seo-targeted-browser-2026-10-25.json"
   },
   "evidence": [
     {
@@ -427,6 +433,18 @@
     {
       "file": "docs/audits/seo-desktop-contrast-review-2026-10-23.json",
       "sha256": "de180c04eb0dd4a8cff43123689189dcaaf40105c0b7478621f2481526810332"
+    },
+    {
+      "file": "docs/audits/seo-runtime-baseline-reconstruction-2026-10-25.json",
+      "sha256": "3344d4b921cdafebe973a84f3759eddaf663a117a50dca1250dcb655200475a1"
+    },
+    {
+      "file": "docs/audits/seo-anchor-navigation-review-2026-10-25.json",
+      "sha256": "9efd4c2cda336397483647cf598ea49282a2e3188d34a69943e4247d61516619"
+    },
+    {
+      "file": "docs/audits/seo-targeted-browser-2026-10-25.json",
+      "sha256": "27baac29a8b8d08c3942de562905a8cc8fe5f9df3fa64f9b3647a42d52610b52"
     }
   ],
   "limitations": [
@@ -450,7 +468,8 @@
     "22 October live CMS correction applied and verified: nine SQL checks passed, five published payloads match their reviews, and the other-tenant fingerprint is unchanged. Frontend deployment remains pending. See docs/audits/brand-cms-verification-2026-10-22.json.",
     "22 October bounded printer-hero/footer review: current source, local live-CMS browser inspection, 223 application tests, 72 technical contracts and 800-record originality audit. The previous evidence is retained with its dates; current PR browser checks are an independent merge gate. See docs/audits/printer-hero-review-2026-10-22.json.",
     "23 October bounded public GBP/contact and three-color contrast delta: independent exact source-delta review, static contrast calculation, 86 contract tests, 25 targeted application tests, TypeScript and Vite build passed. Public contact compare-and-merge/readback evidence is recorded separately. Fresh CI, rendered accessibility, production deployment and live HTML verification for this delta are still pending; prior source evidence and run dates are unchanged. See docs/audits/seo-gbp-contrast-review-2026-10-23.json.",
-    "23 October subsequent desktop-heading delta: verified raw candidate Lighthouse artifacts identify one remaining 9px heading at 3.48:1 in all three desktop repeats. Only its color is changed to the existing muted token; exact source reconstruction and static 5.198:1 contrast pass. Fresh CI, desktop Lighthouse and deployment for this subsequent change remain pending. The preceding review retains its historical state; see docs/audits/seo-desktop-contrast-review-2026-10-23.json."
+    "23 October subsequent desktop-heading delta: verified raw candidate Lighthouse artifacts identify one remaining 9px heading at 3.48:1 in all three desktop repeats. Only its color is changed to the existing muted token; exact source reconstruction and static 5.198:1 contrast pass. Fresh CI, desktop Lighthouse and deployment for this subsequent change remain pending. The preceding review retains its historical state; see docs/audits/seo-desktop-contrast-review-2026-10-23.json.",
+    "25 October bounded in-page navigation delta: three live pre-fix failures were reported by the root browser reviewer; all nine new navigation regressions fail against the original native anchors and pass with router-managed links. Twelve focused application tests, TypeScript and exact published-baseline reconstruction pass. PrinterScene, other-brand HomeHero and the skip link match published main. Current CI, deployment and post-fix live browser acceptance remain pending; the 91 inherited evidence records retain their original scope and dates. See docs/audits/seo-anchor-navigation-review-2026-10-25.json."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

@@ -1,0 +1,232 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "status": "candidate-not-published",
+  "approvalScope": "Bounded source and unit-test review of three live-reproduced in-page navigation failures in ContentPage, PrintHero and CareerHub; post-deployment browser acceptance remains required.",
+  "reviewer": "Codex (AI, delegated source reviewer)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-25T01:11:31.958956Z",
+  "baseline": {
+    "commit": "e526216401c2cf51c85ae334398d318aa754c78d",
+    "sourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6",
+    "sourceFileCount": 694,
+    "baselineSnapshotReconstruction": {
+      "file": "docs/audits/seo-runtime-baseline-reconstruction-2026-10-25.json",
+      "result": "pass",
+      "reconstructedSourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6"
+    }
+  },
+  "sourceAssessment": {
+    "before": "Native anchors in ContentPage, PrintHero and CareerHub coexist with React Router ScrollRestoration in BrandLayout. They bypass router-managed link navigation.",
+    "mechanism": "Router ScrollRestoration prioritizes saved scroll position over fragment handling. Native hash history entries can reuse the current router location key; using router Links lets router navigation manage the entry and fragment consistently.",
+    "limits": "The native history-event ordering was not instrumented in the live browser. The diagnosis is supported by the root live symptom, installed router source and focused regression tests."
+  },
+  "sourceDelta": {
+    "components": [
+      "src/pages/ContentPage.tsx",
+      "src/themes/PrintHero.tsx",
+      "src/pages/career/CareerHub.tsx"
+    ],
+    "linkTypes": [
+      "article sections",
+      "comparison",
+      "practical resources",
+      "questions and answers",
+      "location-specific service and delivery",
+      "3D Yanımda home services CTA",
+      "career opportunities CTA"
+    ],
+    "change": "Replace only the reproduced links and equivalent ContentPage contents links with React Router Link to {search, hash}. Read full location.search in PrintHero and CareerHub so existing query parameters remain intact.",
+    "preserved": [
+      "Destination IDs, labels and styles",
+      "Article content and editorial media",
+      "Existing router ScrollRestoration",
+      "Normal route reset and Back restoration",
+      "Current full query parameters including non-preview UTM parameters",
+      "Existing quote/application query behavior",
+      "Printer renderer and animation",
+      "Other-brand HomeHero native anchor remains unchanged; no live failure was reproduced for it in this review",
+      "BrandLayout skip link remains unchanged; keyboard-focus acceptance is a separate concern",
+      "No new custom scroll effect or timers"
+    ],
+    "excludedPerformanceExperiment": "PrinterScene exactly matches published main Git blob 2c11188520d6f141662795d6d9b13ad1bbe8c654; no asynchronous renderer or shader diagnostic change is included."
+  },
+  "localVerification": {
+    "regressionFalsification": {
+      "method": "Temporarily restore only the original native anchors in each component, then run its navigation test file; restore fixed source exactly in a finally block.",
+      "runs": [
+        {
+          "testFile": "src/pages/ContentPage.navigation.test.tsx",
+          "failed": 6,
+          "passed": 0
+        },
+        {
+          "testFile": "src/themes/PrintHero.navigation.test.tsx",
+          "failed": 2,
+          "passed": 0
+        },
+        {
+          "testFile": "src/pages/career/CareerHub.navigation.test.tsx",
+          "failed": 1,
+          "passed": 0
+        }
+      ],
+      "result": "all nine expected failures observed",
+      "fixedSourceRestoredExactly": true
+    },
+    "candidateTests": {
+      "command": "npm test -- --run src/pages/ContentPage.editorial.test.tsx src/pages/ContentPage.navigation.test.tsx src/themes/PrintHero.navigation.test.tsx src/pages/career/CareerHub.navigation.test.tsx",
+      "result": "pass",
+      "files": 4,
+      "tests": 12,
+      "newNavigationTests": 9,
+      "existingEditorialTests": 3,
+      "coverage": [
+        "Section, comparison, resource and FAQ links reach their target",
+        "Location-specific delivery link reaches its target",
+        "Current search parameters are preserved",
+        "Hash link creates a router-managed location key",
+        "Ordinary route navigation scrolls to 0",
+        "Back restores a recorded 900px position",
+        "Home services CTA reaches its section and preserves full query parameters",
+        "Repeated click on the same home fragment returns to the target after scrolling elsewhere",
+        "Career opportunities CTA reaches its section instead of a saved unrelated position"
+      ]
+    },
+    "typecheck": {
+      "command": "npm run typecheck",
+      "result": "pass"
+    },
+    "whitespace": {
+      "command": "git diff --check -- src/pages/ContentPage.tsx src/themes/PrintHero.tsx src/pages/career/CareerHub.tsx src/pages/ContentPage.navigation.test.tsx src/themes/PrintHero.navigation.test.tsx src/pages/career/CareerHub.navigation.test.tsx",
+      "result": "pass"
+    },
+    "testEnvironment": "Vitest/jsdom with real createMemoryRouter and ScrollRestoration. Only DOM scrolling methods are spied; this does not emulate browser geometry.",
+    "releasePreflight": {
+      "command": "node scripts/quality/release-preflight.mjs",
+      "result": "pass",
+      "sourceHash": "a7a8145c68f67b35250d050cce6235ca77ea2c01f82333c0db66d912803e2d1c",
+      "records": 805,
+      "issueCounts": {},
+      "scope": "Current certificate verification plus automated editorial records/referenced public assets audit. This is not a new full rendered-site or human semantic/provenance review."
+    }
+  },
+  "files": [
+    {
+      "path": "src/pages/ContentPage.tsx",
+      "sha256": "fb017de92cb8e08a891e04f8f5ba4ea0da6409a13147577c19ca2f569fc96f43",
+      "bytes": 10845
+    },
+    {
+      "path": "src/themes/PrintHero.tsx",
+      "sha256": "e4817f2748ab3069d1ab15b9de4286e06185d8db649f8f81647b9db5bdb70cbf",
+      "bytes": 5600
+    },
+    {
+      "path": "src/pages/career/CareerHub.tsx",
+      "sha256": "d33ef0ba8860237a9e458db3296d3575dd99d5c4d32fe0b0ffaba1ce5cef79d9",
+      "bytes": 5600
+    },
+    {
+      "path": "src/pages/ContentPage.navigation.test.tsx",
+      "sha256": "4fb08776f65013477c238192c6a1651c76ec20f9ed1c08e59b2484cbe5a8a8cb",
+      "bytes": 4962
+    },
+    {
+      "path": "src/themes/PrintHero.navigation.test.tsx",
+      "sha256": "919f934edfd6a9da5459a8a94dd19f2184cdd4943bf1fbe7feb75869d22e4902",
+      "bytes": 2996
+    },
+    {
+      "path": "src/pages/career/CareerHub.navigation.test.tsx",
+      "sha256": "35b7218d7c91aed55a92d00d05013289cdc8f0f5ba04899979c80e082714b713",
+      "bytes": 2338
+    }
+  ],
+  "publicationState": {
+    "commitForThisDelta": null,
+    "ciForThisDelta": "pending",
+    "deploymentForThisDelta": "pending",
+    "liveFixedAnchorAcceptance": "pending"
+  },
+  "limitations": [
+    "No live post-fix acceptance or new performance score is claimed.",
+    "ContentPage and CareerHub are shared components. PrintHero is the 3D Yanımda hero. No brand content, other-brand hero anchor or skip-link focus behavior is changed.",
+    "No private analytics, account identifiers, OAuth URLs, credentials or browser screenshots are included."
+  ],
+  "observedFailures": [
+    {
+      "reportedBy": "Root agent using connected Chrome Browser against the public site",
+      "date": "2026-10-25",
+      "url": "https://3dyanimda.com/3d-baski#karsilastirma",
+      "action": "Click the visible Karşılaştırma link in the article contents navigation",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "stableObservation": {
+        "hash": "#karsilastirma",
+        "scrollY": 0,
+        "targetBoundingClientRectTop": 3727.4453125
+      },
+      "assessment": "The URL fragment changed, but the document remained at the top instead of the comparison section. This is a live pre-fix observation supplied by the root agent, not a candidate or post-fix browser result."
+    },
+    {
+      "reportedBy": "Root agent using connected Chrome Browser against the public site",
+      "date": "2026-10-25",
+      "url": "https://3dyanimda.com/#hizmetler",
+      "action": "On a clean home tab click Hizmetleri keşfedin",
+      "stableObservations": [
+        {
+          "hash": "#hizmetler",
+          "scrollY": 237,
+          "targetBoundingClientRectTop": 627.015625
+        },
+        {
+          "hash": "#hizmetler",
+          "scrollY": 237,
+          "targetBoundingClientRectTop": 627.015625
+        }
+      ],
+      "assessment": "The page remains short of the services target on two separate reads. The recorded scroll is consistent with link-visibility scrolling, not completed target navigation. No exact viewport was supplied in this root observation."
+    },
+    {
+      "reportedBy": "Root agent using connected Chrome Browser against the public site",
+      "date": "2026-10-25",
+      "url": "https://3dyanimda.com/kariyer#acik-pozisyonlar",
+      "action": "Navigate through the home footer Kariyer ve iş birliği link; confirm career H1, then click Fırsatları keşfedin",
+      "observations": [
+        {
+          "hash": "#acik-pozisyonlar",
+          "scrollY": 2256.5,
+          "targetBoundingClientRectTop": -1320.0625
+        },
+        {
+          "hash": "#acik-pozisyonlar",
+          "scrollY": 2393,
+          "targetBoundingClientRectTop": -1456.5625
+        }
+      ],
+      "assessment": "The target is far above the viewport after both reads. The fragment changed but the final scroll position missed the opportunities section. No exact viewport was supplied in this root observation."
+    }
+  ],
+  "candidateSnapshot": {
+    "sourceHash": "a7a8145c68f67b35250d050cce6235ca77ea2c01f82333c0db66d912803e2d1c",
+    "sourceFileCount": 697,
+    "modifiedExistingSourceFiles": 3,
+    "addedNavigationTestFiles": 3,
+    "unchangedPublishedSourceFiles": 691
+  },
+  "historicalEvidencePreservation": {
+    "records": 91,
+    "allRecordedHashesMatch": true,
+    "originalDatesAndCoveragePreserved": true,
+    "freshAllRouteBrowserRunClaimed": false
+  },
+  "liveBaselineEvidence": {
+    "file": "docs/audits/seo-targeted-browser-2026-10-25.json",
+    "sha256": "27baac29a8b8d08c3942de562905a8cc8fe5f9df3fa64f9b3647a42d52610b52",
+    "scope": "Root-observed public-site baseline and three pre-fix failures; source-fix-tested-awaiting-publication does not claim live post-fix success."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "production-browser-targeted-check",
+  "observedAt": "2026-10-25T00:57:22.834Z",
+  "origin": "https://3dyanimda.com",
+  "sourceCommit": "e526216401c2cf51c85ae334398d318aa754c78d",
+  "browser": "Connected Chrome",
+  "viewportChecks": [
+    {
+      "width": 1710,
+      "height": 893,
+      "scope": "desktop"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scope": "responsive viewport; not a physical mobile device"
+    }
+  ],
+  "passed": [
+    "Homepage to /3d-baski SPA transition: one H1, canonical, description, og:title and JSON-LD script; route-specific title/canonical correct.",
+    "Browser Back to home and Forward to /3d-baski preserve route-specific metadata without duplicates.",
+    "Direct /rehber/fdm-sla-sls-karsilastirma open and reload preserve one H1/canonical/description/og:title/JSON-LD.",
+    "Mobile comparison table: parent348px, table510px, overflow-x:auto; horizontal scrollLeft162; pageWidth390 equals viewport390.",
+    "Mobile navigation opens/closes; home and guide have no document horizontal overflow.",
+    "Hero renders in desktop/mobile viewport; pause produces enabled play control; restart resumes animation."
+  ],
+  "found": [
+    {
+      "id": "in-page-anchor-scroll",
+      "status": "source-fix-tested-awaiting-publication",
+      "route": "/3d-baski",
+      "action": "Click Bu sayfada / Karşılaştırma",
+      "actual": {
+        "url": "https://3dyanimda.com/3d-baski#karsilastirma",
+        "scrollY": 0,
+        "targetViewportTop": 3727.4453125
+      },
+      "expected": "Target comparison section becomes visible",
+      "fix": "Router Link preserving current query; covered by the nine navigation regression tests across ContentPage, PrintHero and CareerHub."
+    },
+    {
+      "id": "home-services-anchor-scroll",
+      "status": "source-fix-tested-awaiting-publication",
+      "route": "/",
+      "action": "Click Hizmetleri keşfedin",
+      "actual": {
+        "url": "https://3dyanimda.com/#hizmetler",
+        "scrollY": 237,
+        "targetViewportTop": 627.015625,
+        "separateSecondReadSame": true
+      },
+      "expected": "Target services section aligns within the viewport after anchor navigation",
+      "fix": "Router Link preserving current query; covered by the nine navigation regression tests across ContentPage, PrintHero and CareerHub."
+    },
+    {
+      "id": "career-opportunities-anchor-scroll",
+      "status": "source-fix-tested-awaiting-publication",
+      "route": "/kariyer",
+      "action": "Navigate from home footer to career, then click Fırsatları keşfedin",
+      "actual": {
+        "url": "https://3dyanimda.com/kariyer#acik-pozisyonlar",
+        "firstRead": {
+          "scrollY": 2256.5,
+          "targetViewportTop": -1320.0625
+        },
+        "secondRead": {
+          "scrollY": 2393,
+          "targetViewportTop": -1456.5625
+        }
+      },
+      "expected": "Target opportunities section becomes visible, instead of remaining above the viewport",
+      "fix": "Router Link preserving current query; covered by the nine navigation regression tests across ContentPage, PrintHero and CareerHub."
+    }
+  ],
+  "warnings": [
+    "PMREM sigmaRadians 0.07 requested35samples while max20; warning observed, root performance cause not inferred."
+  ],
+  "limitations": [
+    "No full 230-route browser sweep.",
+    "No real mobile hardware measurement or field CWV data.",
+    "No GA4 receipt or account configuration verification.",
+    "No source-map/CPU performance claim from these UI checks."
+  ],
+  "additionalObservedAt": "2026-10-25T01:09:33.452330+00:00"
+}

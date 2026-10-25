@@ -178,15 +178,15 @@ export default function ContentPage() {
           </Link>
           <hr />
           <h3>Bu sayfada</h3>
-          {p.kind === "location" && <a href="#hizmet-ve-teslimat">Hizmete erişim ve teslimat</a>}
+          {p.kind === "location" && <Link to={{ search, hash: "#hizmet-ve-teslimat" }}>Hizmete erişim ve teslimat</Link>}
           {p.sections.map((s, i) => (
-            <a key={i} href={"#bolum-" + i}>
+            <Link key={i} to={{ search, hash: "#bolum-" + i }}>
               {s.title}
-            </a>
+            </Link>
           ))}
-          {p.editorial?.comparison && <a href="#karsilastirma">Karşılaştırma</a>}
-          {!!p.editorial?.resources?.length && <a href="#araclar-ve-dosyalar">Araçlar ve örnek dosyalar</a>}
-          {!!p.faq.length && <a href="#sorular">Sorular ve yanıtlar</a>}
+          {p.editorial?.comparison && <Link to={{ search, hash: "#karsilastirma" }}>Karşılaştırma</Link>}
+          {!!p.editorial?.resources?.length && <Link to={{ search, hash: "#araclar-ve-dosyalar" }}>Araçlar ve örnek dosyalar</Link>}
+          {!!p.faq.length && <Link to={{ search, hash: "#sorular" }}>Sorular ve yanıtlar</Link>}
         </aside>
       </div>
       <section className="wrap content-next-step">
