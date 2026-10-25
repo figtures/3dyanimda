@@ -60,11 +60,13 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
     const rim = new THREE.DirectionalLight(0xcbdfe8, 2.4); rim.position.set(4, 4, -2); scene.add(rim);
     const light = new THREE.PointLight(0xffe8cc, 3.5, 5); light.position.set(0, 3.3, .8); scene.add(light);
 
-    let disposed = false, failed = false, visible = true, request = 0, last = 0, elapsed = running.current ? 10.8 : 44;
+    let disposed = false, failed = false, visible = true, compiled = false, compiling = true, released = false;
+    let request = 0, last = performance.now(), elapsed = running.current ? 10.8 : 44, needsPaint = true;
+    let lastWidth = 0, lastHeight = 0, lastDpr = 0;
     let announced = false, lastLabel = "", distance = 9, pointerX = 0, pointerY = 0, targetX = 0, targetY = 0;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const paint = () => {
-      if (disposed || failed || !visible || document.hidden) return;
+      if (disposed || failed || !compiled || !visible || document.hidden) return;
       const pose = printFrame(elapsed);
       model.update(pose.progress, pose.head, pose.opacity, pose.lift, pose.phase === "printing");
       const key = `${pose.phase}:${pose.layer}`;
@@ -79,25 +81,34 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
       if (!announced) { announced = true; callbacks.current.onReady(); }
     };
     const fit = () => {
-      const { width, height } = el.getBoundingClientRect(); if (!width || !height || disposed) return;
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, width < 580 ? 1.25 : 1.5));
+      const { width, height } = el.getBoundingClientRect(); if (!width || !height || disposed || failed) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, width < 580 ? 1.25 : 1.5);
+      if (width === lastWidth && height === lastHeight && dpr === lastDpr) return;
+      lastWidth = width; lastHeight = height; lastDpr = dpr;
+      renderer.setPixelRatio(dpr);
       renderer.setSize(width, height, false);
       camera.aspect = width / height;
       distance = Math.max(7.7, 4.9 / (2 * Math.tan(THREE.MathUtils.degToRad(17)) * camera.aspect));
-      camera.updateProjectionMatrix(); paint();
+      camera.updateProjectionMatrix(); needsPaint = true; schedule();
     };
     const tick = (now: number) => {
       request = 0;
-      if (disposed || failed || !visible || document.hidden || !running.current) return;
-      if (now - last >= 1000 / 30) { elapsed += Math.min((now - last) / 1000, .1); last = now; paint(); }
-      request = requestAnimationFrame(tick);
+      if (disposed || failed || !compiled || !visible || document.hidden) return;
+      if (needsPaint || (running.current && now - last >= 1000 / 30)) {
+        if (running.current) elapsed += Math.min((now - last) / 1000, .1);
+        last = now; needsPaint = false;
+        try { paint(); } catch { fail(); return; }
+      }
+      schedule();
+    };
+    const schedule = () => {
+      if (!request && !disposed && !failed && compiled && visible && !document.hidden && (needsPaint || running.current)) request = requestAnimationFrame(tick);
     };
     const resume = () => {
-      cancelAnimationFrame(request); request = 0;
       if (disposed || failed) return;
       el.dataset.motion = !visible || document.hidden ? "suspended" : running.current ? "playing" : "paused";
-      paint();
-      if (visible && !document.hidden && running.current) { last = performance.now(); request = requestAnimationFrame(tick); }
+      if (!visible || document.hidden) { cancelAnimationFrame(request); request = 0; return; }
+      needsPaint = true; last = performance.now(); schedule();
     };
     control.current = { resume, restart: () => { elapsed = 0; lastLabel = ""; resume(); } };
     const resize = new ResizeObserver(fit); resize.observe(el);
@@ -107,16 +118,43 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
       const box = el.getBoundingClientRect(); targetX = (event.clientX - box.left) / box.width * 2 - 1; targetY = (event.clientY - box.top) / box.height * 2 - 1;
     };
     const leave = () => { targetX = targetY = 0; };
-    const lost = (event: Event) => { event.preventDefault(); failed = true; cancelAnimationFrame(request); renderer.domElement.style.visibility = "hidden"; callbacks.current.onFailure(); };
+    const detach = () => {
+      resize.disconnect(); intersection.disconnect(); document.removeEventListener("visibilitychange", resume);
+      el.removeEventListener("pointermove", pointer); el.removeEventListener("pointerleave", leave); renderer.domElement.removeEventListener("webglcontextlost", lost);
+    };
+    const release = () => {
+      if (released) return; released = true;
+      model.dispose(); environmentTexture.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
+    };
+    const fail = () => {
+      if (disposed || failed) return;
+      failed = true; cancelAnimationFrame(request); request = 0; control.current = undefined;
+      detach(); renderer.domElement.style.visibility = "hidden";
+      if (!compiling) release();
+      callbacks.current.onFailure();
+    };
+    const lost = (event: Event) => { event.preventDefault(); fail(); };
     el.addEventListener("pointermove", pointer); el.addEventListener("pointerleave", leave);
     renderer.domElement.addEventListener("webglcontextlost", lost);
     document.addEventListener("visibilitychange", resume);
     fit(); resume();
+    // Precompile after every light and the environment are configured. The poster
+    // remains visible while shader linking completes; observers share one RAF.
+    mark("shader-compile:start");
+    const settled = () => { compiling = false; mark("shader-compile:end"); measure("shader-compile"); };
+    try {
+      renderer.compileAsync(scene, camera).then(() => {
+        settled();
+        if (disposed || failed) { release(); return; }
+        compiled = true; resume();
+      }, () => { settled(); fail(); release(); });
+    } catch { settled(); fail(); release(); }
     return () => {
       disposed = true; cancelAnimationFrame(request); control.current = undefined;
-      resize.disconnect(); intersection.disconnect(); document.removeEventListener("visibilitychange", resume);
-      el.removeEventListener("pointermove", pointer); el.removeEventListener("pointerleave", leave); renderer.domElement.removeEventListener("webglcontextlost", lost);
-      model.dispose(); environmentTexture.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
+      detach(); renderer.domElement.remove();
+      // Three's public compileAsync API has no abort. Keep its GL programs alive
+      // until it settles, so an ordinary unmount cannot invalidate pending polls.
+      if (!compiling) release();
     };
   }, []);
   return <div className="printer-scene" data-renderer="webgl" ref={host} role="img" aria-label="3D yazıcının turuncu, kıvrımlı bir formu katman katman ürettiği temsili animasyon" />;

@@ -1,0 +1,521 @@
+{
+  "kind": "instrumented-candidate-lab",
+  "production": false,
+  "fieldData": false,
+  "sourceCommit": "0eaa27fff849169e5239079e95e79c13f917c7f5",
+  "workflowRun": 40148617364,
+  "artifacts": [
+    {
+      "device": "desktop",
+      "id": 12581371851,
+      "zipSha256": "2e84360dfda3017dc21ba38f3ede770d4954ed006109e7501a643851dbb1fda0",
+      "zipVerified": true,
+      "jobSummaryEqualsArtifact": true,
+      "sourceFileDigestsVerified": 396
+    },
+    {
+      "device": "mobile",
+      "id": 12581465900,
+      "zipSha256": "231cde4491565f2fedb9bf217ccce961507510dea34aa4da2e9a78e1643c1306",
+      "zipVerified": true,
+      "jobSummaryEqualsArtifact": true,
+      "sourceFileDigestsVerified": 396
+    }
+  ],
+  "runs": [
+    {
+      "device": "desktop",
+      "repeat": 1,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 422.4142,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2121
+      },
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 792.8999999999942,
+          "duration": 566
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 794.2000000000116,
+          "duration": 203.39999999999418
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 997.7000000000116,
+          "duration": 6.599999999976717
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 1004.7999999999884,
+          "duration": 45.10000000000582
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 1006.3999999999942,
+          "duration": 43.39999999999418
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 1049.8999999999942,
+          "duration": 28.89999999999418
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 1087.5,
+          "duration": 271.29999999998836
+        }
+      ],
+      "rawTask": {
+        "wallMs": 1948.809,
+        "threadCpuMs": 52.955,
+        "startOffsetFromStartupMs": 592.388,
+        "childEventCounts": {
+          "RunTask": 1,
+          "AnimationFrame": 1,
+          "AnimationFrame::Presentation": 1
+        }
+      },
+      "diagnosticArtifactDigests": {
+        "trace": "1d7cdecd9f3817227b533660658088827aca41dd8f15342549e67a16ce3cb391",
+        "devtoolsLog": "c3e50fe7b31947c0ec8dfc35498ae2573fb2f16da7f4093ec22a7bb7695b1f78",
+        "phases": "fa0ac8f3a343db44aa6395a759aaab4e79de5e370bae2669a4cfb7d9d99a6365"
+      }
+    },
+    {
+      "device": "desktop",
+      "repeat": 2,
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 408.1221,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2190
+      },
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 628.2000000000116,
+          "duration": 410.29999999998836
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 628.3999999999942,
+          "duration": 15.10000000000582
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 643.6000000000058,
+          "duration": 6.5
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 650.5,
+          "duration": 46.89999999999418
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 651.8999999999942,
+          "duration": 45.5
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 697.3999999999942,
+          "duration": 25.70000000001164
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 733.8999999999942,
+          "duration": 304.5
+        }
+      ],
+      "rawTask": {
+        "wallMs": 2080.803,
+        "threadCpuMs": 65.265,
+        "startOffsetFromStartupMs": 436.053,
+        "childEventCounts": {
+          "RunTask": 1,
+          "AnimationFrame": 1,
+          "AnimationFrame::Presentation": 1
+        }
+      },
+      "diagnosticArtifactDigests": {
+        "trace": "b487cfc7071b1e3d30b17113f5aba1dc7bb65dc5b6daa45045ddf09443c7372e",
+        "devtoolsLog": "c107b428544fb236340b94326719601825548140b30125eea5cf9960e566aafd",
+        "phases": "53300ccd36848815cda78960bf0d419d6d364ce1f35e830b945e43b99f968a0e"
+      }
+    },
+    {
+      "device": "desktop",
+      "repeat": 3,
+      "scores": {
+        "performance": 68,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 391.7321,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2609
+      },
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 592.8000000000175,
+          "duration": 415.6000000000058
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 593,
+          "duration": 10.10000000000582
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 603.2000000000116,
+          "duration": 5.7999999999883585
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 609.4000000000233,
+          "duration": 48.29999999998836
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 611,
+          "duration": 46.70000000001164
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 657.8000000000175,
+          "duration": 28
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 697.2000000000116,
+          "duration": 311.1000000000058
+        }
+      ],
+      "rawTask": {
+        "wallMs": 2530.015,
+        "threadCpuMs": 101.912,
+        "startOffsetFromStartupMs": 450.825,
+        "childEventCounts": {
+          "RunTask": 1,
+          "AnimationFrame": 2,
+          "AnimationFrame::Presentation": 2
+        }
+      },
+      "diagnosticArtifactDigests": {
+        "trace": "76ccdbd7c0e43e1c3488a7f565324d86b3863afeba68600bf93ecf59cb9208ae",
+        "devtoolsLog": "a52d94cc870ad96b7159a0c9afdada5d754254bfc02c0178ba9f10067a4cf783",
+        "phases": "b448396cc2f69a74e45bcbe488068169a607a58223797c290a0a16c5304978a3"
+      }
+    },
+    {
+      "device": "mobile",
+      "repeat": 1,
+      "scores": {
+        "performance": 71,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1863.4274,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 2022.5000000000005
+      },
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 1403.2999999999884,
+          "duration": 639.9000000000233
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 1403.6000000000058,
+          "duration": 6.600000000005821
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 1410.2999999999884,
+          "duration": 8.900000000023283
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 1419.8999999999942,
+          "duration": 74
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 1423.1000000000058,
+          "duration": 70.60000000000582
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 1493.8999999999942,
+          "duration": 52.30000000001746
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 1568.2000000000116,
+          "duration": 474.8999999999942
+        }
+      ],
+      "rawTask": {
+        "wallMs": 646.783,
+        "threadCpuMs": 155.303,
+        "startOffsetFromStartupMs": -3.939,
+        "childEventCounts": {
+          "RunTask": 1,
+          "v8.callFunction": 1,
+          "FunctionCall": 1,
+          "V8.BytecodeBudgetInterrupt": 364,
+          "V8.StackGuard": 118,
+          "V8.HandleInterrupts": 121,
+          "V8.DeoptimizeCode": 8,
+          "ScheduleStyleRecalculation": 2,
+          "3dy:printer:startup:start": 1,
+          "PageTimingMetricsSender::UpdateCustomUserTimings": 14,
+          "v8.newInstance": 23,
+          "WebDXFeatureUsage": 6,
+          "3dy:printer:context:start": 1,
+          "3dy:printer:context:end": 1,
+          "UserTiming::Measure": 7,
+          "3dy:printer:renderer:start": 1,
+          "V8.BytecodeBudgetInterruptWithStackCheck": 80,
+          "3dy:printer:renderer:end": 1,
+          "3dy:printer:environment:start": 1,
+          "3dy:printer:pmrem:start": 1,
+          "3dy:printer:pmrem:end": 1,
+          "3dy:printer:environment:end": 1,
+          "3dy:printer:model:start": 1,
+          "V8.GC_HEAP_EXTERNAL_PROLOGUE": 2,
+          "MinorGC": 2,
+          "V8.GC_HEAP_PROLOGUE": 2,
+          "V8.GCScavenger": 2,
+          "V8.GC_TIME_TO_SAFEPOINT": 2,
+          "V8.GC_SCAVENGER": 2,
+          "V8.GC_HEAP_PROLOGUE_SAFEPOINT": 2,
+          "V8.GC_SCAVENGER_SCAVENGE": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_WEAK_GLOBAL_HANDLES_IDENTIFY": 2,
+          "ComputeWeaknessProcessor start": 6,
+          "V8.GC_SCAVENGER_TRACED_HANDLES_COMPUTE_WEAKNESS_PARALLEL": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_COLLECT_OLD_TO_NEW_PAGES": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_PARALLEL_PHASE": 2,
+          "Parallel scavenge started": 4,
+          "V8.GC_SCAVENGER_SCAVENGE_ROOTS": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_PARALLEL": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_WEAK_GLOBAL_HANDLES_PROCESS": 2,
+          "ClearWeaknessProcessor start": 6,
+          "V8.GC_SCAVENGER_TRACED_HANDLES_RESET_PARALLEL": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_FINALIZE": 2,
+          "V8.GC_SCAVENGER_SCAVENGE_RESTORE_AND_QUARANTINE_PINNED": 2,
+          "V8.GC_SCAVENGER_FREE_REMEMBERED_SET": 2,
+          "V8.GC_SCAVENGER_SWEEP_ARRAY_BUFFERS": 4,
+          "V8.GC_SCAVENGER_RESIZE_NEW_SPACE": 2,
+          "V8.GC_HEAP_EPILOGUE_SAFEPOINT": 2,
+          "V8.GC_HEAP_EPILOGUE": 2,
+          "V8.GC_HEAP_EXTERNAL_EPILOGUE": 2,
+          "UpdateCounters": 3,
+          "3dy:printer:model:end": 1,
+          "UpdateLayoutTree": 1,
+          "InvalidateLayout": 3,
+          "Layout": 1,
+          "3dy:printer:first-render:start": 1,
+          "3dy:printer:first-render:end": 1,
+          "3dy:printer:startup:end": 1,
+          "RequestAnimationFrame": 1,
+          "AnimationFrame::Script::Execute": 2,
+          "3dy:printer:startup": 2,
+          "3dy:printer:context": 2,
+          "3dy:printer:renderer": 2,
+          "3dy:printer:environment": 2,
+          "3dy:printer:pmrem": 2,
+          "3dy:printer:model": 2,
+          "3dy:printer:first-render": 2
+        }
+      },
+      "diagnosticArtifactDigests": {
+        "trace": "236ab76a9182473c1d0e51e7c7f2ac19fa0128ff20910ff0e6745f77f4510ec5",
+        "devtoolsLog": "918b6e2caab5f3ad29b09d078c8ad2da621c1315f9c7c27d4681ec29ef29dd84",
+        "phases": "97cf8b7b1e3bbb116259566b7cd0f14a29ebaa883e5a9fd9babc2d5e5599a754"
+      }
+    },
+    {
+      "device": "mobile",
+      "repeat": 2,
+      "scores": {
+        "performance": 67,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1609.4238,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 11294
+      },
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 581.1999999999825,
+          "duration": 574.7000000000116
+        },
+        {
+          "name": "3dy:printer:context",
+          "startTime": 581.3999999999942,
+          "duration": 6.399999999994179
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 587.8999999999942,
+          "duration": 8.5
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 596.8999999999942,
+          "duration": 68.60000000000582
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 599.1999999999825,
+          "duration": 66.20000000001164
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 665.5999999999767,
+          "duration": 41.90000000002328
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 727.0999999999767,
+          "duration": 428.6000000000058
+        }
+      ],
+      "rawTask": {
+        "wallMs": 3283.601,
+        "threadCpuMs": 210.81,
+        "startOffsetFromStartupMs": 618.89,
+        "childEventCounts": {
+          "RunTask": 1,
+          "AnimationFrame": 2,
+          "AnimationFrame::Presentation": 2
+        }
+      },
+      "diagnosticArtifactDigests": {
+        "trace": "dae520572ff87dc7ced47cc324641d8ecb44837911afdcfee02d99b441e05272",
+        "devtoolsLog": "714e99ddfaa5137ca3ce090d2b506a34c0e7e0909cbce3ef60f71e0d7b1a3fb7",
+        "phases": "3c2e94d50be0e2dddd53737c13018c945a88d5d23f79c0399c0d5327a12644d2"
+      }
+    },
+    {
+      "device": "mobile",
+      "repeat": 3,
+      "scores": {
+        "performance": 67,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1777.717,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 11444
+      },
+      "phaseMeasures": [
+        {
+          "name": "3dy:printer:context",
+          "startTime": 598.1000000000058,
+          "duration": 6
+        },
+        {
+          "name": "3dy:printer:startup",
+          "startTime": 598.1000000000058,
+          "duration": 593.1000000000058
+        },
+        {
+          "name": "3dy:printer:renderer",
+          "startTime": 604.2000000000116,
+          "duration": 8.199999999982538
+        },
+        {
+          "name": "3dy:printer:environment",
+          "startTime": 612.8999999999942,
+          "duration": 66.80000000001746
+        },
+        {
+          "name": "3dy:printer:pmrem",
+          "startTime": 615.1000000000058,
+          "duration": 64.5
+        },
+        {
+          "name": "3dy:printer:model",
+          "startTime": 679.7000000000116,
+          "duration": 34.60000000000582
+        },
+        {
+          "name": "3dy:printer:first-render",
+          "startTime": 733.2000000000116,
+          "duration": 458
+        }
+      ],
+      "rawTask": {
+        "wallMs": 3396.466,
+        "threadCpuMs": 206.104,
+        "startOffsetFromStartupMs": 638.623,
+        "childEventCounts": {
+          "RunTask": 1,
+          "AnimationFrame": 2,
+          "AnimationFrame::Presentation": 2
+        }
+      },
+      "diagnosticArtifactDigests": {
+        "trace": "0f467dd2c81520e9c334873b74ef199c589dde128bd17527dca43443da8bac81",
+        "devtoolsLog": "59ae4936b089892ef94fcf9d5dcfc42854b9c969edd72af65eb814715fb70954",
+        "phases": "0172533578fe1fdfc137bb786f2e886852dcbf3b68c8db09c440ce102c5a8814"
+      }
+    }
+  ],
+  "findings": [
+    "Five of six repeats have a dominant native post-startup renderer task; every overlapping V8 sample is program except one idle sample. It is not an attributed application JavaScript function.",
+    "Concurrent compositor/GPU-process wall waits with small thread CPU strongly implicate rendering/presentation synchronization in this SwiftShader lab; exact native operation and behavior on real GPU remain unverified.",
+    "First scene render takes 271\u2013475 ms. CPU samples map the dominant named first-use work to Three.js WebGLProgram.onFirstUse; PMREM generation takes 43\u201371 ms.",
+    "Targeted experiment: async shader precompile and coalesced initial paints, retaining model/materials/resolution/animation."
+  ],
+  "limitations": [
+    "Phase marks and V8 CPU sampling add diagnostic overhead; these scores are not final uninstrumented acceptance.",
+    "All durations under phaseMeasures/rawTask are unscaled raw wall time; simulated TBT and thread CPU are separate timing domains.",
+    "No field INP or real-GPU performance closure."
+  ],
+  "candidateExperiment": {
+    "status": "prepared-not-measured",
+    "changes": [
+      "Await public WebGLRenderer.compileAsync after full scene/light/environment setup before first render.",
+      "Coalesce fit/resume/intersection notifications through one requestAnimationFrame; avoid repeating setSize/setPixelRatio for unchanged dimensions."
+    ],
+    "preserved": [
+      "geometry",
+      "materials",
+      "lighting",
+      "DPR caps",
+      "30 fps cadence",
+      "3D animation and controls"
+    ],
+    "lifecycle": "Ordinary pending unmount detaches listeners/canvas and defers destructive GPU disposal until compilation settles.",
+    "knownLibraryLimitation": "Three.js 0.160 compileAsync has no cancellation API. External WebGL context loss during its internal completion polling may prevent its promise from settling; app callbacks/listeners/animation are stopped immediately, but termination of the library poll is not guaranteed. No private internals, monkeypatches or fake timeout cancellation were introduced."
+  }
+}
