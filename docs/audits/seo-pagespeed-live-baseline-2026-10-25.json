@@ -1,0 +1,48 @@
+{
+  "kind": "public-url-pagespeed-laboratory",
+  "productionUrl": "https://3dyanimda.com/",
+  "fieldDataAvailable": false,
+  "reportUrl": "https://pagespeed.web.dev/analysis/https-3dyanimda-com/8x8vt4ugjb",
+  "capturedAtLocal": "2026-10-25T03:59:54+03:00",
+  "sourceCommit": "e526216401c2cf51c85ae334398d318aa754c78d",
+  "lighthouse": "13.5.0",
+  "browser": "HeadlessChromium 153.0.8010.36",
+  "scope": "Visible PageSpeed report via connected Chrome; one run per device",
+  "runs": [
+    {
+      "device": "mobile",
+      "performance": 69,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpSeconds": 1.1,
+      "lcpSeconds": 1.7,
+      "tbtMs": 30870,
+      "cls": 0,
+      "speedIndexSeconds": 2.7,
+      "mainThreadWorkSeconds": 42,
+      "javascriptExecutionSeconds": 1.6,
+      "longTasks": 20
+    },
+    {
+      "device": "desktop",
+      "performance": 65,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpSeconds": 0.3,
+      "lcpSeconds": 0.4,
+      "tbtMs": 23610,
+      "cls": 0,
+      "speedIndexSeconds": 2.4,
+      "mainThreadWorkSeconds": 34,
+      "longTasks": 20
+    }
+  ],
+  "limitations": [
+    "Public URL lab, not real-user field data.",
+    "Single run per device; not a directly comparable regression baseline to the private CI profile.",
+    "Rendered UI values are rounded; raw Lighthouse JSON not retrieved.",
+    "High blocking work remains an open optimization; accessibility100 does not certify all accessibility."
+  ]
+}
