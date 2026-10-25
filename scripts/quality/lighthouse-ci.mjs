@@ -11,7 +11,7 @@ import {createSecureServer as createHttpsServer} from 'node:http2';
 import {execFileSync} from 'node:child_process';
 import {mkdtemp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
-import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,stat,readdir} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
@@ -23,6 +23,8 @@ const brand=process.env.LAB_BRAND;
 if(!['3dyanimda','3dsanayi','maketyanimda','parcayanimda'].includes(brand))throw new Error('Invalid lab brand');
 const repeats=Number(process.env.LAB_REPEATS||3);
 if(![1,3].includes(repeats))throw new Error('Expected 1 diagnostic run or 3 final repetitions');
+const homeDiagnostics=process.env.LAB_HOME_DIAGNOSTICS==='true';
+if(homeDiagnostics&&(process.env.GITHUB_REF!=='refs/heads/codex/home-perf-20261025'||brand!=='3dyanimda'||repeats!==3||process.env.LAB_ROUTES!=='/'))throw new Error('Homepage traces require the isolated diagnostic branch, 3dyanimda home and three repetitions.');
 const canonicalLab=process.env.LAB_ORIGIN_MODE==='canonical';
 let certDir,tls;
 if(canonicalLab){
@@ -33,6 +35,16 @@ if(canonicalLab){
 const output=`artifacts/lighthouse-${brand}/summary.json`;
 const raw=`artifacts/lighthouse-${brand}/raw`;await mkdir(raw,{recursive:true});
 let report={kind:'candidate-artifact-lab',production:false,fieldData:false,transport:canonicalLab?'HTTP/2 with HTTP/1.1 fallback':'HTTP/1.1',originMode:canonicalLab?'isolated-canonical-host-with-local-test-certificate':'localhost-noindex',publicDnsOrTlsVerified:false,api:'actual public API; no cached fixtures during measurement',sourceCommit:process.env.GITHUB_SHA,workflowRun:process.env.GITHUB_RUN_ID,startedAt:new Date().toISOString(),runs:[],errors:[],limitations:['Real loopback HTTP/2 HTTPS server with gzip in canonical-host mode; CDN, public DNS, public TLS and production availability are not measured. Previous baseline used HTTP/1.1, so score changes include a transport-method change.',canonicalLab?'Canonical hostname is mapped to loopback in Chrome. Local self-signed TLS is trusted only in this CI browser; public DNS/TLS, production availability and indexing are NOT verified.':'Localhost correctly uses noindex. Local SEO score therefore is not a production SEO score.','Simulated mobile throttling. TBT is not field INP. No CrUX, indexing or AI engine visibility assertion.']};
+if(homeDiagnostics){
+ report.diagnostics={enabled:true,phasePrefix:'3dy:printer:',sourceMaps:'hidden; retained in diagnostic artifacts only; .map HTTP requests denied',cpuSamples:true};
+ report.limitations.push('Diagnostic-only phase marks and V8 CPU sampling can add overhead. Scores use the unchanged Lighthouse profile and three repetitions, but are not an uninstrumented final performance acceptance.');
+}
+const saveDiagnostic=async(name,value)=>{
+ const file=`artifacts/lighthouse-${brand}/diagnostic/${name}.gz`;
+ const bytes=gzipSync(typeof value==='string'?value:JSON.stringify(value));
+ await mkdir(path.dirname(file),{recursive:true});await writeFile(file,bytes);
+ return {file,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};
+};
 const browser=await puppeteer.launch({executablePath:env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,defaultViewport:null,ignoreDefaultArgs:['--enable-automation'],args:[...(canonicalLab?['--ignore-certificate-errors','--no-proxy-server','--host-resolver-rules=MAP '+brand+'.com 127.0.0.1']:[]),'--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const mime={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.woff2':'font/woff2','.glb':'model/gltf-binary'};
 const routes=(process.env.LAB_ROUTES||'/,/3d-baski,/teklif-al').split(',');
@@ -46,11 +58,23 @@ try {
   if(completed.length===repeats)continue;
   const root=path.resolve('.cloudflare/lab-'+target.brand);
   if(!built.has(target.brand)){
-   await build({logLevel:'error',envDir:false,define:Object.fromEntries(Object.entries({VITE_SUPABASE_URL:env.VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY:env.VITE_SUPABASE_PUBLISHABLE_KEY,VITE_PRIVATE_PREVIEW_HOST:'',VITE_SITE_THEME:'industrial',VITE_TENANT_HOST:target.brand+'.com'}).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:root,emptyOutDir:true}});built.set(target.brand,root);
+   await build({logLevel:'error',envDir:false,define:{...Object.fromEntries(Object.entries({VITE_SUPABASE_URL:env.VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY:env.VITE_SUPABASE_PUBLISHABLE_KEY,VITE_PRIVATE_PREVIEW_HOST:'',VITE_SITE_THEME:'industrial',VITE_TENANT_HOST:target.brand+'.com'}).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])), 'import.meta.env.PRINTER_DIAGNOSTICS':JSON.stringify(homeDiagnostics)},build:{outDir:root,emptyOutDir:true,sourcemap:homeDiagnostics?'hidden':false}});
+   if(homeDiagnostics){
+    report.diagnostics.sourceFiles=[];
+    for(const name of (await readdir(path.join(root,'assets'))).filter(name=>name.endsWith('.js.map')).sort()){
+     const sourceMap=await readFile(path.join(root,'assets',name),'utf8');
+     const script=await readFile(path.join(root,'assets',name.slice(0,-4)),'utf8');
+     if(script.includes('sourceMappingURL='))throw new Error('Diagnostic build leaked a source-map URL: '+name);
+     report.diagnostics.sourceFiles.push({scriptUrl:'/assets/'+name.slice(0,-4),scriptSha256:createHash('sha256').update(script).digest('hex'),script:await saveDiagnostic('source-maps/'+name.slice(0,-4),script),sourceMap:await saveDiagnostic('source-maps/'+name,sourceMap)});
+    }
+    if(!report.diagnostics.sourceFiles.length)throw new Error('Diagnostic build produced no source maps');
+   }
+   built.set(target.brand,root);
   }
   const shell=await readFile(path.join(root,'index.html'));let rendered;
   const serve=async(req,res)=>{
    const pathname=new URL(req.url,'http://localhost').pathname;
+   if(decodeURIComponent(pathname).endsWith('.map')){res.writeHead(404,{'content-type':'text/plain','cache-control':'no-store'});return res.end('Not found');}
    const file=path.resolve(root,'.'+decodeURIComponent(pathname));
    if(!file.startsWith(root+path.sep)&&file!==root){res.writeHead(400);return res.end();}
    let body,type='text/html',cache='no-cache';
@@ -100,14 +124,24 @@ try {
   for(let repeat=1;repeat<=repeats;repeat++){
    if(completed.some(r=>r.repeat===repeat))continue;
    await page.evaluate(()=>{window.scrollTo({top:0,left:0,behavior:'instant'});sessionStorage.removeItem('react-router-scroll-positions');});
-   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],},target.device==='desktop'?desktopConfig:undefined,page);
+   const result=await lighthouse(origin+target.route,{logLevel:'error',onlyCategories:['performance','accessibility','best-practices','seo'],...(homeDiagnostics?{additionalTraceCategories:'disabled-by-default-v8.cpu_profiler'}:{}),},target.device==='desktop'?desktopConfig:undefined,page);
    const scrollY=await page.evaluate(()=>window.scrollY);if(scrollY!==0)throw Error('Measurement did not start/end at page top: '+scrollY);
    const lhr=result.lhr;if(lhr.configSettings.formFactor!==target.device)throw Error('Lighthouse device mismatch');if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
    const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
    const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
    const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));
+   let diagnostics;
+   if(homeDiagnostics){
+    // Lighthouse 13 exposes capitalized Trace/DevtoolsLog artifacts, not legacy pass maps.
+    const trace=result.artifacts.Trace,devtoolsLog=result.artifacts.DevtoolsLog;
+    if(!Array.isArray(trace?.traceEvents)||!trace.traceEvents.length||!Array.isArray(devtoolsLog)||!devtoolsLog.length)throw new Error('Missing diagnostic trace or DevTools log');
+    const phases=await page.evaluate(()=>performance.getEntries().filter(entry=>entry.name.startsWith('3dy:printer:')).map(entry=>entry.toJSON()));
+    if(!phases.some(entry=>entry.name==='3dy:printer:startup'&&entry.entryType==='measure'))throw new Error('Printer startup phase was not captured');
+    const name=`${target.device}-${repeat}`;
+    diagnostics={trace:await saveDiagnostic(name+'.trace.json',trace),devtoolsLog:await saveDiagnostic(name+'.devtoolslog.json',devtoolsLog),phases:await saveDiagnostic(name+'.phases.json',phases),traceEvents:trace.traceEvents.length,cpuProfileEvents:trace.traceEvents.filter(event=>event.name==='Profile'||event.name==='ProfileChunk').length,phaseMeasures:phases.filter(entry=>entry.entryType==='measure').map(({name,startTime,duration})=>({name,startTime,duration}))};
+   }
    await writeFile(file.replace('.json.gz','.html'),Array.isArray(result.report)?result.report.find(r=>r.startsWith('<!doctype')||r.startsWith('<!DOCTYPE'))||result.report[0]:result.report);
-   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
+   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,...(diagnostics?{diagnostics}:{}),raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
    await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('LIGHTHOUSE_RUN '+JSON.stringify(report.runs.at(-1)));
   }
   if(target.route==='/'||target.route==='/teklif-al'){

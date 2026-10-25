@@ -5,6 +5,11 @@ import { buildPrinter } from "./build-printer";
 import { PRINT_LAYERS, printFrame } from "./print-path";
 import type { PrinterSceneProps } from "./types";
 
+// Defined only by the isolated diagnostic lab, never by a VITE_* deployment env.
+const diagnostic = import.meta.env.PRINTER_DIAGNOSTICS === true;
+const mark = (phase: string) => { if (diagnostic) performance.mark(`3dy:printer:${phase}`); };
+const measure = (phase: string) => { if (diagnostic) performance.measure(`3dy:printer:${phase}`, `3dy:printer:${phase}:start`, `3dy:printer:${phase}:end`); };
+
 export default function PrinterScene({ paused, restart, onReady, onFailure, onState }: PrinterSceneProps) {
   const host = useRef<HTMLDivElement>(null);
   const running = useRef(!paused);
@@ -18,12 +23,15 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
   useEffect(() => {
     const el = host.current;
     if (!el) return;
+    mark("startup:start");
     let renderer: THREE.WebGLRenderer;
     const canvas = document.createElement("canvas");
     const options: WebGLContextAttributes = { alpha: true, antialias: true, powerPreference: "low-power" };
+    mark("context:start");
     const context = canvas.getContext("webgl2", options) || canvas.getContext("webgl", options);
+    mark("context:end"); measure("context");
     if (!context) { callbacks.current.onFailure(); return; }
-    try { renderer = new THREE.WebGLRenderer({ canvas, context, ...options }); }
+    try { mark("renderer:start"); renderer = new THREE.WebGLRenderer({ canvas, context, ...options }); mark("renderer:end"); measure("renderer"); }
     catch { callbacks.current.onFailure(); return; }
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -36,9 +44,14 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
     let model: ReturnType<typeof buildPrinter>;
     let environmentTexture: THREE.WebGLRenderTarget;
     try {
+      mark("environment:start");
       const room = new RoomEnvironment(), pmrem = new THREE.PMREMGenerator(renderer);
+      mark("pmrem:start");
       environmentTexture = pmrem.fromScene(room, .07); scene.environment = environmentTexture.texture; room.dispose(); pmrem.dispose();
+      mark("pmrem:end"); measure("pmrem"); mark("environment:end"); measure("environment");
+      mark("model:start");
       model = buildPrinter(); scene.add(model.root);
+      mark("model:end"); measure("model");
     } catch {
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); callbacks.current.onFailure(); return;
     }
@@ -60,7 +73,9 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
       const azimuth = .53 + pointerX * .065, elevation = .29 + pointerY * .035;
       camera.position.set(.2 + Math.sin(azimuth) * distance, 1.8 + elevation * distance, Math.cos(azimuth) * distance);
       camera.lookAt(.2, 1.8, 0);
+      if (!announced) mark("first-render:start");
       renderer.render(scene, camera);
+      if (!announced) { mark("first-render:end"); measure("first-render"); mark("startup:end"); measure("startup"); }
       if (!announced) { announced = true; callbacks.current.onReady(); }
     };
     const fit = () => {
