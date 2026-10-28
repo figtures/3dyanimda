@@ -1,0 +1,252 @@
+{
+  "tenant": "10000000-0000-4000-8000-000000000001",
+  "preparedAt": "2026-10-28T01:58:59.667761+00:00",
+  "scope": "Four existing Adalar pages. Existing service facts retained; no production, delivery-date or local-customer claims added.",
+  "updates": [
+    {
+      "path": "/bolgeler/istanbul/adalar",
+      "expected_payload_hash": "f6b1794ec07980e7ca3adec402ae3299",
+      "patch": {
+        "title": "Adalar için 3D baskı, tarama ve modelleme hizmeti",
+        "summary": "Adalar’dan proje başlatırken dijital dosyayı, fiziksel numuneyi ve teslim adresini birlikte planlayın. Ataşehir atölyesiyle çalışma, numune gönderimi ve randevulu görüşme için gerekli bilgileri burada bulabilirsiniz.",
+        "local_context": "Adalar’dan gelen talepler Ataşehir Örnek Mahallesi’ndeki atölye üzerinden değerlendirilir. Başlangıçta dijital dosya paylaşmak, yalnızca fiziksel inceleme gerektiğinde numune taşımak gereksiz yolculuğu azaltır.",
+        "logistics": "İşletmenin teyitli seçenekleri kargo, kurye ve randevuyla elden teslimdir. Adanıza ve açık adresinize uygun taşıma seçeneği, numunenin geliş-gidişi ve masrafların kapsamı siparişten önce netleştirilmelidir.",
+        "sections": [
+          {
+            "title": "İlk görüşmede dosya mı, numune mi gerekiyor?",
+            "body": "Baskıya hazır bir modeliniz varsa dosyayı ölçü birimi, istenen adet ve kullanım amacıyla paylaşın. Elinizde yalnızca fiziksel parça bulunuyorsa önce farklı açılardan fotoğraflarını ve yaklaşık boyutunu gönderin. Böylece parçanın atölyeye gelmesi gerekip gerekmediği, tarama veya modelleme kapsamı belirlenebilir."
+          },
+          {
+            "title": "Ada adresi için teslim planını netleştirin",
+            "body": "Talebinizde ada adını, teslim noktasını ve ihtiyaç tarihini belirtin. Üretimin tamamlanması ile paketin size ulaşması ayrı aşamalardır; taşıyıcının ilgili adrese hizmeti, paket ölçüsü ve teslim şekli teklif sırasında doğrulanır. Kargo veya kurye seçeneğini kesinleşmeden yolculuk ya da teslim günü planına dönüştürmeyin."
+          },
+          {
+            "title": "Gönderdiğiniz numunenin geri dönüşünü de konuşun",
+            "body": "Fiziksel referansın yanında kaç parça gönderdiğinizi ve hangi yüzeylerin önemli olduğunu yazın. Sökülebilen parçaları ayrı işaretleyin, mevcut hasarı fotoğrafla kaydedin. Numunenin korunması, geri gönderileceği adres ve üretilen parçayla aynı pakette dönüp dönmeyeceği ön görüşmenin parçasıdır."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Adalar’dan atölyeye gelmeden teklif alabilir miyim?",
+            "a": "İlk değerlendirme için dosya veya fotoğraf, ölçü, kullanım amacı ve adet paylaşabilirsiniz. Fiziksel inceleme gerekiyorsa numune gönderimi ya da randevulu ziyaret ayrıca kararlaştırılır."
+          },
+          {
+            "q": "Adalara teslim ne kadar sürer?",
+            "a": "Kesin süre; üretim yöntemi, adet, iş sırası ve teslim adresine göre teklif aşamasında belirlenir. Üretim süresi ile taşıma süresini ayrı öğrenin; bu sayfa aynı gün veya ertesi gün teslim taahhüdü vermez."
+          }
+        ],
+        "editorial": {
+          "answer": "Önce ne üretileceğini dosya veya fotoğrafla paylaşın; ardından Adalar’daki teslim adresi ile numunenin geliş ve dönüş yöntemini teklif kapsamında belirleyin.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            }
+          ],
+          "takeaways": [
+            "Ada adı ve teslim noktası talepte yer alsın.",
+            "Fiziksel referans gerekliliği gönderimden önce değerlendirilsin.",
+            "Üretim takvimi ve taşıma süresi ayrı konuşulsun."
+          ],
+          "relatedPaths": [
+            "/3d-baski",
+            "/3d-tarama",
+            "/3d-modelleme",
+            "/bolgeler/istanbul"
+          ]
+        }
+      },
+      "metadata": {
+        "expected_description_tr": "Adalar için 3D ürün geliştirme: katlanır masa aksesuarının açık ve kapalı hacmini karşılaştırın; ilk prototipte sınanacak kullanım senaryosunu belirleyin.",
+        "description_tr": "Adalar için 3D baskı, tarama ve modelleme: dosya paylaşımı, numune gönderimi, Ataşehir atölyesine randevu ve adaya teslim planını inceleyin."
+      }
+    },
+    {
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "expected_payload_hash": "6e26f9f93d05cacd44b07ed692d641b3",
+      "patch": {
+        "title": "Adalar 3D baskı: dosya, numune ve teslimat planı",
+        "summary": "Adalar’a gönderilecek baskı parçanız için model dosyasını, adedi ve kullanım koşullarını hazırlayın. Paketleme, ilk numune ve üretimden sonraki taşıma aşamasını teklifin başında netleştirin.",
+        "local_context": "Adalar 3D baskı talebini uzaktan başlatabilirsiniz; üretilecek geometri dijital olarak incelenir. Fiziksel karşı parça yalnızca montaj veya ölçü değerlendirmesi için gerekli olduğunda gönderim konusu olur.",
+        "logistics": "Baskı için kargo, kurye veya Ataşehir atölyesinden randevulu teslim alma değerlendirilebilir. Adadaki alıcı adresi ve paket büyüklüğü paylaşılmalı; taşıma ücretiyle üretim bedelinin kapsamı teklifte ayrı görülmelidir.",
+        "sections": [
+          {
+            "title": "Baskı dosyasını teklif için hazırlayın",
+            "body": "STL, 3MF veya mevcut modelinizi ölçü birimiyle birlikte iletin. Birden fazla revizyon varsa üretilecek sürümü açıkça belirtin; renk, yüzey beklentisi ve adet bilgisini ekleyin. Parçanın sıcaklık, darbe veya dış ortamla temasını anlatmak malzeme seçimini değerlendirmeye yardımcı olur."
+          },
+          {
+            "title": "Çoklu üretimden önce ilk parçayı değerlendirin",
+            "body": "Başka bir parçaya oturacak kapak, tutucu veya bağlantıda ilk numuneyle hangi ölçülerin kontrol edileceğini belirleyin. Numune Adalar’a gönderilecekse geri bildirim ve olası düzeltme için ayrıca zaman ayırın. Son adet için onay verdiğiniz dosya ile fiziksel örneğin aynı revizyon olduğundan emin olun."
+          },
+          {
+            "title": "Paketleme ve taşıma kapsamını belirleyin",
+            "body": "Uzun, ince veya çıkıntılı parçaları teklif fotoğrafında işaretleyin; taşıma sırasında hassas bölgelerin korunması planlanabilsin. Ayrı parçaların adet ve kodlarını paket listesinde eşleştirin. Kargo ya da kurye seçiminde ada adresine uygunluk ve teslim noktası üretim bitmeden teyit edilmelidir."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Model dosyam yoksa baskı yaptırabilir miyim?",
+            "a": "Fotoğraf, ölçülü çizim veya fiziksel örnek üzerinden önce modelleme ihtiyacı değerlendirilebilir. Modelin hazırlanması ve baskı, ayrı kapsamlar olarak teklifte açıklanır."
+          },
+          {
+            "q": "Birden fazla baskıyı tek pakette alabilir miyim?",
+            "a": "Birlikte gönderim ihtiyacınızı ve parçaların adetlerini belirtin. Birbirine zarar vermeyecek paket düzeni, toplam ölçü ve taşıyıcının kabul şartları üzerinden teslim planı yapılır."
+          }
+        ],
+        "editorial": {
+          "answer": "Baskı teklifine ölçü birimi, parça adedi, kullanım ortamı ve ada adresini ekleyin; ilk numune gerekiyorsa seri üretimden önce değerlendirme takvimini ayırın.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            }
+          ],
+          "takeaways": [
+            "Tek bir onaylı dosya sürümü seçin.",
+            "Numune onayı gerekiyorsa üretim adedinden önce belirtin.",
+            "Hassas yüzeyleri ve paket gereksinimlerini açıklayın."
+          ],
+          "relatedPaths": [
+            "/3d-baski",
+            "/bolgeler/istanbul",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        }
+      },
+      "metadata": {
+        "expected_description_tr": "Adalar 3D baskı taleplerinde katlanır aksesuarın birbirine yaklaşan parçalarını inceleyin; açıklık denemesi için gerekli kesiti ve referans ölçülerini seçin.",
+        "description_tr": "Adalar 3D baskı için dosya, adet ve malzeme ihtiyacını hazırlayın; ilk numune, paketleme ve ada adresine teslim seçeneklerini teklif öncesi netleştirin."
+      }
+    },
+    {
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "expected_payload_hash": "ae5e266db23760d0f963709122d4247f",
+      "patch": {
+        "title": "Adalar 3D modelleme: uzaktan proje ve dosya teslimi",
+        "summary": "Adalar’dan 3D modelleme projenizi fotoğraf, eskiz veya ölçülü çizimle başlatın. Dijital inceleme, revizyon onayı ve üretime uygun dosya teslimini fiziksel numune ihtiyacından ayrı planlayın.",
+        "local_context": "Adalar için modelleme hizmetinde ilk adım teknik bilgilerin dijital paylaşımıdır. Atölye ziyareti yerine uzaktan inceleme yapılabilmesi, eldeki çizimlerin ve referans ölçülerinin yeterliliğine bağlıdır.",
+        "logistics": "Dijital çıktı için dosya biçimi ve teslim yöntemi belirlenir. Fiziksel referans gerekiyorsa paket içeriği ve iade düzeni ayrıca görüşülür; Ataşehir atölyesine gelecek ziyaretçiler önceden randevu alır.",
+        "sections": [
+          {
+            "title": "Modelin kullanım amacını baştan söyleyin",
+            "body": "Görsel sunum, 3D baskı ve mevcut parçaya uyum için hazırlanacak modellerin bilgi ihtiyacı farklıdır. Beklenen dosya biçimini, temel ölçüleri ve değişmemesi gereken bağlantı noktalarını belirtin. Yalnızca fotoğraf varsa ölçüyle doğrulanacak kısımlar ilk görüşmede ayrılır."
+          },
+          {
+            "title": "Revizyonları uzaktan takip edin",
+            "body": "İnceleme görsellerinde kontrol edeceğiniz yüzeyleri ve ölçüleri işaretleyin. Her geri bildirimi dosya sürümüyle birlikte iletin; üretime geçilecek son modelin adını ve onay tarihini kaydedin. Böylece fiziksel buluşma gerekmeyen tasarım kararları dijital olarak takip edilebilir."
+          },
+          {
+            "title": "Fiziksel referans gerektiğinde gönderimi planlayın",
+            "body": "Mevcut parçaya oturan bir model için numune veya tarama gerekebilir. Adalar’dan gönderilecek referansın bağlantıları, korunacak yüzeyleri ve geri dönüş beklentisi açıklanmalıdır. Modelleme sonrası baskı isteniyorsa dijital dosya tesliminden ayrı olarak adet, malzeme ve taşıma kapsamı konuşulur."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Modelleme için atölyeye gelmem şart mı?",
+            "a": "Dosya, ölçü ve görseller yeterliyse değerlendirme uzaktan başlayabilir. Fiziksel ölçüm veya montaj incelemesi gerektiğinde numune gönderimi ya da randevu planlanır."
+          },
+          {
+            "q": "Model dosyası ile basılı parçayı birlikte isteyebilir miyim?",
+            "a": "İkisini de talepte belirtebilirsiniz. Düzenlenebilir model, baskı dosyası ve fiziksel üretimin hangilerinin teslim edileceği; revizyon kapsamı ve üretim koşullarıyla birlikte teklif edilir."
+          }
+        ],
+        "editorial": {
+          "answer": "Modelleme talebinde kullanım amacı, referans ölçüler ve teslim formatını belirtin. Fiziksel inceleme gerekmeyen revizyonlar dosya sürümleri üzerinden uzaktan yürütülebilir.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            }
+          ],
+          "takeaways": [
+            "Sunum modeli ile üretim geometrisinin hedefini ayırın.",
+            "Düzeltmeleri sürüm numarasıyla birlikte iletin.",
+            "Baskı ve fiziksel teslim isteğini ayrıca bildirin."
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/bolgeler/istanbul",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        }
+      },
+      "metadata": {
+        "expected_description_tr": "Adalar 3D modelleme kapsamında katlanır prototipin parçalarını, açılma yolunu ve son konumlarını tanımlayın; hareket alanını modelleme briefine ekleyin.",
+        "description_tr": "Adalar 3D modelleme: fotoğraf ve çizimle uzaktan başlayın; revizyon, CAD veya baskı dosyası teslimi ve gerekiyorsa fiziksel numune gönderimini planlayın."
+      }
+    },
+    {
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "expected_payload_hash": "bbec9eed37570ee2124cd799373bd698",
+      "patch": {
+        "title": "Adalar 3D tarama: numune gönderimi ve yerinde inceleme",
+        "summary": "Adalar’daki fiziksel objenizi taratmadan önce boyutunu, yüzeyini ve taşınabilirliğini paylaşın. Atölyeye numune gönderme ile yerinde tarama ihtiyacını erişim ve teslim dosyası üzerinden değerlendirin.",
+        "local_context": "Adalar’da taşınması güç bir objenin tarama ihtiyacı ile elde taşınabilir bir numunenin iş akışı farklıdır. Ön inceleme, fiziksel referansın Ataşehir’e taşınması gerekip gerekmediğini belirlemeye yöneliktir.",
+        "logistics": "Tarama için numune gönderilecekse koruyucu ambalaj ve geri dönüş adresi önceden konuşulur. Yerinde çalışma düşünülüyorsa ada içindeki erişim, çalışma alanı ve ziyaret kapsamı teklifin parçası olarak netleştirilir.",
+        "sections": [
+          {
+            "title": "Objeyi göndermeden önce fotoğraflayın",
+            "body": "Önden, arkadan ve bağlantı bölgelerinden fotoğraflar; yaklaşık boyut ve malzeme bilgisiyle birlikte ilk incelemeyi kolaylaştırır. Parlak, saydam veya ulaşılması zor yüzeyleri belirtin. Hassas, kırık ya da sökülmemesi gereken bölümleri paketlemeden önce açıklayın."
+          },
+          {
+            "title": "Taşınamayan parçalar için erişimi tarif edin",
+            "body": "Yerinde tarama talebinde objenin bulunduğu ada, çalışma alanı, çevresindeki erişim ve hareket ettirilip ettirilemeyeceği konuşulur. İşletmede yerinde tarama hizmeti vardır; belirli bir adres için ekip ve ulaşım planı ön görüşmeyle kararlaştırılır. Bu değerlendirme yapılmadan ziyaret tarihi kesinleştirilmez."
+          },
+          {
+            "title": "Numune iadesi ve dijital çıktıyı ayırın",
+            "body": "Fiziksel referansın kime ve nasıl geri döneceğini belirtin. Dijital teslimde yüzey ağı mı, ölçüm referansı mı, düzenlenebilir CAD modeli mi gerektiğini açıklayın. Tarama verisinden CAD yeniden çizimi gerekiyorsa ayrı iş kapsamı olarak planlanır."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Parçamı doğrudan kargoya verebilir miyim?",
+            "a": "Önce boyut, fotoğraf ve yapılacak işlemi paylaşın. Kabul edilen numune kapsamı, paketleme, alıcı bilgileri ve iade yöntemi netleştikten sonra gönderim yapılması uygundur."
+          },
+          {
+            "q": "Yerinde tarama her obje için uygun mu?",
+            "a": "Uygunluk; yüzey özellikleri, hedef hassasiyet, ekipmanın çevresindeki çalışma alanı ve erişim koşullarına bağlıdır. Adresteki çalışma ve ulaşım ayrıntıları birlikte değerlendirilir."
+          }
+        ],
+        "editorial": {
+          "answer": "Tarama planını objenin taşınabilirliğiyle başlatın: fotoğraf ve boyut üzerinden numune gönderimini veya yerinde çalışma koşullarını değerlendirin; teslim dosyasının türünü ayrıca seçin.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            }
+          ],
+          "takeaways": [
+            "Boyut ve yüzey özelliklerini ilk talepte gösterin.",
+            "Taşınamayan objenin çevresindeki çalışma alanını açıklayın.",
+            "Fiziksel iade ile dijital dosya teslimini ayrı tanımlayın."
+          ],
+          "relatedPaths": [
+            "/3d-tarama",
+            "/bolgeler/istanbul",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        }
+      },
+      "metadata": {
+        "expected_description_tr": "Adalar 3D tarama için katlanır nesnenin açık mı kapalı mı kaydedileceğini belirleyin; dış görünüş ile açılmış geometriye ilişkin veri ihtiyacını ayırın.",
+        "description_tr": "Adalar 3D tarama taleplerinde obje fotoğrafı, boyut ve erişimi paylaşın; numune gönderimi, iade ve yerinde tarama kapsamını önceden değerlendirin."
+      }
+    }
+  ]
+}

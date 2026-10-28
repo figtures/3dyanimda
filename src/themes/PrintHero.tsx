@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState, type ComponentType } from "react";
 import { ArrowDown, ArrowUpRight, Pause, Play, RotateCcw } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { InPageLink } from "@/components/site/InPageLink";
 import { useBrand } from "@/brands/config";
 import PrinterPoster from "./PrinterPoster";
 import CanvasPrinter from "./printer/CanvasPrinter";
@@ -9,7 +10,6 @@ import "./print-hero.css";
 
 export default function PrintHero({ query }: { query: string }) {
   const brand = useBrand();
-  const { search } = useLocation();
   const [Scene, setScene] = useState<ComponentType<PrinterSceneProps> | null>(null);
   const [ready, setReady] = useState(false);
   const [unavailable, setUnavailable] = useState(false);
@@ -45,7 +45,7 @@ export default function PrintHero({ query }: { query: string }) {
         <p className="print-hero-lead">{brand.lead}</p>
         <div className="print-hero-actions">
           <Link className="print-hero-primary" to={"/teklif-al" + query}>Projenizi başlatın <ArrowUpRight size={20} aria-hidden="true" /></Link>
-          <Link className="print-hero-secondary" to={{ search, hash: "#hizmetler" }}>Hizmetleri keşfedin <ArrowDown size={17} aria-hidden="true" /></Link>
+          <InPageLink className="print-hero-secondary" hash="#hizmetler">Hizmetleri keşfedin <ArrowDown size={17} aria-hidden="true" /></InPageLink>
         </div>
         <p className="print-hero-location">İstanbul, Ataşehir <span aria-hidden="true">/</span> Mühendislikten üretime.</p>
       </div>

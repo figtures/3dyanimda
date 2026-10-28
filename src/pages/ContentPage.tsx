@@ -1,6 +1,7 @@
 import {contentStructuredData,contentParent} from "@/content/structured-content";
 import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
+import { InPageLink } from "@/components/site/InPageLink";
 import { ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
 import { useContentPage, useRelatedContent } from "@/content/useContent";
 import { useBrand } from "@/brands/config";
@@ -178,15 +179,15 @@ export default function ContentPage() {
           </Link>
           <hr />
           <h3>Bu sayfada</h3>
-          {p.kind === "location" && <Link to={{ search, hash: "#hizmet-ve-teslimat" }}>Hizmete erişim ve teslimat</Link>}
+          {p.kind === "location" && <InPageLink hash="#hizmet-ve-teslimat">Hizmete erişim ve teslimat</InPageLink>}
           {p.sections.map((s, i) => (
-            <Link key={i} to={{ search, hash: "#bolum-" + i }}>
+            <InPageLink key={i} hash={`#bolum-${i}`}>
               {s.title}
-            </Link>
+            </InPageLink>
           ))}
-          {p.editorial?.comparison && <Link to={{ search, hash: "#karsilastirma" }}>Karşılaştırma</Link>}
-          {!!p.editorial?.resources?.length && <Link to={{ search, hash: "#araclar-ve-dosyalar" }}>Araçlar ve örnek dosyalar</Link>}
-          {!!p.faq.length && <Link to={{ search, hash: "#sorular" }}>Sorular ve yanıtlar</Link>}
+          {p.editorial?.comparison && <InPageLink hash="#karsilastirma">Karşılaştırma</InPageLink>}
+          {!!p.editorial?.resources?.length && <InPageLink hash="#araclar-ve-dosyalar">Araçlar ve örnek dosyalar</InPageLink>}
+          {!!p.faq.length && <InPageLink hash="#sorular">Sorular ve yanıtlar</InPageLink>}
         </aside>
       </div>
       <section className="wrap content-next-step">

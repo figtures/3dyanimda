@@ -2,7 +2,7 @@ import { build } from 'vite';
 import { mkdir, writeFile, rm } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
-import { loadBrandConfig } from './config.mjs';
+import { loadBrandConfig, productionDomainRoutes } from './config.mjs';
 import {prepareRelease} from './prepare.mjs';
 const [action,brand]=process.argv.slice(2);
 if(!['build','check','export','verify','deploy'].includes(action)) throw new Error('Usage: node scripts/cloudflare/brand.mjs build|check|export|verify|deploy <brand>');
@@ -39,7 +39,7 @@ const wrangler={name:config.name,main:path.resolve('deploy/worker.mjs'),compatib
  workers_dev:true,preview_urls:false,
  assets:{directory,binding:'ASSETS',run_worker_first:true,not_found_handling:'none',html_handling:'drop-trailing-slash'},
  vars:{SITE_DOMAIN:config.domain,BRAND_SLUG:brand,RELEASE_MODE:release?'approved':'preview'},
- ...(config.customDomain && release?{routes:[{pattern:config.domain,custom_domain:true}]}:{})};
+ ...productionDomainRoutes(config, release)};
 await writeFile(configFile,JSON.stringify(wrangler,null,2)+'\n');
 // Validate the actual exported HTML, discovery files and approved Worker config
 // before any upload; a successful browser render alone is not the final gate.

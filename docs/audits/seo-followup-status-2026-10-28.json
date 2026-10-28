@@ -1,0 +1,141 @@
+{
+  "brand": "3dyanimda",
+  "origin": "https://3dyanimda.com",
+  "updatedAt": "2026-10-28",
+  "previousPlan": "docs/audits/seo-gap-status-2026-10-23.json",
+  "scope": "User's 28 October additions plus unfinished publication, measurement and performance work. Historical audit rows and dates remain unchanged.",
+  "repositoryReconciliation": {
+    "checked": [
+      "GitHub main branch",
+      "20 branch heads",
+      "recent pull requests",
+      "direct git ls-remote",
+      "four live Adalar CMS rows"
+    ],
+    "baselineMain": "e526216401c2cf51c85ae334398d318aa754c78d",
+    "finding": "No later Business-session commits were visible in the same repository. Adalar CMS rows still held the 8 October folding-prototype content.",
+    "completedNow": "PR17 merged normally after 12 Actions and Cursor success; all 21 checks on its main merge commit succeeded, including four Cloudflare production builds.",
+    "mergeCommit": "40b7ac5bedb19a9a18bd345c341bec9f9b514e30"
+  },
+  "items": [
+    {
+      "id": "FOLLOWUP-01",
+      "priority": 1,
+      "title": "www alan adını ana domaine yönlendir",
+      "status": "implemented-awaiting-deploy",
+      "finding": "Google public DNS returned NXDOMAIN for www. Existing Worker normalization cannot run until hostname is bound.",
+      "change": "3dyanimda production configuration declares apex and www Custom Domains; other brands retain their previous domain scope. Explicit opt-out remains respected.",
+      "acceptance": [
+        "www DNS resolves",
+        "HTTPS certificate valid",
+        "HTTP and HTTPS www return permanent 308 to apex",
+        "path and query survive; destination returns 200"
+      ],
+      "tests": "9 Cloudflare tests passed, including all four priority routes under HTTP and HTTPS."
+    },
+    {
+      "id": "FOLLOWUP-02",
+      "priority": 2,
+      "title": "source_channel raporunu doğrula",
+      "status": "collection-tests-pass-report-access-needed",
+      "finding": "Connected GA4 property also receives another brand. Windsor report is scoped to hostname=3dyanimda.com. source_channel and customEvent:source_channel are not exposed by field discovery; standard session channel is not the custom event dimension.",
+      "completed": [
+        "Read hostname-filtered standard GA4 channels",
+        "28 analytics unit tests passed",
+        "Verified fixed category output, query/referrer privacy, first-consented-source retention and reset",
+        "Fixed an observed early-click query loss before hydration; 13 navigation/fallback tests and all 307 application tests pass. Deployment acceptance pending."
+      ],
+      "remaining": [
+        "Inspect GA4 event-scoped custom definition for source_channel",
+        "Verify a consented controlled event in GA4 DebugView or Realtime",
+        "Read a completed-date event report using source_channel and hostname",
+        "Confirm generate_lead as the sole saved-quote key event"
+      ],
+      "limits": [
+        "Code emission is not proof of GA4 receipt",
+        "Direct standard-channel traffic is not proof of actual visitor acquisition",
+        "Google referrer cannot distinguish AI Overviews or AI Mode from classic search",
+        "Do not double-count quote_submit_success as a second lead"
+      ]
+    },
+    {
+      "id": "FOLLOWUP-03",
+      "priority": 3,
+      "title": "Search Console dört URL Denetimi",
+      "status": "needs-authenticated-property-access",
+      "urls": [
+        "https://3dyanimda.com/",
+        "https://3dyanimda.com/3d-baski",
+        "https://3dyanimda.com/3d-tarama",
+        "https://3dyanimda.com/3d-modelleme"
+      ],
+      "capture": [
+        "inspection timestamp",
+        "indexed verdict",
+        "coverage state",
+        "crawl allowed",
+        "last crawl",
+        "page fetch result",
+        "user canonical",
+        "Google canonical",
+        "sitemap association",
+        "live test if indexed snapshot is stale"
+      ],
+      "limits": "Public HTTP/canonical checks are separate evidence and cannot establish Google indexing. Windsor has no connected Search Console account.",
+      "accessBlock": "Automatic approval review rejected the account reauthentication step because the displayed Google account had not been explicitly authorized. Awaiting account confirmation; no account credentials entered."
+    },
+    {
+      "id": "FOLLOWUP-04",
+      "priority": 4,
+      "title": "Google Search generative AI ayarı ve performans raporu",
+      "status": "needs-authenticated-property-access",
+      "settings": "Settings > Search generative AI: record Include / Exclude / Inherit and effective parent setting; inspect before making changes.",
+      "report": "Generative AI performance (Search): record date range, impressions, pages, countries and devices for AI Overviews / AI Mode. Compare matching periods where sufficient data exists.",
+      "references": [
+        "https://support.google.com/webmasters/answer/16908024",
+        "https://support.google.com/webmasters/answer/16984139"
+      ],
+      "limits": "A missing report may reflect insufficient impressions. Do not equate it with exclusion, zero visibility, penalty or ranking loss.",
+      "accessBlock": "Automatic approval review rejected the account reauthentication step because the displayed Google account had not been explicitly authorized. Awaiting account confirmation; no account credentials entered."
+    },
+    {
+      "id": "FOLLOWUP-05",
+      "priority": 5,
+      "title": "Muhafaza portföyüne gerçek üretim kanıtı ekle",
+      "status": "needs-business-evidence",
+      "url": "https://3dyanimda.com/portfoy/endustriyel-cihaz-muhafazasi",
+      "finding": "Existing cover is explicitly AI-generated; text describes an application. It does not establish completed manufacturing.",
+      "requiredInputs": {
+        "producedPartPhotos": null,
+        "usedMaterialAndGrade": null,
+        "actualQuantity": null,
+        "productionStartDate": null,
+        "productionCompletionDate": null,
+        "dispatchDate": null,
+        "actualDeliveryDate": null,
+        "acceptanceOrFitResult": null
+      },
+      "acceptance": "Publish a real, photo-supported case with actual material, quantity and realized production/delivery times. Customer identity is optional; use only provided business facts.",
+      "completed": "Evidence requirements specified; no fictional production results or substitute AI photographs added."
+    },
+    {
+      "id": "FOLLOWUP-06",
+      "priority": 6,
+      "title": "Bölge sayfalarının yerel faydasını artır",
+      "status": "cms-published-static-release-pending",
+      "completed": "Four Adalar CMS pages and metadata descriptions published after a successful transaction rollback test. Independent readback confirmed published status and matching review payloads for all four; other-brand fingerprint unchanged. Static release and live acceptance still pending.",
+      "evidence": "Existing confirmed workshop/service facts reused. 805-record originality review passed; no new local branch, carrier schedule, guaranteed SLA or local-customer case claimed.",
+      "acceptance": "Four live pages and metadata reflect the reviewed content; sample and contact links work.",
+      "next": "Review the other 159 authored district/service records individually using delivery, sample, real case and distinct service-need criteria. Add actual local case only when evidence is provided.",
+      "limits": "Content usefulness assessment only; not a penalty or ranking-loss finding."
+    },
+    {
+      "id": "F098",
+      "priority": 7,
+      "title": "Ana sayfa 3D sahne performansı",
+      "status": "open-measurement-needed",
+      "finding": "Both prior experiments rejected; no performance improvement claimed and production scene retained.",
+      "next": "Compare fixed build/profile on real GPU versus software renderer before selecting another change."
+    }
+  ]
+}

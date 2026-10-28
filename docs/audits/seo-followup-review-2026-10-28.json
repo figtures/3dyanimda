@@ -1,0 +1,37 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-requested bounded delta review)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-28T02:00:49.897Z",
+  "sourceHash": "cfc6d6fb1fe237af88bfc08f524bc9bdda52c4f3cc3bb44250f39987bf542904",
+  "sourceFileCount": 701,
+  "baselineCommit": "40b7ac5bedb19a9a18bd345c341bec9f9b514e30",
+  "scope": "Four existing Adalar landing-page texts and meta descriptions, 3dyanimda apex/www Worker binding, source_channel emission regression tests. No new routes, assets, production claims or other-brand content changes.",
+  "review": {
+    "content": "Read all four page targets and their metadata. Distinct general, printing, scanning and modeling journeys. Existing 7 October service facts retained; no ferry schedule, delivery SLA, local branch or actual customer evidence invented.",
+    "originality": {
+      "records": 805,
+      "result": "pass",
+      "report": "docs/audits/adalar-originality-2026-10-28.json"
+    },
+    "provenance": "No new imagery or models; inherited provenance evidence remains historical and unchanged.",
+    "seo": "Same four canonical paths and service identities. Metadata delta removes obsolete folding-prototype topic; FAQs answer dispatch, remote working and handover questions.",
+    "routing": "Only 3dyanimda approved release binds apex and www. Explicit custom-domain opt-out remains respected; previews bind neither. Existing Worker keeps paths/queries and uses permanent 308 for host normalization.",
+    "analytics": "Existing source_channel event classification unchanged. Ten added regression cases prove fixed source categories and first-consented-session behavior; not proof of GA4 receipt or report configuration."
+  },
+  "validation": {
+    "cloudflareTests": 9,
+    "searchLocalTests": 88,
+    "analyticsTests": 28,
+    "typecheck": "pass",
+    "existingContentRenderTests": 3
+  },
+  "limitations": [
+    "Final-head CI and production deployment are subsequent gates.",
+    "Search Console property access and source_channel report visibility are not verified.",
+    "No real production photographs, batch count, used material or realized lead time were supplied.",
+    "Other districts still require individual usefulness review; no penalty or ranking-loss diagnosis."
+  ]
+}

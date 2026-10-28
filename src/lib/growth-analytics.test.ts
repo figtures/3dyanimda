@@ -20,6 +20,40 @@ beforeEach(async () => {
 });
 
 describe("consented GA4 collection boundaries", () => {
+  it.each([
+    ["chatgpt", "chatgpt"], ["perplexity", "perplexity"],
+    ["copilot", "copilot"], ["claude", "claude"], ["gemini", "gemini"],
+    ["google", "google"], ["bing", "bing"], ["newsletter", "referral"],
+  ])("sends the fixed source_channel category for %s without forwarding the URL", (source, expected) => {
+    allow();
+    history.replaceState({}, "", `/3d-baski?utm_source=${source}&email=private%40example.com`);
+    analytics.initializeAnalytics(brand, measurementId);
+    analytics.trackGrowth(brand, "page_view");
+    const event = commands().find(command => command[0] === "event")!;
+    expect(event[2]).toMatchObject({source_channel: expected, landing_path: "/3d-baski", page_referrer: ""});
+    expect(JSON.stringify(event)).not.toMatch(/utm_source|private@|private%40/);
+  });
+
+  it("keeps the first consented source across SPA pages and resets it when cleared", () => {
+    allow(); history.replaceState({}, "", "/3d-tarama?utm_source=perplexity");
+    analytics.initializeAnalytics(brand, measurementId);
+    analytics.trackGrowth(brand, "page_view");
+    history.pushState({}, "", "/teklif-al?utm_source=chatgpt");
+    analytics.trackGrowth(brand, "quote_start");
+    let events = commands().filter(command => command[0] === "event");
+    expect(events[1][2]).toMatchObject({source_channel: "perplexity", landing_path: "/3d-tarama", page_path: "/teklif-al"});
+    analytics.clearAttribution(brand);
+    analytics.trackGrowth(brand, "quote_start");
+    events = commands().filter(command => command[0] === "event");
+    expect(events[2][2]).toMatchObject({source_channel: "chatgpt", landing_path: "/teklif-al"});
+  });
+
+  it("classifies referrer hosts without claiming Google AI attribution", () => {
+    expect(analytics.referralChannel("https://www.google.com/search?q=private", "")).toBe("google");
+    expect(analytics.referralChannel("https://chatgpt.com/c/private", "")).toBe("chatgpt");
+    expect(analytics.referralChannel("https://chatgpt.com.attacker.example/", "")).toBe("referral");
+    expect(analytics.referralChannel("", "")).toBe("direct");
+  });
   it("keeps host collection limited to the canonical domain", () => {
     expect(analytics.analyticsHostAllowed("3dyanimda.com", "3dyanimda.com")).toBe(true);
     expect(analytics.analyticsHostAllowed("preview.example", "3dyanimda.com")).toBe(false);

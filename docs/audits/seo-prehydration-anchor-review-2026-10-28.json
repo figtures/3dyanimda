@@ -1,0 +1,29 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "reviewer": "Codex (AI, owner-requested bounded delta review)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "reviewedAt": "2026-10-28T02:15:50.985Z",
+  "sourceHash": "fe65e55c1ef18a3bdcb9b6319dbdb3898ac8edba23b8b3dfe0b8a4cf223d9efc",
+  "sourceFileCount": 703,
+  "priorReview": "docs/audits/seo-followup-review-2026-10-28.json",
+  "baselineCommit": "8e3dd74dbc6fea38d71f85c28c571a25f8877934",
+  "scope": "Only in-page navigation fallback for the existing content, homepage and career links. Four Adalar content payloads, metadata and their completed CMS review remain unchanged.",
+  "finding": "Live production query disappeared when the comparison link was clicked before hydration. After hydration the existing router link preserved it. An exported absolute path cannot include a future visitor query.",
+  "change": "InPageLink emits a native fragment-only href and uses React Router useLinkClickHandler after mount, retaining current search and router scroll restoration. Modified and caller-cancelled clicks keep native semantics.",
+  "validation": {
+    "applicationTests": 307,
+    "testFiles": 56,
+    "targetedNavigationTests": 13,
+    "exportedHtmlFallbackCases": 3,
+    "typecheck": "pass",
+    "existingLocalContractTests": 88
+  },
+  "contentReview": "No textual, image, model, route, business-fact or other-brand content changes in this delta. Prior originality/provenance/local evidence remains historical and intact.",
+  "limitations": [
+    "Final-head CI and live post-deployment acceptance are separate gates.",
+    "Code event classification still does not prove GA4 receipt.",
+    "Search Console remains blocked on authenticated account authorization."
+  ]
+}

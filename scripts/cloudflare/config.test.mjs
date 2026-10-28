@@ -1,10 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {loadBrandConfig,brands} from './config.mjs';
+import {loadBrandConfig,brands,productionDomainRoutes} from './config.mjs';
 import worker from '../../deploy/worker.mjs';
 const defaults={SITE_DOMAIN:'3dyanimda.com',WORKER_NAME:'3dyanimda',VITE_SITE_THEME:'studio',VITE_SUPABASE_URL:'https://example.supabase.co',VITE_SUPABASE_PUBLISHABLE_KEY:'sb_publishable_test'};
+test('approved 3dyanimda exports bind apex and www; previews and other brands retain their scope',()=>{
+ for(const brand of brands){
+  const c=loadBrandConfig(brand,{WORKER_CUSTOM_DOMAIN:'true'},null,()=>false);
+  assert.deepEqual(productionDomainRoutes(c,true).routes.map(r=>r.pattern),brand==='3dyanimda'?['3dyanimda.com','www.3dyanimda.com']:[brand+'.com']);
+  assert.deepEqual(productionDomainRoutes(c,false),{});
+  assert.deepEqual(productionDomainRoutes({...c,customDomain:false},true),{});
+ }
+});
 test('empty Cloudflare Builds settings use independent public brand defaults without credentials',()=>{
- for(const brand of brands){const c=loadBrandConfig(brand,{},null,()=>false);assert.equal(c.domain,brand+'.com');assert.equal(c.name,brand);assert.deepEqual(c.credentials,{});assert.equal(c.customDomain,false);assert.equal(c.publicEnv.VITE_GA4_MEASUREMENT_ID,brand==='3dyanimda'?'G-HBTDHJ45M7':'');}
+ for(const brand of brands){const c=loadBrandConfig(brand,{},null,()=>false);assert.equal(c.domain,brand+'.com');assert.equal(c.name,brand);assert.deepEqual(c.credentials,{});assert.equal(c.customDomain,brand==='3dyanimda');assert.equal(c.publicEnv.VITE_GA4_MEASUREMENT_ID,brand==='3dyanimda'?'G-HBTDHJ45M7':'');}
 });
 test('origin-shaped domains normalize safely, wrong brands and URL extras fail closed',()=>{
  const c=loadBrandConfig('maketyanimda',{SITE_DOMAIN:' HTTPS://MAKETYANIMDA.COM/ '},null,()=>false);assert.equal(c.domain,'maketyanimda.com');
@@ -27,6 +35,13 @@ const env={SITE_DOMAIN:'3dyanimda.com',RELEASE_MODE:'approved',ASSETS:{fetch:asy
  if(['/app.html','/404.html'].includes(p))return new Response(null,{status:307,headers:{Location:p.replace('.html','')}});
  return ['/app','/404','/','/robots.txt'].includes(p)?new Response(p):new Response('missing',{status:404});
 }}};
+test('www HTTP and HTTPS redirect once with path and query preserved',async()=>{
+ for(const scheme of ['http','https'])for(const route of ['/','/3d-baski','/3d-tarama','/3d-modelleme']){
+  const response=await worker.fetch(new Request(`${scheme}://www.3dyanimda.com${route}?utm_source=chatgpt`),env);
+  assert.equal(response.status,308);
+  assert.equal(response.headers.get('Location'),`https://3dyanimda.com${route}?utm_source=chatgpt`);
+ }
+});
 test('unknown public routes return true 404, admin routes get shell with noindex',async()=>{
  const missing=await worker.fetch(new Request('https://3dyanimda.com/not-approved'),env);
  assert.equal(missing.status,404);assert.equal(await missing.text(),'/404');assert.equal(missing.headers.get('Location'),null);
