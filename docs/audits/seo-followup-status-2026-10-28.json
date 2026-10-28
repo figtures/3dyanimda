@@ -42,7 +42,8 @@
       "completed": [
         "Read hostname-filtered standard GA4 channels",
         "28 analytics unit tests passed",
-        "Verified fixed category output, query/referrer privacy, first-consented-source retention and reset"
+        "Verified fixed category output, query/referrer privacy, first-consented-source retention and reset",
+        "Fixed an observed early-click query loss before hydration; 13 navigation/fallback tests and all 307 application tests pass. Deployment acceptance pending."
       ],
       "remaining": [
         "Inspect GA4 event-scoped custom definition for source_channel",

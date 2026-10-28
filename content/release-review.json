@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-28T02:00:49.897Z",
+  "reviewedAt": "2026-10-28T02:15:50.985Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "cfc6d6fb1fe237af88bfc08f524bc9bdda52c4f3cc3bb44250f39987bf542904",
-  "sourceFileCount": 701,
+  "sourceHash": "fe65e55c1ef18a3bdcb9b6319dbdb3898ac8edba23b8b3dfe0b8a4cf223d9efc",
+  "sourceFileCount": 703,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -74,7 +74,9 @@
     "latestDependencySecurityApplicationTests": 293,
     "latestDependencySecurityContractTests": 86,
     "latestCombinedReviewNote": "25 October combined anchor/security review verifies the 700-file source snapshot and separately pins package.json/package-lock.json. All 94 previous evidence entries remain unchanged with their original scope and dates; final-head CI and live acceptance are subsequent checks.",
-    "latestBoundedFollowUp": "docs/audits/seo-followup-review-2026-10-28.json"
+    "latestBoundedFollowUp": "docs/audits/seo-followup-review-2026-10-28.json",
+    "latestPrehydrationAnchorReview": "docs/audits/seo-prehydration-anchor-review-2026-10-28.json",
+    "latestPrehydrationAnchorTests": 13
   },
   "evidence": [
     {
@@ -500,6 +502,10 @@
     {
       "file": "scripts/cloudflare/brand.mjs",
       "sha256": "67663a8405fe7e7b345f1d04e21a0abdc10ea271a9284f02308dc4c1d6259496"
+    },
+    {
+      "file": "docs/audits/seo-prehydration-anchor-review-2026-10-28.json",
+      "sha256": "fa97fe23a78971d25daf9c3691e28cc1abb49f28f6d5dc274d365fbbd0246735"
     }
   ],
   "limitations": [

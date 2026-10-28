@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { InPageLink } from '@/components/site/InPageLink';
 import { ArrowDown, ArrowUpRight, Plus } from 'lucide-react';
 import { Seo } from '@/components/site/Seo';
 import { useBrand } from '@/brands/config';
@@ -29,7 +30,7 @@ export default function CareerHub() {
         <p className="career-eyebrow">{brand.name} / Kariyer</p>
         <h1 id="career-title">Ürettiğimiz gelecekte<br /><span>sizin de imzanız olsun.</span></h1>
         <p className="career-intro">{story.intro}</p>
-        <Link className="brand-button" to={{ search, hash: '#acik-pozisyonlar' }}>Fırsatları keşfedin <ArrowDown size={18} aria-hidden="true" /></Link>
+        <InPageLink className="brand-button" hash="#acik-pozisyonlar">Fırsatları keşfedin <ArrowDown size={18} aria-hidden="true" /></InPageLink>
         <div className="career-areas" aria-label="Çalışma alanları">{story.areas.map(area => <span key={area}>{area}</span>)}</div>
       </div>
       <figure className="career-hero-art">
