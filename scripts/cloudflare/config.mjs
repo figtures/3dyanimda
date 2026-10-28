@@ -1,6 +1,14 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { parseEnv } from 'node:util';
 export const brands = ['3dyanimda', '3dsanayi', 'maketyanimda', 'parcayanimda'];
+export function productionDomainRoutes(config, release) {
+  if (!config.customDomain || !release) return {};
+  const domains = [config.domain];
+  // The Worker already redirects www to the canonical host. Bind the alias so
+  // requests can reach that code; Custom Domains also provision DNS and TLS.
+  if (config.brand === '3dyanimda') domains.push('www.' + config.domain);
+  return {routes: domains.map(pattern => ({pattern, custom_domain: true}))};
+}
 const publicKeys = ['VITE_SUPABASE_URL','VITE_SUPABASE_PUBLISHABLE_KEY','VITE_SITE_THEME','VITE_GA4_MEASUREMENT_ID','VITE_GOOGLE_SITE_VERIFICATION','VITE_BING_SITE_VERIFICATION'];
 const configKeys = [...publicKeys,'SITE_DOMAIN','WORKER_NAME','WORKER_CUSTOM_DOMAIN','CLOUDFLARE_ACCOUNT_ID','CLOUDFLARE_API_TOKEN','INDEXNOW_KEY'];
 // Public values already recorded in the four deploy/.env.example files. Secrets
@@ -20,7 +28,7 @@ export function loadBrandConfig(brand, environment=process.env, read=readFileSyn
   if (!brands.includes(brand)) throw new Error('Select one of: '+brands.join(', '));
   const file=`deploy/${brand}/.env`;
   // A local brand file wins. CI may supply only this Worker's build environment.
-  const values={...Object.fromEntries(configKeys.map(k=>[k,''])),...sharedPublicDefaults,SITE_DOMAIN:brand+'.com',WORKER_NAME:brand,WORKER_CUSTOM_DOMAIN:'false',...(brand==='3dyanimda'?{VITE_GA4_MEASUREMENT_ID:'G-HBTDHJ45M7'}:{}),...Object.fromEntries(configKeys.filter(k=>environment[k]).map(k=>[k,environment[k]])),...(exists(file)?parseEnv(read(file,'utf8')):{})};
+  const values={...Object.fromEntries(configKeys.map(k=>[k,''])),...sharedPublicDefaults,SITE_DOMAIN:brand+'.com',WORKER_NAME:brand,WORKER_CUSTOM_DOMAIN:brand==='3dyanimda'?'true':'false',...(brand==='3dyanimda'?{VITE_GA4_MEASUREMENT_ID:'G-HBTDHJ45M7'}:{}),...Object.fromEntries(configKeys.filter(k=>environment[k]).map(k=>[k,environment[k]])),...(exists(file)?parseEnv(read(file,'utf8')):{})};
   for(const key of Object.keys(values)) if(key.startsWith('VITE_') && !publicKeys.includes(key))
     throw new Error('Unrecognized public build setting: '+key);
   const domain=normalizeSiteDomain(values.SITE_DOMAIN,brand);

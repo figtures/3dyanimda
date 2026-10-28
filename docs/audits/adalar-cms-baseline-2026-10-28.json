@@ -1,0 +1,344 @@
+{
+  "meta": [
+    {
+      "id": "e8678225-fba7-4991-9ca4-50ac19f0cb00",
+      "path": "/bolgeler/istanbul/adalar",
+      "noindex": false,
+      "title_en": "",
+      "title_tr": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-22T23:17:09.067236+00:00",
+      "updated_at": "2026-10-22T23:17:09.067236+00:00",
+      "keywords_en": "",
+      "keywords_tr": "",
+      "og_image_url": "",
+      "description_en": "",
+      "description_tr": "Adalar için 3D ürün geliştirme: katlanır masa aksesuarının açık ve kapalı hacmini karşılaştırın; ilk prototipte sınanacak kullanım senaryosunu belirleyin."
+    },
+    {
+      "id": "8f5c064b-65b2-4e34-b341-1b6450a63ca7",
+      "path": "/bolgeler/istanbul/adalar/3d-baski",
+      "noindex": false,
+      "title_en": "",
+      "title_tr": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-22T23:17:09.067236+00:00",
+      "updated_at": "2026-10-22T23:17:09.067236+00:00",
+      "keywords_en": "",
+      "keywords_tr": "",
+      "og_image_url": "",
+      "description_en": "",
+      "description_tr": "Adalar 3D baskı taleplerinde katlanır aksesuarın birbirine yaklaşan parçalarını inceleyin; açıklık denemesi için gerekli kesiti ve referans ölçülerini seçin."
+    },
+    {
+      "id": "f826ac9a-f6f7-4f84-9057-eb5d35eda814",
+      "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+      "noindex": false,
+      "title_en": "",
+      "title_tr": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-22T23:17:09.067236+00:00",
+      "updated_at": "2026-10-22T23:17:09.067236+00:00",
+      "keywords_en": "",
+      "keywords_tr": "",
+      "og_image_url": "",
+      "description_en": "",
+      "description_tr": "Adalar 3D modelleme kapsamında katlanır prototipin parçalarını, açılma yolunu ve son konumlarını tanımlayın; hareket alanını modelleme briefine ekleyin."
+    },
+    {
+      "id": "dac5814c-3e6a-4fe9-b803-0bdb7bcdf71f",
+      "path": "/bolgeler/istanbul/adalar/3d-tarama",
+      "noindex": false,
+      "title_en": "",
+      "title_tr": "",
+      "tenant_id": "10000000-0000-4000-8000-000000000001",
+      "created_at": "2026-10-22T23:17:09.067236+00:00",
+      "updated_at": "2026-10-22T23:17:09.067236+00:00",
+      "keywords_en": "",
+      "keywords_tr": "",
+      "og_image_url": "",
+      "description_en": "",
+      "description_tr": "Adalar 3D tarama için katlanır nesnenin açık mı kapalı mı kaydedileceğini belirleyin; dış görünüş ile açılmış geometriye ilişkin veri ihtiyacını ayırın."
+    }
+  ],
+  "pages": [
+    {
+      "page": {
+        "id": "340b6181-798b-455d-9561-9deb2223da1b",
+        "faq": [
+          {
+            "a": "Kritik mafsal ve çevresindeki yüzeylerle sınırlı bir deneme, tam ürün kararından önce değerlendirilebilir.",
+            "q": "Önce bütün mekanizmayı üretmek gerekir mi?"
+          },
+          {
+            "a": "Bir hareketin denenebilmesi kullanım ömrünün kanıtı değildir; dayanım ihtiyacı ayrı deney koşullarıyla tanımlanmalıdır.",
+            "q": "Katlanan numune son ürün dayanımını gösterir mi?"
+          }
+        ],
+        "city": "istanbul",
+        "kind": "location",
+        "path": "/bolgeler/istanbul/adalar",
+        "image": "",
+        "title": "Adalar 3D ürün geliştirme: katlanabilir ürünün ilk prototipi",
+        "status": "published",
+        "service": "",
+        "summary": "Taşınırken küçülen bir ürün fikrinde açık konum kadar kapanmış hacim de karar konusudur. Örnek olarak katlanan bir masa aksesuarını ele alırken hangi kullanım durumunun önce doğrulanacağını seçin.",
+        "district": "adalar",
+        "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+        "sections": [
+          {
+            "body": "Açık ve kapalı dış ölçüleri, hareket yönünü ve beraber taşınacak eşyaları bir krokide işaretleyin. Mekanizmaya uygulanan kuvvet hakkında bilginiz varsa talebe ekleyin.",
+            "title": "Proje kararını tarif eden bilgiler"
+          },
+          {
+            "body": "Katlama sırasında çarpışan yüzeyleri, parmağın yaklaşacağı boşluğu ve son konumda ürünün duruşunu ayrı kontrol edin. Görünüş maketi bu kontrollerin tamamını kendiliğinden doğrulamaz.",
+            "title": "İlk numuneyi kabul ederken"
+          }
+        ],
+        "editorial": {
+          "answer": "Katlanan ürün için önce açık ve kapalı konumda korunacak hacmi belirleyin; mafsal denemesini bu iki sınırla değerlendirin.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            },
+            {
+              "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+              "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+            }
+          ],
+          "takeaways": [
+            "Çalışma odağı: Katlanabilir ürünün ilk prototipi",
+            "İlk örneğin cevaplayacağı kararı yazın.",
+            "Fiziksel referansı ve dijital dosyayı eşleştirin."
+          ],
+          "relatedPaths": [
+            "/3d-baski",
+            "/3d-tarama",
+            "/3d-modelleme",
+            "/bolgeler/istanbul"
+          ]
+        },
+        "logistics": "Fiziksel referansın hangi durumda paketleneceğini ayrıca belirtin. Kargo, kurye veya elden teslim ihtiyacı teklif kapsamında belirtilmelidir. Atölye ziyareti öncesinde randevu gerekir; diğer şehirlere kargo seçeneği de bulunur.",
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "updated_at": "2026-10-08T16:16:43.53484+00:00",
+        "reviewed_at": "2026-10-07T17:48:02+00:00",
+        "neighborhood": "",
+        "local_context": "Ada ile ana kara arasındaki bağlantı deniz ulaşımına dayanır. Bostancı, Kadıköy, Kartal ve Kabataş iskelelerinden Adalar bağlantıları bulunur. Katlı ve açık durumun fotoğraflarını tek dosyada gönderin. Örnek Mahallesi’ndeki Ataşehir atölyesine ziyaretler randevuyla yapılır."
+      },
+      "payload_hash": "f6b1794ec07980e7ca3adec402ae3299"
+    },
+    {
+      "page": {
+        "id": "edceb01b-a0fd-486b-a283-7c278e18107e",
+        "faq": [
+          {
+            "a": "Renk ihtiyacı konuşulabilir; hareket karşılaştırmasında varyantı karıştırmamak için parça kodu ayrıca kullanılmalıdır.",
+            "q": "Numuneleri tek renk seçmek zorunda mıyım?"
+          },
+          {
+            "a": "Çevre gövdenin hareketi sınırlamadığı doğrulanıyorsa bölgesel numune kapsamı değerlendirilebilir.",
+            "q": "Sadece mafsal bölgesini basmak yeterli olur mu?"
+          }
+        ],
+        "city": "istanbul",
+        "kind": "location",
+        "path": "/bolgeler/istanbul/adalar/3d-baski",
+        "image": "",
+        "title": "Adalar 3D baskı: katlanma boşluğu için baskı numunesi",
+        "status": "published",
+        "service": "3d-baski",
+        "summary": "Katlanabilir bir aksesuarın baskı talebinde öncelik, iki parçanın birbirine yaklaşırken hangi boşluğa ihtiyaç duyduğunu görmek olabilir. Bu amaç için gerekli kesiti seçmek karşılaştırmayı kolaylaştırır.",
+        "district": "adalar",
+        "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+        "sections": [
+          {
+            "body": "Mafsala komşu iki parçayı, birleşim yönünü ve hareket sınırlarını paylaşın. Alternatif aralıkları dosya adlarıyla ayırın; birim bilgisini açıkça yazın.",
+            "title": "Baskı teklifine eklenecek referanslar"
+          },
+          {
+            "body": "Her seçenekte serbest hareket, sürtünme yeri ve kapalı konumdaki dış taşma kaydedilir. Baskı sonrası müdahale yapılmışsa değerlendirme notuna eklenerek karşılaştırma korunur.",
+            "title": "Fiziksel denemede kaydedilecek bulgular"
+          }
+        ],
+        "editorial": {
+          "answer": "Birleşim aralığını karşılaştırırken çevre gövdeyi sabit tutun; hareketi kolaylaştıran değişikliği hangi dosyanın sağladığını kaydedin.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            },
+            {
+              "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+              "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+            }
+          ],
+          "takeaways": [
+            "Çalışma odağı: Katlanma boşluğu için baskı numunesi",
+            "Ölçü birimi, adet ve dosya kodunu belirtin.",
+            "Deneme bulgusunu ilgili numuneyle birlikte kaydedin."
+          ],
+          "relatedPaths": [
+            "/3d-baski",
+            "/bolgeler/istanbul",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        },
+        "logistics": "Elden incelemede hangi parçaların birlikte açılacağını randevu notuna yazın. Baskı tesliminde kargo, kurye ve randevuyla elden alma seçenekleri vardır; şehir dışına kargo gönderilir. Paket boyutu ve hedef adres teslim planına eklenir.",
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "updated_at": "2026-10-08T16:16:43.53484+00:00",
+        "reviewed_at": "2026-10-07T17:48:02+00:00",
+        "neighborhood": "",
+        "local_context": "Adalar, İstanbul’un Anadolu yakasındaki ilçelerden biridir. Alternatif baskıları ayrı etiketli gözlerde taşıyın. Örnek Mahallesi’ndeki Ataşehir atölyesine ziyaretler randevuyla yapılır. Numune ihtiyacı ön görüşmede netleştirilir."
+      },
+      "payload_hash": "6e26f9f93d05cacd44b07ed692d641b3"
+    },
+    {
+      "page": {
+        "id": "293d8aaa-d74e-41a0-be8c-18b7b1351224",
+        "faq": [
+          {
+            "a": "Amacınız yalnızca hacim kontrolüyse konum görselleri yeterli olabilir; hareketli sunum ayrı teslim kalemidir.",
+            "q": "Animasyon dosyası gerekli mi?"
+          },
+          {
+            "a": "Hedef deformasyon ve malzeme yaklaşımı açıklanmalıdır; katı parça hareketiyle aynı kabul yöntemi kullanılmaz.",
+            "q": "Esnek bir bağlantı da modellenebilir mi?"
+          }
+        ],
+        "city": "istanbul",
+        "kind": "location",
+        "path": "/bolgeler/istanbul/adalar/3d-modelleme",
+        "image": "",
+        "title": "Adalar 3D modelleme: katlanabilir ürünün CAD hareket kurgusu",
+        "status": "published",
+        "service": "3d-modelleme",
+        "summary": "Katlanan bir prototipte geometrinin doğru görünmesi, açılma yolunun doğru kurulmasıyla aynı şey değildir. Modelleme kapsamını parçalar ve sınır konumları üzerinden tanımlayın.",
+        "district": "adalar",
+        "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+        "sections": [
+          {
+            "body": "Mafsal eksenini, kullanılacak bağlantı elemanını ve kapalı hacim sınırını eskize ekleyin. Değişmeyecek ölçülerle denenecek ölçüleri farklı işaretleyin.",
+            "title": "Tasarım girdilerini netleştirme"
+          },
+          {
+            "body": "Açık, ara ve kapalı pozisyonlardaki girişimler incelenir; geometrik çakışmanın bulunmaması fiziksel dayanım onayı yerine geçmez. Baskıya aktarılacak parçalar ayrı revizyonla teslim edilir.",
+            "title": "Model incelemesinde karar ölçütleri"
+          }
+        ],
+        "editorial": {
+          "answer": "Katlama ekseni ve son konumları tanımlayın; CAD hareketiyle fiziksel bağlantı dayanımının farklı onaylar gerektirdiğini hesaba katın.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            },
+            {
+              "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+              "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+            }
+          ],
+          "takeaways": [
+            "Çalışma odağı: Katlanabilir ürünün CAD hareket kurgusu",
+            "Değişmeyecek ölçülerle yorumlanacak alanları ayırın.",
+            "Son kabul edilen dosyanın sürümünü belirtin."
+          ],
+          "relatedPaths": [
+            "/3d-modelleme",
+            "/bolgeler/istanbul",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        },
+        "logistics": "Atölye görüşmesine gelecek referansı sökmeden önce bağlantıların fotoğrafını çekin. Dosya tesliminin yanında fiziksel örnek taşınacaksa kargo, kurye veya elden yöntem görüşülebilir. Ataşehir Örnek Mahallesi atölyesine ziyaret randevu gerektirir.",
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "updated_at": "2026-10-08T16:16:43.53484+00:00",
+        "reviewed_at": "2026-10-07T17:48:02+00:00",
+        "neighborhood": "",
+        "local_context": "Adalar, İstanbul’un Anadolu yakasındaki ilçelerden biridir. Dijital inceleme için üç konuma ait ekran görüntüsü isteyin. Örnek Mahallesi’ndeki Ataşehir atölyesine ziyaretler randevuyla yapılır. Numune ihtiyacı ön görüşmede netleştirilir."
+      },
+      "payload_hash": "ae5e266db23760d0f963709122d4247f"
+    },
+    {
+      "page": {
+        "id": "b3457116-a893-450a-a99e-00e36eeb403e",
+        "faq": [
+          {
+            "a": "Yüzey taraması görünmeyen mekanizmayı doğrudan kaydetmez; erişim veya ilave ölçü bilgisi gerekir.",
+            "q": "Kapalı durumdan iç mafsal çıkarılabilir mi?"
+          },
+          {
+            "a": "Konum verileri hareket tanımı değildir; mafsallı CAD kurulumunun ayrıca istenmesi gerekir.",
+            "q": "Tarama hareketli dijital model oluşturur mu?"
+          }
+        ],
+        "city": "istanbul",
+        "kind": "location",
+        "path": "/bolgeler/istanbul/adalar/3d-tarama",
+        "image": "",
+        "title": "Adalar 3D tarama: katlanır referansın tarama pozisyonları",
+        "status": "published",
+        "service": "3d-tarama",
+        "summary": "Mevcut katlanır nesneyi yeni tasarıma referans yapmak için tek kapalı görüntü yeterli olmayabilir. Taramada dış yüzey mi, açık konum geometrisi mi gerektiğini tarif edin.",
+        "district": "adalar",
+        "evidence": "İşletme teyidi — 7 Ekim 2026: Kargo, kurye ve elden teslim mevcuttur; diğer şehirlere kargo gönderilir. 3D tarama ve yerinde tarama hizmeti vardır. Örnek Mahallesi, Ataşehir atölyesine gelmeden randevu alınmalıdır. Bu kayıt hizmet koşullarının teyididir; özgünlük/yayın onayı değildir.",
+        "sections": [
+          {
+            "body": "Nesnenin açılmış görünüşünü, menteşe yakınlarını ve sökülmeden görülemeyen alanları fotoğraflayın. Hareketli parçaların geçici olarak sabitlenmesine izin verilip verilmediğini belirtin.",
+            "title": "Taramadan önce nesne ve erişim bilgisi"
+          },
+          {
+            "body": "Farklı konumların aynı teslimde bulunması isteniyorsa her konum ayrı adlandırılır. Görülemeyen yüzeyler ile ölçüyle tamamlanacak kısımlar teslim kapsamından ayırt edilir.",
+            "title": "Veri tesliminin sınırını belirleme"
+          }
+        ],
+        "editorial": {
+          "answer": "Tarama konumlarını yeni tasarımın kullanacağı yüzeylere göre seçin; kapalı nesnenin iç bağlantılarını görünür veri gibi değerlendirmeyin.",
+          "sources": [
+            {
+              "url": "https://sehirplanlama.ibb.istanbul/adalarkanip-surdurulebilir-ulasim-ve-altyapi-sistemleri/",
+              "title": "İBB Şehir Planlama Müdürlüğü — Adalar sürdürülebilir ulaşım ve altyapı sistemleri"
+            },
+            {
+              "url": "https://adalar.gov.tr/ulasim",
+              "title": "Adalar Kaymakamlığı — Ulaşım"
+            },
+            {
+              "url": "https://zabita.ibb.gov.tr/birimlerimiz/anadolu-yakasi-zabita-mudurlugu/",
+              "title": "İBB Zabıta Daire Başkanlığı — Anadolu Yakası Zabıta Müdürlüğü"
+            }
+          ],
+          "takeaways": [
+            "Çalışma odağı: Katlanır referansın tarama pozisyonları",
+            "Nesnenin boyutunu ve erişim durumunu açıklayın.",
+            "Yüzey ağı ve CAD ihtiyacını ayırın."
+          ],
+          "relatedPaths": [
+            "/3d-tarama",
+            "/bolgeler/istanbul",
+            "/cozumler/urun-gelistirme-prototipleri"
+          ]
+        },
+        "logistics": "Ürün bulunduğu yerde kalacaksa tarama için çevresinde gereken erişimi ön görüşmede tarif edin. Tarama hizmeti yerinde de sunulur; erişim ve çalışma şartları önceden görüşülür. Atölyeye gelmeden randevu alınır, fiziksel referansın geliş ve dönüş yöntemi kararlaştırılır.",
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "updated_at": "2026-10-08T16:16:43.53484+00:00",
+        "reviewed_at": "2026-10-07T17:48:02+00:00",
+        "neighborhood": "",
+        "local_context": "Ada ile ana kara arasındaki bağlantı deniz ulaşımına dayanır. Bostancı, Kadıköy, Kartal ve Kabataş iskelelerinden Adalar bağlantıları bulunur. Taşımada açılabilecek parçaları koruyun. Örnek Mahallesi’ndeki Ataşehir atölyesine ziyaretler randevuyla yapılır."
+      },
+      "payload_hash": "bbec9eed37570ee2124cd799373bd698"
+    }
+  ],
+  "other_pages_hash": "04c6c7a91f2a78ae5a6b9bfd62411c16"
+}
