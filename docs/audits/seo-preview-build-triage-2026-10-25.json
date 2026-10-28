@@ -1,0 +1,36 @@
+{
+  "kind": "nonproduction-preview-build-triage",
+  "observedAt": "2026-10-25T01:19:03.876715+00:00",
+  "method": "GitHub check payloads and read-only connected Cloudflare dashboard log inspection",
+  "current": {
+    "pullRequest": 17,
+    "head": "7243c13030cac849cd25dd41f049fd77166cd9f0",
+    "brand": "3dyanimda",
+    "buildId": "e4a05901-326a-4bed-8108-d0adea31ab64",
+    "buildCommand": "npm run build",
+    "buildResult": "success",
+    "deployCommand": "npx wrangler preview",
+    "deployResult": "failure",
+    "error": "Wrangler configuration is missing a previews block",
+    "productionDeployInvoked": false
+  },
+  "priorSameFailure": {
+    "pullRequest": 16,
+    "head": "0eeaaa51bd3a964455bdeef5c703dd114a25e1d4",
+    "buildId": "4046e163-18a6-4ba9-a516-fc32781cac67",
+    "buildResult": "success",
+    "deployCommand": "npx wrangler preview",
+    "error": "Wrangler configuration is missing a previews block"
+  },
+  "interpretation": "Existing optional branch-preview configuration failure, reproduced before the current anchor changes. It is separate from release export/dry-run checks and the main production deployment. No preview setting, security control, or required check was disabled.",
+  "requiredBeforeRelease": [
+    "Updated dependency audit and all repository Actions on the final PR head",
+    "Cursor review result on final head",
+    "Normal expected-head merge",
+    "Actual main production build and postdeploy browser verification"
+  ],
+  "limitations": [
+    "Detailed Cloudflare log inspected for 3dyanimda only; other three brand check failures observed but their precise log causes are not inferred.",
+    "This record does not assert a successful deployment of PR17."
+  ]
+}

@@ -18,7 +18,7 @@ const schema = z.object({
   cover_letter: z.string().trim().max(4000).optional().or(z.literal("")),
   portfolio_url: z.string().trim().url("Geçerli URL").max(300).optional().or(z.literal("")),
   linkedin_url: z.string().trim().url("Geçerli URL").max(300).optional().or(z.literal("")),
-  kvkk_consent: z.literal(true, { errorMap: () => ({ message: "Açık rıza vermelisiniz" }) }),
+  kvkk_consent: z.literal(true, { error: "Açık rıza vermelisiniz" }),
 });
 
 

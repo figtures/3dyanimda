@@ -11,7 +11,8 @@ import './career.css';
 
 export default function CareerHub() {
   const brand = useBrand();
-  const query = previewSearch(useLocation().search);
+  const { search } = useLocation();
+  const query = previewSearch(search);
   const { data, isPending, isError, refetch } = usePublicPage('/kariyer');
   const jobs = (data || []) as CareerRole[];
   const machineOps = useFeature('career.machine_ops');
@@ -28,7 +29,7 @@ export default function CareerHub() {
         <p className="career-eyebrow">{brand.name} / Kariyer</p>
         <h1 id="career-title">Ürettiğimiz gelecekte<br /><span>sizin de imzanız olsun.</span></h1>
         <p className="career-intro">{story.intro}</p>
-        <a className="brand-button" href="#acik-pozisyonlar">Fırsatları keşfedin <ArrowDown size={18} aria-hidden="true" /></a>
+        <Link className="brand-button" to={{ search, hash: '#acik-pozisyonlar' }}>Fırsatları keşfedin <ArrowDown size={18} aria-hidden="true" /></Link>
         <div className="career-areas" aria-label="Çalışma alanları">{story.areas.map(area => <span key={area}>{area}</span>)}</div>
       </div>
       <figure className="career-hero-art">

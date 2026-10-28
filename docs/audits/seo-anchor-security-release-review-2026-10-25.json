@@ -1,0 +1,307 @@
+{
+  "policy": "global-originality-v1",
+  "result": "pass",
+  "status": "candidate-not-published",
+  "reviewedAt": "2026-10-25T01:21:31.294969Z",
+  "reviewer": "Codex (AI, owner-delegated combined delta reviewer)",
+  "reviewerType": "ai_agent",
+  "humanReviewPerformed": false,
+  "approvalScope": "Bounded source, dependency compatibility and recorded local-test review for the combined in-page navigation and dependency-security candidate. Final-head CI, production deployment and live acceptance are independent subsequent gates.",
+  "candidateSnapshot": {
+    "sourceHash": "15abc3f3e748b8483628362ea2121c5029d5d3aedabe9b65eb5ba9d91125a52b",
+    "sourceFileCount": 700,
+    "sourceSnapshotContract": "Sorted src/public/content files, excluding content/release-review.json; test files are included. package.json and package-lock.json are outside this source hash and are directly pinned as certificate evidence."
+  },
+  "publishedBaseline": {
+    "commit": "e526216401c2cf51c85ae334398d318aa754c78d",
+    "tree": "13a0b8a0d6096d75ad62b270c7d208372f3e064c",
+    "remoteTreeTruncated": false,
+    "sourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6",
+    "sourceFileCount": 694,
+    "reconstructedSourceHash": "1a51fe9fd954334279287d58620df5ee9d0c571b7ff20f57f8fe342f0abc98a6"
+  },
+  "priorAnchorCandidate": {
+    "commit": "7243c13030cac849cd25dd41f049fd77166cd9f0",
+    "sourceHash": "a7a8145c68f67b35250d050cce6235ca77ea2c01f82333c0db66d912803e2d1c",
+    "sourceFileCount": 697,
+    "reconstructedSourceHash": "a7a8145c68f67b35250d050cce6235ca77ea2c01f82333c0db66d912803e2d1c",
+    "review": "docs/audits/seo-anchor-navigation-review-2026-10-25.json",
+    "status": "Historical bounded source-review record retained byte-for-byte; its pending deployment and CI statements keep their original point-in-time meaning."
+  },
+  "baselineReconstruction": {
+    "method": "Compare all candidate src/public/content files with the immutable published-main Git tree. Reconstruct main in memory by excluding six new tests and substituting five exact baseline components; every substituted and retained blob matches the immutable tree. Separately reconstruct the first anchor candidate by excluding the three security tests and substituting only the two original career forms. No worktree source is reset or overwritten.",
+    "result": "pass",
+    "modifiedMainSourcePaths": [
+      "src/pages/ContentPage.tsx",
+      "src/pages/career/CareerHub.tsx",
+      "src/pages/career/JobApplication.tsx",
+      "src/pages/career/MachineOperation.tsx",
+      "src/themes/PrintHero.tsx"
+    ],
+    "addedSourcePaths": [
+      "src/components/quote/quote-schema.test.ts",
+      "src/content/editorial.validation.test.ts",
+      "src/pages/ContentPage.navigation.test.tsx",
+      "src/pages/career/CareerApplications.validation.test.tsx",
+      "src/pages/career/CareerHub.navigation.test.tsx",
+      "src/themes/PrintHero.navigation.test.tsx"
+    ],
+    "missingSourcePaths": [],
+    "unchangedMainSourceFiles": 689,
+    "baselineSubstitutions": [
+      {
+        "path": "src/pages/ContentPage.tsx",
+        "gitBlobSha": "f25b6af61978025b3eee74e64b69da12061a6158",
+        "sha256": "d6d18a6437d55dca67c502f1de6fc38ce3c213dd6f39079733c68f80fe0fdec7",
+        "bytes": 10727
+      },
+      {
+        "path": "src/pages/career/CareerHub.tsx",
+        "gitBlobSha": "18e357dd5743f884b44b19e90209d5a2bcb967d6",
+        "sha256": "6e7477bfdbb7bb5d74a05e3ba6607e54d5d036164475c53079323a0d3fc3ff18",
+        "bytes": 5554
+      },
+      {
+        "path": "src/pages/career/JobApplication.tsx",
+        "gitBlobSha": "14981e9691376a3d7519a7052f3eadfce7a9e5a1",
+        "sha256": "4ce520d5f0f66a1fc716b6085eef204f4ea1c6112b7900a06c24ae8df3b505c8",
+        "bytes": 8523
+      },
+      {
+        "path": "src/pages/career/MachineOperation.tsx",
+        "gitBlobSha": "34f5cec0d8b57790467df3a4c496ff12eed707a9",
+        "sha256": "637c743b4f3fb5ba4e0cc58a2974bc3bf4a8d8eb3680d552f12cbed3d840815c",
+        "bytes": 9462
+      },
+      {
+        "path": "src/themes/PrintHero.tsx",
+        "gitBlobSha": "36fe6d7f4f56a161226e5ae0b73fd63ff46bc8aa",
+        "sha256": "bda37bf92a82dcd0a35245547ae84de32439c5f5a897dbe66b95576df3ad7b01",
+        "bytes": 5527
+      }
+    ]
+  },
+  "dependencyScope": {
+    "baselinePackageBlobs": [
+      {
+        "path": "package-lock.json",
+        "sha": "0fc74cb5475abaff7d3c9b0d221e97e557d82c20",
+        "size": 403518
+      },
+      {
+        "path": "package.json",
+        "sha": "9eae10d4c5e0a27492d76fe7a72eb9ddf84367bd",
+        "size": 7475
+      }
+    ],
+    "packageJsonChanges": [
+      {
+        "path": "dependencies.zod",
+        "before": "^3.25.76",
+        "after": "4.6.7"
+      },
+      {
+        "path": "overrides.miniflare@5.20261012.0-beta",
+        "before": null,
+        "after": {
+          "undici": "7.30.1"
+        }
+      }
+    ],
+    "scriptsUnchangedFromPublishedMain": true,
+    "filesPinnedOutsideSourceHash": [
+      {
+        "path": "package.json",
+        "sha256": "9d7413e742ff22a709a957c53a729a82d7a29c847b0dda20bb8e18d28c455ab5",
+        "bytes": 7541
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "22f29381b57d4a4011d4884f436223972d723e886622f4eda516eece64561af5",
+        "bytes": 403113
+      }
+    ],
+    "resolvedVersions": {
+      "wrangler": "4.151.0",
+      "miniflare": "5.20261012.0-beta",
+      "miniflareUndici": "7.30.1",
+      "rootUndici": "8.12.2",
+      "fastUri": "3.1.9",
+      "zod": "4.6.7",
+      "zodLockNodes": [
+        "node_modules/zod"
+      ]
+    },
+    "scopeNote": "Wrangler stays at 4.151.0. The Undici override is restricted to miniflare@5.20261012.0-beta. Fast-uri advances within its existing transitive range; application and chromium-bidi Zod resolve to 4.6.7. Two career forms preserve Turkish consent errors using the Zod v4 error parameter. No CI gate or preview setting is disabled."
+  },
+  "localValidationEvidence": {
+    "securityReview": {
+      "file": "docs/audits/dependency-security-review-2026-10-25.json",
+      "sha256": "60d24a176019aeac13d66b8aa037e11eda705e454790102eb5fe5e9662d86625",
+      "reportedBy": "Dependency implementation agent; exact seven patch-file hashes independently verified before certificate recording",
+      "installation": "Separate clean npm ci; shared node_modules untouched",
+      "results": [
+        {
+          "command": "npm ci --registry=https://registry.npmjs.org",
+          "result": "pass",
+          "installedPackages": 615
+        },
+        {
+          "command": "npm audit --json --registry=https://registry.npmjs.org",
+          "result": "pass",
+          "vulnerabilities": {
+            "info": 0,
+            "low": 0,
+            "moderate": 0,
+            "high": 0,
+            "critical": 0,
+            "total": 0
+          }
+        },
+        {
+          "command": "npm run typecheck",
+          "result": "pass"
+        },
+        {
+          "command": "npm test -- --reporter=dot",
+          "result": "pass",
+          "files": 55,
+          "tests": 293,
+          "newRegressionTests": 10
+        },
+        {
+          "command": "npm run test:search:local",
+          "result": "pass",
+          "tests": 86
+        },
+        {
+          "command": "npm run test:db",
+          "result": "pass"
+        },
+        {
+          "command": "npm run check:3dyanimda",
+          "result": "pass",
+          "details": "Vite production build and Wrangler 4.151.0 deploy --dry-run; no upload."
+        },
+        {
+          "check": "Miniflare actual local Worker POST request and JSON response",
+          "result": "pass",
+          "details": "Miniflare public convertV4MiniflareOptions bridge, scoped Undici version assertion, dispatchFetch and dispose; no browser."
+        },
+        {
+          "command": "git diff --check on changed package and application paths",
+          "result": "pass"
+        }
+      ]
+    },
+    "anchorReview": {
+      "file": "docs/audits/seo-anchor-navigation-review-2026-10-25.json",
+      "scope": "Nine navigation regressions falsified against native anchors; 12 focused tests and typecheck passed at the earlier anchor candidate. The full 293-test clean-install run in the security review includes the combined source."
+    }
+  },
+  "independentReview": {
+    "reviewer": "Independent Codex review agent (AI)",
+    "humanReviewPerformed": false,
+    "result": "no blocking findings",
+    "scope": "The seven security patch files match both the clean validation copy and the recorded SHA-256 values. The root reviewer and combined reviewer separately verified package.json has only the expected Zod field and scoped Miniflare override changes."
+  },
+  "unchangedScope": [
+    "PrinterScene exactly matches published-main Git blob 2c11188520d6f141662795d6d9b13ad1bbe8c654; performance experiments are excluded.",
+    "Other-brand HomeHero native anchor and BrandLayout skip link remain unchanged from published main.",
+    "Content and asset manifest hashes remain unchanged.",
+    "All 94 inherited certificate evidence entries and their file bytes/hashes, original dates and coverage are preserved. No historical all-route browser evidence is relabeled as newly run."
+  ],
+  "previewBuildTriage": {
+    "file": "docs/audits/seo-preview-build-triage-2026-10-25.json",
+    "sha256": "663747c5ffaee5fd7534195d62367b38fc1599c12585ae1bf9eb8f62edc51721",
+    "scope": "Four branch-preview checks failed on the earlier anchor head. The root reviewer confirmed the 3D Yanimda preview fails after a successful Vite build because its previews configuration block is absent; the same cause was observed on PR16. Exact causes for the other brands are not inferred. Production deployment was not invoked by the failing preview command."
+  },
+  "historicalEvidencePreservation": {
+    "records": 94,
+    "changedFiles": [],
+    "evidenceEntriesPreservedExactly": true,
+    "originalDatesAndCoveragePreserved": true
+  },
+  "files": [
+    {
+      "path": "src/pages/ContentPage.tsx",
+      "sha256": "fb017de92cb8e08a891e04f8f5ba4ea0da6409a13147577c19ca2f569fc96f43",
+      "bytes": 10845
+    },
+    {
+      "path": "src/pages/career/CareerHub.tsx",
+      "sha256": "d33ef0ba8860237a9e458db3296d3575dd99d5c4d32fe0b0ffaba1ce5cef79d9",
+      "bytes": 5600
+    },
+    {
+      "path": "src/pages/career/JobApplication.tsx",
+      "sha256": "27cbc9942a4603103157f7d336a56ef2b37e982dafc30fb232d79a454d6098aa",
+      "bytes": 8499
+    },
+    {
+      "path": "src/pages/career/MachineOperation.tsx",
+      "sha256": "e23226b1e3e7d477abaa7c1d392bc3eafa734d63853e9394f43bf4138a54dbe9",
+      "bytes": 9438
+    },
+    {
+      "path": "src/themes/PrintHero.tsx",
+      "sha256": "e4817f2748ab3069d1ab15b9de4286e06185d8db649f8f81647b9db5bdb70cbf",
+      "bytes": 5600
+    },
+    {
+      "path": "src/components/quote/quote-schema.test.ts",
+      "sha256": "4787b6a4a020d7f8bddf41b836db78e05ee3f68abd7b61dafb0edeb808b756c8",
+      "bytes": 1192
+    },
+    {
+      "path": "src/content/editorial.validation.test.ts",
+      "sha256": "db65ec764ea929ca7d05084a12c3b6fa351ef851890908a06f4e5b26710eb0d8",
+      "bytes": 970
+    },
+    {
+      "path": "src/pages/ContentPage.navigation.test.tsx",
+      "sha256": "4fb08776f65013477c238192c6a1651c76ec20f9ed1c08e59b2484cbe5a8a8cb",
+      "bytes": 4962
+    },
+    {
+      "path": "src/pages/career/CareerApplications.validation.test.tsx",
+      "sha256": "d7410503dd1753dbc457208e46f385c95bc386b4ed389ecf522b71ce05836fd7",
+      "bytes": 7600
+    },
+    {
+      "path": "src/pages/career/CareerHub.navigation.test.tsx",
+      "sha256": "35b7218d7c91aed55a92d00d05013289cdc8f0f5ba04899979c80e082714b713",
+      "bytes": 2338
+    },
+    {
+      "path": "src/themes/PrintHero.navigation.test.tsx",
+      "sha256": "919f934edfd6a9da5459a8a94dd19f2184cdd4943bf1fbe7feb75869d22e4902",
+      "bytes": 2996
+    },
+    {
+      "path": "package.json",
+      "sha256": "9d7413e742ff22a709a957c53a729a82d7a29c847b0dda20bb8e18d28c455ab5",
+      "bytes": 7541
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "22f29381b57d4a4011d4884f436223972d723e886622f4eda516eece64561af5",
+      "bytes": 403113
+    }
+  ],
+  "publicationState": {
+    "commitForCombinedDelta": null,
+    "finalHeadRepositoryActions": "pending: all 12 repository Actions must pass",
+    "finalHeadCursorReview": "pending",
+    "productionDeployment": "pending: all four brands",
+    "liveAnchorAcceptance": "pending"
+  },
+  "limitations": [
+    "This is an AI review under owner delegation, not a human attestation.",
+    "The source hash does not include package files; their exact byte hashes are separately enforced by the release certificate evidence list.",
+    "Current local tests are recorded in the dependency review; no fresh all-route browser crawl or new performance score is claimed here.",
+    "The first anchor head failed the npm audit gate; its successful checks are not treated as results for the upcoming combined head.",
+    "The documented branch-preview configuration failure remains a separate issue. No check, setting or security control is bypassed or disabled.",
+    "No live analytics receipt, DNS ownership, indexing, ranking or business-delivery claim is added."
+  ]
+}
