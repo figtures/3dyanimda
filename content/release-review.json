@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-28T02:15:50.985Z",
+  "reviewedAt": "2026-10-29T23:48:07.735Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "fe65e55c1ef18a3bdcb9b6319dbdb3898ac8edba23b8b3dfe0b8a4cf223d9efc",
-  "sourceFileCount": 703,
+  "sourceHash": "8df064a59a0bb70cd8b01b2b5f9284940e9761b21c39cd16f1a573e8a75254b5",
+  "sourceFileCount": 713,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -58,10 +58,18 @@
     "latestSeoGapReview": "docs/audits/seo-gap-release-review-2026-10-23.json",
     "latestSeoGapExistingLandingUpdates": 17,
     "latestSeoGapNewPages": 5,
-    "historicalEvidenceNote": "Earlier all-route/theme evidence keeps its original coverage and dates. The latest bounded review describes current tests and remaining CI/live verification separately.",
+    "historicalEvidenceNote": "PR17/18 publication and 20 successful main checks verified on 30 October. The combined candidate passes source/unit/contract/build review; new PR browser/export/Lighthouse and production acceptance remain separate pending gates. Historical records keep their original dates and scope.",
     "latestGbpContrastReview": "docs/audits/seo-gbp-contrast-review-2026-10-23.json",
     "latestGbpContactVerification": "docs/audits/seo-gbp-contact-verification-2026-10-23.json",
     "latestDesktopContrastReview": "docs/audits/seo-desktop-contrast-review-2026-10-23.json",
+    "latestLocalUrlReview": "docs/audits/local-url-migration-2026-10-25.json",
+    "latestLocalCommercialReview": "docs/audits/local-commercial-review-2026-10-25.json",
+    "latestServiceFaqSchemaReview": "docs/audits/service-faq-schema-review-2026-10-25.json",
+    "latestSeoChecklistReview": "docs/audits/seo-checklist-review-2026-10-25.json",
+    "latestMapsHoursVerification": "docs/audits/seo-maps-hours-verification-2026-10-25.json",
+    "latestPreSitemapReview": "docs/audits/seo-pre-sitemap-status-2026-10-26.json",
+    "latestPreSitemapNote": "26 October status is historical. 28 October main a3266d2 includes www, Adalar, anchor and security fixes. 30 October reconciliation keeps these changes and prepares the remaining flat-URL release; explicit push/CI approval received. Sitemap/indexing submission remains on hold.",
+    "latestMeasurementFollowup": "docs/audits/seo-measurement-followup-2026-10-26.json",
     "latestAnchorNavigationReview": "docs/audits/seo-anchor-navigation-review-2026-10-25.json",
     "latestAnchorBaselineReconstruction": "docs/audits/seo-runtime-baseline-reconstruction-2026-10-25.json",
     "latestAnchorNavigationTests": 9,
@@ -76,7 +84,8 @@
     "latestCombinedReviewNote": "25 October combined anchor/security review verifies the 700-file source snapshot and separately pins package.json/package-lock.json. All 94 previous evidence entries remain unchanged with their original scope and dates; final-head CI and live acceptance are subsequent checks.",
     "latestBoundedFollowUp": "docs/audits/seo-followup-review-2026-10-28.json",
     "latestPrehydrationAnchorReview": "docs/audits/seo-prehydration-anchor-review-2026-10-28.json",
-    "latestPrehydrationAnchorTests": 13
+    "latestPrehydrationAnchorTests": 13,
+    "latestReconciliationReview": "docs/audits/seo-reconciliation-review-2026-10-30.json"
   },
   "evidence": [
     {
@@ -285,7 +294,7 @@
     },
     {
       "file": "scripts/quality/public-export-routes.mjs",
-      "sha256": "1e2cc5224744c3124901976e3d8685a09a90c56582f019aab819db9aa9c7df53"
+      "sha256": "81ebda8053484c9197c663cff3bc179347488d0d17f59244fcea60cccb73667d"
     },
     {
       "file": "scripts/quality/public-export-routes.test.mjs",
@@ -293,15 +302,15 @@
     },
     {
       "file": "scripts/export-sites.mjs",
-      "sha256": "aab69f7fea4213077c6094fce72d7f24ffd9d976ddac8658193080eec7144bda"
+      "sha256": "4910a3e2e855482469a5d93cef0bc05df88f76d923110383698100c029fff932"
     },
     {
       "file": "scripts/quality/audit-approved-html.mjs",
-      "sha256": "c98c790ab29bc16ce6aa2f6a613bc192c1ab4938019fc20088a52b9cc130225a"
+      "sha256": "ea85d765ffbca31ebf0f416497005c81e82269bb937998ace111dc48a123feae"
     },
     {
       "file": "scripts/quality/audit-search-contracts.mjs",
-      "sha256": "35650a6268aed0a2b690255fc307e3c56183582f1a93d575e7d7e670b7ebfe7b"
+      "sha256": "96cdfdaf53b0ce115f29145a4314f63a307be97f718c415d12bef8cef7fdc312"
     },
     {
       "file": "scripts/cloudflare/audit-routing.mjs",
@@ -493,11 +502,11 @@
     },
     {
       "file": "scripts/cloudflare/config.mjs",
-      "sha256": "c9cfca61f925068054ea9c402241a0a159354aa6e7b48ce642fb956547ab11de"
+      "sha256": "0cff9feeb1434429f14e3aaeb15fc837e224bc2a4777ad92a57dbad8f42d78ef"
     },
     {
       "file": "scripts/cloudflare/config.test.mjs",
-      "sha256": "b97a964b09e2761cc5ba3ff39a4125b8f4950922afdcdcdc0ab121c9e3e763ad"
+      "sha256": "a482d92911b3f1bf41d001962d93dd91457e3f6f486d30c104500a4c04d3c310"
     },
     {
       "file": "scripts/cloudflare/brand.mjs",
@@ -506,6 +515,222 @@
     {
       "file": "docs/audits/seo-prehydration-anchor-review-2026-10-28.json",
       "sha256": "fa97fe23a78971d25daf9c3691e28cc1abb49f28f6d5dc274d365fbbd0246735"
+    },
+    {
+      "file": "docs/audits/local-url-migration-2026-10-25.json",
+      "sha256": "1d11c11edef3324a6c7d278fca34b3c5f399f922aae2b5a4ceb709a2f90fc7c7"
+    },
+    {
+      "file": "src/lib/local-urls.mjs",
+      "sha256": "b71ad3a004fad84568d7a26bacd00e0ebc34bd853d798c6095dc6a7cd5f1d051"
+    },
+    {
+      "file": "scripts/search/local-url-migration.test.mjs",
+      "sha256": "0824709552c7edcf1e7fd33b89dc1494f90f98042d8dc8baaad8ed9c7d58bd55"
+    },
+    {
+      "file": "docs/audits/local-commercial-review-2026-10-25.json",
+      "sha256": "3bde3e978d0845a429531b6036c79375a23553a68bdfc9613e774bc917b63895"
+    },
+    {
+      "file": "src/components/brand/BrandLayout.tsx",
+      "sha256": "71b4905568a212993fd23e3303478f94c505a28da4e70864cd5c77f0f5890952"
+    },
+    {
+      "file": "src/components/brand/print-footer.css",
+      "sha256": "0b20404ef05d10fafc6bf9cce5ded3fc174fcb86e74572053789364e6e05e3f4"
+    },
+    {
+      "file": "src/pages/ContentPage.tsx",
+      "sha256": "14d54af746eaff8b8a6ebb80f3a04f769e12661cc404ac94dde65969cdfde504"
+    },
+    {
+      "file": "src/components/brand/LocalCommercialContent.tsx",
+      "sha256": "a1cf8ec10b1bb95abfda37c28b86b26378dc8b9506ad2ce3d844851b27ac8a2c"
+    },
+    {
+      "file": "src/components/brand/LocalCommercialContent.test.tsx",
+      "sha256": "26b78c19b83d4329d57603dba20ba3acdced2d408f5ad9614853f6d4f7c5b9db"
+    },
+    {
+      "file": "src/components/brand/PopularDistricts.tsx",
+      "sha256": "9f9ef80445acc8cd0b5d2f00c0bc594ac9ddee44c48cea6e097bc2e20e0f2072"
+    },
+    {
+      "file": "src/components/brand/local-commercial.ts",
+      "sha256": "406070bad5dbd0f734e52ceaf75694f249452802b1010f93ee7478ec840a0869"
+    },
+    {
+      "file": "src/components/brand/local-commercial.css",
+      "sha256": "91f0092c416dcbda760b6e897ed1863e3069abde4338a2febe958036d2f11bce"
+    },
+    {
+      "file": "docs/audits/service-faq-schema-review-2026-10-25.json",
+      "sha256": "af0624b8cfbf964fa47b4a598057a2905f9a87a66f4d3bb48889a3cd8740766e"
+    },
+    {
+      "file": "src/content/service-experience.mjs",
+      "sha256": "d28346ace5e527cdc16b6bacea3c51536f7c82e5b8cfb3be4ae6596777f52c2c"
+    },
+    {
+      "file": "src/content/service-experience.test.tsx",
+      "sha256": "e138000562cf57f9ce6512b63ecae9d6ad3b73d3111fc7a73b914464fe2be4c5"
+    },
+    {
+      "file": "src/content/structured-content.ts",
+      "sha256": "ee28ffb3cc9eaebe9bbe920b5fef7620ff7c406ab0c78c37b6e05473fe8dd148"
+    },
+    {
+      "file": "src/content/structured-content.test.ts",
+      "sha256": "38c36997524861f30d9f4e1b9b8456ff3f3117267ecc46c279e0690057aa4b52"
+    },
+    {
+      "file": "src/lib/schema-graph.ts",
+      "sha256": "4e8c760a54148e91e3a1080007540390c346603380b9f9b391b8a7fa84f48f4a"
+    },
+    {
+      "file": "src/components/brand/ContentFaq.tsx",
+      "sha256": "4d6ea6d6ba05b933a4af3bbb060f36c1eb7a9aaed0d7b8fd40fe0c545f9c5609"
+    },
+    {
+      "file": "src/components/brand/ServiceConnections.tsx",
+      "sha256": "354430cb7f682888dc121b41f120bd0831491ae9a17af74e2872e5f7608fbd03"
+    },
+    {
+      "file": "scripts/quality/live-schema-inventory.ts",
+      "sha256": "484cb719d0cf8313a77bc0d93ce1479ebc6d13c648b569b3ed77149007d90591"
+    },
+    {
+      "file": "scripts/test-content-inventory.mjs",
+      "sha256": "6a55df14ebccf3d0a3b37ddea689e68d4fb1e8634b39896abf2d154a8223b87c"
+    },
+    {
+      "file": "scripts/test-local-content.mjs",
+      "sha256": "36f1af7441839e1c522e63e2cdff4cac744b7bcaf0572f79d2219a248a930054"
+    },
+    {
+      "file": ".env.example",
+      "sha256": "e8447948ef9821f0c080207cdd7d74e545478811d4e0bda6b0b5e89bf9eef412"
+    },
+    {
+      "file": "deploy/3dsanayi/.env.example",
+      "sha256": "38dab026b2e0caa7e5e7d8b92804fe25b158ce6a4c4f31742969164faed66812"
+    },
+    {
+      "file": "deploy/3dyanimda/.env.example",
+      "sha256": "0c05f656708413786d3a320710a5e698fb2260be5924a7695fe1286b537fd032"
+    },
+    {
+      "file": "deploy/maketyanimda/.env.example",
+      "sha256": "0c3ca6409cd6281f1f4882345ea788f54625426378e6645da3c65024b0847aaa"
+    },
+    {
+      "file": "deploy/parcayanimda/.env.example",
+      "sha256": "874ceb5481a1625bd7844f559d8afe9cc988e5560831f59300f68e2d900fe7b2"
+    },
+    {
+      "file": "scripts/search/discovery.mjs",
+      "sha256": "b90c95c25cc5e24b8923063aa3782ce45c738686da2a3bd25a49822242920789"
+    },
+    {
+      "file": "scripts/search/discovery.test.mjs",
+      "sha256": "cbbae53b0c1db77b835189cbe280b0a8fa1144361bbe2d8aa92badd3a2d8a210"
+    },
+    {
+      "file": "scripts/search/llms-directory.mjs",
+      "sha256": "07e7ddde63fdaf0b4df367f57f960da48108e39bf3e9f577c979da6308ef9a63"
+    },
+    {
+      "file": "scripts/search/llms-directory.test.mjs",
+      "sha256": "288a6ebd9632a59ea488d0191897dc84682f09d5dce2cd765332573f94b3a85f"
+    },
+    {
+      "file": "src/components/site/Seo.test.tsx",
+      "sha256": "fed37b75a3790cdf1a9f10e7cebfeaa82721c4ba3386246dcc6693f267615f00"
+    },
+    {
+      "file": "src/components/site/Seo.tsx",
+      "sha256": "09d2ce1c05546ad20288c85e256209e94eb2d84abbd8eaa0f4cb8cd28cb693f2"
+    },
+    {
+      "file": "src/hooks/useSeoOverride.test.tsx",
+      "sha256": "67b50e2d8dcad809061625bd86b433db2bbcdb0b392df86b56246755bc2048be"
+    },
+    {
+      "file": "src/hooks/useSeoOverride.ts",
+      "sha256": "b0f7db19c2c75d2367683c60b51f469c1f6252b583301cfea8f61743572e6e79"
+    },
+    {
+      "file": "src/lib/search.ts",
+      "sha256": "0f31d63e095cc5b7386c2f5f3f20e0487019c8615e2246817ee9d0deba36b78b"
+    },
+    {
+      "file": "src/lib/seo-schema.ts",
+      "sha256": "66effab3c0a40931e020085acbb921045f3e3c5a68f6cf849be0d07646b38e34"
+    },
+    {
+      "file": "src/pages/BlogPost.metadata.test.tsx",
+      "sha256": "30aad48eba1875ddc58e969cc97c195f210c478ba4442e3e270e464e084f652b"
+    },
+    {
+      "file": "src/pages/BlogPost.tsx",
+      "sha256": "b5aade6bf708c60eabaf12855f16a1ac6f972a744722bc72b47d7e7555f6fa88"
+    },
+    {
+      "file": "src/vite-env.d.ts",
+      "sha256": "759a1a544115f74fe586031c1fe3f92294ec4097ca8483c73681d92690cd2391"
+    },
+    {
+      "file": "docs/audits/seo-checklist-2026-10-25.md",
+      "sha256": "9ce8fc6fc8b44a8977332e05f02166eaaf69e19a4e126141492a8d9d70eeae03"
+    },
+    {
+      "file": "docs/audits/seo-checklist-review-2026-10-25.json",
+      "sha256": "159a5959b767396be968f83a4231766abbd32f68acbacd2cbfbd148c55c8234a"
+    },
+    {
+      "file": "src/pages/Contact.tsx",
+      "sha256": "f82a30db576b437f5fbfb1db3269ec59ab943467d25f8ce3ce4f0ddd2235be11"
+    },
+    {
+      "file": "src/pages/Contact.business-profile.test.tsx",
+      "sha256": "acd44f3c99995f376163a8e7dd4a059fa8c97e3e9d8a670308f44a55e483dd0f"
+    },
+    {
+      "file": "docs/audits/seo-maps-hours-verification-2026-10-25.json",
+      "sha256": "b56144ccb48a93281733aa75cb5ffd6ccfe4c9162b985fe3c15bccb689f756cf"
+    },
+    {
+      "file": "docs/audits/seo-pre-sitemap-live-2026-10-25.json",
+      "sha256": "0fecff283e367e67ca68c576bb5cd33791721b9ac78ec3c2e170c919505ab0b0"
+    },
+    {
+      "file": "docs/audits/seo-pre-sitemap-status-2026-10-25.json",
+      "sha256": "f80d9b9ebdcdb512bc09cbb59c5aed989403d88065f6650932263945cc4e9202"
+    },
+    {
+      "file": "docs/audits/seo-search-accounts-2026-10-25.json",
+      "sha256": "557a241fb07bbcf3c4dcbb509015307f996647f4a3465ea5055cdc04a4790f0d"
+    },
+    {
+      "file": "docs/audits/seo-measurement-followup-2026-10-26.json",
+      "sha256": "9341f954e83b0271d5a906a66f1c6382b47497aa811f42b6ba094cc115fa0572"
+    },
+    {
+      "file": "docs/audits/seo-pre-sitemap-status-2026-10-26.json",
+      "sha256": "ada418f49ecc4d332efda777d72de359e38222581b7e539fe89b9fd8408fe6cd"
+    },
+    {
+      "file": "docs/audits/seo-reconciliation-review-2026-10-30.json",
+      "sha256": "3ff46b7f2c930908cc8f0e5fa2f0a2b6c5d34fba7495072e2938ea2f747e7c51"
+    },
+    {
+      "file": "docs/audits/seo-reconciled-live-baseline-2026-10-30.json",
+      "sha256": "21fb8c5538322d37e7ac0fb2028174277434512e33feed26bd46a6cd35e8245d"
+    },
+    {
+      "file": "src/pages/ContentPage.navigation.test.tsx",
+      "sha256": "0c92c6462b2bcd3fe0f0fb5d281a95ea4f570fe180aaa164a1cfc4ed2a7e9c33"
     }
   ],
   "limitations": [
@@ -531,7 +756,12 @@
     "23 October bounded public GBP/contact and three-color contrast delta: independent exact source-delta review, static contrast calculation, 86 contract tests, 25 targeted application tests, TypeScript and Vite build passed. Public contact compare-and-merge/readback evidence is recorded separately. Fresh CI, rendered accessibility, production deployment and live HTML verification for this delta are still pending; prior source evidence and run dates are unchanged. See docs/audits/seo-gbp-contrast-review-2026-10-23.json.",
     "23 October subsequent desktop-heading delta: verified raw candidate Lighthouse artifacts identify one remaining 9px heading at 3.48:1 in all three desktop repeats. Only its color is changed to the existing muted token; exact source reconstruction and static 5.198:1 contrast pass. Fresh CI, desktop Lighthouse and deployment for this subsequent change remain pending. The preceding review retains its historical state; see docs/audits/seo-desktop-contrast-review-2026-10-23.json.",
     "25 October bounded in-page navigation delta: three live pre-fix failures were reported by the root browser reviewer; all nine new navigation regressions fail against the original native anchors and pass with router-managed links. Twelve focused application tests, TypeScript and exact published-baseline reconstruction pass. PrinterScene, other-brand HomeHero and the skip link match published main. Current CI, deployment and post-fix live browser acceptance remain pending; the 91 inherited evidence records retain their original scope and dates. See docs/audits/seo-anchor-navigation-review-2026-10-25.json.",
-    "25 October subsequent dependency-security delta: a separate clean installation reports zero npm audit vulnerabilities, 293 application tests, 86 local contracts, TypeScript, database harness, Vite build, Wrangler 4.151.0 dry-run and a real local Miniflare POST/JSON check passing. Independent review verified all seven patch-file hashes. Combined baseline reconstruction passes at 700 source files, with package and lockfile hashes separately enforced. All 94 previous evidence records retain their bytes, dates and scope; final-head Actions/Cursor, four-brand production deployment and live anchor acceptance remain pending. See docs/audits/seo-anchor-security-release-review-2026-10-25.json."
+    "25 October subsequent dependency-security delta: a separate clean installation reports zero npm audit vulnerabilities, 293 application tests, 86 local contracts, TypeScript, database harness, Vite build, Wrangler 4.151.0 dry-run and a real local Miniflare POST/JSON check passing. Independent review verified all seven patch-file hashes. Combined baseline reconstruction passes at 700 source files, with package and lockfile hashes separately enforced. All 94 previous evidence records retain their bytes, dates and scope; final-head Actions/Cursor, four-brand production deployment and live anchor acceptance remain pending. See docs/audits/seo-anchor-security-release-review-2026-10-25.json.",
+    "25 October bounded local commercial-content/footer review covers source, 279 application tests and Vite build. No fresh visual browser review, remote write or deployment is claimed; see docs/audits/local-commercial-review-2026-10-25.json.",
+    "25 October bounded service FAQ/schema review: 289 application tests, 91 contracts and build passed; 127 authored records gain four-service relationships and shared visible FAQ/JSON-LD data. Browser, export and deployment remain separate pending checks. See docs/audits/service-faq-schema-review-2026-10-25.json.",
+    "25 October bounded SEO checklist delta: 293 application tests, 94 contracts, TypeScript and Vite build passed. Read-only production observations describe the existing release, not this unpublished delta. Verified hours/coordinates, English publication, customer evidence and account-level search submissions remain open. See docs/audits/seo-checklist-review-2026-10-25.json.",
+    "25 October follow-up resolves the prior hours/coordinates data gap using the matching public Google Maps listing. Only three 3D Yanimda CMS contact fields changed; guarded update/readback and other-tenant fingerprint pass. Existing static production HTML still lacks these fields; publication remains pending. Contact all-day label and schema parity passed targeted tests and build. See docs/audits/seo-maps-hours-verification-2026-10-25.json.",
+    "30 October reconciliation review retains published PR17/18 code, adds four meaningful service anchor regressions and passes 331 application/96 contract/2 diagnostic tests plus typecheck/build. Fresh CI and deployment remain pending; no current account indexing, conversion or speed outcome is claimed."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

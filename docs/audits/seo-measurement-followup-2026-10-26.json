@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-26",
+  "origin": "https://3dyanimda.com",
+  "method": "Existing authenticated Google Analytics UI; settings saved, reopened and read back. Public pages inspected through the connected browser.",
+  "sitemapSubmitted": false,
+  "indexingRequested": false,
+  "newSourceDeployed": false,
+  "analytics": {
+    "accountId": "411254875",
+    "propertyId": "558123338",
+    "propertyName": "3D YANIMDA",
+    "streamId": "16069161482",
+    "streamUrl": "https://3dyanimda.com",
+    "measurementId": "G-HBTDHJ45M7",
+    "targetMatchesRepository": true,
+    "collectionStatus": "Data collection is active in the past 48 hours.",
+    "enhancedMeasurement": {
+      "savedAndReopened": true,
+      "pageChangesBasedOnBrowserHistory": {"before": true, "after": false},
+      "outboundClicks": {"before": true, "after": false},
+      "siteSearch": {"before": true, "after": false},
+      "formInteractions": {"before": true, "after": false},
+      "fileDownloads": {"before": true, "after": false},
+      "preserved": {"enabled": true, "pageLoads": true, "scrolls": true, "videoEngagement": true},
+      "reason": "The application sends sanitized consent-gated page_view and controlled contact/quote/upload events. Automatic history pageviews could duplicate manual SPA views; generic form and download events are not successful saved leads.",
+      "source": ["src/components/brand/GrowthAnalytics.tsx", "src/lib/growth-analytics.ts"],
+      "googleReference": "https://developers.google.com/analytics/devguides/collection/ga4/views"
+    },
+    "historicalReportBeforeFix": {
+      "name": "Pages and screens",
+      "start": "2026-09-28",
+      "end": "2026-10-25",
+      "views": 381,
+      "activeUsers": 15,
+      "events": 610,
+      "keyEvents": 0,
+      "pageRows": 34,
+      "quotePage": {"path": "/teklif-al", "views": 39, "activeUsers": 6, "events": 70},
+      "limits": "Historical pre-fix counts may include duplicate SPA views and test visits. They do not establish qualified leads, traffic uplift or post-fix event accuracy."
+    },
+    "leadOrUploadTestSubmitted": false,
+    "generateLeadKeyEventVerified": false,
+    "quoteSubmitSuccessIsNotKeyEventVerified": false,
+    "pending": [
+      "Inspect Admin Events and verify generate_lead as the sole saved-quote key event, without making quote_submit_success a second conversion.",
+      "Verify consented event receipt, sanitized parameters and one event per successful real request.",
+      "Check post-fix page_view duplication on direct entry and client navigation."
+    ],
+    "browserLimitation": "The Admin Events follow-up timed out after the successful settings readback. No conversion configuration change or receipt verification is claimed."
+  },
+  "publicBrowser": {
+    "cases": [
+      {
+        "entry": "direct",
+        "url": "https://3dyanimda.com/rehber/stl-dosya-hazirlama",
+        "title": ["Ürün prototipi için STL dışa aktarma kontrolü | 3D Yanımda"],
+        "h1": ["Ürün prototipi için STL dışa aktarma kontrolü"],
+        "canonical": ["https://3dyanimda.com/rehber/stl-dosya-hazirlama"],
+        "ogUrl": ["https://3dyanimda.com/rehber/stl-dosya-hazirlama"],
+        "jsonLdScriptCount": 1,
+        "hydrationMarker": "react-ssg-v1",
+        "hydrationErrorMarkerPresent": false
+      },
+      {
+        "entry": "click 3D Baskı in Ana menü from the guide; inspect after navigation settled",
+        "url": "https://3dyanimda.com/3d-baski",
+        "title": ["3D Baskı ve Prototip Üretimi | 3D Yanımda"],
+        "h1": ["Ürün geliştirme için 3D baskı"],
+        "canonical": ["https://3dyanimda.com/3d-baski"],
+        "ogUrl": ["https://3dyanimda.com/3d-baski"],
+        "jsonLdScriptCount": 1,
+        "hydrationErrorMarkerPresent": false
+      }
+    ],
+    "limits": [
+      "Checks cover the existing production release, not the unpublished flat-URL release.",
+      "Back was invoked, but its resulting DOM was not verified before the browser timeout. Forward, reload and mobile table checks remain pending.",
+      "A hydration marker and absence of an error marker do not prove preservation of the original DOM nodes.",
+      "Only listed metadata fields were checked; complete JSON-LD semantic parity and every OG/Twitter field were not re-audited in these browser cases."
+    ]
+  },
+  "release": {
+    "localBranch": "seo/flat-local-urls",
+    "diagnosticWorkflowCommit": "1592488",
+    "change": "PR Lighthouse diagnostics limited to 3dyanimda, mobile/desktop, three repeats across home, 3D printing and Istanbul landing pages. Full four-brand main workflow retained.",
+    "validation": "YAML parsed and scoped matrix/routes verified; git diff --check passed. No browser lab run executed.",
+    "pushSucceeded": false,
+    "blocker": "Automatic approval review rejected pushing source to the public figtures/3dyanimda repository. Explicit approval for that code transfer and CI run remains required; no alternate upload path was attempted.",
+    "existingOpenPr": {
+      "url": "https://github.com/figtures/3dyanimda/pull/17",
+      "head": "3e33a42e55c38c1f8b345f4d252559f4cf7c61b7",
+      "scope": "In-page router navigation and validation/build dependency security updates",
+      "action": "Read only; not overwritten, merged or duplicated. Coordinate integration before release."
+    }
+  }
+}

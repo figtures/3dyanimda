@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-30",
+  "reviewer": "Codex (AI, owner-delegated bounded reconciliation)",
+  "humanReviewPerformed": false,
+  "baselineMain": "a3266d234a46749ea95f1561504e111a4b928ad0",
+  "previousLocalHead": "da4fecb",
+  "scope": "Reconcile unpublished flat local URLs, commercial footer/service sections, shared FAQs/schema, search discovery and language metadata with PR17 and PR18 already published on 28 October. No sitemap/indexing submission or production deployment in this review.",
+  "authorization": {
+    "statement": "evet onaylıyorum ama son güncel durumu kontrol eder misin diğer sohbette ilerlemişti",
+    "scope": "Push prepared code to public figtures/3dyanimda seo/flat-local-urls and run CI after checking intervening work"
+  },
+  "upstream": {
+    "pr17": "https://github.com/figtures/3dyanimda/pull/17",
+    "pr18": "https://github.com/figtures/3dyanimda/pull/18",
+    "mergedAt": "2026-10-28T02:32:12Z",
+    "mainChecks": {
+      "total": 20,
+      "success": 20,
+      "productionBuilds": 4
+    },
+    "preservedByteExactFiles": [
+      "content/authoring/adalar-service-access-2026-10-28.json",
+      "docs/audits/adalar-cms-baseline-2026-10-28.json",
+      "docs/audits/adalar-originality-2026-10-28.json",
+      "docs/audits/dependency-security-review-2026-10-25.json",
+      "docs/audits/seo-anchor-navigation-review-2026-10-25.json",
+      "docs/audits/seo-anchor-security-release-review-2026-10-25.json",
+      "docs/audits/seo-followup-review-2026-10-28.json",
+      "docs/audits/seo-followup-status-2026-10-28.json",
+      "docs/audits/seo-prehydration-anchor-review-2026-10-28.json",
+      "docs/audits/seo-preview-build-triage-2026-10-25.json",
+      "docs/audits/seo-runtime-baseline-reconstruction-2026-10-25.json",
+      "docs/audits/seo-targeted-browser-2026-10-25.json",
+      "package-lock.json",
+      "package.json",
+      "scripts/cloudflare/brand.mjs",
+      "src/components/quote/quote-schema.test.ts",
+      "src/components/site/InPageLink.test.tsx",
+      "src/components/site/InPageLink.tsx",
+      "src/content/editorial.validation.test.ts",
+      "src/content/pages.json",
+      "src/lib/growth-analytics.test.ts",
+      "src/pages/career/CareerApplications.validation.test.tsx",
+      "src/pages/career/CareerHub.navigation.test.tsx",
+      "src/pages/career/CareerHub.tsx",
+      "src/pages/career/JobApplication.tsx",
+      "src/pages/career/MachineOperation.tsx",
+      "src/themes/PrintHero.navigation.test.tsx",
+      "src/themes/PrintHero.tsx",
+      "supabase/seeds/3dyanimda-adalar-service-access-2026-10-28.sql"
+    ],
+    "conflictResolution": [
+      "Retain apex/www production domain binding and add optional Yandex verification env support.",
+      "Retain InPageLink query preservation before/after hydration for all existing and four new service-section links.",
+      "Retain current Adalar CMS source text, schema validation dependency fixes, package lock and source_channel tests.",
+      "Combine historical evidence paths without relabeling historical runs; update only current mutable-file hashes after tests."
+    ]
+  },
+  "validation": {
+    "typecheck": "pass",
+    "applicationTests": {
+      "files": 58,
+      "passed": 331,
+      "failed": 0
+    },
+    "searchContractTests": {
+      "passed": 96,
+      "failed": 0
+    },
+    "lighthouseEvidenceTests": {
+      "passed": 2,
+      "failed": 0
+    },
+    "newServiceNavigationCases": 4,
+    "viteBuild": "pass",
+    "gitDiffCheck": "pass",
+    "warnings": [
+      "Existing large Vite chunks remain; no TBT gain claimed.",
+      "Existing test-environment React act/fetchPriority warnings remain."
+    ]
+  },
+  "outstanding": [
+    "Fresh PR browser/export and Lighthouse diagnostics on the combined head.",
+    "New short URL deployment and real 301/canonical/sitemap/JSON-LD acceptance.",
+    "GA4 source_channel custom definition, controlled receipt and sole generate_lead key-event configuration.",
+    "GSC current four-page URL Inspection and AI performance require authorized account access; 25 October home snapshot is historical.",
+    "Real manufacturing photographs/material/quantity/delivery evidence and usefulness review for other district pages.",
+    "F098 real GPU/software renderer comparison and targeted performance fix."
+  ],
+  "limits": [
+    "The workbook is still the 26 October version; GitHub PR18 provides the newer published status.",
+    "GET live follow-up was blocked by network approval; no new www/Adalar live-browser acceptance is claimed.",
+    "No CMS changes, fake lead submissions, indexing requests or sitemap submission performed."
+  ]
+}

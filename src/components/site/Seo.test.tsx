@@ -11,8 +11,17 @@ const meta=(name:string)=>document.head.querySelector(`meta[property="${name}"],
 const graph=()=>JSON.parse(document.getElementById('site-structured-data')!.textContent!)['@graph'];
 
 beforeEach(()=>{mocks.slug='3dyanimda';mocks.override=undefined;});
-afterEach(cleanup);
+afterEach(()=>{cleanup();vi.unstubAllEnvs();});
 describe('page metadata image and date agreement',()=>{
+  it('emits configured Yandex verification and keeps document, social and page language aligned',async()=>{
+    vi.stubEnv('VITE_YANDEX_SITE_VERIFICATION','public-test-verification');
+    render(<HelmetProvider><Seo title="3D printing" description="Production services" path="/en/printing" language="en"/></HelmetProvider>);
+    await waitFor(()=>expect(meta('yandex-verification')).toBe('public-test-verification'));
+    expect(document.documentElement.lang).toBe('en');
+    expect(meta('og:locale')).toBe('en_US');
+    expect(graph().find((n:Record<string,unknown>)=>n['@type']==='WebPage').inLanguage).toBe('en-US');
+    expect(document.head.querySelector('link[rel="alternate"][hreflang]')).toBeNull();
+  });
   it.each(['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])('keeps %s metadata on its own domain with known brand image dimensions',async slug=>{
     mocks.slug=slug;
     render(<HelmetProvider><Seo title="Hizmet" description="Üretim" path="/3d-baski" /></HelmetProvider>);

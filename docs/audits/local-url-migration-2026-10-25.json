@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-25",
+  "result": "pass",
+  "scope": "3dyanimda public local URL projection and one-hop server redirects; CMS record keys unchanged",
+  "baseline": "e526216401c2cf51c85ae334398d318aa754c78d",
+  "checks": {
+    "typecheck": "pass",
+    "vitest": {
+      "files": 49,
+      "tests": 274,
+      "result": "pass"
+    },
+    "searchContracts": {
+      "tests": 91,
+      "result": "pass"
+    },
+    "viteBuild": "pass",
+    "knownLocalRoutes": 205,
+    "workerRedirectMatrix": "all mapped paths, www, slash, query preservation",
+    "otherBrandPaths": "unchanged",
+    "authoredContentAndAssets": "unchanged"
+  },
+  "limitations": [
+    "Production HTML export and deployment verification must run in CI or Cloudflare Builds.",
+    "No new visual review claimed; existing visual and provenance evidence retained for unchanged content.",
+    "Search rankings and indexing timing are not verified or guaranteed."
+  ],
+  "urlExamples": {
+    "/bolgeler/istanbul/3d-baski": "/istanbul-3d-baski",
+    "/bolgeler/istanbul/kadikoy/3d-baski": "/kadikoy-3d-baski"
+  }
+}

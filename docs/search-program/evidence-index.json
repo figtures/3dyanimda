@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".github/workflows/lighthouse.yml",
-      "sha256": "fc3847de57049c9fb9092ee76695d5bb75788ee2e276fe9faed53516e9f20c08",
-      "bytes": 2993
+      "sha256": "62ac579aead00f1319cb2d0aed0dcf0ee423e84cc9ec380081ad1e8fb20804ec",
+      "bytes": 3526
     },
     {
       "path": ".github/workflows/search-quality.yml",
@@ -303,13 +303,13 @@
     },
     {
       "path": "scripts/cloudflare/config.test.mjs",
-      "sha256": "b97a964b09e2761cc5ba3ff39a4125b8f4950922afdcdcdc0ab121c9e3e763ad",
-      "bytes": 5508
+      "sha256": "a482d92911b3f1bf41d001962d93dd91457e3f6f486d30c104500a4c04d3c310",
+      "bytes": 5941
     },
     {
       "path": "scripts/export-sites.mjs",
-      "sha256": "aab69f7fea4213077c6094fce72d7f24ffd9d976ddac8658193080eec7144bda",
-      "bytes": 12031
+      "sha256": "4910a3e2e855482469a5d93cef0bc05df88f76d923110383698100c029fff932",
+      "bytes": 12048
     },
     {
       "path": "scripts/font-requirements.txt",
@@ -363,8 +363,8 @@
     },
     {
       "path": "scripts/quality/lighthouse-ci.mjs",
-      "sha256": "46b8061d6862d96de5c5aceea5c15848861e7e1a68b77573759aa8133619bfbd",
-      "bytes": 14626
+      "sha256": "a4f6a6c28138dc6199b4344bf4522ba59e05a07ac33a15ebefffae3171b3e18b",
+      "bytes": 15132
     },
     {
       "path": "scripts/quality/public-bootstrap.mjs",
@@ -393,13 +393,13 @@
     },
     {
       "path": "scripts/search/discovery.mjs",
-      "sha256": "24d5522c3a7b66082e10bad6cc4979bf8695eac0ba6e3e3cb03992133b031654",
-      "bytes": 4519
+      "sha256": "b90c95c25cc5e24b8923063aa3782ce45c738686da2a3bd25a49822242920789",
+      "bytes": 4811
     },
     {
       "path": "scripts/search/discovery.test.mjs",
-      "sha256": "fea19e95cbdd7ba280a8a69bc798dd0cccf6cf6fadf4fdecfdfed8045d9ccfaf",
-      "bytes": 2779
+      "sha256": "cbbae53b0c1db77b835189cbe280b0a8fa1144361bbe2d8aa92badd3a2d8a210",
+      "bytes": 3447
     },
     {
       "path": "scripts/search/inventory.test.mjs",
@@ -408,13 +408,13 @@
     },
     {
       "path": "scripts/search/llms-directory.mjs",
-      "sha256": "ffef344e83a0006dce0ab575392b86e821382a96a4f326806504e44c3abd93ee",
-      "bytes": 2541
+      "sha256": "07e7ddde63fdaf0b4df367f57f960da48108e39bf3e9f577c979da6308ef9a63",
+      "bytes": 2921
     },
     {
       "path": "scripts/search/llms-directory.test.mjs",
-      "sha256": "ec601fb4ff2ea0dc9861d0143c5696ce71b069da3490e6912ac41a9b31e849cf",
-      "bytes": 3203
+      "sha256": "288a6ebd9632a59ea488d0191897dc84682f09d5dce2cd765332573f94b3a85f",
+      "bytes": 4061
     },
     {
       "path": "scripts/search/redirects.test.mjs",
@@ -443,8 +443,8 @@
     },
     {
       "path": "src/App.tsx",
-      "sha256": "8bbbc2b893a1ba55e7ca4275ed9db9a7857ae2be7dde66fc080a68143470d053",
-      "bytes": 18529
+      "sha256": "79c3b71e97778946324f77a5afc203a9988c97c45e563c1dfaf68cc1e0d5e080",
+      "bytes": 18671
     },
     {
       "path": "src/brands/brand.css",
@@ -463,8 +463,8 @@
     },
     {
       "path": "src/components/site/Seo.tsx",
-      "sha256": "247a96d45176a6085da88f086d83ae9661cd6dff58e8399d1e105e1e82ab1116",
-      "bytes": 6925
+      "sha256": "09d2ce1c05546ad20288c85e256209e94eb2d84abbd8eaa0f4cb8cd28cb693f2",
+      "bytes": 7209
     },
     {
       "path": "src/content/answer-unit.test.ts",
@@ -513,8 +513,8 @@
     },
     {
       "path": "src/content/related.ts",
-      "sha256": "053997ec49e47f814c05f7ebb676874498e5ccc16700aa338bc21829fdf232b0",
-      "bytes": 939
+      "sha256": "a3756bdbc232cef5af04868bc761537bf1345c277f3ba2ef324dfb9019a04510",
+      "bytes": 1089
     },
     {
       "path": "src/content/responsive-image.ts",
@@ -598,8 +598,8 @@
     },
     {
       "path": "src/lib/schema-graph.ts",
-      "sha256": "1b642219b619538e1fcb97780131fcde2345699fd3668c1960e87dd09726569d",
-      "bytes": 3796
+      "sha256": "4e8c760a54148e91e3a1080007540390c346603380b9f9b391b8a7fa84f48f4a",
+      "bytes": 3960
     },
     {
       "path": "src/lib/search-indexability.test.ts",
@@ -613,8 +613,8 @@
     },
     {
       "path": "src/lib/search.ts",
-      "sha256": "11b4dde1bc6c2ef3604d04683e7554330d40c3b1c4cf62837317b4f9c452a224",
-      "bytes": 1804
+      "sha256": "0f31d63e095cc5b7386c2f5f3f20e0487019c8615e2246817ee9d0deba36b78b",
+      "bytes": 1854
     },
     {
       "path": "src/lib/social-meta.test.ts",
@@ -633,18 +633,18 @@
     },
     {
       "path": "src/pages/ContentHub.tsx",
-      "sha256": "5679b67b25ef7f79b372441eb563a54d5fc5c96c5c60d82ce25745397f3afbb3",
-      "bytes": 5050
+      "sha256": "4306c90dd464007cf43c37da699c99d11afbbb19504f707c696ee55909921273",
+      "bytes": 5152
     },
     {
       "path": "src/pages/ContentPage.tsx",
-      "sha256": "e19d5cc0e6e05c4dd963bff10ae39f975371b218ada66d85375ad3972ed26e7d",
-      "bytes": 10876
+      "sha256": "14d54af746eaff8b8a6ebb80f3a04f769e12661cc404ac94dde65969cdfde504",
+      "bytes": 11681
     },
     {
       "path": "src/pages/Index.tsx",
-      "sha256": "7f868b982da1443629052cace63c46adff1fc4c7f2f283eb47455f2b50064908",
-      "bytes": 12821
+      "sha256": "f5df71eb46f4f32b81175d714b900dbbac0e0ef17beee3d8c47be317bdd219cc",
+      "bytes": 13168
     },
     {
       "path": "src/pages/admin/AdminContent.tsx",
@@ -658,8 +658,8 @@
     },
     {
       "path": "src/components/brand/BrandLayout.tsx",
-      "sha256": "c618e8dfde27006e86e8269155d098b1f239f32f5b168fde9f0148ef5c42e630",
-      "bytes": 7466
+      "sha256": "71b4905568a212993fd23e3303478f94c505a28da4e70864cd5c77f0f5890952",
+      "bytes": 7592
     },
     {
       "path": "src/components/brand/BrandNavigation.tsx",
@@ -743,13 +743,13 @@
     },
     {
       "path": "src/hooks/useRedirects.ts",
-      "sha256": "c5905191faf510447f216c9c6515372657c775ebcf22f9cd188a076cb37ca675",
-      "bytes": 1783
+      "sha256": "7d320a05f775482e460b4ddc55e3e38284d6a478d9937864e01e542d19fd95d5",
+      "bytes": 1878
     },
     {
       "path": "src/hooks/useSeoOverride.ts",
-      "sha256": "a7d29c995547e18e4eb94544ddd1cbaa264f2edc43c04452186e2f6ae30f4d12",
-      "bytes": 2720
+      "sha256": "b0f7db19c2c75d2367683c60b51f469c1f6252b583301cfea8f61743572e6e79",
+      "bytes": 2818
     },
     {
       "path": "src/lib/media.ts",
@@ -768,8 +768,8 @@
     },
     {
       "path": "src/pages/BlogPost.tsx",
-      "sha256": "cea683de711ad4ff9c1d582dcf57d81d76af2779b1cd33e10a452f622aa86593",
-      "bytes": 5243
+      "sha256": "b5aade6bf708c60eabaf12855f16a1ac6f972a744722bc72b47d7e7555f6fa88",
+      "bytes": 5535
     },
     {
       "path": "src/pages/Portfolio.tsx",
@@ -843,8 +843,8 @@
     },
     {
       "path": "scripts/quality/live-schema-inventory.ts",
-      "sha256": "f1cabacea86ee98349b8f169b5293d24037f6aa35280ff0a8c84dc33c4cd9923",
-      "bytes": 4116
+      "sha256": "484cb719d0cf8313a77bc0d93ce1479ebc6d13c648b569b3ed77149007d90591",
+      "bytes": 4306
     },
     {
       "path": "scripts/quality/production-readonly.mjs",
@@ -883,13 +883,13 @@
     },
     {
       "path": "src/content/structured-content.test.ts",
-      "sha256": "2e110959cdecf507ceba4b4e0a40b55371df76e18c3a24379bc4974358c5031b",
-      "bytes": 3673
+      "sha256": "38c36997524861f30d9f4e1b9b8456ff3f3117267ecc46c279e0690057aa4b52",
+      "bytes": 3844
     },
     {
       "path": "src/content/structured-content.ts",
-      "sha256": "3dcb203725339f149579718a8c312c4128f39104fba5c37dcde962cdb8933a96",
-      "bytes": 3089
+      "sha256": "ee28ffb3cc9eaebe9bbe920b5fef7620ff7c406ab0c78c37b6e05473fe8dd148",
+      "bytes": 5075
     },
     {
       "path": "src/lib/backend-config.ts",
@@ -1069,7 +1069,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-28T02:15:51.092Z",
+  "checksumsRefreshedAt": "2026-10-29T23:48:07.311Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

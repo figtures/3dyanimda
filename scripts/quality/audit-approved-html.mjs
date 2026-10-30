@@ -1,3 +1,5 @@
+import {contentLocalPath,publicLocalPath} from '../../src/lib/local-urls.mjs';
+import {visibleServiceFaq} from '../../src/content/service-experience.mjs';
 /** Read-only verification of completed production exports; never publishes or rebuilds. */
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -39,7 +41,7 @@ for(const brand of selected){
  const tenantIds=[...new Set(expected.map(item=>item.tenant_id))];assert.equal(tenantIds.length,1,'One approved tenant per brand');
  const manifestPaths=new Set(manifest.pages.map(item=>item.path));
  assert.equal(manifest.origin,origin);assert.equal(manifest.pages.length,manifestPaths.size);assert.equal(expected.length,199);
- for(const item of expected)assert.ok(manifestPaths.has(item.path),brand+': missing approved '+item.path);
+ for(const item of expected)assert.ok(manifestPaths.has(publicLocalPath(item.path,brand)),brand+': missing approved '+item.path);
  for(const route of utilityRoutes)assert.ok(!manifestPaths.has(route),'Utility excluded from discovery');
  const hash=createHash('sha256');
  for(const item of manifest.pages){
@@ -54,13 +56,14 @@ for(const brand of selected){
    assert.equal(manifest.brand,schemas.find(node=>node['@type']==='Organization').name,'Discovery business name matches HTML');
    const pageData={title:document.title,description:document.querySelector('meta[name="description"]')?.getAttribute('content')||'',text:document.querySelector('main')?.textContent||'',images:[...document.querySelectorAll('main img')].map(img=>img.src),structuredData:[...document.querySelectorAll('script[type="application/ld+json"]')].map(el=>el.textContent)};
    assert.equal(createHash('sha256').update(JSON.stringify(pageData)).digest('hex'),item.hash,brand+item.path+' manifest/HTML parity');
-   const record=source.get(brand+item.path);
+   const record=source.get(brand+contentLocalPath(item.path,brand));
    if(record){
     assert.equal(document.querySelector('h1').textContent,record.title);
     const article=document.querySelector('.content-article');assert.ok(article,brand+item.path+' authored content');
     const visible=normalize(article.textContent);
     for(const text of [record.local_context,record.logistics,record.editorial?.answer,...(record.sections||[]).flatMap(section=>[section.title,section.body])].filter(Boolean))for(const paragraph of text.split(/\n+/).filter(Boolean))assert.ok(visible.includes(normalize(paragraph)),brand+item.path+' authored visible text');
-    if(record.faq?.length){for(const entry of record.faq)for(const value of [entry.q,entry.a])assert.ok(visible.includes(normalize(value)),brand+item.path+' visible FAQ');const faq=schemas.find(s=>s['@type']==='FAQPage');assertFAQParity(faq?.mainEntity,record.faq,origin+item.path);}
+    const expectedFaq=visibleServiceFaq(record,brand);
+    if(expectedFaq.length){for(const entry of expectedFaq)for(const value of [entry.q,entry.a])assert.ok(visible.includes(normalize(value)),brand+item.path+' visible FAQ');const faq=schemas.find(s=>s['@type']==='FAQPage');assertFAQParity(faq?.mainEntity,expectedFaq,origin+item.path);}
    }
    hash.update(item.path+'\0').update(bytes).update('\0');
   }finally{dom.window.close();}

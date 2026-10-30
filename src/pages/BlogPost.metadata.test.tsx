@@ -4,10 +4,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import BlogPost from './BlogPost';
 
-const fixtures=vi.hoisted(()=>({post:null as null|Record<string,unknown>,error:false}));
+const fixtures=vi.hoisted(()=>({post:null as null|Record<string,unknown>,error:false,language:'tr'}));
 vi.mock('@/content/public-page-query',()=>({usePublicPage:()=>({data:fixtures.post,isError:fixtures.error})}));
 vi.mock('@/lib/i18n',()=>({}));
-vi.mock('react-i18next',()=>({useTranslation:()=>({i18n:{language:'tr'}})}));
+vi.mock('react-i18next',()=>({useTranslation:()=>({i18n:{language:fixtures.language}})}));
 vi.mock('@/contexts/TenantContext',()=>({useTenant:()=>({tenant:{slug:'3dyanimda',name:'3D Yanımda',domain:'3dyanimda.com'}})}));
 vi.mock('@/hooks/useSiteSettings',()=>({useSiteSettings:()=>({})}));
 vi.mock('@/hooks/useSeoOverride',()=>({useSeoOverride:()=>undefined}));
@@ -15,9 +15,24 @@ vi.mock('@/lib/tenant',()=>({getTenantIdentity:()=>({name:'3D Yanımda',origin:'
 vi.mock('@/components/site/PageHero',()=>({PageHero:()=>null}));
 vi.mock('@/components/site/Prose',()=>({Prose:({children}:{children:React.ReactNode})=><div>{children}</div>}));
 const show=()=>render(<HelmetProvider><MemoryRouter initialEntries={['/blog/uretim']}><Routes><Route path="/blog/:slug" element={<BlogPost/>}/><Route path="/blog" element={<div>Blog index redirect</div>}/></Routes></MemoryRouter></HelmetProvider>);
-beforeEach(()=>{fixtures.error=false;fixtures.post={slug:'uretim',title:'Üretim',excerpt:'Üretim notu',content:'<p>Yazı.</p>',tags:[],cover_image_url:'/photo.jpg',published_at:null,updated_at:'2026-10-01T10:00:00Z'};});
+beforeEach(()=>{fixtures.language='tr';fixtures.error=false;fixtures.post={slug:'uretim',title:'Üretim',excerpt:'Üretim notu',content:'<p>Yazı.</p>',tags:[],cover_image_url:'/photo.jpg',published_at:null,updated_at:'2026-10-01T10:00:00Z'};});
 afterEach(cleanup);
 describe('blog detail metadata',()=>{
+  it('renders a complete English article with English metadata and schema',async()=>{
+    fixtures.language='en';Object.assign(fixtures.post!,{title_en:'Production',excerpt_en:'Production notes',content_en:'<p>English article.</p>'});
+    show();expect(screen.getByText('English article.')).toBeInTheDocument();
+    await waitFor(()=>expect(document.documentElement.lang).toBe('en'));
+    const graph=JSON.parse(document.getElementById('site-structured-data')!.textContent!)['@graph'];
+    expect(graph.find((n:Record<string,unknown>)=>n['@type']==='Article').inLanguage).toBe('en-US');
+    expect(document.head.querySelector('meta[property="og:locale"]')).toHaveAttribute('content','en_US');
+  });
+  it('falls back as a whole to Turkish when English article content is incomplete',async()=>{
+    fixtures.language='en';Object.assign(fixtures.post!,{title_en:'Production',excerpt_en:'Production notes'});
+    show();expect(screen.getByText('Yazı.')).toBeInTheDocument();
+    await waitFor(()=>expect(document.documentElement.lang).toBe('tr'));
+    expect(document.title).toContain('Üretim');
+    expect(document.head.querySelector('meta[name="description"]')).toHaveAttribute('content','Üretim notu');
+  });
   it('omits unavailable publication date and uses the actual modification date and image',async()=>{
     show();
     await waitFor(()=>expect(document.head.querySelector('meta[property="og:image"]')).toHaveAttribute('content','https://3dyanimda.com/photo.jpg'));

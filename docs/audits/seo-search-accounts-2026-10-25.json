@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-25",
+  "origin": "https://3dyanimda.com",
+  "method": "Read-only inspection of the existing signed-in browser UI and user-supplied Yandex verification screenshot",
+  "sitemapSubmitted": false,
+  "indexingRequested": false,
+  "accountSettingsChanged": false,
+  "gsc": {
+    "property": "sc-domain:3dyanimda.com",
+    "ownership": "Verified owner shown in Settings",
+    "propertyAddedDisplayed": "22 Ekim 2026",
+    "submittedSitemapRows": 0,
+    "pageIndexingReport": "Veri işleniyor, lütfen birkaç gün içinde tekrar kontrol edin",
+    "coreWebVitals": {"mobile": "No data", "desktop": "No data"},
+    "https": {"secure": 30, "nonSecure": 0},
+    "breadcrumbs": {"valid": 18, "invalid": 0},
+    "crawlRequestsLast90Days": 447,
+    "robotsStatus": "Tüm dosyalar geçerli",
+    "generativeAi": {
+      "url": "https://search.google.com/search-console/settings/search-gen-ai?resource_id=sc-domain%3A3dyanimda.com",
+      "selectedRadio": "Sitemin bağlantılarını ve içeriğini Arama'daki üretken yapay zeka özelliklerine dahil et (Varsayılan)",
+      "saveDisabled": true,
+      "changed": false,
+      "trafficOrCitationOutcomeVerified": false
+    },
+    "homeUrlInspection": {
+      "url": "https://3dyanimda.com/",
+      "status": "URL Google'da mevcut; Sayfa dizine eklendi",
+      "lastCrawlAsDisplayed": "23 Eki 2026 14:12:55",
+      "crawler": "Googlebot akıllı telefon",
+      "crawlAllowed": true,
+      "fetch": "Başarılı",
+      "indexingAllowed": true,
+      "userCanonical": "https://3dyanimda.com/",
+      "googleCanonical": "İncelenen URL",
+      "referringPage": "https://3dyanimda.com/3d-baski",
+      "discoverySitemaps": "Geçici işleme hatası",
+      "liveTestRun": false
+    },
+    "performance": {
+      "filter": "28 gün; Web",
+      "visibleChartDates": ["2026-10-21", "2026-10-22"],
+      "clicks": 1,
+      "impressions": 10,
+      "ctr": 0.1,
+      "averagePosition": 2.1,
+      "queriesVisible": [
+        {"query": "3d baskı hizmeti", "clicks": 1, "impressions": 2},
+        {"query": "motor 3d tarama", "clicks": 0, "impressions": 1},
+        {"query": "veri tabanında kaynak dosyalar ile çalışmak", "clicks": 0, "impressions": 1}
+      ],
+      "devices": [{"device": "mobile", "clicks": 1, "impressions": 2}, {"device": "desktop", "clicks": 0, "impressions": 8}],
+      "pageRows": 26,
+      "leadingPage": {"url": "https://3dyanimda.com/", "clicks": 1, "impressions": 8},
+      "limits": [
+        "A 28-day filter does not establish 28 days of populated history.",
+        "Visible privacy-filtered queries do not sum to property totals.",
+        "Page and property impressions use different aggregation and must not be added together.",
+        "The sample is too small for brand/non-brand uplift, content expansion or ranking conclusions."
+      ]
+    },
+    "links": {
+      "url": "https://search.google.com/search-console/links?resource_id=sc-domain%3A3dyanimda.com",
+      "externalReported": 0,
+      "externalTables": "Veri yok",
+      "internalReported": 366,
+      "limit": "No external links reported is not proof of zero backlinks on the entire web. No real partner/permission list was supplied."
+    }
+  },
+  "yandex": {
+    "url": "https://webmaster.yandex.com/site/https:3dyanimda.com:443/settings/access/",
+    "evidence": "User screenshot: Screenshot 2026-10-25 at 07.07.07.png",
+    "ownership": "Owner",
+    "method": "DNS record",
+    "verificationDate": "2026-10-25",
+    "businessListingVerified": false,
+    "sitemapSubmittedByAgent": false
+  },
+  "analytics": {
+    "expectedMeasurementId": "G-HBTDHJ45M7",
+    "source": "docs/audits/ga4-setup-2026-10-08.json",
+    "targetPropertyVerified": false,
+    "observed": "The Analytics properties opened during account selection did not match 3D Yanimda. No different property's metrics were used. Later picker actions timed out.",
+    "pending": ["Correct 3D Yanimda property selection", "Actual consented event receipt", "Enhanced-measurement duplicate pageview/form checks", "Successful generate_lead key-event configuration"]
+  }
+}

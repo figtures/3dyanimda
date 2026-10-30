@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-25",
+  "result": "pass",
+  "scope": "Bounded source, rendered-DOM and semantic-schema review; production browser/export verification remains pending.",
+  "baseline": "83f39ad",
+  "referenceReview": {
+    "method": "User-provided screenshot plus read-only rendered browser inspection",
+    "pages": [
+      "https://3dyaninda.com/istanbul-3d-baski",
+      "https://3dyaninda.com/istanbul/uskudar/3d-baski",
+      "https://3dyaninda.com/hizmetler/3d-baski",
+      "https://3dyaninda.com/hizmetler/3d-tarama",
+      "https://3dyaninda.com/hizmetler/3d-modelleme",
+      "https://3dyaninda.com/oto-yedek-parca-3d-uretim"
+    ],
+    "patternsAdopted": [
+      "Four visible service entry points",
+      "Service-specific purchase questions and technical scope",
+      "Connections between local services, existing guides and quotation",
+      "Same visible breadcrumb hierarchy in JSON-LD"
+    ],
+    "contentApproach": "Original copy using existing 3D Yanimda business evidence and implemented quote capabilities. Reference-site numerical rates, device precision, delivery guarantees and performance claims were not imported."
+  },
+  "changes": {
+    "eligibleAuthoredRecords": 127,
+    "istanbulPrintFaq": {
+      "before": 2,
+      "after": 11,
+      "questions": [
+        "İstanbul 3D baskı fiyatı nasıl hesaplanır?",
+        "3D baskı için hangi dosyaları gönderebilirim?",
+        "Hazır 3D modelim yoksa baskı yaptırabilir miyim?",
+        "Malzeme ve baskı yöntemini nasıl seçmeliyim?",
+        "Tek adet veya küçük seri 3D baskı talep edebilir miyim?",
+        "Büyük bir parça tek seferde basılabilir mi?",
+        "İstanbul için hizmet ve teslimat nasıl planlanır?",
+        "Acil taleplerde üretim ve teslim süresi nasıl belirlenir?",
+        "İstanbul dışında da 3D baskı teslimatı yapılır mı?",
+        "Dosya tamamlanmadan baskı planlanır mı?",
+        "Malzeme seçimini yalnızca renk belirler mi?"
+      ]
+    },
+    "serviceKeys": [
+      "3d-baski",
+      "3d-tarama",
+      "3d-modelleme",
+      "3d-yedek-parca"
+    ],
+    "replacementDestination": "/cozumler/yedek-parca-uretimi",
+    "schemaTemplateVersion": "1.2.0",
+    "schemaRelationships": [
+      "Single graph and canonical identity per entity",
+      "Primary route Service selected explicitly when multiple services exist",
+      "Service isRelatedTo three linked services; ItemList describes the four visible cards",
+      "WebPage mainEntity is current Service; hasPart connects FAQPage and ItemList",
+      "FAQPage questions/answers generated from the same source as visible accordion",
+      "BreadcrumbList generated from the same short-URL hierarchy as visible breadcrumbs"
+    ],
+    "cmsRecords": "No writes; existing answers retained, with authored answers taking precedence on duplicate questions",
+    "dates": "Supplement carries its actual authoring date; newer CMS modification dates win."
+  },
+  "checks": {
+    "typecheck": "pass",
+    "applicationTests": {
+      "files": 51,
+      "tests": 289,
+      "result": "pass"
+    },
+    "searchContracts": {
+      "tests": 91,
+      "result": "pass"
+    },
+    "viteBuild": "pass",
+    "renderedDomAndSchemaTests": {
+      "tests": 9,
+      "result": "pass",
+      "coverage": "Six service/local/solution cases, exact FAQ parity, published link targets, CMS-answer precedence, brand isolation, canonical breadcrumb agreement"
+    },
+    "fullAuthoredSchemaInventory": {
+      "records": 801,
+      "result": "pass",
+      "checks": [
+        "Schema.org vocabulary and property domains",
+        "Resolved graph identities",
+        "FAQ text parity input",
+        "No fabricated pricing or review ratings"
+      ]
+    },
+    "serviceLinkInventory": {
+      "eligiblePages": 127,
+      "links": 508,
+      "result": "pass"
+    },
+    "gitDiffCheck": "pass"
+  },
+  "authoritativeReferences": [
+    {
+      "url": "https://schema.org/Service",
+      "purpose": "Service and isRelatedTo relationships"
+    },
+    {
+      "url": "https://schema.org/FAQPage",
+      "purpose": "FAQ vocabulary"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "purpose": "Visible-content alignment"
+    },
+    {
+      "url": "https://developers.google.com/search/updates",
+      "purpose": "FAQ rich results removed from Google Search starting 2026-05-07; no rich-result or indexing promise"
+    }
+  ],
+  "limitations": [
+    "No fresh browser rendering of the changed app, deployed HTTP inspection, CMS publication or GitHub push is claimed.",
+    "CI must still run browser checks and production export, including exact visible-FAQ/JSON-LD checks.",
+    "The prior automatic approval rejection for GitHub push remains unresolved; explicit user authorization is pending.",
+    "Search rankings, indexing time and AI citations are neither verified nor guaranteed.",
+    "Historical all-route/theme evidence retains its original coverage and dates."
+  ],
+  "files": [
+    "src/content/service-experience.mjs",
+    "src/content/service-experience.test.tsx",
+    "src/content/structured-content.ts",
+    "src/content/structured-content.test.ts",
+    "src/lib/schema-graph.ts",
+    "src/pages/ContentPage.tsx",
+    "src/components/brand/ContentFaq.tsx",
+    "src/components/brand/ServiceConnections.tsx",
+    "src/components/brand/LocalCommercialContent.tsx",
+    "src/components/brand/LocalCommercialContent.test.tsx",
+    "src/components/brand/local-commercial.ts",
+    "src/components/brand/local-commercial.css",
+    "scripts/quality/audit-approved-html.mjs",
+    "scripts/quality/live-schema-inventory.ts",
+    "scripts/test-content-inventory.mjs",
+    "scripts/test-local-content.mjs"
+  ]
+}

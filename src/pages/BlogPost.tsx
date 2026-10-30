@@ -22,7 +22,8 @@ type DbPost = {
 
 const DbBlogPostView = ({ post }: { post: DbPost }) => {
   const { i18n } = useTranslation();
-  const isEn = i18n.language?.startsWith("en");
+  // Keep title, description, body and schema in one language when a translation is incomplete.
+  const isEn = !!(i18n.language?.startsWith("en") && post.title_en?.trim() && post.content_en?.trim() && (!post.excerpt?.trim() || post.excerpt_en?.trim()));
   const title = isEn && post.title_en ? post.title_en : post.title;
   const excerpt = isEn && post.excerpt_en ? post.excerpt_en : (post.excerpt ?? "");
   const content = isEn && post.content_en ? post.content_en : post.content;
@@ -35,6 +36,7 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
   return (
     <>
       <Seo
+        language={isEn ? 'en' : 'tr'}
         title={title}
         description={excerpt || title}
         path={path}
@@ -46,6 +48,7 @@ const DbBlogPostView = ({ post }: { post: DbPost }) => {
         keywords={(post.tags ?? []).join(", ")}
         jsonLd={[
           articleSchema({
+            language: isEn ? 'en-US' : 'tr-TR',
             title,
             description: excerpt || title,
             url,

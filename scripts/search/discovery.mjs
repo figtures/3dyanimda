@@ -38,9 +38,11 @@ export function discoveryFiles({origin,brand,pages,indexNowKey}) {
     chunkSitemapEntries(entries).forEach((xml,index)=>{const file=`sitemaps/${group}-${index+1}.xml`;maps.push(file);files[file]=xml;});
   }
   files['sitemap.xml']=validateSitemapIndex('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+maps.map(p=>`<sitemap><loc>${origin}/${p}</loc></sitemap>`).join('\n')+'\n</sitemapindex>\n',maps.length);
-  // No separate bot group: the same crawl permissions apply to search/AI crawlers.
-  files['robots.txt']=`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /studio\nDisallow: /api/\nDisallow: /auth/\nSitemap: ${origin}/sitemap.xml\n`;
-  files['llms.txt']=llmsDirectory({brand,records});
+  // Explicit groups must repeat private-path rules: robots groups are not inherited.
+  const agents=['*','GPTBot','OAI-SearchBot','ClaudeBot','PerplexityBot','Google-Extended'];
+  const crawlRules='Allow: /\nDisallow: /admin\nDisallow: /studio\nDisallow: /api/\nDisallow: /auth/\n';
+  files['robots.txt']=agents.map(agent=>`User-agent: ${agent}\n${crawlRules}`).join('\n')+`\nSitemap: ${origin}/sitemap.xml\n# Legacy compatibility; canonical host is enforced with HTTP 301 redirects.\nHost: ${new URL(origin).hostname}\n`;
+  files['llms.txt']=llmsDirectory({origin,brand,records});
   files['search-manifest.json']=JSON.stringify({version:1,origin,brand,pages:records},null,2)+'\n';
   if(indexNowKey){
     if(!/^[a-zA-Z0-9-]{8,128}$/.test(indexNowKey))throw new Error('Invalid IndexNow verification key.');

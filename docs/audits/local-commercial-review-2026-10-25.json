@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-25",
+  "result": "pass",
+  "scope": "Bounded source and rendered-DOM review of the 3dyanimda popular-district footer and local commercial content; not a production deployment or fresh browser review.",
+  "baseline": "31a33f8",
+  "changes": {
+    "footerDistricts": [
+      "Ataşehir",
+      "Kadıköy",
+      "Ümraniye",
+      "Üsküdar",
+      "Maltepe",
+      "Kartal",
+      "Pendik",
+      "Beşiktaş"
+    ],
+    "footerSelection": "Curated editorial shortcuts, not an analytics-derived ranking.",
+    "services": [
+      "3d-baski",
+      "3d-tarama",
+      "3d-modelleme"
+    ],
+    "sections": [
+      "Reasons to choose and service-specific preparation",
+      "Pricing factors and context-preserving quote CTA",
+      "Three-step project and delivery preparation",
+      "Relevant guides and portfolio links"
+    ],
+    "brandScope": "3dyanimda only",
+    "contentApproach": "Original service-specific text based on the existing quote workflow; existing district-specific CMS content retained. No copied rates, delivery guarantees or unsupported business claims."
+  },
+  "checks": {
+    "typecheck": "pass",
+    "vitest": {
+      "files": 50,
+      "tests": 279,
+      "result": "pass"
+    },
+    "viteBuild": "pass",
+    "targetedRenderedDom": {
+      "tests": 5,
+      "result": "pass",
+      "coverage": [
+        "Direct short footer URLs resolve to approved published inventory",
+        "Service-specific prices and resources",
+        "District/service quote context is preserved",
+        "Section anchor uniqueness",
+        "No sales block on region hubs"
+      ]
+    },
+    "sourceReview": [
+      "Four current themes use dark body text on light surfaces; footer selectors scoped to print-brand-footer",
+      "Responsive district grid and 44px minimum link targets",
+      "No CMS writes or publication status changes",
+      "No new dependency, imagery, schema assertion, numerical price or delivery promise"
+    ],
+    "gitDiffCheck": "pass"
+  },
+  "limitations": [
+    "Fresh browser screenshots, mobile interaction and rendered accessibility checks remain pending in CI.",
+    "Production export, HTTP redirect verification, crawl/index status and live deployment remain pending.",
+    "GitHub push remains blocked pending the explicit user authorization requested after automatic review rejection.",
+    "Historical release evidence retains its original dates and coverage."
+  ],
+  "files": [
+    "src/components/brand/BrandLayout.tsx",
+    "src/components/brand/print-footer.css",
+    "src/pages/ContentPage.tsx",
+    "src/components/brand/LocalCommercialContent.tsx",
+    "src/components/brand/LocalCommercialContent.test.tsx",
+    "src/components/brand/PopularDistricts.tsx",
+    "src/components/brand/local-commercial.ts",
+    "src/components/brand/local-commercial.css"
+  ]
+}

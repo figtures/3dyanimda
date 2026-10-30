@@ -1,3 +1,4 @@
+import PopularDistricts from "./PopularDistricts";
 import {prefetchDestination} from "@/lib/route-preparation";
 import {useNavigation} from "react-router-dom";
 import {brandAsset} from '@/lib/brand-assets';
@@ -139,6 +140,7 @@ export function BrandLayout() {
             </div>
           ))}
         </div>
+        {brand.slug === "3dyanimda" && <PopularDistricts query={query} />}
         <div className="footer-top">
           <Link className="brand-logo" to={link("/")}>
             <img src={brandAsset(brand.slug,'logo_wordmark_light',brand.settings).url} width="240" height="60" alt={brand.name} className="footer-brand-image" loading="lazy" />

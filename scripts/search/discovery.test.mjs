@@ -3,6 +3,17 @@ import assert from 'node:assert/strict';
 import {discoveryFiles,changedUrls} from './discovery.mjs';
 import worker from '../../deploy/worker.mjs';
 const origin='https://3dsanayi.com';
+test('explicit AI crawler groups retain the same private-route exclusions as the wildcard',()=>{
+ const robots=discoveryFiles({origin,brand:'3D Sanayi',pages:[{path:'/'}]})['robots.txt'];
+ for(const bot of ['*','GPTBot','OAI-SearchBot','ClaudeBot','PerplexityBot','Google-Extended']){
+  const group=robots.split('\n\n').find(part=>part.startsWith('User-agent: '+bot+'\n'));
+  assert.ok(group,bot);
+  assert.match(group,/^Allow: \/$/m);
+  for(const path of ['/admin','/studio','/api/','/auth/'])assert.ok(group.includes('Disallow: '+path),bot+' '+path);
+ }
+ assert.ok(robots.includes('Sitemap: '+origin+'/sitemap.xml'));
+ assert.match(robots,/Host: 3dsanayi.com/);
+});
 test('sitemap, image references and optional directory share one canonical inventory',()=>{
   const files=discoveryFiles({origin,brand:'3D & Sanayi',pages:[{path:'/',title:'Sanayi',description:'Ana sayfa',hash:'1'},{path:'/rehber/aparat',title:'Aparat',description:'Yük & sıcaklık',lastmod:'2026-10-01',images:[origin+'/image.webp','https://another.example/image.webp'],hash:'2'}]});
   assert.match(files['sitemap.xml'],/sitemapindex/);

@@ -1,3 +1,4 @@
+import {isFlatLocalPath} from "./local-urls.mjs";
 import { canonicalPath } from "./search";
 
 export function analyticsHostAllowed(hostname: string, canonicalDomain?: string | null) {
@@ -71,6 +72,7 @@ export function initializeAnalytics(brand: string, measurementId: string) {
 export type GrowthEvent = "page_view" | "quote_cta_click" | "quote_start" | "quote_submit_error" | "generate_lead" | "contact_click" | "quote_submit_success" | "file_upload_success" | "whatsapp_click" | "phone_click";
 type GrowthFields = {service?:string;contact_type?:string;file_type?:string};
 export function contentGroup(pathname: string) {
+  if(isFlatLocalPath(pathname))return 'location';
   if (pathname === "/") return "home";
   const section = canonicalPath(pathname).split("/")[1];
   if (["3d-baski", "3d-tarama", "3d-modelleme", "hizmetler"].includes(section)) return "service";

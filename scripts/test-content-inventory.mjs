@@ -3,9 +3,12 @@ import {chromium} from '@playwright/test';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
+import {publicLocalContent} from '../src/lib/local-urls.mjs';
+import {visibleServiceFaq} from '../src/content/service-experience.mjs';
+import {assertFAQParity} from './quality/faq-parity.mjs';
 const merged=new Map();
 for(const file of ['pages.json','editorial-pages.json','search-pages.json'])for(const p of JSON.parse(readFileSync('src/content/'+file,'utf8')))merged.set(p.brand+p.path,p);
-const records=[...merged.values()].filter(p=>p.status==='published');
+const records=[...merged.values()].filter(p=>p.status==='published').map(p=>publicLocalContent(p,p.brand));
 const brands=['3dyanimda','3dsanayi','maketyanimda','parcayanimda'];
 const themes=["industrial", "industrialtwo", "editorial", "studio"];
 const utilities=['/','/hizmetler','/sektorler','/cozumler','/malzemeler','/rehber','/bolgeler','/hakkimizda','/iletisim','/teklif-al','/araclar','/araclar/stl-onizle','/araclar/kesit-analizi','/araclar/tarama-goruntuleyici','/sss'];
@@ -28,11 +31,12 @@ try{
     if(record.title){
      const visible=await page.locator('.content-article').innerText();
      for(const s of record.sections)assert.ok(visible.includes(s.body),`${brand}${record.path}: section missing`);
-     for(const f of record.faq)assert.ok(await page.locator('.content-article details').allTextContents().then(items=>items.some(t=>t.includes(f.a))),`${brand}${record.path}: FAQ missing`);
-     const docs=await page.locator('script[type="application/ld+json"]').evaluateAll(els=>els.map(el=>JSON.parse(el.textContent)));
-     const faq=docs.find(d=>d['@type']==='FAQPage');assert.equal(faq?.mainEntity.length,record.faq.length);
+     const expectedFaq=visibleServiceFaq(record,brand);
+     for(const f of expectedFaq)assert.ok(await page.locator('.content-article details').allTextContents().then(items=>items.some(t=>t.includes(f.q)&&t.includes(f.a))),`${brand}${record.path}: FAQ missing`);
+     const docs=await page.locator('script[type="application/ld+json"]').evaluateAll(els=>els.flatMap(el=>{const doc=JSON.parse(el.textContent);return doc['@graph']||[doc];}));
+     const faq=docs.find(d=>d['@type']==='FAQPage');assertFAQParity(faq?.mainEntity,expectedFaq,'http://127.0.0.1:8091'+record.path);
      assert.ok(!JSON.stringify(docs).includes('https://3dyaninda.com'));
-     if(theme==='industrial')evidence.push({brand,path:record.path,title:heading[0],description:await page.locator('meta[name="description"]').getAttribute('content'),contentHash:createHash('sha256').update(visible).digest('hex'),sections:record.sections.length,faqs:record.faq.length});
+     if(theme==='industrial')evidence.push({brand,path:record.path,title:heading[0],description:await page.locator('meta[name="description"]').getAttribute('content'),contentHash:createHash('sha256').update(visible).digest('hex'),sections:record.sections.length,faqs:expectedFaq.length});
     }
     const badImages=await page.locator('main img').evaluateAll(async imgs=>{await Promise.all(imgs.map(i=>i.decode().catch(()=>{})));return imgs.filter(i=>!i.naturalWidth).map(i=>i.getAttribute('src'));});assert.deepEqual(badImages,[],`${brand} ${record.path}: image load`);
     for(const width of [1440,390]){

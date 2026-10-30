@@ -1,3 +1,4 @@
+import {isFlatLocalPath} from "./local-urls.mjs";
 import {publicPageQuery,hasPublicPageQuery} from "@/content/public-page-query";
 import type { QueryClient } from "@tanstack/react-query";
 import type { Tenant } from "@/contexts/TenantContext";
@@ -9,7 +10,7 @@ export async function prepareContentDestination(client:QueryClient, tenant:Tenan
   if(path.startsWith("/kariyer/"))path="/kariyer";
   if(hasPublicPageQuery(path)){await client.ensureQueryData({...publicPageQuery(tenant,path),revalidateIfStale:true});return;}
   if(hubs[path]) {await client.ensureQueryData({...contentQuery(tenant,false,false,{kinds:hubs[path]}),revalidateIfStale:true});return;}
-  if(/^\/(3d-baski|3d-tarama|3d-modelleme)$/.test(path)||/^\/(cozumler|sektorler|malzemeler|rehber|bolgeler)\//.test(path)) {
+  if((tenant.slug==='3dyanimda'&&isFlatLocalPath(path))||/^\/(3d-baski|3d-tarama|3d-modelleme)$/.test(path)||/^\/(cozumler|sektorler|malzemeler|rehber|bolgeler)\//.test(path)) {
     const page=await client.ensureQueryData({...contentPageQuery(tenant,path),revalidateIfStale:true});
     if(page)await client.ensureQueryData({...relatedContentQuery(tenant,page),revalidateIfStale:true});
   }

@@ -6,7 +6,7 @@ import ContentPage from './ContentPage';
 
 const fixtures = vi.hoisted(() => ({ page: null as LandingPage | null }));
 vi.mock('@/content/useContent', () => ({ useContentPage: () => ({ data: fixtures.page, isLoading: false, isError: false }), useRelatedContent: () => ({ data: [] }) }));
-vi.mock('@/brands/config', () => ({ useBrand: () => ({ name: '3D Yanımda', focus: '3D baskı' }) }));
+vi.mock('@/brands/config', () => ({ useBrand: () => ({ slug: '3dyanimda', name: '3D Yanımda', focus: '3D baskı' }) }));
 vi.mock('@/lib/tenant', () => ({ getTenantIdentity: () => ({ origin: 'https://3dyanimda.com' }), previewSearch: () => '' }));
 vi.mock('@/components/site/Seo', () => ({ Seo: () => null }));
 vi.mock('./RegionPlanner', () => ({ default: () => null }));
@@ -15,11 +15,11 @@ vi.mock('@/components/brand/LocalServiceAccess', () => ({ LocalServiceAccess: ()
 
 let scrollIntoView: ReturnType<typeof vi.fn>;
 let scrollTo: ReturnType<typeof vi.spyOn>;
-const show = () => {
+const show = (path = '/rehber/test') => {
   const router = createMemoryRouter([{ element: <><Outlet /><ScrollRestoration /></>, children: [
-    { path: '/rehber/test', element: <><ContentPage /><Link to="/other">Başka sayfa</Link></> },
+    { path, element: <><ContentPage /><Link to="/other">Başka sayfa</Link></> },
     { path: '/other', element: <h1>Başka sayfa</h1> },
-  ] }], { initialEntries: ['/rehber/test?tenant=3dyanimda&theme=industrial'] });
+  ] }], { initialEntries: [path + '?tenant=3dyanimda&theme=industrial'] });
   render(<RouterProvider router={router} />);
   return router;
 };
@@ -36,6 +36,24 @@ beforeEach(() => {
 afterEach(() => { cleanup(); vi.restoreAllMocks(); });
 
 describe('content in-page navigation with router scroll restoration', () => {
+  it.each([
+    ['Dört hizmet, tek proje', 'dort-hizmet'],
+    ['Neden 3D Yanımda?', 'neden-3d-yanimda'],
+    ['Fiyat ve teklif', 'fiyat-ve-teklif'],
+    ['Tekliften teslimata', 'proje-hazirligi'],
+  ])('preserves query and scrolls the new service link %s', async (name, id) => {
+    fixtures.page!.kind = 'service';
+    fixtures.page!.path = '/3d-baski';
+    const router = show('/3d-baski');
+    scrollIntoView.mockClear(); scrollTo.mockClear();
+    const link = screen.getByRole('link', { name });
+    expect(link.getAttribute('href')).toBe(`#${id}`);
+    fireEvent.click(link);
+    await waitFor(() => expect(scrollIntoView.mock.instances.at(-1)).toBe(document.getElementById(id)));
+    expect(router.state.location).toMatchObject({ pathname: '/3d-baski', search: '?tenant=3dyanimda&theme=industrial', hash: `#${id}` });
+    expect(scrollTo).not.toHaveBeenCalled();
+  });
+
   it.each([
     ['Dosyayı açın', 'bolum-0'],
     ['Karşılaştırma', 'karsilastirma'],

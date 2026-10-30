@@ -1,4 +1,9 @@
-import {contentStructuredData,contentParent} from "@/content/structured-content";
+import LocalCommercialContent from "@/components/brand/LocalCommercialContent";
+import ServiceConnections from "@/components/brand/ServiceConnections";
+import ContentFaq from "@/components/brand/ContentFaq";
+import {serviceExperience,serviceContentModified,visibleServiceFaq} from "@/content/service-experience.mjs";
+import {contentStructuredData,contentParent,contentBreadcrumbs} from "@/content/structured-content";
+import {Fragment} from 'react';
 import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { InPageLink } from "@/components/site/InPageLink";
@@ -37,7 +42,10 @@ export default function ContentPage() {
   const [parent,parentLabel] = contentParent(p.kind);
   const base = getTenantIdentity().origin;
   const technicalNote=sourceNote(p.path);
-  const modified=contentModified(p.updated_at,p.path);
+  const modified=serviceContentModified(p,b.slug,contentModified(p.updated_at,p.path));
+  const experience=serviceExperience(p,b.slug);
+  const faq=visibleServiceFaq(p,b.slug);
+  const breadcrumbs=contentBreadcrumbs(p,b.slug);
   const published=contentPublished(p.editorial?.publishedAt);
   const media=p.editorial?.media;
   const displayDate=(value:string)=>new Date(value).toLocaleDateString("tr-TR", {year:"numeric",month:"long",day:"numeric",timeZone:"Europe/Istanbul"});
@@ -65,15 +73,14 @@ export default function ContentPage() {
         modified={modified}
         keywords={[p.title, b.focus, p.city, p.district, p.neighborhood].filter(Boolean).join(", ")}
         geo={p.city ? {region:"TR-34",placename:[p.neighborhood,p.district,p.city].filter(Boolean).join(", ")} : undefined}
-        jsonLd={contentStructuredData(p,base)}
+        jsonLd={contentStructuredData(p,base,b.slug)}
       />
       <section className="content-hero wrap">
         <nav className="breadcrumbs" aria-label="Sayfa yolu">
-          <Link to={"/" + query}>Anasayfa</Link>
-          <ChevronRight size={12} />
-          <Link to={parent + query}>{parentLabel}</Link>
-          <ChevronRight size={12} />
-          <span>{p.title}</span>
+          {breadcrumbs.map((item,index)=><Fragment key={item.path}>
+            {index>0&&<ChevronRight size={12} aria-hidden="true"/>}
+            {index===breadcrumbs.length-1?<span aria-current="page">{item.name}</span>:<Link to={item.path+query}>{item.name}</Link>}
+          </Fragment>)}
         </nav>
         <p className="brand-eyebrow">
           {b.name} / {parentLabel}
@@ -95,6 +102,8 @@ export default function ContentPage() {
               {!!p.editorial.takeaways?.length && <ul>{p.editorial.takeaways.map(item => <li key={item}>{item}</li>)}</ul>}
             </section>
           )}
+          <ServiceConnections page={p} brand={b.slug} query={query}/>
+          {experience && <LocalCommercialContent page={p} quoteUrl={quoteUrl} query={query} />}
           {p.image && (
             <figure>
               <picture>
@@ -148,17 +157,7 @@ export default function ContentPage() {
               {resource.description && <p>{resource.description}</p>}
             </li>)}</ul>
           </section>}
-          {!!p.faq.length && (
-            <section id="sorular">
-              <h2>Sık sorulan sorular</h2>
-              {p.faq.map((f) => (
-                <details key={f.q}>
-                  <summary>{f.q}</summary>
-                  <p>{f.a}</p>
-                </details>
-              ))}
-            </section>
-          )}
+          <ContentFaq page={p} brand={b.slug}/>
           {technicalNote && <section className="article-sources" data-source-note><h2>Teknik kaynak notu</h2><p>{technicalNote.text}</p><p>{technicalNote.scope}</p><ul>{technicalNote.sources.map(s=><li key={s.id}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
           {!!p.editorial?.sources?.length && <section className="article-sources"><h2>{p.kind === "location" ? "Bölge ve hizmet kaynakları" : "Teknik başvuru kaynakları"}</h2><p>Bağlantılar ilgili konu için genel başvuru kaynaklarıdır. İşletmeye özgü kapasite, teslimat süresi veya parça performansını belgelemez.</p><ul>{p.editorial.sources.filter(s=>!technicalNote || !s.url.includes('/category/material-guide_')).map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
           {(published || modified) && <p className="content-byline">{b.name} bilgi merkezi{published && <> · İlk yayın: <time data-content-published dateTime={published}>{displayDate(published)}</time></>}{modified && <> · Güncelleme: <time data-content-modified dateTime={modified}>{displayDate(modified)}</time></>}</p>}
@@ -180,6 +179,7 @@ export default function ContentPage() {
           <hr />
           <h3>Bu sayfada</h3>
           {p.kind === "location" && <InPageLink hash="#hizmet-ve-teslimat">Hizmete erişim ve teslimat</InPageLink>}
+          {experience && <><InPageLink hash="#dort-hizmet">Dört hizmet, tek proje</InPageLink><InPageLink hash="#neden-3d-yanimda">Neden 3D Yanımda?</InPageLink><InPageLink hash="#fiyat-ve-teklif">Fiyat ve teklif</InPageLink><InPageLink hash="#proje-hazirligi">Tekliften teslimata</InPageLink></>}
           {p.sections.map((s, i) => (
             <InPageLink key={i} hash={`#bolum-${i}`}>
               {s.title}
@@ -187,7 +187,7 @@ export default function ContentPage() {
           ))}
           {p.editorial?.comparison && <InPageLink hash="#karsilastirma">Karşılaştırma</InPageLink>}
           {!!p.editorial?.resources?.length && <InPageLink hash="#araclar-ve-dosyalar">Araçlar ve örnek dosyalar</InPageLink>}
-          {!!p.faq.length && <InPageLink hash="#sorular">Sorular ve yanıtlar</InPageLink>}
+          {!!faq.length && <InPageLink hash="#sorular">Sorular ve yanıtlar</InPageLink>}
         </aside>
       </div>
       <section className="wrap content-next-step">
