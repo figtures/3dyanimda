@@ -4,7 +4,7 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-29T23:48:07.735Z",
+  "reviewedAt": "2026-10-30T00:12:22.016Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
@@ -85,7 +85,9 @@
     "latestBoundedFollowUp": "docs/audits/seo-followup-review-2026-10-28.json",
     "latestPrehydrationAnchorReview": "docs/audits/seo-prehydration-anchor-review-2026-10-28.json",
     "latestPrehydrationAnchorTests": 13,
-    "latestReconciliationReview": "docs/audits/seo-reconciliation-review-2026-10-30.json"
+    "latestReconciliationReview": "docs/audits/seo-reconciliation-review-2026-10-30.json",
+    "latestCiSecurityFollowup": "docs/audits/seo-ci-security-followup-2026-10-30.json",
+    "latestCiSecurityNote": "Vite 6.4.5 fixes the newly reported dev-server advisory. Audit, typecheck, 331 application tests, 96 contracts, identity seed, protocols and build pass locally. Initial PR candidate has 18 completed laboratory runs; homepage TBT and function-level CPU attribution remain open. Cloudflare preview failures are untriaged behind sign-in. Fresh patched-head CI and production acceptance remain pending."
   },
   "evidence": [
     {
@@ -478,11 +480,11 @@
     },
     {
       "file": "package.json",
-      "sha256": "9d7413e742ff22a709a957c53a729a82d7a29c847b0dda20bb8e18d28c455ab5"
+      "sha256": "45210bdf2a7165c8cff66b6521a2654f82432d5408be3285f23529ed5a7ddebd"
     },
     {
       "file": "package-lock.json",
-      "sha256": "22f29381b57d4a4011d4884f436223972d723e886622f4eda516eece64561af5"
+      "sha256": "01c8a0fe4069c9de490fe1fd1501909c26e21a534927f7e490f5584bdb471dc1"
     },
     {
       "file": "docs/audits/seo-followup-review-2026-10-28.json",
@@ -731,6 +733,10 @@
     {
       "file": "src/pages/ContentPage.navigation.test.tsx",
       "sha256": "0c92c6462b2bcd3fe0f0fb5d281a95ea4f570fe180aaa164a1cfc4ed2a7e9c33"
+    },
+    {
+      "file": "docs/audits/seo-ci-security-followup-2026-10-30.json",
+      "sha256": "4c60b16bad6e26ed8c42cea9407d7345842412088496a14f4fbcd15b296dc8ce"
     }
   ],
   "limitations": [

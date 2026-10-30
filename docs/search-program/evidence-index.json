@@ -148,7 +148,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "9d7413e742ff22a709a957c53a729a82d7a29c847b0dda20bb8e18d28c455ab5",
+      "sha256": "45210bdf2a7165c8cff66b6521a2654f82432d5408be3285f23529ed5a7ddebd",
       "bytes": 7541
     },
     {
@@ -1065,11 +1065,16 @@
       "path": "scripts/quality/exported-business-profile.test.mjs",
       "sha256": "90134e84e2aad861ae36480a67930330b575285dce409a741c3eac969d78eef1",
       "bytes": 6486
+    },
+    {
+      "path": "docs/audits/seo-ci-security-followup-2026-10-30.json",
+      "sha256": "4c60b16bad6e26ed8c42cea9407d7345842412088496a14f4fbcd15b296dc8ce",
+      "bytes": 22974
     }
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-29T23:48:07.311Z",
+  "checksumsRefreshedAt": "2026-10-30T00:12:21.941Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
