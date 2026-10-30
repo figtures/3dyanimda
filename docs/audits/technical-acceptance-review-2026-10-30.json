@@ -1,0 +1,91 @@
+{
+  "reviewedAt": "2026-10-30T03:11:45.601Z",
+  "reviewer": "Codex (AI, owner-delegated bounded technical review)",
+  "humanReviewPerformed": false,
+  "baseline": "afeeffa105456b9e155574eafb06cb7ea0792ab7",
+  "scope": [
+    "Ask the browser to reject WebGL contexts with a major performance caveat and use the existing CanvasPrinter fallback. Hardware-accelerated printer geometry, lighting and animation are unchanged.",
+    "Keep content fragment headings below the sticky header with 110px scroll margin.",
+    "Add actual heading/header intersection checks to 16 3dyanimda brand/theme/viewport browser cases. Record renderer selection in Lighthouse output."
+  ],
+  "baselineEvidence": {
+    "runId": 40992420602,
+    "artifactId": 12950071930,
+    "mobileHome": {
+      "repeats": 3,
+      "performance": [
+        66,
+        67,
+        66
+      ],
+      "tbtMs": [
+        11125,
+        11245.5,
+        11319.5
+      ],
+      "cls": [
+        0,
+        0,
+        0
+      ]
+    },
+    "trace": {
+      "mainThreadLongTaskMs": 3661.886,
+      "threadCpuMs": 0.316,
+      "location": "raw/3dyanimda-home-mobile-1-evidence/trace.json.gz",
+      "sha256": "aee6a6983e4e7a254ceaf0d8b0a9d3171ae626b62f9efbc49a37845bd8998d52",
+      "limitation": "No sampled CPU profile. Large wall/CPU gap and GPU work support a software-rendering bottleneck inference, not function-level attribution."
+    }
+  },
+  "liveAcceptance": {
+    "date": "2026-10-30",
+    "pages": 230,
+    "redirects": 164,
+    "specialCases": 12,
+    "status": "pass for baseline",
+    "browserNavigation": {
+      "routes": [
+        "/3d-baski",
+        "/3d-tarama"
+      ],
+      "back": true,
+      "forward": true,
+      "reload": true,
+      "metadataAndSchemaExact": true
+    },
+    "mobileTables": {
+      "viewport": 390,
+      "pageOverflow": false,
+      "cellFontPx": 16,
+      "keyboardScroll": true,
+      "headingOcclusionFound": true
+    },
+    "bots": {
+      "robotsAllowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ClaudeBot",
+        "PerplexityBot",
+        "Google-Extended"
+      ],
+      "cloudflareBlockCrawlers": false,
+      "oaiSearchBotLast7Days": {
+        "allowed": 4,
+        "unsuccessful": 0
+      }
+    }
+  },
+  "validation": {
+    "typecheck": "pass",
+    "applicationTests": 331,
+    "technicalContracts": 100,
+    "build": "pass"
+  },
+  "reference": "https://registry.khronos.org/webgl/specs/latest/1.0/#WEBGLCONTEXTATTRIBUTES",
+  "limitations": [
+    "Current candidate browser, Lighthouse and production verification are pending CI and deployment.",
+    "Software-renderer fallback improvement must not be described as faster hardware WebGL, mobile field CWV or a ranking improvement.",
+    "All inherited source/content/asset review dates remain unchanged.",
+    "No sitemap/indexing submission, fake quote, analytics event fabrication, CMS rewrite or business claim was made."
+  ]
+}

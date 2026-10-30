@@ -20,7 +20,9 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
     if (!el) return;
     let renderer: THREE.WebGLRenderer;
     const canvas = document.createElement("canvas");
-    const options: WebGLContextAttributes = { alpha: true, antialias: true, powerPreference: "low-power" };
+    // A software WebGL context can block navigation for seconds. Let the
+    // browser select the existing CanvasPrinter fallback on those devices.
+    const options: WebGLContextAttributes = { alpha: true, antialias: true, powerPreference: "low-power", failIfMajorPerformanceCaveat: true };
     const context = canvas.getContext("webgl2", options) || canvas.getContext("webgl", options);
     if (!context) { callbacks.current.onFailure(); return; }
     try { renderer = new THREE.WebGLRenderer({ canvas, context, ...options }); }

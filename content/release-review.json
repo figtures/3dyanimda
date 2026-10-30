@@ -4,13 +4,13 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-30T00:12:22.016Z",
+  "reviewedAt": "2026-10-30T03:11:45.601Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "8df064a59a0bb70cd8b01b2b5f9284940e9761b21c39cd16f1a573e8a75254b5",
+  "sourceHash": "5dbc7d11fa207bfb7baeb9fb773ef828121bb671b9a61cc8fa88e069e0c8b35b",
   "sourceFileCount": 713,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
@@ -87,7 +87,8 @@
     "latestPrehydrationAnchorTests": 13,
     "latestReconciliationReview": "docs/audits/seo-reconciliation-review-2026-10-30.json",
     "latestCiSecurityFollowup": "docs/audits/seo-ci-security-followup-2026-10-30.json",
-    "latestCiSecurityNote": "Vite 6.4.5 fixes the newly reported dev-server advisory. Audit, typecheck, 331 application tests, 96 contracts, identity seed, protocols and build pass locally. Initial PR candidate has 18 completed laboratory runs; homepage TBT and function-level CPU attribution remain open. Cloudflare preview failures are untriaged behind sign-in. Fresh patched-head CI and production acceptance remain pending."
+    "latestCiSecurityNote": "Vite 6.4.5 fixes the newly reported dev-server advisory. Audit, typecheck, 331 application tests, 96 contracts, identity seed, protocols and build pass locally. Initial PR candidate has 18 completed laboratory runs; homepage TBT and function-level CPU attribution remain open. Cloudflare preview failures are untriaged behind sign-in. Fresh patched-head CI and production acceptance remain pending.",
+    "latestTechnicalAcceptanceReview": "docs/audits/technical-acceptance-review-2026-10-30.json"
   },
   "evidence": [
     {
@@ -428,7 +429,7 @@
     },
     {
       "file": "scripts/test-navigation.mjs",
-      "sha256": "7c5af8950d6d3f22837d82c7e088bb851a4ce58b9efb634c0d48d50f1f6f04b1"
+      "sha256": "aa21b330fe73076ee7362399e4726e2bad83dbe60a7326ccc9b0814172099dc5"
     },
     {
       "file": "scripts/quality/review-candidate.mjs",
@@ -737,6 +738,22 @@
     {
       "file": "docs/audits/seo-ci-security-followup-2026-10-30.json",
       "sha256": "4c60b16bad6e26ed8c42cea9407d7345842412088496a14f4fbcd15b296dc8ce"
+    },
+    {
+      "file": "src/themes/printer/PrinterScene.tsx",
+      "sha256": "f35338168fc2f6c9e8867b2a03c3143ada203c88ded12571d6ad1a03dcc56e5a"
+    },
+    {
+      "file": "src/brands/modern.css",
+      "sha256": "e9d82b972d691c4501d605da3b88a4fac395f229cd3c0eb5d24bb9659ac120ee"
+    },
+    {
+      "file": "scripts/quality/lighthouse-ci.mjs",
+      "sha256": "2da26049a3754e60621976c0df90a19723f107f9ce1eb7af9b203caf02ec58c1"
+    },
+    {
+      "file": "docs/audits/technical-acceptance-review-2026-10-30.json",
+      "sha256": "cfdb5c790bcf02c801d26659051663cf113eafba292342ffd543d102859386ce"
     }
   ],
   "limitations": [
@@ -767,7 +784,8 @@
     "25 October bounded service FAQ/schema review: 289 application tests, 91 contracts and build passed; 127 authored records gain four-service relationships and shared visible FAQ/JSON-LD data. Browser, export and deployment remain separate pending checks. See docs/audits/service-faq-schema-review-2026-10-25.json.",
     "25 October bounded SEO checklist delta: 293 application tests, 94 contracts, TypeScript and Vite build passed. Read-only production observations describe the existing release, not this unpublished delta. Verified hours/coordinates, English publication, customer evidence and account-level search submissions remain open. See docs/audits/seo-checklist-review-2026-10-25.json.",
     "25 October follow-up resolves the prior hours/coordinates data gap using the matching public Google Maps listing. Only three 3D Yanimda CMS contact fields changed; guarded update/readback and other-tenant fingerprint pass. Existing static production HTML still lacks these fields; publication remains pending. Contact all-day label and schema parity passed targeted tests and build. See docs/audits/seo-maps-hours-verification-2026-10-25.json.",
-    "30 October reconciliation review retains published PR17/18 code, adds four meaningful service anchor regressions and passes 331 application/96 contract/2 diagnostic tests plus typecheck/build. Fresh CI and deployment remain pending; no current account indexing, conversion or speed outcome is claimed."
+    "30 October reconciliation review retains published PR17/18 code, adds four meaningful service anchor regressions and passes 331 application/96 contract/2 diagnostic tests plus typecheck/build. Fresh CI and deployment remain pending; no current account indexing, conversion or speed outcome is claimed.",
+    "30 October bounded software-GPU fallback and fragment-offset review: 331 application tests, 100 contracts, typecheck and build pass. Baseline production SEO and metadata parity verified. Candidate CI and post-publication acceptance remain separate gates; historical evidence remains dated."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",
