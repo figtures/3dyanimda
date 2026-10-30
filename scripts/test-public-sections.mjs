@@ -63,10 +63,18 @@ try {
   }
   await fits();await aligned();
   await visit('/sss');await page.locator('.public-faq-list details').first().waitFor();
-  assert.equal(await page.locator('.public-faq-list details').count(),8);
+  const expectedFaqCount=brand==='3dyanimda'?17:8;
+  assert.equal(await page.locator('.public-faq-list details').count(),expectedFaqCount);
+  const faqParity=await page.evaluate(()=>{
+   const schemas=[...document.querySelectorAll('script[type="application/ld+json"]')].flatMap(el=>{const value=JSON.parse(el.textContent);return Array.isArray(value)?value:value['@graph']||[value];});
+   const faq=schemas.find(item=>item['@type']==='FAQPage');
+   const normalize=value=>value.replace(/\s+/g,' ').trim();
+   return {rendered:[...document.querySelectorAll('.public-faq-list details')].map(el=>({q:normalize(el.querySelector('summary').textContent),a:normalize(el.querySelector('p').textContent)})),schema:(faq?.mainEntity||[]).map(item=>({q:normalize(item.name),a:normalize(item.acceptedAnswer.text)}))};
+  });
+  assert.deepEqual(faqParity.schema,faqParity.rendered,'FAQ schema must exactly match the rendered questions and answers');
   await page.locator('.public-faq-list summary').first().click();assert.ok(await page.locator('.public-faq-list details p').first().isVisible());
   await page.getByRole('searchbox').fill('ZZZ-no-matching-question');assert.equal(await page.locator('.public-faq-list details').count(),0);
-  await page.getByRole('searchbox').fill('');assert.equal(await page.locator('.public-faq-list details').count(),8);await fits();await aligned();
+  await page.getByRole('searchbox').fill('');assert.equal(await page.locator('.public-faq-list details').count(),expectedFaqCount);await fits();await aligned();
   if(brand==='3dyanimda'&&theme==='editorial')await page.screenshot({path:`${out}/faq-${width}.png`});
   await visit('/kariyer');await page.locator('.career-role').nth(2).waitFor();assert.equal(await page.locator('.career-role').count(),3);await fits();await aligned();
   const position=await page.locator('.career-role h3').first().innerText();
