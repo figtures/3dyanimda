@@ -1,0 +1,180 @@
+{
+  "recordedAt": "2026-10-30T03:55:01.102Z",
+  "kind": "post-merge-validation-receipt",
+  "pullRequest": "https://github.com/figtures/3dyanimda/pull/20",
+  "commit": "b1e58994435927c1ada7fc7eac5a272df6153030",
+  "candidateChecks": [
+    {
+      "name": "Workers Builds: maketyanimda",
+      "conclusion": "success",
+      "url": "https://dash.cloudflare.com/29b5400cedadf701d4355932340ecf99/workers/services/view/maketyanimda/production/previews/seo-finish-technical-acceptance/builds/734416ef-656a-4051-b849-abd603cb3d72"
+    },
+    {
+      "name": "Workers Builds: 3dsanayi",
+      "conclusion": "success",
+      "url": "https://dash.cloudflare.com/29b5400cedadf701d4355932340ecf99/workers/services/view/3dsanayi/production/previews/seo-finish-technical-acceptance/builds/aed3131e-835c-46d8-9ab3-dc41dfaa16f6"
+    },
+    {
+      "name": "Workers Builds: 3dyanimda",
+      "conclusion": "success",
+      "url": "https://dash.cloudflare.com/29b5400cedadf701d4355932340ecf99/workers/services/view/3dyanimda/production/previews/seo-finish-technical-acceptance/builds/b373593e-93d2-4d2f-acc2-4bd36332fada"
+    },
+    {
+      "name": "Workers Builds: parcayanimda",
+      "conclusion": "success",
+      "url": "https://dash.cloudflare.com/29b5400cedadf701d4355932340ecf99/workers/services/view/parcayanimda/production/previews/seo-finish-technical-acceptance/builds/60ffe964-7a9f-43c2-8137-01c7d4b6c0f1"
+    },
+    {
+      "name": "Public domains read-only DNS and HTTP evidence",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106663/job/123872805870"
+    },
+    {
+      "name": "Public API schema inventory across all brands",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106663/job/123872805734"
+    },
+    {
+      "name": "Navigation across brands, themes and viewports",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106663/job/123872805658"
+    },
+    {
+      "name": "Local contracts (not release approval)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106663/job/123872805504"
+    },
+    {
+      "name": "Cursor Bugbot",
+      "conclusion": "success",
+      "url": "https://cursor.com/docs/bugbot"
+    },
+    {
+      "name": "Approved export and dry-run (3dsanayi)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106682/job/123872670984"
+    },
+    {
+      "name": "Approved export and dry-run (maketyanimda)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106682/job/123872670951"
+    },
+    {
+      "name": "Approved export and dry-run (parcayanimda)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106682/job/123872670874"
+    },
+    {
+      "name": "browser-review (parcayanimda)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106661/job/123872670740"
+    },
+    {
+      "name": "lighthouse (3dyanimda, desktop)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106653/job/123872670685"
+    },
+    {
+      "name": "browser-review (3dyanimda)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106661/job/123872670640"
+    },
+    {
+      "name": "browser-review (maketyanimda)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106661/job/123872670605"
+    },
+    {
+      "name": "Approved export and dry-run (3dyanimda)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106682/job/123872670572"
+    },
+    {
+      "name": "lighthouse (3dyanimda, mobile)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106653/job/123872670444"
+    },
+    {
+      "name": "browser-review (3dsanayi)",
+      "conclusion": "success",
+      "url": "https://github.com/figtures/3dyanimda/actions/runs/40997106661/job/123872670440"
+    }
+  ],
+  "mergedSourceChecks": {
+    "workflowRuns": [
+      40998803906,
+      40998803706,
+      40998803718
+    ],
+    "navigation": "64 brand/theme/viewport cases, 17 route runtime cases and 32 quote layout cases passed; job 123878111130 completed 2026-10-30T03:54:11Z",
+    "localContracts": "success",
+    "publicDomains": "success",
+    "publicApiSchema": "success",
+    "fourBrandExport": "success",
+    "eightLighthouseJobs": "success"
+  },
+  "candidateLab": {
+    "run": 40997106653,
+    "fieldData": false,
+    "actualRenderer": "canvas/ready",
+    "mobileHome": {
+      "performance": [
+        89,
+        99,
+        99
+      ],
+      "tbtMs": [
+        423,
+        102.5,
+        119
+      ],
+      "lcpMs": [
+        1556.8065,
+        1559.6687,
+        1557.489
+      ],
+      "cls": [
+        0,
+        0,
+        0
+      ]
+    },
+    "desktopHome": {
+      "performance": [
+        79,
+        80,
+        78
+      ],
+      "tbtMs": [
+        501,
+        474,
+        534
+      ],
+      "cls": [
+        0,
+        0,
+        0
+      ]
+    },
+    "baselineMobileHome": {
+      "performance": [
+        66,
+        67,
+        66
+      ],
+      "tbtMs": [
+        11125,
+        11245.5,
+        11319.5
+      ]
+    },
+    "interpretation": "Known software-GPU fallback improvement in the same CI method. Not hardware WebGL speed, field Core Web Vitals, INP or ranking evidence."
+  },
+  "liveBeforeRepublish": {
+    "productionCommit": "afeeffa105456b9e155574eafb06cb7ea0792ab7",
+    "cloudflareVersion": "51f25e06",
+    "observedAt": "2026-10-30T03:54:00Z",
+    "pending": "PR20 automatic production build not observed; publishing this result receipt retriggers normal Git-connected build. No settings or security changes."
+  },
+  "sitemapSubmitted": false
+}
