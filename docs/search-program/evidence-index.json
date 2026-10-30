@@ -363,8 +363,8 @@
     },
     {
       "path": "scripts/quality/lighthouse-ci.mjs",
-      "sha256": "a4f6a6c28138dc6199b4344bf4522ba59e05a07ac33a15ebefffae3171b3e18b",
-      "bytes": 15132
+      "sha256": "2da26049a3754e60621976c0df90a19723f107f9ce1eb7af9b203caf02ec58c1",
+      "bytes": 15544
     },
     {
       "path": "scripts/quality/public-bootstrap.mjs",
@@ -438,8 +438,8 @@
     },
     {
       "path": "scripts/test-navigation.mjs",
-      "sha256": "7c5af8950d6d3f22837d82c7e088bb851a4ce58b9efb634c0d48d50f1f6f04b1",
-      "bytes": 7859
+      "sha256": "aa21b330fe73076ee7362399e4726e2bad83dbe60a7326ccc9b0814172099dc5",
+      "bytes": 8811
     },
     {
       "path": "src/App.tsx",
@@ -453,8 +453,8 @@
     },
     {
       "path": "src/brands/modern.css",
-      "sha256": "a0abb364ad1810da7ec8ff6eacbb75dcb6469042ef1470a360ea04315148067c",
-      "bytes": 21921
+      "sha256": "e9d82b972d691c4501d605da3b88a4fac395f229cd3c0eb5d24bb9659ac120ee",
+      "bytes": 21922
     },
     {
       "path": "src/components/site/NotificationOverlays.tsx",
@@ -1074,7 +1074,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-30T00:12:21.941Z",
+  "checksumsRefreshedAt": "2026-10-30T03:22:24.590Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",

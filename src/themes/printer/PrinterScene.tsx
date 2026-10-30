@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { buildPrinter } from "./build-printer";
 import { PRINT_LAYERS, printFrame } from "./print-path";
+import { usesSoftwareRenderer } from "./renderer-capability";
 import type { PrinterSceneProps } from "./types";
 
 export default function PrinterScene({ paused, restart, onReady, onFailure, onState }: PrinterSceneProps) {
@@ -20,9 +21,15 @@ export default function PrinterScene({ paused, restart, onReady, onFailure, onSt
     if (!el) return;
     let renderer: THREE.WebGLRenderer;
     const canvas = document.createElement("canvas");
-    const options: WebGLContextAttributes = { alpha: true, antialias: true, powerPreference: "low-power" };
+    // A software WebGL context can block navigation for seconds. Let the
+    // browser select the existing CanvasPrinter fallback on those devices.
+    const options: WebGLContextAttributes = { alpha: true, antialias: true, powerPreference: "low-power", failIfMajorPerformanceCaveat: true };
     const context = canvas.getContext("webgl2", options) || canvas.getContext("webgl", options);
     if (!context) { callbacks.current.onFailure(); return; }
+    if (usesSoftwareRenderer(context)) {
+      context.getExtension('WEBGL_lose_context')?.loseContext();
+      callbacks.current.onFailure(); return;
+    }
     try { renderer = new THREE.WebGLRenderer({ canvas, context, ...options }); }
     catch { callbacks.current.onFailure(); return; }
     renderer.outputColorSpace = THREE.SRGBColorSpace;

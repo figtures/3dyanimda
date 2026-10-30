@@ -109,10 +109,16 @@ try {
    const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
    const diagnostic=brand==='3dyanimda'&&target.route==='/'
     ?await saveHomeTrace(result.artifacts,file.replace('.json.gz','-evidence')):undefined;
+   // Record the selected production renderer so a fallback is never described
+   // as a faster hardware-WebGL scene in before/after reports.
+   const renderer=target.route==='/'?await page.evaluate(()=>({
+    kind:document.querySelector('.printer-scene')?.getAttribute('data-renderer')||null,
+    state:document.querySelector('.print-stage')?.getAttribute('data-scene-state')||null,
+   })):undefined;
    const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
    const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));
    await writeFile(file.replace('.json.gz','.html'),Array.isArray(result.report)?result.report.find(r=>r.startsWith('<!doctype')||r.startsWith('<!DOCTYPE'))||result.report[0]:result.report);
-   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex'),diagnostic});
+   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex'),diagnostic,renderer});
    await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('LIGHTHOUSE_RUN '+JSON.stringify(report.runs.at(-1)));
   }
   if(target.route==='/'||target.route==='/teklif-al'){

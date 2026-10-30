@@ -59,6 +59,24 @@ for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda'])for(co
  await page.waitForFunction(p=>document.querySelector('link[rel="icon"]')?.getAttribute('href')===p+'icon-96.png',prefix);
  assert.equal(await page.locator('link[rel="apple-touch-icon"]').getAttribute('href'),prefix+'icon-180.png');
  await assertRouteMedia(brand,'/3d-baski');
+ if(brand==='3dyanimda') {
+  // Native/router fragment scrolling must leave the section heading below
+  // the sticky header, including tables on narrow screens.
+  for(const id of ['karsilastirma','sorular']) {
+   await page.locator(`.article-aside a[href="#${id}"]`).click();
+   await page.waitForURL(url=>url.hash==='#'+id);
+   await page.waitForFunction(id=>{
+    const heading=document.querySelector('#'+id+' h2').getBoundingClientRect();
+    const header=document.querySelector('.product-header').getBoundingClientRect();
+    return heading.top>=header.bottom&&heading.top<innerHeight;
+   },id);
+  }
+  const table=page.locator('.comparison-scroll');
+  assert.equal(await table.getAttribute('tabindex'),'0');
+  assert.equal(await table.evaluate(el=>getComputedStyle(el).overflowX),'auto');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));
+ }
  if(width===390&&theme==='industrial')await page.screenshot({path:`/tmp/brand-menu-previews/branding-${brand}.png`});
 
  if(width<1100){await page.getByRole('button',{name:'Menüyü aç'}).click();await page.getByRole('dialog').waitFor();assert.equal(await page.getByRole('navigation',{name:'Mobil ana menü'}).isVisible(),true);await page.getByRole('dialog').getByRole('link',{name:'3D Tarama',exact:false}).first().focus();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});await page.getByRole('button',{name:'Menüyü aç'}).click();await page.getByRole('dialog').getByRole('link',{name:'3D Tarama',exact:false}).first().click();await page.waitForURL(/3d-tarama/);await page.getByRole('dialog').waitFor({state:'hidden'});await assertRouteMedia(brand,'/3d-tarama');}
