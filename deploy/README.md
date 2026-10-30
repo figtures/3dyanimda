@@ -107,8 +107,23 @@ Create four Worker projects connected to figtures/3dyanimda, each with root `/`:
    The runner needs `apt-get`, `dpkg-deb`, `ldd` and the Ubuntu archive keyring.
    Repository signatures and package hashes remain mandatory. Do not disable the
    Chromium smoke test or release checks.
-4. Disable automatic non-production branch deploys until a separate staging setup
-   has been configured. The supplied pipeline targets the named brand Worker.
+4. For non-production branches, use the Workers Builds Preview command
+   `npx wrangler preview`. The root `wrangler.jsonc` declares the required
+   `previews` block and invokes `scripts/cloudflare/build-preview.mjs` to build
+   the connected brand. Workers Builds supplies `WRANGLER_CI_OVERRIDE_NAME`;
+   an explicit `WORKER_NAME` must agree with it. Unknown or conflicting names
+   fail instead of publishing the wrong brand. The root build rejects `main`.
+   Production still uses `npm run deploy:<brand>` with its explicit generated
+   config and all existing release checks.
+
+Branch previews render the SPA with the selected brand's public API configuration.
+The preview Worker sends `noindex`, disallows crawling and serves direct client
+routes without redirecting to the business domain. GA4 is disabled in this build.
+Preview forms still use the configured public API; they are not a sandbox for
+creating test orders or leads. Do not submit real or synthetic leads during
+preview checks. No production domain or storage binding is declared in the root
+configuration. Preview success is separate from approved HTML export and live
+SEO acceptance.
 
 No authenticated Cloudflare upload has succeeded. Deploy the brands sequentially
 on runners with limited memory; a terminated parallel export was successfully

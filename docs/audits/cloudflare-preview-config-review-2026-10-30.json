@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-30",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "baseCommit": "bc3e7eb7507ba5de1338102015b31676e0597f7d",
+  "pullRequest": "https://github.com/figtures/3dyanimda/pull/19",
+  "scope": "Add the missing root Workers Preview configuration and build the connected brand explicitly. Production deployment and source content are unchanged.",
+  "diagnosis": {
+    "historicalDashboardEvidence": "docs/audits/seo-preview-build-triage-2026-10-25.json",
+    "historicalError": "Wrangler configuration is missing a previews block",
+    "currentSourceFinding": "The PR head has no root Wrangler configuration, while production generates per-brand configs only inside deploy:<brand>.",
+    "currentHeadChecks": {"successful": 15, "failedWorkerPreviews": 4},
+    "currentCloudflareLogAccess": false,
+    "limitation": "The current failure cause is not inferred solely from historical dashboard logs. Fresh remote preview success is required."
+  },
+  "changes": [
+    "Root wrangler.jsonc supplies previews.vars and top-level ASSETS configuration for npx wrangler preview.",
+    "A custom build reads the connected Worker identity from WRANGLER_CI_OVERRIDE_NAME or WORKER_NAME and rejects unknown/conflicting identities and main.",
+    "Each preview uses the selected brand public settings and fixed tenant host, ignores local env files and inherited VITE values, and disables GA4.",
+    "The existing Worker serves client routes, noindex headers and disallowed robots on previews; no production route or storage binding is added.",
+    "The existing production deploy command, release certificate, approved HTML export and audit gates are unchanged."
+  ],
+  "validation": {
+    "cloudflareTests": {"passed": 15, "failed": 0},
+    "allTechnicalContracts": {"passed": 99, "failed": 0},
+    "typecheck": "pass",
+    "rootWranglerDryRun": {"brand": "3dyanimda", "viteBuild": "pass", "workerBundle": "pass", "assetFiles": 499, "uploaded": false},
+    "sourceCertificate": {"verified": true, "unchangedSourceHash": "8df064a59a0bb70cd8b01b2b5f9284940e9761b21c39cd16f1a573e8a75254b5"},
+    "evidenceIndex": {"valid": true, "files": 212},
+    "gitDiffCheck": "pass"
+  },
+  "references": [
+    "https://developers.cloudflare.com/workers/previews/configuration/",
+    "https://developers.cloudflare.com/workers/previews/get-started/",
+    "https://developers.cloudflare.com/workers/ci-cd/builds/configuration/",
+    "Pinned Wrangler 4.151.0: resolveWorkerName, ensurePreviewsConfig and previewHandler inspected locally."
+  ],
+  "outstanding": [
+    "Fresh Cloudflare Preview and GitHub CI results on this change.",
+    "Preview browser interactions; preview forms use the public API and are not used to create test leads.",
+    "Production deployment and postdeployment SEO acceptance.",
+    "Homepage TBT, GA4 controlled receipt and current Search Console checks."
+  ],
+  "sitemapOrIndexingSubmitted": false,
+  "productionDeployed": false
+}
