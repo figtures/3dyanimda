@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-30T03:11:45.601Z",
+  "reviewedAt": "2026-10-30T03:22:45.374Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "5dbc7d11fa207bfb7baeb9fb773ef828121bb671b9a61cc8fa88e069e0c8b35b",
-  "sourceFileCount": 713,
+  "sourceHash": "d3245c49a1fd1e01c4eb70cd8c5e328d8cf85dd35c9f4bc30451fab7f0952bb7",
+  "sourceFileCount": 715,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -741,7 +741,7 @@
     },
     {
       "file": "src/themes/printer/PrinterScene.tsx",
-      "sha256": "f35338168fc2f6c9e8867b2a03c3143ada203c88ded12571d6ad1a03dcc56e5a"
+      "sha256": "77c3922ff275472538a10fc66af60f48aaaf90c1a6877e5c04e3be48f36fb5b9"
     },
     {
       "file": "src/brands/modern.css",
@@ -753,7 +753,15 @@
     },
     {
       "file": "docs/audits/technical-acceptance-review-2026-10-30.json",
-      "sha256": "cfdb5c790bcf02c801d26659051663cf113eafba292342ffd543d102859386ce"
+      "sha256": "e843423618b8106c3436efa01e95f31647d91c87a55a51e9962b9cb0029f4e0c"
+    },
+    {
+      "file": "src/themes/printer/renderer-capability.ts",
+      "sha256": "f8688dc583e112562d539bb49aa1a2e470e82f779e2a58e4463aea3968f14c67"
+    },
+    {
+      "file": "src/themes/printer/renderer-capability.test.ts",
+      "sha256": "3751e474fccd274db6844a5215463181b57cf4a73c820cacea46236a9ccfc9be"
     }
   ],
   "limitations": [
@@ -785,7 +793,7 @@
     "25 October bounded SEO checklist delta: 293 application tests, 94 contracts, TypeScript and Vite build passed. Read-only production observations describe the existing release, not this unpublished delta. Verified hours/coordinates, English publication, customer evidence and account-level search submissions remain open. See docs/audits/seo-checklist-review-2026-10-25.json.",
     "25 October follow-up resolves the prior hours/coordinates data gap using the matching public Google Maps listing. Only three 3D Yanimda CMS contact fields changed; guarded update/readback and other-tenant fingerprint pass. Existing static production HTML still lacks these fields; publication remains pending. Contact all-day label and schema parity passed targeted tests and build. See docs/audits/seo-maps-hours-verification-2026-10-25.json.",
     "30 October reconciliation review retains published PR17/18 code, adds four meaningful service anchor regressions and passes 331 application/96 contract/2 diagnostic tests plus typecheck/build. Fresh CI and deployment remain pending; no current account indexing, conversion or speed outcome is claimed.",
-    "30 October bounded software-GPU fallback and fragment-offset review: 331 application tests, 100 contracts, typecheck and build pass. Baseline production SEO and metadata parity verified. Candidate CI and post-publication acceptance remain separate gates; historical evidence remains dated."
+    "30 October bounded software-GPU fallback and fragment-offset review: 341 application tests, 100 contracts, typecheck and build pass. The first candidate kept forced SwiftShader; explicit known-software detection was then added. Fresh candidate CI and post-publication acceptance remain separate gates; historical evidence remains dated."
   ],
   "remainingOperationalItems": [
     "Cloudflare account/domain deployment and real HTTP checks",

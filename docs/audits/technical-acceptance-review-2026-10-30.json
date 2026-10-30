@@ -4,7 +4,7 @@
   "humanReviewPerformed": false,
   "baseline": "afeeffa105456b9e155574eafb06cb7ea0792ab7",
   "scope": [
-    "Ask the browser to reject WebGL contexts with a major performance caveat and use the existing CanvasPrinter fallback. Hardware-accelerated printer geometry, lighting and animation are unchanged.",
+    "Reject major-performance-caveat contexts and known software GPU renderers (SwiftShader, llvmpipe, softpipe, Software Rasterizer, Microsoft Basic Render Driver), using the existing CanvasPrinter fallback. Privacy-restricted and hardware renderers retain WebGL; GPU identifiers never leave the local capability check.",
     "Keep content fragment headings below the sticky header with 110px scroll margin.",
     "Add actual heading/header intersection checks to 16 3dyanimda brand/theme/viewport browser cases. Record renderer selection in Lighthouse output."
   ],
@@ -77,9 +77,10 @@
   },
   "validation": {
     "typecheck": "pass",
-    "applicationTests": 331,
+    "applicationTests": 341,
     "technicalContracts": 100,
-    "build": "pass"
+    "build": "pass",
+    "searchEvidence": "pass after refreshing the changed file identities; historical outcomes preserved"
   },
   "reference": "https://registry.khronos.org/webgl/specs/latest/1.0/#WEBGLCONTEXTATTRIBUTES",
   "limitations": [
@@ -87,5 +88,10 @@
     "Software-renderer fallback improvement must not be described as faster hardware WebGL, mobile field CWV or a ranking improvement.",
     "All inherited source/content/asset review dates remain unchanged.",
     "No sitemap/indexing submission, fake quote, analytics event fabrication, CMS rewrite or business claim was made."
-  ]
+  ],
+  "iteration": {
+    "firstCandidate": "5afb4a8769e1cf00ea0926919b011005eabfc3ff",
+    "run": 40996172344,
+    "result": "The forced SwiftShader browser accepted failIfMajorPerformanceCaveat and kept WebGL. Mobile TBT remained 11036.5–11492 ms. Added explicit known-software-renderer detection; remeasurement pending."
+  }
 }
