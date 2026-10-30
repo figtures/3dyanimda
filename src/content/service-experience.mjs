@@ -1,8 +1,9 @@
 import places from './places.json' with {type: 'json'};
+import {operationsFaq,operationsUpdatedAt,hasOperationsContent,researchedFaq} from './business-operations.mjs';
 import {publicLocalPath} from '../lib/local-urls.mjs';
 
 // Shared by the visible page, JSON-LD and export audits. CMS records remain intact.
-export const serviceExperienceUpdatedAt = '2026-10-25';
+export const serviceExperienceUpdatedAt = operationsUpdatedAt;
 export const serviceCatalog = [
   {key: '3d-baski', name: '3D baskı', path: '/3d-baski', description: 'Hazır modelden prototip, montaj numunesi veya düşük adetli parça üretimi.'},
   {key: '3d-tarama', name: '3D tarama', path: '/3d-tarama', description: 'Fiziksel parçanın yüzey verisini dijitale aktarma; mesh ve CAD ihtiyacını ayrı kapsamlandırma.'},
@@ -72,6 +73,8 @@ export function visibleServiceFaq(page, brand = page.brand) {
   const {key, place} = experience;
   const digital = key === '3d-modelleme';
   const additions = [
+    ...operationsFaq.common, ...(operationsFaq[key] || []),
+    ...(key === '3d-baski' ? [researchedFaq[0]] : key === '3d-tarama' ? [researchedFaq[1]] : []),
     ...serviceQuestions[key].map(([q, a]) => ({q: q.replaceAll('{place}', place), a})),
     {q: `${place} için hizmet ve teslimat nasıl planlanır?`, a: digital
       ? 'Modelleme talebinizi dosya ve referanslarla çevrim içi başlatabilirsiniz. Fiziksel örnek gerekiyorsa kargo, kurye veya randevuyla elden teslim planlanır. Dijital teslim formatı ve revizyon takvimi teklif içinde belirlenir.'
@@ -89,6 +92,6 @@ export function visibleServiceFaq(page, brand = page.brand) {
 }
 
 export function serviceContentModified(page, brand, existing) {
-  if (!serviceExperience(page, brand)) return existing;
+  if (!serviceExperience(page, brand) && !hasOperationsContent(page, brand)) return existing;
   return existing && Date.parse(existing) > Date.parse(serviceExperienceUpdatedAt) ? existing : serviceExperienceUpdatedAt;
 }

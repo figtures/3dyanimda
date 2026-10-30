@@ -8,6 +8,7 @@ import { Seo } from "@/components/site/Seo";
 import places from "@/content/places.json";
 import { hubCopy } from "@/content/hub-copy";
 import { getTenantIdentity } from "@/lib/tenant";
+import {MaterialCapabilities} from '@/components/brand/WorkshopCapabilities';
 const config: Record<string, [string, string, string]> = {
   "/sektorler": [
     "sector",
@@ -60,6 +61,7 @@ export default function ContentHub() {
         <p className="section-lead">{lead}</p>
       </section>
       <section className="wrap hub-content">
+        {b.slug === '3dyanimda' && kind === 'material' && <MaterialCapabilities/>}
         {isLoading && <p role="status" data-content-loading>İçerikler yükleniyor…</p>}
         {isError && (
           <p role="alert">İçerikler yüklenemedi. Lütfen tekrar deneyin.</p>
