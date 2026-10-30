@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-25",
+  "result": "pass",
+  "baseline": "c5d6b24",
+  "scope": "Bounded source, unit/DOM, contract and build review. No new full-route browser, production export, remote write, ownership verification or deployment is claimed.",
+  "changes": [
+    "Explicit AI/search robots groups, preserving private-path crawl exclusions in every group; legacy Host declaration with canonical host still enforced by 301.",
+    "Flat local URL grouping and priority service pages in llms.txt, homepage summary and complete sitemap link.",
+    "Tenant-deployment Yandex verification environment support, only rendered when configured.",
+    "Rendered blog language aligned with HTML, OG, WebPage, Article and language-scoped SEO overrides; complete Turkish fallback for partial English content."
+  ],
+  "checks": {
+    "typecheck": "pass",
+    "applicationTests": {
+      "files": 51,
+      "tests": 293,
+      "result": "pass"
+    },
+    "searchContracts": {
+      "tests": 94,
+      "result": "pass"
+    },
+    "viteBuild": "pass",
+    "gitDiffCheck": "pass",
+    "warning": "Existing large-chunk Vite warning remains."
+  },
+  "liveObservation": {
+    "checkedAt": "2026-10-25T03:26:00.029Z",
+    "pages": 230,
+    "duplicateTitles": [],
+    "duplicateDescriptions": [],
+    "homeOrgName": "3D Yanımda",
+    "contactIdentityMatches": true,
+    "schemaPhoneInFooter": true,
+    "schemaLocalityInFooter": true,
+    "googleBusinessLinkPresent": true,
+    "yandexVerificationPresent": false,
+    "googleVerificationPresent": false,
+    "articleRoutes": 0,
+    "portfolioRoutes": 7
+  },
+  "liveObservationScope": "Read-only existing production home/contact HTML and published search manifest; not a fresh crawl of every manifest URL and not deployment verification for this delta.",
+  "additionalLiveObservations": {
+    "emptyTitles": 0,
+    "emptyDescriptions": 0,
+    "professionalServiceHasOpeningHours": false,
+    "professionalServiceHasGeo": false,
+    "publishedGuideRoutes": 17,
+    "publishedMaterialRoutes": 6,
+    "publishedSectorRoutes": 8,
+    "publishedSolutionRoutes": 6
+  },
+  "ownerDataPending": [
+    "Verified opening hours and coordinates",
+    "Publishable customer references and completed-project evidence",
+    "Complete English service content and indexable language URL publication"
+  ],
+  "operationalPending": [
+    "Explicit GitHub push authorization following the earlier automatic approval rejection",
+    "CI browser checks and production export",
+    "Production deployment and real HTTP metadata/redirect/discovery/schema verification",
+    "Search Console and Yandex ownership and sitemap submission verification",
+    "Existing Google Business Profile management verification; do not create a duplicate"
+  ],
+  "verificationCaveat": "Absent Google/Yandex verification meta does not establish absence of ownership; DNS or other verification may already be in place.",
+  "sources": [
+    {
+      "url": "https://developers.google.com/search/updates",
+      "finding": "FAQ rich results removed starting May 7, 2026."
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "finding": "Google Search ignores llms.txt; no special AI schema or indexing guarantee."
+    },
+    {
+      "url": "https://webmaster.yandex.ru/blog/301-y-redirekt-polnostyu-zamenil-direktivu-host",
+      "finding": "301 redirects replace the retired Host directive."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/bots",
+      "finding": "OAI-SearchBot and GPTBot controls are independent."
+    }
+  ],
+  "checklist": "docs/audits/seo-checklist-2026-10-25.md",
+  "files": [
+    {
+      "file": ".env.example",
+      "sha256": "e8447948ef9821f0c080207cdd7d74e545478811d4e0bda6b0b5e89bf9eef412"
+    },
+    {
+      "file": "deploy/3dsanayi/.env.example",
+      "sha256": "38dab026b2e0caa7e5e7d8b92804fe25b158ce6a4c4f31742969164faed66812"
+    },
+    {
+      "file": "deploy/3dyanimda/.env.example",
+      "sha256": "0c05f656708413786d3a320710a5e698fb2260be5924a7695fe1286b537fd032"
+    },
+    {
+      "file": "deploy/maketyanimda/.env.example",
+      "sha256": "0c3ca6409cd6281f1f4882345ea788f54625426378e6645da3c65024b0847aaa"
+    },
+    {
+      "file": "deploy/parcayanimda/.env.example",
+      "sha256": "874ceb5481a1625bd7844f559d8afe9cc988e5560831f59300f68e2d900fe7b2"
+    },
+    {
+      "file": "scripts/cloudflare/config.mjs",
+      "sha256": "db973219533a0ff09111f74b059827968fd580bde9cb13f03dff1918a3f9cddf"
+    },
+    {
+      "file": "scripts/cloudflare/config.test.mjs",
+      "sha256": "97eefa82f09bf2e1aa06612c15226a40e3b8bc2d8f39645e46fcc79cf037f645"
+    },
+    {
+      "file": "scripts/search/discovery.mjs",
+      "sha256": "b90c95c25cc5e24b8923063aa3782ce45c738686da2a3bd25a49822242920789"
+    },
+    {
+      "file": "scripts/search/discovery.test.mjs",
+      "sha256": "cbbae53b0c1db77b835189cbe280b0a8fa1144361bbe2d8aa92badd3a2d8a210"
+    },
+    {
+      "file": "scripts/search/llms-directory.mjs",
+      "sha256": "07e7ddde63fdaf0b4df367f57f960da48108e39bf3e9f577c979da6308ef9a63"
+    },
+    {
+      "file": "scripts/search/llms-directory.test.mjs",
+      "sha256": "288a6ebd9632a59ea488d0191897dc84682f09d5dce2cd765332573f94b3a85f"
+    },
+    {
+      "file": "src/components/site/Seo.test.tsx",
+      "sha256": "fed37b75a3790cdf1a9f10e7cebfeaa82721c4ba3386246dcc6693f267615f00"
+    },
+    {
+      "file": "src/components/site/Seo.tsx",
+      "sha256": "09d2ce1c05546ad20288c85e256209e94eb2d84abbd8eaa0f4cb8cd28cb693f2"
+    },
+    {
+      "file": "src/hooks/useSeoOverride.test.tsx",
+      "sha256": "67b50e2d8dcad809061625bd86b433db2bbcdb0b392df86b56246755bc2048be"
+    },
+    {
+      "file": "src/hooks/useSeoOverride.ts",
+      "sha256": "b0f7db19c2c75d2367683c60b51f469c1f6252b583301cfea8f61743572e6e79"
+    },
+    {
+      "file": "src/lib/search.ts",
+      "sha256": "0f31d63e095cc5b7386c2f5f3f20e0487019c8615e2246817ee9d0deba36b78b"
+    },
+    {
+      "file": "src/lib/seo-schema.ts",
+      "sha256": "66effab3c0a40931e020085acbb921045f3e3c5a68f6cf849be0d07646b38e34"
+    },
+    {
+      "file": "src/pages/BlogPost.metadata.test.tsx",
+      "sha256": "30aad48eba1875ddc58e969cc97c195f210c478ba4442e3e270e464e084f652b"
+    },
+    {
+      "file": "src/pages/BlogPost.tsx",
+      "sha256": "b5aade6bf708c60eabaf12855f16a1ac6f972a744722bc72b47d7e7555f6fa88"
+    },
+    {
+      "file": "src/vite-env.d.ts",
+      "sha256": "759a1a544115f74fe586031c1fe3f92294ec4097ca8483c73681d92690cd2391"
+    }
+  ],
+  "limitations": [
+    "Historical review dates and coverage remain unchanged.",
+    "This is not completion of all 109 spreadsheet items.",
+    "No live blog article routes were found in the current manifest; Article support is verified in code/tests.",
+    "Seven portfolio routes are not asserted to be seven completed customer jobs.",
+    "Indexing speed, rankings, AI citations and traffic gains remain unverified."
+  ]
+}

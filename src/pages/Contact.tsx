@@ -46,7 +46,7 @@ export default function Contact() {
           </div>}
           {business.openingHours.length > 0 && <div>
             <h2>Çalışma saatleri</h2>
-            <dl className="business-hours">{business.openingHours.map(hours => <div key={hours.dayOfWeek}><dt>{WEEKDAYS.find(day => day.key === hours.dayOfWeek)?.label}</dt><dd><time>{hours.opens}</time>–<time>{hours.closes}</time></dd></div>)}</dl>
+            <dl className="business-hours">{business.openingHours.map(hours => <div key={hours.dayOfWeek}><dt>{WEEKDAYS.find(day => day.key === hours.dayOfWeek)?.label}</dt><dd>{hours.opens === '00:00' && hours.closes === '23:59' ? '24 saat açık' : <><time>{hours.opens}</time>–<time>{hours.closes}</time></>}</dd></div>)}</dl>
           </div>}
           {(deliveryNote || business.deliveryAreas.length > 0) && <div>
             <h2>Teslimat seçenekleri</h2>

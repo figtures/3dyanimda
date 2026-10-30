@@ -11,15 +11,17 @@ import {pageGraph} from '@/lib/search';
 import {schemaIntegrity} from '../../scripts/quality/schema-integrity.mjs';
 import {validateVocabulary} from '../../scripts/quality/schema-vocabulary.mjs';
 import additions from '../../content/authoring/seo-gap-3dyanimda-2026-10-23.json';
+import {publicLocalContent} from '@/lib/local-urls.mjs';
+import {visibleServiceFaq} from './service-experience.mjs';
 const all=new Map<string,LandingPage>();
-for(const p of [...base,...editorial,...search] as LandingPage[])all.set(p.brand+p.path,p);
+for(const p of [...base,...editorial,...search] as LandingPage[])all.set(p.brand+p.path,publicLocalContent(p,p.brand));
 describe('full authored structured-content inventory',()=>{
  it('has complete coverage across four brands and scoped additions',()=>{expect(all.size).toBe(796+additions.newPages.length);expect(new Set([...all.values()].map(p=>p.brand)).size).toBe(4);});
  it('matches Schema.org domains, visible FAQ and resolved brand-specific identities on every record',()=>{
   for(const page of all.values()){
    const origin='https://'+page.brand+'.com';const brand=catalog.find(b=>b.slug===page.brand)!;
    const graph=composeSchemaGraph([businessGraph({name:brand.name,origin}),pageGraph({origin,path:page.path,title:page.title,description:page.summary}),...contentStructuredData(page,origin)],origin,origin+page.path);
-   const visible=page.faq.map(f=>f.q+' '+f.a).join(' ');
+   const visible=visibleServiceFaq(page,page.brand).map(f=>f.q+' '+f.a).join(' ');
    expect(validateVocabulary(graph),page.brand+page.path).toEqual([]);
    expect(schemaIntegrity(graph,{origin,visibleText:visible}),page.brand+page.path).toEqual([]);
    expect(JSON.stringify(graph)).not.toMatch(/aggregateRating|priceCurrency|ratingValue/);

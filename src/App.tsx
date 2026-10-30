@@ -1,3 +1,4 @@
+import {flatLocalPaths,isFlatLocalPath} from "@/lib/local-urls.mjs";
 import {dynamicPageQuery} from "@/content/dynamic-page-query";
 import {prepareContentDestination,registerRoutePreparation} from "@/lib/route-preparation";
 import {RouteErrorBoundary} from "@/components/site/RouteErrorBoundary";
@@ -126,6 +127,7 @@ const queryClient = new QueryClient();
 const initialState=publicRenderState();
 if(initialState)hydrate(queryClient,{...initialState.queries,queries:initialState.queries.queries.map(q=>({...q,state:{...q.state,dataUpdatedAt:Date.now()}}))});
 function publicRouteComponent(path:string){
+ if(isFlatLocalPath(path))return ContentPage;
  return path==='/kariyer'?CareerHub:path==='/portfoy'?Portfolio:path.startsWith('/portfoy/')?PortfolioProject:path==='/sss'?FaqPage:path==='/kariyer/is-basvurusu'?JobApplication:path==='/kariyer/makine-isletim'?MachineOperation:path==='/'?Index:path==='/teklif-al'?QuoteRequest:path==='/iletisim'?Contact:path==='/hakkimizda'?BrandAbout:['/sektorler','/hizmetler','/cozumler','/malzemeler','/rehber','/bolgeler'].includes(path)?ContentHub:(/^\/(3d-baski|3d-tarama|3d-modelleme)$/.test(path)||/^\/(cozumler|sektorler|malzemeler|rehber|bolgeler)\//.test(path))?ContentPage:null;
 }
 export async function preparePublicRoute(path:string){
@@ -179,6 +181,7 @@ const routes = prepareRoutes([
         "/malzemeler/:slug",
         "/rehber/:slug",
         "/bolgeler/*",
+        ...flatLocalPaths,
       ].map((path) => ({ path, element: wrap(<ContentPage />) })),
       { path: "/kariyer", element: wrap(<RequireFeature flag="career"><CareerHub /></RequireFeature>) },
       { path: "/portfoy/:slug", element: wrap(<RequireFeature flag="portfolio"><PortfolioProject /></RequireFeature>) },

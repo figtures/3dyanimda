@@ -17,6 +17,7 @@ import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {inlineCriticalCss,serializedPrerender} from './critical-css.mjs';
 import {capturePublicBootstrap} from './public-bootstrap.mjs';
+import {saveHomeTrace,saveLabSourceMaps} from './lighthouse-evidence.mjs';
 const env={...loadEnv('production',process.cwd(),''),...process.env};
 if(process.env.GITHUB_ACTIONS!=='true')throw new Error('Run this browser lab in GitHub Actions, not the managed workspace.');
 const brand=process.env.LAB_BRAND;
@@ -46,7 +47,9 @@ try {
   if(completed.length===repeats)continue;
   const root=path.resolve('.cloudflare/lab-'+target.brand);
   if(!built.has(target.brand)){
-   await build({logLevel:'error',envDir:false,define:Object.fromEntries(Object.entries({VITE_SUPABASE_URL:env.VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY:env.VITE_SUPABASE_PUBLISHABLE_KEY,VITE_PRIVATE_PREVIEW_HOST:'',VITE_SITE_THEME:'industrial',VITE_TENANT_HOST:target.brand+'.com'}).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:root,emptyOutDir:true}});built.set(target.brand,root);
+   // Hidden maps are retained only in the diagnostic artifact; production build options stay unchanged.
+   await build({logLevel:'error',envDir:false,define:Object.fromEntries(Object.entries({VITE_SUPABASE_URL:env.VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY:env.VITE_SUPABASE_PUBLISHABLE_KEY,VITE_PRIVATE_PREVIEW_HOST:'',VITE_SITE_THEME:'industrial',VITE_TENANT_HOST:target.brand+'.com'}).map(([k,v])=>['import.meta.env.'+k,JSON.stringify(v)])),build:{outDir:root,emptyOutDir:true,sourcemap:brand==='3dyanimda'?'hidden':false}});built.set(target.brand,root);
+   if(brand==='3dyanimda')report.sourceMaps=await saveLabSourceMaps(root,`artifacts/lighthouse-${brand}/source-maps`);
   }
   const shell=await readFile(path.join(root,'index.html'));let rendered;
   const serve=async(req,res)=>{
@@ -104,10 +107,12 @@ try {
    const scrollY=await page.evaluate(()=>window.scrollY);if(scrollY!==0)throw Error('Measurement did not start/end at page top: '+scrollY);
    const lhr=result.lhr;if(lhr.configSettings.formFactor!==target.device)throw Error('Lighthouse device mismatch');if(lhr.runtimeError)throw Error(JSON.stringify(lhr.runtimeError));
    const file=path.join(raw,target.brand+'-'+(target.route.slice(1)||'home')+'-'+target.device+'-'+repeat+'.json.gz');const bytes=gzipSync(JSON.stringify(lhr));await writeFile(file,bytes);
+   const diagnostic=brand==='3dyanimda'&&target.route==='/'
+    ?await saveHomeTrace(result.artifacts,file.replace('.json.gz','-evidence')):undefined;
    const metrics=Object.fromEntries(['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'].map(id=>[id,lhr.audits[id].numericValue]));
    const issues=Object.values(lhr.audits).filter(a=>a.score!==null&&a.score<1).map(a=>({id:a.id,title:a.title,score:a.score,displayValue:a.displayValue}));
    await writeFile(file.replace('.json.gz','.html'),Array.isArray(result.report)?result.report.find(r=>r.startsWith('<!doctype')||r.startsWith('<!DOCTYPE'))||result.report[0]:result.report);
-   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex')});
+   report.runs.push({...target,repeat,version:lhr.lighthouseVersion,formFactor:lhr.configSettings.formFactor,throttling:lhr.configSettings.throttling,screenEmulation:lhr.configSettings.screenEmulation,fetchTime:lhr.fetchTime,scores:Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics,issues,raw:file,sha256:createHash('sha256').update(bytes).digest('hex'),diagnostic});
    await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('LIGHTHOUSE_RUN '+JSON.stringify(report.runs.at(-1)));
   }
   if(target.route==='/'||target.route==='/teklif-al'){

@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-10-25T03:58:28.886Z",
+  "result": "pass",
+  "baseline": "e9fc21d",
+  "source": {
+    "url": "https://maps.google.com/maps?cid=5743532135397653934",
+    "method": "Read-only Google Maps rendered listing, expanded weekly-hours table and actual place coordinates in resolved URL (!3d/!4d, not inferred viewport position).",
+    "matched": {
+      "name": "3D YANIMDA - 3D Tarama, 3D Baskı, 3D Modelleme Hizmetleri",
+      "website": "https://3dyanimda.com/",
+      "telephone": "0536 448 82 30",
+      "address": "Örnek, Bestekar Sk. No:17, 34704 Ataşehir/İstanbul"
+    },
+    "weeklyHours": "All seven days: 24 saat açık",
+    "latitude": 40.9974165,
+    "longitude": 29.0763174,
+    "holidayNote": "Google Maps warns that 29 October holiday hours may differ; no special holiday schedule was asserted or saved."
+  },
+  "cms": {
+    "project": "zdxjmhhjuomcpdtllnuq",
+    "tenant": "10000000-0000-4000-8000-000000000001",
+    "key": "contact_info",
+    "changedFields": [
+      "geo_latitude",
+      "geo_longitude",
+      "opening_hours"
+    ],
+    "preflight": {
+      "target_hash": "f3c12778fc6953e25556fe95f65a8ce6",
+      "has_hours": false,
+      "has_latitude": false,
+      "has_longitude": false,
+      "other_tenant_settings_hash": "1b7a1571db9c475080a3e06b79cc7742"
+    },
+    "updated": [
+      {
+        "tenant_id": "10000000-0000-4000-8000-000000000001",
+        "updated_at": "2026-10-25 03:57:00.283859+00",
+        "latitude": "40.9974165",
+        "longitude": "29.0763174",
+        "opening_hours": [
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Monday"
+          },
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Tuesday"
+          },
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Wednesday"
+          },
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Thursday"
+          },
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Friday"
+          },
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Saturday"
+          },
+          {
+            "opens": "00:00",
+            "closes": "23:59",
+            "dayOfWeek": "Sunday"
+          }
+        ],
+        "unrelated_fields_preserved": true
+      }
+    ],
+    "readback": {
+      "target_rows": 1,
+      "coordinates_match": true,
+      "all_seven_days_open_24h": true,
+      "unrelated_fields_preserved": true,
+      "other_tenants_unchanged": true
+    },
+    "strategy": "Guarded JSONB merge matching preflight value hash; existing unrelated fields and other tenants preserved. No Google Maps edits."
+  },
+  "code": {
+    "file": "src/pages/Contact.tsx",
+    "change": "Display normalized 00:00–23:59 as 24 saat açık; preserve the existing appointment notice.",
+    "schema": "Existing shared business profile supplies GeoCoordinates and seven OpeningHoursSpecification records to ProfessionalService."
+  },
+  "checks": {
+    "typecheck": "pass",
+    "targetedTests": {
+      "files": 4,
+      "tests": 38,
+      "result": "pass"
+    },
+    "viteBuild": "pass",
+    "finalSchemaParityCase": "All seven public day labels, appointment note, coordinate normalization and actual businessGraph fields verified.",
+    "warning": "Existing large-chunk Vite warning remains."
+  },
+  "production": {
+    "cmsUpdated": true,
+    "staticHtmlUpdated": false,
+    "observation": "Existing https://3dyanimda.com/iletisim HTML still omits geo and openingHoursSpecification. Static export/release is required.",
+    "remotePush": false
+  },
+  "reference": "https://developers.google.com/search/docs/appearance/structured-data/local-business#business-hours",
+  "limitations": [
+    "No new Google Business Profile or Google Maps edit was made.",
+    "No claim of fresh production deployment or indexing.",
+    "Previous GitHub push rejection remains unresolved; no push was retried."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-29T23:46:04.434107+00:00",
+  "method": "Read-only HTTP GET with redirect chain and parsed initial HTML; no browser, no indexing request",
+  "results": [
+    {
+      "url": "https://www.3dyanimda.com/3d-baski?seo_review=20261030",
+      "finalUrl": "https://www.3dyanimda.com/3d-baski?seo_review=20261030",
+      "status": 403,
+      "redirects": [],
+      "title": [],
+      "h1": [],
+      "canonical": [],
+      "description": [],
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://3dyanimda.com/bolgeler/istanbul/adalar",
+      "finalUrl": "https://3dyanimda.com/bolgeler/istanbul/adalar",
+      "status": 403,
+      "redirects": [],
+      "title": [],
+      "h1": [],
+      "canonical": [],
+      "description": [],
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://3dyanimda.com/bolgeler/istanbul/adalar/3d-baski",
+      "finalUrl": "https://3dyanimda.com/bolgeler/istanbul/adalar/3d-baski",
+      "status": 403,
+      "redirects": [],
+      "title": [],
+      "h1": [],
+      "canonical": [],
+      "description": [],
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://3dyanimda.com/bolgeler/istanbul/adalar/3d-tarama",
+      "finalUrl": "https://3dyanimda.com/bolgeler/istanbul/adalar/3d-tarama",
+      "status": 403,
+      "redirects": [],
+      "title": [],
+      "h1": [],
+      "canonical": [],
+      "description": [],
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://3dyanimda.com/bolgeler/istanbul/adalar/3d-modelleme",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3dyanimda.com/istanbul-3d-baski",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "limitations": [
+    "GET follow-up encountered environment network approval/proxy 403 responses and a cancelled approval. These are not verified origin-site 403 failures and are not live acceptance. No retry or bypass was attempted."
+  ],
+  "initialHeadCheck": {
+    "url": "https://3dyanimda.com/istanbul-3d-baski",
+    "httpStatus": 404,
+    "xRobotsTag": "noindex, nofollow",
+    "method": "curl HEAD completed before the subsequent GET approval cancellation",
+    "scope": "Unpublished short URL baseline only"
+  }
+}

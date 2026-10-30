@@ -264,9 +264,10 @@ export default function Index() {
             başlangıç adımını birlikte belirleyelim.
           </p>
         </div>
-        <Link className="brand-button" to={link("/bolgeler")}>
-          Hizmet bölgelerimiz <ArrowUpRight size={17} />
-        </Link>
+        {b.slug === '3dyanimda' ? <nav aria-label="İstanbul hizmetleri">
+          <Link className="brand-button" to={link('/istanbul-3d-baski')}>İstanbul 3D baskı <ArrowUpRight size={17}/></Link>
+          <p><Link to={link('/istanbul-3d-tarama')}>İstanbul 3D tarama</Link> · <Link to={link('/istanbul-3d-modelleme')}>İstanbul 3D modelleme</Link></p>
+        </nav> : <Link className="brand-button" to={link('/bolgeler')}>Hizmet bölgelerimiz <ArrowUpRight size={17}/></Link>}
       </section>
       </div>
     </>

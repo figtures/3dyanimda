@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import {publicLocalContent,publicLocalPath} from '../src/lib/local-urls.mjs';
+import {visibleServiceFaq} from '../src/content/service-experience.mjs';
+import {assertFAQParity} from './quality/faq-parity.mjs';
 
 // This is a completeness/rendering check, not a publication or originality certificate.
 // It never changes statuses, contacts Supabase, or invokes a production export.
@@ -124,7 +127,7 @@ if (!staticOnly) {
       const page = await browser.newPage();
       await page.emulateMedia({ reducedMotion: 'reduce' });
       page.on('pageerror', error => failures.push({ brand, message: error.message }));
-      const brandRecords = records.filter(p => p.brand === brand);
+      const brandRecords = records.filter(p => p.brand === brand).map(p=>publicLocalContent(p,brand));
       await page.goto(`${origin}${brandRecords[0].path}?tenant=${brand}`);
       await page.locator('h1').waitFor();
       assert.equal(await page.locator('.answer-card').count(), 0, `${brand}: authored draft is hidden without explicit local preview`);
@@ -160,10 +163,11 @@ if (!staticOnly) {
           const visible = await page.locator('.content-article').innerText();
           for (const text of [p.local_context, p.logistics, p.editorial.answer, ...p.editorial.takeaways, ...p.sections.flatMap(section => [section.title, section.body])]) assert.ok(visible.includes(text), `${key(p)}: visible content mismatch`);
           const faqs = await page.locator('.content-article details').allTextContents();
-          for (const faq of p.faq) assert.ok(faqs.some(text => text.includes(faq.q) && text.includes(faq.a)), `${key(p)}: FAQ missing from rendered DOM`);
-          const docs = await page.locator('script[type="application/ld+json"]').evaluateAll(elements => elements.map(el => JSON.parse(el.textContent)));
+          const expectedFaq = visibleServiceFaq(p,brand);
+          for (const faq of expectedFaq) assert.ok(faqs.some(text => text.includes(faq.q) && text.includes(faq.a)), `${key(p)}: FAQ missing from rendered DOM`);
+          const docs = await page.locator('script[type="application/ld+json"]').evaluateAll(elements => elements.flatMap(el => {const doc=JSON.parse(el.textContent);return doc['@graph']||[doc];}));
           const faqDoc = docs.find(doc => doc['@type'] === 'FAQPage');
-          assert.deepEqual(faqDoc?.mainEntity, p.faq.map(faq => ({ '@type': 'Question', name: faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.a } })), `${key(p)}: FAQ JSON-LD parity`);
+          assertFAQParity(faqDoc?.mainEntity, expectedFaq, origin+p.path);
           assert.ok(!JSON.stringify(docs).includes('https://3dyaninda.com'), `${key(p)}: inherited source-brand schema`);
           const links = await page.locator('.article-sources a').evaluateAll(elements => elements.map(el => ({ title: el.textContent, url: el.href })));
           assert.deepEqual(links, p.editorial.sources.map(source => ({ title: source.title, url: new URL(source.url).href })), `${key(p)}: visible source links`);
@@ -174,9 +178,9 @@ if (!staticOnly) {
             await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
             assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), true, `${key(p)}/${theme}/${width}: horizontal overflow`);
             cases++;
-            if (theme === 'industrial' && p.path === '/bolgeler/istanbul/atasehir/ornek') await page.screenshot({ path: `/tmp/brand-local-previews/${brand}-ornek-${width}.png`, fullPage: true });
+            if (theme === 'industrial' && p.path === publicLocalPath('/bolgeler/istanbul/atasehir/ornek',brand)) await page.screenshot({ path: `/tmp/brand-local-previews/${brand}-ornek-${width}.png`, fullPage: true });
           }
-          if (theme === themes[0]) evidence.push({ brand, path: p.path, title: p.title, contentHash: hash(visible), sections: p.sections.length, faqs: p.faq.length, sources: p.editorial.sources.length });
+          if (theme === themes[0]) evidence.push({ brand, path: p.path, title: p.title, contentHash: hash(visible), sections: p.sections.length, faqs: expectedFaq.length, sources: p.editorial.sources.length });
         }
         console.log(`PASS ${brand}/${theme}: ${brandRecords.length} draft routes, ${widths.length} widths`);
       }

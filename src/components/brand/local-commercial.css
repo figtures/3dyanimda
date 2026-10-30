@@ -1,0 +1,25 @@
+.local-commercial-content { margin-block: 36px; }
+.local-commercial-content section { scroll-margin-top: 110px; }
+.local-value-list { margin: 24px 0 36px; }
+.local-value-list > div { padding: 20px 0; border-top: 1px solid #d4d8d9; }
+.local-value-list dt { display: flex; gap: 16px; align-items: baseline; font-weight: 650; line-height: 1.5; }
+.local-value-list dt span { font-size: 12px; font-weight: 500; color: #586368; font-variant-numeric: tabular-nums; }
+.local-value-list dd { margin: 8px 0 0 34px; line-height: 1.8; }
+.local-price-panel { padding: clamp(20px, 3vw, 32px); background: #f1f3f2; border: 1px solid #d4d8d9; border-radius: 4px; }
+.local-commercial-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 24px; }
+.local-commercial-actions > a:not(.brand-button) { min-height: 44px; display: inline-flex; align-items: center; text-decoration: underline; text-underline-offset: 4px; }
+.local-commercial-actions .brand-button { white-space: normal; text-align: left; }
+.local-process-list { padding-left: 24px; }
+.local-process-list li { padding-left: 8px; margin: 20px 0; }
+.local-process-list h3 { font-size: 18px; }
+.local-decision-links { display: grid; gap: 4px; border-block: 1px solid #d4d8d9; padding: 24px 0; }
+.local-decision-links a { display: flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+@media(max-width:540px) { .local-value-list dd { margin-left: 0; }.local-commercial-actions { align-items: stretch; flex-direction: column; } }
+.service-connections { scroll-margin-top: 110px; }
+.service-connections-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.service-connections-grid > a { display: flex; flex-direction: column; padding: 22px; border: 1px solid var(--line); background: var(--surface); border-radius: 4px; }
+.service-connections-grid > a[aria-current="page"] { border-color: var(--text); }
+.service-connections-grid h3 { font-size: 19px; margin: 0 0 12px; }
+.service-connections-grid p { font-size: 14px; line-height: 1.7; }
+.service-connections-grid span { margin-top: auto; padding-top: 12px; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+@media(max-width:540px) { .service-connections-grid { grid-template-columns: 1fr; } }

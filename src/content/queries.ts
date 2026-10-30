@@ -1,3 +1,4 @@
+import {publicLocalContent,contentLocalPath} from "@/lib/local-urls.mjs";
 import type { Tenant } from "@/contexts/TenantContext";
 import { getSupabase, demoMode } from "@/lib/backend-config";
 import type { LandingPage } from "./types";
@@ -21,7 +22,7 @@ export function contentQuery(tenant: Tenant | null, includeDrafts = false, full 
           (p) =>
             p.brand === tenant!.slug &&
             (includeDrafts || localDraftPreview || p.status === "published") && (!options.kinds?.length||options.kinds.includes(p.kind)),
-        );
+        ).map(p=>includeDrafts?p:publicLocalContent(p,tenant!.slug));
       }
       const supabase=await getSupabase();
       let query = supabase
@@ -34,7 +35,7 @@ export function contentQuery(tenant: Tenant | null, includeDrafts = false, full 
       const { data, error } = await query;
       if (error) throw error;
       const {readEditorial}=await import("./editorial");
-      return (data as unknown as (LandingPage & {answer?:string|null;media?:unknown})[]).map(p => ({...p, editorial:readEditorial(p.editorial || (p.answer || p.media ? {answer:p.answer||'',media:p.media||undefined} : undefined))}));
+      return (data as unknown as (LandingPage & {answer?:string|null;media?:unknown})[]).map(p => (includeDrafts ? {...p, editorial:readEditorial(p.editorial)} : publicLocalContent({...p, editorial:readEditorial(p.editorial || (p.answer || p.media ? {answer:p.answer||'',media:p.media||undefined} : undefined))},tenant!.slug)));
     },
     staleTime: 60000,
   };
@@ -44,10 +45,10 @@ export function contentPageQuery(tenant: Tenant | null, path: string) {
     queryKey:['landing-page',tenant?.id,path],enabled:!!tenant,
     queryFn:async():Promise<LandingPage|null>=>{
       if(demoMode){const pages=await contentQuery(tenant).queryFn();return pages.find(p=>p.path===path)||null;}
-      const {data,error}=await (await getSupabase()).from('landing_pages').select('*').eq('tenant_id',tenant!.id).eq('path',path).eq('status','published').maybeSingle();
+      const {data,error}=await (await getSupabase()).from('landing_pages').select('*').eq('tenant_id',tenant!.id).eq('path',contentLocalPath(path,tenant!.slug)).eq('status','published').maybeSingle();
       if(error)throw error;
       const {readEditorial}=await import("./editorial");
-      return data?{...data,editorial:readEditorial(data.editorial)} as unknown as LandingPage:null;
+      return data?publicLocalContent({...data,editorial:readEditorial(data.editorial)},tenant!.slug) as LandingPage:null;
     },staleTime:60000,
   };
 }
@@ -62,9 +63,9 @@ export function relatedContentQuery(tenant: Tenant | null, page:LandingPage|null
    const paths=page.editorial?.relatedPaths||[];
    const load=async(column:'kind'|'path',values:string[]):Promise<LandingPage[]>=>{
     if(!values.length)return [];
-    const {data,error}=await base().in(column,values);
+    const {data,error}=await base().in(column,column==='path'?values.map(p=>contentLocalPath(p,tenant.slug)):values);
     if(error)throw error;
-    return (data||[]) as unknown as LandingPage[];
+    return publicLocalContent(data||[],tenant.slug) as LandingPage[];
    };
    const results=await Promise.all([load('kind',[page.kind]),load('path',paths)]);
    return selectRelatedContent(results.flat(),page,tenant.slug);

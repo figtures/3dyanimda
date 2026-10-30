@@ -1,3 +1,4 @@
+import {publicLocalPath} from "@/lib/local-urls.mjs";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { compileRedirects } from "@/lib/redirects.mjs";
@@ -31,7 +32,7 @@ export function useRedirects() {
         };
         cache.set(tenant.id, entry);
       }
-      const target = entry.routes[pathname];
+      const target = publicLocalPath(entry.routes[pathname] || pathname,tenant.slug);
       if (
         !cancelled &&
         target &&

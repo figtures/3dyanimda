@@ -12,6 +12,7 @@ import { composeSchemaGraph } from "@/lib/schema-graph";
 import { resolveBusinessProfile } from "@/lib/business-profile";
 import { contentDate } from "@/lib/seo-schema";
 interface SeoProps {
+  language?: "tr" | "en";
   title: string;
   description: string;
   path?: string;
@@ -29,6 +30,7 @@ interface SeoProps {
   pageType?: "WebPage" | "CollectionPage" | "AboutPage" | "ContactPage";
 }
 export const Seo = ({
+  language = "tr",
   title,
   description,
   path = "/",
@@ -46,7 +48,7 @@ export const Seo = ({
   pageType,
 }: SeoProps) => {
   const { tenant } = useTenant();
-  const override = useSeoOverride(path);
+  const override = useSeoOverride(path, language);
   const settings = useSiteSettings();
   const domain = tenant?.custom_domain || tenant?.domain;
   const base = domain ? `https://${domain}` : window.location.origin;
@@ -83,7 +85,7 @@ export const Seo = ({
   ).filter(
     (item) => !containsLegacyIdentity(item),
   ).map(item => type === 'article' && item['@type'] === 'Article' ? {...item,image:og} : item);
-  const structured = JSON.stringify(composeSchemaGraph([identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: og, modified:modifiedDate, type: pageType }), ...schemas],base,url)).replace(/</g,'\\u003c');
+  const structured = JSON.stringify(composeSchemaGraph([identity, pageGraph({ origin: base, path, title: fullTitle, description: desc, image: og, modified:modifiedDate, type: pageType, language:language==='en'?'en-US':'tr-TR' }), ...schemas],base,url)).replace(/</g,'\\u003c');
   // React 18 suspended renders can leave stale Helmet script registrations.
   // Commit one owned node in an effect, after React commits the current page.
   useLayoutEffect(()=>{
@@ -95,7 +97,7 @@ export const Seo = ({
   },[structured]);
   return (
     <Helmet>
-      <html lang="tr" />
+      <html lang={language} />
       <title>{fullTitle}</title>
       <meta name="description" content={desc} />
       <link rel="canonical" href={url} />
@@ -109,12 +111,13 @@ export const Seo = ({
       />
       {import.meta.env.VITE_GOOGLE_SITE_VERIFICATION && <meta name="google-site-verification" content={import.meta.env.VITE_GOOGLE_SITE_VERIFICATION} />}
       {import.meta.env.VITE_BING_SITE_VERIFICATION && <meta name="msvalidate.01" content={import.meta.env.VITE_BING_SITE_VERIFICATION} />}
+      {import.meta.env.VITE_YANDEX_SITE_VERIFICATION && <meta name="yandex-verification" content={import.meta.env.VITE_YANDEX_SITE_VERIFICATION} />}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={desc} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={name} />
-      <meta property="og:locale" content="tr_TR" />
+      <meta property="og:locale" content={language === 'en' ? 'en_US' : 'tr_TR'} />
       <meta property="og:image" content={og} />
       <meta property="og:image:secure_url" content={og} />
       <meta property="og:image:type" content={share.mime} />

@@ -2,9 +2,12 @@ name: Lighthouse candidate laboratory
 # Full four-brand matrix after the validated lazy-startup and schema changes.
 
 on:
+  pull_request:
+    branches: [main]
+    paths: ['scripts/quality/lighthouse-ci.mjs', 'scripts/quality/lighthouse-evidence*', '.github/workflows/lighthouse.yml', 'src/**', 'public/**']
   push:
     branches: [main]
-    paths: ['scripts/quality/lighthouse-ci.mjs', '.github/workflows/lighthouse.yml', 'src/**', 'public/**']
+    paths: ['scripts/quality/lighthouse-ci.mjs', 'scripts/quality/lighthouse-evidence*', '.github/workflows/lighthouse.yml', 'src/**', 'public/**']
   workflow_dispatch:
 
 permissions:
@@ -21,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        brand: ${{ fromJSON(contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') && '["3dsanayi"]' || contains(github.event.head_commit.message, '[perf-probe]') && '["3dyanimda"]' || '["3dyanimda","3dsanayi","maketyanimda","parcayanimda"]') }}
+        brand: ${{ fromJSON(github.event_name == 'pull_request' && '["3dyanimda"]' || contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') && '["3dsanayi"]' || contains(github.event.head_commit.message, '[perf-probe]') && '["3dyanimda"]' || '["3dyanimda","3dsanayi","maketyanimda","parcayanimda"]') }}
         device: ${{ fromJSON((contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') || contains(github.event.head_commit.message, '[perf-probe]')) && '["mobile"]' || '["mobile","desktop"]') }}
     env:
       # Anonymous browser configuration only; no management or service-role secret.
@@ -33,7 +36,8 @@ jobs:
       LAB_ORIGIN_MODE: canonical
       # Explicit focused rechecks preserve the full default matrix for normal changes.
       # Home layout changes recheck all four brands and both devices on the affected route.
-      LAB_ROUTES: ${{ contains(github.event.head_commit.message, '[home-flow]') && '/' || contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') && '/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' || contains(github.event.head_commit.message, '[perf-probe]') && '/,/bolgeler,/teklif-al' || contains(github.event.head_commit.message, '[quote-recheck]') && '/teklif-al' || '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' }}
+      # PRs compare the affected homepage with a service and the new flat local route before production.
+      LAB_ROUTES: ${{ github.event_name == 'pull_request' && '/,/3d-baski,/istanbul-3d-baski' || contains(github.event.head_commit.message, '[home-flow]') && '/' || contains(github.event.head_commit.message, '[sanayi-mobile-recheck]') && '/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' || contains(github.event.head_commit.message, '[perf-probe]') && '/,/bolgeler,/teklif-al' || contains(github.event.head_commit.message, '[quote-recheck]') && '/teklif-al' || '/,/3d-baski,/3d-tarama,/3d-modelleme,/teklif-al,/iletisim,/cozumler,/malzemeler,/rehber,/bolgeler' }}
       CHROME_PATH: /usr/bin/google-chrome
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -45,6 +49,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: google-chrome --version
+      - run: node --test scripts/quality/lighthouse-evidence.test.mjs
       - run: node --test scripts/quality/critical-css.test.mjs
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome

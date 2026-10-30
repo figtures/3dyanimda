@@ -1,3 +1,4 @@
+import {contentLocalPath} from '../../src/lib/local-urls.mjs';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import path from 'node:path';
@@ -112,7 +113,7 @@ for(const record of manifest.pages){
   assert.ok(title&&description);assert.ok(!titles.has(title),'Duplicate title: '+title);assert.ok(!descriptions.has(description),'Duplicate description: '+record.path);titles.add(title);descriptions.add(description);
   assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('link[rel=canonical]')?.href,origin+record.path);
   assert.equal(d.querySelector('meta[property="og:title"]')?.content,title);assert.equal(d.querySelector('meta[property="og:description"]')?.content,description);
-  socialImages.push({path:record.path,...await assertExportedSocialImage(d,{origin,route:record.path,directory,landingRoute:routeInputs.landing.some(page=>page.path===record.path)})});
+  socialImages.push({path:record.path,...await assertExportedSocialImage(d,{origin,route:record.path,directory,landingRoute:routeInputs.landing.some(page=>page.path===contentLocalPath(record.path,origin==='https://3dyanimda.com'?'3dyanimda':''))})});
   const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')];assert.equal(schemas.length,1);const graph=JSON.parse(schemas[0].textContent)['@graph'];assert.ok(graph.length);assert.equal(new Set(graph.map(n=>n['@id'])).size,graph.length);
   const date=d.querySelector('[data-content-modified]')?.getAttribute('datetime');if(date){assert.equal(Date.parse(record.lastmod),Date.parse(date));for(const node of graph.filter(n=>n.dateModified))assert.equal(Date.parse(node.dateModified),Date.parse(date));}
   const links=new Set();for(const a of d.querySelectorAll('a[href]')){const target=indexableLinkTarget(a.href,{origin,sourcePath:record.path,plan});if(target)links.add(target);}

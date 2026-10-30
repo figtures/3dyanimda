@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Workers Builds supplies the connected Worker name; no brand is hard-coded.
+  // Production continues to use deploy:<brand> and its explicit generated config.
+  "main": "deploy/worker.mjs",
+  "compatibility_date": "2026-10-03",
+  "build": { "command": "node scripts/cloudflare/build-preview.mjs" },
+  "assets": {
+    "directory": ".cloudflare/preview/assets",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "none",
+    "html_handling": "drop-trailing-slash"
+  },
+  // Preview bindings are independent of production bindings. There are no
+  // production routes or storage bindings in this entry point.
+  "previews": { "vars": { "RELEASE_MODE": "preview" } }
+}

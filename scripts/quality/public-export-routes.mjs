@@ -1,3 +1,4 @@
+import {publicLocalPath} from '../../src/lib/local-urls.mjs';
 import assert from 'node:assert/strict';
 import {compileRedirects,legacyRedirects} from '../search/redirects.mjs';
 
@@ -5,7 +6,7 @@ export const coreRoutes=['/','/araclar','/araclar/stl-onizle','/araclar/kesit-an
 export const legalRoutes=['/yasal','/kvkk-aydinlatma-metni','/gizlilik-politikasi','/cerez-politikasi','/kullanim-kosullari','/basvuru-acik-riza-metni'];
 
 /** Plan from successful public API reads, never from the generated sitemap. */
-export function publicExportRoutes({landing,pages,posts,seo,redirects,portfolio,features,faqs}) {
+export function publicExportRoutes({landing,pages,posts,seo,redirects,portfolio,features,faqs,origin}) {
  for(const value of [landing,pages,posts,seo,redirects,portfolio,features,faqs])assert.ok(Array.isArray(value),'Missing public route inventory');
  const enabled=key=>!features.some(f=>f.feature_key===key&&f.enabled===false);
  const routes=new Map(coreRoutes.map(p=>[p,null]));
@@ -34,11 +35,21 @@ export function publicExportRoutes({landing,pages,posts,seo,redirects,portfolio,
  } else routes.delete('/blog');
  for(const p of seo.filter(p=>p.noindex))routes.delete(p.path);
  for(const url of legalRoutes)routes.set(url,null);
- const redirectMap=compileRedirects([...legacyRedirects,...redirects],new Set(routes.keys()));
+ const brand=origin==='https://3dyanimda.com'?'3dyanimda':'';
+ const migrate=p=>publicLocalPath(p,brand);
+ const moved=[];
+ for(const [from,modified] of [...routes]) {
+  const to=migrate(from);
+  if(to===from)continue;
+  assert.ok(!routes.has(to),'Local URL collision: '+to);
+  routes.delete(from);routes.set(to,modified);moved.push({from_path:from,to_path:to});
+  if(noindex.has(from)){noindex.set(to,noindex.get(from));noindex.delete(from);}
+ }
+ const redirectMap=compileRedirects([...legacyRedirects,...redirects.map(r=>({...r,to_path:migrate(r.to_path)})),...moved],new Set(routes.keys()));
  for(const source of Object.keys(redirectMap))routes.delete(source);
  for(const url of noindex.keys())if(!routes.has(url))noindex.delete(url);
  for(const url of routes.keys())assert.ok(/^\/[a-z0-9/-]*$/.test(url)&&!url.includes('..'),'Unsafe public path');
- return {routes,noindex,redirectMap};
+ return {routes,noindex,redirectMap,origin};
 }
 
 /** Missing, unexpected or misclassified HTML remains a release blocker. */
@@ -47,7 +58,7 @@ export function assertExportedRouteSets(plan,{htmlPaths,indexPaths,approvedPaths
  assert.equal(indexPaths.length,new Set(indexPaths).size,'Duplicate indexed route');
  assert.deepEqual(new Set(htmlPaths),new Set(plan.routes.keys()),'Exported HTML must match public API route inventory');
  assert.deepEqual(new Set(indexPaths),new Set([...plan.routes.keys()].filter(p=>!plan.noindex.has(p))),'Discovery must contain exactly the indexable routes');
- for(const route of approvedPaths)assert.ok(indexPaths.includes(route),'Missing approved landing route: '+route);
+ for(const route of approvedPaths)assert.ok(indexPaths.includes(publicLocalPath(route,plan.origin==='https://3dyanimda.com'?'3dyanimda':'')),'Missing approved landing route: '+route);
  for(const route of coreRoutes)assert.ok(indexPaths.includes(route),'Missing core route: '+route);
 }
 

@@ -2,8 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { discoveryFiles } from './discovery.mjs';
 import { LLMS_MAX_BYTES, LLMS_MAX_LINKS, LLMS_MAX_LABEL_CHARACTERS } from './llms-directory.mjs';
+import {localUrlMap} from '../../src/lib/local-urls.mjs';
 const origin = 'https://3dyanimda.com';
 const page = path => ({path, title:'İstanbul’da 3D üretim', description:'Ölçü, kapsam ve kullanım koşulları değerlendirilir.'});
+test('flat district URLs share one category so technical guides remain discoverable',()=>{
+ const pages=[page('/'),page('/cozumler/yedek-parca-uretimi'),...Object.values(localUrlMap).map(page),...Array.from({length:12},(_,i)=>page('/rehber/konu-'+i))];
+ const files=discoveryFiles({origin,brand:'3D Yanımda',pages});
+ const llms=files['llms.txt'];
+ for(const path of ['/istanbul-3d-baski','/istanbul-3d-tarama','/istanbul-3d-modelleme','/cozumler/yedek-parca-uretimi',...Array.from({length:12},(_,i)=>'/rehber/konu-'+i)])assert.ok(llms.includes(origin+path),path);
+ assert.match(llms,/XML site haritası.*https:\/\/3dyanimda.com\/sitemap.xml/);
+ assert.equal((llms.match(/^- \[/gm)||[]).length,LLMS_MAX_LINKS);
+ assert.equal(JSON.parse(files['search-manifest.json']).pages.length,pages.length);
+});
 test('213-page inventory produces a bounded, deterministic, category-balanced directory without shrinking sitemap', () => {
  const pages=[page('/'),page('/teklif-al'),...Array.from({length:199},(_,i)=>page('/bolgeler/ilce-'+i)),...Array.from({length:12},(_,i)=>page('/rehber/konu-'+i))];
  const files=discoveryFiles({origin,brand:'3dyanımda',pages});

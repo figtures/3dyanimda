@@ -73,6 +73,7 @@ export const breadcrumbSchema = (crumbs: CrumbEntry[]) => ({
   })),
 });
 export const articleSchema = (opts: {
+  language?: "tr-TR" | "en-US";
   title: string;
   description: string;
   url: string;
@@ -87,7 +88,7 @@ export const articleSchema = (opts: {
   ...(opts.image ? {image: new URL(opts.image, getTenantIdentity().origin).href} : {}),
   ...(contentDate(opts.datePublished) ? {datePublished: contentDate(opts.datePublished)} : {}),
   ...(contentDate(opts.dateModified) ? {dateModified: contentDate(opts.dateModified)} : {}),
-  inLanguage: 'tr-TR',
+  inLanguage: opts.language || 'tr-TR',
   isAccessibleForFree: true,
   author: { "@id": `${getTenantIdentity().origin}/#organization` },
   publisher: { "@id": `${getTenantIdentity().origin}/#organization` },

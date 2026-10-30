@@ -10,13 +10,14 @@ export const indexRobots = "index,follow,max-image-preview:large,max-snippet:-1,
 export function pageGraph(input: {
   origin: string; path: string; title: string; description: string;
   image?: string; modified?: string; type?: "WebPage" | "CollectionPage" | "AboutPage" | "ContactPage";
+  language?: "tr-TR" | "en-US";
 }) {
   const url = input.origin + canonicalPath(input.path);
   return {
     "@context": "https://schema.org",
     "@type": input.type || "WebPage",
     "@id": url + "#webpage",
-    url, name: input.title, description: input.description, inLanguage: "tr-TR",
+    url, name: input.title, description: input.description, inLanguage: input.language || "tr-TR",
     isPartOf: { "@id": input.origin + "/#website" },
     publisher: { "@id": input.origin + "/#organization" },
     ...(['AboutPage', 'ContactPage'].includes(input.type || '') ? { about: { '@id': input.origin + '/#organization' } } : {}),

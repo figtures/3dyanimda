@@ -1,3 +1,4 @@
+import {publicLocalPath} from "@/lib/local-urls.mjs";
 import { previewSearch } from "@/lib/tenant";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -99,7 +100,7 @@ export default function ContentHub() {
             </div>
             <div className="district-directory">
               {places.map((p) => (
-                <Link key={p.slug} to={pages.some(page=>page.path === "/bolgeler/istanbul/"+p.slug) ? "/bolgeler/istanbul/" + p.slug + query : "/teklif-al?" + new URLSearchParams({...Object.fromEntries(new URLSearchParams(query)),region:p.name})}>
+                <Link key={p.slug} to={pages.some(page=>page.path === publicLocalPath("/bolgeler/istanbul/"+p.slug,b.slug)) ? publicLocalPath("/bolgeler/istanbul/" + p.slug,b.slug) + query : "/teklif-al?" + new URLSearchParams({...Object.fromEntries(new URLSearchParams(query)),region:p.name})}>
                   {p.name}
                   <ArrowUpRight size={15} />
                 </Link>

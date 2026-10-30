@@ -2,6 +2,8 @@ import {createClient} from '@supabase/supabase-js';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {contentStructuredData} from '../../src/content/structured-content';
+import {publicLocalContent} from '../../src/lib/local-urls.mjs';
+import {visibleServiceFaq} from '../../src/content/service-experience.mjs';
 import {brandAsset} from '../../src/lib/brand-assets';
 import {businessGraph} from '../../src/lib/structured-data';
 import {resolveBusinessProfile} from '../../src/lib/business-profile';
@@ -21,9 +23,9 @@ for(const brand of ['3dyanimda','3dsanayi','maketyanimda','parcayanimda']){
  if((tenant.data!.custom_domain||tenant.data!.domain)!==brand+'.com')throw new Error('Canonical host mismatch: '+brand);
  const values=Object.fromEntries((settings.data||[]).map(row=>[row.key,row.value]));const business=resolveBusinessProfile(values,{name:tenant.data!.name,origin});const records=[];const titles=new Map(),descriptions=new Map();
  for(const raw of content.data||[]){
-  const p={...raw,brand,editorial:readEditorial(raw.editorial)};const meta=overrides.data?.find(s=>s.path===p.path);const title=meta?.title_tr||contentMetaTitle(p);const description=meta?.description_tr||contentMetaDescription(p.summary,tenant.data!.name);
+  const p=publicLocalContent({...raw,brand,editorial:readEditorial(raw.editorial)},brand);const meta=overrides.data?.find(s=>s.path===raw.path);const title=meta?.title_tr||contentMetaTitle(p);const description=meta?.description_tr||contentMetaDescription(p.summary,tenant.data!.name);
   const graph=composeSchemaGraph([businessGraph({name:business.name,origin,description:business.description||undefined,email:business.email,telephone:business.phone,address:business.address,geo:business.geo,sameAs:business.sameAs,hasMap:business.googleBusinessUrl,openingHoursSpecification:business.openingHoursSpecification,logo:brandAsset(brand,'organization_logo',values).url}),pageGraph({origin,path:p.path,title,description,image:p.image||undefined}),...contentStructuredData(p,origin)],origin,origin+p.path);
-  const errors=[...schemaIntegrity(graph,{origin,visibleText:p.faq.map(f=>f.q+' '+f.a).join(' ')}),...validateVocabulary(graph)];
+  const errors=[...schemaIntegrity(graph,{origin,visibleText:visibleServiceFaq(p,brand).map(f=>f.q+' '+f.a).join(' ')}),...validateVocabulary(graph)];
   if(!meta?.noindex){for(const [map,value,label] of [[titles,title,'title'],[descriptions,description,'description']] as const){if(map.has(value))errors.push('Duplicate '+label+': '+map.get(value));map.set(value,p.path);}}
   records.push({path:p.path,indexable:!meta?.noindex,types:graph['@graph'].map(n=>n['@type']),sha256:createHash('sha256').update(JSON.stringify(graph)).digest('hex'),errors});
   report.errors.push(...errors.map(e=>brand+p.path+': '+e));

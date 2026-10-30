@@ -3,6 +3,11 @@ import assert from 'node:assert/strict';
 import {loadBrandConfig,brands,productionDomainRoutes} from './config.mjs';
 import worker from '../../deploy/worker.mjs';
 const defaults={SITE_DOMAIN:'3dyanimda.com',WORKER_NAME:'3dyanimda',VITE_SITE_THEME:'studio',VITE_SUPABASE_URL:'https://example.supabase.co',VITE_SUPABASE_PUBLISHABLE_KEY:'sb_publishable_test'};
+test('Yandex verification reaches the selected brand build without creating an ownership claim by default',()=>{
+ const c=loadBrandConfig('3dyanimda',{...defaults,VITE_YANDEX_SITE_VERIFICATION:'public-test-verification'},null,()=>false);
+ assert.equal(c.publicEnv.VITE_YANDEX_SITE_VERIFICATION,'public-test-verification');
+ assert.equal(loadBrandConfig('3dyanimda',{},null,()=>false).publicEnv.VITE_YANDEX_SITE_VERIFICATION,'');
+});
 test('approved 3dyanimda exports bind apex and www; previews and other brands retain their scope',()=>{
  for(const brand of brands){
   const c=loadBrandConfig(brand,{WORKER_CUSTOM_DOMAIN:'true'},null,()=>false);

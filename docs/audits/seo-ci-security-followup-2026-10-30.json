@@ -1,0 +1,629 @@
+{
+  "date": "2026-10-30",
+  "reviewer": "Codex (AI, owner-delegated bounded CI follow-up)",
+  "humanReviewPerformed": false,
+  "reviewedHead": "8e4afed75d8deacdd14f7f8bea7398e2372aac1a",
+  "pullRequest": "https://github.com/figtures/3dyanimda/pull/19",
+  "security": {
+    "failedJob": "https://github.com/figtures/3dyanimda/actions/runs/40977504279/job/123809069225",
+    "advisory": "https://github.com/advisories/GHSA-8g5g-mxqh-grgj",
+    "before": "vite 6.4.4",
+    "after": "vite 6.4.5",
+    "change": "Only the direct pinned Vite version and its lock record change. Audit threshold and all CI gates remain enabled.",
+    "localAudit": {
+      "vulnerabilities": 0
+    },
+    "localValidation": {
+      "typecheck": "pass",
+      "applicationTests": {
+        "files": 58,
+        "passed": 331
+      },
+      "viteBuild": "pass",
+      "searchContractTests": {
+        "passed": 96,
+        "failed": 0
+      },
+      "brandIdentitySeed": "pass",
+      "protocols": {
+        "valid": true,
+        "gates": 20,
+        "groupedControls": 123,
+        "releaseReady": false
+      }
+    },
+    "note": "The 30 October reconciliation record describes the initial PR head; the two dependency files now intentionally differ from that snapshot."
+  },
+  "candidateLaboratory": {
+    "run": "https://github.com/figtures/3dyanimda/actions/runs/40977504334",
+    "production": false,
+    "fieldData": false,
+    "completedRuns": 18,
+    "reports": [
+      {
+        "device": "mobile",
+        "sourceCommit": "1a6b236f0f487cf12b58fb8645523aab42309c8b",
+        "workflowRun": "40977504334",
+        "production": false,
+        "fieldData": false,
+        "expectedRuns": 9,
+        "runs": [
+          {
+            "route": "/",
+            "repeat": 1,
+            "scores": {
+              "performance": 65,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1868.816,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 11653
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-1.json.gz",
+            "sha256": "974ca0fcd8f4898ac41c1fd14f044e62ce59663c46cd6ba72a2b418690d82135",
+            "diagnostic": {
+              "files": [
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-1-evidence/trace.json.gz",
+                  "bytes": 796553,
+                  "sha256": "0204fa1fd077ac275a9e6b6f1542d984128e06d52b854453ed6cdca7c982e456"
+                },
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-1-evidence/devtoolslog.json.gz",
+                  "bytes": 10587,
+                  "sha256": "d038039ef52b71d4613274183144fab3f08daea5becb93c65749cdd84b648e55"
+                }
+              ],
+              "traceEvents": 16255,
+              "devtoolsEvents": 258,
+              "cpuProfileEvents": 0,
+              "cpuProfileAvailable": false
+            }
+          },
+          {
+            "route": "/",
+            "repeat": 2,
+            "scores": {
+              "performance": 66,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1676.0902,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 11075
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-2.json.gz",
+            "sha256": "2f7957bb23ccacd0c9313eab41297d187a222b3508f590ebf784f5ff5587d94f",
+            "diagnostic": {
+              "files": [
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-2-evidence/trace.json.gz",
+                  "bytes": 894743,
+                  "sha256": "eeeb926f68ccc0cfde1250ffde88293514bd228016d0c989b6676b937fff0f7b"
+                },
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-2-evidence/devtoolslog.json.gz",
+                  "bytes": 11208,
+                  "sha256": "8c285ec1018bb03c98ab9fb58b74dcb1d1ded068e3442595d5c686a4cdf53449"
+                }
+              ],
+              "traceEvents": 14651,
+              "devtoolsEvents": 256,
+              "cpuProfileEvents": 0,
+              "cpuProfileAvailable": false
+            }
+          },
+          {
+            "route": "/",
+            "repeat": 3,
+            "scores": {
+              "performance": 66,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1866.3569,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 11426.5
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-3.json.gz",
+            "sha256": "f7e321ea67dcb9740f1d5d15a035ab0ba20c2fcbbc14e41b07512136b96187fc",
+            "diagnostic": {
+              "files": [
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-3-evidence/trace.json.gz",
+                  "bytes": 939236,
+                  "sha256": "8eef34a0d983ed38e7137328d8165370765ac374fbd33f38209acd1bb13c792c"
+                },
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-mobile-3-evidence/devtoolslog.json.gz",
+                  "bytes": 9945,
+                  "sha256": "012ddb674672e1c1d8172aefcb3ff13f50e31eace7030eaea053f9bea3870c37"
+                }
+              ],
+              "traceEvents": 15388,
+              "devtoolsEvents": 255,
+              "cpuProfileEvents": 0,
+              "cpuProfileAvailable": false
+            }
+          },
+          {
+            "route": "/3d-baski",
+            "repeat": 1,
+            "scores": {
+              "performance": 97,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1731.6646,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 179.0000000000001
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-mobile-1.json.gz",
+            "sha256": "52e50f50d7a5391b62cdc9864b8be9efe34d3c481bea4c61bec39e353ab179bb"
+          },
+          {
+            "route": "/3d-baski",
+            "repeat": 2,
+            "scores": {
+              "performance": 98,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1562.6517,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 152.5
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-mobile-2.json.gz",
+            "sha256": "bc534b09037429b2feac8c2ab2595285554c85fd3863c8ae0919bc7ee138f223"
+          },
+          {
+            "route": "/3d-baski",
+            "repeat": 3,
+            "scores": {
+              "performance": 98,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1561.2498,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 149
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-mobile-3.json.gz",
+            "sha256": "20670b1982134f5c3788c31afbfb7f542050c3295b8b7777a3515c7228d90546"
+          },
+          {
+            "route": "/istanbul-3d-baski",
+            "repeat": 1,
+            "scores": {
+              "performance": 99,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1566.2656,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 124
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-istanbul-3d-baski-mobile-1.json.gz",
+            "sha256": "c5035277ec4cba02845e6c3335e0b27b6180459212d0e67e64fc8b36c74b2f43"
+          },
+          {
+            "route": "/istanbul-3d-baski",
+            "repeat": 2,
+            "scores": {
+              "performance": 96,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1750.1179,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 233
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-istanbul-3d-baski-mobile-2.json.gz",
+            "sha256": "70eb3e780e3849d1f46f8e22b6282c7de14f632e297585c09c3b93f80bb613c5"
+          },
+          {
+            "route": "/istanbul-3d-baski",
+            "repeat": 3,
+            "scores": {
+              "performance": 98,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 1563.557,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 169
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-istanbul-3d-baski-mobile-3.json.gz",
+            "sha256": "5fdc378d90a69e6e41786c82926ca05318bda8a753a08dfa3feaa27965fc62bb"
+          }
+        ],
+        "renderContracts": [
+          {
+            "brand": "3dyanimda",
+            "route": "/",
+            "device": "mobile",
+            "status": "PASS",
+            "h1": 1,
+            "canonical": "https://3dyanimda.com/",
+            "schemaNodes": 4,
+            "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/3d-baski",
+            "device": "mobile",
+            "status": "PASS",
+            "h1": 1,
+            "canonical": "https://3dyanimda.com/3d-baski",
+            "schemaNodes": 11,
+            "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/istanbul-3d-baski",
+            "device": "mobile",
+            "status": "PASS",
+            "h1": 1,
+            "canonical": "https://3dyanimda.com/istanbul-3d-baski",
+            "schemaNodes": 11,
+            "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          }
+        ],
+        "hydrationChecks": [
+          {
+            "brand": "3dyanimda",
+            "route": "/",
+            "device": "mobile",
+            "mode": "react-ssg-v1",
+            "error": false,
+            "preserved": true
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/3d-baski",
+            "device": "mobile",
+            "mode": "react-ssg-v1",
+            "error": false,
+            "preserved": true
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/istanbul-3d-baski",
+            "device": "mobile",
+            "mode": "react-ssg-v1",
+            "error": false,
+            "preserved": true
+          }
+        ],
+        "interactionChecks": [
+          {
+            "brand": "3dyanimda",
+            "route": "/",
+            "device": "mobile",
+            "mobileMenu": "PASS",
+            "quote": "NOT_APPLICABLE"
+          }
+        ]
+      },
+      {
+        "device": "desktop",
+        "sourceCommit": "1a6b236f0f487cf12b58fb8645523aab42309c8b",
+        "workflowRun": "40977504334",
+        "production": false,
+        "fieldData": false,
+        "expectedRuns": 9,
+        "runs": [
+          {
+            "route": "/",
+            "repeat": 1,
+            "scores": {
+              "performance": 91,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 392.6784,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 241.5
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-1.json.gz",
+            "sha256": "a8bb354d89acfad6964b7be9d2498fe161dc1cbe6b2a43543ca38ee21824a8b8",
+            "diagnostic": {
+              "files": [
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-1-evidence/trace.json.gz",
+                  "bytes": 622832,
+                  "sha256": "352173774f28870f984276096375e8b0ed72b514c6acba5a1b5e8f14d05fa489"
+                },
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-1-evidence/devtoolslog.json.gz",
+                  "bytes": 10430,
+                  "sha256": "c516b026943acd7fbd07d776e30c1e9ff81fffd8c1792e34a478a542e793f621"
+                }
+              ],
+              "traceEvents": 11974,
+              "devtoolsEvents": 250,
+              "cpuProfileEvents": 0,
+              "cpuProfileAvailable": false
+            }
+          },
+          {
+            "route": "/",
+            "repeat": 2,
+            "scores": {
+              "performance": 69,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 391.9097,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 2388
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-2.json.gz",
+            "sha256": "93e301765d0a5dd0b9704822228f598f1ed90030a7c6b5eeb70c488b1eb8cbe1",
+            "diagnostic": {
+              "files": [
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-2-evidence/trace.json.gz",
+                  "bytes": 797255,
+                  "sha256": "a1ce46f734de0daa63fede4af8f6d11662ccaf39072ce7b3505fa108d1bac60a"
+                },
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-2-evidence/devtoolslog.json.gz",
+                  "bytes": 10960,
+                  "sha256": "b69e3333b7ae6f3f4b9e344bdaec0365f170f60e7fefd8d7c8c1bc397408e55e"
+                }
+              ],
+              "traceEvents": 13430,
+              "devtoolsEvents": 258,
+              "cpuProfileEvents": 0,
+              "cpuProfileAvailable": false
+            }
+          },
+          {
+            "route": "/",
+            "repeat": 3,
+            "scores": {
+              "performance": 69,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 386.83410000000003,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 2381
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-3.json.gz",
+            "sha256": "c72d470d73a733a754bbfe76ae7acbc7abb1fc827dfe705172eeba58f62b8944",
+            "diagnostic": {
+              "files": [
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-3-evidence/trace.json.gz",
+                  "bytes": 737201,
+                  "sha256": "627cd90673f495b41116612a9554f6993bc9195760caf48b08ce47a00fec9ccf"
+                },
+                {
+                  "file": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-home-desktop-3-evidence/devtoolslog.json.gz",
+                  "bytes": 10984,
+                  "sha256": "0464fb66c6fbbb1ff0b72a5fa9c561538bdf59c5e915fbbf25287f8c1a09aef5"
+                }
+              ],
+              "traceEvents": 13419,
+              "devtoolsEvents": 253,
+              "cpuProfileEvents": 0,
+              "cpuProfileAvailable": false
+            }
+          },
+          {
+            "route": "/3d-baski",
+            "repeat": 1,
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 375.4262,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 0
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-desktop-1.json.gz",
+            "sha256": "ffa80227c13892d1f9be0efbd45eac2babd3424fb04f4c3375870aa0caa1955d"
+          },
+          {
+            "route": "/3d-baski",
+            "repeat": 2,
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 380.6355,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 0
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-desktop-2.json.gz",
+            "sha256": "7ebac60baad5ef8d9326f9bd55ff6c159e938255b23101b26ba49a511837dfc7"
+          },
+          {
+            "route": "/3d-baski",
+            "repeat": 3,
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 376.0938,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 0
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-3d-baski-desktop-3.json.gz",
+            "sha256": "f1be4f4fac8d2ee1ed8596ef61c4fccbfc35180c6c63088f68d214c5920909f4"
+          },
+          {
+            "route": "/istanbul-3d-baski",
+            "repeat": 1,
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 379.3211,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 0
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-istanbul-3d-baski-desktop-1.json.gz",
+            "sha256": "57b1da1405db23b9e8f5031a2a927e249faa586a3735615af1f7d21e7b9f519b"
+          },
+          {
+            "route": "/istanbul-3d-baski",
+            "repeat": 2,
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 376.4984,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 0
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-istanbul-3d-baski-desktop-2.json.gz",
+            "sha256": "a576a77cd795667fc38be10a5086817b0516e0d7300bb8036d462a00bb43ff6b"
+          },
+          {
+            "route": "/istanbul-3d-baski",
+            "repeat": 3,
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 100
+            },
+            "metrics": {
+              "largest-contentful-paint": 376.54650000000004,
+              "cumulative-layout-shift": 0,
+              "total-blocking-time": 0
+            },
+            "raw": "artifacts/lighthouse-3dyanimda/raw/3dyanimda-istanbul-3d-baski-desktop-3.json.gz",
+            "sha256": "15ad8bb41e9ede3514cd19505c6bc6e8648c71d46330ed55e594a3b6db7aedd6"
+          }
+        ],
+        "renderContracts": [
+          {
+            "brand": "3dyanimda",
+            "route": "/",
+            "device": "desktop",
+            "status": "PASS",
+            "h1": 1,
+            "canonical": "https://3dyanimda.com/",
+            "schemaNodes": 4,
+            "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/3d-baski",
+            "device": "desktop",
+            "status": "PASS",
+            "h1": 1,
+            "canonical": "https://3dyanimda.com/3d-baski",
+            "schemaNodes": 11,
+            "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/istanbul-3d-baski",
+            "device": "desktop",
+            "status": "PASS",
+            "h1": 1,
+            "canonical": "https://3dyanimda.com/istanbul-3d-baski",
+            "schemaNodes": 11,
+            "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          }
+        ],
+        "hydrationChecks": [
+          {
+            "brand": "3dyanimda",
+            "route": "/",
+            "device": "desktop",
+            "mode": "react-ssg-v1",
+            "error": false,
+            "preserved": true
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/3d-baski",
+            "device": "desktop",
+            "mode": "react-ssg-v1",
+            "error": false,
+            "preserved": true
+          },
+          {
+            "brand": "3dyanimda",
+            "route": "/istanbul-3d-baski",
+            "device": "desktop",
+            "mode": "react-ssg-v1",
+            "error": false,
+            "preserved": true
+          }
+        ],
+        "interactionChecks": [
+          {
+            "brand": "3dyanimda",
+            "route": "/",
+            "device": "desktop",
+            "mobileMenu": "PASS",
+            "quote": "NOT_APPLICABLE"
+          }
+        ]
+      }
+    ],
+    "conclusion": "New service/local routes pass rendered canonical/schema/robots checks. Homepage TBT remains high; F098 is open. The archived traces have no CPU profile events, so function-level CPU attribution remains incomplete."
+  },
+  "cloudflarePreview": {
+    "failedChecks": 4,
+    "detailsVerified": false,
+    "reason": "Cloudflare dashboard redirected to sign-in. GitHub shows failures but does not expose the current detailed build error. No cause inferred from older triage, no settings or access controls changed."
+  },
+  "pending": [
+    "Fresh CI after the Vite patch",
+    "Cloudflare branch preview log inspection through the authorized dashboard session",
+    "Publication and live short-URL/redirect acceptance",
+    "Homepage performance diagnosis and improvement",
+    "GA4/GSC authorized-account follow-up and genuine project evidence"
+  ],
+  "sitemapSubmitted": false,
+  "indexingRequested": false,
+  "productionDeployed": false
+}

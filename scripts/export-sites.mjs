@@ -106,7 +106,7 @@ try {
     for (const response of [landing, pages, posts, seo, redirects, portfolio, features, faqs])
       if (response.error) throw response.error;
     const routeInputs=Object.fromEntries(Object.entries({landing,pages,posts,seo,redirects,portfolio,features,faqs}).map(([key,response])=>[key,response.data]));
-    const {routes,noindex,redirectMap}=publicExportRoutes(routeInputs);
+    const {routes,noindex,redirectMap}=publicExportRoutes({...routeInputs,origin:base});
     await mkdir(output,{recursive:true});
     // Audit input stays outside the public asset directory.
     await writeFile(path.join(output,host+'-route-inputs.json'),JSON.stringify({origin:base,...routeInputs},null,2)+'\n');

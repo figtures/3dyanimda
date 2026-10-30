@@ -1,3 +1,4 @@
+import {contentLocalPath} from "@/lib/local-urls.mjs";
 import { useTenant } from "@/contexts/TenantContext";
 import { useEffect, useState } from "react";
 import { getSupabase } from "@/lib/backend-config";
@@ -22,8 +23,8 @@ export function clearSeoOverrideCache() {
 }
 
 /** Fetches admin-managed SEO meta for the given path. Returns null until loaded. */
-export function useSeoOverride(path: string): SeoOverride | null {
-  const lang = "tr"; // These public routes and their visible content are Turkish.
+export function useSeoOverride(path: string, lang: "tr" | "en" = "tr"): SeoOverride | null {
+  // The caller passes the language actually rendered, including any content fallback.
   const { tenant } = useTenant();
   const cacheKey = `${tenant?.id}::${path}::${lang}`;
   const cached = cache.get(cacheKey);
@@ -45,14 +46,14 @@ export function useSeoOverride(path: string): SeoOverride | null {
         .from("seo_meta")
         .select("*")
         .eq("tenant_id", tenant!.id)
-        .eq("path", path)
+        .eq("path", contentLocalPath(path,tenant!.slug))
         .maybeSingle();
       if (!row) {
         cache.set(cacheKey, { at: Date.now(), data: null });
         if (mounted) setData(null);
         return;
       }
-      const pick = (f: string) => row[`${f}_${lang}`] || row[`${f}_tr`] || "";
+      const pick = (f: string) => row[`${f}_${lang}`] || "";
       const result: SeoOverride = {
         title: pick("title") || undefined,
         description: pick("description") || undefined,
