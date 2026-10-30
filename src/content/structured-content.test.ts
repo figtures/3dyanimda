@@ -32,9 +32,9 @@ describe('full authored structured-content inventory',()=>{
   const source=[...all.values()].find(p=>p.kind==='guide')!;
   const image='/images/editorial/3dyanimda/stl-dosya-hazirlama.png';
   const publishedAt='2026-10-01T09:30:00Z';
-  const page={...source,image,updated_at:'2026-10-20T09:30:00Z',editorial:{...source.editorial!,publishedAt}};
+  const page={...source,image,updated_at:'2026-11-01T09:30:00Z',editorial:{...source.editorial!,publishedAt}};
   const article=contentStructuredData(page,'https://3dyanimda.com').find(node=>node['@type']==='Article');
-  expect(article).toMatchObject({datePublished:publishedAt,dateModified:'2026-10-20T09:30:00Z',image:'https://3dyanimda.com'+image});
+  expect(article).toMatchObject({datePublished:publishedAt,dateModified:'2026-11-01T09:30:00Z',image:'https://3dyanimda.com'+image});
   expect(contentStructuredData({...page,editorial:{...page.editorial,publishedAt:undefined}},'https://3dyanimda.com').find(node=>node['@type']==='Article')).not.toHaveProperty('datePublished');
  });
  it('connects the page, service, breadcrumb and visible FAQ without inventing dates',()=>{

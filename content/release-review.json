@@ -4,14 +4,14 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-30T03:22:45.374Z",
+  "reviewedAt": "2026-10-30T07:23:53.068Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
     "receivedAt": "2026-10-08T19:00:37+03:00"
   },
-  "sourceHash": "d3245c49a1fd1e01c4eb70cd8c5e328d8cf85dd35c9f4bc30451fab7f0952bb7",
-  "sourceFileCount": 715,
+  "sourceHash": "65637f14b8823489c0d7a763b94f35fb08770a5e39305b5c5d02e64fb62d3459",
+  "sourceFileCount": 718,
   "contentManifestHash": "62ffe782307cf4d62439a6a519f50752dd29bcdd37725094af9d97a0f3515667",
   "assetManifestHash": "f21b51759642dc7602645f8b7301114c468516062c2797f9633c2c591d135036",
   "checks": {
@@ -58,7 +58,7 @@
     "latestSeoGapReview": "docs/audits/seo-gap-release-review-2026-10-23.json",
     "latestSeoGapExistingLandingUpdates": 17,
     "latestSeoGapNewPages": 5,
-    "historicalEvidenceNote": "PR17/18 publication and 20 successful main checks verified on 30 October. The combined candidate passes source/unit/contract/build review; new PR browser/export/Lighthouse and production acceptance remain separate pending gates. Historical records keep their original dates and scope.",
+    "historicalEvidenceNote": "Historical evidence retains its dates and scope. Owner operations delta passed 344 application tests, 100 contracts, typecheck and build; exact-head CI and production acceptance remain separate gates.",
     "latestGbpContrastReview": "docs/audits/seo-gbp-contrast-review-2026-10-23.json",
     "latestGbpContactVerification": "docs/audits/seo-gbp-contact-verification-2026-10-23.json",
     "latestDesktopContrastReview": "docs/audits/seo-desktop-contrast-review-2026-10-23.json",
@@ -88,7 +88,8 @@
     "latestReconciliationReview": "docs/audits/seo-reconciliation-review-2026-10-30.json",
     "latestCiSecurityFollowup": "docs/audits/seo-ci-security-followup-2026-10-30.json",
     "latestCiSecurityNote": "Vite 6.4.5 fixes the newly reported dev-server advisory. Audit, typecheck, 331 application tests, 96 contracts, identity seed, protocols and build pass locally. Initial PR candidate has 18 completed laboratory runs; homepage TBT and function-level CPU attribution remain open. Cloudflare preview failures are untriaged behind sign-in. Fresh patched-head CI and production acceptance remain pending.",
-    "latestTechnicalAcceptanceReview": "docs/audits/technical-acceptance-review-2026-10-30.json"
+    "latestTechnicalAcceptanceReview": "docs/audits/technical-acceptance-review-2026-10-30.json",
+    "latestOwnerOperationsReview": "docs/audits/owner-operations-review-2026-10-30.json"
   },
   "evidence": [
     {
@@ -545,7 +546,7 @@
     },
     {
       "file": "src/pages/ContentPage.tsx",
-      "sha256": "14d54af746eaff8b8a6ebb80f3a04f769e12661cc404ac94dde65969cdfde504"
+      "sha256": "92c5b89197c8cefd2507084f53fc5448542f82a2296cd7ff80b115e9fcc6fda4"
     },
     {
       "file": "src/components/brand/LocalCommercialContent.tsx",
@@ -573,7 +574,7 @@
     },
     {
       "file": "src/content/service-experience.mjs",
-      "sha256": "d28346ace5e527cdc16b6bacea3c51536f7c82e5b8cfb3be4ae6596777f52c2c"
+      "sha256": "500c15cef66774a60aecdb337d75e2abd3382c167f82e769276733d6f4df43f0"
     },
     {
       "file": "src/content/service-experience.test.tsx",
@@ -581,11 +582,11 @@
     },
     {
       "file": "src/content/structured-content.ts",
-      "sha256": "ee28ffb3cc9eaebe9bbe920b5fef7620ff7c406ab0c78c37b6e05473fe8dd148"
+      "sha256": "b79ccaed1225ff5e22a12b600a17f67fc62d3216f518ce3bae56a3b7be603d8c"
     },
     {
       "file": "src/content/structured-content.test.ts",
-      "sha256": "38c36997524861f30d9f4e1b9b8456ff3f3117267ecc46c279e0690057aa4b52"
+      "sha256": "ebe5cbca225cc0f91014df31511c7df97c7a6a8c0f1f4474f567f1dcf44f9519"
     },
     {
       "file": "src/lib/schema-graph.ts",
@@ -762,6 +763,14 @@
     {
       "file": "src/themes/printer/renderer-capability.test.ts",
       "sha256": "3751e474fccd274db6844a5215463181b57cf4a73c820cacea46236a9ccfc9be"
+    },
+    {
+      "file": "docs/audits/owner-operations-review-2026-10-30.json",
+      "sha256": "cad9d5916404a093280d897da9a9d5e5967eefa545fb16bbd3cfdae9ce7fc377"
+    },
+    {
+      "file": "scripts/test-public-sections.mjs",
+      "sha256": "5535618bd24abebc85e5d5607cd859d471ce5280760289233d97751242e07341"
     }
   ],
   "limitations": [

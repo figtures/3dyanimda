@@ -20,6 +20,8 @@ import {sourceNote,contentModified} from '@/content/source-notes';
 import {serviceImageSources} from '@/content/responsive-image';
 import {contentPublished} from '@/content/publication-date';
 import { LocalServiceAccess } from '@/components/brand/LocalServiceAccess';
+import {MaterialCapabilities,IllustrativePriceExample} from '@/components/brand/WorkshopCapabilities';
+import {rapidPrototype,contactOperations,scanInputs} from '@/content/business-operations.mjs';
 export default function ContentPage() {
   const { pathname, search } = useLocation();
   const b = useBrand();
@@ -103,6 +105,10 @@ export default function ContentPage() {
             </section>
           )}
           <ServiceConnections page={p} brand={b.slug} query={query}/>
+          {b.slug === '3dyanimda' && p.path === '/3d-tarama' && <section id="yerinde-tarama"><h2>Türkiye genelinde yerinde 3D tarama</h2><p>{contactOperations.onsite_note}</p><p>{scanInputs}</p></section>}
+          {b.slug === '3dyanimda' && p.path === '/3d-baski' && <section id="hizli-prototipleme"><h2>48 saatlik hızlı prototipleme</h2><p>{rapidPrototype}</p></section>}
+          {b.slug === '3dyanimda' && (p.kind === 'material' || p.path === '/3d-baski') && <MaterialCapabilities/>}
+          {b.slug === '3dyanimda' && ['/rehber/3d-baski-fiyatlandirma','/rehber/prototip-maliyetini-ne-belirler'].includes(p.path) && <IllustrativePriceExample/>}
           {experience && <LocalCommercialContent page={p} quoteUrl={quoteUrl} query={query} />}
           {p.image && (
             <figure>
@@ -160,7 +166,7 @@ export default function ContentPage() {
           <ContentFaq page={p} brand={b.slug}/>
           {technicalNote && <section className="article-sources" data-source-note><h2>Teknik kaynak notu</h2><p>{technicalNote.text}</p><p>{technicalNote.scope}</p><ul>{technicalNote.sources.map(s=><li key={s.id}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
           {!!p.editorial?.sources?.length && <section className="article-sources"><h2>{p.kind === "location" ? "Bölge ve hizmet kaynakları" : "Teknik başvuru kaynakları"}</h2><p>Bağlantılar ilgili konu için genel başvuru kaynaklarıdır. İşletmeye özgü kapasite, teslimat süresi veya parça performansını belgelemez.</p><ul>{p.editorial.sources.filter(s=>!technicalNote || !s.url.includes('/category/material-guide_')).map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></li>)}</ul></section>}
-          {(published || modified) && <p className="content-byline">{b.name} bilgi merkezi{published && <> · İlk yayın: <time data-content-published dateTime={published}>{displayDate(published)}</time></>}{modified && <> · Güncelleme: <time data-content-modified dateTime={modified}>{displayDate(modified)}</time></>}</p>}
+          {(published || modified) && <p className="content-byline">{b.slug === '3dyanimda' && p.kind === 'guide' ? <Link to={'/hakkimizda'+query}>3D Yanımda mühendislik ekibi</Link> : b.name+' bilgi merkezi'}{published && <> · İlk yayın: <time data-content-published dateTime={published}>{displayDate(published)}</time></>}{modified && <> · Güncelleme: <time data-content-modified dateTime={modified}>{displayDate(modified)}</time></>}</p>}
         </article>
         <aside className="article-aside">
           <p className="brand-eyebrow">PROJENİZE BAŞLAYALIM</p>

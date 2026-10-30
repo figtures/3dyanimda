@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-30",
+  "reviewer": "Codex (AI, owner-delegated)",
+  "humanReviewPerformed": false,
+  "scope": "Owner-confirmed business operations, research-based FAQ and clearly labelled illustrative cost example; 3dyanimda only.",
+  "ownerConfirmed": {
+    "onsiteScanning": "All Turkish provinces; appointment after quotation approval; travel/accommodation separate quote items.",
+    "shipping": "Inbound samples and return shipment; price depends on project.",
+    "courier": "All Istanbul districts; project-dependent fee.",
+    "dropoff": "Customer can drop off and collect; time agreed with customer.",
+    "rapidPrototyping": "48 hours; project scope and start confirmed, transport separate.",
+    "printers": [
+      "Creality",
+      "Bambu Lab",
+      "Flashforge"
+    ],
+    "materials": "More than 50 filament varieties; ASA, PETG, ABS, ABS FR, HT PETG, PLA, Silk PLA, Hyper PETG among used options.",
+    "engineering": "Corporate engineering team, up to 10 years individual experience, no personal biographies.",
+    "photos": "Owner identifies real workshop/device/product photos on official Maps profile; linked, not copied or attributed to invented customer cases."
+  },
+  "contactOperations": {
+    "visit_note": "Parçanızı Ataşehir’deki atölyemize elden bırakabilir ve işlem sonrasında geri alabilirsiniz. Ziyaret ve teslim saatini sizinle görüşerek planlıyoruz.",
+    "delivery_note": "Tarama yapılacak parçaları kargoyla kabul ediyor ve işlem sonrasında geri gönderiyoruz. Gidiş ve dönüş kargo ücretleri projeye göre belirlenir. İstanbul’un tüm ilçelerine kurye hizmetimiz vardır; kurye ücreti projeye göre belirlenir. İstanbul dışına ürün gönderimi kargoyla yapılır.",
+    "onsite_note": "Türkiye’nin tüm illerinde müşterinin adresinde 3D tarama yapıyoruz. Şehir dışı işlerde ulaşım ve gerektiğinde konaklama giderleri teklifte ayrı kalem olarak belirtilir. Yerinde tarama randevusu teklif onayından sonra kesinleşir.",
+    "service_areas": "Türkiye",
+    "delivery_areas": "Türkiye"
+  },
+  "cms": {
+    "tenant": "10000000-0000-4000-8000-000000000001",
+    "key": "contact_info",
+    "updatedAt": "2026-10-30T06:57:28.137489Z",
+    "readbackVerified": true
+  },
+  "research": {
+    "sources": [
+      {
+        "title": "Prusa Research — Filament malzeme rehberi",
+        "url": "https://help.prusa3d.com/filament-material-guide"
+      },
+      {
+        "title": "Formlabs — Tersine mühendislik iş akışı",
+        "url": "https://formlabs.com/blog/reverse-engineering/"
+      }
+    ],
+    "method": "Primary manufacturer documentation, original Turkish FAQ wording. These are not measured customer-frequency data."
+  },
+  "truthfulLimits": {
+    "publication": "13 old guide first-publication dates remain unknown; no random dates. Visible update date reflects this change. Owner remembers 10 February start, year/article dates not substantiated.",
+    "price": "Hypothetical cost scenario, 750 TRY subtotal excluding VAT/shipping, expressly not a real customer quote or current tariff. No Offer schema.",
+    "software": "Published software brands without unverified version numbers.",
+    "materials": "No invented TDS, flame class or temperature guarantee.",
+    "references": "No customer names/logos added, per owner.",
+    "sitemap": "No submission/indexing request.",
+    "bots": "No access restrictions changed."
+  },
+  "validation": {
+    "typecheck": "pass",
+    "applicationTests": 344,
+    "contractTests": 100,
+    "build": "pass",
+    "faqSchema": "same visible FAQ function",
+    "countryScope": "Main scanning Service only, local pages retain local scope",
+    "production": "pending deployment",
+    "ciFollowup": "Initial public-sections run 41017638031 found an obsolete eight-question fixture expectation after nine owner/research questions were added. The check now expects 17 only for 3dyanimda, retains eight for other brands, and compares all rendered questions and answers with FAQPage schema. Patched-head browser CI is pending. The count assertion now waits for the final expected FAQ so synchronous owner questions cannot race asynchronous fixture answers.",
+    "reviewTriage": "Nationwide scanning FAQ on local pages describes the company’s explicitly confirmed operating coverage. A district Service remains a valid subset of that coverage. The question explicitly asks about Türkiye, and visible/schema FAQ content is identical; no district claim was expanded or inferred from shipping."
+  },
+  "sourceSnapshot": "65637f14b8823489c0d7a763b94f35fb08770a5e39305b5c5d02e64fb62d3459"
+}

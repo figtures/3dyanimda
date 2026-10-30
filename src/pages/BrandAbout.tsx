@@ -1,5 +1,6 @@
 import { Seo } from "@/components/site/Seo";
 import { useBrand } from "@/brands/config";
+import {WorkshopCapabilities} from '@/components/brand/WorkshopCapabilities';
 export default function BrandAbout() {
   const b = useBrand();
   const business = b.business;
@@ -24,6 +25,7 @@ export default function BrandAbout() {
           {business.aboutText && <div className="about-profile-copy">{business.aboutText.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>}
           {business.aboutImageUrl && <img className="about-profile-image" src={business.aboutImageUrl} alt={business.aboutImageAlt || `${b.name} atölyesi`} width="1000" height="750" loading="lazy" decoding="async" />}
         </div>}
+        {b.slug === '3dyanimda' && <WorkshopCapabilities mapsUrl={business.googleBusinessUrl}/>}
         <div className="service-list">
           <article>
             <h2>Önce ihtiyacı anlarız.</h2>

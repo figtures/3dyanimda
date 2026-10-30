@@ -633,13 +633,13 @@
     },
     {
       "path": "src/pages/ContentHub.tsx",
-      "sha256": "4306c90dd464007cf43c37da699c99d11afbbb19504f707c696ee55909921273",
-      "bytes": 5152
+      "sha256": "e0faad958c9ba2eb4c4b95cf62500ad6b0b0d7e4de0f11e23715faac36c02cc2",
+      "bytes": 5313
     },
     {
       "path": "src/pages/ContentPage.tsx",
-      "sha256": "14d54af746eaff8b8a6ebb80f3a04f769e12661cc404ac94dde65969cdfde504",
-      "bytes": 11681
+      "sha256": "92c5b89197c8cefd2507084f53fc5448542f82a2296cd7ff80b115e9fcc6fda4",
+      "bytes": 12656
     },
     {
       "path": "src/pages/Index.tsx",
@@ -883,13 +883,13 @@
     },
     {
       "path": "src/content/structured-content.test.ts",
-      "sha256": "38c36997524861f30d9f4e1b9b8456ff3f3117267ecc46c279e0690057aa4b52",
+      "sha256": "ebe5cbca225cc0f91014df31511c7df97c7a6a8c0f1f4474f567f1dcf44f9519",
       "bytes": 3844
     },
     {
       "path": "src/content/structured-content.ts",
-      "sha256": "ee28ffb3cc9eaebe9bbe920b5fef7620ff7c406ab0c78c37b6e05473fe8dd148",
-      "bytes": 5075
+      "sha256": "b79ccaed1225ff5e22a12b600a17f67fc62d3216f518ce3bae56a3b7be603d8c",
+      "bytes": 5170
     },
     {
       "path": "src/lib/backend-config.ts",
@@ -1074,7 +1074,7 @@
   ],
   "baselineMetadataScope": "createdAt, baselineCommit, lighthouseCompletedRuns and geoCompletedRuns describe the original 10 October discovery snapshot. Later local checks are recorded separately; checksum refresh does not rerun historical checks.",
   "latestLocalVerification": "docs/audits/notion-reconciliation-2026-10-11.json",
-  "checksumsRefreshedAt": "2026-10-30T03:22:24.590Z",
+  "checksumsRefreshedAt": "2026-10-30T07:23:53.198Z",
   "checksumScope": "Current file identity only; historical run dates, results, coverage and release approval are unchanged.",
   "latestMeasuredCommit": "b24be0e57ba9fe86f01098ae14c28f6f976a9f29",
   "lighthouseScope": "Isolated canonical-host candidate lab; no public DNS/TLS/CDN or CrUX verification",
