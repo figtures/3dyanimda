@@ -4,7 +4,7 @@
   "reviewer": "Codex (AI, owner-delegated)",
   "reviewerType": "ai_agent",
   "humanReviewPerformed": false,
-  "reviewedAt": "2026-10-30T07:14:39.394Z",
+  "reviewedAt": "2026-10-30T07:23:53.068Z",
   "authorization": {
     "source": "Current owner instruction in conversation",
     "statement": "son inceleme kaydını sen yap onayla ve geç",
@@ -766,11 +766,11 @@
     },
     {
       "file": "docs/audits/owner-operations-review-2026-10-30.json",
-      "sha256": "5c248277d7093a0263c25796a01cd3951ec3623ebe47da6bf9ec0e586d89903f"
+      "sha256": "cad9d5916404a093280d897da9a9d5e5967eefa545fb16bbd3cfdae9ce7fc377"
     },
     {
       "file": "scripts/test-public-sections.mjs",
-      "sha256": "2f30feac831f465eb766a5708a7f808ec54a0d9070a4dbd94e877a0812b94c21"
+      "sha256": "5535618bd24abebc85e5d5607cd859d471ce5280760289233d97751242e07341"
     }
   ],
   "limitations": [

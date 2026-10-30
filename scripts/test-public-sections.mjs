@@ -64,6 +64,8 @@ try {
   await fits();await aligned();
   await visit('/sss');await page.locator('.public-faq-list details').first().waitFor();
   const expectedFaqCount=brand==='3dyanimda'?17:8;
+  // Owner questions render before the asynchronous fixture answers arrive.
+  await page.locator('.public-faq-list details').nth(expectedFaqCount-1).waitFor();
   assert.equal(await page.locator('.public-faq-list details').count(),expectedFaqCount);
   const faqParity=await page.evaluate(()=>{
    const schemas=[...document.querySelectorAll('script[type="application/ld+json"]')].flatMap(el=>{const value=JSON.parse(el.textContent);return Array.isArray(value)?value:value['@graph']||[value];});

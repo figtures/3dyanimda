@@ -61,7 +61,8 @@
     "faqSchema": "same visible FAQ function",
     "countryScope": "Main scanning Service only, local pages retain local scope",
     "production": "pending deployment",
-    "ciFollowup": "Initial public-sections run 41017638031 found an obsolete eight-question fixture expectation after nine owner/research questions were added. The check now expects 17 only for 3dyanimda, retains eight for other brands, and compares all rendered questions and answers with FAQPage schema. Patched-head browser CI is pending."
+    "ciFollowup": "Initial public-sections run 41017638031 found an obsolete eight-question fixture expectation after nine owner/research questions were added. The check now expects 17 only for 3dyanimda, retains eight for other brands, and compares all rendered questions and answers with FAQPage schema. Patched-head browser CI is pending. The count assertion now waits for the final expected FAQ so synchronous owner questions cannot race asynchronous fixture answers.",
+    "reviewTriage": "Nationwide scanning FAQ on local pages describes the company’s explicitly confirmed operating coverage. A district Service remains a valid subset of that coverage. The question explicitly asks about Türkiye, and visible/schema FAQ content is identical; no district claim was expanded or inferred from shipping."
   },
   "sourceSnapshot": "65637f14b8823489c0d7a763b94f35fb08770a5e39305b5c5d02e64fb62d3459"
 }
