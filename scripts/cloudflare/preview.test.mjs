@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {previewBuildSettings} from './build-preview.mjs';
+import {mkdtemp, writeFile, readFile, rm, access} from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import {previewBuildSettings, cleanPreviewAssets} from './build-preview.mjs';
 import {brands} from './config.mjs';
 import worker from '../../deploy/worker.mjs';
 
@@ -26,6 +29,22 @@ test('preview fails closed on production, unknown workers and conflicting brand 
     {WRANGLER_CI_OVERRIDE_NAME: '3dyanimda', SITE_DOMAIN: '3dsanayi.com'},
   ]) assert.throws(() => previewBuildSettings(environment));
   assert.equal(previewBuildSettings({WORKER_NAME: '3dsanayi'}).brand, '3dsanayi');
+});
+
+test('preview removes the rejected Pages catch-all while preserving its SPA entry and headers', async () => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), 'brand-preview-'));
+  try {
+    await writeFile(path.join(directory, '_redirects'), '/* /index.html 200\n');
+    await writeFile(path.join(directory, 'index.html'), '<html>preview</html>');
+    await writeFile(path.join(directory, '_headers'), '/*\n  X-Content-Type-Options: nosniff\n');
+    await cleanPreviewAssets(directory);
+    await assert.rejects(access(path.join(directory, '_redirects')), {code: 'ENOENT'});
+    assert.equal(await readFile(path.join(directory, 'index.html'), 'utf8'), '<html>preview</html>');
+    assert.match(await readFile(path.join(directory, '_headers'), 'utf8'), /nosniff/);
+    await cleanPreviewAssets(directory);
+  } finally {
+    await rm(directory, {recursive: true, force: true});
+  }
 });
 
 test('root preview entry serves client routes without indexing or production redirects', async () => {

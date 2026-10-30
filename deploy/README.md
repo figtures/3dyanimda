@@ -124,6 +124,9 @@ creating test orders or leads. Do not submit real or synthetic leads during
 preview checks. No production domain or storage binding is declared in the root
 configuration. Preview success is separate from approved HTML export and live
 SEO acceptance.
+The build removes the legacy Pages `_redirects` catch-all from preview assets;
+Workers' clean-HTML handling otherwise rejects that rule as an infinite loop.
+Client-route fallback remains in `deploy/worker.mjs`.
 
 No authenticated Cloudflare upload has succeeded. Deploy the brands sequentially
 on runners with limited memory; a terminated parallel export was successfully

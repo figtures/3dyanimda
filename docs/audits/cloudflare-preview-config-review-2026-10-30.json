@@ -9,7 +9,10 @@
     "historicalDashboardEvidence": "docs/audits/seo-preview-build-triage-2026-10-25.json",
     "historicalError": "Wrangler configuration is missing a previews block",
     "currentSourceFinding": "The PR head has no root Wrangler configuration, while production generates per-brand configs only inside deploy:<brand>.",
-    "currentHeadChecks": {"successful": 15, "failedWorkerPreviews": 4},
+    "currentHeadChecks": {
+      "successful": 15,
+      "failedWorkerPreviews": 4
+    },
     "currentCloudflareLogAccess": false,
     "limitation": "The current failure cause is not inferred solely from historical dashboard logs. Fresh remote preview success is required."
   },
@@ -21,12 +24,30 @@
     "The existing production deploy command, release certificate, approved HTML export and audit gates are unchanged."
   ],
   "validation": {
-    "cloudflareTests": {"passed": 15, "failed": 0},
-    "allTechnicalContracts": {"passed": 99, "failed": 0},
+    "cloudflareTests": {
+      "passed": 15,
+      "failed": 0
+    },
+    "allTechnicalContracts": {
+      "passed": 99,
+      "failed": 0
+    },
     "typecheck": "pass",
-    "rootWranglerDryRun": {"brand": "3dyanimda", "viteBuild": "pass", "workerBundle": "pass", "assetFiles": 499, "uploaded": false},
-    "sourceCertificate": {"verified": true, "unchangedSourceHash": "8df064a59a0bb70cd8b01b2b5f9284940e9761b21c39cd16f1a573e8a75254b5"},
-    "evidenceIndex": {"valid": true, "files": 212},
+    "rootWranglerDryRun": {
+      "brand": "3dyanimda",
+      "viteBuild": "pass",
+      "workerBundle": "pass",
+      "assetFiles": 499,
+      "uploaded": false
+    },
+    "sourceCertificate": {
+      "verified": true,
+      "unchangedSourceHash": "8df064a59a0bb70cd8b01b2b5f9284940e9761b21c39cd16f1a573e8a75254b5"
+    },
+    "evidenceIndex": {
+      "valid": true,
+      "files": 212
+    },
     "gitDiffCheck": "pass"
   },
   "references": [
@@ -42,5 +63,24 @@
     "Homepage TBT, GA4 controlled receipt and current Search Console checks."
   ],
   "sitemapOrIndexingSubmitted": false,
-  "productionDeployed": false
+  "productionDeployed": false,
+  "followup": {
+    "reviewedCommit": "0d9b0430a35c51073d8df8a12f261dccf622e0a9",
+    "observedThrough": "Authenticated Cloudflare dashboard build log",
+    "buildUrl": "https://dash.cloudflare.com/29b5400cedadf701d4355932340ecf99/workers/services/view/3dyanimda/production/builds/c807edf4-72fd-4f0f-b016-15251fa4de80",
+    "buildCommand": "npm run build",
+    "previewCommand": "npx wrangler preview",
+    "brandBuild": "pass",
+    "assetUpload": "179 uploaded, 294 already present",
+    "deployment": "failed: Cloudflare API code 100324, invalid _redirects rule: infinite loop",
+    "correction": "Remove the legacy Pages catch-all from generated preview assets, as production export already does; Worker client-route fallback remains.",
+    "validation": {
+      "technicalContracts": 100,
+      "cloudflareCases": 16,
+      "failures": 0,
+      "rootWranglerDryRun": "pass",
+      "redirectFileAbsentInBuiltAssets": true
+    },
+    "nextGate": "Fresh remote preview builds and CI on the correction; current log cause verified for 3dyanimda only."
+  }
 }
